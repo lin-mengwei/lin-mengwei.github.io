@@ -47,9 +47,15 @@ author-name: Mengwei LIN
 # URL for the Image of the Author
 author-image: /assets/images/image.jpg
 # 60 Words About the Author
-author-about: Hi! I am a PhD candidate at the Department of Economics of the University of Barcelona, and a predoctoral researcher at the Barcelona Institute of Economics (IEB). 
-              My research interests are in the Economics of Education, Labor Economics, Public Policy, and Causal Inference.
-              Besides, I also work as a certified English-Chinese translator, focusing on book translation in the general field of Social Sciences. 
+author-about:       
+                    <span>I am a PhD candidate at the Department of Economics,</span><span><a style ='color: inherit; text-decoration: underline;' href='https://www.ub.edu/school-economics/'>School of Economics at the University of Barcelona</a></span><span>and a predoctoral researcher at the</span><span><a style ='color: inherit;text-decoration:underline' href='https://www.ieb.ub.edu/en/'>Barcelona Institute of Economics (IEB).</a></span></p>
+                    <br>
+                    <p style="text-align: justify"><span>My research interests are in the </span><span><strong>Economics of Education, Labor Economics, Public Policy, and Causal Inference</strong></span>.</p>
+                    <br>
+                    <p style="text-align: justify"><span>Besides, I work as a certified English-Chinese translator, focusing on book translation in the general field of Social Sciences. (Latest:</span><span><a style ='color: inherit' href="http://opac.nlc.cn/F/?request=%E7%BB%8F%E6%B5%8E%E5%AD%A6%E6%80%8E%E4%B9%88%E4%BA%86&func=find-m&find_code=WRD&FIND_BASE=NLC01&FIND_BASE=NLC09" >《经济学怎么了》</a></span><span>- <i>What's Wrong with Economics?</i> by Robert Skidelsky) </span>
+  # Hi! I am a PhD candidate at the Department of Economics of the University of Barcelona, and a predoctoral researcher at the Barcelona Institute of Economics (IEB). 
+  #             My research interests are in the Economics of Education, Labor Economics, Public Policy, and Causal Inference.
+  #             Besides, I also work as a certified English-Chinese translator, focusing on book translation in the general field of Social Sciences. 
 # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
 author-url: 
 
