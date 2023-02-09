@@ -5,16 +5,17 @@
     <script src="https://kit.fontawesome.com/6a97161b76.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="{% if site.favicon-url %}{{site.favicon-url}}{% else %}{{ 'assets/images/logo.png' | absolute_url }}{% endif %}" type="image/x-icon">
     <style type="text/css">
-    @media only screen and (max-width: 600px) {
-        body {
-            background: #f4f4f4;
-            /*float:left;*/
-            width:100&#37;
-            clear:both;
-            border-top: 1px solid #f5a500;
-            border-bottom: 1px solid #f5a500;
-            margin-top: 30px;
+    /* 设置容器的最大宽度 */
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
       }
-    }
+      
+      /* 当屏幕宽度小于 600px 时，将容器宽度设置为 100% */
+      @media (max-width: 600px) {
+        .container {
+          width: 100%;
+        }
+      }
     </style>
 </head>
