@@ -6,17 +6,21 @@
     <link rel="shortcut icon" href="{% if site.favicon-url %}{{site.favicon-url}}{% else %}{{ 'assets/images/logo.png' | absolute_url }}{% endif %}" type="image/x-icon">
     <style>
     @media only screen and (max-width: 600px) {
-      *    {
-        margin:0;
-        padding:0;
-      }
-      body {
-        font-size: 1.0 em;
-      }
-      p    {
-        float:none;/*The main issue here*/
-        display:block;/*New lines are made per block element*/
-        text-align:left;/*Since blocks take up 100&#37; width available,they now center the text. Unsets*/
+        *    {
+            margin:0;
+            padding:0;
+        }
+        body {
+            font-size: 1.0 em;
+        }
+        p    {
+            background: #f4f4f4;
+        [B]    /*float:left;*/
+            width:100&#37;;[/B]
+            clear:both;
+            border-top: 1px solid #f5a500;
+            border-bottom: 1px solid #f5a500;
+            margin-top: 30px;
       }
     }
     </style>
