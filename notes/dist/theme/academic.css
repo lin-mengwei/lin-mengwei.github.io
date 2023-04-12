@@ -144,6 +144,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   color: var(--r-background-color);
   font-size: 36px;
   text-align: center;
+  vertical-align: center;
 } /*the title text*/
 
 .pre-info {
