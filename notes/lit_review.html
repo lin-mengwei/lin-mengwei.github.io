@@ -3,8 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<meta name="author" content="Mengwei LIN">
-		<meta name="presentation" content="Literature Summary: Retake Policy Project">
+
 
 		<title>reveal.js</title>
 
@@ -15,14 +14,33 @@
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+		<!-- author info -->
+		<meta name="presentation" content="Literature Summary: Retake Policy Project">
+		<meta name="author1" content="LIN, Mengwei">
+		<meta name="institution1" content="University of Barcelona & Bacelona Institute of Economics (IEB)">
 	</head>
 	<body>
 		
 		<div class="reveal">
 			<div class="slides">
-				<section class="my-slide">
-					<h5>Literature Summary: Retake Policy Project</h5>
+
+				<section class="my-opening">
+					<div class="pre-title">
+						<h5>Literature Summary: Retake Policy Project</h5>
+					</div>
+					<div class="pre-info">
+						<span class="author-name1"></span><br>
+						<span class="author-inst1"></span>
+						<br>
+						<br>
+						<span class="author-name2"></span><br>
+						<span class="author-inst2"></span>
+						<br>
+						<span>April 2023</span>
+					</div>
 				</section>
+
 				
 
 				<section>
@@ -55,7 +73,7 @@
 						</div>
 
 						<div class="slide-tail">
-							<div><span class="author-name"></span></div>
+							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
 							<div class="slide-index"></div>
 						</div>
@@ -94,7 +112,7 @@
 						</div>
 
 						<div class="slide-tail">
-							<div><span class="author-name"></span></div>
+							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
 							<div class="slide-index"></div>
 						</div>
@@ -131,7 +149,7 @@
 						</div>
 
 						<div class="slide-tail">
-							<div><span class="author-name"></span></div>
+							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
 							<div class="slide-index"></div>
 						</div>
@@ -162,7 +180,7 @@
 						</div>
 
 						<div class="slide-tail">
-							<div><span class="author-name"></span></div>
+							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
 							<div class="slide-index"></div>
 						</div>
@@ -191,7 +209,7 @@
 						</div>
 
 						<div class="slide-tail">
-							<div><span class="author-name"></span></div>
+							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
 							<div class="slide-index"></div>
 						</div>
@@ -219,7 +237,7 @@
 						</div>
 
 						<div class="slide-tail">
-							<div><span class="author-name"></span></div>
+							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
 							<div class="slide-index"></div>
 						</div>
@@ -248,7 +266,7 @@
 						</div>
 
 						<div class="slide-tail">
-							<div><span class="author-name"></span></div>
+							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
 							<div class="slide-index"></div>
 						</div>
@@ -276,7 +294,7 @@
 							</ul>
 						</div>
 						<div class="slide-tail">
-							<div><span class="author-name"></span></div>
+							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
 							<div class="slide-index"></div>
 						</div>
@@ -305,14 +323,19 @@
 			});
 		</script>
 		<script>
-			var authorNames = document.querySelectorAll('.author-name');
-			for (var i = 0; i < authorNames.length; i++) {
-  				authorNames[i].innerText = document.querySelector('meta[name="author"]').getAttribute('content');
+			var authorNames1 = document.querySelectorAll('.author-name1');
+			for (var i = 0; i < authorNames1.length; i++) {
+  				authorNames1[i].innerText = document.querySelector('meta[name="author1"]').getAttribute('content');
 			}
 
 			var preNames = document.querySelectorAll('.pre-name');
 			for (var i = 0; i < preNames.length; i++) {
   				preNames[i].innerText = document.querySelector('meta[name="presentation"]').getAttribute('content');
+			}
+
+			var authorInst1 = document.querySelectorAll('.author-inst1');
+			for (var i = 0; i < authorInst1.length; i++) {
+  				authorInst1[i].innerText = document.querySelector('meta[name="institution1"]').getAttribute('content');
 			}
 
 			$(document).ready(function() {

@@ -120,21 +120,44 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 /*********************************************
  * OPENING PAGE LAYOUT - title, body, tail 
  *********************************************/
-
-.presentation-title {
+.my-opening {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.pre-title {
   position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: var(--r-compliment-color);
+  padding: 10px;
+  height: 3em; 
+  width: 100%;
   border-radius: 10px;
-  line-height: 75px;
+  justify-content: center;
+  align-items: center;
 } /*the title box */
 
-.presentation-title h6{
+.pre-title h5{
   color: var(--r-background-color);
-  padding-bottom: 2.5px;
-  padding-left: 10px;
-  padding-right: 10px
+  font-size: 36px;
+  text-align: center;
 } /*the title text*/
 
+.pre-info {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  height: 3em; 
+  width: 100%;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+} /*the title box */
 /*********************************************
  * CONTENT PAGE LAYOUT - title, body, tail 
  *********************************************/
