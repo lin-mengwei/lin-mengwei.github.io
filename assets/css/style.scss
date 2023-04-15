@@ -71,17 +71,27 @@ a.navbar-item.is-active {
 #about {
     .image {
         max-width: 20vmax;
-        margin: auto;
+        display: flex;
+        justify-content: center;
 
         img {
             border: 0.25rem dotted black;
+            width: 80%;
+            max-width: 100%;
         }
     }
 
+
     a {
         min-width: 25vmax;
-        margin: 0.5rem;
+        margin: 0;
+        padding: 0;
     }
+
+    p {
+        text-align: justify;
+    }
+
 }
 
 #contact {
