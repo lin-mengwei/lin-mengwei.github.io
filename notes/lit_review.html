@@ -19,6 +19,7 @@
 		<meta name="presentation" content="Literature Summary: Retake Policy Project">
 		<meta name="author1" content="LIN, Mengwei">
 		<meta name="institution1" content="University of Barcelona & Bacelona Institute of Economics (IEB)">
+		<meta name="date" content="April 2023">
 	</head>
 	<body>
 		
@@ -37,7 +38,7 @@
 						<span class="author-name2"></span><br>
 						<span class="author-inst2"></span>
 						<br>
-						<span>April 2023</span>
+						<span></span>
 					</div>
 				</section>
 
@@ -74,7 +75,7 @@
 						<div class="slide-tail">
 							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
-							<div class="slide-index"></div>
+							<div><span class="date"></span> <span class="slide-index"></span></div>
 						</div>
 					</section>
 
@@ -113,7 +114,7 @@
 						<div class="slide-tail">
 							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
-							<div class="slide-index"></div>
+							<div><span class="date"></span> <span class="slide-index"></span></div>
 						</div>
 					</section>
 					
@@ -150,7 +151,7 @@
 						<div class="slide-tail">
 							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
-							<div class="slide-index"></div>
+							<div><span class="date"></span> <span class="slide-index"></span></div>
 						</div>
 					</section>
 
@@ -171,14 +172,15 @@
 								<li><b>Data Source: </b><u>admin data</u> from the Michigan Department of Education (longitudinal, student-level)</li>
 								<li><b>Sample: </b>2,108 students (qualified for subsidized school meals) from 529 schools for the first cohort, and 1,802 students from 497 schools for the second</li>
 								<li><b>Identification: </b>RCT - Sending mailings to treated students to encourage them to apply to University of Michigan, and guarantee them of four years of free tuition and fees once admitted.</li>
-								<li><b>Conclusion: </b></li>
+								<li><b>Conclusion: </b>The intervention shifted low-income, high-ability students away from two-year and less selective four-year colleges. The gap in attending an institution considered “selective” or above between low-income and upper-income students was reduced from 12 percentage points to 4 percentage points, and the income gap in attending an institution considered “very selective” or above was eliminated.</li>
+								<li><b>Details Worth Noticing: </b>This is about some other properties of the fees, not the amount.</li>
 							</ul>
 						</div>
 
 						<div class="slide-tail">
 							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
-							<div class="slide-index"></div>
+							<div><span class="date"></span> <span class="slide-index"></span></div>
 						</div>
 					</section>
 
@@ -209,7 +211,7 @@
 						<div class="slide-tail">
 							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
-							<div class="slide-index"></div>
+							<div><span class="date"></span> <span class="slide-index"></span></div>
 						</div>
 
 					</section>
@@ -239,7 +241,7 @@
 						<div class="slide-tail">
 							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
-							<div class="slide-index"></div>
+							<div><span class="date"></span> <span class="slide-index"></span></div>
 						</div>
 					</section>
 
@@ -268,7 +270,7 @@
 						<div class="slide-tail">
 							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
-							<div class="slide-index"></div>
+							<div><span class="date"></span> <span class="slide-index"></span></div>
 						</div>
 					</section>
 
@@ -298,7 +300,7 @@
 						<div class="slide-tail">
 							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
-							<div class="slide-index"></div>
+							<div><span class="date"></span> <span class="slide-index"></span></div>
 						</div>
 					</section>
 
@@ -327,7 +329,7 @@
 						<div class="slide-tail">
 							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
-							<div class="slide-index"></div>
+							<div><span class="date"></span> <span class="slide-index"></span></div>
 						</div>
 					</section>
 
@@ -367,6 +369,11 @@
 			var authorInst1 = document.querySelectorAll('.author-inst1');
 			for (var i = 0; i < authorInst1.length; i++) {
   				authorInst1[i].innerText = document.querySelector('meta[name="institution1"]').getAttribute('content');
+			}
+
+			var date = document.querySelectorAll('.date');
+			for (var i = 0; i < date.length; i++) {
+  				date[i].innerText = document.querySelector('meta[name="date"]').getAttribute('content');
 			}
 
 			$(document).ready(function() {
