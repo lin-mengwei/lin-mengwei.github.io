@@ -167,6 +167,36 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 } /*the title box */
 
 /*********************************************
+ * TRANSITION PAGE LAYOUT - title, subtitle, contents
+ *********************************************/
+.my-trans {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.section-title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  height: 2.5em;
+  line-height: 1.5em;
+  width: 100%;
+  border-radius: 10px;
+  justify-content: center;
+} /*the title box */
+
+.section-title h6{
+  color: var(--r-complement-color);
+  font-size: 32px;
+  text-align: center;
+  vertical-align: center;
+} /*the title text*/
+
+
+/*********************************************
  * CONTENT PAGE LAYOUT - title, body, tail 
  *********************************************/
 .my-slide {
