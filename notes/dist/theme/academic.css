@@ -268,6 +268,17 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   vertical-align: bottom;
 }
 
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.column {
+  flex: 50%;
+  padding: 0;
+}
+
 /*********************************************
  * LISTS
  *********************************************/
