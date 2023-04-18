@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/academic.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h5>Seminar Notes</h5>
+				</section>
+				
+				<!-- 4.11 -->
+				<section>
+					<section>
+						<h6>Daniel Rees. <u>Safeguarding Consumers through Minimum Quality Standards: Milk Inspections and Urban Mortality, 1880-1910</u> </h6>
+						<ul>
+							<li><b>Question: </b></li>
+							<li><b>Broader Question: </b></li>
+							<li><b>Policy change: </b>milk inspections - the hiring of milk inspectors to enforce a minimum threshold (12%) for milk solids</li>
+							<li><b>Outcomes: </b>infant motality, mortality from food-borne and waterborne diseases /li>
+							<li><b>Data Source: </b>mortality in 35 cities from 1880-1910 (digitalized from annual municipal and stata public health records) </li>
+							<li><b>Identification: </b>	</li>
+							<li><b>Conclusion:</b>In five years, milk inspections are associated with 12 percent reduction in mortality from waterborn diseases, and in 10+ years, 19 percent.</li>
+							<li><b>Important Details: </b>
+								<ol>
+									<li>Look at mortality from warterborne diseases rather than total mortality which (statistically) has zero change.</li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ol>
+
+							</li>
+						</ul>
+					</section>
+
+					<section>
+
+					<section class="my-slide">
+						<div class="slide-title">
+							<h6>Felipe Carozzi. <em>Blaming Your Predecessor: Government Turnover and External Financial Assistance</em>. </h6>
+						</div>
+
+						<div class="line-title-body">
+							<hr class="title-line"/>
+						</div>
+
+						<div class="slide-body">
+							<ul class="nodots">
+								<li><b>Observation: </b>Newly elected parties can blame previous gov for not asking for assistance.</li>
+								<li><b>Hypothesis: </b><u>Newly elected governments are more likely to request financial support.</u></li>
+								<li><b>Mechanism: </b>Requesting assitance reveals info on poor state of public finances and quality of re-elected incumbents.</li>
+								<li><b>Broader Question: </b> Re-election → External financial support</li>
+								<li><b>Outcomes: </b>existing funding agreements (NOT the requests!)</li>
+								<li><b>Data Source: </b>IMF Financing Programs (Country-level); Plan de Pago a Proveedores from Spain (municipal-level)
+								</li>
+								<li><b>Sample: </b>IMF data: 1992-2019; </li>
+								<li><b>Empirical Strategies: </b>1) Descriptives: IMF Financing ~ government turnover (❓endogeneity - e.g., two-way causality, confounder); 2) RD - cutoff from close election (❓external validity)
+								</li>
+								<li><b>Results: 1) party change is associated with 4% more in chance for requesting IMF financing. <br> 2) propensity for a new gov to request for assistance is over 30%!</b></li>
+								<li><b>Lit Review: </b> Pay attention to how he sorts it!
+									<ol class="dots">
+										<li>Economcis of Gov Turnover</li>
+										<li>Political Economy of Debts</li>
+										<li>Some other sub-field</li>
+									</ol>
+
+								</li>
+							</ul>
+						</div>
+					</section>
+
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: true,
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+	</body>
+</html>
