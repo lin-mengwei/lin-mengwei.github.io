@@ -240,7 +240,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 } /*position of the line*/
 
 .slide-body {
-  position: absolute;
+  position: relative;
   top: 95px;
   left: 0;
   right: 0;
@@ -268,17 +268,19 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   vertical-align: bottom;
 }
 
-.image-container{
+.image-container{ 
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 
 .row {
+  margin-top: 8%;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  position: relative;
 }
 
 .column {
