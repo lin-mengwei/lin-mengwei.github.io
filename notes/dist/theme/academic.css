@@ -188,7 +188,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   justify-content: center;
 } /*the title box */
 
-.section-title h6{
+.section-title h2{
   color: var(--r-complement-color);
   font-size: 32px;
   text-align: center;
