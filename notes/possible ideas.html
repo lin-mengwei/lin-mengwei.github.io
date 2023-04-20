@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+		<title>Papers</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/academic.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+		<!-- author info -->
+		<meta name="presentation" content="Possible Ideas for Projects 2 and 3">
+		<meta name="author1" content="LIN, Mengwei">
+		<meta name="institution1" content="">
+		<meta name="date" content="April 2023">
+	</head>
+	<body>
+		
+		<div class="reveal">
+			<div class="slides">
+
+				<section class="my-opening" data-transition="convex">
+					<div class="pre-title">
+						<h5>PRESENTATION TITLE</h5>
+					</div>
+					<div class="pre-info">
+						<span class="author-name1"></span><br>
+						<span class="author-inst1"></span>
+						<br>
+						<br>
+						<span class="author-name2"></span><br>
+						<span class="author-inst2"></span>
+						<br>
+						<span></span>
+					</div>
+				</section>
+				
+				<section data-transition="convex">					
+					
+					<section class="my-slide">
+						<div class="slide-title">
+							<h6>1. The Impact of a Recent Industrial Policy on Online Training and Labor Markets. </h6>
+						</div>
+
+						<div class="line-title-body">
+							<hr class="title-line"/>
+						</div>
+
+						<div class="slide-body">
+						</div>
+
+						<div class="slide-tail">
+							<div><span class="author-name1"></span></div>
+							<div><span class="pre-name"></span></div>
+							<div><span class="date"></span> <span class="slide-index"></span></div>
+						</div>
+					</section>
+
+					
+					<section class="my-slide">
+						<div class="slide-title">
+							<h6>2. Reformulation of Human Capital of Elderly Workers in an Aging World. </h6>
+						</div>
+
+						<div class="line-title-body">
+							<hr class="title-line"/>
+						</div>
+
+						<div class="slide-body">
+						</div>
+
+						<div class="slide-tail">
+							<div><span class="author-name1"></span></div>
+							<div><span class="pre-name"></span></div>
+							<div><span class="date"></span> <span class="slide-index"></span></div>
+						</div>
+					</section>
+
+					<section class="my-slide">
+						<div class="slide-title">
+							<h6>3. Academic Drifts of Universities in China from 2000 to 2020: Trends and Economic Consequences. </h6>
+						</div>
+
+						<div class="line-title-body">
+							<hr class="title-line"/>
+						</div>
+
+						<div class="slide-body">
+						</div>
+
+						<div class="slide-tail">
+							<div><span class="author-name1"></span></div>
+							<div><span class="pre-name"></span></div>
+							<div><span class="date"></span> <span class="slide-index"></span></div>
+						</div>
+					</section>
+
+					<section class="my-slide">
+						<div class="slide-title">
+							<h6>4. Risks in Human Capital Investments. </h6>
+						</div>
+
+						<div class="line-title-body">
+							<hr class="title-line"/>
+						</div>
+
+						<div class="slide-body">
+						</div>
+
+						<div class="slide-tail">
+							<div><span class="author-name1"></span></div>
+							<div><span class="pre-name"></span></div>
+							<div><span class="date"></span> <span class="slide-index"></span></div>
+						</div>
+					</section>
+
+					<section class="my-slide">
+						<div class="slide-title">
+							<h6>4. Labor Market . </h6>
+						</div>
+
+						<div class="line-title-body">
+							<hr class="title-line"/>
+						</div>
+
+						<div class="slide-body">
+						</div>
+
+						<div class="slide-tail">
+							<div><span class="author-name1"></span></div>
+							<div><span class="pre-name"></span></div>
+							<div><span class="date"></span> <span class="slide-index"></span></div>
+						</div>
+					</section>
+				</section>
+				
+
+				<section class="my-opening" data-transition="convex">
+					<div class="pre-title">
+						<h5>Thank you!</h5>
+					</div>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'c/t',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+		<script>
+			var authorNames1 = document.querySelectorAll('.author-name1');
+			for (var i = 0; i < authorNames1.length; i++) {
+  				authorNames1[i].innerText = document.querySelector('meta[name="author1"]').getAttribute('content');
+			}
+
+			var preNames = document.querySelectorAll('.pre-name');
+			for (var i = 0; i < preNames.length; i++) {
+  				preNames[i].innerText = document.querySelector('meta[name="presentation"]').getAttribute('content');
+			}
+
+			var authorInst1 = document.querySelectorAll('.author-inst1');
+			for (var i = 0; i < authorInst1.length; i++) {
+  				authorInst1[i].innerText = document.querySelector('meta[name="institution1"]').getAttribute('content');
+			}
+
+			var date = document.querySelectorAll('.date');
+			for (var i = 0; i < date.length; i++) {
+  				date[i].innerText = document.querySelector('meta[name="date"]').getAttribute('content');
+			}
+
+			$(document).ready(function() {
+			  var totalSlides = $('.my-slide').length;
+			  $('.slide-index').each(function(index) {
+			    $(this).text('Page ' + (index+1));
+			  });
+			});
+
+		</script>
+	</body>
+</html>
