@@ -209,7 +209,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   border: 2px solid var(--r-background-color);
   width: 100%;
   height: 75px;
-  top: 5px;
+  top: 0;
   background-color: var(--r-compliment-color);
   border-radius: 10px;
   line-height: 75px;
@@ -241,7 +241,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 .slide-body {
   position: relative;
-  top: 85px;
+  top: 80px;
   left: 0;
   right: 0;
   padding: 10px;
@@ -254,7 +254,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   border: 2px solid var(--r-background-color);
   width: 100%;
   height: 20px;
-  bottom: 5px;
+  bottom: 0;
   background-color: var(--r-compliment-color);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
