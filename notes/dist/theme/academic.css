@@ -209,7 +209,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   border: 2px solid var(--r-background-color);
   width: 100%;
   height: 75px;
-  top: 15px;
+  top: 5px;
   background-color: var(--r-compliment-color);
   border-radius: 10px;
   line-height: 75px;
@@ -241,7 +241,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 .slide-body {
   position: relative;
-  top: 95px;
+  top: 85px;
   left: 0;
   right: 0;
   padding: 10px;
