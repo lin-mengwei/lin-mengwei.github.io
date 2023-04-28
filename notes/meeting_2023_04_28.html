@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+		<title>Title</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/academic.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+		<!-- author info -->
+		<meta name="presentation" content="PRESENTATION TITLE">
+		<meta name="author1" content="LIN, Mengwei">
+		<meta name="institution1" content="University of Barcelona & Bacelona Institute of Economics (IEB)">
+		<meta name="date" content="DATE">
+	</head>
+	<body>
+		
+		<div class="reveal">
+			<div class="slides">
+
+				
+				<section data-transition="convex">
+					<section class="my-trans">
+						<div class="section-title">
+							<h6>Meeting 2023/04/28</h6>
+							<br>
+							<h6><a href="https://lin-mengwei.github.io/notes/lit_summary">1. Literature Summary</a></h6>
+							<h6><a href="https://lin-mengwei.github.io/notes/exploratory">2. Graphs</a></h6>
+							<h6><a href="https://lin-mengwei.github.io/notes/possible ideas">3. Possible Ideas</a></h6>
+							<h6><a href="https://lin-mengwei.github.io/notes/Research Plan Draft.html">4. Research Plan Draft</a></h6>
+						</div>
+					</section>
+					
+				</section>
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'c/t',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+		<script>
+			var authorNames1 = document.querySelectorAll('.author-name1');
+			for (var i = 0; i < authorNames1.length; i++) {
+  				authorNames1[i].innerText = document.querySelector('meta[name="author1"]').getAttribute('content');
+			}
+
+			var preNames = document.querySelectorAll('.pre-name');
+			for (var i = 0; i < preNames.length; i++) {
+  				preNames[i].innerText = document.querySelector('meta[name="presentation"]').getAttribute('content');
+			}
+
+			var authorInst1 = document.querySelectorAll('.author-inst1');
+			for (var i = 0; i < authorInst1.length; i++) {
+  				authorInst1[i].innerText = document.querySelector('meta[name="institution1"]').getAttribute('content');
+			}
+
+			var date = document.querySelectorAll('.date');
+			for (var i = 0; i < date.length; i++) {
+  				date[i].innerText = document.querySelector('meta[name="date"]').getAttribute('content');
+			}
+
+			$(document).ready(function() {
+			  var totalSlides = $('.my-slide').length;
+			  $('.slide-index').each(function(index) {
+			    $(this).text('Page ' + (index+1));
+			  });
+			});
+
+		</script>
+	</body>
+</html>
