@@ -410,6 +410,15 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 }
 
 .reveal strong,
+
+.reveal a {
+      color: #5F8151;
+    }
+    
+    a:visited {
+      color: #5F8151;
+    }
+
 .reveal b {
   font-weight: bold;
 }
