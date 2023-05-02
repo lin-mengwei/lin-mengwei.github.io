@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width initial-scale=1'>
+    <title>Title</title>
+    <link rel="stylesheet" href="dist/theme/document.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+
+    <!-- author info -->
+    <meta name="presentation" content="PRESENTATION TITLE">
+    <meta name="author1" content="LIN, Mengwei">
+    <meta name="institution1" content="University of Barcelona & Bacelona Institute of Economics (IEB)">
+    <meta name="date" content="DATE">
+
+
+<title>Research Plan Draft</title>
+</head>
+
+<body>
+  <div class="toc">
+    <ul id="toc-list"></ul>
+  </div>
+  <div id="markdown-content"></div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+  <script>
+    fetch('https://lin-mengwei.github.io/notes/assets/Draft.md')
+      .then(response => response.text())
+      .then(text => {
+        const converter = new showdown.Converter();
+        const html = converter.makeHtml(text);
+        const markdownContent = document.getElementById('markdown-content');
+        markdownContent.innerHTML = html;
+
+        const tocList = document.getElementById('toc-list');
+        const headings = markdownContent.querySelectorAll('h2, h3');
+
+        headings.forEach((heading) => {
+          const id = heading.id;
+          const level = parseInt(heading.tagName.charAt(1));
+          const listItem = document.createElement('li');
+          const link = document.createElement('a');
+          link.href = '#' + id;
+          link.textContent = heading.textContent;
+          listItem.appendChild(link);
+
+          if (level === 2) {
+            tocList.appendChild(listItem);
+          } else {
+            const lastListItem = tocList.lastElementChild;
+            if (!lastListItem.querySelector('ul')) {
+              lastListItem.appendChild(document.createElement('ul'));
+            }
+            lastListItem.querySelector('ul').appendChild(listItem);
+          }
+        });
+      });
+  </script>
+</body>
+</html>
