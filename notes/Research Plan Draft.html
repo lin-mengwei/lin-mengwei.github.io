@@ -39,8 +39,9 @@
         const tocList = document.getElementById('toc-list');
         const headings = markdownContent.querySelectorAll('h2, h3');
 
-        let lastList = tocList;
-        let lastLevel = 2;
+        let prevLevel = 2;
+        let listStack = [tocList];
+        let currList = tocList;
 
         headings.forEach((heading) => {
           const id = heading.id;
@@ -51,22 +52,23 @@
           link.textContent = heading.textContent;
           listItem.appendChild(link);
 
-          if (level > lastLevel) {
-            // Create a new sublist for the deeper level
-            const sublist = document.createElement('ul');
-            lastList.lastElementChild.appendChild(sublist);
-            lastList = sublist;
-          } else if (level < lastLevel) {
-            for (let i = 0; i < lastLevel - level; i++) {
-              lastList = lastList.parentNode.parentNode;
+          if (level < prevLevel) {
+            while (listStack.length > level) {
+              currList = listStack.pop();
             }
+          } else if (level > prevLevel) {
+            const subList = document.createElement('ul');
+            currList.lastChild.appendChild(subList);
+            listStack.push(currList);
+            currList = subList;
           }
-
-          lastList.appendChild(listItem);
-          lastLevel = level;
+          
+          currList.appendChild(listItem);
+          prevLevel = level;
         });
       });
   </script>
 </body>
+
 
 </html>
