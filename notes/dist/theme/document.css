@@ -1,11 +1,58 @@
-<!doctype html>
-<html>
-<head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+/**
+ * Adopted from one of the official template by LIN, Mengwei.
+ *
+ * 
+ */
+@import url(./fonts/source-sans-pro/source-sans-pro.css);
+section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
+  color: #fff;
+}
 
-<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+/*********************************************
+ * GLOBAL STYLES
+ * 
+ * 
+ * --r-background-color: #C8CFC4; 
+ * --r-compliment-color: #5F8151; 
+ * 
+ * 
+ *********************************************/
+:root {
+  --r-background-color: #E4EAE0; 
+  --r-compliment-color: #5F8151;  
+  --r-main-font: Arial, Source Sans Pro,  Helvetica, sans-serif;
+  --r-main-font-size: 22px;
+  --r-main-color: #222;
+  --r-block-margin: 20px;
+  --r-heading-margin: 0 0 10px 0;
+  --r-heading-font: Source Sans Pro, Helvetica, sans-serif;
+  --r-heading-color: #222;
+  --r-heading-line-height: 1.2;
+  --r-heading-letter-spacing: normal;
+  --r-heading-text-transform: /*uppercase*/;
+  --r-heading-text-shadow: none;
+  --r-heading-font-weight: 600;
+  --r-heading1-text-shadow: none;
+  --r-heading1-size: 2.5em;
+  --r-heading2-size: 1.6em;
+  --r-heading3-size: 1.3em;
+  --r-heading4-size: 1em;
+  --r-code-font: monospace;
+  --r-link-color: #2a76dd;
+  --r-link-color-dark: #1a53a1;
+  --r-link-color-hover: #6ca0e8;
+  --r-selection-background-color: #98bdef;
+  --r-selection-color: #fff;
+  --text-color:#5F8151; -
+  -select-text-bg-color:#B5D6FC; 
+  --select-text-font-color:auto; 
+  --monospace:"Lucida Console",Consolas,"Courier",monospace; 
+  --title-bar-height:20px; }
+
 .mac-os-11 { --title-bar-height:28px; }
-html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+
+
+html { font-size: 14px; background-color: var(--r-background-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
@@ -357,15 +404,15 @@ mark .md-meta { color: rgb(0, 0, 0); }
 }
 
 .cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
-	color: #8aa1e1;
+  color: #8aa1e1;
 }@import "";
 @import "";
 @import "";
 
 :root {
-    --bg-color:  #363B40;
+    --r-background-color: #E4EAE0;
     --side-bar-bg-color: #2E3033;
-    --text-color: #b8bfc6;
+    --text-color: #5F8151;
 
     --select-text-bg-color:#4a89dc;
 
@@ -399,7 +446,7 @@ body {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     background: #363B40;
-    background: var(--bg-color);
+    background: var(--r-background-color);
     fill: currentColor;
     line-height: 1.625rem;
 }
@@ -410,15 +457,15 @@ body {
 
 
 @media only screen and (min-width: 1400px) {
-	#write {
-		max-width: 1024px;
-	}
+  #write {
+    max-width: 1024px;
+  }
 }
 
 @media only screen and (min-width: 1800px) {
-	#write {
-		max-width: 1200px;
-	}
+  #write {
+    max-width: 1200px;
+  }
 }
 
 html,
@@ -428,7 +475,7 @@ input,
 select,
 textarea,
 div.code-tooltip-content {
-    color: #b8bfc6;
+    color: var(--text-color);
     border-color: transparent;
 }
 
@@ -473,7 +520,7 @@ h6 {
     word-wrap: break-word;
     margin: 0;
     padding: 0;
-    color: #DEDEDE
+    color: black
 }
 
 h1 {
@@ -515,7 +562,6 @@ h4 {
     /* 22px */
     margin-bottom: 1.5rem;
     /* 24px */
-    color: white;
 }
 
 h5 {
@@ -534,7 +580,6 @@ h6 {
     line-height: 1rem;
     /* 16px */
     margin-bottom: 0.75rem;
-    color: white;
 }
 
 @media (min-width: 980px) {
@@ -993,7 +1038,7 @@ h6.md-focus .md-attr,
 }
 
 .modal-content {
-    background: var(--bg-color);
+    background: var(--r-background-color);
     border: 0;
 }
 
@@ -1064,7 +1109,7 @@ footer {
 
 .megamenu-content,
 .megamenu-opened header {
-    background: var(--bg-color);
+    background: var(--r-background-color);
 }
 
 .megamenu-menu-panel h2,
@@ -1241,7 +1286,7 @@ footer {
 #sidebar-files-menu {
     border:solid 1px;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.79);
-    background-color: var(--bg-color);
+    background-color: var(--r-background-color);
 }
 
 .file-list-item {
@@ -1375,14 +1420,3 @@ footer.ty-footer {
 .clear-btn-icon {
     top: 8px;
 }
-
-
-</style><title>Research Plan Draft</title>
-</head>
-<body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='research-plan'>
-    <span>Research Plan</span></h1><p style="color: gray;"><span>[Notes]</span></p>
-    <ul style="color: gray;"><li><span>put in support from literature</span></li><li><span>filling logical gaps</span></li><li><span>expand the story with more details</span></p>
-</li></ul><h2 id='introduction'><span>Introduction</span></h2><p>&nbsp;</p><h2 id='chapter-1'><span>Chapter 1</span></h2><h3 id='motivation-1'><span>Motivation</span></h3><p><u><span>[insert something bigger here]</span></u></p><p><span>The tuition fees of public universities often depend on the level of financial support from governments. Therefore, studying the effect of tuition policy plays an important role in evaluating the efficiency of financial fund utilization and determining the direction of financial fund investment. </span><u><span>[logical gap here]</span></u><span> The tuition fees of public universities often directly depend on the amount of financial investment. In the past few decades, the tuition fees of public universities around the world have undergone some changes, among which the most discussed ones include England‘s introduction of tuition fees in 1998, several German states introducing fees in the early 21st century and abandoning them about a decade later, and so on. Many of these major policies shift the systems away from or into being free. However, in real life, what we face more are adjustments in levels of tuition fees, rather than the introduction or cancellation of them. In this article, we explore how changes in tuition fees will have an impact.</span></p><p><!-- Financial incentives can have an impact on human behaviors, which is also true in the field of education. The impact of changes in college tuition fees on student behavior. An important theme in educational economics is how the educational resources invested affect students' achievements, in order to evaluate the efficiency of the entire education system's investment. 金融激励对于人的行为会产生影响，这一点在教育领域同样成立。高校学费变化对于学生行为的影响。教育经济学中一个重要的主题是投入的教育资源如何影响学生的成就，由此来评估整个教育体系的投入是否有效率。--><span> </span></p><h3 id='objectives-1'><span>Objectives </span></h3><p><span>The 2008 financial crisis in the United States spread to the world, leading to the largest global economic crisis in decades. European countries were greatly affected, and many governments fell into difficulties. The Spanish government, in order to reduce expenses, had to increase university tuition fees in the following years. This change was nationwide. The price changes in Catalonia occurred between 2010 and 2012; before and after this period, the university tuition fees in the region remained relatively stable, providing us with an ideal policy change for our research. Taking advantage of this change in tuition fees, we attempt to find out whether the increase in tuition fees has an impact on students&#39; behaviors in the university: Will increased tuition fees incentivize them to work harder so as to graduate as quickly as possible, or does the increase in costs cause more pressure psychologically and actually have a negative impact, or students are not concerned about changes in tuition fees so that their behaviours will not change significantly?</span></p><p><u><span>[insert line chart here]</span></u></p><p><span>Besides, in Catalonia, the tuition levels for enrolling in a course for the first time and for subsequent repetitions of the same course are different. Before 2010, such differences were not significant [try to quantify it here]. However, after the policy change, the highest price per credit for retaking a course (for the fourth and subsequent times of repetition) has become almost four times the price for the first enrolment. In this situation, we are able to further explore the performance of financial investment in higher education. Does reducing the subsidy level for course repetitions and increasing the cost of retraining for students motivate them to make greater efforts so that they retake fewer courses? Does it prompt students to complete their studies faster and reduce the proportion of delayed graduation?</span></p><h3 id='expected-contribution-1'><span>Expected Contribution</span></h3><p><u><span>[contribute to intuition fees]</span></u><span> Since the last century, economists have been paying attention to the impact of financial incentives on students [citing earlier articles], but a large portion of existing papers have studied the impact of various aids and scholarships (such as xxxx). Logically speaking, tuition fees are primary and subsidies are secondary. (?) Yet, there is no consensus in the academic community on the causal relationship between changes in tuition fees and student behaviors and performance. This is mainly because, compared to the introduction of aids and scholarships, tuition fees are more difficult to change due to procedural complexity, especially for public universities whose fees are strictly regulated by laws. Thus there are relatively few available policies to explore. This chapter exploits the changes in tuition fees in the Catalan region to study the impact of tuition increases and decreases on students, and contributes to the study of how tuition fees affect student behaviors.</span></p><p><u><span>[contribute to analyzing the intensive margin]</span></u><span> Using the data from a single university, we examine the intensive margin. In previous research, many studies have been devoted to exploring the extensive margin. According to a meta-analysis of the literature by Havranek et al (2017), although most research reports that increasing tuition fees would lower enrollment rates, after adjusting for publication bias, this mean effect has become close to zero. For the intensive margin, the results are not as clear...</span></p><h3 id='identification-strategy-and-data-1'><span>Identification Strategy and Data</span></h3><h4 id='data'><span>Data</span></h4><p><span>We use the administrative data from the University of Barcelona from 2007 to 20xx, which provides a detailed record of the academic performance of students who enrolled during the years before and after the change in tuition fees, including their course selection, grades, retakes, and graduation dates. This data also includes the background information of students recorded during the pre-enrollment process, as well as their performance in the college entrance examination.</span></p><h4 id='methodology'><span>Methodology</span></h4><p>&nbsp;</p><h3 id='pilot-results'><span>Pilot Results</span></h3><p>&nbsp;</p><h2 id='chapter-2'><span>Chapter 2</span></h2><h3 id='motivation-2'><span>Motivation</span></h3><h3 id='objectives-2'><span>Objectives </span></h3><h3 id='expected-contribution-2'><span>Expected Contribution</span></h3><h3 id='identification-strategy-and-data-2'><span>Identification Strategy and Data</span></h3><p>&nbsp;</p><h2 id='chapter-3'><span>Chapter 3</span></h2><h3 id='motivation-3'><span>Motivation</span></h3><h3 id='objectives-3'><span>Objectives </span></h3><h3 id='expected-contribution-3'><span>Expected Contribution</span></h3><h3 id='identification-strategy-and-data-3'><span>Identification Strategy and Data</span></h3><p>&nbsp;</p></div></div>
-</body>
-</html>
