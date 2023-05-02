@@ -25,7 +25,7 @@
     <ul id="toc-list"></ul>
   </div>
   <div id="markdown-content"></div>
-  
+
   <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
   <script>
     fetch('https://lin-mengwei.github.io/notes/assets/Draft.md')
@@ -39,6 +39,9 @@
         const tocList = document.getElementById('toc-list');
         const headings = markdownContent.querySelectorAll('h2, h3');
 
+        let lastList = tocList;
+        let lastLevel = 2;
+
         headings.forEach((heading) => {
           const id = heading.id;
           const level = parseInt(heading.tagName.charAt(1));
@@ -48,17 +51,22 @@
           link.textContent = heading.textContent;
           listItem.appendChild(link);
 
-          if (level === 2) {
-            tocList.appendChild(listItem);
-          } else {
-            const lastListItem = tocList.lastElementChild;
-            if (!lastListItem.querySelector('ul')) {
-              lastListItem.appendChild(document.createElement('ul'));
+          if (level > lastLevel) {
+            // Create a new sublist for the deeper level
+            const sublist = document.createElement('ul');
+            lastList.lastElementChild.appendChild(sublist);
+            lastList = sublist;
+          } else if (level < lastLevel) {
+            for (let i = 0; i < lastLevel - level; i++) {
+              lastList = lastList.parentNode.parentNode;
             }
-            lastListItem.querySelector('ul').appendChild(listItem);
           }
+
+          lastList.appendChild(listItem);
+          lastLevel = level;
         });
       });
   </script>
 </body>
+
 </html>
