@@ -38,7 +38,7 @@ Besides, in Catalonia, the tuition levels for enrolling in a course for the firs
 
 #### Data
 
-We use the administrative data from the University of Barcelona from 2007 to 20xx, which provides a detailed record of the academic performance of students who enrolled during the years before and after the change in tuition fees, including their course selection, grades, retakes, and graduation dates. This data also includes the background information of students recorded during the pre-enrollment process, as well as their performance in the college entrance examination.
+We use the administrative data from the University of Barcelona from 2007 to 20xx, which provides a detailed record of the academic performance of undergraduate students who enrolled in the years before and after the change in tuition fees. Our data includes their course selection, grades, retakes, and graduation dates. It also incorporates the background information of students recorded during the pre-enrollment process, as well as their performance in the college entrance examination.
 
 #### Methodology
 
