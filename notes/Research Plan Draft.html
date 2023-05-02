@@ -8,7 +8,7 @@
 
     <!-- Theme used for syntax highlighted code -->
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
-    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/showdown@2.1.0/dist/showdown.min.js"></script>
 
     <!-- author info -->
     <meta name="presentation" content="PRESENTATION TITLE">
@@ -20,12 +20,14 @@
 <title>Research Plan Draft</title>
 </head>
 
+    
 <body>
   <div class="toc">
     <ul id="toc-list"></ul>
   </div>
+  
   <div id="markdown-content"></div>
-
+  
   <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
   <script>
     fetch('https://lin-mengwei.github.io/notes/assets/Draft.md')
@@ -39,10 +41,6 @@
         const tocList = document.getElementById('toc-list');
         const headings = markdownContent.querySelectorAll('h2, h3');
 
-        let prevLevel = 2;
-        let listStack = [tocList];
-        let currList = tocList;
-
         headings.forEach((heading) => {
           const id = heading.id;
           const level = parseInt(heading.tagName.charAt(1));
@@ -52,23 +50,20 @@
           link.textContent = heading.textContent;
           listItem.appendChild(link);
 
-          if (level < prevLevel) {
-            while (listStack.length > level) {
-              currList = listStack.pop();
+          if (level === 2) {
+            tocList.appendChild(listItem);
+          } else {
+            const lastListItem = tocList.lastElementChild;
+            if (!lastListItem.querySelector('ul')) {
+              lastListItem.appendChild(document.createElement('ul'));
             }
-          } else if (level > prevLevel) {
-            const subList = document.createElement('ul');
-            currList.lastChild.appendChild(subList);
-            listStack.push(currList);
-            currList = subList;
+            lastListItem.querySelector('ul').appendChild(listItem);
           }
-          
-          currList.appendChild(listItem);
-          prevLevel = level;
         });
       });
   </script>
 </body>
+</html>
 
 
 </html>
