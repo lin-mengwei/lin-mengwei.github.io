@@ -22,7 +22,7 @@ The tuition fees of public universities often depend on the level of financial s
 
 ### Objectives 
 
-The 2008 financial crisis in the United States spread to the world, leading to the largest global economic crisis in decades. European countries were greatly affected, and many governments fell into difficulties. The Spanish government, in order to reduce expenses, had to increase university tuition fees in the following years. This change was nationwide. The price changes in Catalonia occurred between 2010 and 2012; before and after this period, the university tuition fees in the region remained relatively stable, providing us with an ideal policy change for our research. Taking advantage of this change in tuition fees, we attempt to find out whether the increase in tuition fees has an impact on students' behaviors in the university: Will increased tuition fees incentivize them to work harder so as to graduate as quickly as possible, or does the increase in costs cause more pressure psychologically and actually have a negative impact, or students are not concerned about changes in tuition fees so that their behaviours will not change significantly? And especially, how does the disproportional changes in the fees for retaking courses after failures in exam impact students' academic performance.
+The 2008 financial crisis in the United States spread to the world, leading to the largest global economic crisis in decades. European countries were greatly affected, and many governments fell into difficulties. The Spanish government, in order to reduce expenses, had to increase university tuition fees in the following years. This change was nationwide. The price changes in Catalonia occurred between 2010 and 2012; before and after this period, the university tuition fees in the region remained relatively stable, providing us with an ideal policy change for our research. Taking advantage of this change in tuition fees, we attempt to find out whether the increase in tuition fees has an impact on students' behaviors in the university: Will increased tuition fees incentivize them to work harder so as to graduate as quickly as possible, or does the increase in costs cause more pressure psychologically and actually have a negative impact, or students are not concerned about changes in tuition fees so that their behaviours will not change significantly? 
 
 <u>[insert line chart here]</u>
 
@@ -38,7 +38,7 @@ Besides, in Catalonia, the tuition levels for enrolling in a course for the firs
 
 #### Data
 
-We use the administrative data from the University of Barcelona from 2007 to 20xx, which provides a detailed record of the academic performance of undergraduate students who enrolled in the years before and after the change in tuition fees. Our data includes their course selection, grades, retakes, and graduation dates. It also incorporates the background information of students recorded during the pre-enrollment process, as well as their performance in the college entrance examination.
+We use the administrative data from the University of Barcelona (UB), which provides a detailed record of the academic performance of undergraduate students before and after the change in tuition fees. The sample consists of all students who enrolled at UB from 2007 to 2017. Our data includes their course selection, grades, retakes, and graduation dates. It also incorporates the background information of students recorded during the pre-enrollment process, as well as their performance in the college entrance examination.
 
 #### Methodology
 
