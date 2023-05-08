@@ -12,13 +12,13 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  * GLOBAL STYLES
  * 
  * 
- * --r-background-color: #C8CFC4; #D5DDD2; #F0F3F1
+ * --r-background-color: #C8CFC4; #D5DDD2; #F0F3F1; //#E2E4E1; #D5D8D3
  * --r-compliment-color: #5F8151; 
  * 
  * 
  *********************************************/
 :root {
-  --r-background-color: #E4EAE0; 
+  --r-background-color: #EFEFEF; /*比较灰*/
   --r-compliment-color: #5F8151;  
   --r-main-font: Arial, Source Sans Pro,  Helvetica, sans-serif;
   --r-main-font-size: 22px;
