@@ -40,6 +40,8 @@ Besides, in Catalonia, the tuition levels for enrolling in a course for the firs
 
 We use the administrative data from the University of Barcelona (UB), which provides a detailed record of the academic performance of undergraduate students before and after the change in tuition fees. The sample consists of all students who enrolled at UB from 2007 to 2017. Our data includes their course selection, grades, retakes, and graduation dates. It also incorporates the background information of students recorded during the pre-enrollment process, as well as their performance in the college entrance examination.
 
+The main outcome variables we use to indicate academic behaviors include: 1) grades a student obtained, 2) number of enrollments for a course before passing it, 3) number of courses a student enroll in, and 4) a dummy indicating whether a student passes a course for each time of enrollment, among others. These outcomes help us to identify effects in the intensive margin, which is our main target in this research as described in previous sections. Besides, we also investigate the drop-out and completion rates, as well as pre-enrolment characteristics such as relative performance in the College Entrance Exam, which complements our main analysis by looking at the extensive margin. 
+
 #### Methodology
 
 
