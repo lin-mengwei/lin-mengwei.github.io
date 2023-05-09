@@ -65,7 +65,7 @@ The main outcome variables we use to indicate academic behaviors include: 1) gra
 ### 3.4 Identification Strategy and Data
 
 
-
+###
 ## 4. Chapter 3
 
 ### 4.1 Motivation
@@ -77,8 +77,8 @@ The main outcome variables we use to indicate academic behaviors include: 1) gra
 ### 4.4 Identification Strategy and Data
 
 
-
-## Data Management Plan
+###
+## 5. Data Management Plan
 
 1. Data Summary 
 2. FAIR data 
@@ -123,5 +123,5 @@ Are you going to publish your data?
 
 When, where and  how?
 
-## Work Plan
+## 6. Work Plan
 
