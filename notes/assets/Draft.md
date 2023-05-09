@@ -44,11 +44,11 @@ The main outcome variables we use to indicate academic behaviors include: 1) gra
 
 #### 2) Methodology
 
-1. Event Study. We compare academic performance of students in different cohorts exposed to the rise in tuition fees in different years of study. To disentangle the effects of introducing an extra punishment for failing a course, we first focus on the change happening in academic year 2010/11. 
 
-2. Regression Discontinuity in Time (RDiT): 
-1) We pool the increases in academic years 2010/11 and 2011/12 
-2)
+In academic year 2010/2011, there is a sharp increase in third-time enrollment for the same course, while the fees for the first and second registrations do not change significantly compared to previous years. Thus, by using a Diff-in-Diff or event study, we can separate the effect of the extra costs on failing for the third and subsequent times. That is, we compare academic performance of students in different cohorts exposed to the first rise in tuition fees in 2010/11 in their different years of study.
+
+However, in academic year 2011/12, there is another shock where not only does failing for more times will generate higher costs, but also does the first and second times - a general increase in tuition fees. In this sense, it is difficult to disentangle the effects of heavier punishment for failure and the rise in tuition fees in general. We can use an RDiT to capture the effects. 
+
 
 ### 2.5 Pilot Results
 
@@ -65,7 +65,7 @@ The main outcome variables we use to indicate academic behaviors include: 1) gra
 ### 3.4 Identification Strategy and Data
 
 
-###
+### 
 ## 4. Chapter 3
 
 ### 4.1 Motivation
@@ -77,7 +77,7 @@ The main outcome variables we use to indicate academic behaviors include: 1) gra
 ### 4.4 Identification Strategy and Data
 
 
-###
+### 
 ## 5. Data Management Plan
 
 1. Data Summary 
