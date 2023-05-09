@@ -65,7 +65,6 @@ However, in academic year 2011/12, there is another shock where not only does fa
 ### 3.4 Identification Strategy and Data
 
 
-### 
 ## 4. Chapter 3
 
 ### 4.1 Motivation
@@ -77,7 +76,6 @@ However, in academic year 2011/12, there is another shock where not only does fa
 ### 4.4 Identification Strategy and Data
 
 
-### 
 ## 5. Data Management Plan
 
 1. Data Summary 
