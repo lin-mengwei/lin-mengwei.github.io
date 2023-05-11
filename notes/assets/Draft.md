@@ -55,9 +55,7 @@ where $y_{it}$ denotes the outcomes as defined above, $Cohort_i$ indicates the c
 
 b. RD in Time
 
-<!--  y_{it}=\alpha+\gamma\cdot\mathbb{1}(t>2010)(+\beta Fee_{it})+\varepsilon_{it}
-
-However, in academic year 2011/12, there is another shock where not only does failing for more times will generate higher costs, but also does the first and second times - a general increase in tuition fees. In this sense, it is difficult to disentangle the effects of heavier punishment for failure and the rise in tuition fees in general. We can use an RDiT to capture the effects. --> 
+<!-- y_{it}=\alpha+\gamma\cdot\mathbb{1}(t>2010)(+\beta Fee_{it})+\varepsilon_{it} However, in academic year 2011/12, there is another shock where not only does failing for more times will generate higher costs, but also does the first and second times - a general increase in tuition fees. In this sense, it is difficult to disentangle the effects of heavier punishment for failure and the rise in tuition fees in general. We can use an RDiT to capture the effects.--> 
 
 
 ### 2.5 Pilot Results
