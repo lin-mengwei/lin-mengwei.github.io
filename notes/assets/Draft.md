@@ -44,6 +44,11 @@ The main outcome variables we use to indicate academic behaviors include: 1) gra
 
 #### 2) Methodology
 
+$$
+y_{it}=\alpha+\gamma_1Cohort_i+\gamma_2YS_{it}+\beta Cohort_{i}\cdot YS_it+\varepsilon_{it}
+$$
+
+where $y_{it}$ denotes the outcomes as defined above, $Cohort_i$ indicates the cohort where the individual is in (defined by the year of entering univeristy), and $YS_{it}$ is the year of study for individual $i$ at year $t$. We assume that, in the absence of the rise in tuition fees, the evolution of students' behaviors as they proceed to higher years of study do not change across cohorts.
 
 In academic year 2010/2011, there is a sharp increase in third-time enrollment for the same course, while the fees for the first and second registrations do not change significantly compared to previous years. Thus, by using a Diff-in-Diff or event study, we can separate the effect of the extra costs on failing for the third and subsequent times. That is, we compare academic performance of students in different cohorts exposed to the first rise in tuition fees in 2010/11 in their different years of study.
 
