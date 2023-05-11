@@ -47,7 +47,7 @@ The main outcome variables we use to indicate academic behaviors include: 1) gra
 a. Diff-in-Diff
 
 $$
-y_{it}=\alpha+\gamma_1Cohort_i+\gamma_2YS_{it}+\beta Cohort_{i}\cdot YS_it+\varepsilon_{it}
+y_{it}=\alpha+\gamma_1Cohort_i+\gamma_2YS_{it}+\beta Cohort_{i}\cdot YS_it+\mathbf{X_it}+\varepsilon_{it}
 $$
 
 where $y_{it}$ denotes the outcomes as defined above, $Cohort_i$ indicates the cohort where the individual is in (defined by the year of entering univeristy), and $YS_{it}$ is the year of study for individual $i$ at year $t$. We assume that, in the absence of the rise in tuition fees, the pattern of evolution of students' behaviors as they proceed to higher years of study does not change across cohorts. For example, for an individual in the 2008 cohort, the third year of her university study was affected by the sharp increase in tuition fees in the academic year 2010/11, which leads to the fact that the pattern of her behaviors across years of study could be different from that of an individual in the 2007 cohort.
@@ -57,7 +57,7 @@ In academic year 2010/2011, there is a sharp increase in third-time enrollment f
 b. RD in Time
 
 $$
-y_{it}=\alpha+\gamma_1_i+\gamma_2YS_{it}+\beta Cohort_{i}\cdot YS_it+\varepsilon_{it}
+y_{it}=\alpha+\beta Fee_{it}+f(t)+\varepsilon_{it}
 $$
 
 
