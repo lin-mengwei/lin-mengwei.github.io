@@ -36,6 +36,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+::selection {
+  background-color: yellow;
+}
+
 #navbar {
     .navbar-burger {
         span:nth-child(2) {
