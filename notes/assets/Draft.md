@@ -8,7 +8,7 @@
 
 在这篇博士论文中，我计划对于教育进行的研究贯穿了人的一生。对于不同的人生阶段，我会选取不同的切入点与侧重点，使用经济学的方法与工具，试图深入地理解人力资本投资的相关问题。在终身学习的概念框架之下，人的教育大致可以分为早期的学校教育以及离开学校之后的教育与培训。这篇博士论文中的后面三章是三篇独立的学术论文，它们主要采用实证、因果的工具，将经济学的视角应用于教育及相关问题的分析，评估相关的公共政策，回答生命周期中不同阶段的教育经济问题。从主题上说，这三篇文章以教育为最中心的关注点，往外联系劳动、人口等与之密切相关的话题，将教育作为个人与社会发展过程中的一个根本性因素进行分析，在深入探讨具体问题时，也将它们放在系统的视域之下进行理解。
 
-第一篇论文关注大学教育，将目标落在大学学费与学生学业表现的关系之上。更宏观地说，我期待这篇文章为教育财政投入与教育资源使用效率等问题提供一个微观行为层面的实证支持。
+第一篇论文关注大学教育，将目标落在大学学费与学生学业表现的关系之上。更宏观地说，我期待这篇文章为教育财政投入与教育资源使用效率等问题提供一个微观行为层面的实证支持。This chapter is going to be co-authored with both my supervisors, Andreu Arenas and Jenifer Ruiz-Valenzuela. 
 
 第二篇论文在学校教育与劳动力市场表现搭建桥梁，研究教育如何影响劳动力市场表现的不确定性。教育如何影响一个人的经济表现，从上世纪教育经济学发端，就已经是最为重要的一个话题。经济学家基于人力资本理论而提出的“教育是最好的投资”等说法，如今已经是人人都知道的陈词滥调。然而，尽管教育是最重要的人力资本“投资”方式，相比于其他类型的投资，我们对它的理解却不够透彻——既有研究对于收益的调查已经细致入微，但对投资的另一个重要角度的考察，即风险或不确定性，却仍处在一个比较模糊的阶段。
 
@@ -28,21 +28,17 @@ The 2008 financial crisis in the United States spread to the world, leading to t
 
 ### 2.2 Objectives and Expected Contribution
 
-Taking advantage of the change in tuition fees as described above, we attempt to find out whether the increase in tuition fees has an impact on students' behaviors in the university, with a particular focus on the number of retakes for a student to pass a course. In order to answer such a question, some details about the price change. In most regions of Spain, and especially in Catalonia, the levels of tuition fees for enrolling in a course for the first time and for subsequent repetitions of the same course are different. As is shown in <u>[Graph 1]</u>, before 2010, the raise in fees if one takes more times of a course--considered here as the extra costs--was not significant. For instance, students majoring in economics need to pay at most 5 euros more per credit if they fail a course and take it for the second or more times. However, after the policy change, the highest price per credit for retaking a course (for the fourth and subsequent times of repetition) has become almost four times the price for the first enrolment. Take economics as an example again. In 2011, the extra cost per credit is 18.19 euros, or 100%, if the student fails a course for the second time and needs to take it for the third.  
+Taking advantage of the change in tuition fees as described above, we attempt to find out whether the increase in tuition fees has an impact on students' behaviors in the university, with a particular focus on the number of retakes for a student to pass a course. In order to answer such a question, some details about the price change. In most regions of Spain, and especially in Catalonia, the levels of tuition fees for enrolling in a course for the first time and for subsequent repetitions of the same course are different. As is shown in <u>[Graph 1]</u>, before 2010, the raise in fees if one takes more times of a course--considered here as the extra costs--was not significant. For instance, students majoring in economics need to pay at most 5 euros more per credit if they fail a course and take it for the second or more times. However, after the policy change, the highest price per credit for retaking a course (for the fourth and subsequent times of repetition) has become almost four times the price for the first enrolment. Take economics as an example again. In 2011, the extra cost per credit is 18.19 euros, or 100%, if the student fails a course for the second time and needs to take it for the third. Here we are showing the price changes for the system before introducing the Bologna process; the trend behaves exactly the same for the later system.
 
 <img src="D:\GitHub\lin-mengwei.github.io\notes\assets\exploratory_retake\economics_old.png" alt="Graph 1: Price Changes per Credit in Economics from 2007 to 2016 (pre-Bologna)" style="zoom:33%;" />
 
-With this variation, we are able to further explore how tuition fees affect students' behaviors including courses retaking. Does reducing the subsidy level for course repetitions and increasing the cost of retraining for students motivate them to make greater efforts so that they retake fewer courses? Does it prompt students to complete their studies faster and reduce the proportion of delayed graduation?
+With this variation, we are able to further explore how tuition fees affect students' behaviors including course retaking. Does reducing the subsidy level for course repetitions and increasing the cost of retraining for students motivate them to make greater efforts so that they retake fewer courses? Does it prompt students to complete their studies faster and reduce the proportion of delayed graduation?
 
-This paper contributes to the strand of literature in the economics of education which looks at the relationship between financial situations and students' performance. Research on this topic in general starts around 30 years ago (Kane 1994; Ehrenberg and Mavros 1995; Dynarski, 2003). However, a large portion of papers has studied the impact of various aids and scholarships (Murphy and Wyness 2023; Denning et al 2019; Castleman and Long 2016; Fryer 2011; Dynarski, 2003). This is mainly because, compared to the introduction of aids and scholarships, tuition fees are more difficult to change due to procedural complexity, especially for public universities whose fees are strictly regulated by laws. Recent studies have tried to identify the causal relationship between tuition fees and student behaviors by evaluating relevant policy changes, though there are relatively few changes. As mentioned in the previous section, the shift away from England's free higher education system has been a possible policy change to explore. However, due to the complication and long progression of the change, past research either found it difficult to separate the pure effect of charging fees (Sa 2019) or provide descriptive evidence rather than causal inference (Murphy et al 2019). The introduction of fees for universities in Germany is one of the most often explored settings. Looking at this change, Hübner (2012) and Bruckmeier and Wigger (2014) come to controversial results--the former study concludes with a decrease in enrolment in the face of a rise in fees while the latter finds no significant impact. Recently, Bietenbeck et al (2023) disentangle the effects in the extensive and intensive margins using this variation, reaching the conclusion that the introduction of fees increases students' effort and degree completion but decreases enrolment rates, thus leading to an insignificant overall effect. 
+This paper contributes to the strand of literature in the economics of education which looks at the relationship between financial situations and students' performance. Research on this topic in general started several decades ago (Kane 1994; Ehrenberg and Mavros 1995; Dynarski, 2003). However, a large portion of papers has studied the impact of various aids and scholarships (Murphy and Wyness 2023; Denning et al 2019; Castleman and Long 2016; Fryer 2011; Dynarski, 2003). A possible explanation of this is that, compared to the introduction of aids and scholarships, tuition fees are more difficult to change due to procedural complexity, especially for public universities whose fees are regulated by laws. Also, in countries like the United States, grants and financial aid are used often as a tool to target different groups of students, thus attracting more policy-related concerns and examinations.
 
-不同地区的政策：西班牙，美国
+Recent studies have tried to identify the causal relationship between tuition fees and student behaviors by evaluating relevant policy changes. As mentioned in the previous section, the shift away from England's free higher education system has been a possible policy change to explore. Yet, due to the complication and long progression of the change, past research either found it difficult to separate the pure effect of charging fees (Sa 2019) or provide descriptive evidence rather than causal inference (Murphy et al 2019). The introduction of fees for universities in Germany is another most often explored setting. Looking at this change, Hübner (2012) and Bruckmeier and Wigger (2014) obtain rather controversial results--the former study concludes with a decrease in enrolment in the face of a rise in fees while the latter finds no significant impact. Recently, Bietenbeck et al (2023) disentangle the effects in the extensive and intensive margins using this variation, reaching the conclusion that the introduction of fees increases students' effort and degree completion but decreases enrolment rates, thus leading to an insignificant overall effect. Such a lack of consensus exists in other parts of the literature. In Italy, Garibaldi et al (2012) exploit a special tuition fee discontinuity at Bocconi University, finding that higher tuition fees do reduce the probability of late graduation. In contrast, Hans Fricke (2018) uses an unexpected raise in fees at the University of St. Gallen in Switzerland and finds no significant effect at all on both graduation and grades. For the extensive margin, according to a meta-analysis by Havranek et al (2017), though most research reports that increasing tuition fees would lower enrolment rates, the mean effect has become close to zero after adjusting for publication bias. For the effects on the intensive margin, the debate is still going on; this is also what we mainly focus on in the paper. 
 
-内外margin及其中的retake: Using the data from a single university, we examine the intensive margin. In previous research, many studies have been devoted to exploring the extensive margin. According to a meta-analysis of the literature by Havranek et al (2017), although most research reports that increasing tuition fees would lower enrollment rates, after adjusting for publication bias, this mean effect has become close to zero. For the intensive margin, the results are not as clear...
-
-进一步分析：
-
-Using data from different undergraduate programs, we are also able to explore the heterogeneity among subjects with different characteristics in the face of the reduction of financial resources the university receives. For instance, disciplines with heavier reliance in experiments will probably suffer from a negative impact in student outcomes; disciplines with closer connections with the economic sector outside of universities might experience a negative effect in student performance as students may react to the increasing tuition fees by spending more time in doing part-time jobs (or maybe students in such disciplines are less affected because they can compensate for this increase by working part-time more easily). 
+Pertinent to the particular context we use, there is only one paper looking at a similar change in Spain, as far as our knowledge is concerned. Beneito et al. (2018) compare students who pay fees to those who are exempt before and after a rise in university prices in Valencia, Spain, using data from three majors in one cohort at the University of Valencia. However, they do not try to investigate different levels of extra costs students face when there are course repetitions, which is our focus in this paper to understand in detail the efficiency of. Besides, with more data available, we are also able to explore the heterogeneity of the effects on different groups of students from various backgrounds, disciplines, etc, when facing a change in prices. **[should I drop the last bit? It doesn't look good to me somehow... →]** For instance, disciplines with heavier reliance in experiments will probably suffer from a negative impact in student outcomes; disciplines with closer connections with the economic sector outside of universities might experience a negative effect in student performance as students may react to the increasing tuition fees by spending more time in doing part-time jobs (or maybe students in such disciplines are less affected because they can compensate for this increase by working part-time more easily). 
 
 
 ### 2.3 Identification Strategy and Data
@@ -68,8 +64,6 @@ where $y_{ijk}$ denotes the outcomes as defined above for individual $i$ in coho
 (To disentangle the effect for extra punishment of failure: In academic year 2010/2011, there is a sharp increase in third-time enrollment for the same course, while the fees for the first and second registrations do not change significantly compared to previous years. Thus, by using a Diff-in-Diff or event study, we can separate the effect of the extra costs on failing for the third and subsequent times. That is, we compare academic performance of students in different cohorts exposed to the first rise in tuition fees in 2010/11 in their different years of study.)
 
 b. RD in Time
-
-<!-- y_{it}=\alpha+\gamma\cdot\mathbb{1}(t>2010)(+\beta Fee_{it})+\varepsilon_{it} However, in academic year 2011/12, there is another shock where not only does failing for more times will generate higher costs, but also does the first and second times - a general increase in tuition fees. In this sense, it is difficult to disentangle the effects of heavier punishment for failure and the rise in tuition fees in general. We can use an RDiT to capture the effects.--> 
 
 
 ### 2.4 Pilot Results
@@ -107,13 +101,9 @@ Current explorations from the practice side have been based on ideas of increasi
 
 It is crucial to recognize that elderly individuals can also contribute to socio-economic development, only with appropriate measures in place. This is mainly related to human capital, including enabling them to cope with the fast-changing environment, and activating and utilizing what older workers accumulate during years of work, which is too valuable to waste. One promising approach is by providing further education and training opportunities to older workers. Through such training, these aging individuals can formulate new human capital and reduce the depreciation rate of their existing skills and knowledge, enhancing their adaptability in today's labor market and improving their productivity. Another effective approach involves identifying and leveraging the existing strengths of elderly workers, so as to, for example, increase more opportunities for older workers (Acemoglu et al, 2022). By recognizing and harnessing their unique skills and knowledge, we can enhance efficiency in utilizing their expertise and increase their labor market returns. From a macro perspective, empowering elderly workers allows them to continue making valuable contributions to the economy, fundamentally altering the notion that an "aging society" is synonymous with increasing social burdens and economic slowdown; from an individual perspective, it enables them to lead lives with greater dignity in society. 
 
-
-
 ### 4.2 Objectives and Expected Contribution
 
 In this chapter, I will evaluate the effects of a training program on labor market outcomes of older workers. Training programs targeting older workers is not a new concept, at least in the late 20th century, some researchers have pointed out possible advantages of offering such programs (Samorodov, 1999), although there was little evidence to support them.
-
-
 
 One possible concern is that firms do not believe older workers will stay with them very long, making them reluctant to invest in their human capital. 
 
@@ -121,37 +111,16 @@ One possible concern is that firms do not believe older workers will stay with t
 
 Mid-Career Enhanced Subsidy - Singapore
 
- the 2020 Work for Tomorrow Act - Germany
-
-WEGEBAU - 
+the 2020 Work for Tomorrow Act - Germany (or WEGEBAU before) - but they use admin data mostly
 
 
 ## 5. Data Management Plan
 
-1. Data Summary 
-2. FAIR data 
-   1. Making data findable, including provisions for metadata 
-   2. Making data openly accessible 
-   3. Making data interoperable 
-   4. Increase data re-use (through clarifying licences) 
-3. Allocation of resources 
-4. Data security 
-5. Ethical aspects 
-6. Other issues
+For the first chapter, I am using the administrative data from the UB, which my supervisors have requested for this project. Access to the data is granted to us (Andreu Arenas, Jenifer Ruiz-Valenzuela, and Mengwei Lin) and us only. Therefore I am not going to publish the data or share it without further permission from the UB. Besides, we are authorized to use and reuse the data during the project. In terms of storage, the data will be stored online in a OneDrive folder under my UB account (mengwei.lin@ub.edu), and shared with both of my co-authors. We believe that it is safe to store the data in this way. The original datasets are in .csv format, and when processing the data with Stata, the main software package used in the project, they will be converted to .dta files before further operation. This also ensures that the original data will not be manipulated and can be reused whenever necessary. Last, with the provided codebook, the data is understandable. Relevant details of the data will be reported in the main part of the paper. 
+
+For the second chapter, I plan to use the . For the third chapter, . With the research progressing, I will be able to provide further details about data management related to the last two papers.
 
 
-
-Which data will be produced, gathered, observed, reused  and in which formats or how existing data will be reused.
-
-How data will be processed, stored and preserved.
-
-When data will be accessible and who could access to data.
-
-The responsible for the data and the rights holder.
-
-How ethical questions have been taken into account 
-
-How data will be reusable
 
 **Need to answer:**
 
