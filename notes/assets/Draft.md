@@ -1,4 +1,4 @@
-# Research Plan
+# Research Plan: Essays in Human Capital Investment; Essays in Economics of Education; Economics of Education throughout Lifecycle;...
 
 [Notes]
 
@@ -6,7 +6,13 @@
 
 ## 1. Introduction
 
-<u>[general intro here]</u>
+在这篇博士论文中，我计划对于教育进行的研究贯穿了人的一生。对于不同的人生阶段，我会选取不同的切入点与侧重点，使用经济学的方法与工具，试图深入地理解人力资本投资的相关问题。在终身学习的概念框架之下，人的教育大致可以分为早期的学校教育以及离开学校之后的教育与培训。这篇博士论文中的后面三章是三篇独立的学术论文，它们主要采用实证、因果的工具，将经济学的视角应用于教育及相关问题的分析，评估相关的公共政策，回答生命周期中不同阶段的教育经济问题。从主题上说，这三篇文章以教育为最中心的关注点，往外联系劳动、人口等与之密切相关的话题，将教育作为个人与社会发展过程中的一个根本性因素进行分析，在深入探讨具体问题时，也将它们放在系统的视域之下进行理解。
+
+第一篇论文关注大学教育，将目标落在大学学费与学生学业表现的关系之上。更宏观地说，我期待这篇文章为教育财政投入与教育资源使用效率等问题提供一个微观行为层面的实证支持。
+
+第二篇论文在学校教育与劳动力市场表现搭建桥梁，研究教育如何影响劳动力市场表现的不确定性。教育如何影响一个人的经济表现，从上世纪教育经济学发端，就已经是最为重要的一个话题。经济学家基于人力资本理论而提出的“教育是最好的投资”等说法，如今已经是人人都知道的陈词滥调。然而，尽管教育是最重要的人力资本“投资”方式，相比于其他类型的投资，我们对它的理解却不够透彻——既有研究对于收益的调查已经细致入微，但对投资的另一个重要角度的考察，即风险或不确定性，却仍处在一个比较模糊的阶段。
+
+第三篇论文关注人生较后阶段的人力资本投资问题，试图从实证上理解培训对于老年工作者的表现有什么样的影响。研究人在劳动最后一阶段的教育与培训问题，与关注正要踏入劳动力市场的大学学生的第一篇论文形成了一种很微妙的呼应。但更重要的是，如果说前两篇文章所关注的教育经济领域一般兴趣的问题，第三篇文章所试图回答的这个问题则是当前时代及以后相当长一段时间内具有十分重要的意义，因为我们的世界正处在并将长期处在所谓的老龄化社会。
 
 ## 2. Chapter 1  *Tuition Fees and Efficient Use of Higher Educational Resources*
 
@@ -26,6 +32,12 @@ The 2008 financial crisis in the United States spread to the world, leading to t
 
 Besides, in Catalonia, the tuition levels for enrolling in a course for the first time and for subsequent repetitions of the same course are different. Before 2010, such differences were not significant [try to quantify it here]. However, after the policy change, the highest price per credit for retaking a course (for the fourth and subsequent times of repetition) has become almost four times the price for the first enrolment. In this situation, we are able to further explore the performance of financial investment in higher education. Does reducing the subsidy level for course repetitions and increasing the cost of retraining for students motivate them to make greater efforts so that they retake fewer courses? Does it prompt students to complete their studies faster and reduce the proportion of delayed graduation?
 
+不同地区的政策：西班牙，英国，德国，美国
+
+内外margin及其中的retake: 
+
+进一步分析：
+
 <u>[contribute to intuition fees]</u> Since the last century, economists have been paying attention to the impact of financial incentives on students [citing earlier articles], but a large portion of existing papers have studied the impact of various aids and scholarships (such as xxxx). Logically speaking, tuition fees are primary and subsidies are secondary. (?) Yet, there is no consensus in the academic community on the causal relationship between changes in tuition fees and student behaviors and performance. This is mainly because, compared to the introduction of aids and scholarships, tuition fees are more difficult to change due to procedural complexity, especially for public universities whose fees are strictly regulated by laws. Thus there are relatively few available policies to explore. This chapter exploits the changes in tuition fees in the Catalan region to study the impact of tuition increases and decreases on students, and contributes to the study of how tuition fees affect student behaviors.
 
 <u>[contribute to analyzing the intensive margin]</u> Using the data from a single university, we examine the intensive margin. In previous research, many studies have been devoted to exploring the extensive margin. According to a meta-analysis of the literature by Havranek et al (2017), although most research reports that increasing tuition fees would lower enrollment rates, after adjusting for publication bias, this mean effect has become close to zero. For the intensive margin, the results are not as clear...
@@ -40,6 +52,8 @@ Using data from different undergraduate programs, we are also able to explore th
 We use the administrative data from the University of Barcelona (UB), which provides a detailed record of the academic performance of undergraduate students before and after the change in tuition fees. The sample consists of all students who enrolled at UB from 2007 to 2017. Our data includes their course selection, grades, retakes, and graduation dates. It also incorporates the background information of students recorded during the pre-enrollment process, as well as their performance in the college entrance examination.
 
 The main outcome variables we use to indicate academic behaviors include: 1) grades a student obtained, 2) the number of enrollments for a course before passing it, 3) the number of courses a student enroll in, and 4) a dummy indicating whether a student passes a course for each time of enrollment, among others. These outcomes help us to identify effects in the intensive margin, which is our main target in this research as described in previous sections. Besides, we also investigate the drop-out and completion rates, as well as pre-enrolment characteristics such as relative performance in the College Entrance Exam, which complements our main analysis by looking at the extensive margin. 
+
+At the moment we have obtained the slices covering three cohorts of students majoring in Economics, as the administrative side is still processing our request for the whole dataset. Descriptive statistics and preliminary results are generated for exploratory purposes and are presented below. We can see that the
 
 #### 2) Methodology
 
@@ -91,15 +105,25 @@ Population aging has been becoming the new norm of the world, albeit at varying 
 
 Current explorations from the practice side have been based on ideas of increasing the consumption of the elderly and reducing the burden of elderly care. These include, for example, developing a "silver market" to target the consumption needs of the elderly and providing more elderly care as public services to reduce the pressure on young people to support their elders. Such approaches are necessary but insufficient, as they are mainly derived *merely* from the point of view that treats the elderly as unproductive piggy banks or social burdens. However, to build a harmonious and sustainable aging society, a paradigm shift in this mindset is necessary. 
 
-It is crucial to recognize that elderly individuals can also contribute to socio-economic development, only with appropriate measures in place. This is mainly related to human capital, including enabling them to cope with the fast-changing environment, and activating and utilizing what older workers accumulate during years of work, which is too valuable to waste. One promising approach is by providing further education and training opportunities to older workers. Through such training, these aging individuals can formulate new human capital and reduce the depreciation rate of their existing skills and knowledge, enhancing their adaptability in today's labor market and improving their productivity. Another effective approach involves identifying and leveraging the existing human capital strengths of elderly workers. By recognizing and harnessing their unique skills and knowledge, we can enhance efficiency in utilizing their expertise and increase their labor market returns. From a macro perspective, empowering elderly workers allows them to continue making valuable contributions to the economy, fundamentally altering the notion that an "aging society" is synonymous with increasing social burdens and economic slowdown; from an individual perspective, it enables them to lead lives with greater dignity in society. 
+It is crucial to recognize that elderly individuals can also contribute to socio-economic development, only with appropriate measures in place. This is mainly related to human capital, including enabling them to cope with the fast-changing environment, and activating and utilizing what older workers accumulate during years of work, which is too valuable to waste. One promising approach is by providing further education and training opportunities to older workers. Through such training, these aging individuals can formulate new human capital and reduce the depreciation rate of their existing skills and knowledge, enhancing their adaptability in today's labor market and improving their productivity. Another effective approach involves identifying and leveraging the existing strengths of elderly workers, so as to, for example, increase more opportunities for older workers (Acemoglu et al, 2022). By recognizing and harnessing their unique skills and knowledge, we can enhance efficiency in utilizing their expertise and increase their labor market returns. From a macro perspective, empowering elderly workers allows them to continue making valuable contributions to the economy, fundamentally altering the notion that an "aging society" is synonymous with increasing social burdens and economic slowdown; from an individual perspective, it enables them to lead lives with greater dignity in society. 
+
+
 
 ### 4.2 Objectives and Expected Contribution
 
-In this chapter, I will evaluate the effects of a training program on labor market outcomes of older workers. 
+In this chapter, I will evaluate the effects of a training program on labor market outcomes of older workers. Training programs targeting older workers is not a new concept, at least in the late 20th century, some researchers have pointed out possible advantages of offering such programs (Samorodov, 1999), although there was little evidence to support them.
+
+
+
+One possible concern is that firms do not believe older workers will stay with them very long, making them reluctant to invest in their human capital. 
 
 ### 4.3 Potential Identification Strategy and Data
 
+Mid-Career Enhanced Subsidy - Singapore
 
+ the 2020 Work for Tomorrow Act - Germany
+
+WEGEBAU - 
 
 
 ## 5. Data Management Plan
