@@ -28,9 +28,9 @@ The 2008 financial crisis in the United States spread to the world, leading to t
 
 ### 2.2 Objectives and Expected Contribution
 
-Taking advantage of the change in tuition fees as described above, we attempt to find out whether the increase in tuition fees has an impact on students' behaviors in the university, with a particular focus on the number of retakes for a student to pass a course. In order to answer such a question, some details about the price change. In most regions of Spain, and especially in Catalonia, the levels of tuition fees for enrolling in a course for the first time and for subsequent repetitions of the same course are different. As is shown in <u>[Graph 1]</u>, before 2010, the raise in fees if one takes more times of a course--considered here as the extra costs--was not significant. For instance, students majoring in economics need to pay at most 5 euros more per credit if they fail a course and take it for the second or more times. However, after the policy change, the highest price per credit for retaking a course (for the fourth and subsequent times of repetition) has become almost four times the price for the first enrolment. Take economics as an example again. In 2011, the extra cost per credit is 18.19 euros, or 100%, if the student fails a course for the second time and needs to take it for the third. Here we are showing the price changes for the system before introducing the Bologna process; the trend behaves exactly the same for the later system.
+Taking advantage of the change in tuition fees as described above, we attempt to find out whether the increase in tuition fees has an impact on students' behaviors in the university, with a particular focus on the number of retakes for a student to pass a course. In order to answer such a question, some details about the price change. In most regions of Spain, and especially in Catalonia, the levels of tuition fees for enrolling in a course for the first time and for subsequent repetitions of the same course are different. As is shown in <u>[Graph 1]</u>, before 2010, the raise in fees if one takes more times of a course--considered here as the extra costs--was not significant. For instance, students majoring in economics need to pay at most 5 euros more per credit if they fail a course and take it for the second or more times. However, after the policy change, the highest price per credit for retaking a course (for the fourth and subsequent times of repetition) has become almost four times the price for the first enrolment. Take economics as an example again. In 2011, the extra cost per credit is 18.19 euros, or 100%, if the student fails a course for the second time and needs to take it for the third. Here we are showing the price changes for the system before introducing the Bologna process; the trend behaves exactly the same for the later system, as prices per credit were calculated strictly based on the conversion of credits between two systems (1 ETC = 1.5 Spanish credits).
 
-<img src="D:\GitHub\lin-mengwei.github.io\notes\assets\exploratory_retake\economics_old.png" alt="Graph 1: Price Changes per Credit in Economics from 2007 to 2016 (pre-Bologna)" style="zoom:33%;" />
+<img src="https://lin-mengwei.github.io/notes/assets/exploratory_retake/economics_old.png" alt="Graph 1: Price Changes per Credit in Economics from 2007 to 2016 (pre-Bologna)" style="zoom:33%;" />
 
 With this variation, we are able to further explore how tuition fees affect students' behaviors including course retaking. Does reducing the subsidy level for course repetitions and increasing the cost of retraining for students motivate them to make greater efforts so that they retake fewer courses? Does it prompt students to complete their studies faster and reduce the proportion of delayed graduation?
 
@@ -49,7 +49,7 @@ We use the administrative data from the University of Barcelona (UB), which prov
 
 The main outcome variables we use to indicate academic behaviors include: 1) grades a student obtained, 2) the number of enrollments for a course before passing it, 3) the number of courses a student enroll in, and 4) a dummy indicating whether a student passes a course for each time of enrollment, among others. These outcomes help us to identify effects in the intensive margin, which is our main target in this research as described in previous sections. Besides, we also investigate the drop-out and completion rates, as well as pre-enrolment characteristics such as relative performance in the College Entrance Exam, which complements our main analysis by looking at the extensive margin. 
 
-At the moment we have obtained the slices covering three cohorts of students majoring in Economics, as the administrative side is still processing our request for the whole dataset. Descriptive statistics and preliminary results are generated for exploratory purposes and are presented below. We can see that the
+At the moment we have obtained the slices covering three cohorts of students majoring in Economics, as the administrative side is still processing our request for the whole dataset. Descriptive statistics and preliminary results are generated for exploratory purposes and are presented below.
 
 #### 2) Methodology
 
@@ -61,9 +61,7 @@ y_{ijk}=\alpha_k+\gamma_j+\beta D_{ijk}+\theta X_i+\varepsilon_{ijk},
 $$
 where $y_{ijk}$ denotes the outcomes as defined above for individual $i$ in cohort $j$ at the $k$-th year of study, $D_{ijk}$ indicates whether this individual is exposed to the rise in fees, $\alpha_k$ captures the fixed effects for different years of study, $\gamma_j$ captures the fixed effects for cohort $j$, and $X_i$ is a vector of characteristics of individual $i$. We assume that, in the absence of the rise in tuition fees, the pattern of evolution of students' behaviors as they proceed to higher years of study does not change across cohorts, while the absolute levels of performance may change from cohort to cohort. This assumption lays the foundation for identifying the causal effects of the policy change in tuition fees using the above specification. To illustrate, an individual in the 2008 cohort ($j=2008$), was affected by the sharp increase in tuition fees in the academic year 2010/11, which is the third year of her university study ($k=3$). Therefore, our regression will capture any possible changes in her performance from the second to the third year, which, when compared to that of another individual in the 2007 cohort from his second to third year, will lead us to the effect caused by the rise in tuition fees.
 
-In order to disentangle the effects of the extra costs, we use the rise 
-
-**b. RD in Time**
+In order to disentangle the effects of the extra costs, we use the rise in 2011, where the prices for the first and second times of matriculation of a course did not change greatly (e.g., around 1 euro in economics), while the price for repeating a course for the third and subsequent times more than doubled (e.g.,  around 20 euro in economics). We will split the sample and use students that take a course for the second time, to see how such a drastic rise in the punishment of failing affects their behaviors. We then move to the change in 2012, when there a difference in prices for the third and fourth matriculations was introduced. This allows us to further examine another impact of the extra costs.
 
 
 ### 2.4 Pilot Results
@@ -86,17 +84,17 @@ in Delaney and Devereux (2021)
 
 [考察中国的情形很有必要]
 
-### 3.3 Analysis
+### 3.3 The Analysis
 
 #### 1) Conceptual framework
 
 To start, it is crucial to clarify the definition and corresponding measurement of what I try to investigate--risks of returns to education. Parallel to the ideas of return and risk in financial investment which take the forms of financial market performance, returns and risks to human capital, especially to education, can be defined as labor market outcomes and their uncertainty. First, the returns one receives from higher education compared to high school can be defined as the probability of the marginal increase in expected wages one earns with an increase in education being negative, holding other factors constant. Second, such corresponding definitions can be extended to other outcomes such as employment status - the probability of a marginal decrease in job stability (measured for example as the average time staying in the same job) for receiving more education. Third, considering the perpetuity of the returns to human capital investment, we can also define the risks as income volatility over the life cycle. Based on these definitions, I thus plan to use a measurement with three components, so as to capture the risks in human capital investment.
 
-
+Next, I will present a conceptual framework for understand 
 
 #### 2) Identification and Data
 
-
+In order to identify the effects of 
 
 
 ## 4. Chapter 3  *Make Gray the New Green: Human Capital Re-Investment in Aging Workers*
