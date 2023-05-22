@@ -61,7 +61,7 @@ y_{ijk}=\alpha_k+\gamma_j+\beta D_{ijk}+\theta X_i+\varepsilon_{ijk},
 $$
 where $y_{ijk}$ denotes the outcomes as defined above for individual $i$ in cohort $j$ at the $k$-th year of study, $D_{ijk}$ indicates whether this individual is exposed to the rise in fees, $\alpha_k$ captures the fixed effects for different years of study, $\gamma_j$ captures the fixed effects for cohort $j$, and $X_i$ is a vector of characteristics of individual $i$. We assume that, in the absence of the rise in tuition fees, the pattern of evolution of students' behaviors as they proceed to higher years of study does not change across cohorts, while the absolute levels of performance may change from cohort to cohort. This assumption lays the foundation for identifying the causal effects of the policy change in tuition fees using the above specification. To illustrate, an individual in the 2008 cohort ($j=2008$), was affected by the sharp increase in tuition fees in the academic year 2010/11, which is the third year of her university study ($k=3$). Therefore, our regression will capture any possible changes in her performance from the second to the third year, which, when compared to that of another individual in the 2007 cohort from his second to third year, will lead us to the effect caused by the rise in tuition fees.
 
-(To disentangle the effect for extra punishment of failure: In academic year 2010/2011, there is a sharp increase in third-time enrollment for the same course, while the fees for the first and second registrations do not change significantly compared to previous years. Thus, by using a Diff-in-Diff or event study, we can separate the effect of the extra costs on failing for the third and subsequent times. That is, we compare academic performance of students in different cohorts exposed to the first rise in tuition fees in 2010/11 in their different years of study.)
+In order to disentangle the effects of the extra costs, we use the rise 
 
 **b. RD in Time**
 
@@ -74,9 +74,7 @@ where $y_{ijk}$ denotes the outcomes as defined above for individual $i$ in coho
 
 ### 3.1 Motivation and Background
 
-Unparallel to the literature of financial investment where returns and risks are both well explored, in the field of human capital investment, the estimation of returns to education, training and health has always been at the center of the stage, leaving risks unproportionately little explored. 
-
-Seeking to lower risks in the labour market through education has been the pursuit of many Chinese families for decades. In the first half of the 20th century, China experienced the trauma of the Japanese Invasion and the following civil war; turbulence and unrest together compose the theme of the time, and a sense of insecurity and anxiety about life and future was engraved into the collective memory. Generations afterwards - probably up until the Reform and Opening Up - thus bear the obsession for "stable" jobs and pass the preference onto following generations through the mechanism of expectation. Today, "Study well, find a stable job, and get married." is still commonly heard in Chinese families. It is believed that by studying well, one can promisingly end up with secure jobs  (the "Iron Rice Bowls") in the labor market. 
+Unparallel to the literature of financial investment where returns and risks are both well explored, in the field of human capital investment, the estimation of returns to education, training and health has always been at the center of the stage, leaving risks unproportionately little explored. The Chinese context would be interesting to look at, as it involves a traditional risk-averse preference in the labor market, as well as a rapid change in the economic fields after the Reform and Opening Up over four decades ago. Seeking to lower risks in the labour market through education has been the pursuit of many Chinese families for decades. In the first half of the 20th century, China experienced the trauma of the Japanese Invasion and the following civil war; turbulence and unrest together compose the theme of the time, and a sense of insecurity and anxiety about life and future was engraved into the collective memory. Generations afterwards - probably up until the Reform and Opening Up - thus bear the obsession for "stable" jobs and pass the preference onto following generations through the mechanism of expectation. Today, "Study well, find a stable job, and get married." is still commonly heard in Chinese families. It is believed that by studying well, one can promisingly end up with secure jobs  (the "Iron Rice Bowls") in the labor market. 
 
 ### 3.2 Objectives and Expected Contribution
 
@@ -84,13 +82,21 @@ But does more education in effect lead to jobs with lower risks? It is not unrea
 
 In the beginning of the 21st century, [有人问过这个问题了]
 
+in Delaney and Devereux (2021)
+
 [考察中国的情形很有必要]
 
-### 3.3 Potential Identification Strategy and Data
+### 3.3 Analysis
 
-To start, it is crucial to clarify the definition and corresponding measurement of what I try to investigate--risks of returns to education. Parallel to the ideas of return and risk in financial investment which take the forms of financial market performance, returns and risks to human capital, especially to education, can be defined as labor market outcomes and their uncertainty. Take salary as an example. The returns one receives from higher education compared to high school can be defined as the marginal increase of expected wages one earns if they go to college instead of leaving school after high school, holding other factors constant. One possible definition of the risk of this outcome would be the probability of this marginal increase to be negative, or, more broadly, the . (Risks of investing in a stock, for example, can be defined as the probability of receiving a negative return, compared to taking no action in the financial market, i.e., the risk-free rate.)
+#### 1) Conceptual framework
 
-Such corresponding definitions can be used in various labor market outcomes, such as employment status - the marginal increase in job stability (measured for example as the average time staying in the same job) for receiving more education, and the probability of this increase to be negative. Considering the perpetuity of the returns to human capital investment, we can also define risks of such returns as the fluctuation of salary over the life cycle, as in Delaney and Devereux (2021).
+To start, it is crucial to clarify the definition and corresponding measurement of what I try to investigate--risks of returns to education. Parallel to the ideas of return and risk in financial investment which take the forms of financial market performance, returns and risks to human capital, especially to education, can be defined as labor market outcomes and their uncertainty. First, the returns one receives from higher education compared to high school can be defined as the probability of the marginal increase in expected wages one earns with an increase in education being negative, holding other factors constant. Second, such corresponding definitions can be extended to other outcomes such as employment status - the probability of a marginal decrease in job stability (measured for example as the average time staying in the same job) for receiving more education. Third, considering the perpetuity of the returns to human capital investment, we can also define the risks as income volatility over the life cycle. Based on these definitions, I thus plan to use a measurement with three components, so as to capture the risks in human capital investment.
+
+
+
+#### 2) Identification and Data
+
+
 
 
 ## 4. Chapter 3  *Make Gray the New Green: Human Capital Re-Investment in Aging Workers*
