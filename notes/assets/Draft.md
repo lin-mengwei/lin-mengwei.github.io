@@ -14,7 +14,7 @@
 
 第三篇论文关注人生较后阶段的人力资本投资问题，试图从实证上理解培训对于老年工作者的表现有什么样的影响。研究人在劳动最后一阶段的教育与培训问题，与关注正要踏入劳动力市场的大学学生的第一篇论文形成了一种很微妙的呼应。但更重要的是，如果说前两篇文章所关注的教育经济领域一般兴趣的问题，第三篇文章所试图回答的这个问题则是当前时代及以后相当长一段时间内具有十分重要的意义，因为我们的世界正处在并将长期处在所谓的老龄化社会。
 
-## 2. Chapter 1  *Tuition Fees and Efficient Use of Higher Educational Resources*
+## 2. Chapter 1  *Will Students Work Harder When It Is More Expensive to Retake a Course?*
 
 ### 2.1 Background and Motivation
 
@@ -53,7 +53,7 @@ At the moment we have obtained the slices covering three cohorts of students maj
 
 #### 2) Methodology
 
-a. Diff-in-Diff
+**a. Diff-in-Diff**
 
 In order to identify how such a policy shock in tuition fees affects students' performance, we use a staggered Difference-in-Difference specification as our baseline model: 
 $$
@@ -63,32 +63,34 @@ where $y_{ijk}$ denotes the outcomes as defined above for individual $i$ in coho
 
 (To disentangle the effect for extra punishment of failure: In academic year 2010/2011, there is a sharp increase in third-time enrollment for the same course, while the fees for the first and second registrations do not change significantly compared to previous years. Thus, by using a Diff-in-Diff or event study, we can separate the effect of the extra costs on failing for the third and subsequent times. That is, we compare academic performance of students in different cohorts exposed to the first rise in tuition fees in 2010/11 in their different years of study.)
 
-b. RD in Time
+**b. RD in Time**
 
 
 ### 2.4 Pilot Results
 
 
 
-## 3. Chapter 2  *Education and Labor Market Risks in China* 
+## 3. Chapter 2  "Good good study, safe safe job?": *Education and Labor Market Risks in China* 
 
 ### 3.1 Motivation and Background
 
-"Good good study, safe safe job!" Seeking to lower risks in the labour market through education has been pursuit of many families over decades. In the first half of the 20th century, China experienced the trauma of the Japanese Invasion and the following civil war; turbulence and unrest was the theme of the time, and a sense of insecurity and anxiety about life and future was engraved into the collective memory. Generations afterwards - probably up until the Reform and Opening Up - thus bear the obssession for "stable" jobs and pass the preference onto following generations through the mechanism of expectation. Today, "Study well, find a stable job, and get married." is still commonly heard in Chinese families. A joke usually seen online nowdays about Chinese parents' perception of a "good job" goes: "If you are not a civil servant, a teacher, a doctor, or an SOE employer, you are having an unworthy job." Although the joke is exagerating, it reflects the mindset of previous generations to explicitly pursue jobs that are secure (the "Iron Rice Bowls") to such an extreme point  that other jobs, such as being employed in a private company, are sometimes considered not decent.
+Unparallel to the literature of financial investment where returns and risks are both well explored, in the field of human capital investment, the estimation of returns to education, training and health has always been at the center of the stage, leaving risks unproportionately little explored. 
 
-In the literature of financial investment, returns and risks are explored; in the past decades, research on risks has been attracting even more attention from academia. Yet, in the field of human captial investment, the estimation of returns to eduation, training and health has always been at the center of the stage, leaving risks relatively little explored. 
+Seeking to lower risks in the labour market through education has been the pursuit of many Chinese families for decades. In the first half of the 20th century, China experienced the trauma of the Japanese Invasion and the following civil war; turbulence and unrest together compose the theme of the time, and a sense of insecurity and anxiety about life and future was engraved into the collective memory. Generations afterwards - probably up until the Reform and Opening Up - thus bear the obsession for "stable" jobs and pass the preference onto following generations through the mechanism of expectation. Today, "Study well, find a stable job, and get married." is still commonly heard in Chinese families. It is believed that by studying well, one can promisingly end up with secure jobs  (the "Iron Rice Bowls") in the labor market. 
 
 ### 3.2 Objectives and Expected Contribution
 
-In this chapter,
+But does more education in effect lead to jobs with lower risks? It is not unreasonable to doubt that. 
 
-Parallel to the ideas of return and risk in financial investment which take the forms of financial market performance, returns and risks to human capital, especially to education, can be defined as labor market outcomes and their uncertainty. Take salary as an example. The returns one receives from higher education compared to high school can be defined as the marginal increase of expected wages one earns if they go to college instead of leaving school after high school, holding other factors constant. One possible definition of the risk of this outcome would be the probability of this marginal increase to be negative, or, more broadly, the . (Risks of investing in a stock, for example, can be defined as the probability of receiving a negative return, compared to taking no action in the financial market, i.e., the risk-free rate.)
+In the beginning of the 21st century, [有人问过这个问题了]
 
-Such corresponding definitions can be used in various labor market outcomes, such as employment status - the marginal increase in job stability (measured for example as the average time staying in the same job) for receiving more education, and the probability of this increase to be negative. Considering the perpetuity of the returns to human capital investment, we can also define risks of such returns as the fluctuation of salary over the life cycle, as in Delaney and Devereux (2021).
+[考察中国的情形很有必要]
 
 ### 3.3 Potential Identification Strategy and Data
 
+To start, it is crucial to clarify the definition and corresponding measurement of what I try to investigate--risks of returns to education. Parallel to the ideas of return and risk in financial investment which take the forms of financial market performance, returns and risks to human capital, especially to education, can be defined as labor market outcomes and their uncertainty. Take salary as an example. The returns one receives from higher education compared to high school can be defined as the marginal increase of expected wages one earns if they go to college instead of leaving school after high school, holding other factors constant. One possible definition of the risk of this outcome would be the probability of this marginal increase to be negative, or, more broadly, the . (Risks of investing in a stock, for example, can be defined as the probability of receiving a negative return, compared to taking no action in the financial market, i.e., the risk-free rate.)
 
+Such corresponding definitions can be used in various labor market outcomes, such as employment status - the marginal increase in job stability (measured for example as the average time staying in the same job) for receiving more education, and the probability of this increase to be negative. Considering the perpetuity of the returns to human capital investment, we can also define risks of such returns as the fluctuation of salary over the life cycle, as in Delaney and Devereux (2021).
 
 
 ## 4. Chapter 3  *Make Gray the New Green: Human Capital Re-Investment in Aging Workers*
@@ -118,27 +120,7 @@ the 2020 Work for Tomorrow Act - Germany (or WEGEBAU before) - but they use admi
 
 For the first chapter, I am using the administrative data from the UB, which my supervisors have requested for this project. Access to the data is granted to us (Andreu Arenas, Jenifer Ruiz-Valenzuela, and Mengwei Lin) and us only. Therefore I am not going to publish the data or share it without further permission from the UB. Besides, we are authorized to use and reuse the data during the project. In terms of storage, the data will be stored online in a OneDrive folder under my UB account (mengwei.lin@ub.edu), and shared with both of my co-authors. We believe that it is safe to store the data in this way. The original datasets are in .csv format, and when processing the data with Stata, the main software package used in the project, they will be converted to .dta files before further operation. This also ensures that the original data will not be manipulated and can be reused whenever necessary. Last, with the provided codebook, the data is understandable. Relevant details of the data will be reported in the main part of the paper. 
 
-For the second chapter, I plan to use the . For the third chapter, . With the research progressing, I will be able to provide further details about data management related to the last two papers.
-
-
-
-**Need to answer:**
-
-Do you use personal or sensible data? 
-
-Is your storing facility safe? 
-
-Are you using standard formats? 
-
-Will your data be understood? 
-
-Are you authorised to reuse existing data?
-
-Are you sharing your data with your colleagues?
-
-Are you going to publish your data? 
-
-When, where and how?
+For the second and third chapters, although I have made a preliminary plan on promising data and methods, relevant details still need to be confirmed with further investigation. As the research progresses, I will be able to provide further details about data management related to the last two papers.
 
 ## 6. Work Plan
 
