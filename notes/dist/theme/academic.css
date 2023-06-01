@@ -19,7 +19,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
  *********************************************/
 :root {
   --r-background-color: #EFEFEF; /*比较灰*/
-  --r-compliment-color: #5F8151;  
+  --r-compliment-color: hsl(105, 25%, 43%);  
   --r-main-font: Arial, Source Sans Pro,  Helvetica, sans-serif;
   --r-main-font-size: 22px;
   --r-main-color: #222;
@@ -134,16 +134,17 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 }
 .pre-title {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--r-compliment-color);
-  padding: 10px;
-  height: 3em;
+  padding: 15px;
+  min-height: 3em; /* 使用 min-height 代替固定高度 */
   line-height: 1.5em;
   width: 100%;
   border-radius: 10px;
   justify-content: center;
+  text-align: center;
 } /*the title box */
 
 .pre-title h1{
@@ -155,7 +156,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 .pre-info {
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
@@ -164,7 +165,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   border-radius: 10px;
   justify-content: center;
   align-items: center;
-} /*the title box */
+}
 
 /*********************************************
  * TRANSITION PAGE LAYOUT - title, subtitle, contents
@@ -204,7 +205,6 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   min-height: 100%;
 } 
 
-
 .my-slide {
   position: relative;
   height: 100%;
@@ -218,14 +218,28 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   top: 0;
   background-color: var(--r-compliment-color);
   border-radius: 10px;
-  line-height: 75px;
+  display: flex; /* 添加flex布局 */
+  align-items: center; /* 垂直居中对齐 */
+  /*justify-content: center;  水平居中对齐 */
 } /*the title box*/
 
-.slide-title h6{
+.slide-title h3 {
+  font-size: 32px;
   color: var(--r-background-color);
   padding-top: 3.5px;
   padding-left: 10px;
-  padding-right: 10px
+  padding-right: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-align: justify;
+} /*the title text*/
+
+.slide-title h6 {
+  color: var(--r-background-color);
+  padding-top: 3.5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0; /* 清除默认的上下边距 */
 } /*the title text*/
 
 .title-line {
@@ -251,9 +265,40 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   left: 0;
   right: 0;
   padding: 10px;
-  background-color:;
+  background-color: ;
   color: black;
-} /*position of the body*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-box {
+  border: 10px solid var(--r-background-color);
+  border-radius: 0;
+  padding: 0;
+  max-height: calc(50% - 80px); /* 根据需要设置内容框的高度 */
+  overflow: auto;
+}
+
+.content-box h4 {
+  text-align: center;
+  font-size: 28px;
+  margin: 0;
+  background-color: hsl(48, 65%, 85%); /* 色相 纯度 明度 */
+  color:; /* 设置h4的文字颜色 */
+  padding: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom: 2px solid var(--r-background-color);
+}
+
+.box-content {
+  text-align: justify;
+  background-color: hsl(46, 25%, 90%);
+  padding: 10px;
+  border-bottom-left-radius: ;
+  border-bottom-right-radius:;
+}
 
 .slide-tail {
   position: absolute;
