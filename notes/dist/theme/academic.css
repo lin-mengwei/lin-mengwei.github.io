@@ -272,7 +272,6 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   color: black;
   display: grid;
   align-items: center;
-  justify-content: flex-start;
   grid-template-rows: min-content auto; /* 定义两个行，第一行高度根据内容自适应，第二行占据剩余空间 */
 }
 
@@ -325,11 +324,14 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   vertical-align: bottom;
 }
 
+
 .image-container{ 
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
+  justify-self: center;
+  align-self: center;
 }
 
 .row {
@@ -344,6 +346,26 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .column {
   flex: 50%;
   padding: 0;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.text-container h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text-container p {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 /*********************************************
