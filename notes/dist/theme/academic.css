@@ -262,21 +262,27 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .slide-body {
   position: relative;
   top: 80px;
-  left: 0;
-  right: 0;
-  padding: 10px;
+  left: 10px;
+  right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
   background-color: ;
   color: black;
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  grid-template-rows: min-content auto; /* 定义两个行，第一行高度根据内容自适应，第二行占据剩余空间 */
 }
 
 .content-box {
   border: 10px solid var(--r-background-color);
   border-radius: 0;
-  padding: 0;
-  max-height: calc(50% - 80px); /* 根据需要设置内容框的高度 */
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   overflow: auto;
 }
 
