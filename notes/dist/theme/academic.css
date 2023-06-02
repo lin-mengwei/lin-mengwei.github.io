@@ -351,22 +351,25 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .text-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 20px;
+  text-align: justify;
+  margin-top: 0;
 }
 
 .text-container h4 {
-  font-size: 18px;
+  font-size: 28px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .text-container p {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 24px;
+  line-height: 1;
 }
+
+.text-container a {
+  color: black;
+}
+
 
 /*********************************************
  * LISTS
@@ -492,7 +495,8 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal strong,
 
 .reveal a {
-      color: #5F8151;
+      color: black;
+      text-decoration: none;
     }
     
     a:visited {
