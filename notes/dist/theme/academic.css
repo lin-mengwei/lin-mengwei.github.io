@@ -289,7 +289,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   text-align: center;
   font-size: 28px;
   margin: 0;
-  background-color: hsl(48, 65%, 85%); /* 色相 纯度 明度 */
+  background-color: hsl(48, 50%, 85%); /* 色相 纯度 明度 */
   color:; /* 设置h4的文字颜色 */
   padding: 10px;
   border-top-left-radius: 0;
@@ -299,7 +299,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 
 .box-content {
   text-align: justify;
-  background-color: hsl(46, 25%, 90%);
+  background-color: hsl(50, 25%, 90%);
   padding: 10px;
   border-bottom-left-radius: ;
   border-bottom-right-radius:;
@@ -430,7 +430,21 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   margin-left: 2em;
 }
 
+ol.letter-list {
+  list-style-type: none;
+  counter-reset: custom-counter;
+  padding-left: 0; /* Adjust the padding as needed */
+}
 
+ol.letter-list li {
+  margin-bottom: 0; /* Adjust the margin as needed */
+}
+
+ol.letter-list li:before {
+  content: counter(custom-counter, lower-alpha) ") ";
+  counter-increment: custom-counter;
+  margin-right: 0; /* Adjust the margin as needed */
+}
 /*********************************************
  * ACADEMIC TABLE
  *********************************************/
@@ -469,6 +483,20 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 /*********************************************
  * OTHER
  *********************************************/
+Reveal.initialize({
+  katex: {
+    version: 'latest',
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false},
+      {left: '\\(', right: '\\)', display: false},
+      {left: '\\[', right: '\\]', display: true}
+   ],
+   ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+ },
+ plugins: [ RevealMath.KaTeX ]
+});
+
 .reveal p {
   margin: var(--r-block-margin) 0;
   line-height: 1.3;
