@@ -113,7 +113,8 @@
 							<div class="content-box">
 							   	<h4>Motivation</h4>
 							    <div class="box-content">
-							        In the journey of life, education plays a pivotal role in shaping the trajectory of individuals, from their early stages in school education to their later stages as experienced workers. Understanding the dynamic relationship between education, human capital development, labor market outcomes, and economic growth is crucial for comprehending the broader implications of educational systems on individuals and societies across the life cycle. 
+							        In the journey of life, education plays a pivotal role in shaping the trajectory of individuals, from their early stages in school education to their later stages as experienced workers. 
+							        <br>Understanding the dynamic relationship between education, human capital development, labor market outcomes, and economic growth is crucial for comprehending the broader implications of educational systems on individuals and societies across the life cycle. 
 
 							    </div>
 							    <br>
@@ -337,6 +338,68 @@
 						<div class="slide-body">
 							<div class="content-box">
 							    <h4>Identification Strategy (discussion version)</h4>
+							    <div class="box-content">
+							    <ul style="margin-left: 25px;"><li>
+							    	Staggered diff-in-diff:
+							    </li></ul>
+							      \[ y_{ijk}=\alpha_k+\gamma_j+\beta D_{ijk}+\theta X_i+\varepsilon_{ijk}. \]
+							      Drawback: Variation in $D$ is between cohorts, not at the individual level???
+							      <br>
+							    <ul style="margin-left: 25px; margin-top: 10px"><li>
+							    	Another possibility might be:
+							    </li></ul>
+							      <br> \[D_{ijk} \rightarrow fee_{ik} \rightarrow y_{ik}. \]
+
+							      <ol style="margin-left: 25px;  line-height: 200%;">
+							      	<li>relevance:&nbsp;$ \mathbb{E}[fee_i(1) - fee_i(0)| X=x] \neq 0$</li>
+							      	<li>exclusion:&nbsp;$ y_i(fee, D=1, X=x) = y_i(fee, D=0, X=x) \forall fee \in \mathbb{I}$</li>
+							      	<li>monotinicity:&nbsp;$ fee_i(1 | X=x) - fee_i(0| X=x) \geq 0$</li>
+							      	<li>independence:&nbsp;$ \{y_i(fee, 1), y_i(fee, 0), fee_i(1), fee_i(0)\} \perp D_i$ $|X$</li>
+							      </ol>
+							      
+							    </div>
+							</div>
+						</div>
+
+						<section class="my-slide">
+						<div class="slide-title">
+							<h3>1 &nbsp;&nbsp; Does Raising Costs Boost Student Effort? </h3>
+						</div>
+
+						<div class="slide-body">
+							<div class="content-box">
+							    <h4>Identification Strategy 1: the "participation" specification</h4>
+							    <div class="box-content">
+								    <ul style="margin-left: 25px;">
+								    	<li>
+								    	Staggered diff-in-diff:
+								    	</li>
+								    </ul>
+								      \[ y_{ijk}=\alpha_k+\gamma_j+\beta D_{ijk}+\theta X_i+\varepsilon_{ijk}. \]
+								      Drawback: Variation in $D$ is between cohorts, not at the individual level???
+								      <br>
+							    </div>
+
+							    Possible sample selection problem due to attrition:
+
+							</div>
+						</div>
+
+						<div class="slide-tail">
+							<div><span class="author-name1"></span></div>
+							<div><span class="pre-name"></span></div>
+							<div><span class="slide-index"></span></div>
+						</div>
+					</section>
+
+					<section class="my-slide">
+						<div class="slide-title">
+							<h3>1 &nbsp;&nbsp; Does Raising Costs Boost Student Effort? </h3>
+						</div>
+
+						<div class="slide-body">
+							<div class="content-box">
+							    <h4>Identification Strategy 2: the "performance" specification</h4>
 							    <div class="box-content">
 							    <ul style="margin-left: 25px;"><li>
 							    	Staggered diff-in-diff:
