@@ -247,49 +247,6 @@
 						</div>
 					</section>
 
-					<section class="my-slide">
-						<div class="slide-title">
-							<h3>1 &nbsp;&nbsp; Does Raising Costs Boost Student Effort?</h3>
-						</div>
-
-						<div class="slide-body">
-							<div class="content-box">
-							    <h4>Literature and Contribution: which academic conversations are we in?</h4>
-							    <div class="box-content">
-							       <ul style="margin-left: 15px;">
-							       		<li>Literature on university costs, public investment in HE, and student outcomes
-							       			<ol>
-							       				<li>the effects of grants and financial aid ()</li>
-							       				<li>the effects of tuition fees</li>
-							       			</ol>
-
-							       		</li>
-							       		<br>
-							       		<li>Literature on incentives for academic performance
-							       			<ol>
-							       				<li>non-financial incentives ()</li>
-							       				<li>financial incentives 
-							       					<ol class="letter-list">
-							       						<li>reward-based incentives ()</li>
-							       						<li>penalty-based incentives ()</li>
-							       					</ol>
-							       				</li>
-							       			</ol>
-
-							       		</li>
-							       </ul>
-							    </div>
-						    </div>
-						</div>
-
-						<div class="slide-tail">
-							<div><span class="author-name1"></span></div>
-							<div><span class="pre-name"></span></div>
-							<div><span class="slide-index"></span></div>
-						</div>
-					</section>
-
-
 					<section class="my-slide" id="data_1">
 						<div class="slide-title">
 							<h3>1 &nbsp;&nbsp; Does Raising Costs Boost Student Effort? </h3>
@@ -375,23 +332,51 @@
 							    <ul style="margin-left: 25px;"><li>
 							    	Staggered diff-in-diff:
 							    </li></ul>
-							      \[ y_{ijk}=\alpha_k+\gamma_j+\beta D_{ijk}+\theta X_i+\varepsilon_{ijk}. \]
-							      Drawback: Variation in $D$ is between cohorts, not at the individual level???
+							      \[ y_{ijt}=\sum_i\alpha_i+\sum_j\gamma_j+\sum_t \delta_t+\beta D_{it}+\varepsilon_{ijt}. \]
+							      where $\alpha_i$ and $\gamma_j$ are dummies that capture the individual, course (module), and time FEs respectively, $y_{ijs}$ is the outcome of individual $i$ in the course $j$ at year $t$ (e.g., grade, pass or not), and $D_{it}$ is a dummy that takes 1 if the cohort of the individual is exposed to the rise in the academic year $t$. 
 							      <br>
-							    <ul style="margin-left: 25px; margin-top: 10px"><li>
-							    	Another possibility might be:
-							    </li></ul>
-							      <br> \[D_{ijk} \rightarrow fee_{ik} \rightarrow y_{ik}. \]
-
-							      <ol style="margin-left: 25px;  line-height: 200%;">
-							      	<li>relevance:&nbsp;$ \mathbb{E}[fee_i(1) - fee_i(0)| X=x] \neq 0$</li>
-							      	<li>exclusion:&nbsp;$ y_i(fee, D=1, X=x) = y_i(fee, D=0, X=x) \forall fee \in \mathbb{I}$</li>
-							      	<li>monotinicity:&nbsp;$ fee_i(1 | X=x) - fee_i(0| X=x) \geq 0$</li>
-							      	<li>independence:&nbsp;$ \{y_i(fee, 1), y_i(fee, 0), fee_i(1), fee_i(0)\} \perp D_i$ $|X$</li>
-							      </ol>
-							      
 							    </div>
 							</div>
+						</div>
+
+						<div class="slide-tail">
+							<div><span class="author-name1"></span></div>
+							<div><span class="pre-name"></span></div>
+							<div><span class="slide-index"></span></div>
+						</div>
+					</section>
+
+										<section class="my-slide">
+						<div class="slide-title">
+							<h3>1 &nbsp;&nbsp; Does Raising Costs Boost Student Effort?</h3>
+						</div>
+
+						<div class="slide-body">
+							<div class="content-box">
+							    <h4>Potential Contribution: which academic conversations are we in?</h4>
+							    <div class="box-content">
+							       	<ul style="margin-left: 15px;">
+								       	<li>Literature on incentives for academic performance
+								       		<ol>
+								       			<li>non-financial incentives ()</li>
+								       			<li>financial incentives 
+								       				<ol class="letter-list">
+								       					<li>reward-based incentives ()</li>
+								       					<li>penalty-based incentives ()</li>
+								       				</ol>
+								       			</li>
+								       		</ol>
+								       	</li>
+								       	<br>
+							       		<li>Literature on university costs, public investment in HE, and student outcomes
+							       			<ol>
+							       				<li>the effects of grants and financial aid ()</li>
+							       				<li>the effects of tuition fees</li>
+							       			</ol>
+							       		</li>
+							       	</ul>
+							    </div>
+						    </div>
 						</div>
 
 						<div class="slide-tail">
