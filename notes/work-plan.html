@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="generator" content="PhpSpreadsheet, https://github.com/PHPOffice/PhpSpreadsheet">
+      <meta name="author" content="Victor LIN" />
+    <style type="text/css">
+      html { font-family:Calibri, Arial, Helvetica, sans-serif; font-size:11pt; background-color:white }
+      a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
+      a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
+      div.comment { display:none }
+      table { border-collapse:collapse; page-break-after:always }
+      .gridlines td { border:1px dotted black }
+      .gridlines th { border:1px dotted black }
+      .b { text-align:center }
+      .e { text-align:center }
+      .f { text-align:right }
+      .inlineStr { text-align:left }
+      .n { text-align:right }
+      .s { text-align:left }
+      td.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      td.style1 { vertical-align:middle; text-align:justify; border-bottom:2px solid #7F7F7F !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:#FFFFFF }
+      th.style1 { vertical-align:middle; text-align:justify; border-bottom:2px solid #7F7F7F !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:#FFFFFF }
+      td.style2 { vertical-align:middle; text-align:justify; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:2px solid #7F7F7F !important; font-weight:bold; font-style:italic; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:white }
+      th.style2 { vertical-align:middle; text-align:justify; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:2px solid #7F7F7F !important; font-weight:bold; font-style:italic; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:white }
+      td.style3 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:#DBE5F1 }
+      th.style3 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:#DBE5F1 }
+      td.style4 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:white }
+      th.style4 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:white }
+      td.style5 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:#F2F2F2 }
+      th.style5 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:#F2F2F2 }
+      td.style6 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:#F2F2F2 }
+      th.style6 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:#F2F2F2 }
+      td.style7 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:#DBE5F1 }
+      th.style7 { vertical-align:middle; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:#DBE5F1 }
+      td.style8 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:2px solid #7F7F7F !important; font-style:italic; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:#FFFFFF }
+      th.style8 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:2px solid #7F7F7F !important; font-style:italic; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:#FFFFFF }
+      td.style9 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:#DBE5F1 }
+      th.style9 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:#DBE5F1 }
+      td.style10 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:#F2F2F2 }
+      th.style10 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:#F2F2F2 }
+      td.style11 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:#F2F2F2 }
+      th.style11 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:#F2F2F2 }
+      td.style12 { vertical-align:middle; text-align:justify; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:2px solid #7F7F7F !important; font-weight:bold; font-style:italic; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:#FFFFFF }
+      th.style12 { vertical-align:middle; text-align:justify; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:2px solid #7F7F7F !important; font-weight:bold; font-style:italic; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:#FFFFFF }
+      td.style13 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:#DBE5F1 }
+      th.style13 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:#DBE5F1 }
+      td.style14 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:white }
+      th.style14 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:white }
+      td.style15 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:white }
+      th.style15 { vertical-align:middle; text-align:center; border-bottom:2px solid #000000 !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Cambria'; font-size:9pt; background-color:white }
+      td.style16 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:2px solid #7F7F7F !important; font-style:italic; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:#FFFFFF }
+      th.style16 { vertical-align:middle; text-align:left; padding-left:9px; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:2px solid #7F7F7F !important; font-style:italic; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:#FFFFFF }
+      td.style17 { vertical-align:middle; text-align:center; border-bottom:2px solid #7F7F7F !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:#DBE5F1 }
+      th.style17 { vertical-align:middle; text-align:center; border-bottom:2px solid #7F7F7F !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:#DBE5F1 }
+      td.style18 { vertical-align:middle; text-align:center; border-bottom:2px solid #7F7F7F !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:#FFFFFF }
+      th.style18 { vertical-align:middle; text-align:center; border-bottom:2px solid #7F7F7F !important; border-top:none #000000; border-left:none #000000; border-right:none #000000; font-weight:bold; color:#000000; font-family:'Calibri'; font-size:9pt; background-color:#FFFFFF }
+      td.style19 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      th.style19 { vertical-align:bottom; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:11pt; background-color:white }
+      table.sheet0 col.col0 { width:102.34444327pt }
+      table.sheet0 col.col1 { width:121.32222083pt }
+      table.sheet0 col.col2 { width:121.32222083pt }
+      table.sheet0 col.col3 { width:121.32222083pt }
+      table.sheet0 tr { height:15pt }
+      table.sheet0 tr.row0 { height:20pt }
+      table.sheet0 tr.row1 { height:20pt }
+      table.sheet0 tr.row2 { height:20pt }
+      table.sheet0 tr.row3 { height:20pt }
+      table.sheet0 tr.row4 { height:20pt }
+      table.sheet0 tr.row5 { height:20pt }
+      table.sheet0 tr.row6 { height:20pt }
+      table.sheet0 tr.row7 { height:20pt }
+      table.sheet0 tr.row8 { height:20pt }
+      table.sheet0 tr.row9 { height:20pt }
+      table.sheet0 tr.row10 { height:20pt }
+      table.sheet0 tr.row11 { height:20pt }
+      table.sheet0 tr.row12 { height:20pt }
+      table.sheet0 tr.row13 { height:20pt }
+      table.sheet0 tr.row14 { height:20pt }
+      table.sheet0 tr.row15 { height:20pt }
+      table.sheet0 tr.row16 { height:20pt }
+      table.sheet0 tr.row17 { height:20pt }
+      table.sheet0 tr.row18 { height:20pt }
+      table.sheet0 tr.row19 { height:20pt }
+      table.sheet0 tr.row20 { height:20pt }
+      table.sheet0 tr.row21 { height:20pt }
+    </style>
+  </head>
+
+  <body>
+<style>
+@page { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+body { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+</style>
+    <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
+        <col class="col0">
+        <col class="col1">
+        <col class="col2">
+        <col class="col3">
+        <tbody>
+          <tr class="row0">
+            <td class="column0 style1 null"></td>
+            <td class="column1 style17 s">March to September, 2023</td>
+            <td class="column2 style18 s">Academic Year 2023/24</td>
+            <td class="column3 style18 s">Academic Year 2024/25</td>
+          </tr>
+          <tr class="row1">
+            <td class="column0 style2 s">First Paper</td>
+            <td class="column1 style13 null"></td>
+            <td class="column2 style14 null"></td>
+            <td class="column3 style14 null"></td>
+          </tr>
+          <tr class="row2">
+            <td class="column0 style16 s">Literature Review</td>
+            <td class="column1 style3 s">Finished</td>
+            <td class="column2 style4 null"></td>
+            <td class="column3 style4 null"></td>
+          </tr>
+          <tr class="row3">
+            <td class="column0 style16 s">Data Preparation</td>
+            <td class="column1 style3 s">On-going</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+          </tr>
+          <tr class="row4">
+            <td class="column0 style16 s">Empirical Analysis</td>
+            <td class="column1 style3 s">On-going</td>
+            <td class="column2 style4 null"></td>
+            <td class="column3 style4 null"></td>
+          </tr>
+          <tr class="row5">
+            <td class="column0 style16 s">Writing up</td>
+            <td class="column1 style3 s">On-going</td>
+            <td class="column2 style6 s">Planned</td>
+            <td class="column3 style5 null"></td>
+          </tr>
+          <tr class="row6">
+            <td class="column0 style16 s">Presenting</td>
+            <td class="column1 style7 null"></td>
+            <td class="column2 style4 s">Planned</td>
+            <td class="column3 style4 null"></td>
+          </tr>
+          <tr class="row7">
+            <td class="column0 style8 s">Submitting for Publication</td>
+            <td class="column1 style9 null"></td>
+            <td class="column2 style10 s">Planned</td>
+            <td class="column3 style11 null"></td>
+          </tr>
+          <tr class="row8">
+            <td class="column0 style12 s">Second Paper</td>
+            <td class="column1 style13 null"></td>
+            <td class="column2 style14 null"></td>
+            <td class="column3 style14 null"></td>
+          </tr>
+          <tr class="row9">
+            <td class="column0 style16 s">Literature Review</td>
+            <td class="column1 style3 s">On-going</td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style5 null"></td>
+          </tr>
+          <tr class="row10">
+            <td class="column0 style16 s">Data Preparation</td>
+            <td class="column1 style3 s">On-going</td>
+            <td class="column2 style4 null"></td>
+            <td class="column3 style4 null"></td>
+          </tr>
+          <tr class="row11">
+            <td class="column0 style16 s">Empirical Analysis</td>
+            <td class="column1 style7 null"></td>
+            <td class="column2 style6 s">Planned</td>
+            <td class="column3 style5 null"></td>
+          </tr>
+          <tr class="row12">
+            <td class="column0 style16 s">Writing up</td>
+            <td class="column1 style7 null"></td>
+            <td class="column2 style4 s">Planned</td>
+            <td class="column3 style4 s">Planned</td>
+          </tr>
+          <tr class="row13">
+            <td class="column0 style16 s">Presenting</td>
+            <td class="column1 style7 null"></td>
+            <td class="column2 style6 s">Planned</td>
+            <td class="column3 style6 s">Planned</td>
+          </tr>
+          <tr class="row14">
+            <td class="column0 style8 s">Submitting for Publication</td>
+            <td class="column1 style9 null"></td>
+            <td class="column2 style15 null"></td>
+            <td class="column3 style15 s">Planned</td>
+          </tr>
+          <tr class="row15">
+            <td class="column0 style2 s">Third Paper</td>
+            <td class="column1 style13 null"></td>
+            <td class="column2 style14 null"></td>
+            <td class="column3 style14 null"></td>
+          </tr>
+          <tr class="row16">
+            <td class="column0 style16 s">Literature Review</td>
+            <td class="column1 style3 s">On-going</td>
+            <td class="column2 style4 null"></td>
+            <td class="column3 style4 null"></td>
+          </tr>
+          <tr class="row17">
+            <td class="column0 style16 s">Data Preparation</td>
+            <td class="column1 style7 null"></td>
+            <td class="column2 style6 s">Planned</td>
+            <td class="column3 style5 null"></td>
+          </tr>
+          <tr class="row18">
+            <td class="column0 style16 s">Empirical Analysis</td>
+            <td class="column1 style7 null"></td>
+            <td class="column2 style4 s">Planned</td>
+            <td class="column3 style4 s">Planned</td>
+          </tr>
+          <tr class="row19">
+            <td class="column0 style16 s">Writing up</td>
+            <td class="column1 style7 null"></td>
+            <td class="column2 style5 null"></td>
+            <td class="column3 style6 s">Planned</td>
+          </tr>
+          <tr class="row20">
+            <td class="column0 style16 s">Presenting</td>
+            <td class="column1 style7 null"></td>
+            <td class="column2 style4 null"></td>
+            <td class="column3 style4 s">Planned</td>
+          </tr>
+          <tr class="row21">
+            <td class="column0 style8 s">Submitting for Publication</td>
+            <td class="column1 style9 null"></td>
+            <td class="column2 style11 null"></td>
+            <td class="column3 style10 s">Planned</td>
+          </tr>
+        </tbody>
+    </table>
+  </body>
+</html>
