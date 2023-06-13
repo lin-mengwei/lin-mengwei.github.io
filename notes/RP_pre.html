@@ -23,7 +23,7 @@
 		<meta name="institution1" content="University of Barcelona (UB) & Bacelona Institute of Economics (IEB)">
 		<meta name="date" content="June 2023">
 		<meta name="loc" content="Barcelona">
-		<meta name="author2" content="Supervisors &#10; Dr Andreu Arenas & Dr  Jenifer Ruiz-Valenzuela">
+		<meta name="author2" content="Supervisors &#10;Dr Jenifer Ruiz-Valenzuela & Dr Andreu Arenas ">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		    <style type="text/css">
 		      html { font-family:Calibri, Arial, Helvetica, sans-serif; font-size:11pt; background-color:#EFEFEF }
@@ -186,13 +186,26 @@
 							<div class="content-box">
 							    <h4>Background: what has happened in the real world?</h4>
 							    <div class="box-content">
-							       <p>The amount of per-student spending in HE tops the education system around the world;  HE fundings keeps rising at a faster pace than the increase in enrolment rates. </p> 
-							       <br>
-							       <p>However, the use of these funds is not as efficient as expected: in OECD countries, only 39% graduate on time and over 1/5 do not graduate after all (OECD, 2022).</p>
-							       <br>
-							       <p>Systems are different around the world: more enrolment less funding, less enrolment more funding? Or even more enrolment more funding? </p>
-							       <br>
-							       <p>This is particularly relevant in the context of limited funding resources. For instance, during the European debt crisis, the Spanish government reduced funding for higher education as a measure to decrease its overall expenditure, resulting in an increase in tuition fees paid by university students.</p>
+							    	<ul style="margin-left: 15px; line-height: 150%;">
+							    		<li>Resource input is large in Higher Education:
+							    			<ul>
+							    				<li>Per-student spending in HE tops the education system around the world</li>
+							    				<li>HE funding keeps rising faster than enrolment</li> 
+							    			</ul>
+							    		<br>
+							    		<li>The efficiency could improve:
+							    			<ul>
+							    			<li>In OECD countries, only 39% HE students graduate on time and over 1/5 do not graduate after all (OECD, 2022)</li>
+							    			</ul>
+							    		</li>
+							    		<br>
+							    		<li>Relevance:
+							    			<ul>
+							    				<li>In particularly with limited funding resources.</li>
+							    				<li>During the European debt crisis, Spain reduced funding for HE to cut its overall expenditure, resulting in an <b>increase in tuition fees </b>paid by university students.</li>
+							    			</ul>
+							    		</li>
+							    	</ul>
 							    </div>
 						    </div>
 						</div>
@@ -212,7 +225,7 @@
 
 						<div class="slide-body">	
 							<div class="image-container">
-							    <img src="assets/exploratory_retake/economics_old.png" alt="Economics" style="height: 450px;">	
+							    <img src="assets/exploratory_retake/economics_old_big.png" alt="Economics" style="height: 450px;">	
 							</div>
 
 							<div class="text-container" >
@@ -237,16 +250,43 @@
 						</div>
 
 						<div class="slide-body">
-						    <div class="content-box">
+						    <div class="content-box"  style="margin-top:-20px">
 							    <h4>Question: what do we want to understand? and why?</h4>
 							    <div class="box-content">
-							       <p>There has been an ongoing debate in policy practice or theoretical research on whether public universities should charge fees, to what extent the state should provide financial support for students, and what portion of the cost of higher education should be borne by individuals.</p> 
-							       <br>
-							       <p>How can tuition fees be adjusted to make the financial investment in higher education more efficient? Or, will higher or lower tuition fees motivate students to use higher educational resources more efficiently, resulting in better academic performance? If so, to what extent?</p>
+							       <p>Does raising the tuition fees, especially the fees for retaking a course, incentivize students to work harder?</p>
+							    </div>
+						    </div>
+
+							<div class="content-box" style="margin-top:-20px">
+							    <h4>Contribution: which academic conversations are we in?</h4>
+							    <div class="box-content">
+							       	<ul style="margin-left: 15px;">
+								       	<li>Literature on incentives for academic performance
+								       		<ol>
+								       			<li>non-financial incentives (Fidjeland, 2023; Jalava et al., 2015; Grove and Wasserman, 2006;  Oettinger, 2002)</li>
+								       			<li>financial incentives: reward-based (Behrman et al., 2015; Fryer, 2011; Angrist and Lavy, 2009) and <b>penalty-based</b> ones.
+								       				</ol>
+								       			</li>
+								       		</ol>
+								       	</li>
+							       		<li>Literature on university costs, public investment in HE, and student outcomes
+							       			<ol>
+							       				<li>the effects of grants and financial aid (Murphy and Wyness, 2023; Denning et al., 2019; Castleman and Long, 2016; Fryer, 2011)</li>
+							       				<li><b>the effects of tuition fees</b> (Bietenbeck et al., 2023; Murphy et al., 2019; Beneito et al., 2018; Garibaldi et al., 2012)</li>
+							       			</ol>
+							       		</li>
+							       	</ul>
 							    </div>
 						    </div>
 						</div>
+
+						<div class="slide-tail">
+							<div><span class="author-name1"></span></div>
+							<div><span class="pre-name"></span></div>
+							<div><span class="slide-index"></span></div>
+						</div>
 					</section>
+
 
 					<section class="my-slide" id="data_1">
 						<div class="slide-title">
@@ -297,11 +337,11 @@
 
 						<div class="slide-body">
 							<div class="content-box">
-							    <h4>Identification Strategy (1): the "participation" specification</h4>
+							    <h4>Identification Strategy (1): the "student-year" specification</h4>
 							    <div class="box-content">
 								    Staggered diffrence-in-diffrerence:
 								      \[ y_{ics}=\sum_{c=2007}^{2017}\alpha_c+\sum_{s=1}^4\gamma_s+\beta D_{ics}+\theta X_i+\varepsilon_{ics}, \]
-								      where $\alpha_c$ and $\gamma_s$ are dummies that capture the cohort and year-of-study FEs respectively, $y_{ics}$ is the outcome of individual $i$ in the $k$-th year of study (e.g., average of credits taken, course passing rate, participation dummy), and $D_{ics}$ is a dummy that takes 1 if the cohort of the individual is exposed to the rise in the $k$-th year of study. 
+								      where $\alpha_c$ and $\gamma_s$ are dummies that capture the cohort and year-of-study FEs respectively, $y_{ics}$ is the outcome of individual $i$ in the $k$-th year of study (e.g., <u>average of credits taken, course passing rate, participation dummy</u>), and $D_{ics}$ is a dummy that takes 1 if the cohort of the individual is exposed to the rise in the $k$-th year of study. 
 							    </div>
 							</div>
 							<div class="content-box">
@@ -321,70 +361,6 @@
 						</div>
 					</section>
 
-					<section class="my-slide">
-						<div class="slide-title">
-							<h3>1 &nbsp;&nbsp; Does Raising Costs Boost Student Effort? </h3>
-						</div>
-
-						<div class="slide-body">
-							<div class="content-box">
-							    <h4>Identification Strategy (2): the "performance" specification</h4>
-							    <div class="box-content">
-							    Staggered diffrence-in-diffrerence:
-							      \[ y_{ijt}=\sum_i\alpha_i+\sum_j\gamma_j+\sum_t \delta_t+\beta D_{it}+\varepsilon_{ijt}. \]
-							      where $\alpha_i$ and $\gamma_j$ are dummies that capture the individual, course (module), and time FEs respectively, $y_{ijs}$ is the outcome of individual $i$ in the course $j$ at year $t$ (e.g., grade, pass or not), and $D_{it}$ is a dummy that takes 1 if the cohort of the individual is exposed to the rise in the academic year $t$. 
-							      <br>
-							    </div>
-							</div>
-						</div>
-
-						<div class="slide-tail">
-							<div><span class="author-name1"></span></div>
-							<div><span class="pre-name"></span></div>
-							<div><span class="slide-index"></span></div>
-						</div>
-					</section>
-
-										<section class="my-slide">
-						<div class="slide-title">
-							<h3>1 &nbsp;&nbsp; Does Raising Costs Boost Student Effort?</h3>
-						</div>
-
-						<div class="slide-body">
-							<div class="content-box">
-							    <h4>Potential Contribution: which academic conversations are we in?</h4>
-							    <div class="box-content">
-							       	<ul style="margin-left: 15px;">
-								       	<li>Literature on incentives for academic performance
-								       		<ol>
-								       			<li>non-financial incentives (Fidjeland, 2023; Jalava et al., 2015; Grove and Wasserman, 2006;  Oettinger, 2002)</li>
-								       			<li>financial incentives 
-								       				<ol class="letter-list">
-								       					<li>reward-based incentives (Behrman et al., 2015; Fryer, 2011; Angrist and Lavy, 2009)</li>
-								       					<li>penalty-based incentives***</li>
-								       				</ol>
-								       			</li>
-								       		</ol>
-								       	</li>
-								       	<br>
-							       		<li>Literature on university costs, public investment in HE, and student outcomes
-							       			<ol>
-							       				<li>the effects of grants and financial aid (Murphy and Wyness, 2023; Denning et al., 2019; Castleman and Long, 2016; Fryer, 2011)</li>
-							       				<li>the effects of tuition fees*** (Bietenbeck et al., 2023; Murphy et al., 2019; Beneito et al., 2018; Garibaldi et al., 2012)</li>
-							       			</ol>
-							       		</li>
-							       	</ul>
-							    </div>
-						    </div>
-						</div>
-
-						<div class="slide-tail">
-							<div><span class="author-name1"></span></div>
-							<div><span class="pre-name"></span></div>
-							<div><span class="slide-index"></span></div>
-						</div>
-					</section>
-
 
 					<section class="my-slide">
 						<div class="slide-title">
@@ -392,30 +368,30 @@
 						</div>
 
 						<div class="slide-body">
-							<div class="content-box">
+							<div class="content-box"  style="margin-top:-15px">
 							    <h4>Motivation: "Study well now, and find a nice stable job later."</h4>
-							    <div class="box-content">
-							    <ul style="margin-left: 15px;">
-							    	<li>Theory side: In the field of human capital investment, the estimation of returns is at the center of the stage, leaving risks disproportionately unexplored.</li>
-							    	<li>Context side:
-							    		<ol>
-							    			<li>A rapid change in the socio-economic conditions: the government relinquished its role as the primary risk bearer, passing the responsibility onto market players. </li>
-							    			<li>A cultural-rooted attitude of risk aversion: from both the traditional Confucianism and the recent traumas (Japanese Invasion, civil war, famines) </li>
-							    		</ol>
-							    	</li>
+							    <div class="box-content" >
+								    <ul style="margin-left: 15px;">
+								    	<li>Theory side: In the field of human capital investment, the estimation of returns is at the center of the stage, leaving risks disproportionately unexplored.</li>
+								    	<li>Context side:
+								    		<ol>
+								    			<li>A rapid change in the socio-economic conditions: the government relinquished its role as the primary risk bearer, passing the responsibility onto market players. </li>
+								    			<li>A cultural-rooted attitude of risk aversion: from both the traditional Confucianism and the recent traumas (Japanese Invasion, civil war, famines) </li>
+								    		</ol>
+								    	</li>
 
-							    </ul>
+								    </ul>
 							    </div>
 							</div>
 
 							<div class="content-box">
 							    <h4>Literature on the risk aspect of HC investment</h4>
 							    <div class="box-content">
-							    <ul style="margin-left: 15px;">
-							    	<li>Adjusting rate of returns to education by taking risks into account (e.g., Weiss, 1972; Olson et al., 1979; Hartog and Diaz-Serrano, 2014; Delaney, 2019;)</li>
-							    	<li>Empirically estimating causality between risks in labor market performance and eduction (Delaney and Devereux, 2019)</li>
+								    <ul style="margin-left: 15px;">
+								    	<li>Adjusting rate of returns to education by taking risks into account (e.g., Weiss, 1972; Olson et al., 1979; Hartog and Diaz-Serrano, 2014; Delaney, 2019;)</li>
+								    	<li>Empirically estimating causality between risks in labor market performance and eduction (Delaney and Devereux, 2019)</li>
 
-							    </ul>
+								    </ul>
 							    </div>
 							</div>
 						</div>
@@ -435,17 +411,18 @@
 						</div>
 
 						<div class="slide-body">
-							<div class="content-box">
+							<div class="content-box" style="margin-top:-20px">
 							    <h4>Question and Hypothesis</h4>
 							    <div class="box-content">
 							    <ul style="margin-left: 15px;">
-							    	<li>How does education alter risks in labor market performance? How does this relationship behave as levels of education change? Or, is it true that more education in effect lead to jobs with lower risks?  </li>
+							    	<li>How does education alter risks in labor market performance? (income volatility, duration of a job)</li>
+							    	<li>How does this relationship behave as levels of education change? Or, is it true that more education in effect lead to jobs with lower risks?  </li>
 							    	<li>Hypothesis: The effect may not be monotonic in education levels.</li>
 							    </ul>
 							    
 							    </div>
 							</div>
-							<div class="content-box">
+							<div class="content-box" style="margin-top:-20px">
 							    <h4>Identification Strategy and Data</h4>
 							    <div class="box-content">
 							    <ul style="margin-left: 15px;">
@@ -477,7 +454,7 @@
 						</div>
 
 						<div class="slide-body">
-							<div class="content-box">
+							<div class="content-box" style="margin-top:-20px">
 							    <h4>Background: the aging society</h4>
 							    <div class="box-content">
 							    <ul style="margin-left: 15px;"> 
@@ -512,13 +489,13 @@
 						</div>
 
 						<div class="slide-body">
-							<div class="content-box">
+							<div class="content-box" style="margin-top:-20px">
 							    <h4>Literature and Contribution</h4>
-							    <div class="box-content">
-							    <ul style="margin-left: 15px;">
-							    	<li>Active Labor Market Policies affecting older workers: Morris and Caro (1995), Samorodov (1999), Card et al. (2018) </li>
-							    	<li>Training and Education targeting older workers: Picchio (2021),  Midtsundstad (2019), Dauth and Toomet (2016), Belloni and Villosio (2015), Picchio and van Ours (2013)</li>
-							    </ul>
+							    <div class="box-content" >
+								    <ul style="margin-left: 15px;">
+								    	<li>Active Labor Market Policies affecting older workers: Morris and Caro (1995), Samorodov (1999), Card et al. (2018) </li>
+								    	<li>Training and Education targeting older workers: Picchio (2021),  Midtsundstad (2019), Dauth and Toomet (2016), Belloni and Villosio (2015), Picchio and van Ours (2013)</li>
+								    </ul>
 							    </div>
 							</div>
 							<div class="content-box">
@@ -540,13 +517,6 @@
 							<div><span class="slide-index"></span></div>
 						</div>
 					</section>
-				
-
-					<section class="my-opening" data-transition="convex">
-						<div class="pre-title">
-							<h1><a href="#1" style="color: #EFEFEF;">Thank you!</a></h1>
-						</div>
-					</section>
 
 					<section class="my-slide">
 						<div class="slide-title">
@@ -554,12 +524,20 @@
 						</div>
 
 						<div class="slide-body">
+							<iframe src="https://lin-mengwei.github.io/notes/work-plan.html" width="100%" height="400px"></iframe>
 						</div>
 
 						<div class="slide-tail">
 							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
 							<div><span class="slide-index"></span></div>
+						</div>
+					</section>
+				
+
+					<section class="my-opening" data-transition="convex">
+						<div class="pre-title">
+							<h1><a href="#1" style="color: #EFEFEF;">Thank you!</a></h1>
 						</div>
 					</section>
 				
@@ -748,6 +726,33 @@
 							<div><span class="slide-index"></span></div>
 						</div>
 					</section>	
+
+					<section class="my-slide">
+						<div class="slide-title">
+							<h3>1 &nbsp;&nbsp; Does Raising Costs Boost Student Effort? </h3>
+						</div>
+
+						<div class="slide-body">
+							<div class="content-box">
+							    <h4>Identification Strategy (2): the "performance" specification</h4>
+							    <div class="box-content">
+							    Staggered diffrence-in-diffrerence:
+							      \[ y_{ijt}=\sum_i\alpha_i+\sum_j\gamma_j+\sum_t \delta_t+\beta D_{it}+\varepsilon_{ijt}. \]
+							      where $\alpha_i$ and $\gamma_j$ are dummies that capture the individual, course (module), and time FEs respectively, $y_{ijs}$ is the outcome of individual $i$ in the course $j$ at year $t$ (e.g., grade, pass or not), and $D_{it}$ is a dummy that takes 1 if the cohort of the individual is exposed to the rise in the academic year $t$. 
+							      <br>
+							    </div>
+							</div>
+
+							<p><a href="#method_1"> Back to main 👈
+                            	</a></p>
+						</div>
+
+						<div class="slide-tail">
+							<div><span class="author-name1"></span></div>
+							<div><span class="pre-name"></span></div>
+							<div><span class="slide-index"></span></div>
+						</div>
+					</section>
 
 					<section class="my-slide">
 						<div class="slide-title">
