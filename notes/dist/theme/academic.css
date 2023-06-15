@@ -483,19 +483,7 @@ ol.letter-list li:before {
 /*********************************************
  * OTHER
  *********************************************/
-Reveal.initialize({
-  katex: {
-    version: 'latest',
-    delimiters: [
-      {left: '$$', right: '$$', display: true},
-      {left: '$', right: '$', display: false},
-      {left: '\\(', right: '\\)', display: false},
-      {left: '\\[', right: '\\]', display: true}
-   ],
-   ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre']
- },
- plugins: [ RevealMath.KaTeX ]
-});
+
 
 .reveal p {
   margin: var(--r-block-margin) 0;

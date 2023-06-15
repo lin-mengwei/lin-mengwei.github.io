@@ -97,3 +97,9 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+collections:
+  courses:
+    output: true
+    permalink: /courses/:title/
+
