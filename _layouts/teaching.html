@@ -20,16 +20,17 @@ layout: compress
             </div>
         </div>
 
-        <!--<div id="results-container"></div>
-        
-        Blog Cards Section-->
-        
-        <div class="hero-body" style="display: flex; align-items: flex-start;">
-        {% for course in site.courses %}
-            {% include teaching-card.html %}
-        {% endfor %}
+        <div  class="hero-body" style="display: flex; align-items: flex-start; justify-content: center; width:100%">
+            <div>
+                {% for course in site.courses %}
+                {% include teaching-card.html %}
+                {% endfor %}
+            </div>
+            
         </div>
+
     </section>
+
     <br>
     <!--Footer begins here-->
     {% include footer.html %}
