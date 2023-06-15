@@ -8,7 +8,7 @@
       <div class="content has-text-grey">
         {{ course.content | split: '</p>' | first | append: '</p>' | strip_html | strip_newlines | strip | escape }}
         <hr class="has-background-grey">
-        <p>My role: {{ course.role }} 
+        <p><b>My role: {{ course.role }} </b>
         <br>
         <br>Institute: {{ course.uni }}
         <br>Program: {{ course.program }}
