@@ -1,16 +1,15 @@
 ---
 title: Regional and Local Public Finance
 post-image: "https://lin-mengwei.github.io/assets/images/background.jpg"
+image-source: Wherever it is
 layout: course
 role: Lecturer
 uni: University of Barcelona
 program: Economics (Undergraduate)
 
 intro: Here you can find the materials and information for the third part of <b>Regional and Local Public Finance</b>, covering contents in "Revenue for state and local governments" and "Applications and policy analysis".
-
 ---
 
----
 
 Below I provide the information of the third part of *Regional and Local Public Finance*, including a brief introduction, slides, and other materials.
 
