@@ -1,24 +1,31 @@
+
 ---
 layout: compress
 ---
 
 <!DOCTYPE html>
 <html>
+<head>
+    {% include head.html %}
+</head>
 
-{% include head.html %}
 
 <body>
     {% include navbar.html %}
 
     <section class="hero is-fullheight" id="teaching">
-        <div class="hero-body">
+        <div style="display: flex; align-items: flex-start; padding-top: 50px;">
             <div class="container">
                 {% include teaching-heading.html %}
             </div>
         </div>
-        <div id="results-container"></div>
-        <!--Blog Cards Section-->
-        {% for post in site.courses %}
+
+        <!--<div id="results-container"></div>
+        
+        Blog Cards Section-->
+        
+        <div class="hero-body" style="display: flex; align-items: flex-start;">
+        {% for course in site.courses %}
             {% include teaching-card.html %}
         {% endfor %}
         </div>

@@ -101,5 +101,4 @@ exclude:
 collections:
   courses:
     output: true
-    permalink: /courses/:title/
-
+    permalink: /:title.html
