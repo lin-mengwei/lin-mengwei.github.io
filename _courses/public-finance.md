@@ -12,13 +12,13 @@ intro: Here you can find the materials and information for the third part of <b>
 
 ---
 
-Below I provide the materials and information for the third part of *Regional and Local Public Finance*, including a brief introduction, slides, and other materials.
+Below I provide the information of the third part of *Regional and Local Public Finance*, including a brief introduction, slides, and other materials.
 
 The first part of the course is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home), the second by [Candan Erdemli](https://ieb.ub.edu/en/researcher/erdemli-candan/), and the third by myself. You can access all the materials for my part in this page. For other parts of the course, please contact my colleagues. Both of them have contributed much to the materials taught in this part. Other contributors of the content include [Ha Luong](https://haluong.weebly.com/) and [].
 
-There are xxx sections, for which you can find the slides below.
+There are xxx sections in this part:
 
-1. Item 1
+1. Item 1 ([Slides]())
 <br> This section looks at 
 2. Item 2
 
@@ -27,3 +27,5 @@ There are xxx sections, for which you can find the slides below.
 4. Item 4
 
 5. Item 5
+
+The main textbook for this course is [State and Local Public Finance](https://www.routledge.com/State-and-Local-Public-Finance/Fisher/p/book/9780367467234) by Ronald C. Fisher. 
