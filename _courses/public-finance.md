@@ -1,6 +1,6 @@
 ---
 title: Regional and Local Public Finance
-post-image: "https://lin-mengwei.github.io/assets/images/background.jpg"
+post-image: "https://lin-mengwei.github.io/assets/images/Public Finance.png"
 image-source: Wherever it is
 layout: course
 role: Lecturer
