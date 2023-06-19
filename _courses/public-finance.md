@@ -1,7 +1,7 @@
 ---
 title: Regional and Local Public Finance
 post-image: "https://lin-mengwei.github.io/assets/images/Public Finance.png"
-image-source: Wherever it is
+image-source: Cover of the main text, State and Local Public Finance by Ronald C. Fisher. 
 layout: course
 role: Lecturer
 uni: University of Barcelona
