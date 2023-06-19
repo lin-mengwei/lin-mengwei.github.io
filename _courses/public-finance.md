@@ -6,7 +6,7 @@ layout: course
 role: Lecturer
 uni: University of Barcelona
 program: Economics (Bachelor)
-date: 2024-04-16
+
 
 intro: Here you can find the materials and information for the third part of <b>Regional and Local Public Finance</b>, covering contents in "Revenue for state and local governments" and "Applications and policy analysis".
 ---
