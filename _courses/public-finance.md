@@ -19,15 +19,18 @@ The first part of the course is taught by [Andreu Arenas](https://sites.google.c
 
 The main textbook for this course is [State and Local Public Finance](https://www.routledge.com/State-and-Local-Public-Finance/Fisher/p/book/9780367467234) by Ronald C. Fisher. S  cfupplementary materials are provided in the lecture notes.
 
-There are xxx sections in this part:
+There are 7 sessions in this part:
 
-1. Item 1 ([Slides]())
-<br> This section looks at 
-2. Item 2
+1. Analysis of Foreigh Systemes 1: TBC
 
-3. Item 3
+2. Analysis of Foreigh Systemes 2: TBC
 
-4. Item 4
+3. Application and policy analysis 1: Education
 
-5. Item 5
+4. Application and policy analysis 2: Transportation
 
+5. Application and policy analysis 3: Health
+
+6. Application and policy analysis 4: Welfare
+
+7. Application and policy analysis 5: Economic Development
