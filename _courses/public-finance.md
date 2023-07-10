@@ -17,7 +17,7 @@ The first part of the course, *Regional and Local Public Finance*, is taught by 
 
 The main textbook for this course is [State and Local Public Finance](https://www.routledge.com/State-and-Local-Public-Finance/Fisher/p/book/9780367467234) by Ronald C. Fisher. S. Course materials and notifications are updated on [Virtual Campus](https://www.campusvirtual.ub.edu/). Supplementary materials are provided in the lecture notes.
 
-There are 8 sessions in this part of the course, covering (a) the analysis of foreign systems and (b) applications andpolicy analyses and including a mid-term exam:
+There are 7 two-hour lectures in this part of the course, covering (a) the analysis of foreign systems and (b) applications andpolicy analyses and one session for the mid-term exam:
 
 1. Analysis of Foreigh Systemes 1: TBC
 
