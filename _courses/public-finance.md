@@ -9,7 +9,7 @@ program: Economics (Bachelor)
 semester: Spring 2024
 
 
-intro: Here you can find the information for the third part of <b>Regional and Local Public Finance</b>.
+intro: Here you can find the information for the third part of <b>Regional and Local Public Finance</b>, which covers the analysis of two international systems and the last part of the textbook, "Applications and Policy Analysis".
 ---
 
 
@@ -23,15 +23,15 @@ There are **7 two-hour lectures** in this part of the course, covering (a) the a
 
 3. Mid-term Exam
 
-4. Application and policy analysis 1: Education
+4. Education
 
-5. Application and policy analysis 2: Transportation
+5. Transportation
 
-6. Application and policy analysis 3: Health
+6. Health
 
-7. Application and policy analysis 4: Welfare
+7. Welfare
 
-8. Application and policy analysis 5: Economic Development
+8. Economic Development
 
 
 <br>
