@@ -9,7 +9,7 @@ program: Economics (Bachelor)
 semester: Spring 2024
 
 
-intro: Here you can find the information for the third part of <b>Regional and Local Public Finance</b>, which covers the analysis of two international systems and the last part of the textbook, "Applications and Policy Analysis".
+intro: Here you can find the information for the third part of <b>Regional and Local Public Finance</b>, covering the analysis of two international systems and the last part of the textbook, "Applications and Policy Analysis".
 ---
 
 
