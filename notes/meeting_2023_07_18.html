@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+		<title>21 June Materials</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/academic.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+		<!-- author info -->
+		<meta name="presentation" content="PRESENTATION TITLE">
+		<meta name="author1" content="LIN, Mengwei">
+		<meta name="institution1" content="University of Barcelona & Bacelona Institute of Economics (IEB)">
+		<meta name="date" content="DATE">
+	</head>
+	<body>
+		
+		<div class="reveal">
+			<div class="slides">
+
+				
+				<section class="my-meeting">
+					<div>
+						<h6>Meeting 2023/07/18 <br>(Last Meeting: <a href="https://lin-mengwei.github.io/notes/meeting_2023_06_21" style="text-decoration: underline;">2023/06/21</a> on expectations and data issues for Amparo)</h6> 
+						<hr>
+						<table style="border-bottom: solid; border-top: solid;"> <b>Agenda of today</b>
+						    <colgroup>
+						       <col span="1" style="width: 10%; text-align: center;">
+						       <col span="1" style="width: 70%;">
+						    </colgroup>
+						  <tr  style="width:100%">
+						    <th>time</th>
+						    <th>item</th>
+						  </tr>
+						  <tr>
+						    <td>5-10 min</td>
+						    <td>plan for August?</td>
+						  </tr>
+						  <tr>
+						    <td>10-20 min</td>
+						    <td>preliminary results from new data</td>
+						  </tr>
+						  <tr>
+						    <td>10-20 min</td>
+						    <td>further data; questions for undergrad teaching admin guy</td>
+						  </tr>
+						  <tr>
+						    <td>2 min</td>
+						    <td>picture!!! </td>
+						  </tr>
+						</table>
+
+<!-- 					<p style="text-align:justify; line-height: 1.6">
+
+							<br>Progress: <b>Retake Project</b>
+
+							<br>1. Feedback from the defence: 
+							<br>2. Descriptives of Dret and Economia (2007 to 2017 cohorts)
+							
+							<br>
+							<br>Materials compiled for today:
+							
+							<br><a href="https://lin-mengwei.github.io/notes/exploratory" target="_blank">1. Updated Exploratory Results</a>
+						</p> -->
+					</div>			
+				</section>
+
+				
+
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/math/math.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+				slideNumber: 'c/t',
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath ]
+			});
+		</script>
+		<script>
+			var authorNames1 = document.querySelectorAll('.author-name1');
+			for (var i = 0; i < authorNames1.length; i++) {
+  				authorNames1[i].innerText = document.querySelector('meta[name="author1"]').getAttribute('content');
+			}
+
+			var preNames = document.querySelectorAll('.pre-name');
+			for (var i = 0; i < preNames.length; i++) {
+  				preNames[i].innerText = document.querySelector('meta[name="presentation"]').getAttribute('content');
+			}
+
+			var authorInst1 = document.querySelectorAll('.author-inst1');
+			for (var i = 0; i < authorInst1.length; i++) {
+  				authorInst1[i].innerText = document.querySelector('meta[name="institution1"]').getAttribute('content');
+			}
+
+			var date = document.querySelectorAll('.date');
+			for (var i = 0; i < date.length; i++) {
+  				date[i].innerText = document.querySelector('meta[name="date"]').getAttribute('content');
+			}
+
+			$(document).ready(function() {
+			  var totalSlides = $('.my-slide').length;
+			  $('.slide-index').each(function(index) {
+			    $(this).text('Page ' + (index+1));
+			  });
+			});
+
+		</script>
+	</body>
+</html>
