@@ -17,9 +17,9 @@ The first part of the course, *Regional and Local Public Finance*, is taught by 
 
 There are **7 two-hour lectures** in this part of the course, covering (a) the analysis of foreign systems and (b) applications andpolicy analyses and one session for the mid-term exam:
 
-1. Analysis of Foreigh Systemes 1: TBC
+1. Analysis of Foreigh Systems 1: TBC
 
-2. Analysis of Foreigh Systemes 2: TBC
+2. Analysis of Foreigh Systems 2: TBC
 
 3. Mid-term Exam
 
