@@ -18,7 +18,7 @@
 		<script src="plugin/math/math.js"></script>
 
 		<!-- author info -->
-		<meta name="presentation" content="Retake Costs & Behavior">
+		<meta name="presentation" content="Retake Costs & Student Behavior">
 		<meta name="author1" content="">
 		<meta name="institution1" content="">
 		<meta name="date" content="Sept 2023">
@@ -95,13 +95,17 @@
 							<span class="author-name1" style="line-height: 250%; font-size:24px"></span><br>
 							<span class="author-inst1"></span>
 							<br>
+							<!-- 
+							<br>
+							<span class="author-name2" style="font-style: italic;"></span><br>
+							<span class="author-inst2"></span>
+							<br> -->
 							<span class="date"></span><br>
 							<span class="loc"></span>
 						</div>
 					</section>
 
-
-					<section class="my-slide">
+					<section class="my-slide" id="intro">
 						<div class="slide-title">
 							<h3>1 &nbsp;&nbsp; Introduction</h3>
 						</div>
@@ -142,8 +146,7 @@
 						</div>
 					</section>
 
-
-					<section class="my-slide">
+					<section class="my-slide" id="contribution">
 						<div class="slide-title">
 							<h3>1 &nbsp;&nbsp; Introduction: Research Question and Related Literature</h3>
 						</div>
@@ -186,7 +189,7 @@
 						</div>
 					</section>
 
-					<section class="my-slide" id="line-chart">
+					<section class="my-slide" id="bg">
 						<div class="slide-title">
 							<h3>1 &nbsp;&nbsp; Background: Institutional Setting</h3>
 						</div>
@@ -211,7 +214,7 @@
 						</div>
 					</section>
 
-					<section class="my-slide" id="line-chart">
+					<section class="my-slide">
 						<div class="slide-title">
 							<h3>1 &nbsp;&nbsp; Background: Institutional Setting - Tuition Fees in Catalunia</h3>
 						</div>
@@ -236,8 +239,7 @@
 						</div>
 					</section>
 
-
-					<section class="my-slide" id="data_1">
+					<section class="my-slide">
 						<div class="slide-title">
 							<h3>2 &nbsp;&nbsp; Data and Descriptive Statistics </h3>
 						</div>
@@ -278,14 +280,14 @@
 						</div>
 					</section>
 
-					<section class="my-slide" id="data_1">
+					<section class="my-slide" id="data">
 						<div class="slide-title">
 							<h3>2 &nbsp;&nbsp; Data and Descriptive Statistics </h3>
 						</div>
 
 						<div class="slide-body">
 							<div class="content-box">
-							    <h4>Data: Administrative data from UB, 2007 to 2017.</h4>
+							    <h4>Data Source: Administrative data from UB, 2007 to 2017.</h4>
 							    <div class="box-content">
 							       <ul style="margin-left: 15px;">
 							       		<li>Whole sample: <b>all undergraduate</b> students who enrolled at UB from <b>2007 to 2017</b>
@@ -301,8 +303,11 @@
 							       				<li>fees: total amounts (gross and net) each AY, total credit prices each AY, subtotals after AY 2012, scholarship applied, scholarship status, etc. </li>
 							       			</ol>
 							       		</li>
-							       		<li>Constructed Balance Panel: We keep the observations for students in the 1st to 4th years of study to construct a balance panel. </li>
-							       </ul> 
+							       	</ul>
+							    </div>
+							    <br>
+							    <div class="box-content">
+							       <b>Constructing a Balance Panel </b>: We keep the observations for students in the 1st to 4th years of study to construct a balance panel of the student-year records.
 							    </div>
 						    </div>
 
@@ -315,23 +320,19 @@
 						</div>
 					</section>
 
-					<section class="my-slide" id="data_1">
+					<section class="my-slide" id="desc-A">
 						<div class="slide-title">
-							<h3>2 &nbsp;&nbsp; Data and Descriptive Statistics </h3>
+							<h3>2 &nbsp;&nbsp; Descriptive Statistics: background characteristics</h3>
 						</div>
 
 						<div class="slide-body">
-							<div class="content-box">
-							    <h4>Descriptive Statistics: Between Cohorts</h4>
-							    <div class="box-content">
-							       
+							<div class="image-container">
+							    <img src="assets/exploratory_retake/desc_A.png" alt="Economics" style="height: 450px;">	
+							</div>
 
-							    </div>
-						    </div>
 
 						    <div>
-						    	<p style="text-align: justify;">In the current sample, the pre-enrollment characteristics of students are balanced. 
-						    		<br><br><a href="#des_slice">👉 Descriptive statistics of the current slice</a>.
+						    	<p style="text-align: justify;">The pre-enrollment characteristics between the control cohort (2007) and the two treated cohorts (2008 and 2009) are largely comparable.
 						    	</p> 
 						    </div>
 						</div>
@@ -343,29 +344,52 @@
 						</div>
 					</section>
 
-
-
-					<section class="my-slide" id="method_1">
+					<section class="my-slide" id="desc-B">
 						<div class="slide-title">
-							<h3>1 &nbsp;&nbsp; Does Raising Costs Boost Student Effort? </h3>
+							<h3>2 &nbsp;&nbsp; Data and Descriptive Statistics </h3>
 						</div>
 
 						<div class="slide-body">
 							<div class="content-box">
-							    <h4>Identification Strategy (1): the "student-year" specification</h4>
+							    <h4>Descriptive Statistics: key outcomes</h4>
 							    <div class="box-content">
-								    Staggered diffrence-in-diffrerence:
+							       
+							    </div>
+						    </div>
+
+						</div>
+
+						<div class="slide-tail">
+							<div><span class="author-name1"></span></div>
+							<div><span class="pre-name"></span></div>
+							<div><span class="slide-index"></span></div>
+						</div>
+					</section>
+
+					<section class="my-slide" id="spec-1">
+						<div class="slide-title">
+							<h3>3 &nbsp;&nbsp; Empirical Strategy </h3>
+						</div>
+
+						<div class="slide-body">
+							<div class="content-box">
+							    <h4>Identification Strategy: the "student-year" specification (1)</h4>
+							    <div class="box-content">
 								      \[ y_{ics}=\sum_{c=2007}^{2017}\alpha_c+\sum_{s=1}^4\gamma_s+\beta D_{ics}+\theta X_i+\varepsilon_{ics}, \]
 								      <ul style="margin-left: 15px">
-								      	<li>$\alpha_c$ and $\gamma_s$: cohort ($c$) and year-of-study ($s$) Fixed Effects; $y_{ics}$: outcome of student $i$ in the $k$-th year of study (e.g., <u>average of credits taken, course passing rate, participation dummy</u>);$D_{ics}$: treatment dummy taking 1 if $i$ in $c$ exposed to the rise in the $s$-th year of study </li>
-								      	<br>
+								      	<li><b>Parallel trends</b> among cohorts across years of study in the absence of treatment</li>
+								      	<li>$\alpha_c$ and $\gamma_s$: cohort ($c$) and year-of-study ($s$) Fixed Effects; </li>
+								      	<li>$y_{ics}$: outcome of student $i$ in the $s$-th year of study: exam passing rate, exam absence rate, credits taken, persistence, etc.</li>
+								      	<li>$D_{ics}$: treatment dummy taking 1 if $i$ in $c$ exposed to the rise in the $s$-th year of study </li>
+								</div>
+								<br>
+
+								<div class="box-content">
+									<ul style="margin-left: 15px">
 								      	<li>Control group: 2007 cohort--not exposed to the fee rise until the 5th year of study</li>
-								      	<li>Treated groups: 
-								      		<ol><li>2008 cohort - exposed to the first rise in 2011 (4th year of study)</li>
-								      		<li>2009 cohort - exposed to the first rise in 2011 (3th year of study) and the second in 2012 (4th year of study)</li>
-								      	</ol>
-								      	</li>
-								      </ul>     	
+								      	<li>Treated groups 1: 2008 cohort - exposed to the first rise in 2011 (4th year of study)</li>
+								      	<li>Treated groups 2: 2009 cohort - exposed to the first rise in 2011 (3th year of study) and the second in 2012 (4th year of study)</li>
+								    </ul>     	
 							    </div> 
 							</div>
 						</div>
@@ -377,26 +401,26 @@
 						</div>
 					</section>
 
-					<section class="my-slide" id="method_1">
+					<section class="my-slide" id="spec-2">
 						<div class="slide-title">
-							<h3>3 &nbsp;&nbsp; Empirical Strategy and Results </h3>
+							<h3>3 &nbsp;&nbsp; Empirical Strategy </h3>
 						</div>
 
 						<div class="slide-body">
 							<div class="content-box">
-							    <h4>Identification Strategy (1): the "student-year" specification</h4>
+							    <h4>Identification Strategy: the "student-year" specification (2)</h4>
 							    <div class="box-content">
-								    Staggered diffrence-in-diffrerence:
+								    To avoid the confoundedness of composition changes resulted from non-random attrition, we modify the specification to
 								      \[ y_{is}=\sum_i\alpha_i+\sum_s\gamma_s+\beta D_{is}+\varepsilon_{is}, \]
-								      <ul style="margin-left: 15px">
+								    where
+								    <br>
+								    <ul style="margin-left: 15px">
 								      	<li>$\alpha_i$ and $\gamma_s$: individual ($i$) and year-of-study ($s$) Fixed Effects</li>
-								      	<li>$y_{is}$: outcome of student $i$ in the $k$-th year of study (e.g., <u>average of credits taken, course passing rate, participation dummy</u>)</li>
+								      	<li>$y_{is}$: outcome of student $i$ in the $s$-th year of study</li>
 								      	<li>$D_{is}$: treatment dummy taking 1 if $i$ exposed to the rise in the $s$-th year of study </li>
-								      	<li><a href="assets/exploratory_retake/0710_event.jpg" style="_blank; text-decoration:underline;">event study graphs</a>, <a href="assets/exploratory_retake/0710_eventcode.jpg" style="_blank; text-decoration:underline"></li>
-								      </ul> 
+								    </ul> 
 							    </div>
 							</div>
-
 						</div>
 
 						<div class="slide-tail">
@@ -406,33 +430,78 @@
 						</div>
 					</section>
 
-			
-
-					<section class="my-opening" data-transition="convex">
-						<div class="pre-title">
-							<h1><a href="#1" style="color: #EFEFEF;">Thank you!</a></h1>
+					<section class="my-slide" id="result-1">
+						<div class="slide-title">
+							<h3>4 &nbsp;&nbsp; Results (1): fewer exams skiped. </h3>
 						</div>
-						
+
+						<div class="slide-body">
+							<div class="image-container">
+							    <img src="assets/exploratory_retake/cohort09_absence_ratio.png" alt="Economics" style="height: 520px;">	
+							</div>
+						</div>
+
+						<div class="slide-tail">
+							<div><span class="author-name1"></span></div>
+							<div><span class="pre-name"></span></div>
+							<div><span class="slide-index"></span></div>
+						</div>
+					</section>
+
+					<section class="my-slide" id="result-2">
+						<div class="slide-title">
+							<h3>4 &nbsp;&nbsp; Results (2): more courses passed. </h3>
+						</div>
+
+						<div class="slide-body">
+							<div class="image-container">
+							    <img src="assets/exploratory_retake/cohort09_pass_rate.png" alt="Economics" style="height: 520px;">	
+							</div>
+						</div>
+
+						<div class="slide-tail">
+							<div><span class="author-name1"></span></div>
+							<div><span class="pre-name"></span></div>
+							<div><span class="slide-index"></span></div>
+						</div>
+					</section>
+
+					<section class="my-slide" id="result-3">
+						<div class="slide-title">
+							<h3>4 &nbsp;&nbsp; Results (3): No effect on obtaining good grades.</h3>
+						</div>
+
+						<div class="slide-body">
+							<div class="image-container">
+							    <img src="assets/exploratory_retake/cohort09_excel_rate.png" alt="Economics" style="height: 520px;">	
+							</div>
+						</div>
+
+						<div class="slide-tail">
+							<div><span class="author-name1"></span></div>
+							<div><span class="pre-name"></span></div>
+							<div><span class="slide-index"></span></div>
+						</div>
 					</section>
 
 
-					<section class="my-slide" id="comparison">
+					<section class="my-slide" id="result-4">
 						<div class="slide-title">
-							<h3>Appendix: Comparison of the two price systems</h3>
+							<h3>4 &nbsp;&nbsp; Results (4): Participation.</h3>
 						</div>
 
-
-						<div class="slide-body">	
-							<div class="image-container" >
-								<img src="assets/exploratory_retake/prepost.png" alt="Economics" style="width: auto; height: 550px; align-content: center;">
+						<div class="slide-body">
+							<div class="image-container">
+							    <img src="assets/exploratory_retake/cohort09_participation.png" alt="Economics" style="height: 400px;">	
 							</div>
 
 							<div class="text-container" >
-						      	<p><a href="#line-chart"> 1 ETC = 1.25 Spanish credits (Back to main 👈)
-                            	</a></p>
-						    </div>
+								<p style="line-height: 180%">
+									It may be due to the more expensive outside options after the economic shock--worse labor market conditions, more difficult to find jobs once quited. <br>
+									<a href="assets/exploratory_retake/unemployment_cat.png" style="_blank">👉 Unemployment rates for 16-24 year olds in Catalonia, 2002-2022.</a>
+								</p>
+							</div>
 						</div>
-
 
 						<div class="slide-tail">
 							<div><span class="author-name1"></span></div>
@@ -441,223 +510,29 @@
 						</div>
 					</section>
 
-
-					<section class="my-slide" id="des_slice">
+					<section class="my-slide" id="result-4">
 						<div class="slide-title">
-							<h3>Appendix: Descriptive statistics for the slice</h3>
+							<h3>4 &nbsp;&nbsp; Results (5): Further steps.</h3>
 						</div>
 
 						<div class="slide-body">
-							<style>
-							@page { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
-							body { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
-							</style>
-							    <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
-							        <col class="col0">
-							        <col class="col1">
-							        <col class="col2">
-							        <col class="col3">
-							        <col class="col4">
-							        <col class="col5">
-							        <col class="col6">
-							        <tbody>
-							          <tr class="row0">
-							            <td class="column0 style2 s">Cohort </td>
-							            <td class="column1 style9 n style9" colspan="2">2007</td>
-							            <td class="column3 style9 n style9" colspan="2">2010</td>
-							            <td class="column5 style9 n style9" colspan="2">2012</td>
-							          </tr>
-							          <tr class="row1">
-							            <td class="column0 style3 null"></td>
-							            <td class="column1 style4 s">mean</td>
-							            <td class="column2 style4 s">std deviation</td>
-							            <td class="column3 style4 s">mean</td>
-							            <td class="column4 style4 s">std deviation</td>
-							            <td class="column5 style4 null"></td>
-							            <td class="column6 style4 s">std deviation</td>
-							          </tr>
-							          <tr class="row2">
-							            <td class="column0 style5 s">female</td>
-							            <td class="column1 style6 n">0.35</td>
-							            <td class="column2 style6 n">0.48</td>
-							            <td class="column3 style6 n">0.35</td>
-							            <td class="column4 style6 n">0.48</td>
-							            <td class="column5 style6 n">0.36</td>
-							            <td class="column6 style6 n">0.48</td>
-							          </tr>
-							          <tr class="row3">
-							            <td class="column0 style5 s">age (year of entrance)</td>
-							            <td class="column1 style6 n">18.43</td>
-							            <td class="column2 style6 n">0.98</td>
-							            <td class="column3 style6 n">18.55</td>
-							            <td class="column4 style6 n">1.27</td>
-							            <td class="column5 style6 n">18.38</td>
-							            <td class="column6 style6 n">0.85</td>
-							          </tr>
-							          <tr class="row5">
-							            <td class="column0 style5 s">full time students</td>
-							            <td class="column1 style6 n">0.70</td>
-							            <td class="column2 style6 n">0.46</td>
-							            <td class="column3 style6 n">0.67</td>
-							            <td class="column4 style6 n">0.47</td>
-							            <td class="column5 style6 n">0.68</td>
-							            <td class="column6 style6 n">0.47</td>
-							          </tr>
-							          <tr class="row6">
-							            <td class="column0 style5 s">father with higher education</td>
-							            <td class="column1 style6 n">0.32</td>
-							            <td class="column2 style6 n">0.47</td>
-							            <td class="column3 style6 n">0.36</td>
-							            <td class="column4 style6 n">0.48</td>
-							            <td class="column5 style6 n">0.38</td>
-							            <td class="column6 style6 n">0.49</td>
-							          </tr>
-							          <tr class="row7">
-							            <td class="column0 style5 s">mother with higher education</td>
-							            <td class="column1 style6 n">0.28</td>
-							            <td class="column2 style6 n">0.45</td>
-							            <td class="column3 style6 n">0.33</td>
-							            <td class="column4 style6 n">0.47</td>
-							            <td class="column5 style6 n">0.37</td>
-							            <td class="column6 style6 n">0.48</td>
-							          </tr>
-							          <tr class="row8">
-							            <td class="column0 style5 s">parent unemployed</td>
-							            <td class="column1 style6 n">0.01</td>
-							            <td class="column2 style6 n">0.12</td>
-							            <td class="column3 style6 n">0.03</td>
-							            <td class="column4 style6 n">0.16</td>
-							            <td class="column5 style6 n">0.03</td>
-							            <td class="column6 style6 n">0.17</td>
-							          </tr>
-							          <tr class="row9">
-							            <td class="column0 style5 s">parent with unskilled job</td>
-							            <td class="column1 style6 n">0.11</td>
-							            <td class="column2 style6 n">0.32</td>
-							            <td class="column3 style6 n">0.10</td>
-							            <td class="column4 style6 n">0.30</td>
-							            <td class="column5 style6 n">0.09</td>
-							            <td class="column6 style6 n">0.29</td>
-							          </tr>
-							          <tr class="row10">
-							            <td class="column0 style5 s">parent in public sector</td>
-							            <td class="column1 style6 n">0.38</td>
-							            <td class="column2 style6 n">0.49</td>
-							            <td class="column3 style6 n">0.39</td>
-							            <td class="column4 style6 n">0.49</td>
-							            <td class="column5 style6 n">0.34</td>
-							            <td class="column6 style6 n">0.48</td>
-							          </tr>
-							          <tr class="row11">
-							            <td class="column0 style7 s">Number of students</td>
-							            <td class="column1 style8 n style8" colspan="2">294</td>
-							            <td class="column3 style8 n style8" colspan="2">238</td>
-							            <td class="column5 style8 n style8" colspan="2">256</td>
-							          </tr>
-							        </tbody>
-							    </table>
-							    <br>
-
-							    <p style="font-size:14px; text-align: justify;"> <b>Note</b>: Pair-wise t-tests are performed to investigate whether there are differences in these characteristics between any two cohorts. Results for 2007 and 2010 cohorts are reported in the 2007 column, 2010 and 2012 in the 2010 column, 2007 and 2012 in the 2012 column, respectively. We do not include college entrance exam grades here because the exam went through a series of modifications over the period, making it incomparable across cohorts.<br>*p < 0.10 , **p < 0.05, ***p < 0.01.</p>
-							    <p><a href="#data_1" >Back to Main</a> 👈</p>
-						</div>
-
-						<div class="slide-tail">
-							<div><span class="author-name1"></span></div>
-							<div><span class="pre-name"></span></div>
-							<div><span class="slide-index"></span></div>
-						</div>
-					</section>
-
-					<section class="my-slide" id="attrition">
-						<div class="slide-title">
-							<h3>Appendix: Concern about strategy 1</h3>
-						</div>
-
-
-						<div class="slide-body">	
-							<div class="image-container" >
-								<img src="assets/exploratory_retake/attrition_illustration.png" alt="Attrition" style="height: 500px;">							    	
-							</div>
-							<br>
-
 							<div class="text-container" >
-						      	<p><a href="#method_1"> Back to main 👈
-                            	</a></p>
-						    </div>
-						</div>
+								<p style="line-height: 180%">
+									1) diffenrent times of retake. (need the information on "identical course, different codes" during the Bologna reform)<br><br>	
+									2) credits taken (need the information on plans of study--is this feasible because we will have many majors in the end)<br><br>
+									3) contruct a version of dataset-1 but using semesters instead of years.<br><br>
+									4) heterogeneity: e.g., good students vs bad students, etc. <br><br>
 
-
-						<div class="slide-tail">
-							<div><span class="author-name1"></span></div>
-							<div><span class="pre-name"></span></div>
-							<div><span class="slide-index"></span></div>
-						</div>
-					</section>
-
-	
-
-					<section class="my-slide">
-						<div class="slide-title">
-							<h3>1 &nbsp;&nbsp; Does Raising Costs Boost Student Effort? </h3>
-						</div>
-
-						<div class="slide-body">
-							<div class="content-box">
-							    <h4>Appendix: Identification Strategy & Descriptive evidence</h4>
-							    <div class="box-content">
-							    Staggered diffrence-in-diffrerence:
-							      \[ y_{ijt}=\sum_i\alpha_i+\sum_j\gamma_j+\sum_t \delta_t+\beta D_{it}+\varepsilon_{ijt}. \]
-							      where $\alpha_i$ and $\gamma_j$ are dummies that capture the individual, course (module), and time FEs respectively, $y_{ijs}$ is the outcome of individual $i$ in the course $j$ at year $t$ (e.g., grade, pass or not), and $D_{it}$ is a dummy that takes 1 if the cohort of the individual is exposed to the rise in the academic year $t$. 
-							      <br>
-							    </div>
+									
+								</p>
 							</div>
 
-							<div class="content-box">
-							    <h4>Appendix: Identification Strategy & Descriptive evidence</h4>
-							    <div class="box-content">
-
-
-								<p><a href="https://lin-mengwei.github.io/notes/exploratory.html#/1/2"> Descriptive evidence 
-                            	</a></p>
-
-                            	<p><a href="https://lin-mengwei.github.io/notes/exploratory.html#/2/3"> Price comparison 
-                            	</a></p>
-                            </div> 
-
-							<p><a href="#method_1"> Back to main 👈
-                            	</a></p>
 						</div>
 
 						<div class="slide-tail">
 							<div><span class="author-name1"></span></div>
 							<div><span class="pre-name"></span></div>
 							<div><span class="slide-index"></span></div>
-						</div>
-					</section>
-
-					<section class="my-slide">
-						<div class="slide-title">
-							<h3>1 &nbsp;&nbsp; Does Raising Costs Boost Student Effort? </h3>
-						</div>
-
-						<div class="slide-body">
-							<div class="content-box">
-							    <h4>Robustness check: IV</h4>
-							    <div class="box-content">
-							    	Another possibility might be:
-							    </li></ul>
-							      <br> \[D_{ijk} \rightarrow fee_{ik} \rightarrow y_{ik}. \]
-
-							      <ol style="margin-left: 25px;  line-height: 200%;">
-							      	<li>relevance:&nbsp;$ \mathbb{E}[fee_i(1) - fee_i(0)| X=x] \neq 0$</li>
-							      	<li>exclusion:&nbsp;$ y_i(fee, D=1, X=x) = y_i(fee, D=0, X=x) \forall fee \in \mathbb{I}$</li>
-							      	<li>monotinicity:&nbsp;$ fee_i(1 | X=x) - fee_i(0| X=x) \geq 0$</li>
-							      	<li>independence:&nbsp;$ \{y_i(fee, 1), y_i(fee, 0), fee_i(1), fee_i(0)\} \perp D_i$ $|X$</li>
-							      </ol>
-							      
-							    </div>
-							</div>
 						</div>
 					</section>
 
