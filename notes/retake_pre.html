@@ -333,10 +333,10 @@
 							<div class="content-box">
 							    <h4>Identification Strategy: the "student-year" specification (1)</h4>
 							    <div class="box-content">
-								      \[ y_{ics}=\sum_{c=2007}^{2017}\alpha_c+\sum_{s=1}^4\gamma_s+\beta D_{ics}+\theta X_i+\varepsilon_{ics}, \]
+								      \[ y_{ics}=\alpha_c+\gamma_s+\beta D_{ics}+\theta X_i+\varepsilon_{ics}, \]
 								      <ul style="margin-left: 15px">
 								      	<li><b>Parallel trends</b> among cohorts across years of study in the absence of treatment</li>
-								      	<li>$\alpha_c$ and $\gamma_s$: cohort ($c$) and year-of-study ($s$) Fixed Effects; </li>
+								      	<li>$\alpha_c$ and $\gamma_s$: cohort ($c$, from 2007 to 2017) and year-of-study ($s$, 1 to 4) Fixed Effects; </li>
 								      	<li>$y_{ics}$: outcome of student $i$ in the $s$-th year of study: exam passing rate, exam absence rate, credits taken, persistence, etc.</li>
 								      	<li>$D_{ics}$: treatment dummy taking 1 if $i$ in $c$ exposed to the rise in the $s$-th year of study </li>
 								</div>
@@ -369,7 +369,7 @@
 							    <h4>Identification Strategy: the "student-year" specification (2)</h4>
 							    <div class="box-content">
 								    To avoid the confoundedness of composition changes resulted from non-random attrition, we modify the specification to
-								      \[ y_{is}=\alpha_i+\sum_s\gamma_s+\beta D_{is}+\varepsilon_{is}, \]
+								      \[ y_{is}=\alpha_i+\gamma_s+\beta D_{is}+\varepsilon_{is}, \]
 								    where
 								    <br>
 								    <ul style="margin-left: 15px">
