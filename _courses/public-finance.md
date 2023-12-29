@@ -9,11 +9,11 @@ program: Economics (Bachelor)
 semester: Spring 2024
 
 
-intro: Here you can find the information for the third part of <b>Regional and Local Public Finance</b>, which covers the analysis of two international systems and the last part of the textbook, "Applications and Policy Analysis".
+intro: Here you can find the information for the second and third part of <b>Regional and Local Public Finance</b>.
 ---
 
 
-The first part of the course, *Regional and Local Public Finance*, is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home), the second by [Candan Erdemli](https://ieb.ub.edu/en/researcher/erdemli-candan/), and the third by myself. [Ha Luong](https://haluong.weebly.com/) and [Candan Erdemli](https://ieb.ub.edu/en/researcher/erdemli-candan/) have also contributed to the content covered in this part.
+The first part of the course, *Regional and Local Public Finance*, is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home) (lectures 1 to 7) and myself. Dr [Candan Erdemli](https://candanerdemli.com/), and the third[Ha Luong](https://haluong.weebly.com/) have also contributed to the content covered in my part.
 
 There are **17 two-hour lectures** in this part of the course, covering 
 
