@@ -15,23 +15,17 @@ intro: Here you can find the information for the third part of <b>Regional and L
 
 The first part of the course, *Regional and Local Public Finance*, is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home), the second by [Candan Erdemli](https://ieb.ub.edu/en/researcher/erdemli-candan/), and the third by myself. [Ha Luong](https://haluong.weebly.com/) and [Candan Erdemli](https://ieb.ub.edu/en/researcher/erdemli-candan/) have also contributed to the content covered in this part.
 
-There are **7 two-hour lectures** in this part of the course, covering (a) the analysis of foreign systems and (b) applications andpolicy analyses and one session for the mid-term exam:
+There are **17 two-hour lectures** in this part of the course, covering 
 
-1. Analysis of Foreigh Systems 1: TBC
+1. the levels and functions of government (3 lectures), 
 
-2. Analysis of Foreigh Systems 2: TBC
+2. midterm exam 1: presentations (2 lectures)
 
-3. Mid-term Exam
+2. intergovernmental grants (2 lecture), 
 
-4. Education
+3. the analysis of Spanish and international public financial systems (5 lectures), and 
 
-5. Transportation
-
-6. Health
-
-7. Welfare
-
-8. Economic Development
+4. applications andpolicy analyses (5 lectures)
 
 
 <br>
