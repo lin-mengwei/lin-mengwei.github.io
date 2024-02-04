@@ -13,7 +13,7 @@ intro: Here you can find the information for the second and third parts of <b>Re
 ---
 
 
-Here you can find the information for the <b>second and third parts</b> of *Regional and Local Public Finance*, a compulsory course for third-year undergraduate Economics majors at UB.The first part of the course is taught by Prof. [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home) (first 1/3 of the course). [Candan Erdemli](https://candanerdemli.com/) and [Ha Luong](https://haluong.weebly.com/) have also contributed to the content covered in my part.
+Here you can find the information for the <b>second and third parts</b> of *Regional and Local Public Finance*, a compulsory course for third-year undergraduate Economics majors at UB. The first part of the course is taught by Prof. [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home) (first 1/3 of the course). [Candan Erdemli](https://candanerdemli.com/) and [Ha Luong](https://haluong.weebly.com/) have also contributed to the content covered in my part.
 
 There are **17 two-hour lectures** in this part of the course, covering 
 
