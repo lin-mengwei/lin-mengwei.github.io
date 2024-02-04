@@ -26,7 +26,7 @@ There are **17 two-hour lectures** in these two parts, covering
 
 3. the analysis of Spanish and international public financial systems (4 lectures), and 
 
-4. applications and policy analyses (5 lectures)
+4. application and policy analyses (5 lectures)
 
 
 <br>
