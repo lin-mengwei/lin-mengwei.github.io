@@ -10,13 +10,13 @@ semester: Spring 2024
 update_date: Feb 2024
 
 
-intro: Here you can find the information for the second and third parts of <b>Regional and Local Public Finance</b>.
+intro: Here you can find the information for the second and third parts (the decentralization of expenditure, application and policy analyses) of <b>Regional and Local Public Finance</b>.
 ---
 
 
 Here you can find the information for the <b>second and third parts</b> of *Regional and Local Public Finance*, a compulsory course for third-year undergraduate Economics majors at UB. The first part of the course is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home). [Candan Erdemli](https://candanerdemli.com/) and [Ha Luong](https://haluong.weebly.com/) have contributed to the content covered in my part.
 
-There are **17 two-hour lectures** in this part of the course, covering 
+There are **17 two-hour lectures** in these two parts, covering 
 
 1. the levels and functions of government (3 lectures), 
 
