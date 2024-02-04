@@ -13,7 +13,7 @@ intro: Here you can find the information for the second and third part of <b>Reg
 ---
 
 
-The first part of the course, *Regional and Local Public Finance*, is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home) (lectures 1 to 7) and myself. Dr [Candan Erdemli](https://candanerdemli.com/), and [Ha Luong](https://haluong.weebly.com/) have also contributed to the content covered in my part.
+The first part of the course, *Regional and Local Public Finance*, is taught by Prof. [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home) (first 1/3 of the course) and myself. Dr [Candan Erdemli](https://candanerdemli.com/) and [Ha Luong](https://haluong.weebly.com/) have also contributed to the content covered in my part.
 
 There are **17 two-hour lectures** in this part of the course, covering 
 
@@ -21,9 +21,9 @@ There are **17 two-hour lectures** in this part of the course, covering
 
 2. midterm exam 1: presentations (2 lectures)
 
-2. intergovernmental grants (2 lecture), 
+2. intergovernmental grants (3 lecture), 
 
-3. the analysis of Spanish and international public financial systems (5 lectures), and 
+3. the analysis of Spanish and international public financial systems (4 lectures), and 
 
 4. applications and policy analyses (5 lectures)
 
