@@ -9,11 +9,11 @@ program: Economics (Bachelor)
 semester: Spring 2024
 
 
-intro: Here you can find the information for the second and third part of <b>Regional and Local Public Finance</b>.
+intro: Here you can find the information for the second and third parts of <b>Regional and Local Public Finance</b>.
 ---
 
 
-The first part of the course, *Regional and Local Public Finance*, is taught by Prof. [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home) (first 1/3 of the course) and myself. Dr [Candan Erdemli](https://candanerdemli.com/) and [Ha Luong](https://haluong.weebly.com/) have also contributed to the content covered in my part.
+The first part of the course, *Regional and Local Public Finance*, is taught by Prof. [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home) (first 1/3 of the course) and myself. [Candan Erdemli](https://candanerdemli.com/) and [Ha Luong](https://haluong.weebly.com/) have also contributed to the content covered in my part.
 
 There are **17 two-hour lectures** in this part of the course, covering 
 
