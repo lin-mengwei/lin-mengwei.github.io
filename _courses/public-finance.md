@@ -7,6 +7,7 @@ role: Lecturer
 uni: University of Barcelona
 program: Economics (Bachelor)
 semester: Spring 2024
+date: Feb 2024
 
 
 intro: Here you can find the information for the second and third parts of <b>Regional and Local Public Finance</b>.
