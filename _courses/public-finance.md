@@ -17,7 +17,7 @@ Here you can find the information for the <b>second and third parts</b> of *Regi
 
 There are **16 two-hour lectures** in these my part, covering 
 
-1. Decentralization of government income (3 lectures), 
+1. Decentralization of government expenditure (3 lectures), 
 
 2. Intergovernmental grants (3 lecture), 
 
