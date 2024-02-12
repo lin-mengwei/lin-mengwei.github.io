@@ -16,17 +16,17 @@ intro: Here you can find the information for the second and third parts (the dec
 
 Here you can find the information for the <b>second and third parts</b> of *Regional and Local Public Finance*, a compulsory course for third-year undergraduate Economics majors at UB. The first part of the course is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home). [Candan Erdemli](https://candanerdemli.com/) and [Ha Luong](https://haluong.weebly.com/) have contributed to the content covered in my part.
 
-There are **17 two-hour lectures** in these two parts, covering 
+There are **16 two-hour lectures** in these my part, covering 
 
-1. the levels and functions of government (3 lectures), 
+1. Decentralization of government income (3 lectures), 
 
-2. midterm exam 1: presentations (2 lectures)
+2. Intergovernmental grants (3 lecture), 
 
-2. intergovernmental grants (3 lecture), 
+3. International comparisons: Canada, China, Germany and Spain systems (5 lectures),
 
-3. the analysis of Spanish and international public financial systems (4 lectures), and 
+4. Application and policy analyses (5 lectures), and
 
-4. application and policy analyses (5 lectures)
+5. Midterm exam 2 (May 21st).
 
 
 <br>
