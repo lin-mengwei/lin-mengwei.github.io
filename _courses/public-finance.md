@@ -9,8 +9,7 @@ program: Economics (Bachelor)
 semester: Spring 2024
 update_date: Feb 2024
 
-
-intro: Here you can find the information for the second and third parts (the decentralization of expenditure, application and policy analyses) of <b>Regional and Local Public Finance</b>.
+intro: Here you can find the information for the second and third parts (the decentralization of expenditure, application and policy analyses) of <b>Regional and Local Public Finance</b> taught in Spring, 2024.
 ---
 
 
