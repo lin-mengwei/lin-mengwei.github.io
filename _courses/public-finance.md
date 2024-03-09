@@ -25,7 +25,7 @@ There are **16 two-hour lectures** in these my part, covering
 
 4. Policy analysis: Education, Health, Transportation, Welfare and Local Development (5 lectures), and
 
-5. Midterm exam 2 (May 21st).
+5. Midterm exam (May 2nd).
 
 
 <br>
