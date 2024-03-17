@@ -25,7 +25,7 @@ There are **16 two-hour lectures** in my part:
 
 3. International Comparisons: fiscal decentralization in Canada, China, Germany and Spain (4 lectures),
 
-4. Policy analysis: Education, Health, Transportation, Welfare and Local Development (5 lectures), and
+4. Policy analysis: Decentralization and Education, Health, Transportation, and Economic Development (5 lectures), and
 
 5. Midterm exam (May 2nd).
 
