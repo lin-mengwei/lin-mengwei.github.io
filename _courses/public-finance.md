@@ -13,7 +13,7 @@ intro: Here you can find the information for <b>Regional and Local Public Financ
 ---
 
 
-This course, *Regional and Local Public Finance*, builds on previous courses (Public Sector Economics, Public Finance, Tax System I), and focuses on the discussion of <b>centralization versus decentralization</b> of the fiscal system. Here you can find the information for the <b>second (decentralization of govt expenditure & inter-govt grants) and third parts (internatioanl comparison & policy analysis)</b> of it. 
+This course, *Regional and Local Public Finance*, builds on previous courses (Public Sector Economics, Public Finance, Tax System I), and focuses on the discussion of <b>centralization versus decentralization</b> of the fiscal system. Here you can find the information for part <b>two</b> (decentralization of govt expenditure & inter-govt grants) and <b>three</b> (internatioanl comparison & policy analysis)</b> of it. 
 
 The first part of the course is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home), discussing decentralization of taxation. 
 
