@@ -5,7 +5,7 @@ image-source: Cover of the main text, State and Local Public Finance by Ronald F
 layout: course
 role: Lecturer
 uni: University of Barcelona
-program: Economics (Bachelor)
+program: BA Economics 
 semester: Spring 2024
 update_date: Feb 2024
 
@@ -13,11 +13,11 @@ intro: Here you can find the information for <b>Regional and Local Public Financ
 ---
 
 
-Here you can find the information for the <b>second and third parts</b> of *Regional and Local Public Finance*, a compulsory course for third-year undergraduate Economics majors at the University of Barcelona. The first part of the course is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home). [Candan Erdemli](https://candanerdemli.com/) and [Ha Luong](https://haluong.weebly.com/) have contributed to the content covered in my part.
+Here you can find the information for the <b>second and third parts</b> of *Regional and Local Public Finance*, a compulsory course for third-year undergraduate Economics majors at the University of Barcelona. The first part of the course is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home). I thank Zelda Brutti, [Candan Erdemli](https://candanerdemli.com/) and [Ha Luong](https://haluong.weebly.com/) for useful materials compiled by them in previous years during their teaching.
 
 There are **16 two-hour lectures** in these my part, covering 
 
-1. Decentralization of government expenditure (3 lectures), 
+1. Decentralization of government expenditure (4 lectures), 
 
 2. Intergovernmental grants (3 lecture), 
 
