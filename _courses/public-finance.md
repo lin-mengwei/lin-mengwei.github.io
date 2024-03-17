@@ -33,4 +33,4 @@ I thank [Zelda Brutti](https://sites.google.com/site/zeldabrutti/), [Candan Erde
 
 
 <br>
-The main textbook for this course is [State and Local Public Finance](https://www.routledge.com/State-and-Local-Public-Finance/Fisher/p/book/9780367467234) by Ronald C. Fisher. S. Course materials and notifications are updated on [Virtual Campus](https://campusvirtual.ub.edu/course/view.php?id=68724). Supplementary materials are provided in the lecture notes.
+The main textbook for this course is [State and Local Public Finance](https://www.routledge.com/State-and-Local-Public-Finance/Fisher/p/book/9780367467234) by Ronald C. Fisher. Course materials and notifications are updated on [Virtual Campus](https://campusvirtual.ub.edu/course/view.php?id=68724). Supplementary materials are provided in the lecture notes.
