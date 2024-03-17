@@ -17,7 +17,7 @@ This course, *Regional and Local Public Finance*, builds on previous courses (Pu
 
 (The first part of the course is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home), discussing decentralization of taxation.)
 
-There are **16 two-hour lectures** in these my part:
+There are **16 two-hour lectures** in my part:
 
 1. Government Levels and Decentralization of Expenditure (4 lectures), 
 
