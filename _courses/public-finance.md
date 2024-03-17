@@ -7,7 +7,7 @@ role: Lecturer
 uni: University of Barcelona
 program: BA Economics 
 semester: Spring 2024
-update_date: Feb 2024
+update_date: March 2024
 
 intro: Here you can find the information for <b>Regional and Local Public Finance</b> taught in Spring, 2024. This is a compulsory course for third-year undergraduate Economics majors at the University of Barcelona.
 ---
