@@ -1,5 +1,5 @@
 ---
-title: Regional and Local Public Finance
+title: Regional and Local Public Economics
 post-image: "https://lin-mengwei.github.io/assets/images/PublicFinance.png"
 image-source: Cover of the main text, State and Local Public Finance by Ronald Fisher. 
 layout: course
