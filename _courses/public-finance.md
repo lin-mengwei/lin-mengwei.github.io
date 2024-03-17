@@ -9,23 +9,27 @@ program: BA Economics
 semester: Spring 2024
 update_date: Feb 2024
 
-intro: Here you can find the information for <b>Regional and Local Public Finance</b> taught in Spring, 2024.
+intro: Here you can find the information for <b>Regional and Local Public Finance</b> taught in Spring, 2024. This is a compulsory course for third-year undergraduate Economics majors at the University of Barcelona.
 ---
 
 
-Here you can find the information for the <b>second and third parts</b> of *Regional and Local Public Finance*, a compulsory course for third-year undergraduate Economics majors at the University of Barcelona. The first part of the course is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home). I thank Zelda Brutti, [Candan Erdemli](https://candanerdemli.com/) and [Ha Luong](https://haluong.weebly.com/) for useful materials compiled by them in previous years during their teaching.
+This course, *Regional and Local Public Finance*, builds on previous courses (Public Sector Economics, Public Finance, Tax System I), and focuses on the discussion of <b>centralization versus decentralization</b> of the fiscal system. Here you can find the information for the <b>second (decentralization of govt expenditure & inter-govt grants) and third parts (internatioanl comparison & policy analysis)</b> of it. 
 
-There are **16 two-hour lectures** in these my part, covering 
+The first part of the course is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home), discussing decentralization of taxation. 
 
-1. Decentralization of government expenditure (4 lectures), 
+There are **16 two-hour lectures** in these my part:
 
-2. Intergovernmental grants (3 lecture), 
+1. Government Levels and Decentralization of Expenditure (4 lectures), 
 
-3. International Comparisons: fiscal decentralization in Canada, China, Germany and Spain (5 lectures),
+2. Intergovernmental Grants (3 lecture), 
+
+3. International Comparisons: fiscal decentralization in Canada, China, Germany and Spain (4 lectures),
 
 4. Policy analysis: Education, Health, Transportation, Welfare and Local Development (5 lectures), and
 
 5. Midterm exam (May 2nd).
+
+I thank Zelda Brutti, [Candan Erdemli](https://candanerdemli.com/) and [Ha Luong](https://haluong.weebly.com/) for useful materials compiled by them in previous years during their teaching.
 
 
 <br>
