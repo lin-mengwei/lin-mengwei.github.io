@@ -24,7 +24,8 @@ There are **16 two-hour lectures** in my part:
 	2. Key elements and the optimalization problem of decentralization <br>
 	3. Optimal Size of Jurisdiction for public goods provision <br>
 	4. Mobility, Congestion, and Clustering + In-class unit exercise
-<br>
+<br><br>
+
 2. Intergovernmental Grants (3 lecture)
 
 3. International Comparisons: fiscal decentralization in Canada, China, Germany and Spain (4 lectures)
