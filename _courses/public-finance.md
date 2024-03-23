@@ -19,18 +19,18 @@ This course, *Regional and Local Public Economics*, builds on previous courses (
 
 There are **16 two-hour lectures** in my part:
 
-1. Government Levels and Decentralization of Expenditure (4 lectures), 
+1. Government Levels and Decentralization of Expenditure (4 lectures)
 
 	1. Government levels and functions
 	2. Key elements and the optimalization problem of decentralization
 	3. Optimal Size of Jurisdiction for public goods provision
 	4. Mobility, Congestion, and Clustering + In-class unit exercise
 
-2. Intergovernmental Grants (3 lecture), 
+2. Intergovernmental Grants (3 lecture)
 
-3. International Comparisons: fiscal decentralization in Canada, China, Germany and Spain (4 lectures),
+3. International Comparisons: fiscal decentralization in Canada, China, Germany and Spain (4 lectures)
 
-4. Policy analysis: Decentralization and Education, Health, Transportation, and Economic Development (5 lectures), and
+4. Policy analysis: Decentralization and Education, Health, Transportation, and Economic Development (5 lectures)
 
 5. Midterm exam (May 2nd).
 
