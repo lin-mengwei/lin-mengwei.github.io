@@ -33,7 +33,7 @@ There are **16 two-hour lectures** in my part:
 
 5. Midterm exam (May 2nd).
 
-I thank [Zelda Brutti](https://sites.google.com/site/zeldabrutti/), [Candan Erdemli](https://candanerdemli.com/) and [Ha Luong](https://haluong.weebly.com/) for useful materials compiled by them in previous years during their teaching.
+I thank [Zelda Brutti](https://sites.google.com/site/zeldabrutti/), [Candan Erdemli](https://candanerdemli.com/) and [Ha Luong](https://haluong.weebly.com/) for useful materials compiled during their teaching in previous years.
 
 
 <br>
