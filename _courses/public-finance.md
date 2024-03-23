@@ -20,6 +20,7 @@ This course, *Regional and Local Public Economics*, builds on previous courses (
 There are **16 two-hour lectures** in my part:
 
 1. Government Levels and Decentralization of Expenditure (4 lectures), 
+
 	1. Government levels and functions
 	2. Key elements and the optimalization problem of decentralization
 	3. Optimal Size of Jurisdiction for public goods provision
