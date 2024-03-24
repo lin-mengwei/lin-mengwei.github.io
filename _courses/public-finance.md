@@ -19,14 +19,14 @@ The first part of the course (Decentralization of Taxation) is taught by [Andreu
 
 There are **16 two-hour lectures** in my part:
 
-1. Government Levels and Decentralization of Expenditure (4 lectures) <br>
+1. Decentralization of Government Expenditure (4 lectures) <br>
 	1. Government levels and functions <br>
 	2. Key elements and the optimalization problem of decentralization <br>
-	3. Optimal Size of Jurisdiction for public goods provision <br>
+	3. Optimal size of jurisdiction for expenditure <br>
 	4. Mobility, Congestion, and Clustering + In-class unit exercise
 <br><br>
 
-2. Intergovernmental Grants (3 lecture)
+2. Provision of Public Goods & Intergovernmental Grants (3 lecture)
 
 3. International Comparisons: fiscal decentralization in Canada, China, Germany and Spain (4 lectures)
 
