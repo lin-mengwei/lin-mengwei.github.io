@@ -26,7 +26,7 @@ There are **16 two-hour lectures** in my part:
 	4. Mobility, Congestion, and Clustering + In-class unit exercise
 <br><br>
 
-2. Intergovernmental Grants (3 lecture)
+2. Intergovernmental Grants (3 lectures)
 
 3. International Comparisons: fiscal decentralization in Canada, China, Germany and Spain (4 lectures)
 
