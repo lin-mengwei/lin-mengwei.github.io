@@ -15,7 +15,7 @@ intro: Here you can find the information for Regional and Local Public Economics
 
 This course, *Regional and Local Public Economics*, builds on previous courses (Public Sector Economics, Public Finance, Tax System I), and focuses on the discussion of the <b>fiscal relationships between central and regional governments</b> and the <b>centralization versus decentralization</b> of fiscal practices. 
 
-Here you can find the information for <b>parts two</b> (decentralization of govt expenditure & inter-govt grants) and <b>three</b> (internatioanl comparison & policy analysis) of it. The first part of the course (Decentralization of Taxation) is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home)
+Here you can find the information for <b>parts two</b> (decentralization of govt expenditure & inter-govt grants) and <b>three</b> (internatioanl comparison & policy analysis) of it. The first part of the course (Decentralization of Taxation) is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home).
 
 There are **16 two-hour lectures** in my part:
 
