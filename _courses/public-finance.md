@@ -29,7 +29,7 @@ There are **16 two-hour lectures** in my part:
 2. Theory: Intergovernmental Grants (3 lectures)<br>
 	1. Intergovernment grant and its functions <br>
 	2. Effects of intergovernment grants <br>
-	3. Equality grants<br>
+	3. Equality grants
 <br><br>
 
 3. International Comparisons: fiscal decentralization in Canada, China, Germany and Spain (4 lectures)<br>
