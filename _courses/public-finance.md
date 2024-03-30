@@ -50,6 +50,4 @@ There are **16 two-hour lectures** in my part:
 
 I thank [Zelda Brutti](https://sites.google.com/site/zeldabrutti/), [Candan Erdemli](https://candanerdemli.com/) and [Ha Luong](https://haluong.weebly.com/) for useful materials compiled during their teaching in previous years.
 
-
-<br>
 The main textbook for this course is [State and Local Public Finance](https://www.routledge.com/State-and-Local-Public-Finance/Fisher/p/book/9780367467234) by Ronald C. Fisher. Course materials and notifications are updated on [Virtual Campus](https://campusvirtual.ub.edu/course/view.php?id=68724). Supplementary materials are provided in the lecture notes.
