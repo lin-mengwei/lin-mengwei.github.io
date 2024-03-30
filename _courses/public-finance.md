@@ -28,7 +28,7 @@ There are **16 two-hour lectures** in my part:
 
 2. Theory: Intergovernmental Grants (3 lectures)<br>
 	1. Intergovernment grant and its functions <br>
-	2. Effects of intergovernment grants <br>
+	2. Effects of intergovernment grants: models and evidence <br>
 	3. Equality grants
 <br><br>
 
