@@ -32,7 +32,7 @@ There are **16 two-hour lectures** in my part:
 	3. Equality grants
 <br><br>
 
-3. International Comparisons: fiscal decentralization in Canada, China, Germany and Spain (4 lectures)<br>
+3. International Comparison (4 lectures)<br>
 	1. The Case of Spain <br>
 	2. The Case of Canada  <br>
 	3. The Case of Germany <br>
