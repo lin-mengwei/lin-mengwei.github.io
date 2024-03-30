@@ -39,7 +39,7 @@ There are **16 two-hour lectures** in my part:
 	4. The Case of China
 <br><br>
 
-4. Midterm exam and Discussion (1 lecture).
+4. Midterm exam and Discussion (1 lecture) <br><br>
 
 5. Policy analysis and Empirical Methods  (4 lectures)<br>
 	1. Education and Fiscal Decentralization (Method: Diff-in-Diff 1)<br>
