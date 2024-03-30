@@ -19,20 +19,34 @@ Here you can find the information for <b>parts two</b> (decentralization of govt
 
 There are **16 two-hour lectures** in my part:
 
-1. Decentralization of Government Expenditure (4 lectures) <br>
+1. Theory: Decentralization of Government Expenditure (4 lectures) <br>
 	1. Government levels and functions <br>
 	2. Key elements and the optimalization problem of decentralization <br>
 	3. Optimal size of jurisdiction for expenditure <br>
 	4. Mobility, Congestion, and Clustering + In-class unit exercise
 <br><br>
 
-2. Intergovernmental Grants (3 lectures)
+2. Theory: Intergovernmental Grants (3 lectures)<br>
+	1. Intergovernment grant and its functions <br>
+	2. Effects of intergovernment grants <br>
+	3. Equality grants<br>
+<br><br>
 
-3. International Comparisons: fiscal decentralization in Canada, China, Germany and Spain (4 lectures)
+3. International Comparisons: fiscal decentralization in Canada, China, Germany and Spain (4 lectures)<br>
+	1. The Case of Spain <br>
+	2. The Case of Canada  <br>
+	3. The Case of Germany <br>
+	4. The Case of China
+<br><br>
 
-4. Policy analysis: Decentralization and Education, Health, Transportation, and Economic Development (5 lectures)
+4. Midterm exam and Discussion (1 lecture).
 
-5. Midterm exam (May 2nd).
+5. Policy analysis and Empirical Methods  (4 lectures)<br>
+	1. Education and Fiscal Decentralization (Method: Diff-in-Diff 1)<br>
+	2. Health and Welfare (Method: Diff-in-Diff 2)<br>
+	3. Public Transportation (Method: Instrumental Vairables)<br>
+	4. Local Development (Method: Regression Discontinuity)
+<br><br>
 
 I thank [Zelda Brutti](https://sites.google.com/site/zeldabrutti/), [Candan Erdemli](https://candanerdemli.com/) and [Ha Luong](https://haluong.weebly.com/) for useful materials compiled during their teaching in previous years.
 
