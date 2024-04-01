@@ -43,9 +43,9 @@ There are **16 two-hour lectures** in my part:
 
 5. Policy analysis and Empirical Methods  (4 lectures)<br>
 	1. Education and Fiscal Decentralization (Method: Diff-in-Diff 1)<br>
-	2. Health and Welfare (Method: Diff-in-Diff 2)<br>
-	3. Public Transportation (Method: Instrumental Vairables)<br>
-	4. Local Economic Development (Method: Regression Discontinuity)
+	2. Health and Welfare and Fiscal Decentralization (Method: Diff-in-Diff 2)<br>
+	3. Public Transportation and Fiscal Decentralization (Method: Instrumental Vairables)<br>
+	4. Fiscal Decentralization and Local Economic Development (Method: Regression Discontinuity)
 <br><br>
 
 I thank [Zelda Brutti](https://sites.google.com/site/zeldabrutti/), [Candan Erdemli](https://candanerdemli.com/), [Dirk Foremny](http://foremny.eu/) and [Ha Luong](https://haluong.weebly.com/) for useful materials compiled during their teaching in previous years.
