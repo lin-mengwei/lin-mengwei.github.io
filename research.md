@@ -1,7 +1,7 @@
 ---
 title: Research Projects
-layout: page
+layout: course
 ---
 
-1. Retake Costs and Academic Outcomes (joint with Andreu Arenas and Jenifer Ruiz-Valenzuela)
+<b>Retake Costs and Academic Outcomes </b> (joint with Andreu Arenas and Jenifer Ruiz-Valenzuela)
 
