@@ -20,15 +20,15 @@ Here you can find the information for <b>parts two</b> (decentralization of govt
 There are **16 two-hour lectures** in my part:
 
 1. Theory: Decentralization of Government Expenditure (4 lectures) <br>
-	1. Government levels and functions <br>
-	2. Key elements and the optimalization problem of decentralization <br>
-	3. Optimal size of jurisdiction for expenditure <br>
-	4. Mobility, Congestion, and Clustering + In-class unit exercise
+	1. Government levels and functions (0311)<br>
+	2. Key elements and the optimalization problem of decentralization (0314)<br>
+	3. Optimal size of jurisdiction for expenditure (0318)<br>
+	4. Mobility, Congestion, and Clustering + In-class unit exercise (0321)
 <br><br>
 
 2. Theory: Intergovernmental Grants (3 lectures)<br>
-	1. Intergovernmental grant and its functions <br>
-	2. Effects of intergovernmental grants: modelling <br>
+	1. Intergovernmental grant and its functions (0404) <br>
+	2. Effects of intergovernmental grants: modelling (0415)<br>
 	3. Effects of intergovernmental grants: theoretical implications & empirical evidence
 <br><br>
 
