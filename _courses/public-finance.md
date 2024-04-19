@@ -42,7 +42,7 @@ There are **16 two-hour lectures** in my part:
 
 4. Midterm exam and Discussion (1 lecture) <br><br>
 
-5. Application 2: Policy analysis and Empirical Methods  (4 lectures)<br>
+5. Application 2: Policy analysis and Empirical Methods (4 lectures)<br>
 	1. Education and Fiscal Decentralization (Method: Diff-in-Diff 1)<br>
 	2. Health and Welfare and Fiscal Decentralization (Method: Diff-in-Diff 2)<br>
 	3. Public Transportation and Fiscal Decentralization (Method: Instrumental Vairables)<br>
