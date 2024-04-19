@@ -19,21 +19,21 @@ Here you can find the information for <b>parts two</b> (decentralization of govt
 
 There are **16 two-hour lectures** in my part:
 
-1. Theory 2: Decentralization of Government Expenditure (4 lectures) <br>
+1. <b>Theory 2: Decentralization of Government Expenditure</b> (4 lectures) <br>
 	1. Government levels and functions (0311)<br>
 	2. Key elements and the optimalization problem of decentralization (0314)<br>
 	3. Optimal size of jurisdiction for expenditure (0318)<br>
 	4. Mobility, Congestion, and Clustering + In-class unit exercise (0321)
 <br><br>
 
-2. Theory 3: Intergovernmental Grants (4 lectures)<br>
+2. <b>Theory 3: Intergovernmental Grants (4 lectures)</b> <br>
 	1. Intergovernmental grant and its functions (0404) <br>
 	2. Analyzing intergovernmental grants: modelling (0415)<br>
 	3. Effects of intergovernmental grants: theoretical implications (0418) <br>
 	4. Effects of intergovernmental grants: empiric + In-class unit exercise (0422)
 <br><br>
 
-3. Application 1: International Cases (4 lectures)<br>
+3. <b>Application 1: International Cases (4 lectures)</b> <br>
 	1. The Case of Spain <br>
 	2. The Case of Canada  <br>
 	3. The Case of Germany <br>
@@ -42,7 +42,7 @@ There are **16 two-hour lectures** in my part:
 
 4. Midterm exam and Discussion (1 lecture) <br><br>
 
-5. Application 2: Policy analysis and Empirical Methods (4 lectures)<br>
+5. <b>Application 2: Policy analysis and Empirical Methods (4 lectures) </b><br>
 	1. Education and Fiscal Decentralization (Method: Diff-in-Diff 1)<br>
 	2. Health and Welfare and Fiscal Decentralization (Method: Diff-in-Diff 2)<br>
 	3. Public Transportation and Fiscal Decentralization (Method: Instrumental Vairables)<br>
