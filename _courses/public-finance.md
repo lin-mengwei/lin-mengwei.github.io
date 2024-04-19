@@ -19,20 +19,21 @@ Here you can find the information for <b>parts two</b> (decentralization of govt
 
 There are **16 two-hour lectures** in my part:
 
-1. Theory: Decentralization of Government Expenditure (4 lectures) <br>
+1. Theory 2: Decentralization of Government Expenditure (4 lectures) <br>
 	1. Government levels and functions (0311)<br>
 	2. Key elements and the optimalization problem of decentralization (0314)<br>
 	3. Optimal size of jurisdiction for expenditure (0318)<br>
 	4. Mobility, Congestion, and Clustering + In-class unit exercise (0321)
 <br><br>
 
-2. Theory: Intergovernmental Grants (3 lectures)<br>
+2. Theory 3: Intergovernmental Grants (4 lectures)<br>
 	1. Intergovernmental grant and its functions (0404) <br>
-	2. Effects of intergovernmental grants: modelling (0415)<br>
-	3. Effects of intergovernmental grants: theoretical implications & empirical evidence (0418)
+	2. Analyzing intergovernmental grants: modelling (0415)<br>
+	3. Effects of intergovernmental grants: theoretical implications (0418) <br>
+	4. Effects of intergovernmental grants: empiric + In-class unit exercise (0422)
 <br><br>
 
-3. International Comparison (4 lectures)<br>
+3. Application 1: International Cases (4 lectures)<br>
 	1. The Case of Spain <br>
 	2. The Case of Canada  <br>
 	3. The Case of Germany <br>
@@ -41,13 +42,13 @@ There are **16 two-hour lectures** in my part:
 
 4. Midterm exam and Discussion (1 lecture) <br><br>
 
-5. Policy analysis and Empirical Methods  (4 lectures)<br>
+5. Application 2: Policy analysis and Empirical Methods  (4 lectures)<br>
 	1. Education and Fiscal Decentralization (Method: Diff-in-Diff 1)<br>
 	2. Health and Welfare and Fiscal Decentralization (Method: Diff-in-Diff 2)<br>
 	3. Public Transportation and Fiscal Decentralization (Method: Instrumental Vairables)<br>
 	4. Fiscal Decentralization and Local Economic Development (Method: Regression Discontinuity)
 <br><br>
 
-I thank [Zelda Brutti](https://sites.google.com/site/zeldabrutti/), [Candan Erdemli](https://candanerdemli.com/), [Dirk Foremny](http://foremny.eu/) and [Ha Luong](https://haluong.weebly.com/) for useful materials compiled during their teaching in previous years.
+I thank [Zelda Brutti](https://sites.google.com/site/zeldabrutti/), [Candan Erdemli](https://candanerdemli.com/), [Dirk Foremny](http://foremny.eu/) and [Ha Luong](https://haluong.weebly.com/) for useful materials compiled during their teaching in previous years, and Erik Sarrazin and Julia McGee for useful information on country-specific cases.
 
 The main textbook for this course is [State and Local Public Finance](https://www.routledge.com/State-and-Local-Public-Finance/Fisher/p/book/9780367467234) by Ronald C. Fisher. Course materials and notifications are updated on [Virtual Campus](https://campusvirtual.ub.edu/course/view.php?id=68724). Supplementary materials are provided in the lecture notes.
