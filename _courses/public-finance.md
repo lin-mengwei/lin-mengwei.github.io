@@ -40,7 +40,7 @@ There are **16 two-hour lectures** in my part:
 	4. Fiscal Decentralization of China (+ Land Finance)
 <br><br>
 
-4. Midterm exam and Discussion (1 lecture) <br><br>
+4. Continuous Assessment: midterm exam (1 lecture) <br><br>
 
 5. <b>Application 2: Policy analysis and Empirical Methods (4 lectures) </b><br>
 	1. Education and Fiscal Decentralization (Method: Diff-in-Diff 1)<br>
