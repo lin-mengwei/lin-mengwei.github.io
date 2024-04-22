@@ -33,7 +33,7 @@ There are **16 two-hour lectures** in my part:
 	4. Effects of intergovernmental grants: empiric + In-class unit exercise (0422)
 <br><br>
 
-3. <b>Application 1: International Cases (4 lectures)</b> <br>
+3. <b>Application 1: International Cases and Hot Issues (4 lectures)</b> <br>
 	1. Fiscal Decentralization of Spain (+ Taxation and Mobility)<br>
 	2. Fiscal Decentralization of Canada (+ Equalizing Grants)<br>
 	3. Fiscal Decentralization of Germany (+ SNG Debts)<br>
