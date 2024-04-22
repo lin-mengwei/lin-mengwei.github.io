@@ -34,10 +34,10 @@ There are **16 two-hour lectures** in my part:
 <br><br>
 
 3. <b>Application 1: International Cases (4 lectures)</b> <br>
-	1. Fiscal Decentralization of Spain (+ Extension on Mobility)<br>
-	2. Fiscal Decentralization of Canada (+ Extension on Equalizing Grants)<br>
-	3. Fiscal Decentralization of Germany (+ Extension on SNG Debts)<br>
-	4. Fiscal Decentralization of China (+ Extension on Land Finance)
+	1. Fiscal Decentralization of Spain (+ Taxation and Mobility)<br>
+	2. Fiscal Decentralization of Canada (+ Equalizing Grants)<br>
+	3. Fiscal Decentralization of Germany (+ SNG Debts)<br>
+	4. Fiscal Decentralization of China (+ Land Finance)
 <br><br>
 
 4. Midterm exam and Discussion (1 lecture) <br><br>
