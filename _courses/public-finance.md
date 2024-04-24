@@ -34,13 +34,13 @@ There are **16 two-hour lectures** in my part:
 <br><br>
 
 3. <b>Application 1: International Cases and Hot Issues (4 lectures)</b> <br>
-	1. Fiscal Decentralization of Spain (+ Taxation and Mobility)<br>
-	2. Fiscal Decentralization of Canada (+ Equalizing Grants)<br>
-	3. Fiscal Decentralization of Germany (+ SNG Debts)<br>
-	4. Fiscal Decentralization of China (+ Land Finance)
+	1. Fiscal Decentralization of Spain (+ Taxation and Mobility) (0425)<br>
+	2. Fiscal Decentralization of Canada (+ Equalizing Grants) (0429)<br>
+	3. Fiscal Decentralization of Germany (+ SNG Debts) (0506)<br>
+	4. Fiscal Decentralization of China (+ Land Finance) (0509)
 <br><br>
 
-4. Continuous Assessment: midterm exam (1 lecture) <br><br>
+4. Continuous Assessment: midterm exam (1 lecture) (0502)<br><br>
 
 5. <b>Application 2: Policy analysis and Empirical Methods (4 lectures) </b><br>
 	1. Education and Fiscal Decentralization (Method: Diff-in-Diff 1)<br>
