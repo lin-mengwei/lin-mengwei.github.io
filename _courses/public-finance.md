@@ -27,15 +27,15 @@ There are **16 two-hour lectures** in my part:
 <br><br>
 
 2. <b>Theory 3: Intergovernmental Grants (4 lectures)</b> <br>
-	1. Intergovernmental grant and its functions (0404) <br>
-	2. Analyzing intergovernmental grants: modelling (0415)<br>
-	3. Effects of intergovernmental grants: theoretical implications (0418) <br>
-	4. Effects of intergovernmental grants: empiric + In-class unit exercise (0422)
+	1. Intergovernmental grant and its functions (0404) [slides](https://campusvirtual.ub.edu/pluginfile.php/8118122/mod_resource/content/1/0404_intergovernmental_grants_I.pdf)<br>
+	2. Analyzing intergovernmental grants: modelling (0415) [slides](https://campusvirtual.ub.edu/pluginfile.php/8132330/mod_resource/content/3/0415_intergovernmental_grants_II.pdf)<br>
+	3. Effects of intergovernmental grants: theoretical implications (0418) [slides](https://campusvirtual.ub.edu/pluginfile.php/8137200/mod_resource/content/1/0418_intergovernmental_grants_III.pdf)<br>
+	4. Effects of intergovernmental grants: empiric + In-class unit exercise (0422) [slides](https://campusvirtual.ub.edu/pluginfile.php/8140050/mod_resource/content/1/0422_intergovernmental_grants_IV.pdf)
 <br><br>
 
 3. <b>Application 1: International Cases and Hot Issues (4 lectures)</b> <br>
-	1. Fiscal Decentralization of Spain (+ Taxation and Mobility) (0425)<br>
-	2. Fiscal Decentralization of Canada (+ Equalizing Grants) (0429)<br>
+	1. Fiscal Decentralization of Spain (+ Taxation and Mobility) (0425) [slides 1](https://campusvirtual.ub.edu/pluginfile.php/8144164/mod_resource/content/1/0425_Case_1_Spain.pdf) [slides 2](https://campusvirtual.ub.edu/pluginfile.php/8147763/mod_resource/content/1/0429_Case_1_Spain_Dirk_paper.pdf)<br>
+	2. Fiscal Decentralization of Canada (+ Equalizing Grants) (0429) [slides](https://campusvirtual.ub.edu/pluginfile.php/8147765/mod_resource/content/1/0429_Case_2_Canada.pdf)<br>
 	3. Fiscal Decentralization of Germany (+ SNG Debts) (0506)<br>
 	4. Fiscal Decentralization of China (+ Land Finance) (0509)
 <br><br>
