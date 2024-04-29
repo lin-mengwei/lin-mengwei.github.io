@@ -23,7 +23,7 @@ There are **16 two-hour lectures** in my part:
 	1. Government levels and functions (0311) [slides 1](https://campusvirtual.ub.edu/pluginfile.php/8091574/mod_resource/content/6/0311_expenditure_decentralization_I_studs.pdf) [slides 2](https://campusvirtual.ub.edu/pluginfile.php/8101281/mod_resource/content/2/0314_expenditure_decentralization_I_cont_studs.pdf)<br>
 	2. Key elements and the optimalization problem of decentralization (0314) [slides](https://campusvirtual.ub.edu/pluginfile.php/8101280/mod_resource/content/1/031418_expenditure_decentralization_II_studs.pdf)<br>
 	3. Optimal size of jurisdiction for expenditure (0318) [slides](https://campusvirtual.ub.edu/pluginfile.php/8109586/mod_resource/content/1/0321_expenditure_decentralization_III_studs.pdf)<br>
-	4. Mobility, Congestion, and Clustering + In-class unit exercise [slides](https://campusvirtual.ub.edu/pluginfile.php/8109586/mod_resource/content/1/0321_expenditure_decentralization_III_studs.pdf) (0321)
+	4. Mobility, Congestion, and Clustering + In-class unit exercise (0321) [slides](https://campusvirtual.ub.edu/pluginfile.php/8109586/mod_resource/content/1/0321_expenditure_decentralization_III_studs.pdf) 
 <br><br>
 
 2. <b>Theory 3: Intergovernmental Grants (4 lectures)</b> <br>
