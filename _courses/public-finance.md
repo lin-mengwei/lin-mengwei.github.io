@@ -7,7 +7,7 @@ role: Lecturer
 uni: University of Barcelona
 program: BA Economics 
 semester: Spring 2023/24
-update_date: March 2024
+update_date: April 2024
 
 intro: Here you can find the information for Regional and Local Public Economics taught in Spring semester, 2023/24. This is a <b>third-year compulsory course</b> for undergraduate Economics majors at the University of Barcelona.
 ---
