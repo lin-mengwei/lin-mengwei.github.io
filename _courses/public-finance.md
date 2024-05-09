@@ -36,8 +36,8 @@ There are **16 two-hour lectures** in my part:
 3. <b>Application 1: International Cases and Hot Issues (4 lectures)</b> <br>
 	1. Fiscal Decentralization of Spain (+ Taxation and Mobility) (0425) [slides 1](https://campusvirtual.ub.edu/pluginfile.php/8144164/mod_resource/content/1/0425_Case_1_Spain.pdf); [slides 2](https://campusvirtual.ub.edu/pluginfile.php/8147763/mod_resource/content/1/0429_Case_1_Spain_Dirk_paper.pdf)<br>
 	2. Fiscal Decentralization of Canada (+ Equalizing Grants) (0429) [slides](https://campusvirtual.ub.edu/pluginfile.php/8147765/mod_resource/content/1/0429_Case_2_Canada.pdf)<br>
-	3. Fiscal Decentralization of Germany (+ SNG Debts) (0506)<br>
-	4. Fiscal Decentralization of China (+ Land Finance) (0509)
+	3. Fiscal Decentralization of China (+ Land Finance) (0506) <br>
+	4. Fiscal Decentralization of Germany (+ SNG Debts & Debt Brake) (0509)
 <br><br>
 
 4. Continuous Assessment: midterm exam (1 lecture) (0502)<br><br>
