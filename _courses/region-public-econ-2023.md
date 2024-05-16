@@ -43,7 +43,7 @@ There are **16 two-hour lectures** in my part:
 4. Continuous Assessment: midterm exam + discussion (1 lecture) (0502, 0513)<br><br>
 
 5. <b>Application 2: Decentralization Practice & Policy Evaluation (3 lectures) </b><br>
-	1. Education under Fiscal Decentralization (Method: Ideal Experiment & Diff-in-Diff) (0513)<br> 
+	1. Education under Fiscal Decentralization (Method: Ideal Experiments & Diff-in-Diff) (0513)<br> 
 	2. Fiscal Decentralization and Healthcare (Method: Diff-in-Diff) (0516)<br> 
 	3. Decentralization and Transportation + Economic Development (Method: Instrumental Vairables)(0523)<br> 
 <br><br>
