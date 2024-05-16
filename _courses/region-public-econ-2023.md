@@ -36,19 +36,18 @@ There are **16 two-hour lectures** in my part:
 3. <b>Application 1: International Cases and Hot Issues (4 lectures)</b> <br>
 	1. Fiscal Decentralization of Spain (+ Taxation and Mobility) (0425) [slides 1](https://campusvirtual.ub.edu/pluginfile.php/8144164/mod_resource/content/1/0425_Case_1_Spain.pdf); [slides 2](https://campusvirtual.ub.edu/pluginfile.php/8147763/mod_resource/content/1/0429_Case_1_Spain_Dirk_paper.pdf)<br>
 	2. Fiscal Decentralization of Canada (+ Equalizing Grants) (0429) [slides](https://campusvirtual.ub.edu/pluginfile.php/8147765/mod_resource/content/1/0429_Case_2_Canada.pdf)<br>
-	3. Fiscal Decentralization of China (+ Land Finance) (0506) <br>
+	3. Fiscal Decentralization of China (+ Land Finance & SNG Debts) (0506) <br>
 	4. Fiscal Decentralization of Germany (+ SNG Debts & Debt Brake) (0509)
 <br><br>
 
-4. Continuous Assessment: midterm exam (1 lecture) (0502)<br><br>
+4. Continuous Assessment: midterm exam + discussion (1 lecture) (0502, 0513)<br><br>
 
-5. <b>Application 2: Policy analysis and Empirical Methods (4 lectures) </b><br>
-	1. Education and Fiscal Decentralization (Method: Diff-in-Diff 1)<br>
-	2. Health and Welfare and Fiscal Decentralization (Method: Diff-in-Diff 2)<br>
-	3. Public Transportation and Fiscal Decentralization (Method: Instrumental Vairables)<br>
-	4. Fiscal Decentralization and Local Economic Development (Method: Regression Discontinuity)
+5. <b>Application 2: Decentralization Practice & Policy Evaluation (3 lectures) </b><br>
+	1. Education under Fiscal Decentralization (Ideal Experiment; Diff-in-Diff 1)<br> (0513)
+	2. Healthcare with Fiscal Decentralization (Diff-in-Diff 2)<br> (0516)
+	3. Fiscal Decentralization and Transportation & Local Economic Development (Method: Instrumental Vairables)<br> (0523)
 <br><br>
 
-I thank [Candan Erdemli](https://candanerdemli.com/), [Zelda Brutti](https://sites.google.com/site/zeldabrutti/),  [Dirk Foremny](http://foremny.eu/) and [Ha Luong](https://haluong.weebly.com/) for course materials compiled in previous years, and Erik Sarrazin and Julia McGee for useful information on country-specific cases.
+I thank [Candan Erdemli](https://candanerdemli.com/), [Zelda Brutti](https://sites.google.com/site/zeldabrutti/) and [Dirk Foremny](http://foremny.eu/) for course materials compiled in previous years, and Erik Sarrazin and Julia McGee for useful information on country-specific cases.
 
 The main textbook for the theory parts is [State and Local Public Finance](https://www.routledge.com/State-and-Local-Public-Finance/Fisher/p/book/9780367467234) by Ronald C. Fisher. The main references for country-specific cases are [Forum of Federations Handbook of Fiscal Federalism](https://forumfed.org/wp-content/uploads/2023/08/978-3-030-97258-5-3.pdf) and [the OECD/UCLG SNG-WOFI](www.sng-wofi.org/country-profiles/). Course materials and notifications are updated on [Virtual Campus](https://campusvirtual.ub.edu/course/view.php?id=68724).
