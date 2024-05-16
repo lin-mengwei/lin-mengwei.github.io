@@ -5,7 +5,7 @@ image-source:
 layout: course
 role: Lecturer
 uni: University of Barcelona
-program: BA Economics 
+program: 6 ECTS, BA Economics 
 semester: Spring 2023/24
 update_date: April 2024
 
