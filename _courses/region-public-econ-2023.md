@@ -17,7 +17,7 @@ intro: Here you can find the information for Regional and Local Public Economics
 
 Here you can find the information for <b>parts two</b> (decentralization of govt expenditure & inter-govt grants) and <b>three</b> (internatioanl comparison & policy analysis) of it. The first part of the course (decentralization of taxation) is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home).
 
-There are **16 two-hour lectures** in my part:
+There are **16 two-hour lectures** in my part, which I structured to be **4 units**:
 
 1. <b>Theory 2: Decentralization of Government Expenditure (4 lectures) </b><br>
 	1. Government levels and functions (0311) [slides 1](https://campusvirtual.ub.edu/pluginfile.php/8091574/mod_resource/content/6/0311_expenditure_decentralization_I_studs.pdf); [slides 2](https://campusvirtual.ub.edu/pluginfile.php/8101281/mod_resource/content/2/0314_expenditure_decentralization_I_cont_studs.pdf)<br>
