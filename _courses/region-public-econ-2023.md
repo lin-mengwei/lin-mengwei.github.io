@@ -34,6 +34,7 @@ There are **16 two-hour lectures** in my part, which I structured to be **4 unit
 <br><br>
 
 3. <b>Application 1: International Cases and Hot Issues (4 lectures)</b> <br>
+In this unit, I apply the framework built in the Theory parts to characterize fiscal decentralization in each country, and discuss country-specific issues related to fiscal decentralization. <br>
 	1. Fiscal Decentralization of Spain (+ Taxation and Mobility) (0425) [slides 1](https://campusvirtual.ub.edu/pluginfile.php/8144164/mod_resource/content/1/0425_Case_1_Spain.pdf); [slides 2](https://campusvirtual.ub.edu/pluginfile.php/8147763/mod_resource/content/1/0429_Case_1_Spain_Dirk_paper.pdf)<br>
 	2. Fiscal Decentralization of Canada (+ Equalizing Grants) (0429) [slides](https://campusvirtual.ub.edu/pluginfile.php/8147765/mod_resource/content/1/0429_Case_2_Canada.pdf)<br>
 	3. Fiscal Decentralization of China (+ Land Finance & SNG Debts) (0506) <br>
