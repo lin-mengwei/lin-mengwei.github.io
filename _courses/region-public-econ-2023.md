@@ -45,7 +45,7 @@ There are **16 two-hour lectures** in my part:
 5. <b>Application 2: Decentralization Practice & Policy Evaluation (3 lectures) </b><br>
 	1. Education under Fiscal Decentralization (Ideal Experiment; Diff-in-Diff 1)<br> (0513)
 	2. Healthcare with Fiscal Decentralization (Diff-in-Diff 2)<br> (0516)
-	3. Fiscal Decentralization and Transportation & Local Economic Development (Method: Instrumental Vairables)<br> (0523)
+	3. Decentralization and Transportation + Economic Development (Method: Instrumental Vairables)<br> (0523)
 <br><br>
 
 I thank [Candan Erdemli](https://candanerdemli.com/), [Zelda Brutti](https://sites.google.com/site/zeldabrutti/) and [Dirk Foremny](http://foremny.eu/) for course materials compiled in previous years, and Erik Sarrazin and Julia McGee for useful information on country-specific cases.
