@@ -46,7 +46,7 @@ In this unit, I apply the framework built in the Theory parts to characterize fi
 5. <b>Application 2: Decentralization Practice & Policy Evaluation (3 lectures) </b><br>
 	1. Education under Fiscal Decentralization (Method: Ideal Experiments & Diff-in-Diff) (0513)<br> 
 	2. Fiscal Decentralization and Healthcare (Method: Diff-in-Diff) (0516)<br> 
-	3. Decentralization and Transportation + Economic Development (Method: Instrumental Vairables)(0523)<br> 
+	3. Decentralization and Transportation + Economic Growth (Method: IV, Causation vs Correlation)(0523)<br> 
 <br><br>
 
 I thank [Candan Erdemli](https://candanerdemli.com/), [Zelda Brutti](https://sites.google.com/site/zeldabrutti/) and [Dirk Foremny](http://foremny.eu/) for course materials compiled in previous years, and Erik Sarrazin and Julia McGee for useful information on country-specific cases.
