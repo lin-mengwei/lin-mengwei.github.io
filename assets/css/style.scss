@@ -82,15 +82,29 @@ a.navbar-item.is-active {
     }
 
 
-    a {
+    p {
+        text-align: justify;
+    }
+
+    .button {
         min-width: 25vmax;
         margin: 0;
         padding: 0;
     }
 
-    p {
-        text-align: justify;
+    .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem; /* 设置与图标大小相匹配的宽度 */
+    height: 2.5rem; /* 设置与图标大小相匹配的高度 */
+    margin: 0 10px; /* 调整图标之间的间距 */
+    font-size: 2rem; /* 图标大小 */
+    text-align: center; /* 确保图标居中 */
+    padding: 0;
     }
+
+
 
 }
 
