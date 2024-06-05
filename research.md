@@ -3,9 +3,13 @@ title: Research Projects
 layout: research
 ---
 
-In Construction!!!
+# Work in Progress
 
-<b>Retake Costs and Academic Outcomes </b> (joint with Andreu Arenas and Jenifer Ruiz-Valenzuela)
+##### <b>Retake Costs and Academic Outcomes</b>
+joint with Andreu Arenas and Jenifer Ruiz-Valenzuela
 
-<br>
-<b>Exam Centralization and Regional Differences in Education and Labor Market Outcomes</b>
+
+
+
+
+##### <b>Exam Centralization and Regional Differences in Education and Labor Market Outcomes</b>
