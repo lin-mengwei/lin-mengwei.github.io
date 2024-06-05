@@ -33,9 +33,9 @@ Translation is my favorite activity during long holidays. Although I aim to "scu
 	<br><b>From</b>: Skidelsky, Robert. <i>What’s wrong with economics?</i>. Yale University Press, 2020.
 <br>
 
-[《专家失灵：付费知识与意见市场》](https://book.douban.com/subject/36054568/)，中信出版集团，2023年。 （与陈浩驰合译）
-	<br><b>From</b>: Koppl, Roger. <i>Expert failure</i>. Cambridge University Press, 2018.
+[《专家失灵：付费知识与意见市场》](https://book.douban.com/subject/36054568/)，中信出版集团，2023年。（与陈浩驰合译）
+	<br><b>From</b>: Koppl, Roger. <i>Expert failure</i>. Cambridge University Press, 2018. 
 <br>
 
 [科学与工程实践：让学生在探索中理解世界](https://my.nsta.org/resource/105619/helping-students-make-sense-of-the-world-using-next-generation-science-and-engine)，教育科学出版社，即将出版。
-	<br><b>From</b>: Schwarz, Christina V., Cynthia Passmore, and Brian J. Reiser. <i>Helping Students Make Sense of the World Using Next Generation Science and Engineering Practices</i>. NSTA Press, 2017.
+	<br><b>From</b>: Schwarz, Christina V., Cynthia Passmore, and Brian J. Reiser. <i>Helping Students Make Sense of the World Using Next Generation Science and Engineering Practices</i>. NSTA Press, 2017. 
