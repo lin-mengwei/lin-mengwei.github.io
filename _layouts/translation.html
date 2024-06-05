@@ -1,0 +1,51 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% include head.html %}
+</head>
+
+<body>
+  {% include navbar.html %}
+
+  <section class="hero is-fullheight has-text-centered" id="post" style="margin-left: 5%; margin-right: 5%; padding-left: 5%; padding-right:5%; padding-top:2%">
+    <div class="hero-body">
+      <div class="container">
+        <a class="has-text-black" id="title">
+          <h1 class="title has-text-centered is-2 has-text-weight-semibold ">{{page.title}}</h1>
+        </a>
+        <hr class="has-background-black">
+        
+        <div class="columns is-variable is-5">
+          <!-- 基本信息-->        
+        </div>
+        <div class="content has-text-justified-desktop has-text-justified-fullhd has-text-justified has-text-justified-tablet has-text-left-mobile" >
+          <br>
+          {{ content }}
+        </div>
+        {% unless site.disqus-shortname == "" %}
+        <div class="disqus-comments" id="disqus_thread"></div>
+        {% endunless %}
+      </div>
+    </div>
+  </section>
+  {% include footer.html %}
+</body>
+
+
+<script>
+
+  (function () { /* DON'T EDIT BELOW THIS LINE */
+    var d = document,
+      s = d.createElement('script');
+    s.src = 'https://{{site.disqus-shortname}}.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+
+</html>
