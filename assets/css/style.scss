@@ -266,7 +266,8 @@ a.navbar-item.is-active {
     }
 }
 
-#translation {
+
+#course {
     
     // 媒体查询：屏幕宽度大于或等于 768px 时（通常是平板和桌面设备）
     @media (min-width: 800px) {
@@ -276,21 +277,35 @@ a.navbar-item.is-active {
             text-align: justify;
         }
     }
+}
 
-
+#translation {
+    
+    // 媒体查询：屏幕宽度大于或等于 768px 时（通常是平板和桌面设备）
     @media (min-width: 800px) {
+        .hero-body  {
+            padding-left: 12%;  
+            padding-right: 12%;
+            text-align: justify;
+        }
+
         p {
             padding-left: 50px;  
             padding-right: 100px;
             text-align: justify;
         }
+
     }
 
     @media (max-width: 768px) {
         p {
-            padding-left: 20px;  
-            padding-right: 15px;
+            padding-left: 5%;  
+            padding-right: 10%;
             text-align: justify;
+        }
+
+        h1 {
+            text-align: center !important;
         }
     }
 
