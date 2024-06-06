@@ -4,7 +4,7 @@ layout: translation
 ---
 
 
-# 1. Popularization | 学术科普
+# Popularization | 学术科普
 
 By translating and popularizing cutting-edge research, I aim to bring to the Chinese academic audience interesting international perspectives, introducing different institutional backgrounds and integrating discussions within China's policy context.
 
@@ -20,7 +20,7 @@ This endeavor is also part of my own academic training. Hence, the primary focus
 2. [上职校，选学校还是选专业？（香樟经济学术圈）](https://mp.weixin.qq.com/s/h49tsNgWx3D3M2D4P-f3Tg)
 
 
-# 2. Book Translation | 书籍翻译
+# Book Translation | 书籍翻译
 
 Translation is my favorite activity during long holidays. Although I aim to "sculpt the text" (my translation "philosophy") with great care, this is often challenging in reality. As a native Chinese speaker, so far I primarily translate from English to Chinese, but am open to Chinese to English translation if opportunities arise. Specializing in book translations in the Social Sciences, my published works so far are in Economics, Education, and Sociology of Knowledge, aligning with my own academic interests.
 

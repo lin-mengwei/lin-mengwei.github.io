@@ -269,13 +269,23 @@ a.navbar-item.is-active {
 #translation {
     
     // 媒体查询：屏幕宽度大于或等于 768px 时（通常是平板和桌面设备）
-    @media (min-width: 768px) {
+    @media (min-width: 800px) {
+        .container  {
+            padding-left: 10%;  
+            padding-right: 10%;
+            text-align: justify;
+        }
+    }
+
+
+    @media (min-width: 800px) {
         p {
-            padding-left: 80px;  
+            padding-left: 50px;  
             padding-right: 100px;
             text-align: justify;
         }
     }
+
 
     a {
 
