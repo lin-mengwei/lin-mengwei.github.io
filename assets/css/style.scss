@@ -82,6 +82,10 @@ a.navbar-item.is-active {
     }
 
 
+    a {
+        color: inherit;
+    }
+
     p {
         text-align: justify;
     }
@@ -263,12 +267,23 @@ a.navbar-item.is-active {
 }
 
 #translation {
-    .image {
-
-
-        img {
-
+    
+    // 媒体查询：屏幕宽度大于或等于 768px 时（通常是平板和桌面设备）
+    @media (min-width: 768px) {
+        p {
+            padding-left: 80px;  
+            padding-right: 100px;
+            text-align: justify;
         }
+    }
+
+    a {
+
+        text-decoration: none;
+        font-weight: bolder;
+    }
+    img { 
+        height: 100px !important;
     }
 }
 

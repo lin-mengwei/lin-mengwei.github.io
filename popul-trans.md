@@ -3,7 +3,6 @@ title: Popularization & Translation (学术科普与翻译)
 layout: translation
 ---
 
-正文缩进一下
 
 # 1. Popularization | 学术科普
 
@@ -23,7 +22,7 @@ This endeavor is also part of my own academic training. Hence, the primary focus
 
 # 2. Book Translation | 书籍翻译
 
-Translation is my favorite activity during long holidays. Although I aim to "sculpt the language" (my translation philosophy!) with great care, this is often challenging in reality. As a native Chinese speaker, I primarily translate from English to Chinese, but am open to Chinese to English translation if opportunities arise. Specializing in book translations in the Social Sciences, my published works so far are in Economics, Education, and Sociology of Knowledge, aligning with my own academic interests.
+Translation is my favorite activity during long holidays. Although I aim to "sculpt the text" (my translation "philosophy") with great care, this is often challenging in reality. As a native Chinese speaker, so far I primarily translate from English to Chinese, but am open to Chinese to English translation if opportunities arise. Specializing in book translations in the Social Sciences, my published works so far are in Economics, Education, and Sociology of Knowledge, aligning with my own academic interests.
 
 翻译是我每年休假时的爱好。理想状态下总希望能够沉下心来“雕刻语言”，但现实中往往很难做到。因此回头看，译作的质量总是很难让自己满意。考虑到自己的语言背景，我目前的工作主要是英译汉。如果有合适的机会，也希望能够尝试汉译英。基于自身的知识结构和学术兴趣，我的翻译工作集中在社会科学领域，目前已出版的译作内容涵盖经济学、教育学和知识社会学，总的来说与我自己的研究领域有所关联。
 <br><br>
@@ -31,7 +30,7 @@ Translation is my favorite activity during long holidays. Although I aim to "scu
 #### <b>List of Book Translations \| 译作列表：</b>
 
 
-[《经济学怎么了》](https://book.douban.com/subject/36054568/)，文汇出版社，2022年。 
+[《经济学怎么了》](https://book.douban.com/subject/36054568/)，文汇出版社，2022年。 ![what](assets/images/whatswrong.jpg)
 	<br><b>From</b>: Skidelsky, Robert. <i>What’s wrong with economics?</i>. Yale University Press, 2020.
 <br>
 
