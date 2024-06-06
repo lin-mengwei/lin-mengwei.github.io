@@ -4,7 +4,7 @@ layout: translation
 ---
 
 
-# Popularization | 学术科普
+## Popularization | 学术科普
 
 By translating and popularizing cutting-edge research, I aim to bring to the Chinese academic audience interesting international perspectives, introducing different institutional backgrounds and integrating discussions within China's policy context.
 
@@ -20,7 +20,7 @@ This endeavor is also part of my own academic training. Hence, the primary focus
 2. [上职校，选学校还是选专业？（香樟经济学术圈）](https://mp.weixin.qq.com/s/h49tsNgWx3D3M2D4P-f3Tg)
 
 
-# Book Translation | 书籍翻译
+## Book Translation | 书籍翻译
 
 Translation is my favorite activity during long holidays. Although I aim to "sculpt the text" (my translation "philosophy") with great care, this is often challenging in reality. As a native Chinese speaker, so far I primarily translate from English to Chinese, but am open to Chinese to English translation if opportunities arise. Specializing in book translations in the Social Sciences, my published works so far are in Economics, Education, and Sociology of Knowledge, aligning with my own academic interests.
 
@@ -30,12 +30,12 @@ Translation is my favorite activity during long holidays. Although I aim to "scu
 #### <b>List of Book Translations \| 译作列表：</b>
 
 
-[《经济学怎么了》](https://book.douban.com/subject/36054568/)，文汇出版社，2022年。 ![what](assets/images/whatswrong.jpg)
-	<br><b>From</b>: Skidelsky, Robert. <i>What’s wrong with economics?</i>. Yale University Press, 2020.
+[《经济学怎么了》](https://book.douban.com/subject/36054568/)，文汇出版社，2022年。 
+<br><b>From</b>: Skidelsky, Robert. <i>What’s wrong with economics?</i>. Yale University Press, 2020.
 <br>
 
 [《专家失灵：付费知识与意见市场》](https://book.douban.com/subject/36054568/)，中信出版集团，2023年。（与陈浩驰合译）
-	<br><b>From</b>: Koppl, Roger. <i>Expert failure</i>. Cambridge University Press, 2018. 
+<br><b>From</b>: Koppl, Roger. <i>Expert failure</i>. Cambridge University Press, 2018. 
 <br>
 
 [科学与工程实践：让学生在探索中理解世界](https://my.nsta.org/resource/105619/helping-students-make-sense-of-the-world-using-next-generation-science-and-engine)，教育科学出版社，即将出版。

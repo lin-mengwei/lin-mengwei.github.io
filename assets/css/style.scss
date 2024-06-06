@@ -284,8 +284,8 @@ a.navbar-item.is-active {
     // 媒体查询：屏幕宽度大于或等于 768px 时（通常是平板和桌面设备）
     @media (min-width: 800px) {
         .hero-body  {
-            padding-left: 12%;  
-            padding-right: 12%;
+            padding-left: 13%;  
+            padding-right: 13%;
             text-align: justify;
         }
 
@@ -300,12 +300,13 @@ a.navbar-item.is-active {
     @media (max-width: 768px) {
         p {
             padding-left: 5%;  
-            padding-right: 10%;
+            padding-right: 5%;
             text-align: justify;
         }
 
-        h1 {
+        h2 {
             text-align: center !important;
+            font-size: 26px;
         }
     }
 
@@ -316,7 +317,7 @@ a.navbar-item.is-active {
         font-weight: bolder;
     }
     img { 
-        height: 100px !important;
+        height: 200px !important;
     }
 }
 
