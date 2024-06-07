@@ -17,7 +17,9 @@ This endeavor is also part of my own academic training. Hence, the primary focus
 
 #### <b>List of Popularization Articles \| 科普文章列表：</b>
 1. [天赋有别：读书基因与家庭资源分配（香樟经济学术圈）](https://mp.weixin.qq.com/s/ijOw-ZXSsPvzTyYE0YKSKg) 
+<br><i> Innate Differences: Genes for Studying and Family Resource Allocation (CEC Blog Post) </i>
 2. [上职校，选学校还是选专业？（香樟经济学术圈）](https://mp.weixin.qq.com/s/h49tsNgWx3D3M2D4P-f3Tg)
+<br><i>Going to Vocational Education: School or Major? (CEC Blog Post)</i>
 
 
 ## Book Translation | 书籍翻译
@@ -34,7 +36,7 @@ Translation is my favorite activity during long holidays. I aim to "sculpt the t
 <br><b>From</b>: Skidelsky, Robert. <i>What’s wrong with economics?</i>. Yale University Press, 2020.
 <br>
 
-[《专家失灵：付费知识与意见市场》](https://book.douban.com/subject/36054568/)，中信出版集团，2023年。（与陈浩驰合译）
+[《专家失灵：付费知识与意见市场》](https://book.douban.com/subject/36211902/)，中信出版集团，2023年。（与陈浩驰合译）
 <br><b>From</b>: Koppl, Roger. <i>Expert failure</i>. Cambridge University Press, 2018. 
 <br>
 

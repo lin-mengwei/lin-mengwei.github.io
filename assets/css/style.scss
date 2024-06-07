@@ -286,10 +286,10 @@ a.navbar-item.is-active {
         text-decoration: none !important;
         color: rgb(95,129,81);
         font-weight: bolder;
-    }
-    img { 
-        max-height: 200px !important;
-    }
+        }
+        img { 
+            max-height: 200px !important;
+        }
     }
 
     // 媒体查询：屏幕宽度大于或等于 768px 时（通常是平板和桌面设备）
@@ -310,8 +310,7 @@ a.navbar-item.is-active {
 
     @media (max-width: 768px) {
         .hero-body  {
-            padding-left: 1%;  
-            padding-right: 1%;
+            padding: 0;
         }
 
         p {
@@ -323,9 +322,6 @@ a.navbar-item.is-active {
             font-size: 26px;
         }
 
-        .post {
-            padding: 0;
-        }
     }
 
 
