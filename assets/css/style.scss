@@ -276,8 +276,21 @@ a.navbar-item.is-active {
             padding-right: 10%;
             text-align: justify;
         }
+
+        p {
+          padding-left: 7%;  
+          padding-right: 7%;
+          text-align: justify;
+        }
+
+        h1 {
+          margin: 0 !important;
+        }
+    }
+
+    @media (max-width: 768px) {
         .hero-body {
-            padding: 0;
+          padding: 0;
         }
 
         p {
