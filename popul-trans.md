@@ -6,9 +6,9 @@ layout: translation
 
 ## Popularization | 学术科普
 
-By translating and popularizing cutting-edge research, I aim to bring to the Chinese academic audience interesting international perspectives, covering different institutional backgrounds and integrating discussions within China's policy context.
+By translating and popularizing cutting-edge research, I aim to bring interesting international perspectives to the Chinese academic audience. These articles will cover different institutional backgrounds and integrate discussions within China’s policy context.
 
-This endeavor is also part of my own academic training. Hence, the primary focus is on education (or appied micro, broadly). I try to select works from economists I am familiar with, discussing with them to ensure a thorough understanding. This helps me write in a more readable and accessible manner.
+This endeavor is also part of my own academic training, with a primary focus on education (and applied micro, broadly). I select research from economists I am familiar with, and discuss them to ensure a thorough understanding. This process helps me write in a more readable and accessible manner.
 
 我希望通过编译国际前沿研究，为国内关注经济学的读者带来一些有意思的国际视角，选题尽量覆盖不同国家的制度背景，并在讨论中结合我国的政策语境。
 
