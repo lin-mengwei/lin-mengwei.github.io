@@ -25,7 +25,7 @@ By translating and popularizing cutting-edge research, I aim to bring interestin
 
 I also view this endeavor as part of my own academic training, thus focusing more on education economics (and applied micro). I select research from economists I am familiar with, and discuss with them to ensure a thorough understanding. This process helps me write in a more readable and accessible manner.
 
-这个过程也是我自己精读、积累文献的学术训练，因此主要选取教育经济学和应用微观的文字。 我会尽量挑选自己熟悉的经济学家的研究，在编译过程中征求他们的意见，确保理解透彻，呈现出可读、易读的内容。
+这个过程也是我自己精读、积累文献的学术训练，因此主要选取教育经济学和应用微观的论文。 我会尽量挑选自己熟悉的经济学家的研究，在编译过程中征求他们的意见，确保理解透彻，呈现出可读、易读的内容。
 
 
 #### <b>List of Popularization Articles \| 科普文章列表：</b>
