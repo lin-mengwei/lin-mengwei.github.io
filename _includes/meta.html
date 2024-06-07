@@ -10,6 +10,7 @@
 <title>media</title>
 <link rel="stylesheet" type="text/css">
 
+
 <!-- Open Graph general (Facebook, Pinterest & Google+) -->
 <meta name="og:title" content="{{site.title}}{% if page.title %} | {{page.title}}{% endif %}">
 <meta name="og:description" content="{% unless page.layout == 'post' %}{{site.description}}{% else %}{{page.description}}{% endunless %}">
@@ -47,3 +48,45 @@
 
     gtag('config', '{{site.google-analytics}}');
 </script>
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Person",
+    "name": "Mengwei Lin",
+    "url": "https://lin-mengwei.github.io/",
+    "image": "https://lin-mengwei.github.io/assets/images/image.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/lin-mengwei",
+      "https://twitter.com/LIN_Mengwei",
+      "https://www.ub.edu/school-economics/lin-mengwei",
+      "https://ieb.ub.edu/en/researcher/lin-mengwei"
+    ],
+    "hasOccupation": [
+      {
+        "@type": "researcher",
+        "jobTitle": "PhD Candidtae",
+        "worksFor": [{
+          "@type": "University",
+          "name": "University of Barcelona",
+          "alternateName":["UB", "巴塞罗那大学"]
+        },
+        {
+          "@type": "Research Institute",
+          "name": "IEB",
+          "alternateName": ["Institut d'Economia de Barcelona", "Barcelona Institute of Economics","巴塞罗那经济研究所"]
+        }
+        ]
+      },
+      {
+        "@type": "Translator",
+        "jobTitle": "Translator",
+        "worksFor": {
+          "@type": "翻译",
+          "name": "翻译"
+        }
+      }
+    ]
+}
+
+  </script>
