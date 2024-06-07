@@ -8,11 +8,11 @@ layout: translation
 
 By translating and popularizing cutting-edge research, I aim to bring interesting international perspectives to the Chinese academic audience. These articles will cover different institutional backgrounds and integrate discussions within China’s policy context.
 
-This endeavor is also part of my own academic training, with a primary focus on education (and applied micro). I select research from economists I am familiar with, and discuss them to ensure a thorough understanding. This process helps me write in a more readable and accessible manner.
+This endeavor is also part of my own academic training, with a primary focus on education econ (and applied micro). I select research from economists I am familiar with, and discuss with them to ensure a thorough understanding. This process helps me write in a more readable and accessible manner.
 
 我希望通过编译国际前沿研究，为国内关注经济学的读者带来一些有意思的国际视角，选题尽量覆盖不同国家的制度背景，并在讨论中结合我国的政策语境。
 
-我把这个过程也当作自己精读、积累文献的学术训练，因此主要聚焦于教育经济学，尽量覆盖不同话题并关注跨领域交叉。当然，出于好奇（有些时候也需要换换脑子），部分选题可能与教育不太相关，但仍在应用微观的范畴之内。 我尽量挑选自己熟悉的经济学家的研究，在编译过程中征求他们的意见，确保理解透彻，呈现出可读、易读的内容。
+我把这个过程也当作自己精读、积累文献的学术训练，因此主要聚焦于教育经济学和应用微观的范畴之内。 我尽量挑选自己熟悉的经济学家的研究，在编译过程中征求他们的意见，确保理解透彻，呈现出可读、易读的内容。
 
 
 #### <b>List of Popularization Articles \| 科普文章列表：</b>
