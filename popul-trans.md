@@ -38,7 +38,7 @@ This endeavor is also part of my own academic training, with a primary focus on 
 
 ## Book Translation | 书籍翻译
 
-Translation is my favorite activity during long holidays. I aim to "sculpt the text" (my translation "philosophy") with great care, but in reality this is often hard to achieve. As a native Chinese speaker, so far I primarily translate from English to Chinese, but am open to Chinese to English translation if opportunities arise. Specializing in book translations in the Social Sciences, my published works so far are in Economics, Education, and Sociology of Knowledge, aligning with my own academic interests.
+Translation is my favorite activity during long holidays. I aim to "sculpt the text" (my translation "philosophy") with great care, but in reality this is often hard to achieve. As a native Chinese speaker, so far I primarily translate from English to Chinese, but am open to Chinese to English translation if opportunities arise. Specializing in book translations in the Social Sciences, my published works so far are in Economics & Education, aligning with my own academic interests.
 
 翻译是我每年休假时的爱好。理想状态下总希望能够沉下心来“雕刻语言”，但现实中往往很难做到。因此回头看，译作的质量总是很难让自己满意。考虑到自己的语言背景，我目前的工作主要是英译汉。如果有合适的机会，也希望能够尝试汉译英。基于自身的知识结构和学术兴趣，我的翻译工作集中在社会科学领域，目前已出版的译作内容涵盖经济学和教育学，与我自己的研究领域相关。
 
