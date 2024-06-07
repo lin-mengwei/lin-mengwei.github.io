@@ -10,7 +10,7 @@ books:
       image: "/assets/images/epflr.png"
       link: "https://book.douban.com/subject/36211902/"
       description: "<b>From</b>: Koppl, Roger. <i>Expert Failure</i>. Cambridge University Press, 2018. <br> <b>Co-translator</b>: Haochi Chen | 与陈浩驰合译"
-    - title: "《科学与工程实践：让学生在探索中理解世界》，教育科学出版社，即将出版。"
+    - title: "《科学与工程实践：引导学生在探索中理解世界》，教育科学出版社，即将出版。"
       image: "/assets/images/practices.jpg"
       link: "https://my.nsta.org/resource/105619/helping-students-make-sense-of-the-world-using-next-generation-science-and-engine"
       description: "<b>From</b>: Schwarz, Christina V., Cynthia Passmore, and Brian J. Reiser. <i>Helping Students Make Sense of the World Using Next Generation Science and Engineering Practices</i>. NSTA Press, 2017. "
