@@ -27,6 +27,7 @@ I also view this endeavor as part of my own academic training, thus focusing mor
 
 这个过程也是我自己精读、积累文献的学术训练，因此主要选取教育经济学和应用微观的论文。 我会尽量挑选自己熟悉的经济学家的研究，在编译过程中征求他们的意见，确保理解透彻，呈现出可读、易读的内容。
 
+<br>
 #### <b>List of Popularization Articles \| 科普文章列表：</b>
 1. [天赋有别：读书基因与家庭资源分配（香樟经济学术圈）](https://mp.weixin.qq.com/s/ijOw-ZXSsPvzTyYE0YKSKg) 
 <br><i> Innate Differences: Genes for Studying and Family Resource Allocation (CEC Blog Post) </i>
