@@ -1,6 +1,19 @@
 ---
 title: Popularization & Translation <br> 学术科普与翻译
 layout: translation
+books:
+    - title: "《经济学怎么了》，文汇出版社，2022年。 "
+      image: "/assets/images/whatswrong.jpg"
+      link: "https://book.douban.com/subject/36054568/"
+      description: "<b>From</b>: Skidelsky, Robert. <i>What’s Wrong with Economics?</i>. Yale University Press, 2020."
+    - title: "《专家失灵：付费知识与意见市场》，中信出版集团，2023年。"
+      image: "/assets/images/epflr.png"
+      link: "https://book.douban.com/subject/36211902/"
+      description: "与陈浩驰合译（Co-translate with Haochi Chen）<br><b>From</b>: Koppl, Roger. <i>Expert Failure</i>. Cambridge University Press, 2018. "
+    - title: "《科学与工程实践：让学生在探索中理解世界》，教育科学出版社，即将出版。"
+      image: "/assets/images/practices.jpg"
+      link: "https://my.nsta.org/resource/105619/helping-students-make-sense-of-the-world-using-next-generation-science-and-engine"
+      description: "<b>From</b>: Schwarz, Christina V., Cynthia Passmore, and Brian J. Reiser. <i>Helping Students Make Sense of the World Using Next Generation Science and Engineering Practices</i>. NSTA Press, 2017. "
 ---
 
 
@@ -31,15 +44,3 @@ Translation is my favorite activity during long holidays. I aim to "sculpt the t
 
 
 #### <b>List of Book Translations \| 译作列表：</b>
-
-
-[《经济学怎么了》](https://book.douban.com/subject/36054568/)，文汇出版社，2022年。 
-<br><b>From</b>: Skidelsky, Robert. <i>What’s wrong with economics?</i>. Yale University Press, 2020.
-<br>
-
-[《专家失灵：付费知识与意见市场》](https://book.douban.com/subject/36211902/)，中信出版集团，2023年。（与陈浩驰合译）
-<br><b>From</b>: Koppl, Roger. <i>Expert failure</i>. Cambridge University Press, 2018. 
-<br>
-
-[《科学与工程实践：让学生在探索中理解世界》](https://my.nsta.org/resource/105619/helping-students-make-sense-of-the-world-using-next-generation-science-and-engine)，教育科学出版社，即将出版。
-	<br><b>From</b>: Schwarz, Christina V., Cynthia Passmore, and Brian J. Reiser. <i>Helping Students Make Sense of the World Using Next Generation Science and Engineering Practices</i>. NSTA Press, 2017. 
