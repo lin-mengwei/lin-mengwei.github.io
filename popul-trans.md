@@ -38,5 +38,5 @@ Translation is my favorite activity during long holidays. I aim to "sculpt the t
 <br><b>From</b>: Koppl, Roger. <i>Expert failure</i>. Cambridge University Press, 2018. 
 <br>
 
-[科学与工程实践：让学生在探索中理解世界](https://my.nsta.org/resource/105619/helping-students-make-sense-of-the-world-using-next-generation-science-and-engine)，教育科学出版社，即将出版。
+[《科学与工程实践：让学生在探索中理解世界》](https://my.nsta.org/resource/105619/helping-students-make-sense-of-the-world-using-next-generation-science-and-engine)，教育科学出版社，即将出版。
 	<br><b>From</b>: Schwarz, Christina V., Cynthia Passmore, and Brian J. Reiser. <i>Helping Students Make Sense of the World Using Next Generation Science and Engineering Practices</i>. NSTA Press, 2017. 

@@ -281,6 +281,17 @@ a.navbar-item.is-active {
 
 #translation {
     
+    .hero-body {
+        a {
+        text-decoration: none !important;
+        color: rgb(95,129,81);
+        font-weight: bolder;
+    }
+    img { 
+        max-height: 200px !important;
+    }
+    }
+
     // 媒体查询：屏幕宽度大于或等于 768px 时（通常是平板和桌面设备）
     @media (min-width: 800px) {
         .hero-body  {
@@ -311,17 +322,14 @@ a.navbar-item.is-active {
             text-align: center !important;
             font-size: 26px;
         }
+
+        .post {
+            padding: 0;
+        }
     }
 
 
-    a {
-        text-decoration: none;
-        color: 
-        font-weight: bolder;
-    }
-    img { 
-        max-height: 200px !important;
-    }
+    
 }
 
 
