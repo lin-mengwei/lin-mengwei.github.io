@@ -19,7 +19,7 @@ books:
 
 ## Popularization | 学术科普
 
-By translating and popularizing cutting-edge research, I aim to bring interesting international perspectives to the Chinese academic audience. These articles will cover different institutional backgrounds and integrate discussions within China’s policy context.
+By translating and popularizing cutting-edge research, I aim to bring interesting international perspectives to the Chinese academic audience. These articles will cover diverse institutional backgrounds and integrate discussions within China’s policy context.
 
 我希望通过编译国际前沿研究，为国内关注经济学的读者带来一些有意思的国际视角，文章选题尽量覆盖不同国家的制度背景，并结合我国的政策语境进行讨论。
 
