@@ -39,7 +39,7 @@ I also view this endeavor as part of my own academic training, thus focusing mor
 
 Translation is my favorite activity during long holidays. I aim to "sculpt the text" (my translation "philosophy") with great care, but in reality this is often hard to achieve. As a native Chinese speaker, so far I primarily translate from English to Chinese, but am open to Chinese-to-English translation if opportunities arise. Specializing in book translations in the Social Sciences, my published works so far are in Economics & Education, aligning with my own academic interests.
 
-翻译是我每年休假时的爱好。理想状态下总希望能够沉下心来“雕刻语言”，但却往往很难做到。考虑自身语言背景，我目前主要进行英译汉。如果有合适的机会，也希望能够尝试汉译英。我主攻社会科学领域的书籍翻译，目前已出版的译作涵盖经济学和教育学，与自己的研究领域有所关联。
+翻译是我每年休假时的爱好。理想状态下总希望能够仔细“雕刻语言”、磨练心性，但总是很难做到。考虑自身语言背景，我目前主要进行英译汉。如果有合适的机会，也希望能够尝试汉译英。我主攻社会科学领域的书籍翻译，目前已出版的译作涵盖经济学和教育学，与自己的研究领域有所关联。
 
 #### <b>List of Translations \| 译作：</b>
 
