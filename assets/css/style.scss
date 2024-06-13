@@ -119,6 +119,12 @@ a.navbar-item.is-active {
         
             p {
                 text-align: left;
+                line-height: 1.75;
+            }
+        }
+        @media (min-width: 800px) {
+            p{
+                font-size:105%;
             }
         }
 
