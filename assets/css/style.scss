@@ -69,11 +69,6 @@ a.navbar-item.is-active {
 }
 
 #about {
-    @media only screen and (max-width: 800px) {
-      body {
-        font-size: 1.0em;
-      }
-    }
 
     .image {
         
@@ -121,7 +116,12 @@ a.navbar-item.is-active {
         @media (max-width: 800px) { // 针对平板和手机
             padding: 0;
             margin: 3%;
+        
+            p {
+                text-align: left;
+            }
         }
+
 
     }
 
