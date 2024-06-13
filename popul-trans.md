@@ -21,7 +21,7 @@ books:
 
 By translating and popularizing cutting-edge research, I aim to bring interesting international perspectives to the Chinese academic audience. These articles will cover diverse institutional backgrounds and integrate discussions within China’s policy context.
 
-希望通过编译国际前沿研究，为国内关注经济学的读者带来有意思的国际视角，文章尽量覆盖不同制度背景，并结合我国政策语境进行讨论。
+我希望通过编译国际前沿研究，为国内关注经济学的读者带来有意思的国际视角。文章会尽量覆盖不同制度背景，并结合我国政策语境进行讨论。
 
 I also view this endeavor as part of my own academic training, thus focusing more on education economics (and applied micro). I select research from economists I am familiar with, and discuss with them to ensure a thorough understanding. This process helps me write in a more readable and accessible manner.
 
