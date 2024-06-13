@@ -425,8 +425,18 @@ a.navbar-item.is-active {
   }
 
   // 书籍展示部分样式
+  
   #books {
-    padding: 20px;
+
+    @media (min-width: 768px) {
+        padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
     background-color: white;
 
     h2 {
@@ -470,30 +480,6 @@ a.navbar-item.is-active {
     }
   }
 
-  // 新增的媒体查询：小屏幕设备
-  @media (max-width: 768px) {
-    .book {
-      flex-direction: column;
-      text-align: center;
-
-      .book-image {
-        margin: 0 0 10px 0;
-      }
-
-      .book-details {
-        text-align: center;
-
-        p {
-          font-size: 0.85em;
-        }
-      }
-
-      img {
-        max-width: 100px;
-        height: auto;
-      }
-    }
-  }
 }
 
 
