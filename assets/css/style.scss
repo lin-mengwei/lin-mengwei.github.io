@@ -122,6 +122,7 @@ a.navbar-item.is-active {
                 line-height: 1.75;
             }
         }
+
         @media (min-width: 800px) {
             p{
                 font-size:105%;
@@ -132,9 +133,17 @@ a.navbar-item.is-active {
     }
 
     .button {
-        min-width: 25vmax;
-        margin: 0;
-        padding: 0;
+        @media (min-width: 800px) {
+            min-width: 25vmax;
+            margin: 0;
+            padding: 0;
+        }
+
+        @media (max-width: 800px) { 
+            min-width: 30vmax;
+            margin: 0;
+            padding: 0;
+        }
     }
 
     .social-icon {
