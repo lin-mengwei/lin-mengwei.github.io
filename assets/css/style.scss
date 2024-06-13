@@ -90,7 +90,7 @@ a.navbar-item.is-active {
         }
 
         @media (max-width: 800px) { // 针对平板和手机
-            max-width: 30vmax;
+            max-width: 100%;
             display: flex;
             justify-content: center;
             padding-bottom: 5%;
