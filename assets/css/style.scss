@@ -81,13 +81,25 @@ a.navbar-item.is-active {
         }
     }
 
-
     a {
         color: inherit;
     }
 
     p {
         text-align: justify;
+    }
+
+    #biography {
+
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: none;
+
+        @media (max-width: 768px) { // 针对平板和手机
+            padding: 0;
+            margin: 3%;
+        }
+
     }
 
     .button {
@@ -107,6 +119,7 @@ a.navbar-item.is-active {
     text-align: center; /* 确保图标居中 */
     padding: 0; /* 移除内边距 */
     }
+
 
 
 
