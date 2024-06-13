@@ -69,16 +69,39 @@ a.navbar-item.is-active {
 }
 
 #about {
-    .image {
-        max-width: 20vmax;
-        display: flex;
-        justify-content: center;
+    @media only screen and (max-width: 800px) {
+      body {
+        font-size: 1.0em;
+      }
+    }
 
-        img {
-            border: 0.25rem dotted black;
-            width: 80%;
-            max-width: 100%;
+    .image {
+        
+        @media (min-width: 800px) { // 针对电脑
+            max-width: 20vmax;
+            display: flex;
+            justify-content: center;
+
+            img {
+                border: 0.25rem dotted black;
+                width: 80%;
+                max-width: 100%;
+            }
         }
+
+        @media (max-width: 800px) { // 针对平板和手机
+            max-width: 40vmax;
+            display: flex;
+            justify-content: center;
+            padding-bottom: 5%;
+
+            img {
+                width: 80%;
+                max-width: 100%;
+            }
+        }
+
+        
     }
 
     a {
@@ -91,11 +114,11 @@ a.navbar-item.is-active {
 
     #biography {
 
-        margin-left: 10%;
-        margin-right: 10%;
+        margin-left: 13%;
+        margin-right: 13%;
         margin-top: none;
 
-        @media (max-width: 768px) { // 针对平板和手机
+        @media (max-width: 800px) { // 针对平板和手机
             padding: 0;
             margin: 3%;
         }
