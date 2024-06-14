@@ -76,7 +76,6 @@ a.navbar-item.is-active {
             max-width: 20vmax;
             display: flex;
             justify-content: center;
-
             img {
                 border: 0.25rem dotted black;
                 width: 80%;
@@ -87,18 +86,15 @@ a.navbar-item.is-active {
         @media (max-width: 800px) { // 针对平板和手机
             
             width: 100%;
-            max-width: 30vmax
             display: flex;
             justify-content: center;
             padding-bottom: 5%;
 
             img {
                 width: 80%;
-                max-width: 100%;
+                max-width: 25vmax;
             }
         }
-
-        
     }
 
     a {
@@ -126,6 +122,9 @@ a.navbar-item.is-active {
         }
 
         @media (min-width: 800px) {
+            padding: 0;
+            margin: 3%;
+
             p{
                 font-size:105%;
             }
