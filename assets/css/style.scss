@@ -107,10 +107,7 @@ a.navbar-item.is-active {
 
     #biography {
 
-        margin-left: 13%;
-        margin-right: 13%;
-        margin-top: none;
-
+        
         @media (max-width: 768px) { // 针对平板和手机
             padding: 0;
             margin: 3%;
@@ -123,7 +120,9 @@ a.navbar-item.is-active {
 
         @media (min-width: 768px) {
             padding: 0;
-            margin: 3%;
+            margin-left: 15%;
+            margin-right: 15%;
+            margin-top: none;
 
             p{
                 font-size:105%;
@@ -375,7 +374,6 @@ a.navbar-item.is-active {
     }
   }
 
-  // 媒体查询：屏幕宽度大于或等于 800px 时（通常是平板和桌面设备）
   @media (min-width: 768px) {
     .hero-body {
       padding-left: 13%;  
