@@ -364,120 +364,120 @@ a.navbar-item.is-active {
 
 #translation {
   .hero-body {
-    a {
-      text-decoration: none !important;
-      color: rgb(95,129,81);
-      font-weight: bolder;
-    }
-    img { 
-      max-height: 200px !important;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .hero-body {
-      padding-left: 18%;  
-      padding-right: 18%;
-      text-align: justify;
-    }
-
-    p {
-      padding-left: 7%;  
-      padding-right: 7%;
-      text-align: justify;
-    }
-
-    h1 {
-      margin: 0 !important;
-    }
-
-    h2 {
-      margin-top: 0;
-      padding-bottom: 1.5%;
-    }
-
-    h4 {
-      margin-top: 3%;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .hero-body {
-      padding: 0;
-    }
-
-    p {
-      text-align: left;
-    }
-
-    h1 {
-      margin-top: 10% !important;
-      font-size: 26px !important;
-    }
-
-    h2 {
-      margin-top: 0;
-      padding-top: 0; 
-      text-align: center !important;
-      font-size: 22px;
-    }
-  }
-
-  // 书籍展示部分样式
-  
-  #books {
-
-    @media (min-width: 768px) {
-        padding: 20px;
-    }
-
-    @media (max-width: 768px) {
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-
-    background-color: white;
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .books-container {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .book {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 20px;
-    }
-
-    .book-image {
-      flex: 0 0 auto;
-      margin-right: 20px;
-    }
-
-    .book-details {
-      flex: 1 1 auto;
-      text-align: left;
-    
-    p {
-        font-size: 1em;
-        color: #666;
-        padding-bottom: 1em;
+        a {
+          text-decoration: none !important;
+          color: rgb(95,129,81);
+          font-weight: bolder;
+        }
+        img { 
+          max-height: 200px !important;
+        }
       }
-    }
 
-    img {
-      max-width: 100px;
-      height: auto;
-    }
-  }
+      @media (min-width: 768px) {
+        .hero-body {
+          padding-left: 18%;  
+          padding-right: 18%;
+          text-align: justify;
+        }
+
+        p {
+          padding-left: 7%;  
+          padding-right: 7%;
+          text-align: justify;
+        }
+
+        h1 {
+          margin: 0 !important;
+        }
+
+        h2 {
+          margin-top: 0;
+          padding-bottom: 1.5%;
+        }
+
+        h4 {
+          margin-top: 3%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-body {
+          padding: 0;
+        }
+
+        p {
+          text-align: left;
+        }
+
+        h1 {
+          margin-top: 10% !important;
+          font-size: 26px !important;
+        }
+
+        h2 {
+          margin-top: 0;
+          padding-top: 0; 
+          text-align: center !important;
+          font-size: 22px;
+        }
+      }
+
+      // 书籍展示部分样式
+      
+      #books {
+
+        @media (min-width: 768px) {
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        background-color: white;
+
+        h2 {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        .books-container {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .book {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 20px;
+        }
+
+        .book-image {
+          flex: 0 0 auto;
+          margin-right: 20px;
+        }
+
+        .book-details {
+          flex: 1 1 auto;
+          text-align: left;
+        
+        p {
+            font-size: 1em;
+            color: #666;
+            padding-bottom: 1em;
+          }
+        }
+
+        img {
+          max-width: 100px;
+          height: auto;
+        }
+      }
 
 }
 
