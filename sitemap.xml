@@ -18,20 +18,23 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://lin-mengwei.github.io/teaching</loc>
-  <lastmod>2024-06-07T15:17:47+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://lin-mengwei.github.io/popul-trans</loc>
   <lastmod>2024-06-07T15:17:47+00:00</lastmod>
   <priority>0.64</priority>
 </url>
+
 <url>
   <loc>https://lin-mengwei.github.io/region-public-econ-2023.html</loc>
   <lastmod>2024-06-07T15:17:47+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
+<!--
+<url>
+  <loc>https://lin-mengwei.github.io/teaching</loc>
+  <lastmod>2024-06-07T15:17:47+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+-->
 
 </urlset>
