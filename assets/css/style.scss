@@ -72,7 +72,7 @@ a.navbar-item.is-active {
 
     .image {
         
-        @media (min-width: 768px) { // 针对电脑
+        @media (min-aspect-ratio: 1/1) { // 针对电脑
             max-width: 20vmax;
             display: flex;
             justify-content: center;
@@ -83,7 +83,7 @@ a.navbar-item.is-active {
             }
         }
 
-        @media (max-width: 768px) { // 针对平板和手机
+        @media (max-aspect-ratio: 1/1) { // 针对平板和手机
             
             width: 100%;
             display: flex;
@@ -108,7 +108,7 @@ a.navbar-item.is-active {
     #biography {
 
         
-        @media (max-width: 768px) { // 针对平板和手机
+        @media (max-aspect-ratio: 1/1) { // 针对平板和手机
             padding: 0;
             margin: 3%;
         
@@ -118,7 +118,7 @@ a.navbar-item.is-active {
             }
         }
 
-        @media (min-width: 768px) {
+        @media (min-aspect-ratio: 1/1) {
             padding: 0;
             margin-left: 15%;
             margin-right: 15%;
@@ -133,13 +133,13 @@ a.navbar-item.is-active {
     }
 
     .button {
-        @media (min-width: 768px) {
+        @media (min-aspect-ratio: 1/1) {
             min-width: 25vmax;
             margin: 0;
             padding: 0;
         }
 
-        @media (max-width: 768px) { 
+        @media (max-aspect-ratio: 1/1) { 
             min-width: 30vmax;
             margin: 0;
             padding: 0;
@@ -213,7 +213,7 @@ a.navbar-item.is-active {
             box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
         }
 
-        @media (max-width: 768px) {
+        @media (max-aspect-ratio: 1/1) {
             transform: scale(1);
             margin-bottom: 5vmax !important;
 
@@ -279,7 +279,7 @@ a.navbar-item.is-active {
             box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
         }
 
-        @media (max-width: 768px) {
+        @media (max-aspect-ratio: 1/1) {
             transform: scale(1);
             margin-bottom: 5vmax !important;
 
@@ -321,7 +321,7 @@ a.navbar-item.is-active {
 #course {
     
     // 媒体查询：屏幕宽度大于或等于 768px 时（通常是平板和桌面设备）
-    @media (min-width: 768px) {
+    @media (min-aspect-ratio: 1/1) {
         .container  {
             padding-left: 10%;  
             padding-right: 10%;
@@ -339,7 +339,7 @@ a.navbar-item.is-active {
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-aspect-ratio: 1/1) {
         .hero-body {
           padding: 0;
         }
@@ -374,7 +374,7 @@ a.navbar-item.is-active {
         }
       }
 
-      @media (min-width: 768px) {
+      @media (min-aspect-ratio: 1/1) {
         .hero-body {
           padding-left: 18%;  
           padding-right: 18%;
@@ -401,7 +401,7 @@ a.navbar-item.is-active {
         }
       }
 
-      @media (max-width: 768px) {
+      @media (max-aspect-ratio: 1/1) {
         .hero-body {
           padding: 0;
         }
@@ -427,11 +427,11 @@ a.navbar-item.is-active {
       
       #books {
 
-        @media (min-width: 768px) {
+        @media (min-aspect-ratio: 1/1) {
             padding: 20px;
         }
 
-        @media (max-width: 768px) {
+        @media (max-aspect-ratio: 1/1) {
             padding-top: 20px;
             padding-bottom: 20px;
         }
@@ -600,7 +600,7 @@ a.navbar-item.is-active {
 }
 
 #post {
-    @media (min-width: 768px) {
+    @media (min-aspect-ratio: 1/1) {
         margin: auto 2.5vmax;
     }
     a {
@@ -636,7 +636,7 @@ a.navbar-item.is-active {
         img, iframe {
             max-width: calc(100% - 25vw);
             margin: 0.25rem auto;
-            @media (max-width: 768px) {
+            @media (max-aspect-ratio: 1/1) {
                 max-width: calc(100% - 5vw);
             }
         }
