@@ -39,7 +39,7 @@ I also view this endeavor as part of my own academic training, thus focusing mor
 
 ## Book Translation | 书籍翻译
 
-Translation has been my routine activity during long breaks since I became a certified translator in 2017. I aim to "sculpt the text" (my translation "philosophy"), but this is often hard to achieve. As a native Chinese speaker, so far I primarily translate from English to Chinese, but am open to Chinese-to-English opportunities. Specializing in book translations in the Social Sciences, my published works are in Economics & Education, aligning with my own academic interests.
+Translation has been my routine activity during long breaks since I became a certified translator in 2017. I aim to "sculpt the text" (my translation philosophy), but this is often hard to achieve. As a native Chinese speaker, so far I primarily translate from English to Chinese, but am open to Chinese-to-English opportunities. Specializing in book translations in the Social Sciences, my published works are in Economics & Education, aligning with my own academic interests.
 
 翻译是我休假时的常规活动，希望能够仔细“雕刻语言”、磨练心性，但其实总是很难做到。考虑自身语言背景，我目前主要进行英译汉，有机会也希望能够尝试汉译英。我主攻社会科学领域的书籍翻译，目前已出版的译作涵盖经济学和教育学，与自己的研究领域有所关联。
 
