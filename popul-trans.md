@@ -35,6 +35,8 @@ I also view this endeavor as part of my own academic training, thus focusing mor
 <br><i>Going to Vocational Education: School or Major? (CEC Post)</i>
 3. [本科留学：当地高考 vs 免试申请（香樟经济学术圈）](https://mp.weixin.qq.com/s/jbRhG3iHdpJMh2ftdR-f6w)
 <br><i>Studying Abroad: Local Entrance Exam vs. Exam-exempt Application (CEC Post)</i>
+4. [雇个学徒：劳动经济学中的企业数据（香樟经济学术圈）](https://mp.weixin.qq.com/s/jbRhG3iHdpJMh2ftdR-f6w)
+<br><i>Hiring an Apprentice: CBS data in Labor Economics (CEC Post)</i>
 
 <br>
 
