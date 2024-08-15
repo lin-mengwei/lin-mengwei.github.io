@@ -18,7 +18,7 @@ books:
 ---
 
 
-## Popularization | 学术科普
+## 1. Popularization | 学术科普
 
 By translating and popularizing cutting-edge research, I aim to bring interesting international perspectives to the Chinese academic audience. These articles will cover diverse institutional backgrounds and integrate discussions within China’s policy context.
 
@@ -40,7 +40,7 @@ I also view this endeavor as part of my own academic training, thus focusing mor
 
 <br>
 
-## Book Translation | 书籍翻译
+## 2. Book Translation | 书籍翻译
 
 Translation has been my routine activity during long breaks since I became a certified translator in 2017. I aim to "sculpt the text" (my translation philosophy), but this is often hard to achieve. As a native Chinese speaker, so far I primarily translate from English to Chinese, but am open to Chinese-to-English opportunities. Specializing in book translations in the Social Sciences, my published works are in Economics & Education, aligning with my own academic interests.
 
