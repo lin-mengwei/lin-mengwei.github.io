@@ -30,13 +30,13 @@ I also view this endeavor as part of my own academic training, thus focusing mor
 
 #### <b>List of Articles \| 科普文章列表：</b>
 1. [天赋有别：读书基因与家庭资源分配（香樟经济学术圈）](https://mp.weixin.qq.com/s/ijOw-ZXSsPvzTyYE0YKSKg) 
-<br><i> Innate Differences: Genes for Studying and Family Resource Allocation (CEC Post) </i>
+<br><i> Innate Differences: Genes for Studying and Family Resource Allocation (CEC Post No. 3133) </i>
 2. [上职校，选学校还是选专业？（香樟经济学术圈）](https://mp.weixin.qq.com/s/h49tsNgWx3D3M2D4P-f3Tg)
-<br><i>Going to Vocational Education: School or Major? (CEC Post)</i>
+<br><i>Going to Vocational Education: School or Major? (CEC Post No. 3196)</i>
 3. [本科留学：当地高考 vs 免试申请（香樟经济学术圈）](https://mp.weixin.qq.com/s/jbRhG3iHdpJMh2ftdR-f6w)
-<br><i>Studying Abroad: Local Entrance Exam vs. Exam-exempt Application (CEC Post)</i>
-4. [雇个学徒：劳动经济学中的企业数据（香樟经济学术圈）](https://mp.weixin.qq.com/s/jbRhG3iHdpJMh2ftdR-f6w)
-<br><i>Hiring an Apprentice: CBS data in Labor Economics (CEC Post)</i>
+<br><i>Studying Abroad: Local Entrance Exam vs. Exam-exempt Application (CEC Post No. 3235)</i>
+4. [雇个学徒：劳动经济学中的企业数据（香樟经济学术圈）](https://mp.weixin.qq.com/s/gvMxtWonaFHP-xiG64k24w)
+<br><i>Hiring an Apprentice: CBS data in Labor Economics (CEC Post No. 3277)</i>
 
 <br>
 
