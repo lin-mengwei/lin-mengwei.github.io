@@ -24,7 +24,7 @@ By translating and popularizing cutting-edge research, I aim to bring interestin
 
 我希望通过编译国际前沿研究，为国内关注经济学的读者带来有意思的国际视角。文章会尽量覆盖不同制度背景，并结合我国政策语境进行讨论。
 
-I also view this endeavor as part of my own academic training, thus focusing more on education economics (and applied micro). I select research from economists I am familiar with, and discuss with them to ensure a thorough understanding. This process helps me write in a more readable and accessible manner.
+I also view this endeavor as part of my own academic training, thus focusing more on education economics (and applied micro). I select research from economists I am familiar with, and discuss with them to ensure a thorough understanding. This helps me write readable and accessible articles.
 
 这个过程也是我自己精读、积累文献的学术训练，因此主要选取教育、劳动和应用微观的论文。 我会尽量挑选自己熟悉的经济学家的研究，在编译过程中与他们讨论，确保理解透彻，呈现出可读、易读的内容。
 
