@@ -38,7 +38,7 @@ I also view it as part of my own academic training, thus focusing more on educat
 4. [雇个学徒：劳动经济学中的企业数据（香樟经济学术圈）](https://mp.weixin.qq.com/s/gvMxtWonaFHP-xiG64k24w)
 <br><i>Hiring an Apprentice: CBS data in Labor Economics (CEC Post No. 3277)</i>
 5. [助学指导，改善就业潜力（香樟经济学术圈）](https://mp.weixin.qq.com/s/er2eT2C1MnSo19s3U5TsgQ)
-<br><i>Mentoring improves Employment Prospects (CEC Post No. 3303)</i>
+<br><i>Mentoring Improves Employment Prospects (CEC Post No. 3303)</i>
 
 <br>
 
