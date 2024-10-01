@@ -1,5 +1,5 @@
 ---
-title: Regional and Local Public Economics
+title: Regional and Local Public Economics (2024)
 post-image: "https://lin-mengwei.github.io/assets/images/PublicFinance.png"
 image-source:  
 layout: course
