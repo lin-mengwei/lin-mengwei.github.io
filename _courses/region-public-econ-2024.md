@@ -26,21 +26,21 @@ You can also find the [materials from last year](https://lin-mengwei.github.io/r
 There are **8 two-hour lectures** in my part,  **4 units**:
 
 <b>Theory 3: Intergovernmental Grants (4 lectures)</b> <br>
-	1. Intergovernmental grant and its functions (0404) [slides](https://campusvirtual.ub.edu/pluginfile.php/8118122/mod_resource/content/1/0404_intergovernmental_grants_I.pdf)<br>
-	2. Analyzing intergovernmental grants: modelling (0415) [slides](https://campusvirtual.ub.edu/pluginfile.php/8132330/mod_resource/content/3/0415_intergovernmental_grants_II.pdf)<br>
-	3. Effects of intergovernmental grants: theoretical implications (0418) [slides](https://campusvirtual.ub.edu/pluginfile.php/8137200/mod_resource/content/1/0418_intergovernmental_grants_III.pdf)<br>
-	4. Effects of intergovernmental grants: empiric + In-class unit exercise (0422) [slides](https://campusvirtual.ub.edu/pluginfile.php/8140050/mod_resource/content/1/0422_intergovernmental_grants_IV.pdf)
+	1. Intergovernmental grant and its functions (TBC)<br>
+	2. Analyzing intergovernmental grants: modelling (TBC) <br>
+	3. Effects of intergovernmental grants: theoretical implications (TBC)<br>
+	4. Effects of intergovernmental grants: empiric + In-class unit exercise (TBC)
 <br><br>
 
 <b>Application 1: International Cases and Hot Issues (2 out of 4 lectures)</b> <br>
 In this unit, I apply the framework built in the Theory parts to characterize fiscal decentralization in each country, and discuss country-specific issues related to fiscal decentralization. <br>
-	1. Fiscal Decentralization of China (+ Land Finance & SNG Debts)  <br>
-	2. Fiscal Decentralization of Germany (+ SNG Debts & Debt Brake) 
+	1. Fiscal Decentralization of China (+ Land Finance & SNG Debts)  (TBC)<br>
+	2. Fiscal Decentralization of Germany (+ SNG Debts & Debt Brake)  (TBC)
 <br><br>
 
 <b>Application 2: Decentralization Practice & Policy Evaluation (2 out of 3 lectures) </b><br>
-	1. Education under Fiscal Decentralization (Method: Ideal Experiments & Diff-in-Diff) (0513)<br> 
-	2. Fiscal Decentralization and Healthcare (Method: Diff-in-Diff) (0516)<br> 
+	1. Education under Fiscal Decentralization (Method: Ideal Experiments & Diff-in-Diff) (TBC)<br> 
+	2. Fiscal Decentralization and Healthcare (Method: Diff-in-Diff) (TBC)<br> 
 
 #### Notes
 
