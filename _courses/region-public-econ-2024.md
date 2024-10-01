@@ -10,7 +10,7 @@ semester: Spring 2024/25
 update_date: May 2024
 rating: To be released
 
-intro: Here you can find the information for Regional and Local Public Economics taught in Spring semester, 2024/25. It is a <b>third-year compulsory course</b> for undergraduate Economics majors at the University of Barcelona.
+intro: Here you can find the information for Regional and Local Public Economics taught in Spring semester, 2024/25. It is a <b>3rd-year compulsory course</b> for undergraduate Economics majors at the University of Barcelona.
 ---
 
 #### Introduction
