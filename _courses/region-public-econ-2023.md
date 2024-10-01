@@ -8,6 +8,7 @@ uni: University of Barcelona
 program: 6 ECTS, BA Economics 
 semester: Spring 2023/24
 update_date: May 2024
+rating: 9.4 (scale 1:10; 10 = best)
 
 intro: Here you can find the information for Regional and Local Public Economics taught in Spring semester, 2023/24. This is a <b>third-year compulsory course</b> for undergraduate Economics majors at the University of Barcelona.
 ---
