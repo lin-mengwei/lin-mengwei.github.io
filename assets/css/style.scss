@@ -104,6 +104,20 @@ a.navbar-item.is-active {
     p {
         text-align: justify;
     }
+    
+    ul {
+        list-style-position: inside; // 确保列表项的标记与文本对齐
+        margin-left: 0; // 移除默认的左边距
+        padding-left: 0; // 移除默认的内边距
+        text-align: justify; // 确保文字的对齐方式与正文一致
+
+        li {
+            margin-bottom: 0.5rem; // 为每个列表项增加适当的间距
+            line-height: 1.75; // 增加行高以提升可读性
+        }
+    }
+
+
 
     #biography {
 
