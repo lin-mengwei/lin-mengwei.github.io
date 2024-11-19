@@ -99,12 +99,15 @@ a.navbar-item.is-active {
 
     a {
         color: inherit;
+        target: "_blank";
+        text-decoration: underline;
+
     }
 
     p {
         text-align: justify;
     }
-    
+
     ul {
         list-style-position: inside; // 确保列表项的标记与文本对齐
         margin-left: 0; // 移除默认的左边距
