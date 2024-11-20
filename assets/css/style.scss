@@ -110,26 +110,51 @@ a.navbar-item.is-active {
     }
 
     ul {
-        list-style-type: none; /* 移除默认的圆点 */
-        padding:0 4rem ; /* 移除列表的默认内边距 */
-        margin: .5rem 0; /* 为列表上下添加适当的间距 */
-        text-align: justify;
+        @media (min-aspect-ratio: 1/1) {
+            
+            list-style-type: none; /* 移除默认的圆点 */
+            padding:0 4rem ; /* 移除列表的默认内边距 */
+            margin: .5rem 0; /* 为列表上下添加适当的间距 */
+            text-align: justify;
 
-        li {
-                margin-bottom: 0.5rem; /* 每个列表项的间距 */
-                line-height: 1; /* 提高行高，增加可读性 */
-                text-indent: -1.5rem; /* 使多行文字对齐 */
-                padding-left: 1.5rem; /* 为内容添加左侧缩进 */
-                position: relative; /* 为伪元素定位做准备 */
+            li {
+                    margin-bottom: 0.5rem; /* 每个列表项的间距 */
+                    line-height: 1; /* 提高行高，增加可读性 */
+                    text-indent: -1.5rem; /* 使多行文字对齐 */
+                    padding-left: 1.5rem; /* 为内容添加左侧缩进 */
+                    position: relative; /* 为伪元素定位做准备 */
+                }
+
+            li::before {
+                    content: "•"; /* 自定义列表项标记 */
+                    position: absolute;
+                    left: 0; /* 圆点位置 */
+                    color: #000; /* 圆点颜色 */
+                    font-size: 1rem; /* 圆点大小 */
+                }   
             }
+        @media (max-aspect-ratio: 1/1) {
+            
+            list-style-type: none; /* 移除默认的圆点 */
+            padding:0 0 ; /* 移除列表的默认内边距 */
+            margin: 3% 0; /* 为列表上下添加适当的间距 */
+            text-align: justify;
 
-        li::before {
-                content: "•"; /* 自定义列表项标记 */
-                position: absolute;
-                left: 0; /* 圆点位置 */
-                color: #000; /* 圆点颜色 */
-                font-size: 1rem; /* 圆点大小 */
-            }   
+            li {
+                    margin-bottom: 0.5rem; /* 每个列表项的间距 */
+                    line-height: 1.25; /* 提高行高，增加可读性 */
+                    text-indent: 1pt; /* 使多行文字对齐 */
+                    position: relative; /* 为伪元素定位做准备 */
+                }
+
+            li::before {
+                    content: "• "; /* 自定义列表项标记 */
+                    position: relative;
+                    left: 0; /* 圆点位置 */
+                    color: #000; /* 圆点颜色 */
+                    font-size: 1rem; /* 圆点大小 */
+                }   
+            }
         }   
     }
 
