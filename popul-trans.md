@@ -5,16 +5,16 @@ books:
     - title: "《经济学怎么了》，文汇出版社，2022年。 "
       image: "/assets/images/whatswrong.jpg"
       link: "https://book.douban.com/subject/36054568/"
-      description: "<b>From</b>: Skidelsky, Robert. <i>What’s Wrong with Economics?</i>. Yale University Press, 2020."
+      description: "<b>Translated From</b>: Skidelsky, Robert. <i>What’s Wrong with Economics?</i>. Yale University Press, 2020."
     - title: "《专家失灵：付费知识与意见市场》，中信出版集团，2023年。"
       image: "/assets/images/epflr.png"
       link: "https://book.douban.com/subject/36211902/"
-      description: "<b>From</b>: Koppl, Roger. <i>Expert Failure</i>. Cambridge University Press, 2018. <br> <b>Co-translator</b>: Haochi Chen | 与陈浩驰合译"
+      description: "<b>Translated From</b>: Koppl, Roger. <i>Expert Failure</i>. Cambridge University Press, 2018. <br> <b>Co-translator</b>: Haochi Chen | 与陈浩驰合译"
       
     - title: "《科学与工程实践：引导学生在探索中理解世界》，教育科学出版社，即将出版。"
       image: "/assets/images/practices.jpg"
       link: "https://my.nsta.org/resource/105619/helping-students-make-sense-of-the-world-using-next-generation-science-and-engine"
-      description: "<b>From</b>: Schwarz, Christina V., Cynthia Passmore, and Brian J. Reiser. <i>Helping Students Make Sense of the World Using Next Generation Science and Engineering Practices</i>. NSTA Press, 2017. "
+      description: "<b>Translated From</b>: Schwarz, Christina V., Cynthia Passmore, and Brian J. Reiser. <i>Helping Students Make Sense of the World Using Next Generation Science and Engineering Practices</i>. NSTA Press, 2017. "
 ---
 
 
@@ -48,5 +48,5 @@ Translation has been my routine activity during long breaks since I became a cer
 
 翻译是我休假时的常规活动。考虑自身语言背景，我目前主要进行英译汉，有机会也希望尝试汉译英。我主攻社会科学领域书籍翻译，目前已出版译作涵盖经济学和教育学，与自己的研究领域有所关联。
 
-#### <b>List of Translations \| 译作：</b>
+#### <b>List of Publications \| 译作：</b>
 
