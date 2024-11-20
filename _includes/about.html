@@ -62,6 +62,12 @@
                           </a>
                           {% endunless %}
 
+                          {% unless site.bluesky_username == %}
+                          <a href="https://bsky.app/profile/screen_name={{site.bluesky_username}}.bsky.social" target="_blank" class="has-text-black social-icon">
+                            <i class="fa-brands fa-bluesky"></i>
+                          </a>
+                          {% endunless %}
+
                           {% unless site.twitter_username == %}
                           <a href="https://twitter.com/intent/user?screen_name={{site.twitter_username}}" target="_blank" class="has-text-black social-icon">
                             <i class="fab fa-twitter"></i>
