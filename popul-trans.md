@@ -9,12 +9,17 @@ books:
     - title: "《专家失灵：付费知识与意见市场》，中信出版集团，2023年。"
       image: "/assets/images/epflr.png"
       link: "https://book.douban.com/subject/36211902/"
-      description: "<b>Translated From</b>: Koppl, Roger. <i>Expert Failure</i>. Cambridge University Press, 2018. <br> <b>Co-translator</b>: Haochi Chen | 与陈浩驰合译"
+      description: "<b>Translated From</b>: Koppl, Roger. <i>Expert Failure</i>. Cambridge University Press, 2018. <br> <b>Co-translator</b>: Haochi CHEN | 与陈浩驰合译"
       
-    - title: "《科学与工程实践：引导学生在探索中理解世界》，教育科学出版社，即将出版。"
+    - title: "《科学与工程实践：引导学生在探索中理解世界》，教育科学出版社，2025年。"
       image: "/assets/images/practices.jpg"
       link: "https://my.nsta.org/resource/105619/helping-students-make-sense-of-the-world-using-next-generation-science-and-engine"
       description: "<b>Translated From</b>: Schwarz, Christina V., Cynthia Passmore, and Brian J. Reiser. <i>Helping Students Make Sense of the World Using Next Generation Science and Engineering Practices</i>. NSTA Press, 2017. "
+
+    - title: "《通识笔译：从读写到翻译》，清华大学出版社，即将出版。 <br> <strong style='font-weight: normal'><i>Translation Basics: Reading, Writing & Translation</i>, Tsinghua Univeisty Press, Forthcoming 2025</strong>"
+      image: "/assets/images/cover.png"
+      link: "popul-trans#2-book-translation--书籍翻译"
+      description: "Our book offers an introduction to translation for Chinese-English proficient professionals outside translation-related fields, helping them develop essential translation skills while integrating their expertise.  <br> <b>Co-author</b>: Ming (Cynthia) LI"
 ---
 
 
