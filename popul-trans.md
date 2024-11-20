@@ -53,5 +53,5 @@ Translation has been my routine activity during long breaks since I became a cer
 
 翻译是我休假时的常规活动。考虑自身语言背景，我目前主要进行英译汉，有机会也希望尝试汉译英。我主攻社会科学领域书籍翻译，目前已出版译作涵盖经济学和教育学，与自己的研究领域有所关联。
 
-#### <b>List of Publications \| 译作：</b>
+#### <b>List of Publications \| 作品：</b>
 
