@@ -19,7 +19,7 @@ books:
     - title: "《通识笔译：从读写到翻译》，清华大学出版社，即将出版。 <br> <strong style='font-weight: normal'><i>Translation Basics: Reading, Writing & Translation</i>, Tsinghua Univeisty Press, Forthcoming 2025</strong>"
       image: "/assets/images/cover.png"
       link: "popul-trans#2-book-translation--书籍翻译"
-      description: "Our book offers an introduction to translation for Chinese-English proficient professionals outside translation-related fields, helping them develop essential translation skills while integrating their expertise.  <br> <b>Co-author</b>: Ming (Cynthia) LI"
+      description: "<b>Co-author</b>: Ming (Cynthia) LI <br> <b>Description</b>: Our book offers an introduction to translation for Chinese-English proficient professionals outside translation-related fields, helping them develop essential translation skills while integrating their expertise.  "
 ---
 
 
