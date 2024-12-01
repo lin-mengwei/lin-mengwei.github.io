@@ -19,7 +19,7 @@ books:
     - title: "《通识笔译：从读写到翻译》，清华大学出版社，即将出版。 <br> <strong style='font-weight: normal'><i>Translation Basics: Reading, Writing & Translation</i>, Tsinghua Univeisty Press, Forthcoming 2025</strong>"
       image: "/assets/images/cover.png"
       link: "popul-trans#2-book-translation--书籍翻译"
-      description: "<b>Co-author</b>: <a href='https://sfl.szu.edu.cn/info/1232/4264.htm' style='color: inherit; font-weight: normal; text-decoration:underline' target='_blank'>Ming (Cynthia) LI</a> <br> <b>Description</b>: Our book offers an introduction to translation for Chinese-English proficient professionals outside translation-related fields, helping them develop essential translation skills while integrating their expertise.  "
+      description: "<b>Co-author</b>: <a href='https://sfl.szu.edu.cn/info/1232/4264.htm' style='color: inherit; font-weight: normal; text-decoration:underline !important' target='_blank'>Ming (Cynthia) LI</a> <br> <b>Description</b>: Our book offers an introduction to translation for Chinese-English proficient professionals outside translation-related fields, helping them develop essential translation skills while integrating their expertise.  "
 ---
 
 
@@ -44,8 +44,8 @@ I also view it as part of my own academic training, thus focusing more on educat
 <br><i>Hiring an Apprentice: CBS data in Labor Economics (CEC Post No. 3277)</i>
 5. [助学指导，改善就业潜力（香樟经济学术圈）](https://mp.weixin.qq.com/s/er2eT2C1MnSo19s3U5TsgQ)
 <br><i>Mentoring Improves Employment Prospects (CEC Post No. 3303)</i>
-6. [原生家庭印记：性格与态度的传承（香樟经济学术圈）](https://mp.weixin.qq.com/s/) | 与<a href='https://www.sv.uio.no/psi/english/people/academic/qiyuanp/index.html' style='color: inherit; font-weight: normal; text-decoration: underline;' target='_blank'>彭启远</a>合作
-<br><i>Family Imprints: Transmission of Personality and Attitudes (CEC Post No. 3303)</i>, with <a href='https://www.sv.uio.no/psi/english/people/academic/qiyuanp/index.html' style='color: inherit; font-weight: normal; text-decoration: underline;' target='_blank'>Qiyuan PENG</a>
+6. [原生家庭印记：性格与态度的传承（香樟经济学术圈）](https://mp.weixin.qq.com/s/) | 与<a href='https://www.sv.uio.no/psi/english/people/academic/qiyuanp/index.html' style='color: inherit; font-weight: normal; text-decoration: underline !important;' target='_blank'>彭启远</a>合作
+<br><i>Family Imprints: Transmission of Personality and Attitudes (CEC Post No. 3303)</i>, with <a href='https://www.sv.uio.no/psi/english/people/academic/qiyuanp/index.html' style='color: inherit; font-weight: normal; text-decoration: underline !important;' target='_blank'>Qiyuan PENG</a>
 <br>
 
 ## 2. Book Translation | 书籍翻译
