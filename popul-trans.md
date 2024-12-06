@@ -16,16 +16,12 @@ books:
       link: "https://my.nsta.org/resource/105619/helping-students-make-sense-of-the-world-using-next-generation-science-and-engine"
       description: "<b>Translated From</b>: Schwarz, Christina V., Cynthia Passmore, and Brian J. Reiser. <i>Helping Students Make Sense of the World Using Next Generation Science and Engineering Practices</i>. NSTA Press, 2017. "
 
-    - title: "《通识笔译：从读写到翻译》，清华大学出版社，即将出版。 <br> <strong style='font-weight: normal'><i>Translation Basics: Reading, Writing & Translation</i>, Tsinghua Univeisty Press, Forthcoming 2025</strong>"
-      image: "/assets/images/cover.png"
-      link: "popul-trans#2-book-translation--书籍翻译"
-      description: "<b>Co-author</b>: Ming (Cynthia) LI | 与<a href='https://sfl.szu.edu.cn/info/1232/4264.htm' style='color: inherit; font-weight: normal; text-decoration:underline !important' target='_blank'>李明</a>合著 <br> <b>Description</b>: Our book offers an introduction to translation for Chinese-English proficient professionals outside translation-related fields, helping them develop essential translation skills while integrating their expertise.  "
 ---
 
 
 ## 1. Popularization | 学术科普
 
-By translating and summarizing cutting-edge research, I aim to help interesting international studies reach the Chinese audience and bridge the English and Chinese speaking academia. My articles will cover diverse institutional backgrounds and integrate discussions within China’s policy context.
+By translating and summarizing cutting-edge research, I aim to help interesting international studies reach the Chinese audience and bridge the English- and Chinese-speaking academia. My articles will cover diverse institutional backgrounds and integrate discussions within China’s policy context.
 
 我希望通过编译国际前沿研究，为国内关注经济学的读者带来有意思的国际视角。文章会尽量覆盖不同制度背景，并结合我国政策语境进行讨论。
 
