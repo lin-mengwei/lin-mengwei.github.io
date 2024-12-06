@@ -46,7 +46,7 @@ This is also part of my own academic training, thus focusing more on education, 
 
 ## 2. Book Translation | 书籍翻译
 
-Translation has been my routine activity during long breaks since I became a certified translator in 2017. I aim to "sculpt the text" (my translation philosophy), but this is often hard to achieve. Specializing in book translations in the Social Sciences, my published works are in Economics & Education, aligning with my own academic interests.
+Translation has been my routine activity during long breaks since I became a certified translator in 2017. I aim to "sculpt the text" (my translation philosophy), although it is often hard to achieve. Specializing in book translations in the Social Sciences, my published works are in Economics & Education, aligning with my own academic interests.
 
 翻译是我休假时的常规活动。考虑自身语言背景，我目前主要进行英译汉，有机会也希望尝试汉译英。我主攻社会科学领域书籍翻译，目前已出版译作涵盖经济学和教育学，与自己的研究领域有所关联。
 
