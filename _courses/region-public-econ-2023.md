@@ -1,5 +1,5 @@
 ---
-title: Regional and Local Public Economics (2023)
+title: Regional and Local Public Economics (Spring 2024)
 post-image: "https://lin-mengwei.github.io/assets/images/PublicFinance.png"
 image-source:  
 layout: course
@@ -10,7 +10,7 @@ semester: Spring 2023/24
 update_date: May 2024
 rating: 9.4 (Scale 1 - 10; 10 = best)
 
-intro: Here you can find the information for Regional and Local Public Economics taught in Spring semester, 2023/24. It is a <b>3rd-year compulsory course</b> for undergraduate Economics majors at the University of Barcelona.
+intro: This is a <b>3rd-year compulsory course</b> for undergraduate Economics majors, blending economic theory, quantitative evidence, and international cases to analyze issues in local public finance.
 ---
 
 #### Introduction
