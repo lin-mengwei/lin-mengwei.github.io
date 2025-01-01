@@ -10,7 +10,7 @@ semester: Spring 2023/24
 update_date: May 2024
 rating: 9.4 (Scale 1 - 10; 10 = best)
 
-intro: This is a <b>3rd-year compulsory course</b> for undergraduate Economics majors, blending economic theory, quantitative evidence, and international cases to analyze issues in local public finance.
+intro: This is a <b>3rd-year compulsory course</b> for undergraduate Economics majors, blending economic theory, quantitative evidence, and international cases to analyze local public finance.
 ---
 
 #### Introduction
@@ -49,9 +49,9 @@ In this unit, I apply the framework built in the Theory parts to characterize fi
 <br><br>
 
 <b>Application 2: Decentralization Practice & Policy Evaluation (3 lectures) </b><br>
-	1. Education under Fiscal Decentralization (Method: Ideal Experiments & Diff-in-Diff) (0513)<br> 
+	1. Education under Fiscal Decentralization (Method: Diff-in-Diff) (0513)<br> 
 	2. Fiscal Decentralization and Healthcare (Method: Diff-in-Diff) (0516)<br> 
-	3. Decentralization and Transportation + Economic Growth (Method: IV, Causation vs Correlation)(0523)<br> 
+	3. Decentralization and Transportation + Economic Growth (Method: IV)(0523)<br> 
 
 #### Notes
 
