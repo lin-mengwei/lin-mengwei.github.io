@@ -25,8 +25,7 @@ books:
 
 ## 1. Popularization | 学术科普
 
-By translating and summarizing cutting-edge research, I aim to help bring interesting studies to reach the Chinese audience. My articles will cover diverse institutional backgrounds and discuss them with China’s policy context.
-
+By summarizing and translating cutting-edge research, I aim to help bring interesting studies in economics to reach the Chinese audience. 
 我希望通过编译国际前沿研究，为国内关注经济学的读者带来有意思的国际视角。文章会尽量覆盖不同制度背景，并结合我国政策语境进行讨论。
 
 This is also part of my own academic training, thus focusing more on education, labor, and applied micro. I select research from economists I am familiar with, and discuss with them to ensure a thorough understanding, so as to write readable and accessible articles.
