@@ -48,6 +48,8 @@ This is also part of my own academic training, thus focusing more on education, 
 <br><i>Family Imprints: Transmission of Personality and Attitudes (CEC Post No. 3379)</i>, with <a href='https://www.sv.uio.no/psi/english/people/academic/qiyuanp/index.html' style='color: inherit; font-weight: normal; text-decoration: underline !important;' target='_blank'>Qiyuan PENG</a>
 7. [促就业政策评估：多种DID串起故事（香樟经济学术圈）](https://mp.weixin.qq.com/s/P5G8q01H2JlTV-gznVwWjw) | 与<a href='https://www.linkedin.com/in/taoyi-sun/' style='color: inherit; font-weight: normal; text-decoration: underline !important;' target='_blank'>孙韬怡</a>合作
 <br><i>Employment Policy Evaluation: Weaving a Story with Various DID Approaches (CEC Post No. 3414)</i>, with <a href='https://www.linkedin.com/in/taoyi-sun/' style='color: inherit; font-weight: normal; text-decoration: underline !important;' target='_blank'>Taoyi SUN</a>
+8. [现金补贴是“送子观音”吗？（香樟经济学术圈）](https://mp.weixin.qq.com/s/) | 与<a href='https://www.linkedin.com/in/taoyi-sun/' style='color: inherit; font-weight: normal; text-decoration: underline !important;' target='_blank'>郑薇</a>合作
+<br><i>Can Cash Transfer Incentivize Births? (CEC Post No. 3561)</i>, with <a href='https://weizhengecon.wixsite.com/website' style='color: inherit; font-weight: normal; text-decoration: underline !important;' target='_blank'>Wei ZHENG</a>
 <br>
 
 ## 2. Book Translation | 书籍翻译
