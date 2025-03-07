@@ -14,7 +14,7 @@ intro: This is a <b>3rd-year compulsory course</b> for undergraduate Economics m
 ---
 
 #### Introduction
-*Regional and Local Public Economics* builds on previous courses (Public Sector Economics, Public Finance, Tax System), and focuses on the discussion of the <b>fiscal relationships between central and regional governments</b> and the <b>centralization versus decentralization</b> of fiscal practices. In this course, I try guide students to analyze the behavior of governments as economic agents and the outcomes of public policies through the lens of decentralized public finance, rather than describing the system of taxation and expenditures itself.
+*Regional and Local Public Economics* builds on previous courses (Public Sector Economics, Public Finance, Tax System), and focuses on the discussion of the <b>fiscal relationships between central and regional governments</b> and the <b>centralization versus decentralization</b> of fiscal practices. In this course, I try guide students to analyze the behavior of governments as economic agents and the outcomes of public policies through the lens of decentralized public finance.
 
 Here you can find the information for <b>part II</b> (decentralization of govt expenditure & inter-govt grants) and <b>part III</b> (internatioanl comparison & policy analysis) of it. Part I (decentralization of taxation) is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home).
 
@@ -41,17 +41,17 @@ There are **16 two-hour lectures** in my part, which I structured to be **4 unit
 In this unit, I apply the framework built in the Theory parts to characterize fiscal decentralization in each country, and discuss country-specific issues related to fiscal decentralization. <br>
 	1. Fiscal Decentralization of Spain (+ Taxation and Mobility) (0425) [slides 1](https://campusvirtual.ub.edu/pluginfile.php/8144164/mod_resource/content/1/0425_Case_1_Spain.pdf); [slides 2](https://campusvirtual.ub.edu/pluginfile.php/8147763/mod_resource/content/1/0429_Case_1_Spain_Dirk_paper.pdf)<br>
 	2. Fiscal Decentralization of Canada (+ Equalizing Grants) (0429) [slides](https://campusvirtual.ub.edu/pluginfile.php/8147765/mod_resource/content/1/0429_Case_2_Canada.pdf)<br>
-	3. Fiscal Decentralization of China (+ Land Finance & SNG Debts) (0506) <br>
-	4. Fiscal Decentralization of Germany (+ SNG Debts & Debt Brake) (0509)
+	3. Fiscal Decentralization of China (+ Land Finance & SNG Debts) (0506) slides on VC <br>
+	4. Fiscal Decentralization of Germany (+ SNG Debts & Debt Brake) (0509) slides on VC
 <br><br>
 
 <b>Continuous Assessment: midterm exam + discussion (1 lecture)</b> (0502, 0513)
 <br><br>
 
-<b>Application 2: Decentralization Practice & Policy Evaluation (3 lectures) </b><br>
-	1. Education under Fiscal Decentralization (Method: Diff-in-Diff) (0513)<br> 
-	2. Fiscal Decentralization and Healthcare (Method: Diff-in-Diff) (0516)<br> 
-	3. Decentralization and Transportation + Economic Growth (Method: IV)(0523)<br> 
+<b>Application 2: Decentralization Practice & Policy Evaluation (3 lectures) slides on VC </b><br>
+	1. Education under Fiscal Decentralization (Method: Diff-in-Diff) (0513) slides on VC<br> 
+	2. Fiscal Decentralization and Healthcare (Method: Diff-in-Diff) (0516) slides on VC<br> 
+	3. Decentralization and Transportation + Economic Growth (Method: IV)(0523) slides on VC<br> 
 
 #### Notes
 
