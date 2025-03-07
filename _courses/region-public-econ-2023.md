@@ -48,10 +48,10 @@ In this unit, I apply the framework built in the Theory parts to characterize fi
 <b>Continuous Assessment: midterm exam + discussion (1 lecture)</b> (0502, 0513)
 <br><br>
 
-<b>Application 2: Decentralization Practice & Policy Evaluation (3 lectures) slides on VC </b><br>
-	1. Education under Fiscal Decentralization (Method: Diff-in-Diff) (0513) slides on VC<br> 
-	2. Fiscal Decentralization and Healthcare (Method: Diff-in-Diff) (0516) slides on VC<br> 
-	3. Decentralization and Transportation + Economic Growth (Method: IV)(0523) slides on VC<br> 
+<b>Application 2: Decentralization Practice & Policy Evaluation (3 lectures) </b> slides on VC<br>
+	1. Education under Fiscal Decentralization (Method: Diff-in-Diff) (0513) <br> 
+	2. Fiscal Decentralization and Healthcare (Method: Diff-in-Diff) (0516) <br> 
+	3. Decentralization and Transportation + Economic Growth (Method: IV)(0523) <br> 
 
 #### Notes
 
