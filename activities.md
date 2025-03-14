@@ -17,7 +17,7 @@ Below are some selected activities for which I take the main organizational resp
   </figure>
 </center> <br>
 
-This is a program funded under a [EDUB](https://web.ub.edu/en/web/escola-doctorat/) project for which I am the grant recipient, running during academic years 2024/25 and 2025/26. The design and organiztaion of the program  my PhD colleagues and the admin staff at the [UBSE](https://www.ub.edu/school-economics/). (See: [UBSE News on the Launch of BESTEPS](https://www.ub.edu/school-economics/kick-off-of-the-besteps-with-antonio-cabrales/))
+This is a program funded through a [EDUB](https://web.ub.edu/en/web/escola-doctorat/) project for which I am the grant recipient, running during academic years 2024/25 and 2025/26. The design and organiztaion of the program  my PhD colleagues and the admin staff at the [UBSE](https://www.ub.edu/school-economics/). (See: [UBSE News on the Launch of BESTEPS](https://www.ub.edu/school-economics/kick-off-of-the-besteps-with-antonio-cabrales/))
 
 BESTEPS offers PhD students comprehensive guidance and expertise on every key stage of developing a research project. By offering systematic guidance from experienced researchers, the program empowers participants to take the “best steps” toward conducting research efficiently.
 
