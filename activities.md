@@ -42,7 +42,7 @@ BESTEPS consists of 7 Lectures taught by renowned scholars:
 </center>
 <br>
 
-The PhD Ideas Coffees is a regular event series at the UB School of Economics, which I initiated with other colleagues in 2024. It has received invaluable support from the PhD in Economics Program. I have been in charge of the series in acadmic years 2023/24 and 2024/25.
+The PhD Ideas Coffees is an innovative event series for junior Economics researchers, which I initiated with other colleagues at UBSE in 2024. It has received invaluable support from the PhD in Economics Program. I have been in charge of the series in acadmic years 2023/24 and 2024/25.
 
 We host biweekly meetings to talk about newly formed immature ideas and receive feedback from our peers in a friendly environment. The main objectives are to provide PhD students with informal feedback, share insights on common research challenges, understand fellow students' research and interests, and foster collaboration within the Economics PhD program.
 
