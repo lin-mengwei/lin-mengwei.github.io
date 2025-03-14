@@ -49,3 +49,6 @@ We host biweekly meetings to talk about newly formed immature ideas and receive 
 
 <b>3. Applied Econometric Methods Reading Group </b> (In Preparation)
 
+The reading group meets once a month, with one member sharing a new methodological advancement in applied economics. We aim to cover newly-developed methods in causal inference that are not yet commonly taught in the standard graduate-level cirriculum of applied econometrics. Topics include:
+  - Shift-share Instruments
+  - Staggered DID with Continuous Treatments
