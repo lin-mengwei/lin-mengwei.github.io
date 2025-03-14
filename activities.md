@@ -19,7 +19,7 @@ Below are some selected activities for which I take the main organizational resp
 
 This is a program funded through a [EDUB](https://web.ub.edu/en/web/escola-doctorat/) project for which I am the grant recipient, running during academic years 2024/25 and 2025/26. The design and organiztaion of the program is a joint effort with my PhD colleagues and the [UBSE](https://www.ub.edu/school-economics/) staff. (See: [UBSE News on the Launch of BESTEPS](https://www.ub.edu/school-economics/kick-off-of-the-besteps-with-antonio-cabrales/))
 
-BESTEPS provides PhD students with comprehensive guidance at every key stage of developing a research project. Through expert-led lectures, the program empowers participants to take the "best steps" toward conducting rigorous research efficiently.
+BESTEPS provides PhD students with comprehensive guidance for <b>key stages of a research project</b>. Through expert-led lectures, the program empowers participants to take the "best steps" toward conducting rigorous research efficiently.
 
 BESTEPS consists of 7 Lectures taught by renowned scholars:
   - Opening Lecture: [Workflows of Economics Research](https://www.linkedin.com/feed/update/urn:li:activity:7295739310534717440/) (Lecturer: Prof. Antonio Cabrales)
