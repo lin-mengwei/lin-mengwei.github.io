@@ -23,12 +23,12 @@ BESTEPS offers PhD students comprehensive guidance and expertise on every key st
 
 BESTEPS consists of 7 Lectures taught by renowned scholars:
   - Opening Lecture: [Workflows of Economics Research](https://www.linkedin.com/feed/update/urn:li:activity:7295739310534717440/) (Lecturer: Prof. Antonio Cabrales)
-  - Lecture 1: [Starting a Feasible Project: Ideas, Literature, Exploratory Analysis]() (Lecturer: Prof. Libertad Gonzalez)
-  - Lecture 2: [Doing Replicable and Organized Research]() (Lecturer: TBD)
-  - Lecture 3: [Visualization: Making Research Vivid]() (Lecturer: Prof. Dirk Foremny)
-  - Lecture 4: [Effective Communication 1: Presentations, Posters and Elevator Pitches]() (Lecturer: TBD)
-  - Lecture 5: [Effective Communication 2: Writing abstracts, Introduction and Conclusions]() (Lecturer: TBD)
-  - Closing Lecture: [Publication Experience Talk] (Lecturer: TBD)
+  - Lecture 1: [Starting a Feasible Project: Ideas, Literature, Exploratory Analysis](https://lin-mengwei.github.io/activities) (Lecturer: Prof. Libertad Gonzalez)
+  - Lecture 2: [Doing Replicable and Organized Research](https://lin-mengwei.github.io/activities) (Lecturer: TBD)
+  - Lecture 3: [Visualization: Making Research Vivid](https://lin-mengwei.github.io/activities) (Lecturer: Prof. Dirk Foremny)
+  - Lecture 4: [Effective Communication 1: Presentations, Posters and Elevator Pitches](https://lin-mengwei.github.io/activities) (Lecturer: TBD)
+  - Lecture 5: [Effective Communication 2: Writing abstracts, Introduction and Conclusions](https://lin-mengwei.github.io/activities) (Lecturer: TBD)
+  - Closing Lecture: [Publication Experience Talk](https://lin-mengwei.github.io/activities) (Lecturer: TBD)
 
 
 
