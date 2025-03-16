@@ -3,7 +3,7 @@ title: Activities
 layout: activities
 ---
 
-I initiate and organize academic activities with the goal of creating shared value and benefiting the community.
+I initiate and organize academic activities with the goal of creating shared value for the community.
 
 Below are some selected activities I am proud of. If you’re interested in organizing similar events, feel free to reach out—I’d be happy to share my experience!
 
@@ -17,9 +17,9 @@ Below are some selected activities I am proud of. If you’re interested in orga
   </figure>
 </center> <br>
 
-BESTEPS provides PhD students with comprehensive guidance for <b>key stages of a research project</b>. Through expert-led lectures, the program empowers participants to take the "best steps" toward conducting rigorous research efficiently.
+BESTEPS provides PhD students with comprehensive guidance for <b>key stages of a research project</b>. Through expert-led lectures, the program empowers participants to take the "best steps" toward conducting rigorous research efficiently. (See: [UBSE News on the Launch of BESTEPS](https://www.ub.edu/school-economics/kick-off-of-the-besteps-with-antonio-cabrales/){:target="_blank"})
 
-This is a program supported by a [EDUB-funded project](https://web.ub.edu/en/web/escola-doctorat/){:target="_blank"} for which I am the grant recipient, running during academic years 2024/25 and 2025/26. The design and organiztaion of the program is a joint effort with my PhD colleagues and the [UBSE](https://www.ub.edu/school-economics/){:target="_blank"} staff. (See: [UBSE News on the Launch of BESTEPS](https://www.ub.edu/school-economics/kick-off-of-the-besteps-with-antonio-cabrales/){:target="_blank"})
+This is a program supported by a [EDUB-funded project](https://web.ub.edu/en/web/escola-doctorat/){:target="_blank"} for which I am the grant recipient, running during academic years 2024/25 and 2025/26. The design and organiztaion of the program is a joint effort with my PhD colleagues and the [UBSE](https://www.ub.edu/school-economics/){:target="_blank"} staff. 
 
 BESTEPS consists of 7 Lectures taught by renowned scholars:
   - Opening Lecture: [Workflows of Economics Research](https://www.linkedin.com/feed/update/urn:li:activity:7295739310534717440/){:target="_blank"} (Lecturer: Prof. Antonio Cabrales)
@@ -42,9 +42,9 @@ BESTEPS consists of 7 Lectures taught by renowned scholars:
 </center>
 <br>
 
-The Ideas Coffees are biweekly meetings to talk about <b>newly formed immature ideas</b> and receive feedback from our peers in a safe and friendly environment. The main objectives are to receive feedback before staring a project, understand fellow students' research and interests, and foster collaboration within the Economics PhD program. We also host occasional special sessions (e.g., sharing information of datasets).
+The Ideas Coffees are biweekly meetings to talk about <b>newly formed immature ideas</b> and receive feedback from our peers in a safe and friendly environment. The main objectives are to receive feedback before staring a project, understand fellow students' research and interests, and foster collaboration within the Economics PhD program. We also host occasional special sessions (e.g., sharing information of datasets). (See: [Our event post, Dec. 2024](https://www.linkedin.com/posts/universitat-de-barcelona-school-of-economics_yesterday-we-concluded-the-final-session-activity-7275801743379046401-EGbN/){:target="_blank"})
 
-This is an innovative event series for junior Economics researchers at [UBSE](https://www.ub.edu/school-economics/){:target="_blank"}, which I initiated with IEB PhD colleagues in 2024. It has received invaluable support from the PhD in Economics Program. I have been in charge of the series in acadmic years 2023/24 and 2024/25. (See: [Our event post, Dec. 2024](https://www.linkedin.com/posts/universitat-de-barcelona-school-of-economics_yesterday-we-concluded-the-final-session-activity-7275801743379046401-EGbN/){:target="_blank"})
+This is an innovative event series for junior Economics researchers at [UBSE](https://www.ub.edu/school-economics/){:target="_blank"}, which I initiated with IEB PhD colleagues in 2024. It has received invaluable support from the PhD in Economics Program. I have been in charge of the series in acadmic years 2023/24 and 2024/25. 
 
 
 <b>3. Applied Econometric Methods Reading Group </b> (In Preparation)
