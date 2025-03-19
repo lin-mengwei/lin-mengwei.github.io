@@ -34,7 +34,7 @@ Below are some selected activities I am proud of. If you’re interested in orga
     <li><b>Opening Lecture:</b> <a href="https://www.linkedin.com/feed/update/urn:li:activity:7295739310534717440/" target="_blank">Workflows of Economics Research</a> (Prof. Antonio Cabrales)</li>
     <li><b>Lecture 1:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Starting a Feasible Project: Ideas, Literature, Exploratory Analysis</a> (Prof. Libertad Gonzalez)</li>
     <li><b>Lecture 2:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Doing Organized and Replicable Research</a> (TBD)</li>
-    <li><b>Lecture 3:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Making Research Vivid: Visualization Practices</a> (Prof. Dirk Foremny & Data Journalist TBD)</li>
+    <li><b>Lecture 3:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Making Research Vivid: Visualization Practices</a> (Prof. Dirk Foremny & TBD)</li>
     <li><b>Lecture 4:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Communicating Research 1: Presentations, Posters and Elevator Pitches</a> (TBD)</li>
     <li><b>Lecture 5:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Communicating Research 2: Abstract, Introduction and Conclusion</a> (TBD)</li>
     <li><b>Closing Lecture:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Publication Experiences: Mindset and Strategy</a> (TBD)</li>
@@ -66,11 +66,19 @@ Below are some selected activities I am proud of. If you’re interested in orga
 
 <br>
 <details>
-  <summary><b>3. Applied Econometric Methods Reading Group</b> (In Preparation)</summary>
+  <summary>
+    <b>3. Job Market Preperation Process Improvement Plan</b> 
+  </summary>
+    <p> The plan aims to better prepare PhD program candidates for the job market by offering a comprehensive set of activities, including information sessions, planning meetings, package tutoring, mock interviews, mock job market talks. The proposal of this plan was development with the invaluable support and advice from <a href="https://mariebeigelman.github.io/" target="_blank">Marie Beigelman</a> and <a href="https://abhinavkhemka.com" target="_blank">Abhinav Khemka</a>. It was approved by th Academic Committee and has been implemented since the academic year 2024/25.</p>
+</details>
 
-  <p>The reading group meets once a month, with one member sharing a new methodological advancement in applied economics. We aim to cover <b>newly-developed causal inference methods</b> that are not yet commonly taught in a standard graduate-level course of applied econometrics.</p>
+<br>
+<details>
+  <summary><b>4. Applied Econometric Methods Reading Group</b></summary>
 
-  <p><b>Topics in 2025 include:</b></p>
+  <p>The reading group meets once a month, with one member sharing a new methodological advancement in applied economics. We aim to cover <b>newly-developed causal inference methods</b> that are not yet commonly taught in a standard graduate-level course of applied econometrics. I work with <a href="https://ieb.ub.edu/en/researcher/blanco-pineiro-sergio/" target="_blank">Sergio Blanco</a>, the coordinator of the group, and others in planning and organizing the activity.</p>
+
+  <p><b>Topics in 2025 (TBD) include:</b></p>
   <ul>
     <li>Shift-share & Recentered Instruments</li>
     <li>Staggered DID with Continuous Treatments</li>
