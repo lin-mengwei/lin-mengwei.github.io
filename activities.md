@@ -27,7 +27,7 @@ Below are some selected activities I am proud of. If you’re interested in orga
 
   <p>BESTEPS provides PhD students with comprehensive guidance for <b>key stages of a research project</b>. Through expert-led lectures, the program empowers participants to take the "best steps" toward conducting rigorous research efficiently. (<a href="https://www.ub.edu/school-economics/kick-off-of-the-besteps-with-antonio-cabrales/" target="_blank">UBSE News on the Launch of BESTEPS</a>)</p>
 
-  <p>This is a program supported by a <a href="https://web.ub.edu/en/web/escola-doctorat/" target="_blank">EDUB-funded project</a> for which I am the grant recipient, running during academic years 2024/25 and 2025/26. The design and organization of the program is a joint effort with my PhD colleagues and the <a href="https://www.ub.edu/school-economics/" target="_blank">UBSE</a> staff.</p>
+  <p>BESTEPS is financed by a <a href="https://web.ub.edu/en/web/escola-doctorat/" target="_blank">EDUB-funded project</a> for which I am the grant recipient, running during academic years 2024/25 and 2025/26. The design and organization of the program is a joint effort with my PhD colleagues and the <a href="https://www.ub.edu/school-economics/" target="_blank">UBSE</a> staff.</p>
 
   <p>BESTEPS consists of 7 Lectures taught by renowned scholars:</p>
   <ul>
