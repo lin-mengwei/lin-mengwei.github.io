@@ -632,19 +632,41 @@ a.navbar-item.is-active {
         }
 
         details summary {
+          text-align: justify; 
           cursor: pointer;
-          background-color: #f5f5f5;
+          background-color: #fff;
           border-radius: 5px;
+          border-width-left: 7%;
           border: 1px solid #ddd;
           transition: background-color 0.3s ease-in-out;
+          :active { 
+                background-color: #f0f7f2;
+          }
         }
+
 
         details summary:hover {
-          background-color: #e0e0e0;
+          background-color: #f0f7f2;
         }
 
-        details[open] summary {
-          background-color: #fff;
+        details[open] summary{
+          background-color: #f0f7f2;
+          border: none;
+          margin-left: 0;
+          margin-right: 0; 
+        }
+
+        details[open] {
+          background-color: #f0f7f2;
+          border-radius: 5px;
+          border-width-left: 7%;
+          border: 1px solid #ddd;
+        }
+
+        details {
+            figure {
+                 margin: 0;
+            }
         }
 
         p {
