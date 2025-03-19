@@ -76,7 +76,7 @@ Below are some selected activities I am proud of. If you’re interested in orga
 <details>
   <summary><b>4. Applied Econometric Methods Reading Group</b></summary>
 
-  <p>The reading group meets once a month, with one member sharing a new methodological advancement in applied economics. We aim to cover <b>newly-developed causal inference methods</b> that are not yet commonly taught in a standard graduate-level course of applied econometrics. I work with <a href="https://ieb.ub.edu/en/researcher/blanco-pineiro-sergio/" target="_blank">Sergio Blanco</a>, the coordinator of the group, and others in planning and organizing the activity.</p>
+  <p>The reading group meets regularly to share new methodological advancements in applied micro. We aim to cover <b>newly-developed causal inference methods</b> that are not yet commonly taught in a standard graduate-level econometrics course. I work with <a href="https://ieb.ub.edu/en/researcher/blanco-pineiro-sergio/" target="_blank">Sergio Blanco</a>, the coordinator of the group, and others in planning and organizing the activity.</p>
 
   <p><b>Topics in 2025 (TBD) include:</b></p>
   <ul>
