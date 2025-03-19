@@ -57,7 +57,7 @@ Below are some selected activities I am proud of. If you’re interested in orga
   </p>
   </summary>
 
-  <p>The Ideas Coffees are biweekly meetings to talk about <b>newly formed immature ideas</b> and receive feedback from our peers in a safe and friendly environment. The main objectives are to receive feedback before starting a project, understand fellow students' research and interests, and foster collaboration within the Economics PhD program. We also host occasional special sessions (e.g., sharing information of datasets). (<a href="https://www.linkedin.com/posts/universitat-de-barcelona-school-of-economics_yesterday-we-concluded-the-final-session-activity-7275801743379046401-EGbN/" target="_blank">Our event post, Dec. 2024</a>)</p>
+  <p>The Ideas Coffees are designed to talk about <b>newly formed immature ideas</b> in a safe and friendly environment. The main objectives are to receive feedback before starting a project, understand each others' research interests, and foster collaboration within the program. We also host occasional special sessions (e.g., sharing data info). (See: <a href="https://www.linkedin.com/posts/universitat-de-barcelona-school-of-economics_yesterday-we-concluded-the-final-session-activity-7275801743379046401-EGbN/" target="_blank">Our event post, Dec. 2024</a>)</p>
 
   <p>This is an innovative event series for junior Economics researchers at <a href="https://www.ub.edu/school-economics/" target="_blank">UBSE</a>, which I initiated with IEB PhD colleagues in 2024. It has received invaluable support from the PhD in Economics Program. I have been in charge of the series in academic years 2023/24 and 2024/25.</p>
 
