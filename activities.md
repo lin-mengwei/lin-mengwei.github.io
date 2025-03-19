@@ -23,7 +23,6 @@ Below are some selected activities I am proud of. If you’re interested in orga
       </figure>
     </center>
   </p>
-  <br>
   </summary>
 
   <p>BESTEPS provides PhD students with comprehensive guidance for <b>key stages of a research project</b>. Through expert-led lectures, the program empowers participants to take the "best steps" toward conducting rigorous research efficiently. (<a href="https://www.ub.edu/school-economics/kick-off-of-the-besteps-with-antonio-cabrales/" target="_blank">UBSE News on the Launch of BESTEPS</a>)</p>
@@ -56,7 +55,6 @@ Below are some selected activities I am proud of. If you’re interested in orga
       </figure>
     </center>
   </p>
-  <br>
   </summary>
 
   <p>The Ideas Coffees are biweekly meetings to talk about <b>newly formed immature ideas</b> and receive feedback from our peers in a safe and friendly environment. The main objectives are to receive feedback before starting a project, understand fellow students' research and interests, and foster collaboration within the Economics PhD program. We also host occasional special sessions (e.g., sharing information of datasets). (<a href="https://www.linkedin.com/posts/universitat-de-barcelona-school-of-economics_yesterday-we-concluded-the-final-session-activity-7275801743379046401-EGbN/" target="_blank">Our event post, Dec. 2024</a>)</p>

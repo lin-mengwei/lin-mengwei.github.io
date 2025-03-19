@@ -638,6 +638,8 @@ a.navbar-item.is-active {
           border-radius: 5px;
           border-width-left: 7%;
           border: 1px solid #ddd;
+        padding-top: 5%;
+          padding-bottom: 5%;
           transition: background-color 0.3s ease-in-out;
           :active { 
                 background-color: #f0f7f2;
@@ -654,6 +656,8 @@ a.navbar-item.is-active {
           border: none;
           margin-left: 0;
           margin-right: 0; 
+          padding-top: 5%;
+          padding-bottom: 5%;
         }
 
         details[open] {
