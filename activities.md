@@ -75,6 +75,7 @@ Below are some selected activities I am proud of. If you’re interested in orga
     <li>Shift-share & Recentered Instruments</li>
     <li>Staggered DID with Continuous Treatments</li>
     <li>Difference in Discontinuities</li>
+    <li>...</li>
   </ul>
   <br>
 </details>
