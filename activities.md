@@ -13,7 +13,7 @@ Below are some selected activities I am proud of. If you’re interested in orga
 
 <details>
   <summary>
-    <b>1. BESTEPS - Barcelona Essential Skills Training for Economics PhD Students</b>
+    <b>1. BESTEPS</b> (Barcelona Essential Skills Training for Economics PhD Students)
 
   <p>
     <center> 
