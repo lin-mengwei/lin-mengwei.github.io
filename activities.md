@@ -57,9 +57,9 @@ Below are some selected activities I am proud of. If you’re interested in orga
   </p>
   </summary>
 
-  <p>The Ideas Coffees are designed for PhD students and Postdocs to talk about <b>newly formed immature ideas</b> in a safe and friendly environment. The main objectives are to receive feedback before starting a project, understand each others' research interests, and foster collaboration. We also host occasional special sessions (e.g., sharing data info). (See: <a href="https://www.linkedin.com/posts/universitat-de-barcelona-school-of-economics_yesterday-we-concluded-the-final-session-activity-7275801743379046401-EGbN/" target="_blank">Our event post, Dec. 2024</a>)</p>
+  <p>The Ideas Coffees are biweekly sessions, designed for PhD students and Postdocs to talk about <b>newly formed immature ideas</b> in a safe and friendly environment. The main objectives are to receive feedback before starting a project, understand each others' research interests, and foster collaboration. We also host occasional special sessions (e.g., sharing data info). </p> 
 
-  <p>This is an innovative event series for junior Economics researchers at <a href="https://www.ub.edu/school-economics/" target="_blank">UBSE</a>, which I initiated with IEB PhD colleagues in 2024. It has received invaluable support from the PhD in Economics Program. I have been in charge of the series in academic years 2023/24 and 2024/25.</p>
+  <p>This is an innovative event series for junior Economics researchers at <a href="https://www.ub.edu/school-economics/" target="_blank">UBSE</a>, which I initiated with IEB PhD colleagues in 2024. It has received invaluable support from the PhD in Economics Program. I have been in charge of the series in academic years 2023/24 and 2024/25. (See: <a href="https://www.linkedin.com/posts/universitat-de-barcelona-school-of-economics_yesterday-we-concluded-the-final-session-activity-7275801743379046401-EGbN/" target="_blank">Our event post, Dec. 2024</a>)</p>
 
   <br>
 </details>
@@ -69,7 +69,7 @@ Below are some selected activities I am proud of. If you’re interested in orga
   <summary>
     <b>3. Job Market Preperation Process Improvement Plan</b> 
   </summary>
-    <p> The plan aims to better prepare PhD program candidates for the job market by offering a comprehensive set of activities, including information sessions, planning meetings, package tutoring, mock interviews, mock job market talks. The proposal of this plan was development with the invaluable support and advice from <a href="https://mariebeigelman.github.io/" target="_blank">Marie Beigelman</a> and <a href="https://abhinavkhemka.com" target="_blank">Abhinav Khemka</a>. It was approved by th Academic Committee and has been implemented since the academic year 2024/25.</p>
+    <p> The plan aims to better prepare PhD program candidates for the job market by offering a comprehensive set of activities, including information sessions, planning meetings, package tutoring, mock interviews, mock job market talks. It was development with the invaluable support and advice from <a href="https://mariebeigelman.github.io/" target="_blank">Marie Beigelman</a> and <a href="https://abhinavkhemka.com" target="_blank">Abhinav Khemka</a>. The plan was approved by th Academic Committee and has been implemented since the academic year 2024/25.</p>
 </details>
 
 <br>
