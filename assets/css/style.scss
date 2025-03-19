@@ -645,6 +645,8 @@ a.navbar-item.is-active {
           border: 1px solid #ddd;
           padding-top: 5%;
           padding-bottom: 5%;
+          padding-left: 2%;
+          padding-right: 2%;
           transition: background-color 0.3s ease-in-out;
           :active { 
                 background-color: #f0f7f2;
