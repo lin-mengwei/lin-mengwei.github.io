@@ -69,7 +69,7 @@ Below are some selected activities I am proud of. If you’re interested in orga
   <summary>
     <b>3. Job Market Preperation Process Improvement Plan</b> 
   </summary>
-    <p> The plan aims to better prepare PhD program candidates for the job market by offering a comprehensive set of activities, including information sessions, planning meetings, package tutoring, mock interviews, mock job market talks. It was development with the invaluable support and advice from <a href="https://mariebeigelman.github.io/" target="_blank">Marie Beigelman</a> and <a href="https://abhinavkhemka.com" target="_blank">Abhinav Khemka</a>. The plan was approved by th Academic Committee, and has been implemented since the academic year 2024/25.</p>
+    <p> The plan aims to <b>better prepare PhD candidates for the Job Market</b> by offering a comprehensive set of activities, including information sessions, planning meetings, package tutoring, mock interviews, mock job market talks. It was development with the invaluable support and advice from <a href="https://mariebeigelman.github.io/" target="_blank">Marie Beigelman</a> and <a href="https://abhinavkhemka.com" target="_blank">Abhinav Khemka</a>. The plan was approved by th Academic Committee, and has been implemented since the academic year 2024/25.</p>
 </details>
 
 <br>
