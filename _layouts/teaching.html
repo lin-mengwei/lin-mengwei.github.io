@@ -11,11 +11,12 @@ layout: compress
     <style>
     .teaching-hero {
       height: 36vh;
+      filter: brightness(1.05) contrast(1.07);
     }
 
     @media (max-width: 768px) {
       .teaching-hero {
-        height: 30vh;
+        height: 25vh;
         background-position: center 45%;
       }
     }
@@ -29,10 +30,12 @@ layout: compress
 <body>
     {% include navbar.html %}
     <section class="hero teaching-hero" style="
-        background-image: url('/assets/images/teaching.jpg'); 
+        background-image: 
+        linear-gradient(to bottom, rgba(255,255,255,0) 30%, rgba(255,255,255,1) 100%),
+        url('/assets/images/teaching.jpg');
         background-size: cover;  
         background-position: center 36%;">
-      <div class="hero-body" style="background-color: rgba(255,255,255,0.8);">
+      <div class="hero-body" style="background-color: rgba(255,255,255,0.4);">
         <div class="container has-text-centered">
           
         </div>
@@ -41,6 +44,7 @@ layout: compress
 
 
     <section class="hero is-fullheight" id="teaching">
+
         <div style="display: flex; align-items: flex-start; padding-top: 50px;">
             <div class="container">
                 {% include teaching-heading.html %}
