@@ -7,11 +7,38 @@ layout: compress
 <html>
 <head>
     {% include head.html %}
+
+    <style>
+    .teaching-hero {
+      height: 36vh;
+    }
+
+    @media (max-width: 768px) {
+      .teaching-hero {
+        height: 30vh;
+        background-position: center 45%;
+      }
+    }
+
+    </style>
 </head>
+
+
 
 
 <body>
     {% include navbar.html %}
+    <section class="hero teaching-hero" style="
+        background-image: url('/assets/images/teaching.jpg'); 
+        background-size: cover;  
+        background-position: center 36%;">
+      <div class="hero-body" style="background-color: rgba(255,255,255,0.8);">
+        <div class="container has-text-centered">
+          
+        </div>
+      </div>
+    </section>
+
 
     <section class="hero is-fullheight" id="teaching">
         <div style="display: flex; align-items: flex-start; padding-top: 50px;">
