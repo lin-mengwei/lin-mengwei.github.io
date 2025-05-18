@@ -13,7 +13,7 @@
       {% if include.coauthors %}
       <p>Joint with {{ include.coauthors }}</p>
       {% endif %}
-
+      <br>
       {% if include.abstract %}
       <details class="abstract-box mt-3" data-image-box-id="image-box-{{ include.title | slugify }}">
         <summary><strong>Abstract</strong> (click)</summary>
@@ -29,6 +29,7 @@
       <p><strong>JEL Codes:</strong> {{ include.jel }}</p>
       {% endif %}
 
+      <br>
       {% if include.presented %}
       <p class="presented-info"><strong>Presented at:</strong> {{ include.presented }}</p>
       {% endif %}
