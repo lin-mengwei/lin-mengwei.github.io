@@ -2,7 +2,6 @@
 title: Research Projects
 layout: research
 ---
-
 This site is under construction.
 
 # Work in Progress
