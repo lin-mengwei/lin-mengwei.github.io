@@ -557,16 +557,16 @@ a {
 }
 
 #research.research-container {
-  padding: 0 1vw;
+  padding: 4vw 0;
   max-width: 1200px;
   margin: 0 auto;
 
-  @media screen and (min-width: 768px) {
-    padding: 2rem 3rem;
+  @media screen and (max-width: 768px) {
+    padding: 6vw 1vw;
   }
 
-  @media screen and (min-width: 1024px) {
-    padding: 2rem 5%;
+  @media screen and (max-width: 1024px) {
+    padding: 6vw 1vw;
   }
 }
 
