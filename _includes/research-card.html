@@ -1,0 +1,62 @@
+<div class="research-card"> 
+  <div class="research-card-header">
+    <h3 class="is-size-5">
+      {{ include.title }}
+      {% if include.status %}
+      <span class="tag is-light is-warning ml-2" style="vertical-align: middle;">{{ include.status }}</span>
+      {% endif %}
+    </h3>
+  </div>
+
+  <div class="research-flex-row">
+    <div class="research-text-col">
+      {% if include.coauthors %}
+      <p><strong>Joint with</strong> {{ include.coauthors }}</p>
+      {% endif %}
+
+      {% if include.abstract %}
+      <details class="abstract-box mt-3" data-image-box-id="image-box-{{ include.title | slugify }}">
+        <summary><strong>Abstract</strong> (click)</summary>
+        <p class="mt-2">{{ include.abstract }}</p>
+      </details>
+      {% endif %}
+
+      {% if include.keywords %}
+      <p class="mt-3"><strong>Keywords:</strong> {{ include.keywords }}</p>
+      {% endif %}
+
+      {% if include.jel %}
+      <p><strong>JEL Codes:</strong> {{ include.jel }}</p>
+      {% endif %}
+
+      {% if include.presented %}
+      <p><strong>Presented at:</strong> {{ include.presented }}</p>
+      {% endif %}
+
+      {% if include.tags %}
+      <p class="mt-1">
+        {% assign tag_list = include.tags | split: "," %}
+        {% for tag in tag_list %}
+          <span class="tag is-info is-light mr-1">{{ tag | strip }}</span>
+        {% endfor %}
+      </p>
+      {% endif %}
+    </div>
+
+    {% if include.image1 and include.image2 %}
+      <div class="column is-4 research-image-col">
+        <div class="research-image-box is-dual" id="image-box-{{ include.title | slugify }}">
+          <img class="primary-img" src="{{ include.image1 | relative_url }}" alt="figure 1">
+          <img class="secondary-img" src="{{ include.image2 | relative_url }}" alt="figure 2">
+        </div>
+      </div>
+    {% elsif include.image %}
+      <div class="column is-4 research-image-col">
+        <figure class="research-image-box">
+          <img src="{{ include.image | relative_url }}" alt="Research image">
+        </figure>
+      </div>
+    {% endif %}
+
+  </div>
+</div>

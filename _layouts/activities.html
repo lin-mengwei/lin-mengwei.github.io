@@ -28,31 +28,6 @@ layout: compress
           {{ content }}
         </div>
 
-        <!-- 书籍展示部分 -->
-        {% if page.books %}
-          <section id="books">
-            <div class="books-container">
-              {% for book in page.books %}
-                <div class="book">
-                  <div class="book-image">
-                    <a href="{{ book.link }}" target="_blank"> <img src="{{ book.image }}" alt="{{ book.title }}"> </a>
-                  </div>
-                  <div class="book-details">
-                    <p><a href="{{ book.link }}" target="_blank">{{ book.title }}</a></p>
-                    <p>{{ book.description }}</p>
-                  </div>
-                </div>
-              {% endfor %}
-            </div>
-          </section>
-        {% endif %}
-
-        {% unless site.disqus-shortname == "" %}
-        <div class="disqus-comments" id="disqus_thread"></div>
-        {% endunless %}
-      </div>
-    </div>
-  </section>
   {% include footer.html %}
 </body>
 

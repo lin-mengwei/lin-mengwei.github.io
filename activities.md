@@ -18,7 +18,7 @@ Below are some selected activities I am proud of. If you’re interested in orga
   <p>
     <center> 
       <figure>
-        <img src="assets/images/BESTEPS1.jpg"> 
+        <img src="assets/images/activities/BESTEPS1.jpg"> 
         <figcaption>Fig. BESTEPS Opening Lecture</figcaption> 
       </figure>
     </center>
@@ -50,7 +50,7 @@ Below are some selected activities I am proud of. If you’re interested in orga
   <p>
     <center> 
       <figure>
-        <img src="assets/images/coffee1.jpg"> 
+        <img src="assets/images/activities/coffee1.jpg"> 
         <figcaption>Fig. PhD Ideas Coffee Session</figcaption> 
       </figure>
     </center>
