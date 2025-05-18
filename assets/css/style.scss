@@ -3,6 +3,16 @@
 
 @import "main.scss";
 
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; // ✅ 阻止页面在小屏幕横向滚动
+}
+
+* {
+  box-sizing: border-box; // ✅ 防止 padding 撑爆容器宽度
+}
+
 #navbar {
     opacity: 0.95;
 }
@@ -532,6 +542,14 @@ a.navbar-item.is-active {
         }
       }
 
+}
+
+#research.research-container {
+  padding: 2rem 4vw;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 1rem;
+  }
 }
 
 #research {
