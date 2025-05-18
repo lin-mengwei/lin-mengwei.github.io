@@ -20,3 +20,15 @@ This site is under construction.
   image2="/assets/images/research/penalizing/fig5.svg"
 %}
 
+
+{% include research-card.html
+  title="New Chapter"
+  status="Work in Progress"
+  tags = "Economics of Education, Policy Evaluation"
+  abstract="TBC"
+  keywords="TBC"
+  jel="TBC"
+  presented='TBC'
+  image1="/assets/images/research/penalizing/fig2.svg"
+  image2="/assets/images/research/penalizing/xxx.xxx"
+%}
