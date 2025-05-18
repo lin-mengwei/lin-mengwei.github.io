@@ -558,7 +558,7 @@ a {
 
 #research.research-container {
   padding: 0 1vw;
-  max-width: 1200px; // 或 1100px, 960px 等根据喜好
+  max-width: 1200px;
   margin: 0 auto;
 
   @media (max-width: 768px) {
@@ -622,12 +622,12 @@ a {
   }
 
   .research-text-col {
-    flex: 1 1 60%;
-    min-width: 250px;
+    flex: 0 0 52%;
+    min-width: 200px;
   }
 
   .research-image-col {
-    flex: 1 1 30%;
+    flex: 0 0 38%;
     min-width: 200px;
     display: flex;
     justify-content: center;
