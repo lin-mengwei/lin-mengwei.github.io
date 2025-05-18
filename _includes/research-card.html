@@ -15,7 +15,7 @@
       {% endif %}
       <br>
       {% if include.abstract %}
-      <details class="abstract-box mt-3" data-image-box-id="image-box-{{ include.title | slugify }}">
+      <details class="abstract-box mt-3" id="abstract-{{ include.title | slugify }}">
         <summary><strong>Abstract</strong> (click)</summary>
         <p class="mt-2">{{ include.abstract }}</p>
       </details>
