@@ -561,8 +561,12 @@ a {
   max-width: 1200px;
   margin: 0 auto;
 
-  @media (max-width: 768px) {
-    padding: 1.5rem 1rem;
+  @media screen and (min-width: 768px) {
+    padding: 2rem 3rem;
+  }
+
+  @media screen and (min-width: 1024px) {
+    padding: 2rem 5%;
   }
 }
 
