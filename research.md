@@ -9,7 +9,7 @@ This site is under construction.
 {% include research-card.html
   title="Penalizing Failures at University"
   status="Work in Progress"
-  tags = "Economics of Education, Policy Evaluation"
+  tags = "Economics of Education, Policy Evaluation, Education Finance"
   coauthors='<a href="https://sites.google.com/site/andreuarenasweb/">Andreu Arenas</a> and <a href="https://sites.google.com/site/ruizvalenjenifer">Jenifer Ruiz-Valenzuela</a>'
   abstract="How does increasing the cost of failing university modules affect student persistence and academic performance? To answer this question, we exploit a policy shock in Catalonia involving a two-wave increase in tuition fees—first targeting second and subsequent retake attempts, followed by a general fee increase that affected all attempts, including the first. Using a rich dataset from a large public university, we use a difference-in-differences design to compare students fully exposed to the fee increases with those who received fee waivers before and after the fee changes. First, our findings show that both the penalties for module failures and the general fee increase negatively impact student persistence, particularly among part-time and low-performing students, raising concerns about equity. Second, from an efficiency perspective, we find evidence that financial pressure leads students to pass more modules and reduce the number of retakes, although we do not observe significant improvements in grades beyond passing."
   keywords="Tuition fees, Retake costs, Higher Education"
