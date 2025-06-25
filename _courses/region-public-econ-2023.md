@@ -53,6 +53,6 @@ In this unit, I apply the framework built in the Theory parts to characterize fi
 
 #### Notes
 
-Part of the lectures are based on materials compiled in previous years by [Candan Erdemli](https://candanerdemli.com/), [Zelda Brutti](https://sites.google.com/site/zeldabrutti/) and [Dirk Foremny](http://foremny.eu/).
+Part of the content is based on materials compiled in previous years by [Candan Erdemli](https://candanerdemli.com/), [Zelda Brutti](https://sites.google.com/site/zeldabrutti/) and [Dirk Foremny](http://foremny.eu/).
 
 The main textbook for the theory parts is [State and Local Public Finance](https://www.routledge.com/State-and-Local-Public-Finance/Fisher/p/book/9780367467234) by Ronald C. Fisher. The main references for country-specific cases are [Forum of Federations Handbook of Fiscal Federalism](https://forumfed.org/wp-content/uploads/2023/08/978-3-030-97258-5-3.pdf) and [the OECD/UCLG SNG-WOFI](www.sng-wofi.org/country-profiles/). Course materials and notifications are updated on [Virtual Campus](https://campusvirtual.ub.edu/course/view.php?id=68724).
