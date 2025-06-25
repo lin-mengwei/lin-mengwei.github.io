@@ -14,17 +14,12 @@ intro: This is a <b>3rd-year compulsory course</b> for undergraduate Economics m
 ---
 
 #### Introduction
-*Regional and Local Public Economics* builds on previous courses (Public Sector Economics, Public Finance, Tax System), and focuses on the discussion of the <b>fiscal relationships between central and regional governments</b> and the <b>centralization versus decentralization</b> of fiscal practices. In this course, I try guide students to analyze the behavior of governments as economic agents and the outcomes of public policies through the lens of decentralized public finance.
-
-Here you can find the information for <b>part II</b> (decentralization of govt expenditure & inter-govt grants) and <b>part III</b> (internatioanl comparison & policy analysis) of it, co-taught with [Julia McGee](https://sites.google.com/view/julia-mcgee). Part I (decentralization of taxation) is taught by [Andreu Arenas](https://sites.google.com/site/andreuarenasweb/home).
-
-You can also find the [materials from last year](https://lin-mengwei.github.io/region-public-econ-2023.html), when I re-designed and taught both parts II & III.
+*Regional and Local Public Economics* enables students to analyze the behavior of governments as economic agents and the outcomes of public policies through the lens of decentralized public finance. You can also find the [materials from last year](https://lin-mengwei.github.io/region-public-econ-2023.html), when I re-designed and taught 16 lectures on topics from Expenditure Decentralization to Policy Evaluation.
 
 
-#### Modules
+#### Lectures
 
-There are **8 two-hour lectures** in my part,  in **4 units**:
-<i>See the <a href="https://lin-mengwei.github.io/region-public-econ-2023.html">2023 version</a> for the full schedule of all 16 lectures I designed and taught.</i>
+I teach **8 two-hour lectures** this year:
 
 <b>Theory 3: Intergovernmental Grants (4 lectures)</b> <br>
 	1. Intergovernmental grant and its functions <br>
@@ -44,7 +39,5 @@ In this unit, I apply the framework built in the Theory parts to characterize fi
 	2. Fiscal Decentralization and Healthcare (Method: Diff-in-Diff) <br> 
 
 #### Notes
-
-I thank [Candan Erdemli](https://candanerdemli.com/), [Zelda Brutti](https://sites.google.com/site/zeldabrutti/) and [Dirk Foremny](http://foremny.eu/) for course materials compiled in previous years, and Erik Sarrazin and Julia McGee for useful information on country-specific cases. I also appreciate the discussions with and suggestions from the 2023/24 E2 group students.
 
 The main textbook for the theory parts is [State and Local Public Finance](https://www.routledge.com/State-and-Local-Public-Finance/Fisher/p/book/9780367467234) by Ronald C. Fisher. The main references for country-specific cases are [Forum of Federations Handbook of Fiscal Federalism](https://forumfed.org/wp-content/uploads/2023/08/978-3-030-97258-5-3.pdf) and [the OECD/UCLG SNG-WOFI](www.sng-wofi.org/country-profiles/). Course materials and notifications are updated on [Virtual Campus](https://campusvirtual.ub.edu/course/view.php?id=68724).
