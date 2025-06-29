@@ -34,9 +34,9 @@ Below are some selected activities I am proud of. If you’re interested in orga
     <li><b>Opening Lecture:</b> <a href="https://www.linkedin.com/feed/update/urn:li:activity:7295739310534717440/" target="_blank">Workflows of Economics Research</a> (Prof. Antonio Cabrales)</li>
     <li><b>Lecture 1:</b> <a href="https://www.linkedin.com/feed/update/urn:li:activity:7310955533031682048/" target="_blank">Starting a Feasible Project: Ideas, Literature, Exploratory Analysis</a> (Prof. Libertad Gonzalez)</li>
     <li><b>Lecture 2:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Doing Organized and Replicable Research</a> (Prof. Joan Llull, Data Editor of Econometrica)</li>
-    <li><b>Lecture 3:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Making Research Vivid: Visualization Practices</a> (Prof. Dirk Foremny & TBD)</li>
-    <li><b>Lecture 4:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Communicating Research 1: Presentations, Posters and Elevator Pitches</a> (TBD)</li>
-    <li><b>Lecture 5:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Communicating Research 2: Crafting a Job Market Paper</a> (TBD)</li>
+    <li><b>Lecture 3:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Graphical Communication: Visualization Practices</a> (Prof. Dirk Foremny & TBD)</li>
+    <li><b>Lecture 4:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Communicating Research: Presentations, Posters and Elevator Pitches</a> (TBD)</li>
+    <li><b>Lecture 5:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Communicating Research: Crafting a Job Market Paper</a> (TBD)</li>
     <li><b>Closing Lecture:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Publication Experiences: Mindset and Strategy</a> (TBD)</li>
   </ul>
   <br>
