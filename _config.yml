@@ -26,7 +26,7 @@ site-keywords:
   - Mengwei
   - 孟蔚
 # URL for the Image of custom Favicon
-favicon-url: 
+favicon-url: /assets/images/image.jpg
 
 # URL of the Image of Custom Hero Image (i.e., the image in the background of the very first section of the Homepage)
 heroimage: /assets/images/background.jpg
