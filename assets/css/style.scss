@@ -83,6 +83,11 @@ a {
 
 #about {
 
+    .container {
+        width: 100% !important;     // 强制适应屏幕
+        max-width: 100vw !important;
+        }
+                
     .image {
         
         @media (min-aspect-ratio: 1/1) { // 针对电脑
@@ -196,7 +201,7 @@ a {
         }
 
         @media (min-aspect-ratio: 1/1) {
-            padding: 0;
+            padding: 5%;
             margin-left: 15%;
             margin-right: 15%;
             margin-top: none;
