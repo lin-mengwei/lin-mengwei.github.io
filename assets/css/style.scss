@@ -84,8 +84,17 @@ a {
 #about {
 
     .container {
-        width: 100% !important;     // 强制适应屏幕
-        max-width: 100vw !important;
+
+        @media (min-aspect-ratio: 1/1) {
+            width: auto; 
+        }
+
+
+        @media (max-aspect-ratio: 1/1) {
+            width: 100% !important;     // 强制适应屏幕
+            max-width: 100vw !important;
+        }
+        
         }
                 
     .image {
