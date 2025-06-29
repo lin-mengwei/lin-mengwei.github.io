@@ -6,14 +6,15 @@
         <!-- 左栏：头像 + news -->
         <div class="column is-one-third">
           <figure class="image is-centered has-text-centered" style="margin-bottom: 2rem;">
-            <img class="is-square" src="{{site.author-image}}" alt="IMG Mengwei Lin" style="height: auto; margin: auto;">
+            <img class="is-square" src="{{site.author-image}}" alt="IMG Mengwei Lin" style="height: auto; margin: auto; max-width: 85% ;">
           </figure>
 
           <!-- news 部分嵌入左栏 -->
           <div id="news">
             <h2 class="title is-5 has-text-centered">
-              <span style="background-color: red; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">NEW!</span>Recent
+              Recent <span style="background-color: red; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.6rem; font-weight: bold;">NEW!</span>
             </h2>
+            <br>
             <div style="position: relative; max-height: 10rem; overflow: hidden;">
               <ul style="list-style-type: none; padding-left: 0; margin-top: 0; font-size: 0.8rem;">
                 {% assign recent_news = site.data.news | slice: 0, 4 %}

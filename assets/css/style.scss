@@ -89,10 +89,12 @@ a {
             max-width: 20vmax;
             display: flex;
             justify-content: center;
+            text-align: center;
+            padding-right: 4rem;
             img {
                 border: 0.25rem dotted black;
                 width: 80%;
-                max-width: 100%;
+                max-width: 75%;
             }
         }
 
@@ -202,8 +204,20 @@ a {
             }
         }
 
-
     }
+
+    #news {
+        justify-content: center;
+        text-align: justify;
+        
+        h2{
+            @media (min-aspect-ratio: 1/1) {
+            padding-right: 4rem
+            }
+        }
+        
+    }
+
 
     .button {
         @media (min-aspect-ratio: 1/1) {
