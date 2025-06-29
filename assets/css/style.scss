@@ -90,11 +90,10 @@ a {
             display: flex;
             justify-content: center;
             text-align: center;
-            padding-right: 4rem;
             img {
                 border: 0.25rem dotted black;
                 width: 80%;
-                max-width: 75%;
+                max-width: 100%;
             }
         }
 
@@ -173,7 +172,10 @@ a {
         }   
     }
 
-
+    #imgnews {
+        justify-self: center;
+        text-align: center;
+    }
 
     #biography {
 

@@ -4,8 +4,8 @@
       <div class="columns is-variable is-8">
 
         <!-- 左栏：头像 + news -->
-        <div class="column is-one-third">
-          <figure class="image is-centered has-text-centered" style="margin-bottom: 2rem;">
+        <div class="column is-one-third" id="imgnews">
+          <figure class="image" style="margin-bottom: 2rem;">
             <img class="is-square" src="{{site.author-image}}" alt="IMG Mengwei Lin" style="height: auto; margin: auto; max-width: 85% ;">
           </figure>
 
@@ -16,10 +16,10 @@
             </h2>
             <br>
             <div style="position: relative; max-height: 10rem; overflow: hidden;">
-              <ul style="list-style-type: none; padding-left: 0; margin-top: 0; font-size: 0.8rem;">
+              <ul style="list-style-type: none; padding-left: 0; margin-top: 0; font-size: 0.85rem;">
                 {% assign recent_news = site.data.news | slice: 0, 4 %}
                 {% for item in recent_news %}
-                <li style="margin-bottom: 0.25rem;">
+                <li style="margin-bottom: 0.4rem;">
                   <strong>{{ item.date }}:</strong> {{ item.content }}
                 </li>
                 {% endfor %}
@@ -49,8 +49,7 @@
             I obtained a Master's in Economics (with Distinction) from <a href='https://www.ed.ac.uk/' target="_blank">The University of Edinburgh</a>. Prior to Barcelona, I worked in policy consultancy at the <a href='https://en.cdi.org.cn/' target="_blank">China Development Institute</a> (CDI, Public Policy Center) and as a <a href="popul-trans#2-book-translation--书籍翻译" target="_blank">book translator</a>. 
           </p>
           <br>
-          <p>
-            Outside research, I also write <a href="popul-trans#1-popularization--学术科普" target="_blank">public-facing econ articles</a>, and have been actively initiating and organizing <a href='https://lin-mengwei.github.io/activities' target="_blank">academic activities targeting young researchers</a>.
+          <p> I initiate and organize <a href='https://lin-mengwei.github.io/activities' target="_blank">academic activities targeting young researchers</a>, and write <a href="popul-trans#1-popularization--学术科普" target="_blank">public-facing econ articles</a>. 
           </p>
           <br>
           <p>
