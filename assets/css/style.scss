@@ -86,7 +86,9 @@ a {
     .container {
 
         @media (min-aspect-ratio: 1/1) {
-            width: auto; 
+            .columns.is-variable.is-8 {
+                justify-content: space-between;
+            }
         }
 
 
