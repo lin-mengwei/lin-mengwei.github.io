@@ -89,6 +89,18 @@ a {
             .columns.is-variable.is-8 {
                 justify-content: space-between;
             }
+            .columns{
+                
+            }
+            .column {
+                border: 1px dashed red;
+                  overflow-x: hidden;
+                  overflow-wrap: break-word;
+                  word-wrap: break-word;
+                  word-break: break-word;
+
+            }
+
         }
 
 
@@ -214,7 +226,6 @@ a {
         @media (min-aspect-ratio: 1/1) {
             padding: 5%;
             margin-left: 15%;
-            margin-right: 15%;
             margin-top: none;
 
             p{
