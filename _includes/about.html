@@ -1,7 +1,7 @@
 <section class="hero is-fullheight has-background-white-ter" id="about">
   <div class="hero-body">
     <div class="container">
-      <div class="columns is-centered is-8">
+      <div class="columns is-centered is-variable is-8">
 
         <!-- 左栏：头像 + news -->
         <div class="column is-one-third" id="imgnews">
@@ -53,20 +53,23 @@
             * My name "Mengwei" (孟蔚) has two parts: <strong>meng</strong> (like /məng/, <a href="https://www.youtube.com/watch?v=VSEbNMwAU1Y" target="_blank">audio</a>) and <strong>wei</strong> (as "way").
           </p>
 
-          <!-- 按钮 -->
-          <div class="container columns is-centered" style="margin-top: 1.5rem;">
-            <div>
-              <a style="text-decoration: none;" href="http://www.linkedin.com/in/{{site.linkedin_username}}"
-                class="button is-l is-rounded is-uppercase has-text-weight-normal is-black is-outlined" target="_blank"><i class="fas fa-file"></i>&nbsp;curriculum vitae</a>
+            <!-- 按钮 -->
+            <div class="container columns is-centered" style="margin-top: 1.5rem;">
+              <div>
+                <a style="text-decoration: none;" href="http://www.linkedin.com/in/{{site.linkedin_username}}"
+                  class="button is-l is-rounded is-uppercase has-text-weight-normal is-black is-outlined" target="_blank"><i class="fas fa-file"></i>&nbsp;curriculum vitae</a>
+              </div>
+              <div>
+                <a style="text-decoration: none;" href="https://ieb.ub.edu/en/researcher/lin-mengwei/"
+                  class="button is-l is-rounded is-uppercase has-text-weight-normal is-black is-outlined" target="_blank"><i class="fas fa-file"></i>&nbsp;Institutional Webpage</a>
+              </div>
             </div>
-            <div>
-              <a style="text-decoration: none;" href="https://ieb.ub.edu/en/researcher/lin-mengwei/"
-                class="button is-l is-rounded is-uppercase has-text-weight-normal is-black is-outlined" target="_blank"><i class="fas fa-file"></i>&nbsp;Institutional Webpage</a>
-            </div>
+
           </div>
+        </div>
 
           <!-- 社交链接 -->
-          <div class="container">
+        <div class="container">
             <div class="columns is-centered">
               <div class="column is-narrow" style="display: flex; justify-content: center; align-items: center;">
                 {% unless site.linkedin_username == %}
@@ -94,10 +97,7 @@
                 {% endunless %}
               </div>
             </div>
-          </div>
         </div>
-
-      </div>
     </div>
   </div>
 </section>

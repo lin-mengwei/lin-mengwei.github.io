@@ -86,6 +86,8 @@ a {
     .container {
 
         @media (min-aspect-ratio: 1/1) {
+            margin: 0 10% !important; 
+
             .columns.is-variable.is-8 {
                 justify-content: space-between;
             }
@@ -93,7 +95,6 @@ a {
                 
             }
             .column {
-                border: 1px dashed red;
                   overflow-x: hidden;
                   overflow-wrap: break-word;
                   word-wrap: break-word;
@@ -250,7 +251,7 @@ a {
 
     .button {
         @media (min-aspect-ratio: 1/1) {
-            min-width: 25vmax;
+            min-width: 20vmax;
             margin: 0;
             padding: 0;
         }
