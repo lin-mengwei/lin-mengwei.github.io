@@ -1,122 +1,106 @@
-<head>
-</head>
-<body>
-<section class="hero is-fullheight has-text-centered has-background-white-ter" id="about">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns">
-              <div class="column is-centered" style="display: flex; justify-content: center;">
-                <figure class="image" style="margin-top: 2.5%; margin-bottom: 1.5%; ">
-                  <img class="is-rounded" src="{{site.author-image}}" alt="Mengwei Lin" width=70%>
-                </figure>
+<section class="hero is-fullheight has-background-white-ter" id="about">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-variable is-8">
+
+        <!-- 左栏：头像 + news -->
+        <div class="column is-one-third">
+          <figure class="image is-centered has-text-centered" style="margin-bottom: 2rem;">
+            <img class="is-square" src="{{site.author-image}}" alt="IMG Mengwei Lin" style="height: auto; margin: auto;">
+          </figure>
+
+          <!-- news 部分嵌入左栏 -->
+          <div id="news">
+            <h2 class="title is-5 has-text-centered">
+              <span style="background-color: red; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;">NEW!</span>Recent
+            </h2>
+            <div style="position: relative; max-height: 10rem; overflow: hidden;">
+              <ul style="list-style-type: none; padding-left: 0; margin-top: 0; font-size: 0.8rem;">
+                {% assign recent_news = site.data.news | slice: 0, 4 %}
+                {% for item in recent_news %}
+                <li style="margin-bottom: 0.25rem;">
+                  <strong>{{ item.date }}:</strong> {{ item.content }}
+                </li>
+                {% endfor %}
+              </ul>
+              <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 4rem;
+                  background: linear-gradient(to bottom, rgba(255,255,255,0), #f4f4f4);">
               </div>
             </div>
-            <div class="columns">
-                <div class="column" id="biography"> 
-                    <p>
-                        My name is Mengwei Lin*. I am a PhD candidate at the <a href='https://www.ub.edu/school-economics/' target="_blank">University of Barcelona </a>(UB) and the <a href='https://www.ieb.ub.edu/en/' target="_blank">Barcelona Institute of Economics</a> (IEB), working with <a href='https://sites.google.com/site/andreuarenasweb/home' target="_blank">Andreu Arenas</a> and <a href='https://sites.google.com/site/ruizvalenjenifer' target="_blank">Jenifer Ruiz-Valenzuela</a> since Spring 2023. I am also on the <a href="https://www.educationeconomics.uzh.ch/en/international-course-program.html" target="_blank">PhD Course Program in Economics of Education</a> at the <a href="https://www.educationeconomics.uzh.ch/en/" target="_blank">University of Zurich</a> from 2024 to 2026.
-                    </p>
-                    <br>
-                    
-                    <!--
-                    <p style="color: red"> 
-                        I am on the 2026/27 Econ Job Market! <strong>JMP:</strong> <a href="" style="color: black;">"The Title of The Job Marker Paper"</a>
-                    </p>
-                    <br>
-                    -->
-                    
-                    <p> 
-                        Fields of interests:
-                    </p>
-                            <ul>
-                                <li><strong>Economics of Education</strong> (primary field)</li>
-                                <li>Labor and Demographic Economics </li>  
-                                <li>Cultural Economics </li>
-                                <li>Causal Inference: reduced-form & structural methods</li>
-                            </ul> 
-                    <p> 
-                    <br> 
-                        I obtained a Master's in Economics (with Distinction) from <a href='https://www.ed.ac.uk/' target="_blank">The University of Edinburgh</a>. Prior to Barcelona, I worked in policy consultancy at the <a href='https://en.cdi.org.cn/' target="_blank">China Development Institute</a> (CDI, Public Policy Center) and as a <a href="popul-trans#2-book-translation--书籍翻译" target="_blank">book translator</a>. Outside research, I also write <a href="popul-trans#1-popularization--学术科普" target="_blank">public-facing econ articles</a>, and have been actively initiating and organizing <a href='https://lin-mengwei.github.io/activities' target="_blank">academic activties targetting young researchers</a>. 
-
-                    <br>
-                    <br>
-                        * My first name "Mengwei" (孟蔚) has two syllables, <strong>meng</strong> (IPA: /məng/, <a href="https://www.youtube.com/watch?v=VSEbNMwAU1Y" target="_blank">audio here</a>) and <strong>wei</strong> (as the word "way").
-                    </p>
-                    <br>
-
-
-                    <div class="container columns is-centered" style="width: auto">
-                        <div>
-                            <a style="text-decoration: none;" href="http://www.linkedin.com/in/{{site.linkedin_username}}"
-                                class="button is-l is-rounded is-uppercase has-text-weight-normal is-black is-outlined" target="_blank"><i class="fas fa-file"></i>&nbsp;curriculum vitae</a>
-                            </a>
-                        </div>
-                        <div>
-                            <a style="text-decoration: none;" href="https://ieb.ub.edu/en/researcher/lin-mengwei/"
-                                class="button is-l is-rounded is-uppercase has-text-weight-normal is-black is-outlined" target="_blank"><i class="fas fa-file"></i>&nbsp;Institutional Webpage</a>
-                            </a>
-                        </div>                        
-                    </div>
-
-                    <div class="container">
-                      <div class="columns is-centered">
-                        <div class="column is-narrow" style="display: flex; justify-content: center; align-items: center;">
-                          {% unless site.linkedin_username ==  %}
-                          <a href="http://www.linkedin.com/in/{{site.linkedin_username}}" target="_blank" class="has-text-black social-icon">
-                            <i class="fab fa-linkedin"></i>
-                          </a>
-                          {% endunless %}
-
-                          {% unless site.bluesky_username == %}
-                          <a href="https://bsky.app/profile/{{site.bluesky_username}}.bsky.social" target="_blank" class="has-text-black social-icon">
-                            <i class="fa-brands fa-bluesky"></i>
-                          </a>
-                          {% endunless %}
-
-                          {% unless site.twitter_username == %}
-                          <a href="https://twitter.com/intent/user?screen_name={{site.twitter_username}}" target="_blank" class="has-text-black social-icon">
-                            <i class="fab fa-twitter"></i>
-                          </a>
-                          {% endunless %}
-
-                          {% unless site.email == %}
-                          <a id="contact-button" href="mailto:{{site.email}}" target="_blank" class="has-text-black social-icon">
-                            <i class="fas fa-envelope"></i>
-                          </a>
-                          {% endunless %}
-                        </div>
-                      </div>
-                    </div>
-
-
-
-                </div>
-            </div>
-            </div>
+          </div>
         </div>
-</section>
 
-<section class="section" id="news">
-  <div class="container">
-    <h2 class="title is-5 has-text-centered"><span style="background-color: red; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75rem; font-weight: bold;"> NEW!</span> Recent</h2>
-     <!-- 淡出容器 -->
-    <div style="position: relative; max-height: 8rem; overflow: hidden; max-width: 600px; margin: 0 auto;">
-      <ul style="list-style-type: none; padding-left: 0; margin-top: 1rem;">
-        {% assign recent_news = site.data.news | slice: 0, 4 %}
-        {% for item in recent_news %}
-          <li style="margin-bottom: 0.25rem;">
-            <strong>{{ item.date }}:</strong> {{ item.content }}
-          </li>
-        {% endfor %}
-      </ul>
+        <!-- 右栏：biography 全部内容 -->
+        <div class="column" id="biography" style="margin-left: auto;">
+          <p>
+            My name is Mengwei Lin*. I am a PhD candidate at the <a href='https://www.ub.edu/school-economics/' target="_blank">University of Barcelona </a>(UB) and the <a href='https://www.ieb.ub.edu/en/' target="_blank">Barcelona Institute of Economics</a> (IEB), working with <a href='https://sites.google.com/site/andreuarenasweb/home' target="_blank">Andreu Arenas</a> and <a href='https://sites.google.com/site/ruizvalenjenifer' target="_blank">Jenifer Ruiz-Valenzuela</a> since Spring 2023. I am also on the <a href="https://www.educationeconomics.uzh.ch/en/international-course-program.html" target="_blank">PhD Course Program in Economics of Education</a> at the <a href="https://www.educationeconomics.uzh.ch/en/" target="_blank">University of Zurich</a> from 2024 to 2026.
+          </p>
+          <br>
+          <p>Fields of interests:</p>
+          <ul>
+            <li><strong>Economics of Education</strong> (primary field)</li>
+            <li>Labor and Demographic Economics</li>
+            <li>Cultural Economics</li>
+            <li>Causal Inference: reduced-form & structural methods</li>
+          </ul>
+          <br>
+          <p>
+            I obtained a Master's in Economics (with Distinction) from <a href='https://www.ed.ac.uk/' target="_blank">The University of Edinburgh</a>. Prior to Barcelona, I worked in policy consultancy at the <a href='https://en.cdi.org.cn/' target="_blank">China Development Institute</a> (CDI, Public Policy Center) and as a <a href="popul-trans#2-book-translation--书籍翻译" target="_blank">book translator</a>. 
+          </p>
+          <br>
+          <p>
+            Outside research, I also write <a href="popul-trans#1-popularization--学术科普" target="_blank">public-facing econ articles</a>, and have been actively initiating and organizing <a href='https://lin-mengwei.github.io/activities' target="_blank">academic activities targeting young researchers</a>.
+          </p>
+          <br>
+          <p>
+            * My first name "Mengwei" (孟蔚) has two syllables, <strong>meng</strong> (IPA: /məng/, <a href="https://www.youtube.com/watch?v=VSEbNMwAU1Y" target="_blank">audio here</a>) and <strong>wei</strong> (as the word "way").
+          </p>
 
-      <!-- 渐变遮罩 -->
-      <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 4rem;
-                  background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0.95));">
+          <!-- 按钮 -->
+          <div class="container columns is-centered" style="margin-top: 1.5rem;">
+            <div>
+              <a style="text-decoration: none;" href="http://www.linkedin.com/in/{{site.linkedin_username}}"
+                class="button is-l is-rounded is-uppercase has-text-weight-normal is-black is-outlined" target="_blank"><i class="fas fa-file"></i>&nbsp;curriculum vitae</a>
+            </div>
+            <div>
+              <a style="text-decoration: none;" href="https://ieb.ub.edu/en/researcher/lin-mengwei/"
+                class="button is-l is-rounded is-uppercase has-text-weight-normal is-black is-outlined" target="_blank"><i class="fas fa-file"></i>&nbsp;Institutional Webpage</a>
+            </div>
+          </div>
+
+          <!-- 社交链接 -->
+          <div class="container">
+            <div class="columns is-centered">
+              <div class="column is-narrow" style="display: flex; justify-content: center; align-items: center;">
+                {% unless site.linkedin_username == %}
+                <a href="http://www.linkedin.com/in/{{site.linkedin_username}}" target="_blank" class="has-text-black social-icon">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                {% endunless %}
+
+                {% unless site.bluesky_username == %}
+                <a href="https://bsky.app/profile/{{site.bluesky_username}}.bsky.social" target="_blank" class="has-text-black social-icon">
+                  <i class="fa-brands fa-bluesky"></i>
+                </a>
+                {% endunless %}
+
+                {% unless site.twitter_username == %}
+                <a href="https://twitter.com/intent/user?screen_name={{site.twitter_username}}" target="_blank" class="has-text-black social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                {% endunless %}
+
+                {% unless site.email == %}
+                <a id="contact-button" href="mailto:{{site.email}}" target="_blank" class="has-text-black social-icon">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                {% endunless %}
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
-
-
-</body>
