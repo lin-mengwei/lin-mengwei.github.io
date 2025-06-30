@@ -5,9 +5,9 @@ markdown: kramdown
 
 ---
 
-I initiate and organize academic activities with the goal of creating shared value for the community.
+I initiate and organize academic activities with the goal of creating shared value.
 
-Below are some selected activities I am proud of. If you’re interested in organizing similar events, feel free to reach out—I’d be happy to share my experience! (Click each to expand.)
+Below are some selected activities I am proud of. I'm happy to share my organizational experience; feel free to reach out! (Click each to expand.)
 
 
 
@@ -25,15 +25,17 @@ Below are some selected activities I am proud of. If you’re interested in orga
   </p>
   </summary>
 
-  <p>BESTEPS provides PhD students with comprehensive guidance for <b>key stages of a research project</b>. Through expert-led lectures, the program empowers participants to take the "best steps" toward conducting rigorous research efficiently. (<a href="https://www.ub.edu/school-economics/kick-off-of-the-besteps-with-antonio-cabrales/" target="_blank">UBSE News on the Launch of BESTEPS</a>)</p>
+  <p>Through expert-led lectures, BESTEPS offers PhD students necessary guidance to take "best steps" in different <b>key stages of a research project</b>. (<a href="https://www.ub.edu/school-economics/kick-off-of-the-besteps-with-antonio-cabrales/" target="_blank">UBSE News on the Launch of BESTEPS</a>)</p>
 
-  <p>BESTEPS is financed by a <a href="https://web.ub.edu/en/web/escola-doctorat/" target="_blank">EDUB-funded project</a> for which I am the grant recipient, running during academic years 2024/25 and 2025/26. The design and organization of the program is a joint effort with my PhD colleagues and the <a href="https://www.ub.edu/school-economics/" target="_blank">UBSE</a> staff.</p>
+  <p>BESTEPS is financed by a <a href="https://web.ub.edu/en/web/escola-doctorat/" target="_blank">EDUB-funded project</a> for which I am the grant recipient, running during academic years 2024/25 and 2025/26. This program is a joint effort with my amazing colleagues.</p>
 
   <p>BESTEPS consists of 7 Lectures taught by renowned scholars:</p>
-  <ul>
+  <ul> <strong>Part I: Set Up A Research Project</strong>
     <li><b>Opening Lecture:</b> <a href="https://www.linkedin.com/feed/update/urn:li:activity:7295739310534717440/" target="_blank">Workflows of Economics Research</a> (Prof. Antonio Cabrales)</li>
     <li><b>Lecture 1:</b> <a href="https://www.linkedin.com/feed/update/urn:li:activity:7310955533031682048/" target="_blank">Starting a Feasible Project: Ideas, Literature, Exploratory Analysis</a> (Prof. Libertad Gonzalez)</li>
     <li><b>Lecture 2:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Doing Organized and Replicable Research</a> (Prof. Joan Llull, Data Editor of Econometrica)</li>
+  </ul>
+  <ul> <strong>Part II: Research Products</strong>
     <li><b>Lecture 3:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Graphical Communication: Visualization Practices</a> (Prof. Dirk Foremny & TBD)</li>
     <li><b>Lecture 4:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Communicating Research: Presentations, Posters and Elevator Pitches</a> (TBD)</li>
     <li><b>Lecture 5:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Communicating Research: Crafting a Job Market Paper</a> (TBD)</li>
@@ -69,16 +71,27 @@ Below are some selected activities I am proud of. If you’re interested in orga
   <summary>
     <b>3. Job Market Preperation Process Improvement Plan</b> 
   </summary>
-    <p> The plan aims to <b>better prepare PhD candidates for the Job Market</b> by offering a comprehensive set of activities, including information sessions, planning meetings, package tutoring, mock interviews, mock job market talks. It was development with the invaluable support and advice from <a href="https://mariebeigelman.github.io/" target="_blank">Marie Beigelman</a> and <a href="https://abhinavkhemka.com" target="_blank">Abhinav Khemka</a>. The plan was approved by th Academic Committee, and has been implemented since the academic year 2024/25.</p>
+    <p> The plan aims to <b>better prepare PhD candidates for the Job Market</b> by offering a comprehensive set of activities, including information sessions, planning meetings, package tutoring, mock interviews, mock job market talks. It was development with the invaluable support and advice from JM candidates ahead of me, such as<a href="https://mariebeigelman.github.io/" target="_blank">Marie Beigelman</a>, <a href="https://abhinavkhemka.com" target="_blank">Abhinav Khemka</a>, and Marianna Magagnoli. The plan was approved by th Academic Committee, and has been implemented since the academic year 2024/25.</p>
+    <br>
 </details>
 
 <br>
 <details>
-  <summary><b>4. Applied Econometric Methods Reading Group</b></summary>
+  <summary><b>4. Applied Econ Methods Reading Group</b>
+  
+  <p>
+    <center> 
+      <figure>
+        <img src="assets/images/activities/rg.jpg"> 
+        <figcaption>Fig. Applied Econ Reading Group</figcaption> 
+      </figure>
+    </center>
+  </p>
+  </summary>
 
   <p>The reading group meets regularly to share new methodological advancements in applied micro. We aim to cover <b>newly-developed causal inference methods</b> that are not yet commonly taught in a standard graduate-level econometrics course. I work with <a href="https://ieb.ub.edu/en/researcher/blanco-pineiro-sergio/" target="_blank">Sergio Blanco</a>, the coordinator of the group, and others in planning and organizing the activity.</p>
 
-  <p><b>Topics in 2025 (TBD) include:</b></p>
+  <p><b>Methods in 2025 (TBD) include:</b></p>
   <ul>
     <li>Shift-share & Recentered Instruments</li>
     <li>Staggered DID with Continuous Treatments</li>
