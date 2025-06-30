@@ -39,7 +39,7 @@ a.navbar-item.is-active {
 
     &:hover {
         background-color: rgba($color: #fff, $alpha: 0.25) !important;
-        color: grey;
+        color: white;
     }
 }
 
@@ -109,6 +109,10 @@ a {
             width: 100% !important;     // 强制适应屏幕
             max-width: 100vw !important;
         }
+
+        ul{
+            padding: 0 2rem;
+        }
         
         }
                 
@@ -116,9 +120,11 @@ a {
         
         @media (min-aspect-ratio: 1/1) { // 针对电脑
             max-width: 20vmax;
+            width: 20vw;
             display: flex;
             justify-content: center;
             text-align: center;
+            margin-top: 15%;
             img {
                 border: 0.25rem dotted black;
                 width: 80%;
@@ -140,16 +146,18 @@ a {
         }
     }
 
-    a {
+    
+
+    p {
+        text-align: justify;
+
+        a {
         color: inherit;
         text-decoration: underline;
         target: _blank;
         text-align: justify;
         
-    }
-
-    p {
-        text-align: justify;
+        }
     }
 
     ul {
@@ -225,7 +233,10 @@ a {
         }
 
         @media (min-aspect-ratio: 1/1) {
-            padding: 5%;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 5%;
+            padding-bottom: 1%;
             margin-left: 15%;
             margin-top: none;
 
@@ -242,7 +253,7 @@ a {
         
         h2{
             @media (min-aspect-ratio: 1/1) {
-            padding-right: 4rem
+                padding-right: 2rem;
             }
         }
         
@@ -254,6 +265,10 @@ a {
             min-width: 20vmax;
             margin: 0;
             padding: 0;
+            
+            a {
+                color: #fff !important;
+            }
         }
 
         @media (max-aspect-ratio: 1/1) { 
