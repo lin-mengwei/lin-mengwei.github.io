@@ -251,11 +251,27 @@ a {
         justify-content: center;
         text-align: justify;
         
-        h2{
-            @media (min-aspect-ratio: 1/1) {
+        @media (max-aspect-ratio: 1/1) {
+            ul{
+                padding-right: 0 !important;
+            }
+
+            h2{
+                font-size: 0.9rem;
+                padding-bottom: 0.5rem;
+            }
+        }  
+                
+
+       
+        @media (min-aspect-ratio: 1/1) {
+            h2{    
                 padding-right: 2rem;
+                padding-bottom: 1rem;
             }
         }
+
+        
         
     }
 
