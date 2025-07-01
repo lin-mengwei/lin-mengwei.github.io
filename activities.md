@@ -5,9 +5,11 @@ markdown: kramdown
 
 ---
 
-I initiate and organize academic activities with the goal of creating shared value.
+Here are some selected activities I am proud of as an initiator and organizer. 
 
-Below are some selected activities I am proud of. I'm happy to share my organizational experience; feel free to reach out! (Click each to expand.)
+Happy to share my experience; feel free to reach out.
+
+All for a better community!!
 
 
 
@@ -59,9 +61,9 @@ Below are some selected activities I am proud of. I'm happy to share my organiza
   </p>
   </summary>
 
-  <p>The Ideas Coffees are biweekly sessions, designed for PhD students and Postdocs to talk about <b>newly formed immature ideas</b> in a safe and friendly environment. The main objectives are to receive feedback before starting a project, understand each others' research interests, and foster collaboration. We also host occasional special sessions (e.g., to share data info). </p> 
+  <p>The Ideas Coffees are biweekly sessions for PhD students and Postdocs to discuss <b>newly-formed research ideas</b> in a safe and friendly environment before starting a project. We also host occasional special sessions (e.g., to share data info). </p> 
 
-  <p>This is an innovative event series for junior Economists at <a href="https://www.ub.edu/school-economics/" target="_blank">UBSE</a>, which I initiated with IEB PhD colleagues in Spring 2024. It has received great support from the PhD in Economics Program. I am in charge of the series for AY 2023/24 and 2024/25. (See: <a href="https://www.linkedin.com/posts/universitat-de-barcelona-school-of-economics_economics-phd-research-activity-7316368944271962113-dzn8/" target="_blank">Our recent event post</a>)</p>
+  <p>This is an innovative series for junior Economists at <a href="https://www.ub.edu/school-economics/" target="_blank">UBSE</a>, which I initiated with my PhD colleagues. It has received great support from the PhD in Economics Program. I am in charge of the series for AY 2023/24 and 2024/25. (See: <a href="https://www.linkedin.com/posts/universitat-de-barcelona-school-of-economics_economics-phd-research-activity-7316368944271962113-dzn8/" target="_blank">Our recent event post</a>)</p>
 
   <br>
 </details>
@@ -69,10 +71,14 @@ Below are some selected activities I am proud of. I'm happy to share my organiza
 <br>
 <details>
   <summary>
-    <b>3. Job Market Preperation Process Improvement Plan</b> 
+    <b>3. Job Market Preperation Process Improvement Plan</b>
+    
+    <p> <br>The plan aims to <b>better support and prepare PhD candidates for the Job Market</b> via a comprehensive agenda featuring information sessions, practical toolkits, personalized planning meetings, package tutoring, mock interviews, mock job market talks, etc, throughout the JM season. </p>
   </summary>
-    <p> The plan <b>better prepares PhD candidates for the Job Market</b> through information sessions, personalized planning meetings, package tutoring, mock interviews, mock job market talks, etc. It was developed with invaluable input from JM candidates ahead of me, such as <a href="https://mariebeigelman.github.io/" target="_blank">Marie Beigelman</a>, <a href="https://abhinavkhemka.com" target="_blank">Abhinav Khemka</a>, Marianna Magagnoli, Alex Izquierdo, among others. The plan was approved by th Academic Committee, and has been implemented since the academic year 2024/25.</p>
+
+    <p>It was developed with invaluable input from JM candidates ahead of me, <a href="https://mariebeigelman.github.io/" target="_blank">Marie Beigelman</a>, <a href="https://abhinavkhemka.com" target="_blank">Abhinav Khemka</a>, Marianna Magagnoli, Alex Izquierdo, among others. The plan was approved by the PhD Academic Committee, and has been implemented since the academic year 2024/25.</p>
     <br>
+
 </details>
 
 <br>
