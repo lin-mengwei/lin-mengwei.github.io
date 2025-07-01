@@ -71,7 +71,7 @@ Below are some selected activities I am proud of. I'm happy to share my organiza
   <summary>
     <b>3. Job Market Preperation Process Improvement Plan</b> 
   </summary>
-    <p> The plan aims to <b>better prepare PhD candidates for the Job Market</b> by offering a comprehensive set of activities, including information sessions, planning meetings, package tutoring, mock interviews, mock job market talks. It was development with the invaluable support and advice from JM candidates ahead of me, such as<a href="https://mariebeigelman.github.io/" target="_blank">Marie Beigelman</a>, <a href="https://abhinavkhemka.com" target="_blank">Abhinav Khemka</a>, and Marianna Magagnoli. The plan was approved by th Academic Committee, and has been implemented since the academic year 2024/25.</p>
+    <p> The plan <b>better prepares PhD candidates for the Job Market</b> through information sessions, personalized planning meetings, package tutoring, mock interviews, mock job market talks, etc. It was developed with invaluable input from JM candidates ahead of me, such as <a href="https://mariebeigelman.github.io/" target="_blank">Marie Beigelman</a>, <a href="https://abhinavkhemka.com" target="_blank">Abhinav Khemka</a>, Marianna Magagnoli, Alex Izquierdo, among others. The plan was approved by th Academic Committee, and has been implemented since the academic year 2024/25.</p>
     <br>
 </details>
 
@@ -89,7 +89,7 @@ Below are some selected activities I am proud of. I'm happy to share my organiza
   </p>
   </summary>
 
-  <p>The reading group meets regularly to share new methodological advancements in applied micro. We aim to cover <b>newly-developed causal inference methods</b> that are not yet commonly taught in a standard graduate-level econometrics course. I work with <a href="https://ieb.ub.edu/en/researcher/blanco-pineiro-sergio/" target="_blank">Sergio Blanco</a>, the coordinator of the group, and others in planning and organizing the activity.</p>
+  <p>The reading group meets monthly to share new methodological advancements in applied micro. We aim to cover <b>newly-developed causal inference methods</b> that are not yet commonly taught in a standard graduate-level econometrics course. I work with <a href="https://ieb.ub.edu/en/researcher/blanco-pineiro-sergio/" target="_blank">Sergio Blanco</a>, the coordinator of the group, and others in planning and organizing the activity.</p>
 
   <p><b>Methods in 2025 (TBD) include:</b></p>
   <ul>
