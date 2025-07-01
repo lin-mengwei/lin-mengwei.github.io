@@ -61,7 +61,7 @@ Below are some selected activities I am proud of. I'm happy to share my organiza
 
   <p>The Ideas Coffees are biweekly sessions, designed for PhD students and Postdocs to talk about <b>newly formed immature ideas</b> in a safe and friendly environment. The main objectives are to receive feedback before starting a project, understand each others' research interests, and foster collaboration. We also host occasional special sessions (e.g., to share data info). </p> 
 
-  <p>This is an innovative event series for junior Economics researchers at <a href="https://www.ub.edu/school-economics/" target="_blank">UBSE</a>, which I initiated with IEB PhD colleagues in Spring 2024. It has received great support from the PhD in Economics Program. I have been in charge of the series in academic years 2023/24 and 2024/25. (See: <a href="https://www.linkedin.com/posts/universitat-de-barcelona-school-of-economics_yesterday-we-concluded-the-final-session-activity-7275801743379046401-EGbN/" target="_blank">Our event post, Dec. 2024</a>)</p>
+  <p>This is an innovative event series for junior Economists at <a href="https://www.ub.edu/school-economics/" target="_blank">UBSE</a>, which I initiated with IEB PhD colleagues in Spring 2024. It has received great support from the PhD in Economics Program. I am in charge of the series for AY 2023/24 and 2024/25. (See: <a href="https://www.linkedin.com/posts/universitat-de-barcelona-school-of-economics_economics-phd-research-activity-7316368944271962113-dzn8/" target="_blank">Our recent event post</a>)</p>
 
   <br>
 </details>
@@ -89,7 +89,7 @@ Below are some selected activities I am proud of. I'm happy to share my organiza
   </p>
   </summary>
 
-  <p>The reading group meets monthly to share new methodological advancements in applied micro. We aim to cover <b>newly-developed causal inference methods</b> that are not yet commonly taught in a standard graduate-level econometrics course. I work with <a href="https://ieb.ub.edu/en/researcher/blanco-pineiro-sergio/" target="_blank">Sergio Blanco</a>, the coordinator of the group, and others in planning and organizing the activity.</p>
+  <p>The reading group meets monthly to share new methodological advancements in applied micro. We aim to cover <b>newly-developed causal inference methods</b> that are not yet commonly taught in a standard graduate-level econometrics course. It is planed and organized by Sergio Blanco, Cristina Aranzana,  Cecilia Ramirez, and myself, and supported by the Department of Public Economics and the IEB.</p>
 
   <p><b>Methods in 2025 (TBD) include:</b></p>
   <ul>
