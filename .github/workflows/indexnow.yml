@@ -2,6 +2,8 @@ name: Ping IndexNow
 
 on:
   push:
+    branches:
+      - master
 
 jobs:
   notify:
