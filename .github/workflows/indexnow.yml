@@ -1,4 +1,4 @@
-name: Ping IndexNow
+name: Bing IndexNow
 
 on:
   push:
