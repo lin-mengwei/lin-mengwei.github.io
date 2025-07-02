@@ -1,0 +1,12 @@
+name: Ping IndexNow
+
+on:
+  push:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping IndexNow
+        run: |
+          curl "https://www.bing.com/indexnow?url=https://lin-mengwei.github.io/&key=95bd4b9e311b4bc9854f635b96ca6a6e"
