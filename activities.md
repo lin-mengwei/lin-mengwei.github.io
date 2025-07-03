@@ -99,9 +99,9 @@ All for a better community!!
 
   <p><b>Methods in 2025 (TBD) include:</b></p>
   <ul>
+    <li>Difference in Discontinuities</li>
     <li>Shift-share & Recentered Instruments</li>
     <li>Staggered DID with Continuous Treatments</li>
-    <li>Difference in Discontinuities</li>
     <li>...</li>
   </ul>
   <br>
