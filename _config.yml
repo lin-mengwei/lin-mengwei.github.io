@@ -16,16 +16,16 @@ description: Welcome! <br><br> I am an applied micro and education economist.<br
 site-image: /assets/images/image.jpg
 # Keywords of the Site
 site-keywords: 
-  - Mengwei Lin
-  - 林孟蔚
-  - economics
-  - economics of education
-  - applied economics
-  - Barcelona
-  - 巴塞罗那大学
-  - education
-  - Mengwei
-  - 孟蔚
+  - Mengwei Lin;
+  - 林孟蔚;
+  - economics;
+  - economics of education;
+  - applied economics;
+  - Barcelona;
+  - 巴塞罗那大学;
+  - education;
+  - Mengwei;
+  - 孟蔚;
 # URL for the Image of custom Favicon
 favicon-url: /assets/images/image.jpg
 
@@ -39,7 +39,7 @@ email: mengwei.lin@ub.edu
 twitter_username: LIN_Mengwei
 #instagram_username: / 
 linkedin_username: lin-mengwei/?locale=en
-bluesky_username: mengweilin.bsky.social
+bluesky_username: mengweilin
 #github_username: /
 #youtube_channel_id: /
 #reddit_username: /
