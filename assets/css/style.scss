@@ -696,7 +696,7 @@ a {
   }
 
  // 研究领域的标签颜色
- 
+
     .tag-economics-of-education {
       background-color: #C9DDF2;
       color: #2B3E50;
@@ -858,11 +858,19 @@ a {
 
       @media (min-aspect-ratio: 1/1) {
         .hero-body {
-          padding-left: 18%;  
-          padding-right: 18%;
+          padding-left: 15%;  
+          padding-right: 15%;
           text-align: justify;
         }
         
+        details {
+            p {
+          padding-left: 5%;  
+          padding-right: 5%;
+          text-align: justify;
+        }
+        }
+
         details summary {
           margin-left: 7%;
           margin-right: 7%;
@@ -915,8 +923,8 @@ a {
         }
 
         p {
-          padding-left: 7%;  
-          padding-right: 7%;
+          padding-left: 0%;  
+          padding-right: 0%;
           text-align: justify;
         }
 
