@@ -38,10 +38,12 @@
       <p class="mt-1">
         {% assign tag_list = include.tags | split: "," %}
         {% for tag in tag_list %}
-          <span class="tag is-info is-light mr-1">{{ tag | strip }}</span>
+          {% assign tag_class = tag | strip | downcase | replace: ' ', '-' %}
+          <span class="tag tag-{{ tag_class }} mr-1">{{ tag | strip }}</span>
         {% endfor %}
       </p>
       {% endif %}
+
     </div>
 
     {% if include.image1 and include.image2 %}
