@@ -35,7 +35,7 @@ All for a better community!!
   <ul> <strong>Part I: Set Up A Research Project</strong>
     <li><b>Opening Lecture:</b> <a href="https://www.linkedin.com/posts/antonio-cabrales-7690707_besteps-openinglecture-econphdlife-activity-7295808529393750017-sdAV" target="_blank">Workflows of Economics Research</a> (Antonio Cabrales)</li>
     <li><b>Lecture 1:</b> <a href="https://www.linkedin.com/feed/update/urn:li:activity:7310955533031682048/" target="_blank">Starting a Feasible and Promising Project</a> (Libertad Gonzalez)</li>
-    <li><b>Lecture 2:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Doing Organized and Replicable Research</a> (Joan Llull, Data Editor of Econometrica)</li>
+    <li><b>Lecture 2:</b> <a href="https://www.linkedin.com/posts/universitat-de-barcelona-school-of-economics_besteps-openinglecture-econphdlife-activity-7325473038680911874-Axx2" target="_blank">Doing Organized and Replicable Research</a> (Joan Llull, Data Editor of Econometrica)</li>
   </ul>
   <ul> <strong>Part II: Research Products</strong>
     <li><b>Lecture 3:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Visualization: Strategies and Practices</a> (Dirk Foremny & TBD)</li>
