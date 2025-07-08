@@ -33,14 +33,14 @@ All for a better community!!
 
   <p>BESTEPS consists of 7 Lectures taught by renowned scholars:</p>
   <ul> <strong>Part I: Set Up A Research Project</strong>
-    <li><b>Opening Lecture:</b> <a href="https://www.linkedin.com/feed/update/urn:li:activity:7295739310534717440/" target="_blank">Workflows of Economics Research</a> (Prof. Antonio Cabrales)</li>
-    <li><b>Lecture 1:</b> <a href="https://www.linkedin.com/feed/update/urn:li:activity:7310955533031682048/" target="_blank">Starting a Feasible Project: Ideas, Literature, Exploratory Analysis</a> (Prof. Libertad Gonzalez)</li>
-    <li><b>Lecture 2:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Doing Organized and Replicable Research</a> (Prof. Joan Llull, Data Editor of Econometrica)</li>
+    <li><b>Opening Lecture:</b> <a href="https://www.linkedin.com/feed/update/urn:li:activity:7295739310534717440/" target="_blank">Workflows of Economics Research</a> (Antonio Cabrales)</li>
+    <li><b>Lecture 1:</b> <a href="https://www.linkedin.com/feed/update/urn:li:activity:7310955533031682048/" target="_blank">Starting a Feasible and Promising Project</a> (Libertad Gonzalez)</li>
+    <li><b>Lecture 2:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Doing Organized and Replicable Research</a> (Joan Llull, Data Editor of Econometrica)</li>
   </ul>
   <ul> <strong>Part II: Research Products</strong>
-    <li><b>Lecture 3:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Graphical Communication: Visualization Practices</a> (Prof. Dirk Foremny & TBD)</li>
-    <li><b>Lecture 4:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Communicating Research: Presentations, Posters and Elevator Pitches</a> (TBD)</li>
-    <li><b>Lecture 5:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Communicating Research: Crafting a Job Market Paper</a> (TBD)</li>
+    <li><b>Lecture 3:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Visualization: Strategies and Practices</a> (Dirk Foremny & TBD)</li>
+    <li><b>Lecture 4:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Presentations: How to give a talk and how to benefit</a> (TBD)</li>
+    <li><b>Lecture 5:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Crafting a Job Market Paper</a> (TBD)</li>
     <li><b>Closing Lecture:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Publication Experiences: Mindset and Strategy</a> (TBD)</li>
   </ul>
   <br>
@@ -101,7 +101,7 @@ All for a better community!!
   <ul>
     <li>Difference in Discontinuities</li>
     <li>Shift-share & Recentered Instruments</li>
-    <li>Staggered DID with Continuous Treatments</li>
+    <li>DID with Continuous Treatments</li>
     <li>...</li>
   </ul>
   <br>
