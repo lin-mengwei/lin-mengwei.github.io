@@ -20,7 +20,7 @@ All for a better community!!
   <p>
     <center> 
       <figure>
-        <img src="assets/images/activities/BESTEPS1.jpg"> 
+        <img src="assets/images/activities/BESTEPS1.webp"> 
         <figcaption>Fig. BESTEPS Opening Lecture</figcaption> 
       </figure>
     </center>
@@ -54,7 +54,7 @@ All for a better community!!
   <p>
     <center> 
       <figure>
-        <img src="assets/images/activities/coffee1.jpg"> 
+        <img src="assets/images/activities/coffee1.webp"> 
         <figcaption>Fig. PhD Ideas Coffee Session</figcaption> 
       </figure>
     </center>
