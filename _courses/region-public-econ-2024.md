@@ -1,6 +1,6 @@
 ---
 title: Regional and Local Public Economics (Spring 2025)
-post-image: "https://lin-mengwei.github.io/assets/images/PublicFinance1.webp"
+post-image: "https://lin-mengwei.github.io/assets/images/PublicFinance.png"
 image-source:  
 layout: course
 role: Lecturer
