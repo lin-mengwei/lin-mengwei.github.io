@@ -17,7 +17,7 @@ books:
       description: "<b>Translated From</b>: Schwarz, Christina V., Cynthia Passmore, and Brian J. Reiser. <i>Helping Students Make Sense of the World Using Next Generation Science and Engineering Practices</i>. NSTA Press, 2017. "
 
     - title: "《通识笔译：从读写到翻译》，清华大学出版社，即将出版。 <br> <strong style='font-weight: normal'><i>Translation Basics: Reading, Writing & Translation</i>, Tsinghua Univeisty Press, Forthcoming</strong>"
-      image: "/assets/images/cover.png"
+      image: "/assets/images/cover.webp"
       link: "popul-trans#2-book-translation--书籍翻译"
       description: "<b>Co-author</b>: Ming (Cynthia) LI | 与<a href='https://sfl.szu.edu.cn/info/1232/4264.htm' style='color: inherit; font-weight: normal; text-decoration:underline !important' target='_blank'>李明</a>合著 <br> <b>Description</b>: Our book offers an introduction to translation for Chinese-English proficient professionals outside translation-related fields, helping them develop essential translation skills while integrating their expertise.  "
 ---
