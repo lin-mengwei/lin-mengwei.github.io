@@ -251,6 +251,12 @@ a {
         justify-content: center;
         text-align: justify;
         
+        a {
+            color: inherit; 
+            text-decoration: underline;
+            target: "_blank";
+        }
+
         @media (max-aspect-ratio: 1/1) {
             ul{
                 padding-right: 0 !important;
