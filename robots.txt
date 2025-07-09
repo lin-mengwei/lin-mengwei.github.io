@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /notes/
+Sitemap: http://lin-mengwei.github.io/sitemap.xml
