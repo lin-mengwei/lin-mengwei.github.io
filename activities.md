@@ -20,7 +20,7 @@ All for a better community!!
   <p>
     <center> 
       <figure>
-        <img src="assets/images/activities/BESTEPS1.webp" alt="BESTEPS_IMG"> 
+        <img src="assets/images/activities/BESTEPS1.webp" width="1152" height="768" alt="BESTEPS_IMG"> 
         <figcaption>Fig. BESTEPS Opening Lecture</figcaption> 
       </figure>
     </center>
@@ -54,7 +54,7 @@ All for a better community!!
   <p>
     <center> 
       <figure>
-        <img src="assets/images/activities/coffee1.webp" alt="COFFEE_IMG"> 
+        <img src="assets/images/activities/coffee1.webp" width="1391" height="768" alt="COFFEE_IMG"> 
         <figcaption>Fig. PhD Ideas Coffee Session</figcaption> 
       </figure>
     </center>
@@ -88,7 +88,7 @@ All for a better community!!
   <p>
     <center> 
       <figure>
-        <img src="assets/images/activities/rg.jpg" alt="RG_IMG"> 
+        <img src="assets/images/activities/rg.jpg" width="1365" height="768" alt="RG_IMG"> 
         <figcaption>Fig. Applied Econ Reading Group</figcaption> 
       </figure>
     </center>
