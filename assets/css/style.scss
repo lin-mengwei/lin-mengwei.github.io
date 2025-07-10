@@ -859,18 +859,24 @@ a {
         figure {
             
         }
-        img { 
-          max-width: 100%;
-          height: auto;
-          display: block;
+        
+        img{
+             max-width: 100%;
+              height: auto;
+              display: block;
 
-          background-color: white;
-          padding: 1rem;
-          
-          border-radius: 8px; 
-          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-          transition: transform 0.3s ease;
-          }
+        }
+
+        figure.act_fig
+            img { 
+              background-color: white;
+              padding: 1rem;
+              
+              border-radius: 8px; 
+              box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+              transition: transform 0.3s ease;
+            }
+        
       }
         ul {
             margin-left: 10%;

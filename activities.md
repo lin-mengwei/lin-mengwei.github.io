@@ -19,7 +19,7 @@ All for a better community!!
 
   <p>
     <center> 
-      <figure>
+      <figure class="act_fig">
         <img src="assets/images/activities/BESTEPS1.webp" width="1152" height="768" alt="BESTEPS_IMG"> 
         <figcaption>Fig. BESTEPS Opening Lecture</figcaption> 
       </figure>
@@ -32,7 +32,7 @@ All for a better community!!
   <p>BESTEPS is financed by a <a href="https://web.ub.edu/en/web/escola-doctorat/" target="_blank">EDUB-funded project</a> for which I am the grant recipient, running during academic years 2024/25 and 2025/26. This program is a joint effort with my amazing colleagues.</p>
 
   <p>BESTEPS consists of 7 Lectures taught by renowned scholars:</p>
-  <ul> <strong>Part I: Set Up A Research Project</strong>
+  <ul> <strong>Part I: Set Up A Research Project</strong> <span style="background-color: red; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.6rem; font-weight: bold;">Lecture Notes upon Request</span> 
     <li><b>Opening Lecture:</b> <a href="https://www.linkedin.com/posts/antonio-cabrales-7690707_besteps-openinglecture-econphdlife-activity-7295808529393750017-sdAV" target="_blank">Workflows of Economics Research</a> (Antonio Cabrales)</li>
     <li><b>Lecture 1:</b> <a href="https://www.linkedin.com/feed/update/urn:li:activity:7310955533031682048/" target="_blank">Starting a Feasible and Promising Project</a> (Libertad Gonzalez)</li>
     <li><b>Lecture 2:</b> <a href="https://www.linkedin.com/posts/universitat-de-barcelona-school-of-economics_besteps-openinglecture-econphdlife-activity-7325473038680911874-Axx2" target="_blank">Doing Organized and Replicable Research</a> (Joan Llull, Data Editor of Econometrica)</li>
@@ -53,7 +53,7 @@ All for a better community!!
 
   <p>
     <center> 
-      <figure>
+      <figure class="act_fig">
         <img src="assets/images/activities/coffee1.webp" width="1391" height="768" alt="COFFEE_IMG"> 
         <figcaption>Fig. PhD Ideas Coffee Session</figcaption> 
       </figure>
@@ -87,7 +87,7 @@ All for a better community!!
   
   <p>
     <center> 
-      <figure>
+      <figure class="act_fig">
         <img src="assets/images/activities/rg.jpg" width="1365" height="768" alt="RG_IMG"> 
         <figcaption>Fig. Applied Econ Reading Group</figcaption> 
       </figure>
