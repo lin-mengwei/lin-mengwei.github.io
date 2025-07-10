@@ -1,12 +1,23 @@
 <head>
     {% include meta.html %}
     
-    <link rel="preload" as="style" href="{% if site.baseurl %}{{site.baseurl}}{% else %}{% endif %}/assets/css/style.css" onload="this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{% if site.baseurl %}{{site.baseurl}}{% else %}{% endif %}/assets/css/style.css"></noscript>
+    <!-- bulma -->
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"></noscript>
 
+    <!-- 自定义样式 -->
+    <link rel="preload" as="style" href="{{ '/assets/css/style.css' | relative_url }}" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"></noscript>
 
+    <!-- 字体优化 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" crossorigin="anonymous" defer></script>
 
+    <!-- Favicon -->
     <link rel="shortcut icon" href="{% if site.favicon-url %}{{site.favicon-url}}{% else %}{{ 'assets/images/logo.png' | absolute_url }}{% endif %}" type="image/x-icon">
     
 </head>
