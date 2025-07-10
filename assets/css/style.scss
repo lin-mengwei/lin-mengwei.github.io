@@ -76,14 +76,10 @@ a {
 }
 .title {
     margin: auto 0.75rem!important;
-    font-size: 3rem;
-    line-height: 1.2;
     min-height: 4.2rem; /* 估算行高，防止切换字体高度变化 */
 }
 .subtitle {
     letter-spacing: 0.25rem;
-    font-size: 1.5rem;
-    line-height: 1;
     min-height: 2.5rem;  /* 保持位置稳定 */
 }
 
