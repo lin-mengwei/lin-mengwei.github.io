@@ -95,7 +95,7 @@ All for a better community!!
   </p>
   </summary>
 
-  <p>The reading group meets monthly to share new methodological advancements in applied micro. We aim to cover <b>newly-developed causal inference methods</b> that are not yet commonly taught in a standard graduate-level econometrics course. It is planed and organized by Sergio Blanco, Cristina Aranzana,  Cecilia Ramirez, and myself, and supported by the Department of Public Economics and the IEB.</p>
+  <p>The reading group discuss useful <b>newly-developed causal inference methods</b> not yet commonly covered in standard graduate-level econometrics. It is planed and organized by Sergio Blanco, Cristina Aranzana, Cecilia Ramirez, and myself, and supported by the Department of Public Economics and the IEB.</p>
 
   <p><b>Methods in 2025 (TBD) include:</b></p>
   <ul>
