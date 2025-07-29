@@ -11,12 +11,12 @@ books:
       link: "https://book.douban.com/subject/36211902/"
       description: "<b>Translated From</b>: Koppl, Roger. <i>Expert Failure</i>. Cambridge University Press, 2018. <br> <b>Co-translator</b>: Haochi CHEN | 与陈浩驰合译"
       
-    - title: "《科学与工程实践：引导学生在探索中理解世界》，教育科学出版社，2025年。"
+    - title: "《科学与工程实践：引导学生在探索中理解世界》，教育科学出版社，即将出版。"
       image: "/assets/images/practices.webp"
       link: "https://my.nsta.org/resource/105619/helping-students-make-sense-of-the-world-using-next-generation-science-and-engine"
       description: "<b>Translated From</b>: Schwarz, Christina V., Cynthia Passmore, and Brian J. Reiser. <i>Helping Students Make Sense of the World Using Next Generation Science and Engineering Practices</i>. NSTA Press, 2017. "
 
-    - title: "《通识笔译：从读写到翻译》，清华大学出版社，即将出版。 <br> <strong style='font-weight: normal'><i>Translation Basics: Reading, Writing & Translation</i>, Tsinghua Univeisty Press, Forthcoming</strong>"
+    - title: "《通识笔译：从读写到翻译》，清华大学出版社，已交稿。 <br> <strong style='font-weight: normal'><i>Translation Basics: Reading, Writing & Translation</i>, Tsinghua Univeisty Press, Forthcoming</strong>"
       image: "/assets/images/cover.webp"
       link: "popul-trans#2-book-translation--书籍翻译"
       description: "<b>Co-author</b>: Ming (Cynthia) LI | 与<a href='https://sfl.szu.edu.cn/info/1232/4264.htm' style='color: inherit; font-weight: normal; text-decoration:underline !important' target='_blank'>李明</a>合著 <br> <b>Description</b>: Our book offers an introduction to translation for Chinese-English proficient professionals outside translation-related fields, helping them develop essential translation skills while integrating their expertise.  "
@@ -58,7 +58,7 @@ This is also part of my own academic training, thus focusing more on education, 
 
 Translation has been my routine activity during long breaks since I became a certified translator in 2017. I aim to "sculpt the text" (my translation philosophy), although it is often hard to achieve. Specializing in book translations in the Social Sciences, my published works are in Economics & Education, aligning with my own academic interests.
 
-翻译是我休假时的常规活动。考虑自身语言背景，我目前主要进行英译汉，有机会也希望尝试汉译英。我主攻社会科学领域书籍翻译，目前已出版译作涵盖经济学和教育学，与自己的研究领域有所关联。
+翻译是我休假时的常规活动。基于自身语言背景，我目前主要进行英译汉，有机会也希望尝试汉译英。我主攻社会科学领域书籍翻译，目前已出版译作涵盖经济学和教育学，与自己的研究领域有所关联。
 
 #### <b>List of Publications \| 译作与著作：</b>
 
