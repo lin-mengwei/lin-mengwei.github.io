@@ -34,7 +34,7 @@ All for a better community!!
   <p>BESTEPS is financed by a <a href="https://web.ub.edu/en/web/escola-doctorat/" target="_blank">EDUB-funded project</a> for which I am the grant recipient, running during academic years 2024/25 and 2025/26. This program is a joint effort with my amazing colleagues.</p>
 
   <p>BESTEPS consists of 7 Lectures taught by renowned scholars:</p>
-  <ul> <strong>Part I: Set Up A Research Project</strong> <span style="background-color: red; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.6rem; font-weight: bold;">Lecture Notes upon Request</span> 
+  <ul> <strong>Part I: Set Up A Research Project</strong>
     <li><b>Opening Lecture:</b> <a href="https://www.linkedin.com/posts/antonio-cabrales-7690707_besteps-openinglecture-econphdlife-activity-7295808529393750017-sdAV" target="_blank">Workflows of Economics Research</a> (Antonio Cabrales)</li>
     <li><b>Lecture 1:</b> <a href="https://www.linkedin.com/feed/update/urn:li:activity:7310955533031682048/" target="_blank">Starting a Feasible and Promising Project</a> (Libertad Gonzalez)</li>
     <li><b>Lecture 2:</b> <a href="https://www.linkedin.com/posts/universitat-de-barcelona-school-of-economics_besteps-openinglecture-econphdlife-activity-7325473038680911874-Axx2" target="_blank">Doing Organized and Replicable Research</a> (Joan Llull, Data Editor of Econometrica)</li>
@@ -45,6 +45,7 @@ All for a better community!!
     <li><b>Lecture 5:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Crafting a Job Market Paper</a> (TBD)</li>
     <li><b>Closing Lecture:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Publication Experiences: Mindset and Strategy</a> (TBD)</li>
   </ul>
+  <p>We have put together the <a href="https://www.ub.edu/school-economics/wp-content/uploads/2025/07/BESTEPS_Lectures.pdf" target="_blank">BESTESP Guide</a>(click to access) as a public good, based on lecture notes of these lectures.</p><span style="background-color: red; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.6rem; font-weight: bold;">New!</span> 
   <br>
 
 </details>
