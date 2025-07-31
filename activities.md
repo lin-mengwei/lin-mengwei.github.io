@@ -5,9 +5,11 @@ markdown: kramdown
 
 ---
 
-Here are some selected activities I am proud of as an initiator and organizer. 
+Together with my colleagues at the UBSE and the PhD in Economics at the UB, we design a PhD <a href="https://www.ub.edu/school-economics/phd-students-training/" target="_blank">training framework</a>>. These are fully demand-driven efforts to create the training I always wanted to receive.
 
-Happy to share my experience; feel free to reach out.
+Below are some selected activities (within this framework) I am proud of as an initiator and organizer. 
+
+Happy to share my organizational experience; feel free to reach out.
 
 All for a better community!!
 
