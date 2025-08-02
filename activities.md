@@ -40,12 +40,12 @@ All for a better community!!
     <li><b>Lecture 2:</b> <a href="https://www.linkedin.com/posts/universitat-de-barcelona-school-of-economics_besteps-openinglecture-econphdlife-activity-7325473038680911874-Axx2" target="_blank">Doing Organized and Replicable Research</a> (Joan Llull, Data Editor of Econometrica)</li>
   </ul>
   <ul> <strong>Part II: Research Products</strong>
-    <li><b>Lecture 3:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Visualization: Strategies and Practices</a> (Dirk Foremny & TBD)</li>
-    <li><b>Lecture 4:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Presentations: How to give a talk and how to benefit</a> (TBD)</li>
+    <li><b>Lecture 3:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Visualizing Economics Reseach: Strategies and Practices </a> (Dirk Foremny & Guillermo Marin, Barcelona Supercomputing Center)</li>
+    <li><b>Lecture 4:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Presentations: How to give a talk and how to benefit</a> (Maia Guell)</li>
     <li><b>Lecture 5:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Crafting a Job Market Paper</a> (TBD)</li>
     <li><b>Closing Lecture:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Publication Experiences: Mindset and Strategy</a> (TBD)</li>
   </ul>
-  <p>We have put together the <a href="https://www.ub.edu/school-economics/wp-content/uploads/2025/07/BESTEPS_Lectures.pdf" target="_blank">BESTESP Guide</a>(click to access) as a public good, based on lecture notes of these lectures.</p><span style="background-color: red; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.6rem; font-weight: bold;">New!</span> 
+  <p><span style="background-color: red; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.6rem; font-weight: bold;">New!</span> We have put together the <a href="https://www.ub.edu/school-economics/wp-content/uploads/2025/07/BESTEPS_Lectures.pdf" target="_blank">BESTESP Guide</a>(click to access) as a public good, based on lecture notes of these lectures.</p>
   <br>
 
 </details>
