@@ -5,11 +5,9 @@ markdown: kramdown
 
 ---
 
-Together with my colleagues at the UBSE and the PhD in Economics Program at the UB, we design a <a href="https://www.ub.edu/school-economics/phd-students-training/" target="_blank">PhD Training Framework</a>. These are fully demand-driven efforts to create the training we always wanted to receive.
+Together with my colleagues at the UBSE and the UB Economics PhD Program, we design a <a href="https://www.ub.edu/school-economics/phd-students-training/" target="_blank">PhD Training Framework</a>--fully demand-driven efforts to create the training we always wanted to receive.
 
-Below are some selected activities (within this framework) I am proud of as an initiator and organizer. They have been crucial support for both my peers and myself.
-
-Happy to share my organizational experience; feel free to reach out.
+Below are some activities (within this framework) I am proud of as an initiator and organizer. They have been crucial support for both my peers and myself. Happy to share my organizational experience; feel free to reach out.
 
 All for a better community!!
 
@@ -45,7 +43,7 @@ All for a better community!!
     <li><b>Lecture 5:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Crafting a Job Market Paper</a> (TBD)</li>
     <li><b>Closing Lecture:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Publication Experiences: Mindset and Strategy</a> (TBD)</li>
   </ul>
-  <p><span style="background-color: red; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.6rem; font-weight: bold;">New!</span> We have put together the <a href="https://www.ub.edu/school-economics/wp-content/uploads/2025/07/BESTEPS_Lectures.pdf" target="_blank">BESTESP Guide</a>(click to access) as a public good, based on lecture notes of these lectures.</p>
+  <p><span style="background-color: red; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.6rem; font-weight: bold;">New!</span> We have put together the <a href="https://www.ub.edu/school-economics/wp-content/uploads/2025/07/BESTEPS_Lectures.pdf" target="_blank">BESTESP Guide</a> (click to access) as a public good, based on lecture notes of these lectures.</p>
   <br>
 
 </details>
