@@ -40,8 +40,8 @@ All for a better community!!
     <li><b>Lecture 2:</b> <a href="https://www.linkedin.com/posts/universitat-de-barcelona-school-of-economics_besteps-openinglecture-econphdlife-activity-7325473038680911874-Axx2" target="_blank">Doing Organized and Replicable Research</a> (Joan Llull, Data Editor of Econometrica)</li>
   </ul>
   <ul> <strong>Part II: Research Products</strong>
-    <li><b>Lecture 3:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Visualizing Economics Reseach: Strategies and Practices </a> (Dirk Foremny & Guillermo Marin, Barcelona Supercomputing Center)</li>
-    <li><b>Lecture 4:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Presentations: How to give a talk and how to benefit</a> (Maia Guell)</li>
+    <li><b>Lecture 3:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Visualizing Economics Reseach: Strategies and Practices </a> (Dirk Foremny, UB & IEB; Guillermo Marin, Barcelona Supercomputing Center)</li>
+    <li><b>Lecture 4:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Presentations: How to give a talk and how to benefit</a> (Maia Guell, Edinburgh and CUNEF)</li>
     <li><b>Lecture 5:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Crafting a Job Market Paper</a> (TBD)</li>
     <li><b>Closing Lecture:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Publication Experiences: Mindset and Strategy</a> (TBD)</li>
   </ul>
