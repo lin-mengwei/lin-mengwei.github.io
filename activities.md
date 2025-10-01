@@ -39,7 +39,7 @@ All for a better community!!
   </ul>
   <ul> <strong>Part II: Research Products</strong>
     <li><b>Lecture 3:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Visualizing Economics Reseach: Strategies and Practices </a> (Dirk Foremny, UB & IEB; Guillermo Marin, Barcelona Supercomputing Center)</li>
-    <li><b>Lecture 4:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Presentations: How to give a talk and how to benefit</a> (Maia Guell, Edinburgh and CUNEF)</li>
+    <li><b>Lecture 4:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Presentations: How to give a talk and how to benefit</a> (TBD)</li>
     <li><b>Lecture 5:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Crafting a Job Market Paper</a> (Albrecht Glitz, UPF & BSE)</li>
     <li><b>Closing Lecture:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Publication Experiences: Mindset and Strategy</a> (TBD)</li>
   </ul>
