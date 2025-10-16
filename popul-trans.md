@@ -52,6 +52,8 @@ This is also part of my own academic training, thus focusing more on education, 
 <br><i>Can Cash Transfers Increase Birth Rates? (CEC Post No. 3461)</i>, with <a href='https://weizhengecon.wixsite.com/website' style='color: inherit; font-weight: normal; text-decoration: underline !important;' target='_blank'>Wei ZHENG</a>
 9. [越急越穷：耐心为何能增强国力？（香樟经济学术圈）](https://mp.weixin.qq.com/s/eWSIAq1v_Ch5q_P8F1yu6A) | 与<a href='https://sites.google.com/view/zhenninghan' style='color: inherit; font-weight: normal; text-decoration: underline !important;' target='_blank'>韩振宁</a>合作
 <br><i> Rushing to Fall Behind: How Patience Fuels Growth (CEC Post No. 3491)</i>, with <a href='https://sites.google.com/view/zhenninghan' style='color: inherit; font-weight: normal; text-decoration: underline !important;' target='_blank'>Zhenning HAN</a>
+10. [“翻车”之后，何去何从？（香樟经济学术圈）](https://mp.weixin.qq.com/s/0s9M5IC_UEmiRUOF7fgrxQ) | 与柳佳炜合作
+<br><i> Where to Go after Professional Discipline? (CEC Post No. 3491)</i>, with Jiawei LIU
 <br>
 
 ## 2. Book Translation | 书籍翻译
