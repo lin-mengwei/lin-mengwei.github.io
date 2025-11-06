@@ -39,9 +39,9 @@ All for a better community!!
   </ul>
   <ul> <strong>Part II: Research Products</strong>
     <li><b>Lecture 3:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Visualizing Economics Reseach: Strategies and Practices </a> (Dirk Foremny, UB & IEB; Guillermo Marin, Barcelona Supercomputing Center)</li>
-    <li><b>Lecture 4:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Presentations: How to give a talk and how to benefit</a> (TBD)</li>
+    <li><b>Lecture 4:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Presentations: How to give a talk and how to benefit from one</a> (Jenifer) Ruiz-Valenzuela, UB & IEB</li>
     <li><b>Lecture 5:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Crafting a Job Market Paper</a> (Albrecht Glitz, UPF & BSE)</li>
-    <li><b>Closing Lecture:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Publication Experiences: Mindset and Strategy</a> (TBD)</li>
+    <li><b>Closing Lecture:</b> <a href="https://lin-mengwei.github.io/activities" target="_blank">Research Products in Economics</a> (Diego Puga, CEMFI)</li>
   </ul>
   <p><span style="background-color: red; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.6rem; font-weight: bold;">New!</span> We have put together the <a href="https://www.ub.edu/school-economics/wp-content/uploads/2025/07/BESTEPS_Lectures.pdf" target="_blank">BESTESP Guide</a> (click to access) as a public good, based on lecture notes of these lectures.</p>
   <br>
