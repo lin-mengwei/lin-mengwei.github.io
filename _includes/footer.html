@@ -26,8 +26,8 @@
             </div>
 
             <!--Link Section-->
-            <div class="column has-text-grey has-text-centered-desktop has-text-centered-mobile">
-                <h3 class="column has-text-white has-text-left">Address</h3>
+            <div class="column has-text-grey has-text-centered-desktop has-text-centered-mobile footer-address">
+                <h3 class="has-text-white has-text-left">Address</h3>
                 {{ site.footer-address.institution }}<br>
                 {% for line in site.footer-address.lines %}
                 {{ line }}<br>
@@ -35,7 +35,7 @@
             </div>
 
             
-            <div class="column has-text-right-desktop has-text-centered-mobile">
+            <div class="column has-text-right-desktop has-text-centered-mobile footer-logos">
                 {% for logo in site.footer-address.logos %}
                 <figure class="footer-logo">
                     <a href="{{ logo.url }}">
