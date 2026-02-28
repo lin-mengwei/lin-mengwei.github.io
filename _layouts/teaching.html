@@ -3,54 +3,75 @@ layout: base
 body_id: teaching-page
 ---
 
-<style>
-.teaching-hero {
-  height: 36vh;
-  filter: brightness(1.01) contrast(1.03);
-}
-@media (max-width: 768px) {
-  .teaching-hero {
-    height: 25vh;
-    background-position: center 45%;
-  }
-}
-</style>
+{%- assign t = site.data.teaching -%}
+{%- assign mc = t.main_course -%}
 
-<section class="hero teaching-hero teaching-banner">
-  <div class="hero-body teaching-banner-overlay">
-    <div class="container has-text-centered">
-    </div>
-  </div>
+<!-- Banner — compact teaching photo -->
+<section class="teaching-banner">
+  <div class="teaching-banner-overlay"></div>
 </section>
 
-<section class="hero is-fullheight" id="teaching">
-  <div class="teaching-heading-wrapper">
-    <div class="container">
-      {% include teaching-heading.html %}
-    </div>
-  </div>
+<section class="section" id="teaching">
+  <div class="container teaching-container">
 
-  <div class="hero-body teaching-cards-wrapper">
-    <div>
-      {% for course in site.courses %}
-      {% include teaching-card.html %}
+    <h1 class="title is-3 has-text-centered teaching-title">Teaching</h1>
+
+    <!-- ========== Main course ========== -->
+    <div class="teaching-main">
+      <div class="teaching-main-header">
+        <h2 class="title is-4">{{ mc.title }}</h2>
+        <p class="teaching-desc">{{ mc.description }}</p>
+        <p class="teaching-meta">
+          <span><i class="fas fa-university"></i> {{ mc.university }}</span>
+          <span><i class="fas fa-bookmark"></i> {{ mc.program }}</span>
+          <span><i class="fas fa-chalkboard-teacher"></i> {{ mc.role }}</span>
+        </p>
+      </div>
+
+      <!-- Year tabs -->
+      {% for year in mc.years %}
+      <details class="teaching-year" {% if forloop.first %}open{% endif %}>
+        <summary>
+          <span class="teaching-year-label">{{ year.semester }}</span>
+          <span class="teaching-year-rating"><i class="fas fa-star"></i> {{ year.rating }}</span>
+          <span class="teaching-year-info">{{ year.lectures_count }}</span>
+        </summary>
+        <div class="teaching-year-content">
+          {% for mod in year.modules %}
+          <div class="teaching-module">
+            <h4 class="teaching-module-title">{{ mod.unit }}</h4>
+            {% if mod.note %}
+            <p class="teaching-module-note">{{ mod.note }}</p>
+            {% endif %}
+            <ol class="teaching-lecture-list">
+              {% for lec in mod.lectures %}
+              <li>{{ lec }}</li>
+              {% endfor %}
+            </ol>
+          </div>
+          {% endfor %}
+        {% if mc.textbook %}
+        <p class="teaching-textbook"><i class="fas fa-book"></i> {{ mc.textbook }}</p>
+        {% endif %}
+        </div>
+      </details>
       {% endfor %}
     </div>
-  </div>
 
-  <div class="hero-body teaching-other-wrapper">
-    {% for item in site.data.teaching_other %}
-    <p>
-      <b>{{ item.category }}</b>
-      <br>
-      {% for exp in item.items %}
-      {{ forloop.index }}. <i>{{ exp.course }}</i>, {{ exp.institution }}, {{ exp.period }}
-      <br>
-      {% endfor %}
-    </p>
-    {% endfor %}
+    <!-- ========== Other experience ========== -->
+    {% if t.other_experience.size > 0 %}
+    <div class="teaching-other">
+      <h3 class="title is-5">Other Teaching Experience</h3>
+      <ul class="teaching-other-list">
+        {% for exp in t.other_experience %}
+        <li>
+          <strong>{{ exp.course }}</strong>
+          <span class="has-text-grey"> · {{ exp.institution }} · {{ exp.period }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+
   </div>
 </section>
-
-<br>
-{% include search-init.html %}

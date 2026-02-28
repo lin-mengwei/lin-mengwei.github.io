@@ -1,0 +1,72 @@
+# ===================================
+# Teaching — unified data
+# ===================================
+
+main_course:
+  title: "Regional and Local Public Economics"
+  university: "University of Barcelona"
+  program: "6 ECTS, BA Economics"
+  role: "Instructor"
+  description: "A 3rd-year compulsory course for undergraduate Economics majors, blending economic theory, quantitative evidence, and international cases to analyze local public finance."
+  textbook: 'Ronald C. Fisher, <a href="https://www.routledge.com/State-and-Local-Public-Finance/Fisher/p/book/9780367467234" target="_blank"><i>State and Local Public Finance</i></a>'
+
+  years:
+    - semester: "2024"
+      rating: "Teaching Evaluation: 9.4 / 10"
+      lectures_count: "16 two-hour lectures (+ re-designed course)"
+      modules:
+        - unit: "Theory 2: Decentralization of Government Expenditure"
+          lectures:
+            - "Government levels and functions"
+            - "Key elements and the optimalization problem of decentralization"
+            - "Optimal jurisdiction size for expenditure responsibilities"
+            - "Mobility, Congestion, and Clustering + In-class unit exercise"
+        - unit: "Theory 3: Intergovernmental Grants"
+          lectures:
+            - "Intergovernmental grant and its functions"
+            - "Analyzing intergovernmental grants: modelling"
+            - "Effects of intergovernmental grants: theoretical implications"
+            - "Effects of intergovernmental grants: empiric + In-class unit exercise"
+        - unit: "Application 1: International Cases and Hot Issues"
+          note: "I apply the framework built in the Theory parts to characterize fiscal decentralization in each country."
+          lectures:
+            - "Fiscal Decentralization of Spain (+ Taxation and Mobility)"
+            - "Fiscal Decentralization of Canada (+ Equalizing Grants)"
+            - "Fiscal Decentralization of China (+ Land Finance & SNG Debts)"
+            - "Fiscal Decentralization of Germany (+ SNG Debts & Debt Brake)"
+        - unit: "Application 2: Decentralization Practice & Policy Evaluation"
+          lectures:
+            - "Education under Fiscal Decentralization (+ Intro to Causal Inference + Diff-in-Diff)"
+            - "Fiscal Decentralization and Healthcare (+ Diff-in-Diff Cont.)"
+            - "Decentralization and Transportation + Economic Growth (+ IV)"
+
+    - semester: "2025"
+      rating: "Teaching Evaluation: TBC / 10"
+      lectures_count: "8 two-hour lectures"
+      modules:
+        - unit: "Theory 3: Intergovernmental Grants"
+          lectures:
+            - "Intergovernmental grant and its functions"
+            - "Analyzing intergovernmental grants: modelling"
+            - "Effects of intergovernmental grants: theoretical implications"
+            - "Effects of intergovernmental grants: empiric + In-class unit exercise"
+        - unit: "Application 1: International Cases and Hot Issues"
+          note: "Applying the framework built in the Theory parts to characterize fiscal decentralization in each country."
+          lectures:
+            - "Fiscal Decentralization of China (+ Land Finance & SNG Debts)"
+            - "Fiscal Decentralization of Germany (+ SNG Debts & Debt Brake)"
+        - unit: "Application 2: Decentralization Practice & Policy Evaluation"
+          lectures:
+            - "Education under Fiscal Decentralization (Method: Diff-in-Diff)"
+            - "Fiscal Decentralization and Healthcare (Method: Diff-in-Diff)"
+
+other_experience:
+  - course: "Translation Basics"
+    institution: "Shenzhen University"
+    period: "2018–2020 (Course Co-developer) & Spring 2021 (Guest Lecturer)"
+  - course: "College English B (1): Listening and Speaking"
+    institution: "Shenzhen University"
+    period: "Fall 2019"
+  - course: "College English B (2): Listening and Speaking"
+    institution: "Shenzhen University"
+    period: "Spring 2018 & 2019"
