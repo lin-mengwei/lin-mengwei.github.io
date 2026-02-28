@@ -1,5 +1,5 @@
 ---
-title: Popularization & Translation <br> 学术科普与翻译
+title: Popularization & Translation <br> <span class="zh">学术科普与翻译</span>
 layout: translation
 nav_active: public-goods
 ---

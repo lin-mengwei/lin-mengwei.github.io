@@ -4,23 +4,13 @@
 
 // ---- page wrapper ----
 .act-page {
-  padding: 3rem 0 4rem;
+  padding: 2rem 0 4rem;
 }
 
 .act-container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
-}
-
-// ---- page title ----
-.act-page-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: $color-dark-grey;
-  margin-bottom: 0.75rem;
-  text-align: center;
-  margin-top: 1.5rem;
 }
 
 // ---- intro text ----
@@ -292,16 +282,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .act-page {
-    padding: 1.5rem 0 2.5rem;
-  }
-
   .act-container {
     padding: 0 1rem;
-  }
-
-  .act-page-title {
-    font-size: 1.6rem;
   }
 
   // Featured card stacks vertically on mobile

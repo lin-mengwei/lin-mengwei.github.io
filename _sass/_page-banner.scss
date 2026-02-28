@@ -1,0 +1,59 @@
+// ======================
+// Page Banner — lightweight tinted header strip
+// Uses the site primary colour ($color-primary) for a cohesive feel.
+// ======================
+
+.page-banner {
+  background: linear-gradient(
+    to bottom,
+    mix($color-primary, #fff, 12%) 0%,   // very light tint of primary
+    mix($color-primary, #fff, 5%) 60%,
+    #fff 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3.5rem 1.5rem 2.5rem;
+  min-height: 160px;
+
+  @media screen and (max-width: 768px) {
+    padding: 2.5rem 1rem 2rem;
+    min-height: 120px;
+  }
+}
+
+.page-banner__title {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  color: $color-primary;
+  margin: 0;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+  
+  .zh {
+    font-weight: 400;
+  }
+}
+
+.page-banner__subtitle {
+  font-size: 1rem;
+  color: #777;
+  font-weight: 400;
+  margin: 0.4rem 0 0;
+
+  @media screen and (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+}
+
+// ---- Modifier: BESTEPS — deeper brand tint ----
+.page-banner--besteps {
+  background: linear-gradient(
+    to bottom,
+    mix($color-primary, #fff, 22%) 0%,   // noticeably tinted
+    mix($color-primary, #fff, 8%) 60%,
+    #fff 100%
+  );
+}

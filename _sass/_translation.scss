@@ -4,23 +4,13 @@
 
 // ---- page wrapper ----
 .trans-page {
-  padding: 3rem 0 4rem;
+  padding: 2rem 0 4rem;
 }
 
 .trans-container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 1.5rem;
-}
-
-// ---- page title ----
-.trans-page-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: $color-dark-grey;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  margin-top: 1.5rem;
 }
 
 // ---- sections ----
@@ -259,16 +249,8 @@
 //  Responsive
 // ==========================================================
 @media screen and (max-width: 768px) {
-  .trans-page {
-    padding: 1.5rem 0 2.5rem;
-  }
-
   .trans-container {
     padding: 0 1rem;
-  }
-
-  .trans-page-title {
-    font-size: 1.6rem;
   }
 
   .trans-section-title {

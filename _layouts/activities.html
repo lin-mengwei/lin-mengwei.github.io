@@ -5,11 +5,15 @@ body_id: activities
 
 {% assign act = site.data.activities %}
 
+<!-- Banner -->
+<div class="page-banner">
+  <h1 class="page-banner__title">{{ page.title }}</h1>
+</div>
+
 <section class="act-page" id="activities">
   <div class="act-container">
 
-    <!-- Page header -->
-    <h1 class="act-page-title">{{ page.title }}</h1>
+    <!-- Intro -->
     <div class="act-intro">
       {{ content }}
     </div>
