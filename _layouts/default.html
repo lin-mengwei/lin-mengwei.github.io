@@ -1,41 +1,38 @@
 ---
-layout: compress
+layout: base
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-{% include head.html %}
+{% include showcase.html %}
+{% include about.html %}
 
-<body>
-  {% include navbar.html %}
-  {% include showcase.html %}
-  {% include about.html %}
-  {% include contact.html %}
-  <!--Footer begins here-->
-  {% include footer.html %}
-</body>
 <script>
   var navItems = document.getElementsByClassName('navbar-item');
   var heroes = document.getElementsByClassName('hero');
-  const viewOffset = 200; 
+  const viewOffset = 200;
 
   window.addEventListener("scroll", function (event) {
     var scroll = this.scrollY;
-    var position = window.pageYOffset;
 
     for (var i = 0; i < navItems.length; i++) {
       navItems[i].classList.remove('is-active');
     }
 
     for (var i = 0; i < heroes.length; i++) {
-        var sectionTop = heroes[i].offsetTop-viewOffset;
-        var sectionBottom = heroes[i].offsetTop + heroes[i].offsetHeight-viewOffset;
+        var sectionTop = heroes[i].offsetTop - viewOffset;
+        var sectionBottom = heroes[i].offsetTop + heroes[i].offsetHeight - viewOffset;
 
         if (scroll >= sectionTop && scroll < sectionBottom) {
-          navItems[i+1].classList.add('is-active');
+          var sectionId = heroes[i].getAttribute('id');
+          if (sectionId) {
+            for (var j = 0; j < navItems.length; j++) {
+              var href = navItems[j].getAttribute('href');
+              if (href && href.indexOf('#' + sectionId) !== -1) {
+                navItems[j].classList.add('is-active');
+                break;
+              }
+            }
+          }
       }
     }
   });
 </script>
-
-</html>

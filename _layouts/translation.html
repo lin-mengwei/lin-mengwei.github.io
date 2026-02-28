@@ -1,69 +1,107 @@
 ---
-layout: compress
+layout: base
+body_id: translation
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+{% assign tr = site.data.translation %}
 
-<head>
-  {% include head.html %}
-</head>
+<section class="trans-page" id="translation">
+  <div class="trans-container">
 
-<body id="translation">
-  {% include navbar.html %}
+    <!-- Page header -->
+    <h1 class="trans-page-title">{{ page.title }}</h1>
 
-  <section class="hero is-fullheight has-text-centered" id="post" style="margin-left: 2%; margin-right: 2%; padding-left: 5%; padding-right:5%">
-    <div class="hero-body">
-      <div class="container">
-        <a class="has-text-black" id="title">
-          <h1 class="title has-text-centered is-2 has-text-weight-semibold ">{{ page.title }}</h1>
-        </a>
-        <hr class="has-background-black">
-        
-        <div class="columns is-variable is-5">
-          <!-- 基本信息-->        
+    <!-- ======== Section 1: Popularization ======== -->
+    <div class="trans-section">
+      <h2 class="trans-section-title">
+        <i class="fas fa-pen-fancy"></i> Popularization | 学术科普
+      </h2>
+      <div class="trans-intro">
+        {{ content }}
+      </div>
+
+      <h4 class="trans-list-heading">List of Articles | 科普文章列表</h4>
+      <div class="trans-articles">
+        {% for art in tr.articles %}
+        <div class="trans-article-row" data-href="{{ art.url }}">
+          <span class="trans-article-num">{{ forloop.index }}</span>
+          <span class="trans-article-text">
+            <span class="trans-article-zh">{{ art.title_zh }}（{{ art.source }}）</span>
+            <span class="trans-article-en">{{ art.title_en }} (CEC Post No. {{ art.post_no }})</span>
+            {% if art.coauthor_zh %}
+            <span class="trans-article-co">
+              {% if art.coauthor_url %}与<a href="{{ art.coauthor_url }}" target="_blank">{{ art.coauthor_zh }}</a>合作 |
+              with <a href="{{ art.coauthor_url }}" target="_blank">{{ art.coauthor_en }}</a>
+              {% else %}与{{ art.coauthor_zh }}合作 | with {{ art.coauthor_en }}
+              {% endif %}
+            </span>
+            {% endif %}
+          </span>
+          <i class="fas fa-external-link-alt trans-article-icon"></i>
         </div>
-        <div class="content has-text-justified-desktop has-text-justified-fullhd has-text-justified has-text-justified-tablet has-text-left-mobile">
-          <br>
-          {{ content }}
-        </div>
-
-        <!-- 书籍展示部分 -->
-        {% if page.books %}
-          <section id="books">
-            <div class="books-container">
-              {% for book in page.books %}
-                <div class="book">
-                  <div class="book-image">
-                    <a href="{{ book.link }}" target="_blank"> <img src="{{ book.image }}" alt="{{ book.title }}"> </a>
-                  </div>
-                  <div class="book-details">
-                    <p><a href="{{ book.link }}" target="_blank">{{ book.title }}</a></p>
-                    <p>{{ book.description }}</p>
-                  </div>
-                </div>
-              {% endfor %}
-            </div>
-          </section>
-        {% endif %}
-
-        {% unless site.disqus-shortname == "" %}
-        <div class="disqus-comments" id="disqus_thread"></div>
-        {% endunless %}
+        {% endfor %}
       </div>
     </div>
-  </section>
-  {% include footer.html %}
-</body>
+
+    <!-- ======== Section 2: Book Translation ======== -->
+    <div class="trans-section">
+      <h2 class="trans-section-title">
+        <i class="fas fa-book"></i> Book Translation | 书籍翻译
+      </h2>
+      <div class="trans-intro">
+        <p>Translation has been my routine activity during long breaks since I became a certified translator in 2017. I aim to "sculpt the text" (my translation philosophy), although it is often hard to achieve. Specializing in book translations in the Social Sciences, my published works are in Economics & Education, aligning with my own academic interests.</p>
+        <p>翻译是我休假时的常规活动。基于自身语言背景，我目前主要进行英译汉，有机会也希望尝试汉译英。我主攻社会科学领域书籍翻译，目前已出版译作涵盖经济学和教育学，与自己的研究领域有所关联。</p>
+      </div>
+
+      <div class="trans-books">
+        {% for book in tr.books %}
+        <div class="trans-book-card">
+          <div class="trans-book-cover">
+            <a href="{{ book.url }}" target="_blank">
+              <img src="{{ book.image | relative_url }}" alt="{{ book.title }}">
+            </a>
+          </div>
+          <div class="trans-book-info">
+            <h3 class="trans-book-title">
+              <a href="{{ book.url }}" target="_blank">{{ book.title }}</a>
+              {% if book.subtitle %}
+              <span class="trans-book-subtitle">{{ book.subtitle }}</span>
+              {% endif %}
+            </h3>
+            <p class="trans-book-publisher">{{ book.publisher }}</p>
+            {% if book.original %}
+            <p class="trans-book-original"><b>Translated From</b>: {{ book.original }}</p>
+            {% endif %}
+            {% if book.coauthor %}
+            <p class="trans-book-coauthor">
+              <b>{{ book.role }}</b>:
+              {% if book.coauthor_url %}
+                <a href="{{ book.coauthor_url }}" target="_blank">{{ book.coauthor }}</a>
+              {% else %}
+                {{ book.coauthor }}
+              {% endif %}
+            </p>
+            {% endif %}
+            {% if book.description %}
+            <p class="trans-book-desc">{{ book.description }}</p>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <script>
-  (function () { /* DON'T EDIT BELOW THIS LINE */
-    var d = document,
-      s = d.createElement('script');
-    s.src = 'https://{{site.disqus-shortname}}.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
+document.querySelectorAll('.trans-article-row[data-href]').forEach(function(row) {
+  row.style.cursor = 'pointer';
+  row.addEventListener('click', function(e) {
+    if (e.target.closest('a')) return;
+    window.open(this.dataset.href, '_blank');
+  });
+});
 </script>
 
-</html>
+{% include disqus.html %}

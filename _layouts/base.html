@@ -1,0 +1,27 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% include head.html %}
+  {% if page.extra_css %}
+  <style>{{ page.extra_css }}</style>
+  {% endif %}
+</head>
+
+<body{% if page.body_id %} id="{{ page.body_id }}"{% endif %}>
+  {% include navbar.html %}
+
+  {{ content }}
+
+  {% include footer.html %}
+
+  {% if page.extra_js %}
+  {{ page.extra_js }}
+  {% endif %}
+</body>
+
+</html>

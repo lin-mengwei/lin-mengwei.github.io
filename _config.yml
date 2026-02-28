@@ -65,6 +65,20 @@ author-about: Mengwei Lin (林孟蔚) is a PhD Candidate at Uni Barcelona & IEB,
  # URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
 author-url: https://www.linkedin.com/in/lin-mengwei/
 
+# Footer address
+footer-address:
+  institution: "UB School of Economics & IEB"
+  lines:
+    - "John M. Keynes, 1-11"
+    - "08034 Barcelona, Spain"
+  logos:
+    - url: "https://ieb.ub.edu"
+      image: "/assets/images/ieb_logo.webp"
+      alt: "IEB logo"
+    - url: "https://www.ub.edu/school-economics"
+      image: "/assets/images/UB_SchoolofEconomicslogo.webp"
+      alt: "School logo"
+
 # SASS
 sass:
   sass_dir: _sass

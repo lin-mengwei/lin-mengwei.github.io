@@ -1,0 +1,130 @@
+# ===================================
+# BESTEPS — page data
+# ===================================
+
+# Hero
+# About
+about:
+  description_en: >-
+    <b>BESTEPS</b> is a training project I coordinated in academic years
+    2024/25 and 2025/26, financed by the
+    <a href="https://web.ub.edu/en/web/escola-doctorat/" target="_blank">EDUB</a>
+    and supported by the
+    <a href="https://www.ub.edu/school-economics/" target="_blank">UBSE</a>.
+    Designed for early-stage economists, the programme is structured as a series
+    of lectures covering key research phases — from identifying and adapting
+    feasible projects, to effectively communicating findings and producing
+    final academic products.
+  highlights:
+    - icon: "fa-graduation-cap"
+      label: "7 Expert-led Lectures"
+    - icon: "fa-book-open"
+      label: "Open-access Guide"
+    - icon: "fa-sync-alt"
+      label: "Research Life-cycle"
+    - icon: "fa-user-graduate"
+      label: "PhD Training"
+
+# Lectures
+lectures:
+  - part: "Part I: Set Up A Research Project"
+    items:
+      - tag: "Opening Lecture"
+        title: "Navigating Research in Economics"
+        speaker: "Antonio Cabrales"
+        affiliation: "UC3M"
+        # poster: "/assets/images/activities/poster_opening.jpg"
+
+      - tag: "Lecture 1"
+        title: "Starting a Feasible and Promising Project"
+        speaker: "Libertad Gonzalez"
+        affiliation: "UPF & BSE"
+        # poster: "/assets/images/activities/poster_L1.jpg"
+
+      - tag: "Lecture 2"
+        title: "Doing Organized and Replicable Research"
+        speaker: "Joan Llull"
+        affiliation: "CSIC-IAE & BSE, Data Editor of Econometrica"
+        # poster: "/assets/images/activities/poster_L2.jpg"
+
+  - part: "Part II: Research Products"
+    items:
+      - tag: "Lecture 3"
+        title: "Visualizing Economic Research: Strategies and Practices"
+        speaker: "Dirk Foremny & Guillermo Marin"
+        affiliation: "UB & IEB; Barcelona Supercomputing Center"
+        # poster: "/assets/images/activities/poster_L3.jpg"
+
+      - tag: "Lecture 4"
+        title: "Presentations: How to Give an Academic Talk and How to Benefit from One"
+        speaker: "Jenifer Ruiz-Valenzuela"
+        affiliation: "UB & IEB"
+        # poster: "/assets/images/activities/poster_L4.jpg"
+
+      - tag: "Lecture 5"
+        title: "Crafting a Job Market Paper"
+        speaker: "Albrecht Glitz"
+        affiliation: "UPF & BSE"
+        # poster: "/assets/images/activities/poster_L5.jpg"
+
+      - tag: "Closing Lecture"
+        title: "Research Products in Economics"
+        speaker: "Diego Puga"
+        affiliation: "CEMFI"
+        # poster: "/assets/images/activities/poster_closing.jpg"
+
+# The BESTEPS Guide
+guide:
+  title: "The BESTEPS Guide"
+  subtitle: "7 Lessons towards Effective Economics PhD Research"
+  image: "/assets/images/activities/besteps_guide.png"
+  description: >-
+    Based on the lecture notes, <b>The BESTEPS Guide</b> is now available as an
+    open-access public good for all PhD students worldwide.
+  volumes:
+    - label: "Volume 1 (Lectures 1 - 3)"
+      url: "https://diposit.ub.edu/dspace/handle/2445/223454"
+      status: "available"
+    - label: "Volume 2 (Lectures 4 - 7)"
+      url: ""
+      status: "coming-soon"
+
+# Video interviews (placeholder)
+videos:
+  enabled: false
+  title: "Lecturer Interviews"
+  subtitle: "Coming soon — conversations with our lecturers on research, career, and advice for PhD students."
+  # items:
+  #   - title: "Interview with Antonio Cabrales"
+  #     youtube_id: "dQw4w9WgXcQ"
+  #     speaker: "Antonio Cabrales"
+
+# Contributors
+contributors:
+  phd_team:
+    - "Daniel Favre de Nougera"
+    - "Sergio Blanco"
+    - "Marcella De Giovanni"
+    - "Sofia Balladares"
+    - "Natalia Carralero"
+    - "Anna Chesa"
+    - "Ruixi Zhang"
+    - "Thompson Tawiah"
+    - "Marta Curull"
+    - "Marianna Magagnoli"
+    - "Alejandra Rivera"
+    - "Aly McTague"
+    - "Julia McGee"
+    - "Aayushi Sharma"
+    - "Enoch Ntsiful"
+    - "Juan Pascual"
+    - "Salvatore Viola"
+    - "Alessandro Ciardo"
+    - "Zhenning Han"
+    - "Elisa Muscarella"
+  faculty_admin:
+    - "Cio Patxot"
+    - "Judit Vall"
+    - "Elisabet Viladecans"
+    - "Jordi Roca"
+    - "Judit Farre"

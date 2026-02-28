@@ -1,0 +1,279 @@
+// ======================
+// About Section
+// ======================
+
+#about {
+  #mainabout {
+    @media (min-aspect-ratio: 1/1) {
+      margin: 0 10% !important;
+
+      .columns.is-variable.is-8 {
+        justify-content: space-between;
+      }
+
+      .column {
+        overflow-x: hidden;
+        overflow-y: hidden;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-word;
+      }
+    }
+
+    @media (max-aspect-ratio: 1/1) {
+      width: 100% !important;
+      max-width: 100vw !important;
+    }
+
+    ul {
+      padding: 0 2rem;
+    }
+  }
+
+  .image {
+    @media (min-aspect-ratio: 1/1) {
+      max-width: 20vmax;
+      width: 20vw;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      margin-top: 15%;
+      img {
+        border: 0.25rem dotted black;
+        width: 80%;
+        max-width: 100%;
+      }
+    }
+
+    @media (max-aspect-ratio: 1/1) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 0;
+
+      img {
+        width: 80%;
+        max-width: 25vmax;
+      }
+    }
+  }
+
+  p {
+    text-align: justify;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+      text-align: justify;
+    }
+  }
+
+  ul {
+    @media (min-aspect-ratio: 1/1) {
+      list-style-type: none;
+      padding: 0 4rem;
+      margin: 0.5rem 0;
+      text-align: justify;
+
+      li {
+        margin-bottom: 0.5rem;
+        line-height: 1;
+        text-indent: -1.5rem;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: $color-black;
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-aspect-ratio: 1/1) {
+      list-style-type: none;
+      padding: 0 0;
+      margin: 3% 0;
+      text-align: left;
+
+      li {
+        margin-bottom: 0.5rem;
+        line-height: 1.25;
+        text-indent: 1pt;
+        position: relative;
+      }
+
+      li::before {
+        content: "• ";
+        position: relative;
+        left: 0;
+        color: $color-black;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  #imgnews {
+    justify-self: center;
+    text-align: center;
+  }
+
+  #biography {
+    @media (max-aspect-ratio: 1/1) {
+      margin: 0 auto !important;
+      max-width: 100%;
+      padding: 1.5rem;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+
+      p {
+        text-align: left;
+        line-height: 1.75;
+      }
+    }
+
+    @media (min-aspect-ratio: 1/1) {
+      padding-left: 2.5%;
+      padding-right: 2.5%;
+      padding-top: 5%;
+      padding-bottom: 1%;
+
+      p {
+        font-size: 105%;
+      }
+    }
+  }
+
+  #news {
+    justify-content: center;
+    text-align: justify;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    @media (max-aspect-ratio: 1/1) {
+      ul {
+        padding-right: 0 !important;
+      }
+      h2 {
+        font-size: 0.9rem;
+        padding-bottom: 0.5rem;
+        line-height: 1.5;
+      }
+    }
+
+    @media (min-aspect-ratio: 1/1) {
+      h2 {
+        padding-right: 2rem;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+
+  .button {
+    @media (min-aspect-ratio: 1/1) {
+      min-width: 20vmax;
+      margin: 0;
+      padding: 0;
+      a { color: #fff !important; }
+    }
+
+    @media (max-aspect-ratio: 1/1) {
+      min-width: 30vmax;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 15px;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  // --- extracted inline styles ---
+
+  .about-avatar {
+    margin-bottom: 2rem;
+
+    img {
+      height: auto;
+      margin: auto;
+      max-width: 85%;
+    }
+  }
+
+  .news-heading {
+    font-size: 1rem;
+  }
+
+  .news-badge {
+    background-color: red;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.6rem;
+    font-weight: bold;
+  }
+
+  .news-list-wrapper {
+    position: relative;
+    max-height: 10rem;
+    overflow: hidden;
+  }
+
+  .news-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+    font-size: 0.85rem;
+
+    li {
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  .news-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), #f4f4f4);
+  }
+
+  #biography {
+    margin-left: auto;
+  }
+
+  .about-buttons {
+    margin-top: 1rem;
+  }
+
+  .about-btn {
+    text-decoration: none;
+  }
+
+  .about-hr {
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+  }
+
+  #social .column.is-narrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

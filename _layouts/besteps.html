@@ -1,0 +1,152 @@
+---
+layout: base
+body_id: besteps
+extra_css: besteps
+---
+
+{% assign bp = site.data.besteps %}
+
+<!-- ======== Page Header ======== -->
+<div class="bp-container">
+  <div class="bp-header">
+    <h1 class="bp-header-title">BESTEPS</h1>
+    <p class="bp-header-subtitle">Barcelona Essential Skills Training for Economics PhD Students</p>
+  </div>
+
+  <!-- ======== About ======== -->
+  <section class="bp-section bp-about">
+    <div class="bp-about-text">
+      {{ bp.about.description_en }}
+    </div>
+    <div class="bp-highlights">
+      {% for h in bp.about.highlights %}
+      <div class="bp-highlight">
+        <i class="fas {{ h.icon }}"></i>
+        <span>{{ h.label }}</span>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- ======== Lectures ======== -->
+  <section class="bp-section">
+    <h2 class="bp-section-title"><i class="fas fa-chalkboard-teacher"></i> Programme</h2>
+
+    {% for part in bp.lectures %}
+    <h3 class="bp-part-title">{{ part.part }}</h3>
+    <div class="bp-lectures">
+      {% for lec in part.items %}
+      <div class="bp-lecture-card{% if lec.poster %} bp-lecture-card--has-poster{% endif %}">
+        {% if lec.poster %}
+        <div class="bp-lecture-poster">
+          <img src="{{ lec.poster | relative_url }}" alt="{{ lec.title }} poster">
+        </div>
+        {% endif %}
+        <div class="bp-lecture-body">
+          <span class="bp-lecture-tag">{{ lec.tag }}</span>
+          <h4 class="bp-lecture-title">{{ lec.title }}</h4>
+          <p class="bp-lecture-speaker">
+            <i class="fas fa-user"></i> {{ lec.speaker }}
+          </p>
+          <p class="bp-lecture-affil">{{ lec.affiliation }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </section>
+
+  <!-- ======== The BESTEPS Guide ======== -->
+  <section class="bp-section">
+    <h2 class="bp-section-title"><i class="fas fa-book-open"></i> {{ bp.guide.title }}</h2>
+    <p class="bp-guide-subtitle">{{ bp.guide.subtitle }}</p>
+
+    <div class="bp-guide-card">
+      <div class="bp-guide-cover">
+        <img src="{{ bp.guide.image | relative_url }}" alt="The BESTEPS Guide cover">
+      </div>
+      <div class="bp-guide-info">
+        <p class="bp-guide-desc">{{ bp.guide.description }}</p>
+        <div class="bp-guide-volumes">
+          {% for vol in bp.guide.volumes %}
+          {% if vol.status == "available" %}
+          <a href="{{ vol.url }}" target="_blank" class="bp-guide-btn">
+            <i class="fas fa-download"></i> {{ vol.label }}
+          </a>
+          {% else %}
+          <span class="bp-guide-btn bp-guide-btn--soon">
+            <i class="fas fa-clock"></i> {{ vol.label }} — Coming Soon
+          </span>
+          {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== Video Interviews (placeholder) ======== -->
+  {% if bp.videos.enabled %}
+  <section class="bp-section">
+    <h2 class="bp-section-title"><i class="fas fa-video"></i> {{ bp.videos.title }}</h2>
+    <p class="bp-videos-subtitle">{{ bp.videos.subtitle }}</p>
+    <div class="bp-videos-grid">
+      {% for vid in bp.videos.items %}
+      <div class="bp-video-card">
+        <div class="bp-video-embed">
+          <iframe src="https://www.youtube.com/embed/{{ vid.youtube_id }}" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+        <p class="bp-video-label">{{ vid.title }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% else %}
+  <section class="bp-section bp-videos-placeholder">
+    <div class="bp-placeholder-box">
+      <i class="fas fa-video"></i>
+      <h3>Lecturer Interviews</h3>
+      <p>Coming soon — conversations with our lecturers on research, career, and advice for PhD students.</p>
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ======== Contributors ======== -->
+  <section class="bp-section">
+    <h2 class="bp-section-title"><i class="fas fa-users"></i> Contributors</h2>
+
+    <p class="bp-contrib-note">
+      The BESTEPS project draws on the collective work of many people — a committed
+      team of PhD colleagues alongside essential support from our administrative staff
+      and faculty members.
+    </p>
+
+    <div class="bp-contrib-row">
+      <div class="bp-contrib-photo-side">
+        <img src="{{ '/assets/images/activities/BESTEPS_all.webp' | relative_url }}" alt="BESTEPS team group photo">
+      </div>
+      <div class="bp-contrib-lists">
+        <div class="bp-contrib-group">
+          <h4 class="bp-contrib-label"><i class="fas fa-user-graduate"></i> PhD Contributors</h4>
+          <ul class="bp-contrib-names">
+            {% for name in bp.contributors.phd_team %}
+            <li>{{ name }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="bp-contrib-group">
+          <h4 class="bp-contrib-label"><i class="fas fa-building"></i> Support from Faculty & Admin </h4>
+          <ul class="bp-contrib-names">
+            {% for name in bp.contributors.faculty_admin %}
+            <li>{{ name }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{% include disqus.html %}

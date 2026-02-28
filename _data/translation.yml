@@ -1,0 +1,114 @@
+# ===================================
+# Popularization & Translation data
+# ===================================
+
+# ---------- Popularization articles ----------
+articles:
+  - title_zh: "天赋有别：读书基因与家庭资源分配"
+    title_en: "Innate Differences: Genes for Studying and Family Resource Allocation"
+    source: "香樟经济学术圈"
+    post_no: 3133
+    url: "https://mp.weixin.qq.com/s/ijOw-ZXSsPvzTyYE0YKSKg"
+
+  - title_zh: "上职校，选学校还是选专业？"
+    title_en: "Going to Vocational Education: School or Major?"
+    source: "香樟经济学术圈"
+    post_no: 3196
+    url: "https://mp.weixin.qq.com/s/h49tsNgWx3D3M2D4P-f3Tg"
+
+  - title_zh: "本科留学：当地高考 vs 免试申请"
+    title_en: "Studying Abroad: Local Entrance Exam vs. Exam-exempt Application"
+    source: "香樟经济学术圈"
+    post_no: 3235
+    url: "https://mp.weixin.qq.com/s/jbRhG3iHdpJMh2ftdR-f6w"
+
+  - title_zh: "雇个学徒：劳动经济学中的企业数据"
+    title_en: "Hiring an Apprentice: CBS data in Labor Economics"
+    source: "香樟经济学术圈"
+    post_no: 3277
+    url: "https://mp.weixin.qq.com/s/gvMxtWonaFHP-xiG64k24w"
+
+  - title_zh: "助学指导，改善就业潜力"
+    title_en: "Mentoring Improves Employment Prospects"
+    source: "香樟经济学术圈"
+    post_no: 3303
+    url: "https://mp.weixin.qq.com/s/er2eT2C1MnSo19s3U5TsgQ"
+
+  - title_zh: "原生家庭印记：性格与态度的传承"
+    title_en: "Family Imprints: Transmission of Personality and Attitudes"
+    source: "香樟经济学术圈"
+    post_no: 3379
+    url: "https://mp.weixin.qq.com/s/SjekZiUjBFkP2RirqAqvkw"
+    coauthor_zh: "彭启远"
+    coauthor_en: "Qiyuan PENG"
+    coauthor_url: "https://www.sv.uio.no/psi/english/people/academic/qiyuanp/index.html"
+
+  - title_zh: "促就业政策评估：多种DID串起故事"
+    title_en: "Employment Policy Evaluation: Weaving a Story with Various DID Approaches"
+    source: "香樟经济学术圈"
+    post_no: 3414
+    url: "https://mp.weixin.qq.com/s/P5G8q01H2JlTV-gznVwWjw"
+    coauthor_zh: "孙韬怡"
+    coauthor_en: "Taoyi SUN"
+    coauthor_url: "https://www.linkedin.com/in/taoyi-sun/"
+
+  - title_zh: '现金补贴是"送子观音"吗？'
+    title_en: "Can Cash Transfers Increase Birth Rates?"
+    source: "香樟经济学术圈"
+    post_no: 3461
+    url: "https://mp.weixin.qq.com/s/Ku-oCQ0BSF4d4mkbbiRLmA"
+    coauthor_zh: "郑薇"
+    coauthor_en: "Wei ZHENG"
+    coauthor_url: "https://weizhengecon.wixsite.com/website"
+
+  - title_zh: "越急越穷：耐心为何能增强国力？"
+    title_en: "Rushing to Fall Behind: How Patience Fuels Growth"
+    source: "香樟经济学术圈"
+    post_no: 3491
+    url: "https://mp.weixin.qq.com/s/eWSIAq1v_Ch5q_P8F1yu6A"
+    coauthor_zh: "韩振宁"
+    coauthor_en: "Zhenning HAN"
+    coauthor_url: "https://sites.google.com/view/zhenninghan"
+
+  - title_zh: '"翻车"之后，何去何从？'
+    title_en: "Where to Go after Professional Discipline?"
+    source: "香樟经济学术圈"
+    post_no: 3491
+    url: "https://mp.weixin.qq.com/s/0s9M5IC_UEmiRUOF7fgrxQ"
+    coauthor_zh: "柳佳炜"
+    coauthor_en: "Jiawei LIU"
+
+# ---------- Book translations / publications ----------
+books:
+  - title: "《经济学怎么了》"
+    publisher: "文汇出版社，2022年"
+    image: "/assets/images/whatswrong.jpg"
+    url: "https://book.douban.com/subject/36054568/"
+    original: "Skidelsky, Robert. <i>What's Wrong with Economics?</i>. Yale University Press, 2020."
+    role: "Translator"
+
+  - title: "《专家失灵：付费知识与意见市场》"
+    publisher: "中信出版集团，2023年"
+    image: "/assets/images/epflr.png"
+    url: "https://book.douban.com/subject/36211902/"
+    original: "Koppl, Roger. <i>Expert Failure</i>. Cambridge University Press, 2018."
+    role: "Co-translator"
+    coauthor: "陈浩驰 (Haochi CHEN)"
+
+  - title: "《科学与工程实践：引导学生在探索中理解世界》"
+    publisher: "教育科学出版社，即将出版"
+    image: "/assets/images/practices.webp"
+    url: "https://my.nsta.org/resource/105619/helping-students-make-sense-of-the-world-using-next-generation-science-and-engine"
+    original: "Schwarz, Christina V., Cynthia Passmore, and Brian J. Reiser. <i>Helping Students Make Sense of the World Using Next Generation Science and Engineering Practices</i>. NSTA Press, 2017."
+    role: "Translator"
+
+  - title: "《通识笔译：从读写到翻译》"
+    subtitle: "<i>Translation Basics: Reading, Writing & Translation</i>"
+    publisher: "清华大学出版社，已交稿"
+    image: "/assets/images/cover.webp"
+    url: "popul-trans#2-book-translation--书籍翻译"
+    original: null
+    role: "Co-author"
+    coauthor: "李明 Cynthia LI"
+    coauthor_url: "https://sfl.szu.edu.cn/info/1232/4264.htm"
+    description: "Our book offers an introduction to translation for Chinese-English proficient professionals outside translation-related fields, helping them develop essential translation skills while integrating their expertise."

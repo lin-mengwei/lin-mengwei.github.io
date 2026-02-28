@@ -1,0 +1,67 @@
+// ======================
+// Footer
+// ======================
+
+#footer {
+  #backtotop {
+    transition: all 0.25s ease;
+    width: 10rem;
+    padding: 0.25rem;
+    margin: auto auto 1rem auto;
+
+    &:hover { transform: scale(1.05); }
+  }
+
+  .container {
+    margin: auto;
+    padding: 1.5rem;
+    line-height: 1.25;
+
+    .column {
+      display: grid;
+      justify-content: center;
+
+      li {
+        list-style: circle;
+        list-style-position: outside;
+      }
+
+      a {
+        color: #7a7a7a;
+        &:hover { color: white; }
+      }
+
+      // Avatar only — scoped to the 64x64 profile image
+      figure.image.is-64x64 {
+        border: 1.5px solid white;
+        border-radius: 50rem;
+        justify-content: center;
+        margin: auto;
+        transition: all 0.25s ease;
+        &:hover { transform: scale(1.15); }
+      }
+
+      // Logo figures — no border, no rounded corners
+      figure.footer-logo {
+        border: none;
+        border-radius: 0;
+        margin: 0.5rem auto;
+
+        .footer-logo-img {
+          filter: brightness(150%);
+        }
+      }
+    }
+  }
+
+  #credits {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+
+    a {
+      text-decoration: underline;
+      font-weight: bolder;
+      color: white;
+    }
+  }
+}

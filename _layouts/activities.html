@@ -1,43 +1,63 @@
 ---
-layout: compress
+layout: base
+body_id: activities
 ---
 
-<!DOCTYPE html>
-<html lang="en">
+{% assign act = site.data.activities %}
 
-<head>
-  {% include head.html %}
-</head>
+<section class="act-page" id="activities">
+  <div class="act-container">
 
-<body id="activities">
-  {% include navbar.html %}
+    <!-- Page header -->
+    <h1 class="act-page-title">{{ page.title }}</h1>
+    <div class="act-intro">
+      {{ content }}
+    </div>
 
-  <section class="hero is-fullheight has-text-centered" id="post" style="margin-left: 2%; margin-right: 2%; padding-left: 5%; padding-right:5%">
-    <div class="hero-body">
-      <div class="container">
-        <a class="has-text-black" id="title">
-          <h1 class="title has-text-centered is-2 has-text-weight-semibold ">{{ page.title }}</h1>
-        </a>
-        <hr class="has-background-black">
-        
-        <div class="columns is-variable is-5">
-          <!-- 基本信息-->        
+    <!-- ======== Featured: BESTEPS ======== -->
+    {% assign feat = act.featured %}
+    <div class="act-featured">
+      <div class="act-featured-img">
+        <img src="{{ feat.image | relative_url }}" alt="{{ feat.image_alt }}">
+      </div>
+      <div class="act-featured-body">
+        <h2 class="act-featured-title">{{ feat.title }}</h2>
+        <p class="act-featured-subtitle">{{ feat.subtitle }}</p>
+        <p class="act-featured-desc">{{ feat.description }}</p>
+        {% if feat.badge %}
+        <p class="act-featured-badge"><span class="new-badge">New!</span> {{ feat.badge }}</p>
+        {% endif %}
+        <a href="{{ feat.link_url | relative_url }}" class="act-featured-link">{{ feat.link_text }}</a>
+      </div>
+    </div>
+
+    <!-- ======== Activity Cards Grid ======== -->
+    <div class="act-grid">
+      {% for item in act.items %}
+      <div class="act-card">
+        {% if item.image %}
+        <div class="act-card-img">
+          <img src="{{ item.image | relative_url }}" alt="{{ item.image_alt }}">
         </div>
-        <div class="content has-text-justified-desktop has-text-justified-fullhd has-text-justified has-text-justified-tablet has-text-left-mobile">
-          <br>
-          {{ content }}
+        {% endif %}
+        <div class="act-card-body{% unless item.image %} act-card-body--full{% endunless %}">
+          <h3 class="act-card-title">
+            <i class="fas {{ item.icon }}"></i>
+            {{ item.title }}
+          </h3>
+          <p class="act-card-desc">{{ item.description }}</p>
+          {% if item.detail %}
+          <p class="act-card-detail">{{ item.detail }}</p>
+          {% endif %}
+          {% if item.link_url %}
+          <a href="{{ item.link_url }}" target="_blank" class="act-card-link">{{ item.link_text }} <i class="fas fa-external-link-alt"></i></a>
+          {% endif %}
         </div>
-  {% include footer.html %}
-</body>
+      </div>
+      {% endfor %}
+    </div>
 
-<script>
-  (function () { /* DON'T EDIT BELOW THIS LINE */
-    var d = document,
-      s = d.createElement('script');
-    s.src = 'https://{{site.disqus-shortname}}.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-  })();
-</script>
+  </div>
+</section>
 
-</html>
+{% include disqus.html %}

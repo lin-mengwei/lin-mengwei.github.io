@@ -1,0 +1,71 @@
+// ======================
+// Base / Global Styles
+// ======================
+
+html, body {
+  font-family: $font-family-base;
+  scroll-behavior: smooth !important;
+  transition: all 0.25s ease;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+// Scrollbar
+::-webkit-scrollbar { width: 0.5vmax !important; }
+::-webkit-scrollbar-track { background: white !important; }
+::-webkit-scrollbar-thumb { background: $color-dark-grey !important; }
+::-webkit-scrollbar-thumb:hover { background: $color-black !important; }
+
+::placeholder {
+  font-family: $font-family-base;
+}
+
+::selection {
+  background-color: $color-selection;
+}
+
+a {
+  color: $color-primary;
+}
+
+.is-active {
+  font-weight: 600;
+}
+
+.columns .button {
+  margin: 0.5rem !important;
+}
+
+hr {
+  margin: 1rem auto;
+  height: 1px;
+}
+
+.column {
+  margin: auto 0.5rem;
+  padding: 0.5rem;
+}
+
+.title {
+  margin: auto 0.75rem !important;
+  min-height: 4.2rem;
+}
+
+.subtitle {
+  letter-spacing: 0.25rem;
+  min-height: 2.5rem;
+}
+
+.searchResult a .title {
+  text-decoration: underline;
+}
+
+// Image source caption (used in course layout)
+.image-source-caption {
+  text-align: left;
+  font-size: 10px;
+}

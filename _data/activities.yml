@@ -1,0 +1,37 @@
+# ===================================
+# Activities data
+# ===================================
+
+# Featured / flagship activity (rendered as hero banner)
+featured:
+  title: "BESTEPS"
+  subtitle: "Barcelona Essential Skills Training for Economics PhD Students"
+  image: "/assets/images/activities/BESTEPS1.jpg"
+  image_alt: "BESTEPS Opening Lecture"
+  description: "Through expert-led lectures by renowned scholars, BESTEPS offers PhD students essential guidance for <b>key stages of a research project</b> — from starting a feasible project to crafting a job market paper. Financed by an <a href='https://web.ub.edu/en/web/escola-doctorat/' target='_blank'>EDUB grant</a>, running in AY 2024/25–2025/26."
+  badge: "<a href='https://www.ub.edu/school-economics/wp-content/uploads/2025/07/BESTEPS_Lectures.pdf' target='_blank'>The BESTEPS Guide</a> is now available as an open-access public good."
+  link_url: "/besteps"
+  link_text: "Learn more about BESTEPS →"
+
+# Other activities (rendered as card grid)
+items:
+  - title: "Research Ideas Coffee Talk"
+    icon: "fa-mug-hot"
+    image: "/assets/images/activities/coffee1.webp"
+    image_alt: "PhD Ideas Coffee Session"
+    description: "Biweekly sessions for PhD students and Postdocs to discuss <b>newly-formed research ideas</b> in a safe and friendly environment before starting a project. We also host occasional special sessions (e.g., to share data info)."
+    detail: "An innovative series at <a href='https://www.ub.edu/school-economics/' target='_blank'>UBSE</a>, initiated with my PhD colleagues. Supported by the PhD in Economics Program. I am in charge of the series for AY 2023/24 and 2024/25."
+    link_url: "https://www.linkedin.com/posts/universitat-de-barcelona-school-of-economics_economics-phd-research-activity-7316368944271962113-dzn8/"
+    link_text: "See our recent event post"
+
+  - title: "Job Market Preparation Plan"
+    icon: "fa-briefcase"
+    description: "A comprehensive plan to <b>better support and prepare PhD candidates for the Job Market</b> — featuring information sessions, practical toolkits, personalized planning meetings, package tutoring, mock interviews, and mock job market talks throughout the JM season."
+    detail: "Developed with invaluable input from JM candidates <a href='https://mariebeigelman.github.io/' target='_blank'>Marie Beigelman</a>, <a href='https://abhinavkhemka.com' target='_blank'>Abhinav Khemka</a>, Marianna Magagnoli, Alex Izquierdo, among others. Approved by the PhD Academic Committee; implemented since AY 2024/25."
+
+  - title: "Applied Econ Methods Reading Group"
+    icon: "fa-book-open"
+    image: "/assets/images/activities/rg.jpg"
+    image_alt: "Applied Econ Reading Group"
+    description: "Discussions on useful <b>newly-developed causal inference methods</b> not yet commonly covered in standard graduate-level econometrics."
+    detail: "Organized by Sergio Blanco, Cristina Aranzana, Cecilia Ramirez, and myself, supported by the Department of Public Economics and the IEB. Methods covered include Difference in Discontinuities, Shift-share & Recentered Instruments, DID with Continuous Treatments, and more."

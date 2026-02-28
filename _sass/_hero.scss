@@ -1,0 +1,24 @@
+// ======================
+// Hero / Showcase
+// ======================
+
+#hero {
+  background: $color-black;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.75) 100%);
+
+  &::before {
+    filter: blur(0.15rem);
+    background-image: var(--hero-image);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    opacity: 0.25;
+    content: "";
+  }
+}

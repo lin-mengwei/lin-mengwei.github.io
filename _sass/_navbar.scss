@@ -1,0 +1,38 @@
+// ======================
+// Navbar
+// ======================
+
+#navbar {
+  opacity: 0.95;
+
+  .navbar-burger span:nth-child(2) {
+    left: calc(50%);
+    width: 8px;
+  }
+}
+
+.navbar-dropdown {
+  border: none;
+  right: 0;
+  left: auto;
+}
+
+a.navbar-item:hover,
+.navbar-link:hover {
+  background-color: $navbar-item-hover-bg !important;
+  color: white !important;
+}
+
+a.navbar-item.is-active {
+  background-color: $navbar-item-hover-bg !important;
+  color: white !important;
+
+  &:hover {
+    background-color: $navbar-item-hover-bg !important;
+    color: white;
+  }
+}
+
+.navbar-link:not(.is-arrowless)::after {
+  border-color: $color-grey;
+}

@@ -28,33 +28,21 @@
             <!--Link Section-->
             <div class="column has-text-grey has-text-centered-desktop has-text-centered-mobile">
                 <h3 class="column has-text-white has-text-left">Address</h3>
-                {% for sitepage in site.html_pages offset: 4 %}
-<!--                 {% unless sitepage.url == '/'  limit: 2 %}
-                <li>
-                    <a href="{{sitepage.url | absolute_url}}">{{sitepage.title}}</a>
-                </li>
-                {% endunless %} -->
+                {{ site.footer-address.institution }}<br>
+                {% for line in site.footer-address.lines %}
+                {{ line }}<br>
                 {% endfor %}
-<!--                 <li>
-                    <a target="_blank" href="{{site.url}}{{site.baseurl}}/feed.xml">Subscribe via RSS</a>
-                </li> -->
-                UB School of Economics & IEB<br>
-                John M. Keynes, 1-11<br>
-                08034 Barcelona, Spain
             </div>
 
             
-            <div class="column has-text-right-desktop has-text-centered-mobile" style="not-roune">
-                <figure style="border: none;">
-                    <a href="https://ieb.ub.edu">
-                        <img src="/assets/images/ieb_logo.webp" alt="IEB logo" width="220" style="filter: brightness(150%);">
+            <div class="column has-text-right-desktop has-text-centered-mobile">
+                {% for logo in site.footer-address.logos %}
+                <figure class="footer-logo">
+                    <a href="{{ logo.url }}">
+                        <img src="{{ logo.image | relative_url }}" alt="{{ logo.alt }}" width="220" class="footer-logo-img">
                     </a>
                 </figure>
-                <figure style="border: none;">
-                    <a href="https://www.ub.edu/school-economics">
-                        <img src="/assets/images/UB_SchoolofEconomicslogo.webp" alt="School logo" width="220" style="filter: brightness(150%);">
-                    </a>
-                </figure>
+                {% endfor %}
             </div>
 
             <!--Blog-post Section-->

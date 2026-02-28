@@ -1,0 +1,298 @@
+// ======================
+// Translation / Popularization Page
+// ======================
+
+// ---- page wrapper ----
+.trans-page {
+  padding: 3rem 0 4rem;
+}
+
+.trans-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+// ---- page title ----
+.trans-page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: $color-dark-grey;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+// ---- sections ----
+.trans-section {
+  margin-bottom: 3rem;
+}
+
+.trans-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $color-dark-grey;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid $color-primary;
+  display: inline-block;
+
+  i {
+    color: $color-primary;
+    margin-right: 0.4rem;
+  }
+}
+
+// ---- intro text ----
+.trans-intro {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #555;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+
+  p { margin-bottom: 0.6rem; }
+
+  a {
+    color: $color-primary;
+    font-weight: 600;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+}
+
+// ---- list heading ----
+.trans-list-heading {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $color-dark-grey;
+  margin-bottom: 0.75rem;
+}
+
+// ==========================================================
+//  Article list (clickable rows)
+// ==========================================================
+.trans-articles {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.trans-article-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+
+  &:hover {
+    background: $color-accent-bg;
+  }
+}
+
+.trans-article-num {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  background: $color-primary;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.trans-article-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.trans-article-zh {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: $color-dark-grey;
+}
+
+.trans-article-en {
+  font-size: 0.82rem;
+  color: #888;
+  font-style: italic;
+}
+
+.trans-article-co {
+  font-size: 0.8rem;
+  color: #999;
+
+  a {
+    color: $color-primary !important;
+    font-weight: 600;
+    text-decoration: underline !important;
+  }
+}
+
+.trans-article-icon {
+  flex: 0 0 auto;
+  color: #ccc;
+  font-size: 0.7rem;
+  margin-top: 6px;
+  transition: color 0.2s ease;
+
+  .trans-article-row:hover & {
+    color: $color-primary;
+  }
+}
+
+// ==========================================================
+//  Book cards (horizontal: cover + info)
+// ==========================================================
+.trans-books {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.trans-book-card {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eaeaea;
+  overflow: hidden;
+  padding: 1.25rem;
+  gap: 1.5rem;
+  transition: box-shadow 0.3s ease, transform 0.25s ease;
+
+  &:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+}
+
+.trans-book-cover {
+  flex: 0 0 auto;
+
+  img {
+    width: 110px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    display: block;
+  }
+}
+
+.trans-book-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.trans-book-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: $color-dark-grey;
+  margin: 0 0 0.3rem;
+
+  a {
+    color: $color-dark-grey;
+    text-decoration: none;
+    &:hover {
+      color: $color-primary;
+      text-decoration: underline;
+    }
+  }
+}
+
+.trans-book-subtitle {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: #777;
+  margin-top: 0.15rem;
+}
+
+.trans-book-publisher {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0 0 0.4rem;
+}
+
+.trans-book-original {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0 0 0.3rem;
+
+  b { font-weight: 700; color: #555; }
+}
+
+.trans-book-coauthor {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0 0 0.3rem;
+
+  b { font-weight: 700; color: #555; }
+
+  a {
+    color: $color-primary;
+    font-weight: 600;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+}
+
+.trans-book-desc {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0.3rem 0 0;
+}
+
+// ==========================================================
+//  Responsive
+// ==========================================================
+@media screen and (max-width: 768px) {
+  .trans-page {
+    padding: 1.5rem 0 2.5rem;
+  }
+
+  .trans-container {
+    padding: 0 1rem;
+  }
+
+  .trans-page-title {
+    font-size: 1.6rem;
+  }
+
+  .trans-section-title {
+    font-size: 1.25rem;
+  }
+
+  .trans-article-row {
+    padding: 0.75rem 0.5rem;
+  }
+
+  // Book cards stack vertically on mobile
+  .trans-book-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
+
+  .trans-book-cover img {
+    width: 140px;
+  }
+
+  .trans-book-info {
+    text-align: left;
+  }
+}

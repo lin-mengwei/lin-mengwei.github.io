@@ -1,0 +1,26 @@
+// ======================
+// Design Tokens / Variables
+// ======================
+
+// Colors
+$color-primary: rgb(95, 129, 81);
+$color-black: #000;
+$color-dark-grey: #363636;
+$color-grey: grey;
+$color-light-bg: #f4f4f4;
+$color-accent-bg: #f0f7f2;
+$color-selection: #C8CFC4;
+$navbar-item-hover-bg: rgba(#fff, 0.25);
+
+// Typography
+$font-family-base: 'Poppins', sans-serif;
+
+// Research tag colors
+$tag-colors: (
+  "economics-of-education": (#C9DDF2, #2B3E50),
+  "policy-evaluation": (#D9DCC7, #393F2D),
+  "education-finance": (#E5DEBF, #3B3729),
+  "cultural-economics": (#F4ECE4, #5C4C40),
+  "labor-economics": (#E5D3C8, #3A2F2F),
+  "environmental-economics": (#CDE3D0, #2D4032),
+);

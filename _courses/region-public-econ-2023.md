@@ -3,6 +3,7 @@ title: Regional and Local Public Economics (Spring 2024)
 post-image: "https://lin-mengwei.github.io/assets/images/PublicFinance.png"
 image-source:  
 layout: course
+nav_active: teaching
 role: Lecturer
 uni: University of Barcelona
 program: 6 ECTS, BA Economics 

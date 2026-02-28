@@ -9,6 +9,9 @@
     <link rel="preload" as="style" href="{{ '/assets/css/style.css' | relative_url }}" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"></noscript>
 
+    <!-- CSS custom properties from config (used by SCSS partials) -->
+    <style>:root{--hero-image:url('{{ site.heroimage | relative_url }}');}</style>
+
     <!-- 字体优化 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
