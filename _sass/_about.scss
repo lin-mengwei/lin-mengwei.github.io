@@ -2,27 +2,22 @@
 // About Section
 // ======================
 
+// Bulma breakpoints:
+// mobile:  <=768px
+// tablet:  769px – 1023px
+// desktop: >=1024px
+
+$about-bp-mobile:  768px;
+$about-bp-desktop: 1024px;
+
 #about {
+  // ---- Main container ----
   #mainabout {
-    @media (min-aspect-ratio: 1/1) {
-      margin: 0 10% !important;
+    width: 100%;
 
-      .columns.is-variable.is-8 {
-        justify-content: space-between;
-      }
-
-      .column {
-        overflow-x: hidden;
-        overflow-y: hidden;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-        word-break: break-word;
-      }
-    }
-
-    @media (max-aspect-ratio: 1/1) {
-      width: 100% !important;
-      max-width: 100vw !important;
+    @media screen and (min-width: $about-bp-desktop) {
+      max-width: 1100px;
+      margin: 0 auto !important;
     }
 
     ul {
@@ -30,187 +25,42 @@
     }
   }
 
-  .image {
-    @media (min-aspect-ratio: 1/1) {
-      max-width: 20vmax;
-      width: 20vw;
-      display: flex;
-      justify-content: center;
-      text-align: center;
-      margin-top: 15%;
-      img {
-        border: 0.25rem dotted black;
-        width: 80%;
-        max-width: 100%;
-      }
-    }
-
-    @media (max-aspect-ratio: 1/1) {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      padding-bottom: 0;
-
-      img {
-        width: 80%;
-        max-width: 25vmax;
-      }
-    }
-  }
-
-  p {
-    text-align: justify;
-
-    a {
-      color: inherit;
-      text-decoration: underline;
-      text-align: justify;
-    }
-  }
-
-  ul {
-    @media (min-aspect-ratio: 1/1) {
-      list-style-type: none;
-      padding: 0 4rem;
-      margin: 0.5rem 0;
-      text-align: justify;
-
-      li {
-        margin-bottom: 0.5rem;
-        line-height: 1;
-        text-indent: -1.5rem;
-        padding-left: 1.5rem;
-        position: relative;
-      }
-
-      li::before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        color: $color-black;
-        font-size: 1rem;
-      }
-    }
-
-    @media (max-aspect-ratio: 1/1) {
-      list-style-type: none;
-      padding: 0 0;
-      margin: 3% 0;
-      text-align: left;
-
-      li {
-        margin-bottom: 0.5rem;
-        line-height: 1.25;
-        text-indent: 1pt;
-        position: relative;
-      }
-
-      li::before {
-        content: "• ";
-        position: relative;
-        left: 0;
-        color: $color-black;
-        font-size: 1rem;
-      }
-    }
-  }
-
+  // ---- Left column: avatar + news ----
   #imgnews {
-    justify-self: center;
     text-align: center;
   }
-
-  #biography {
-    @media (max-aspect-ratio: 1/1) {
-      margin: 0 auto !important;
-      max-width: 100%;
-      padding: 1.5rem;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-
-      p {
-        text-align: left;
-        line-height: 1.75;
-      }
-    }
-
-    @media (min-aspect-ratio: 1/1) {
-      padding-left: 2.5%;
-      padding-right: 2.5%;
-      padding-top: 5%;
-      padding-bottom: 1%;
-
-      p {
-        font-size: 105%;
-      }
-    }
-  }
-
-  #news {
-    justify-content: center;
-    text-align: justify;
-
-    a {
-      color: inherit;
-      text-decoration: underline;
-    }
-
-    @media (max-aspect-ratio: 1/1) {
-      ul {
-        padding-right: 0 !important;
-      }
-      h2 {
-        font-size: 0.9rem;
-        padding-bottom: 0.5rem;
-        line-height: 1.5;
-      }
-    }
-
-    @media (min-aspect-ratio: 1/1) {
-      h2 {
-        padding-right: 2rem;
-        padding-bottom: 1rem;
-      }
-    }
-  }
-
-  .button {
-    @media (min-aspect-ratio: 1/1) {
-      min-width: 20vmax;
-      margin: 0;
-      padding: 0;
-      a { color: #fff !important; }
-    }
-
-    @media (max-aspect-ratio: 1/1) {
-      min-width: 30vmax;
-      margin: 0;
-      padding: 0;
-    }
-  }
-
-  .social-icon {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin: 0 15px;
-    font-size: 2rem;
-    text-align: center;
-    padding: 0;
-  }
-
-  // --- extracted inline styles ---
 
   .about-avatar {
-    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
 
     img {
       height: auto;
-      margin: auto;
-      max-width: 85%;
+      border: 0.25rem dotted black;
+
+      @media screen and (min-width: $about-bp-desktop) {
+        width: 300px;
+        max-width: 100%;
+      }
+      @media screen and (max-width: $about-bp-mobile) {
+        width: 240px;
+        max-width: 70%;
+      }
+    }
+  }
+
+  // ---- News section ----
+  #news {
+    text-align: justify;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+
+    h2 {
+      padding-bottom: 0.75rem;
     }
   }
 
@@ -253,27 +103,105 @@
     background: linear-gradient(to bottom, rgba(255,255,255,0), #f4f4f4);
   }
 
+  // ---- Right column: biography ----
   #biography {
-    margin-left: auto;
+    @media screen and (min-width: $about-bp-desktop) {
+      padding: 2rem 1.5rem 1rem;
+
+      p { font-size: 1.05rem; }
+    }
+
+    @media screen and (max-width: $about-bp-mobile) {
+      padding: 1.5rem;
+
+      p {
+        text-align: left;
+        line-height: 1.75;
+      }
+    }
   }
 
+  // ---- Text styles ----
+  p {
+    text-align: justify;
+
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0.5rem 0;
+
+    @media screen and (min-width: $about-bp-desktop) {
+      padding: 0 4rem;
+      text-align: justify;
+    }
+    @media screen and (max-width: $about-bp-mobile) {
+      padding: 0;
+      text-align: left;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      line-height: 1.25;
+      padding-left: 1.5rem;
+      position: relative;
+
+      &::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: $color-black;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  // ---- Buttons ----
   .about-buttons {
     margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
   }
 
   .about-btn {
     text-decoration: none;
+    min-width: 14rem;
   }
 
+  // ---- Divider ----
   .about-hr {
     border: none;
     height: 1px;
     background-color: #ddd;
+    margin: 1.5rem 0 1rem;
   }
 
-  #social .column.is-narrow {
-    display: flex;
+  // ---- Social icons ----
+  .social-icon {
+    display: inline-flex;
     justify-content: center;
     align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 15px;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0;
+  }
+
+  #social {
+    text-align: center;
+
+    .column.is-narrow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
