@@ -12,7 +12,7 @@ layout: compress
   {% endif %}
 </head>
 
-<body{% if page.body_id %} id="{{ page.body_id }}"{% endif %}>
+<body class="has-navbar-fixed-top"{% if page.body_id %} id="{{ page.body_id }}"{% endif %}>
   {% include navbar.html %}
 
   {{ content }}
