@@ -7,7 +7,7 @@ body_id: translation
 
 <!-- Banner -->
 <div class="page-banner">
-  <h1 class="page-banner__title">{{ page.title }}</h1>
+  <h1 class="page-banner__title">{{ page.banner_title | default: page.title }}</h1>
 </div>
 
 <section class="trans-page" id="translation">
