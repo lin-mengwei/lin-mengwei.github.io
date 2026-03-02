@@ -11,10 +11,13 @@ about:
     <a href="https://web.ub.edu/en/web/escola-doctorat/" target="_blank">EDUB</a>
     and supported by the
     <a href="https://www.ub.edu/school-economics/" target="_blank">UBSE</a>.
-    Designed for early-stage economists, the programme is structured as a series
+    <br>
+    <br>
+    Designed for early-stage economists, <b>BESTEPS</b> is structured as a series
     of lectures covering key research phases — from identifying and adapting
     feasible projects, to effectively communicating findings and producing
     final academic products.
+    <br>
   highlights:
     - icon: "fa-graduation-cap"
       label: "7 Expert-led Lectures"
@@ -33,45 +36,41 @@ lectures:
         title: "Navigating Research in Economics"
         speaker: "Antonio Cabrales"
         affiliation: "UC3M"
-        # poster: "/assets/images/activities/poster_opening.jpg"
 
       - tag: "Lecture 1"
         title: "Starting a Feasible and Promising Project"
         speaker: "Libertad Gonzalez"
         affiliation: "UPF & BSE"
-        # poster: "/assets/images/activities/poster_L1.jpg"
 
       - tag: "Lecture 2"
         title: "Doing Organized and Replicable Research"
         speaker: "Joan Llull"
         affiliation: "CSIC-IAE & BSE, Data Editor of Econometrica"
-        # poster: "/assets/images/activities/poster_L2.jpg"
 
   - part: "Part II: Research Products"
     items:
       - tag: "Lecture 3"
-        title: "Visualizing Economic Research: Strategies and Practices"
-        speaker: "Dirk Foremny & Guillermo Marin"
-        affiliation: "UB & IEB; Barcelona Supercomputing Center"
-        # poster: "/assets/images/activities/poster_L3.jpg"
+        title: "Visualizing Economics Research"
+        speakers:
+          - name: "Dirk Foremny"
+            affiliation: "UB & IEB"
+          - name: "Guillermo Marin"
+            affiliation: "Barcelona Supercomputing Center"
 
       - tag: "Lecture 4"
-        title: "Presentations: How to Give an Academic Talk and How to Benefit from One"
+        title: "Presentations: How to Give an Academic Talk"
         speaker: "Jenifer Ruiz-Valenzuela"
         affiliation: "UB & IEB"
-        # poster: "/assets/images/activities/poster_L4.jpg"
 
       - tag: "Lecture 5"
         title: "Crafting a Job Market Paper"
         speaker: "Albrecht Glitz"
         affiliation: "UPF & BSE"
-        # poster: "/assets/images/activities/poster_L5.jpg"
 
       - tag: "Closing Lecture"
         title: "Research Products in Economics"
         speaker: "Diego Puga"
         affiliation: "CEMFI"
-        # poster: "/assets/images/activities/poster_closing.jpg"
 
 # The BESTEPS Guide
 guide:
@@ -107,6 +106,7 @@ contributors:
     - "Marcella De Giovanni"
     - "Sofia Balladares"
     - "Natalia Carralero"
+    - "Elisa Muscarella"
     - "Anna Chesa"
     - "Ruixi Zhang"
     - "Thompson Tawiah"
@@ -121,10 +121,10 @@ contributors:
     - "Salvatore Viola"
     - "Alessandro Ciardo"
     - "Zhenning Han"
-    - "Elisa Muscarella"
   faculty_admin:
     - "Cio Patxot"
     - "Judit Vall"
     - "Elisabet Viladecans"
     - "Jordi Roca"
     - "Judit Farre"
+    - "Ignasi Blanch"

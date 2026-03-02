@@ -33,28 +33,30 @@ extra_css: besteps
   <section class="bp-section">
     <h2 class="bp-section-title"><i class="fas fa-chalkboard-teacher"></i> Programme</h2>
 
-    {% for part in bp.lectures %}
-    <h3 class="bp-part-title">{{ part.part }}</h3>
-    <div class="bp-lectures">
-      {% for lec in part.items %}
-      <div class="bp-lecture-card{% if lec.poster %} bp-lecture-card--has-poster{% endif %}">
-        {% if lec.poster %}
-        <div class="bp-lecture-poster">
-          <img src="{{ lec.poster | relative_url }}" alt="{{ lec.title }} poster">
-        </div>
-        {% endif %}
-        <div class="bp-lecture-body">
-          <span class="bp-lecture-tag">{{ lec.tag }}</span>
-          <h4 class="bp-lecture-title">{{ lec.title }}</h4>
-          <p class="bp-lecture-speaker">
-            <i class="fas fa-user"></i> {{ lec.speaker }}
-          </p>
-          <p class="bp-lecture-affil">{{ lec.affiliation }}</p>
+    <div class="bp-programme-columns">
+      {% for part in bp.lectures %}
+      <div class="bp-programme-col">
+        <h3 class="bp-part-title">{{ part.part }}</h3>
+        <div class="bp-programme-list">
+          {% for lec in part.items %}
+          <div class="bp-programme-row">
+            <span class="bp-programme-tag">{{ lec.tag }}</span>
+            <div class="bp-programme-info">
+              <span class="bp-programme-title">{{ lec.title }}</span>
+              {% if lec.speakers %}
+                {% for s in lec.speakers %}
+                <span class="bp-programme-meta">{{ s.name }} <span class="bp-programme-affil">· {{ s.affiliation }}</span></span>
+                {% endfor %}
+              {% else %}
+                <span class="bp-programme-meta">{{ lec.speaker }} <span class="bp-programme-affil">· {{ lec.affiliation }}</span></span>
+              {% endif %}
+            </div>
+          </div>
+          {% endfor %}
         </div>
       </div>
       {% endfor %}
     </div>
-    {% endfor %}
   </section>
 
   <!-- ======== The BESTEPS Guide ======== -->
@@ -133,7 +135,7 @@ extra_css: besteps
       </div>
       <div class="bp-contrib-lists">
         <div class="bp-contrib-group">
-          <h4 class="bp-contrib-label"><i class="fas fa-user-graduate"></i> PhD Contributors</h4>
+          <h4 class="bp-contrib-label"><i class="fas fa-user-graduate"></i> Organizers and Proposal Contributors</h4>
           <ul class="bp-contrib-names">
             {% for name in bp.contributors.phd_team %}
             <li>{{ name }}</li>
