@@ -160,6 +160,39 @@ $about-bp-desktop: 1024px;
     }
   }
 
+  // ---- Name pronunciation ----
+  .name-pronunciation {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.78rem;
+    color: #555;
+    background: mix($color-primary, #fff, 10%);
+    border: 1px solid mix($color-primary, #fff, 30%);
+    border-radius: 6px;
+    padding: 0.25rem 0.65rem;
+    margin-top: 0.2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  }
+
+  .pronunciation-icon {
+    color: $color-primary;
+    cursor: pointer;
+    font-size: 0.82rem;
+    transition: transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+
+    &:hover {
+      transform: scale(1.15);
+    }
+
+    &--small {
+      font-size: 0.7rem;
+      vertical-align: middle;
+    }
+  }
+
   // ---- Buttons ----
   .about-buttons {
     margin-top: 1rem;
