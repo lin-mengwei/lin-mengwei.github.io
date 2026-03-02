@@ -3,12 +3,13 @@ title: Regional and Local Public Economics (Spring 2025)
 post-image: "https://lin-mengwei.github.io/assets/images/PublicFinance.png"
 image-source:  
 layout: course
+nav_active: teaching
 role: Lecturer
 uni: University of Barcelona
 program: 6 ECTS, BA Economics 
 semester: Spring 2024/25
 update_date: Jan 2025
-rating: To be released
+rating: 8.45 (Scale 1 - 10; 10 = best)
 
 intro: This is a <b>3rd-year compulsory course</b> for undergraduate Economics majors, blending economic theory, quantitative evidence, and international cases to analyze local public finance.
 ---
