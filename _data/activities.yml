@@ -34,4 +34,4 @@ items:
     image: "/assets/images/activities/rg.jpg"
     image_alt: "Applied Econ Reading Group"
     description: "Discussions on useful <b>newly-developed causal inference methods</b> not yet commonly covered in standard graduate-level econometrics."
-    detail: "Organized by Sergio Blanco, Cristina Aranzana, Cecilia Ramirez, and myself, supported by the Department of Public Economics and the IEB. Methods covered include Difference in Discontinuities, Shift-share & Recentered Instruments, DID with Continuous Treatments, and more."
+    detail: "Organized by Sergio Blanco, Cristina Aranzana, Cecilia Ramirez, and myself, supported by the Department of Public Economics and the IEB. Methods covered include recent advances in RD, DiD, IV, and other causal inference techniques."
