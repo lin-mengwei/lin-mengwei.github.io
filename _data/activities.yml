@@ -29,9 +29,9 @@ items:
     description: "A comprehensive plan to <b>better support and prepare PhD candidates for the Job Market</b> — featuring information sessions, practical toolkits, personalized planning meetings, package tutoring, mock interviews, and mock job market talks throughout the JM season."
     detail: "Developed with invaluable input from our alumni, Marie Beigelman, Abhinav Khemka, Marianna Magagnoli, Alex Izquierdo, among others. Approved by the PhD Academic Committee; implemented since AY 2024/25."
 
-  - title: "Applied Econ Methods Reading Group"
+  - title: "Applied Econometrics Methods Reading Group"
     icon: "fa-book-open"
     image: "/assets/images/activities/rg.jpg"
-    image_alt: "Applied Econ Reading Group"
+    image_alt: "Applied Econometrics Reading Group"
     description: "Discussions on useful <b>newly-developed causal inference methods</b> not yet commonly covered in standard graduate-level econometrics."
     detail: "Organized by Sergio Blanco, Cristina Aranzana, Cecilia Ramirez, and myself, supported by the Department of Public Economics and the IEB. Methods covered include recent advances in RD, DiD, IV, and other causal inference techniques."
