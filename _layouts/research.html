@@ -2,52 +2,21 @@
 layout: base
 ---
 
-<section id="research" class="hero is-fullheight has-text-centered research-container">
-  <div class="hero-body">
-    <div class="container">
-      <a href="{{page.url | relative_url}}" class="has-text-black" id="title">
-        <h1 class="title has-text-centered is-2 has-text-weight-semibold ">{{page.title}}</h1>
-      </a>
-      <hr class="has-background-black">
-
-      <div class="columns is-variable is-5">
-        <!-- 图片-->
-        <div class="column is-6">
-          <figure class="image has-shadow">
-            <img src="{{page.post-image}}" alt="{{post.title}}" id="post-image" style="width: 100%;">
-          </figure>
-        </div>
-
-        <!-- 基本信息-->
-        <div class="subtitle column is-5 has-text-left-desktop has-text-left-fullhd has-text-left-tablet has-text-center-mobile">
-          {% unless page.description.size == 0 %}
-          <p id="description" class="content is-small has-text-weight-medium is-uppercase">{{page.description | strip | strip_html | strip_newlines }}</p>
-          {% endunless %}
-          <p class="subtitle is-6 has-text-weight-normal has-text-black-ter">
-            {{ page.intro }}
-          </p>
-        </div>
-      </div>
-
-      <div class="content has-text-justified-desktop has-text-justified-fullhd has-text-justified has-text-justified-tablet has-text-left-mobile">
-        <br>
-        {{ content }}
-      </div>
-      {% include disqus.html %}
-    </div>
-  </div>
+<!-- ======== Photo Banner ======== -->
+<section class="research-banner">
+  <div class="research-banner-overlay"></div>
 </section>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const detailsList = document.querySelectorAll(".abstract-box");
+<div class="research-page">
+  <div class="research-container">
+    <h1 class="title is-3 has-text-centered research-title">{{ page.title }}</h1>
+    {{ content }}
+  </div>
+</div>
 
-    detailsList.forEach((detailsEl) => {
-      const imageBox = detailsEl.closest(".research-card")?.querySelector(".research-image-box.is-dual");
-      if (!imageBox) return;
-      detailsEl.addEventListener("toggle", function () {
-        imageBox.classList.toggle("expanded", detailsEl.open);
-      });
-    });
-  });
-</script>
+<!-- Lightbox overlay -->
+<div class="research-lightbox" id="research-lightbox">
+  <img src="" alt="Enlarged image">
+</div>
+
+<script src="{{ '/assets/js/research.js' | relative_url }}"></script>

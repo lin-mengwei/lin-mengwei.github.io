@@ -1,65 +1,94 @@
-<div class="research-card"> 
+{% comment %}
+  Research card — two modes:
+  • "full" if abstract or images exist (left text + right images)
+  • "compact" otherwise (single condensed row)
+{% endcomment %}
+
+{% if include.abstract or include.image1 or include.image %}
+<!-- ======== Full card ======== -->
+<div class="research-card research-card--full">
   <div class="research-card-header">
-    <h3 class="is-size-5">
-      {{ include.title }}
-      {% if include.status %}
-      <span class="tag is-light is-warning ml-2 research-status-tag">{{ include.status }}</span>
-      {% endif %}
-    </h3>
+    <h3 class="research-card-title">{{ include.title }}</h3>
   </div>
+
+  {% if include.coauthors %}
+  <p class="research-card-coauthors">Joint with {{ include.coauthors }}</p>
+  {% endif %}
 
   <div class="research-flex-row">
     <div class="research-text-col">
-      {% if include.coauthors %}
-      <p>Joint with {{ include.coauthors }}</p>
-      {% endif %}
-      <br>
       {% if include.abstract %}
-      <details class="abstract-box mt-3" id="abstract-{{ include.title | slugify }}">
-        <summary><strong>Abstract</strong> (click)</summary>
-        <p class="mt-2">{{ include.abstract }}</p>
+      <details class="abstract-box" id="abstract-{{ include.title | slugify }}">
+        <summary><strong>Abstract</strong> <span class="abstract-hint">(click to expand)</span></summary>
+        <p class="abstract-text">{{ include.abstract }}</p>
       </details>
       {% endif %}
 
       {% if include.keywords %}
-      <p class="mt-3"><strong>Keywords:</strong> {{ include.keywords }}</p>
+      <p class="research-meta"><strong>Keywords:</strong> {{ include.keywords }}</p>
       {% endif %}
 
       {% if include.jel %}
-      <p><strong>JEL Codes:</strong> {{ include.jel }}</p>
+      <p class="research-meta"><strong>JEL Codes:</strong> {{ include.jel }}</p>
       {% endif %}
 
-      <br>
       {% if include.presented %}
-      <p class="presented-info"><strong>Presented at:</strong> {{ include.presented }}</p>
+      <p class="research-presented"><i class="fas fa-chalkboard-teacher"></i> <strong>Presented at:</strong> {{ include.presented }}</p>
       {% endif %}
-
-      {% if include.tags %}
-      <p class="mt-1">
-        {% assign tag_list = include.tags | split: "," %}
-        {% for tag in tag_list %}
-          {% assign tag_class = tag | strip | downcase | replace: ' ', '-' %}
-          <span class="tag tag-{{ tag_class }} mr-1">{{ tag | strip }}</span>
-        {% endfor %}
-      </p>
-      {% endif %}
-
     </div>
 
     {% if include.image1 and include.image2 %}
-      <div class="column is-4 research-image-col">
-        <div class="research-image-box is-dual" id="image-box-{{ include.title | slugify }}">
-          <img class="primary-img" src="{{ include.image1 | relative_url }}" alt="figure 1">
-          <img class="secondary-img" src="{{ include.image2 | relative_url }}" alt="figure 2">
-        </div>
+    <div class="research-image-col">
+      <div class="research-image-box is-dual" id="image-box-{{ include.title | slugify }}">
+        <img class="primary-img" src="{{ include.image1 | relative_url }}" alt="figure 1">
+        <img class="secondary-img" src="{{ include.image2 | relative_url }}" alt="figure 2">
       </div>
+    </div>
     {% elsif include.image %}
-      <div class="column is-4 research-image-col">
-        <figure class="research-image-box">
-          <img src="{{ include.image | relative_url }}" alt="Research image">
-        </figure>
-      </div>
+    <div class="research-image-col">
+      <figure class="research-image-box">
+        <img src="{{ include.image | relative_url }}" alt="Research image">
+      </figure>
+    </div>
+    {% endif %}
+  </div>
+
+  {% if include.tags %}
+  <div class="research-card-tags">
+    {% assign tag_list = include.tags | split: "," %}
+    {% for tag in tag_list %}
+      {% assign tag_class = tag | strip | downcase | replace: ' ', '-' %}
+      <span class="tag tag-{{ tag_class }}">{{ tag | strip }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+</div>
+
+{% else %}
+<!-- ======== Compact card ======== -->
+<div class="research-card research-card--compact">
+  <div class="research-card-header">
+    <h3 class="research-card-title">{{ include.title }}</h3>
+  </div>
+
+  {% if include.coauthors %}
+  <p class="research-card-coauthors">Joint with {{ include.coauthors }}</p>
+  {% endif %}
+
+  <div class="research-compact-footer">
+    {% if include.tags %}
+    <div class="research-card-tags">
+      {% assign tag_list = include.tags | split: "," %}
+      {% for tag in tag_list %}
+        {% assign tag_class = tag | strip | downcase | replace: ' ', '-' %}
+        <span class="tag tag-{{ tag_class }}">{{ tag | strip }}</span>
+      {% endfor %}
+    </div>
     {% endif %}
 
+    {% if include.keywords %}
+    <p class="research-meta"><strong>Keywords:</strong> {{ include.keywords }}</p>
+    {% endif %}
   </div>
 </div>
+{% endif %}
