@@ -1,17 +1,10 @@
 ---
-title: Research Projects
+title: Research
 layout: research
 nav_active: research
 ---
-This site is under construction.
-<div style="position: flex; right: 0; padding: 10px; border-radius: 5px;">
-    <strong>Life Stages of Projects</strong><br>
-    <a href="#work-in-progress">Work in Progress</a><br>
-    <a href="#working-papers">Working Papers</a>
-</div>
 
-
-# Work in Progress
+<h2 class="research-section-title" id="work-in-progress"><i class="fas fa-flask"></i> Work in Progress</h2>
 
 {% assign wip = site.data.research | where: "section", "wip" %}
 {% for paper in wip %}
@@ -30,4 +23,5 @@ This site is under construction.
 %}
 {% endfor %}
 
-# Working Papers
+<h2 class="research-section-title" id="working-papers"><i class="fas fa-file-alt"></i> Working Papers</h2>
+<p class="research-empty-note">Coming soon.</p>
