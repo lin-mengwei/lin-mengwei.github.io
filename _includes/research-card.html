@@ -4,7 +4,10 @@
   • "compact" otherwise (single condensed row)
 {% endcomment %}
 
-{% if include.abstract or include.image1 or include.image %}
+{% assign has_abstract = false %}
+{% if include.abstract and include.abstract != "" %}{% assign has_abstract = true %}{% endif %}
+
+{% if has_abstract or include.image1 or include.image %}
 <!-- ======== Full card ======== -->
 <div class="research-card research-card--full">
   <div class="research-card-header">
@@ -18,7 +21,7 @@
 
   <div class="research-flex-row">
     <div class="research-text-col">
-      {% if include.abstract %}
+      {% if has_abstract %}
       <details class="abstract-box" id="abstract-{{ include.title | slugify }}">
         <summary><strong>Abstract</strong> <span class="abstract-hint">(click to expand)</span></summary>
         <p class="abstract-text">{{ include.abstract }}</p>
