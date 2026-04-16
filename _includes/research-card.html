@@ -9,6 +9,7 @@
 <div class="research-card research-card--full">
   <div class="research-card-header">
     <h3 class="research-card-title">{{ include.title }}</h3>
+    {% if include.stage %}<span class="research-stage">{{ include.stage }}</span>{% endif %}
   </div>
 
   {% if include.coauthors %}
@@ -69,6 +70,7 @@
 <div class="research-card research-card--compact">
   <div class="research-card-header">
     <h3 class="research-card-title">{{ include.title }}</h3>
+    {% if include.stage %}<span class="research-stage">{{ include.stage }}</span>{% endif %}
   </div>
 
   {% if include.coauthors %}

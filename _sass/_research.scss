@@ -2,34 +2,18 @@
 // Research Page
 // ======================
 
-// ---- Banner (photo, same style as teaching) ----
-.research-banner {
-  height: 22vh;
-  min-height: 140px;
-  background-image:
-    linear-gradient(to bottom, rgba(255,255,255,0) 40%, rgba(255,255,255,1) 100%),
-    url('/assets/images/teaching.webp');
-  background-size: 100% auto;
-  background-position: center 36%;
-  background-repeat: no-repeat;
-  position: relative;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
-
-  @media screen and (max-width: 768px) {
-    height: 16vh;
-  }
-}
-
-.research-banner-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(255,255,255,0.15);
-}
-
 // ---- Page container ----
 .research-page {
   padding: 2rem 0 4rem;
+}
+
+// ---- Research statement ----
+.research-statement {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 2rem;
+  text-align: justify;
 }
 
 .research-title {
@@ -85,6 +69,10 @@
 }
 
 .research-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
   margin-bottom: 0.5rem;
 }
 
@@ -94,6 +82,20 @@
   color: $color-dark-grey;
   line-height: 1.4;
   margin: 0;
+  flex: 1;
+}
+
+.research-stage {
+  flex-shrink: 0;
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 0.15em 0.6em;
+  border-radius: 3px;
+  background: mix($color-primary, #fff, 12%);
+  color: darken($color-primary, 8%);
+  border: 1px solid mix($color-primary, #fff, 25%);
+  margin-top: 0.15rem;
+  white-space: nowrap;
 }
 
 .research-card-tags {
