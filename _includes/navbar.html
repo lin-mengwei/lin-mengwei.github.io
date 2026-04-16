@@ -23,22 +23,31 @@
             <div class="navbar-end">
                 
                 <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/#about">BIO</a>
-                <!-- 
+                
+                <a class="navbar-item{% if page.nav_active == 'research' %} is-active{% endif %}" href="{{site.url}}{{site.baseurl}}/research">RESEARCH</a>
 
-                <a class="navbar-item {% if page.layout == 'default' %}is-active{% endif %}"
-                    href="{% if page.layout == 'default' %}{{site.url}}{{site.baseurl}}/#{% else %}{{site.url}}{{site.baseurl}}/{% endif %}">HOME</a>
-                    
-                <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/teaching">TEACHING</a>
+                <a class="navbar-item{% if page.nav_active == 'teaching' %} is-active{% endif %}" href="{{site.url}}{{site.baseurl}}/teaching">TEACHING</a>
                 
-                <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/researche">RESEARCH</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <a class="navbar-link{% if page.nav_active == 'public-goods' %} is-active{% endif %}">
+                    PUBLIC GOODS
+                  </a>
+
+                  <div class="navbar-dropdown is-right has-background-black">
+                    <a class="navbar-item has-text-white" href="{{site.url}}{{site.baseurl}}/activities">
+                      Activities
+                    </a>
+
+                    <a class="navbar-item has-text-white" href="{{site.url}}{{site.baseurl}}/besteps">
+                      BESTEPS Project
+                    </a>
+
+                    <a class="navbar-item has-text-white" href="{{site.url}}{{site.baseurl}}/popul-trans">
+                      Popularization & Translation
+                    </a>
+                  </div>
+                </div>
                 
-                <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/popul-trans">POPULARIZATION & TRANSLATION</a>
-                
-                <a class="navbar-item {% if page.layout == 'blog' %}is-active{% endif %}"
-                    href="{{site.url}}{{site.baseurl}}/blog">BLOG</a>
-                
-                <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/#about">RESEARCH</a>
-                --> 
             </div>
 
         </div>
