@@ -73,10 +73,18 @@ articles:
   - title_zh: '"翻车"之后，何去何从？'
     title_en: "Where to Go after Professional Discipline?"
     source: "香樟经济学术圈"
-    post_no: 3491
+    post_no: 3665
     url: "https://mp.weixin.qq.com/s/0s9M5IC_UEmiRUOF7fgrxQ"
     coauthor_zh: "柳佳炜"
     coauthor_en: "Jiawei LIU"
+
+  - title_zh: '因果推断的升维融合：一切皆可差分？'
+    title_en: "Differencing Everything: Dimensional Fusion of Causal Inference Techniques"
+    source: "香樟经济学术圈"
+    post_no: 3835
+    url: "https://mp.weixin.qq.com/s/4Eyo26JFuCF3lSwKSUQFIw"
+    coauthor_zh: "陈浩驰"
+    coauthor_en: "Haochi CHEN"
 
 # ---------- Book translations / publications ----------
 books:
