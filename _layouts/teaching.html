@@ -28,7 +28,7 @@ body_id: teaching-page
 
       <!-- Year tabs -->
       {% for year in mc.years %}
-      <details class="teaching-year" {% if forloop.first %}open{% endif %}>
+      <details class="teaching-year">
         <summary>
           <span class="teaching-year-label">{{ year.semester }}</span>
           <span class="teaching-year-rating"><i class="fas fa-star"></i> {{ year.rating }}</span>
