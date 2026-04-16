@@ -6,7 +6,7 @@ nav_active: research
 
 <div class="research-statement">
   <div class="rs-label"><b>Research Statement</b></div>
-  <p>My research is in applied microeconomics, focusing on education, urban, and cultural economics. I use applied econometric methods to analyze how social environment and institutional incentives shape education decisions and performance, and how these factors translate into labour market and demographic outcomes. </p>
+  <p>My research is in applied microeconomics, focusing on education, urban, and cultural economics. I use applied econometric methods to understand how social environment and institutional incentives shape education decisions and performance, and how these factors translate into labour market and demographic outcomes. </p>
 </div>
 
 <h2 class="research-section-title" id="work-in-progress"><i class="fas fa-flask"></i> Work in Progress</h2>
