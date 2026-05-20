@@ -11,4 +11,4 @@ By summarizing and translating cutting-edge research, I aim to help bring intere
 
 This is also part of my own academic training, thus focusing more on education, labor, and applied micro.
 
-这个过程也是我自己精读、积累文献的学术训练，因此主要选取教育、劳动和应用微观的论文。
+主要选取教育、劳动和应用微观的论文。
