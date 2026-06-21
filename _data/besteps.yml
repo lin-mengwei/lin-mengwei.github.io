@@ -6,27 +6,20 @@
 # About
 about:
   description_en: >-
-    <b>BESTEPS</b> is a training project I coordinated in academic years
-    2024/25 and 2025/26, financed by the
-    <a href="https://web.ub.edu/en/web/escola-doctorat/" target="_blank">EDUB</a>
-    and supported by the
-    <a href="https://www.ub.edu/school-economics/" target="_blank">UBSE</a>.
-    <br>
-    <br>
-    Designed for early-stage economists, <b>BESTEPS</b> is structured as a series
-    of lectures by leading experts in Europe, covering key research phases from identifying and adapting
-    feasible projects, to effectively communicating findings and producing
-    final academic products.
-    <br>
+    <b>BESTEPS</b> is a training project for PhD economists, which I coordinated at the <a href="https://www.ub.edu/school-economics/" target="_blank">UB School of Economics</a> from 2024 to 2026, with funding from <a href="https://web.ub.edu/en/web/escola-doctorat/" target="_blank">EDUB</a>.</i>
+    <br><br>
+    It covers the life-cycle of PhD economics research, from identifying a promising project to producing research outputs such as a job market paper, through 7 lectures by leading European researchers.
+    <br><br>
+    Our book based on the lectures, <b>The BESTEPS Guide</b>, is <b>freely available</b> and can be downloaded below.
   highlights:
     - icon: "fa-graduation-cap"
       label: "7 Expert-led Lectures"
-    - icon: "fa-book-open"
-      label: "Open-access Guide"
-    - icon: "fa-sync-alt"
-      label: "Research Life-cycle"
-    - icon: "fa-user-graduate"
-      label: "PhD Training"
+    - icon: "fa-download"
+      label: "Open Access Book"
+    - icon: "fa-route"
+      label: "From Idea to Job Market Paper"
+    - icon: "fa-globe"
+      label: "Writing, Presenting, and Visualizing"
 
 # Lectures
 lectures:
@@ -78,15 +71,14 @@ guide:
   subtitle: "7 Lessons towards Effective Economics PhD Research"
   image: "/assets/images/activities/besteps_guide.png"
   description: >-
-    Based on the lecture notes, Anna Chesa and I edited <b>The BESTEPS Guide</b>, now available as an
-    open-access public good for all early-career economists worldwide.
-  volumes:
-    - label: "Volume 1 (Lectures 1 - 3)"
-      url: "https://diposit.ub.edu/items/97432c44-013c-45d3-917b-aa87467f216d"
-      status: "available"
-    - label: "Volume 2 (Lectures 4 - 7)"
-      url: ""
-      status: "coming-soon"
+    Based on the lectures, Anna Chesa and I edited <b>The BESTEPS Guide: 7 Lessons towards Effective Economics PhD Research</b>, available as a public good. 
+    <br><br>
+    The Guide walks through every key stage of economics research: understanding the research process and products, 
+    choosing a feasible project, working reproducibly,
+    visualizing data and results, giving academic talks, and crafting a job market paper.
+    <br><br>
+  url: "https://diposit.ub.edu/items/97432c44-013c-45d3-917b-aa87467f216d"
+  label: "Download the Book"
 
 # Video interviews (placeholder)
 videos:

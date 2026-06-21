@@ -167,39 +167,69 @@
   font-size: 0.78rem;
 }
 
-// ---- BESTEPS Guide ----
-.bp-guide-subtitle {
+// ---- Guide + Interviews two-column layout ----
+.bp-gv-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.bp-gv-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.bp-gv-subtitle {
   font-size: 1rem;
   color: #777;
   font-style: italic;
-  margin: -0.5rem 0 1.25rem;
+  margin: -0.5rem 0 1.5rem;
 }
 
-.bp-guide-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.07);
-  border: 1px solid #eaeaea;
-  padding: 1.5rem;
-}
+// Shared portrait visual — book cover or video frame
+.bp-gv-portrait {
+  width: 65%;
+  max-width: 260px;
+  margin: 0 auto 1.5rem;
 
-.bp-guide-cover {
-  flex: 0 0 auto;
+  &--book {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
 
-  img {
-    width: 300px;
-    height: auto;
-    border-radius: 6px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
-    display: block;
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
   }
-}
 
-.bp-guide-info {
-  flex: 1;
+  &--video {
+    aspect-ratio: 9 / 16;
+    background: $color-accent-bg;
+    border: 2px dashed darken($color-accent-bg, 12%);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+
+    > i {
+      font-size: 2rem;
+      color: $color-primary;
+      opacity: 0.4;
+    }
+
+    > span {
+      font-size: 0.78rem;
+      color: #aaa;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+  }
 }
 
 .bp-guide-desc {
@@ -209,12 +239,6 @@
   margin: 0 0 1rem;
 
   b { font-weight: 700; color: $color-dark-grey; }
-}
-
-.bp-guide-volumes {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
 }
 
 .bp-guide-btn {
@@ -227,6 +251,7 @@
   font-weight: 600;
   text-decoration: none !important;
   transition: background 0.25s ease, transform 0.2s ease;
+  align-self: flex-start;
 
   background: $color-primary;
   color: #fff !important;
@@ -249,8 +274,8 @@
 }
 
 .bp-guide-acknowledgment {
-  margin-top: 1.5rem;
-  padding-top: 1rem;
+  margin-top: 0.75rem;
+  padding-top: 0.85rem;
   border-top: 1px solid #eee;
   font-size: 0.8rem;
   line-height: 1.6;
@@ -258,17 +283,11 @@
   font-style: italic;
 }
 
-// ---- Video Interviews ----
-.bp-videos-subtitle {
-  font-size: 0.93rem;
-  color: #777;
-  margin: -0.5rem 0 1.25rem;
-}
-
-.bp-videos-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 1.25rem;
+// ---- Video Interviews (when enabled) ----
+.bp-videos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .bp-video-card {
@@ -282,7 +301,7 @@
 .bp-video-embed {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; // 16:9
+  padding-bottom: 177.78%; // 9:16 portrait
   background: #000;
 
   iframe {
@@ -301,36 +320,112 @@
   margin: 0;
 }
 
-// ---- Video Placeholder ----
-.bp-placeholder-box {
-  text-align: center;
-  padding: 3rem 2rem;
-  background: $color-accent-bg;
+// ---- Full-width Guide card (when interviews not yet live) ----
+.bp-guide-fw-card {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  background: #fff;
   border-radius: 12px;
-  border: 2px dashed darken($color-accent-bg, 12%);
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.07);
+  border: 1px solid #eaeaea;
+  padding: 2rem;
+}
 
-  > i {
-    font-size: 2.5rem;
-    color: $color-primary;
-    opacity: 0.5;
-    margin-bottom: 0.75rem;
+.bp-guide-fw-thumb {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  .bp-guide-btn {
+    align-self: stretch;
+    justify-content: center;
+  }
+}
+
+.bp-guide-fw-cover {
+  img {
+    width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     display: block;
   }
+}
 
-  h3 {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: $color-dark-grey;
-    margin: 0 0 0.4rem;
+.bp-guide-fw {
+  > .bp-section-title {
+    margin-bottom: 1.25rem;
   }
+}
 
-  p {
-    font-size: 0.9rem;
-    color: #888;
-    margin: 0;
-    max-width: 500px;
-    margin: 0 auto;
+.bp-guide-fw-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+// ---- Upcoming interviews teaser strip ----
+.bp-video-teaser {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.85rem;
+  padding: 0.85rem 1.25rem;
+  background: $color-accent-bg;
+  border-radius: 8px;
+  border: 1px solid darken($color-accent-bg, 8%);
+}
+
+.bp-video-teaser-icon {
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  background: rgba($color-primary, 0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    color: $color-primary;
+    font-size: 0.85rem;
+    opacity: 0.75;
   }
+}
+
+.bp-video-teaser-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.bp-video-teaser-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: $color-dark-grey;
+}
+
+.bp-video-teaser-subtitle {
+  font-size: 0.8rem;
+  color: #888;
+  line-height: 1.4;
+}
+
+.bp-video-teaser-badge {
+  flex: 0 0 auto;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: $color-primary;
+  background: rgba($color-primary, 0.1);
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
 }
 
 // ---- Contributors ----
@@ -405,15 +500,27 @@
     padding: 0 1rem;
   }
 
+  // ---- About ----
+  .bp-about-text {
+    text-align: left;
+  }
+
   .bp-highlights {
     gap: 0.75rem;
   }
 
   .bp-highlight {
+    flex: 0 1 calc(50% - 0.375rem); // 2-per-row grid
     font-size: 0.8rem;
     padding: 0.45rem 0.85rem;
   }
 
+  // ---- Shared ----
+  .bp-section-title {
+    font-size: 1.25rem;
+  }
+
+  // ---- Lecture Programme ----
   .bp-programme-columns {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -430,31 +537,66 @@
     font-size: 0.6rem;
   }
 
-  .bp-guide-card {
+  // ---- Guide + Interviews (side-by-side, when live) ----
+  .bp-gv-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .bp-gv-col + .bp-gv-col {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+  }
+
+  .bp-gv-portrait {
+    width: 55%;
+  }
+
+  // ---- Guide full-width card ----
+  .bp-guide-fw-card {
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  // thumb (cover + button) stacked vertically, centred — like a book product card on mobile
+
+  .bp-guide-fw-thumb {
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    gap: 1rem;
+    width: 100%;
+    gap: 0.9rem;
+
+    .bp-guide-btn {
+      width: 100%;
+      justify-content: center;
+    }
   }
 
-  .bp-guide-cover img {
-    width: 240px;
+  .bp-guide-fw-cover img {
+    width: 170px;
+    height: auto;
   }
 
-  .bp-guide-volumes {
-    justify-content: center;
+  // ---- Video teaser ----
+  .bp-video-teaser {
+    flex-wrap: wrap;
+    gap: 0.6rem;
   }
 
-  .bp-videos-grid {
-    grid-template-columns: 1fr;
+  .bp-video-teaser-subtitle {
+    display: none; // long subtitle wastes space on small screens
   }
 
+  // ---- Contributors ----
   .bp-contrib-row {
     flex-direction: column;
   }
 
   .bp-contrib-photo-side {
     flex: none;
+    width: 100%;
   }
 
   .bp-contrib-names {

@@ -31,7 +31,7 @@ extra_css: besteps
 
   <!-- ======== Lectures ======== -->
   <section class="bp-section">
-    <h2 class="bp-section-title"><i class="fas fa-chalkboard-teacher"></i> Content</h2>
+    <h2 class="bp-section-title"><i class="fas fa-chalkboard-teacher"></i> Lecture Programme</h2>
 
     <div class="bp-programme-columns">
       {% for part in bp.lectures %}
@@ -59,74 +59,88 @@ extra_css: besteps
     </div>
   </section>
 
-  <!-- ======== The BESTEPS Guide ======== -->
+  <!-- ======== Guide & Interviews ======== -->
   <section class="bp-section">
-    <h2 class="bp-section-title"><i class="fas fa-book-open"></i> {{ bp.guide.title }}</h2>
-    <p class="bp-guide-subtitle">{{ bp.guide.subtitle }}</p>
 
-    <div class="bp-guide-card">
-      <div class="bp-guide-cover">
-        <img src="{{ bp.guide.image | relative_url }}" alt="The BESTEPS Guide cover">
-      </div>
-      <div class="bp-guide-info">
-        <p class="bp-guide-desc">{{ bp.guide.description }}</p>
-        <div class="bp-guide-volumes">
-          {% for vol in bp.guide.volumes %}
-          {% if vol.status == "available" %}
-          <a href="{{ vol.url }}" target="_blank" class="bp-guide-btn">
-            <i class="fas fa-download"></i> {{ vol.label }}
-          </a>
-          {% else %}
-          <span class="bp-guide-btn bp-guide-btn--soon">
-            <i class="fas fa-clock"></i> {{ vol.label }} — Coming Soon
-          </span>
-          {% endif %}
-          {% endfor %}
+    {% if bp.videos.enabled %}
+
+    <!-- Side-by-side layout: Guide + Interviews live -->
+    <div class="bp-gv-row">
+      <div class="bp-gv-col">
+        <h2 class="bp-section-title"><i class="fas fa-book-open"></i> {{ bp.guide.title }}</h2>
+        <p class="bp-gv-subtitle">{{ bp.guide.subtitle }}</p>
+        <div class="bp-gv-portrait bp-gv-portrait--book">
+          <img src="{{ bp.guide.image | relative_url }}" alt="The BESTEPS Guide cover">
         </div>
+        <p class="bp-guide-desc">{{ bp.guide.description }}</p>
+        <a href="{{ bp.guide.url }}" target="_blank" class="bp-guide-btn">
+          <i class="fas fa-download"></i> {{ bp.guide.label }}
+        </a>
         <p class="bp-guide-acknowledgment">
           We are grateful to the following early-career economists from various institutions for reviewing the draft and providing valuable feedback:
           Bastian Bruestle (Zurich), Haochi Chen (Dublin), Zhenghao Chen (UCL), Alessandro Ciardo (Barcelona), Britta Hecker (IAB), Guillermo Martínez (CEMFI), Taoyi Sun (Purdue), Robert Wlodarski (Cambridge), and Jessie Ziyue Zhu (Maastricht).
         </p>
       </div>
-    </div>
-  </section>
-
-  <!-- ======== Video Interviews (placeholder) ======== -->
-  {% if bp.videos.enabled %}
-  <section class="bp-section">
-    <h2 class="bp-section-title"><i class="fas fa-video"></i> {{ bp.videos.title }}</h2>
-    <p class="bp-videos-subtitle">{{ bp.videos.subtitle }}</p>
-    <div class="bp-videos-grid">
-      {% for vid in bp.videos.items %}
-      <div class="bp-video-card">
-        <div class="bp-video-embed">
-          <iframe src="https://www.youtube.com/embed/{{ vid.youtube_id }}" frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen></iframe>
+      <div class="bp-gv-col">
+        <h2 class="bp-section-title"><i class="fas fa-video"></i> {{ bp.videos.title }}</h2>
+        <p class="bp-gv-subtitle">{{ bp.videos.subtitle }}</p>
+        <div class="bp-videos-list">
+          {% for vid in bp.videos.items %}
+          <div class="bp-video-card">
+            <div class="bp-video-embed">
+              <iframe src="https://www.youtube.com/embed/{{ vid.youtube_id }}" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+            </div>
+            <p class="bp-video-label">{{ vid.title }}</p>
+          </div>
+          {% endfor %}
         </div>
-        <p class="bp-video-label">{{ vid.title }}</p>
       </div>
-      {% endfor %}
     </div>
-  </section>
-  {% else %}
-  <section class="bp-section bp-videos-placeholder">
-    <div class="bp-placeholder-box">
-      <i class="fas fa-video"></i>
-      <h3>Lecturer Interviews</h3>
-      <p>Coming soon — conversations with our lecturers on research, career, and advice for PhD students.</p>
+
+    {% else %}
+
+    <!-- Full-width Guide + upcoming interviews teaser -->
+    <div class="bp-guide-fw">
+      <h2 class="bp-section-title"><i class="fas fa-book-open"></i> {{ bp.guide.title }}</h2>
+      <div class="bp-guide-fw-card">
+        <div class="bp-guide-fw-thumb">
+          <div class="bp-guide-fw-cover">
+            <img src="{{ bp.guide.image | relative_url }}" alt="The BESTEPS Guide cover">
+          </div>
+          <a href="{{ bp.guide.url }}" target="_blank" class="bp-guide-btn">
+            <i class="fas fa-download"></i> {{ bp.guide.label }}
+          </a>
+        </div>
+        <div class="bp-guide-fw-info">
+          <p class="bp-guide-desc">{{ bp.guide.description }}</p>
+          <p class="bp-guide-acknowledgment">
+            We are grateful to the following early-career economists from various institutions for reviewing the draft and providing valuable feedback:
+            Bastian Bruestle (Zurich), Haochi Chen (Dublin), Zhenghao Chen (UCL), Alessandro Ciardo (Barcelona), Britta Hecker (IAB), Guillermo Martínez (CEMFI), Taoyi Sun (Purdue), Robert Wlodarski (Cambridge), and Jessie Ziyue Zhu (Maastricht).
+          </p>
+        </div>
+      </div>
+      <div class="bp-video-teaser">
+        <div class="bp-video-teaser-icon"><i class="fas fa-video"></i></div>
+        <div class="bp-video-teaser-text">
+          <span class="bp-video-teaser-title">{{ bp.videos.title }}</span>
+          <span class="bp-video-teaser-subtitle">{{ bp.videos.subtitle }}</span>
+        </div>
+        <span class="bp-video-teaser-badge">Coming Soon</span>
+      </div>
     </div>
+
+    {% endif %}
+
   </section>
-  {% endif %}
 
   <!-- ======== Contributors ======== -->
   <section class="bp-section">
     <h2 class="bp-section-title"><i class="fas fa-users"></i> Contributors</h2>
 
     <p class="bp-contrib-note">
-      The BESTEPS project draws on the collective work of many people — a committed
-      team of PhD colleagues alongside essential support from our administrative staff
-      and faculty members.
+      The BESTEPS project draws on the collective work of many people, a committed team of PhD colleagues alongside essential support from our administrative staff and faculty members.
     </p>
 
     <div class="bp-contrib-row">
