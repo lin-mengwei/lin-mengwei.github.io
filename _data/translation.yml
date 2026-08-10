@@ -111,9 +111,9 @@ books:
     role: "Translator"
 
   - title: "《通识笔译：从读写到翻译》"
-    subtitle: "<i>Translation Literacy: Reading, Writing & Translating</i>"
-    publisher: "清华大学出版社，即将出版"
-    image: "/assets/images/cover.webp"
+    subtitle: "<i>Translation Literacy: From Reading and Writing to Translating</i>"
+    publisher: "清华大学出版社，2026年"
+    image: "/assets/images/literacy.png"
     url: "popul-trans#2-book-translation--书籍翻译"
     original: null
     role: "Co-author"
