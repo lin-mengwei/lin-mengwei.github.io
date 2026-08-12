@@ -40,7 +40,7 @@ articles:
     post_no: 3379
     url: "https://mp.weixin.qq.com/s/SjekZiUjBFkP2RirqAqvkw"
     coauthor_zh: "彭启远"
-    coauthor_en: "Qiyuan PENG, UiO"
+    coauthor_en: "Qiyuan PENG (UiO)"
     coauthor_url: "https://www.sv.uio.no/psi/english/people/academic/qiyuanp/index.html"
 
   - title_zh: "促就业政策评估：多种DID串起故事"
@@ -49,7 +49,7 @@ articles:
     post_no: 3414
     url: "https://mp.weixin.qq.com/s/P5G8q01H2JlTV-gznVwWjw"
     coauthor_zh: "孙韬怡"
-    coauthor_en: "Taoyi SUN, Purdue"
+    coauthor_en: "Taoyi SUN (Purdue)"
     coauthor_url: "https://www.linkedin.com/in/taoyi-sun/"
 
   - title_zh: '现金补贴是"送子观音"吗？'
@@ -58,7 +58,7 @@ articles:
     post_no: 3461
     url: "https://mp.weixin.qq.com/s/Ku-oCQ0BSF4d4mkbbiRLmA"
     coauthor_zh: "郑薇"
-    coauthor_en: "Wei ZHENG, UB&IEB"
+    coauthor_en: "Wei ZHENG (UB&IEB)"
     coauthor_url: "https://weizhengecon.wixsite.com/website"
 
   - title_zh: "越急越穷：耐心为何能增强国力？"
@@ -67,7 +67,7 @@ articles:
     post_no: 3491
     url: "https://mp.weixin.qq.com/s/eWSIAq1v_Ch5q_P8F1yu6A"
     coauthor_zh: "韩振宁"
-    coauthor_en: "Zhenning HAN, UB"
+    coauthor_en: "Zhenning HAN (UB)"
     coauthor_url: "https://sites.google.com/view/zhenninghan"
 
   - title_zh: '"翻车"之后，何去何从？'
@@ -76,7 +76,7 @@ articles:
     post_no: 3665
     url: "https://mp.weixin.qq.com/s/0s9M5IC_UEmiRUOF7fgrxQ"
     coauthor_zh: "柳佳炜"
-    coauthor_en: "Jiawei LIU, XMU"
+    coauthor_en: "Jiawei LIU (XMU)"
 
   - title_zh: '因果推断的升维融合：一切皆可差分？'
     title_en: "Differencing Everything: Dimensional Fusion of Causal Inference Techniques"
@@ -84,7 +84,7 @@ articles:
     post_no: 3835
     url: "https://mp.weixin.qq.com/s/4Eyo26JFuCF3lSwKSUQFIw"
     coauthor_zh: "陈浩驰"
-    coauthor_en: "Haochi CHEN, UCD"
+    coauthor_en: "Haochi CHEN (UCD)"
 
   - title_zh: '综合高中：一所学校，两种前途'
     title_en: "Comprehensive High Schools: One School, Two Futures"
@@ -92,7 +92,7 @@ articles:
     post_no: 3948
     url: ""
     coauthor_zh: "吴伊涵"
-    coauthor_en: "Yihan WU, HKUST"
+    coauthor_en: "Yihan WU (HKUST)"
 
 # ---------- Book translations / publications ----------
 books:
