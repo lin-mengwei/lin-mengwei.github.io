@@ -90,12 +90,26 @@ articles:
     title_en: "Comprehensive High Schools: One School, Two Futures"
     source: "香樟经济学术圈"
     post_no: 3948
-    url: ""
+    url: "https://mp.weixin.qq.com/s/ymG8b5Fl0dxSWC1tbHVEHg"
     coauthor_zh: "吴伊涵"
     coauthor_en: "Yihan WU (HKUST)"
 
 # ---------- Book translations / publications ----------
 books:
+  - title: "《管理者微观经济学》（第二版）"
+    publisher: "机械工业出版社，即将出版（2027）"
+    image: "/assets/images/micro.jpg"
+    url: "https://sites.google.com/stanford.edu/micro4managers/"
+    original: "Kreps, David M. <i>Microeconomics for Managers</i>. 2nd edition. W. W. Norton & Company, 2021."
+    role: "Translator"
+
+  - title: "《科学与工程实践：引导学生在探索中理解世界》"
+    publisher: "教育科学出版社，即将出版（2026）"
+    image: "/assets/images/practices.webp"
+    url: "https://my.nsta.org/resource/105619/helping-students-make-sense-of-the-world-using-next-generation-science-and-engine"
+    original: "Schwarz, Christina V., Cynthia Passmore, and Brian J. Reiser. <i>Helping Students Make Sense of the World Using Next Generation Science and Engineering Practices</i>. NSTA Press, 2017."
+    role: "Translator"
+
   - title: "《经济学怎么了》"
     publisher: "文汇出版社，2022年"
     image: "/assets/images/whatswrong.jpg"
@@ -111,13 +125,6 @@ books:
     role: "Co-translator"
     coauthor: "陈浩驰 (Haochi CHEN)"
 
-  - title: "《科学与工程实践：引导学生在探索中理解世界》"
-    publisher: "教育科学出版社，即将出版"
-    image: "/assets/images/practices.webp"
-    url: "https://my.nsta.org/resource/105619/helping-students-make-sense-of-the-world-using-next-generation-science-and-engine"
-    original: "Schwarz, Christina V., Cynthia Passmore, and Brian J. Reiser. <i>Helping Students Make Sense of the World Using Next Generation Science and Engineering Practices</i>. NSTA Press, 2017."
-    role: "Translator"
-
   - title: "《笔译通识：从读写到翻译》"
     subtitle: "<i>Translation Literacy: From Reading and Writing to Translating</i>"
     publisher: "清华大学出版社，2026年"
@@ -127,4 +134,4 @@ books:
     role: "Co-author"
     coauthor: "李明 Cynthia LI"
     coauthor_url: "https://sfl.szu.edu.cn/info/1232/4264.htm"
-    description: "Our book offers an introduction to translation for Chinese-English proficient professionals outside translation-related fields, helping them develop essential translation skills while integrating their expertise."
+    description: "Our book offers an introduction to translation for Chinese-English proficient professionals, helping them develop essential translation skills while integrating their expertise."
