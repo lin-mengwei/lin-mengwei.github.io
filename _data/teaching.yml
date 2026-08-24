@@ -13,7 +13,7 @@ main_course:
   years:
     - semester: "2024"
       rating: "Teaching Evaluation: 9.4 / 10"
-      lectures_count: "16 two-hour lectures (+ re-designed course)"
+      lectures_count: "16 two-hour lectures (+ course re-designed)"
       modules:
         - unit: "Theory 2: Decentralization of Government Expenditure"
           lectures:
