@@ -72,6 +72,27 @@
   }
 }
 
+a.bp-highlight--link {
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background: $color-primary;
+    color: white;
+    transform: translateY(-1px);
+
+    i, span {
+      color: white;
+    }
+  }
+}
+
+// Offset for fixed navbar when scrolling to an in-page anchor
+#besteps-guide {
+  scroll-margin-top: 90px;
+}
+
 // ---- Lectures ----
 .bp-programme-columns {
   display: grid;

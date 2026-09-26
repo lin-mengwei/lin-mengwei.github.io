@@ -21,10 +21,17 @@ extra_css: besteps
     </div>
     <div class="bp-highlights">
       {% for h in bp.about.highlights %}
+      {% if h.link %}
+      <a href="{{ h.link }}" class="bp-highlight bp-highlight--link">
+        <i class="fas {{ h.icon }}"></i>
+        <span>{{ h.label }}</span>
+      </a>
+      {% else %}
       <div class="bp-highlight">
         <i class="fas {{ h.icon }}"></i>
         <span>{{ h.label }}</span>
       </div>
+      {% endif %}
       {% endfor %}
     </div>
   </section>
@@ -60,7 +67,7 @@ extra_css: besteps
   </section>
 
   <!-- ======== Guide & Interviews ======== -->
-  <section class="bp-section">
+  <section class="bp-section" id="besteps-guide">
 
     {% if bp.videos.enabled %}
 
