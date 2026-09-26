@@ -14,6 +14,7 @@ about:
   highlights:
     - icon: "fa-graduation-cap"
       label: "7 Expert-led Lectures"
+      link: "#besteps-lectures"
     - icon: "fa-download"
       label: "Open Access Book"
       link: "#besteps-guide"
