@@ -15,6 +15,10 @@
     {% if include.stage %}<span class="research-stage">{{ include.stage }}</span>{% endif %}
   </div>
 
+  {% if include.jmp %}
+  <span class="jmp-badge"><i class="fas fa-star"></i> Job Market Paper</span>
+  {% endif %}
+
   {% if include.coauthors %}
   <p class="research-card-coauthors">Joint with {{ include.coauthors }}</p>
   {% endif %}
@@ -75,6 +79,10 @@
     <h3 class="research-card-title">{{ include.title }}</h3>
     {% if include.stage %}<span class="research-stage">{{ include.stage }}</span>{% endif %}
   </div>
+
+  {% if include.jmp %}
+  <span class="jmp-badge"><i class="fas fa-star"></i> Job Market Paper</span>
+  {% endif %}
 
   {% if include.coauthors %}
   <p class="research-card-coauthors">Joint with {{ include.coauthors }}</p>

@@ -4,7 +4,8 @@
 
 - title: "Museums Around: Cultural Infrastructure and Educational Outcomes"
   status: "Work in Progress"
-  stage: "Job Market Paper - Draft Coming Soon"
+  stage: "Draft Coming Soon"
+  jmp: true
   tags: "Economics of Education, Urban Economics, Cultural Economics"
   abstract: "How do local cultural amenities affect educational attainment and choices? Combining administrative records on 8.5 million students in England with geocoded museum openings, I answer this question using a stacked difference-in-differences design. Opening a museum within 2 km of home raises students' rank in upper-secondary exams by 1.5 percentiles, fading with distance, while progression to upper-secondary study is unchanged. Subject choices are also affected by museum themes; history, social-life, and industry museums increase entry into related subjects by over 1 percentage point, and science museums, if anything, reallocate students from other subjects to academic STEM. Cultural infrastructure in the adolescent environment thus shapes what young people achieve and what they study."
   jel: "I21, J24, Z11, R23"

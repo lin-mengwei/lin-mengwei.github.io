@@ -17,6 +17,7 @@ nav_active: research
   title=paper.title
   status=paper.status
   stage=paper.stage
+  jmp=paper.jmp
   tags=paper.tags
   coauthors=paper.coauthors
   abstract=paper.abstract
