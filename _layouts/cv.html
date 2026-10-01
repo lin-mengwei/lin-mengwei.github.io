@@ -1,0 +1,43 @@
+---
+layout: base
+body_id: cv-page
+---
+
+{%- comment -%}
+  Self-hosted CV. Replace assets/files/cv.pdf to update.
+  The embed URL carries the build time as a query string so browsers re-fetch after each rebuild.
+{%- endcomment -%}
+
+{%- assign pdf_file = page.cv_file | default: '/assets/files/cv.pdf' -%}
+{%- assign build_ts = site.time | date: '%s' -%}
+{%- assign pdf_src = pdf_file | append: '?v=' | append: build_ts | relative_url -%}
+{%- assign pdf_dl = pdf_file | relative_url -%}
+
+<!-- Banner -->
+<div class="page-banner">
+  <h1 class="page-banner__title">Curriculum Vitae</h1>
+</div>
+
+<section class="cv-page">
+  <div class="cv-container">
+
+    <div class="cv-toolbar">
+      <span class="cv-meta">
+        <i class="fas fa-clock"></i> Last updated: {{ site.time | date: "%B %Y" }}
+      </span>
+      <a class="button is-rounded is-uppercase has-text-weight-normal is-black is-outlined cv-download"
+         href="{{ pdf_dl }}" target="_blank" rel="noopener" download>
+        <i class="fas fa-download"></i>&nbsp;Download PDF
+      </a>
+    </div>
+
+    <div class="cv-viewer">
+      <iframe src="{{ pdf_src }}" title="Curriculum Vitae (PDF)" loading="lazy"></iframe>
+    </div>
+
+    <p class="cv-fallback">
+      Cannot see the PDF? <a href="{{ pdf_dl }}" target="_blank" rel="noopener">Open it in a new tab</a>.
+    </p>
+
+  </div>
+</section>
