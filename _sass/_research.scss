@@ -372,6 +372,21 @@
     padding: 1rem 1.1rem;
   }
 
+  // Stack the stage label under the title so it doesn't squeeze the title
+  .research-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .research-card-title {
+    flex: none;
+    width: 100%;
+  }
+
+  .research-stage {
+    margin-top: 0;
+  }
   .research-presented {
     font-size: 0.78rem;
   }
