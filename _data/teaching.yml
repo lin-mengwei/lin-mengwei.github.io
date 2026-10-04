@@ -2,12 +2,18 @@
 # Teaching — unified data
 # ===================================
 
+# DRAFT — short teaching overview for Econ Job Market readers. Edit freely (HTML allowed).
+statement: >-
+  Teaching is one of the reasons I love academic work. I am happy to teach foundational economics courses as well as more advanced courses in my research fields.
+  <br><br>
+  My past teaching has covered topics in <b>microeconomics</b>, <b>public economics</b>, and <b>applied econometrics</b>, as well as <b>language and cross-cultural communication courses</b>. I also have experience in course design, textbook writing, textbook translation, and organizing soft-skill and quantitative-skill <a href="/activities">training for researchers</a>.
+
 main_course:
   title: "Regional and Local Public Economics"
   university: "University of Barcelona"
   program: "6 ECTS, BA Economics"
   role: "Instructor"
-  description: "A 3rd-year compulsory course for undergraduate Economics majors, blending <b>microeconomic theory, empirical evidence, and international cases</b> to analyze local public finance."
+  description: "A 3rd-year compulsory course for Economics undergrads and elective for Erasmus students, blending <b>microeconomic theory, empirical evidence, and international cases</b> to analyze local public finance."
   textbook: 'Ronald C. Fisher, <a href="https://www.routledge.com/State-and-Local-Public-Finance/Fisher/p/book/9780367467234" target="_blank"><i>State and Local Public Finance</i></a>'
 
   years:

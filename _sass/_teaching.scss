@@ -13,6 +13,18 @@
   margin-bottom: 2rem !important;
 }
 
+// --- Teaching statement (same look as the research statement) ---
+.teaching-statement {
+  @extend .research-statement;
+
+  a {
+    color: $color-primary;
+    font-weight: 600;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+}
+
 // --- Main course card ---
 .teaching-main {
   background: white;

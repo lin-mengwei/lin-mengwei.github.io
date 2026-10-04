@@ -14,6 +14,13 @@ body_id: teaching-page
 <section class="section" id="teaching">
   <div class="container teaching-container">
 
+    {% if t.statement %}
+    <div class="teaching-statement">
+      <div class="rs-label"><b>Teaching Statement</b></div>
+      <p>{{ t.statement }}</p>
+    </div>
+    {% endif %}
+
     <!-- ========== Main course ========== -->
     <div class="teaching-main">
       <div class="teaching-main-header">
