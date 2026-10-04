@@ -7,7 +7,7 @@ main_course:
   university: "University of Barcelona"
   program: "6 ECTS, BA Economics"
   role: "Instructor"
-  description: "A 3rd-year compulsory course for undergraduate Economics majors, blending economic theory, quantitative evidence, and international cases to analyze local public finance."
+  description: "A 3rd-year compulsory course for undergraduate Economics majors, blending <b>microeconomic theory, empirical evidence, and international cases</b> to analyze local public finance."
   textbook: 'Ronald C. Fisher, <a href="https://www.routledge.com/State-and-Local-Public-Finance/Fisher/p/book/9780367467234" target="_blank"><i>State and Local Public Finance</i></a>'
 
   years:
