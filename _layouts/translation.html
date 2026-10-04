@@ -13,11 +13,21 @@ body_id: translation
 <section class="trans-page" id="translation">
   <div class="trans-container">
 
+    <p class="trans-lang-note">
+      <i class="fas fa-language"></i>
+      Content on this page is bilingual, in English and Chinese. | 本页内容为英汉双语。
+    </p>
+
     <!-- ======== Section 1: Popularization ======== -->
-    <div class="trans-section" id="popularization">
+    <div class="trans-section" id="popularization" data-collapsible>
       <h2 class="trans-section-title">
-        <i class="fas fa-pen-fancy"></i> Popularization | 学术科普
+        <button type="button" class="trans-toggle" aria-expanded="true" aria-controls="popularization-body">
+          <i class="fas fa-pen-fancy"></i> Popularization | 学术科普
+          <i class="fas fa-chevron-down trans-toggle-chevron"></i>
+        </button>
       </h2>
+      <div class="trans-body" id="popularization-body">
+      <span class="trans-expand-hint" aria-hidden="true">Click to read more | 点击展开 <i class="fas fa-chevron-down"></i></span>
       <div class="trans-intro">
         {{ content }}
       </div>
@@ -43,16 +53,25 @@ body_id: translation
         </div>
         {% endfor %}
       </div>
+      <div class="trans-collapse-row">
+        <button type="button" class="trans-collapse-btn">Collapse | 收起 <i class="fas fa-chevron-up"></i></button>
+      </div>
+      </div>
     </div>
 
     <!-- ======== Section 2: Book Translation ======== -->
-    <div class="trans-section" id="book-translation">
+    <div class="trans-section" id="book-translation" data-collapsible>
       <h2 class="trans-section-title">
-        <i class="fas fa-book"></i> Book Translation | 书籍翻译
+        <button type="button" class="trans-toggle" aria-expanded="true" aria-controls="book-translation-body">
+          <i class="fas fa-book"></i> Book Translation | 书籍翻译
+          <i class="fas fa-chevron-down trans-toggle-chevron"></i>
+        </button>
       </h2>
+      <div class="trans-body" id="book-translation-body">
+      <span class="trans-expand-hint" aria-hidden="true">Click to read more | 点击展开 <i class="fas fa-chevron-down"></i></span>
       <div class="trans-intro">
-        <p>Translation has been my routine activity during long breaks since I became a certified translator in 2017. I aim to "sculpt the text" (which is also my "translation philosophy"), although it is often hard to achieve. Specializing in book translations in the Social Sciences, my published works are in Economics & Education, aligning with my own academic interests.</p>
-        <p>翻译是我休假时的常规活动。我主攻社会科学领域书籍翻译，已出版译作主要为经济学和教育学方面的书籍。</p>
+        <p>Translation has been my routine activity during long breaks since I became a certified translator in 2017. Specializing in book translations in the Social Sciences, my published works are in Economics & Education, aligning with my own academic interests. I also participate in translation education, and have co-authored a textbook on translation literacy.</p>
+        <p>翻译是我休假时的常规活动。我主攻社会科学领域书籍翻译，已出版译作主要为经济学和教育学方面的书籍。我关注面向各领域人员的翻译教育，合著教材《笔译通识》。</p>
       </div>
 
       <div class="trans-books">
@@ -91,11 +110,16 @@ body_id: translation
         </div>
         {% endfor %}
       </div>
+      <div class="trans-collapse-row">
+        <button type="button" class="trans-collapse-btn">Collapse | 收起 <i class="fas fa-chevron-up"></i></button>
+      </div>
+      </div>
     </div>
 
   </div>
 </section>
 
+<script src="{{ '/assets/js/translation-collapse.js' | relative_url }}"></script>
 <script>
 document.querySelectorAll('.trans-article-row[data-href]').forEach(function(row) {
   row.style.cursor = 'pointer';
