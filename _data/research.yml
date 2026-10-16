@@ -4,7 +4,7 @@
 
 - title: "Museums Around: Cultural Infrastructure and Educational Outcomes"
   status: "Work in Progress"
-  stage: "Draft Coming Soon"
+  stage: "Draft Upon Request"
   jmp: true
   tags: "Economics of Education, Urban Economics, Cultural Economics"
   abstract: "How do local cultural amenities affect educational attainment and choices? Combining administrative records on <b>8.5 million students</b> in England with <b>geocoded museum openings</b>, I answer this question using a stacked difference-in-differences design. A museum opening within 2 km of students' homes <b>raises their percentile rank in upper-secondary exams</b> by 1.5 points, the effect fading with distance, while progression to upper-secondary study is unaffected. <b>Subject choices also respond to museum themes</b>; history, social-life, and industry museums increase entry into related subjects by more than 1 percentage point, and science museums, if anything, reallocate students from other subjects to academic STEM. Cultural infrastructure in the adolescent environment thus shapes what young people achieve and what they study."
@@ -17,7 +17,7 @@
 
 - title: "Penalizing Failures at University"
   status: "Work in Progress"
-  stage: "Draft Coming Soon"
+  stage: "Draft Upon Request"
   tags: "Economics of Education, Policy Evaluation, Education Finance"
   coauthors: '<a href="https://sites.google.com/site/andreuarenasweb/" target="_blank">Andreu Arenas</a> and <a href="https://sites.google.com/site/ruizvalenjenifer" target="_blank">Jenifer Ruiz-Valenzuela</a>'
   abstract: "How does <b>increasing the cost of failing university modules</b> affect student persistence and academic performance? To answer this question, we exploit a policy shock in Catalonia involving a two-wave increase in tuition fees—first targeting second and subsequent retake attempts, followed by a general fee increase that affected all attempts, including the first. Using a rich dataset from a large public university, we use a difference-in-differences design to compare students fully exposed to the fee increases with those who received fee waivers before and after the fee changes. First, our findings show that both the penalties for module failures and the general fee increase <b>negatively impact student persistence</b>, particularly among <b>part-time and low-performing</b> students, raising concerns about equity. Second, from an efficiency perspective, we find evidence that financial pressure leads students to <b>pass more modules and reduce the number of retakes</b>, although we do not observe significant improvements in grades beyond passing."
