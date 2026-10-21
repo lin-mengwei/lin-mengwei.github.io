@@ -87,7 +87,7 @@ guide:
 # Video interviews (placeholder)
 videos:
   enabled: true
-  title: "Lecturer Interview"
+  title: "Lecturer Interviews"
   subtitle: "A conversation with one of our lecturers on research, career, and advice for PhD students."
   # Each item uses either linkedin_id (the number after urn:li:ugcPost: in the embed code)
   # or youtube_id. LinkedIn embed is fixed at 504x877 and scaled down by CSS.
