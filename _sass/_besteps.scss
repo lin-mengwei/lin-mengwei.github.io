@@ -2,6 +2,11 @@
 // BESTEPS Page
 // ======================
 
+// LinkedIn embed native size (portrait) and display scale in the guide card
+$bp-li-w: 504px;
+$bp-li-h: 877px;
+$bp-li-scale: 0.55;
+
 // ---- Container ----
 .bp-container {
   max-width: 1100px;
@@ -334,12 +339,144 @@ a.bp-highlight--link {
   }
 }
 
+// About text + interview video side by side
+.bp-about--video {
+  display: flex;
+  align-items: stretch;
+  gap: 2.5rem;
+
+  .bp-about-main {
+    flex: 1;
+    min-width: 0;
+  }
+
+  // 2x2 tiles so the left column carries more visual weight
+  .bp-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.9rem;
+  }
+
+  .bp-highlight {
+    padding: 0.9rem 1.1rem;
+    font-size: 0.9rem;
+    line-height: 1.35;
+
+    i {
+      font-size: 1.25rem;
+      flex: 0 0 auto;
+    }
+  }
+}
+
+.bp-about-video {
+  flex: 0 0 ($bp-li-w * $bp-li-scale);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+
+  // The video window fills whatever height the left column has (row height is set by the text side);
+  // the scaled 504x877 LinkedIn embed is anchored top-left and cropped at the bottom.
+  .bp-video-card {
+    position: relative;
+    flex: 1;
+    min-height: 320px;
+  }
+
+  .bp-video-embed--linkedin {
+    position: absolute;
+    inset: 0;
+    display: block;
+    overflow: hidden;
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: $bp-li-w;
+      max-width: none;
+      height: $bp-li-h;
+      transform: scale($bp-li-scale);
+      transform-origin: 0 0;
+    }
+  }
+}
+
+.bp-about-video-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0 0 0.6rem;
+
+  .bp-video-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin: 0;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    color: #888;
+
+    &:hover { color: $color-primary; text-decoration: none; }
+
+    .fa-external-link-alt { font-size: 0.65rem; }
+  }
+}
+
+.bp-about-video-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: $color-dark-grey;
+  margin: 0;
+
+  i {
+    color: $color-primary;
+    margin-right: 0.4rem;
+  }
+}
+
+// Tap-to-load button: only used on small screens (see media query)
+.bp-video-play {
+  display: none;
+}
+
+.bp-video-embed--linkedin:not(.is-loaded) iframe {
+  display: none;
+}
+
+// LinkedIn posts: iframe height set via attribute, width fluid up to 504px
+.bp-video-embed--linkedin {
+  padding-bottom: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+
+  iframe {
+    position: static;
+    inset: auto;
+    width: 100%;
+    max-width: 504px;
+  }
+}
+
 .bp-video-label {
   padding: 0.75rem 1rem;
   font-size: 0.9rem;
   font-weight: 600;
   color: $color-dark-grey;
   margin: 0;
+}
+
+.bp-video-link {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover { text-decoration: underline; }
 }
 
 // ---- Full-width Guide card (when interviews not yet live) ----
@@ -599,6 +736,58 @@ a.bp-highlight--link {
   .bp-guide-fw-cover img {
     width: 170px;
     height: auto;
+  }
+
+  .bp-about--video {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.25rem;
+  }
+
+  .bp-about-video {
+    flex: none;
+    width: 100%;
+    max-width: 504px;
+    margin: 0 auto;
+
+    // On mobile show the iframe at native size (fluid width), loaded on tap
+    .bp-video-card {
+      position: static;
+      flex: none;
+      min-height: 0;
+    }
+
+    .bp-video-embed--linkedin {
+      width: 100%;
+      height: auto;
+      overflow: visible;
+      position: static;
+
+      iframe {
+        position: static;
+        width: 100%;
+        height: $bp-li-h;
+        transform: none;
+      }
+
+      &:not(.is-loaded) .bp-video-play {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        width: 100%;
+        padding: 2.5rem 1rem;
+        border: 0;
+        background: $color-accent-bg;
+        color: $color-primary;
+        font-size: 0.95rem;
+        font-weight: 700;
+        cursor: pointer;
+
+        i { font-size: 2.5rem; }
+      }
+    }
   }
 
   // ---- Video teaser ----

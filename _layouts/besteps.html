@@ -15,25 +15,61 @@ extra_css: besteps
 <div class="bp-container">
 
   <!-- ======== About ======== -->
-  <section class="bp-section bp-about">
-    <div class="bp-about-text">
-      {{ bp.about.description_en }}
-    </div>
-    <div class="bp-highlights">
-      {% for h in bp.about.highlights %}
-      {% if h.link %}
-      <a href="{{ h.link }}" class="bp-highlight bp-highlight--link">
-        <i class="fas {{ h.icon }}"></i>
-        <span>{{ h.label }}</span>
-      </a>
-      {% else %}
-      <div class="bp-highlight">
-        <i class="fas {{ h.icon }}"></i>
-        <span>{{ h.label }}</span>
+  <section class="bp-section bp-about{% if bp.videos.enabled %} bp-about--video{% endif %}">
+    <div class="bp-about-main">
+      <div class="bp-about-text">
+        {{ bp.about.description_en }}
       </div>
-      {% endif %}
+      <div class="bp-highlights">
+        {% for h in bp.about.highlights %}
+        {% if h.link %}
+        <a href="{{ h.link }}" class="bp-highlight bp-highlight--link">
+          <i class="fas {{ h.icon }}"></i>
+          <span>{{ h.label }}</span>
+        </a>
+        {% else %}
+        <div class="bp-highlight">
+          <i class="fas {{ h.icon }}"></i>
+          <span>{{ h.label }}</span>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% if bp.videos.enabled %}
+    <div class="bp-about-video">
+      <div class="bp-about-video-head">
+        <h3 class="bp-about-video-title"><i class="fas fa-video"></i> {{ bp.videos.title }}</h3>
+        {% assign first_vid = bp.videos.items.first %}
+        {% if first_vid.linkedin_id %}
+        <a class="bp-video-link" href="https://www.linkedin.com/feed/update/urn:li:ugcPost:{{ first_vid.linkedin_id }}" target="_blank" rel="noopener" title="Open on LinkedIn">
+          <i class="fab fa-linkedin"></i> LinkedIn <i class="fas fa-external-link-alt"></i>
+        </a>
+        {% endif %}
+      </div>
+      {% for vid in bp.videos.items %}
+      <div class="bp-video-card">
+        {% if vid.linkedin_id %}
+        <div class="bp-video-embed bp-video-embed--linkedin">
+          <button type="button" class="bp-video-play">
+            <i class="fas fa-play-circle"></i>
+            <span>Watch the interview</span>
+          </button>
+          <iframe data-src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:{{ vid.linkedin_id }}?collapsed=1"
+                  height="877" frameborder="0"
+                  allowfullscreen title="{{ vid.title | escape }}"></iframe>
+        </div>
+        {% else %}
+        <div class="bp-video-embed">
+          <iframe src="https://www.youtube.com/embed/{{ vid.youtube_id }}" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+        {% endif %}
+      </div>
       {% endfor %}
     </div>
+    {% endif %}
   </section>
 
   <!-- ======== Lectures ======== -->
@@ -69,46 +105,7 @@ extra_css: besteps
   <!-- ======== Guide & Interviews ======== -->
   <section class="bp-section" id="besteps-guide">
 
-    {% if bp.videos.enabled %}
-
-    <!-- Side-by-side layout: Guide + Interviews live -->
-    <div class="bp-gv-row">
-      <div class="bp-gv-col">
-        <h2 class="bp-section-title"><i class="fas fa-book-open"></i> {{ bp.guide.title }}</h2>
-        <p class="bp-gv-subtitle">{{ bp.guide.subtitle }}</p>
-        <div class="bp-gv-portrait bp-gv-portrait--book">
-          <img src="{{ bp.guide.image | relative_url }}" alt="The BESTEPS Guide cover">
-        </div>
-        <p class="bp-guide-desc">{{ bp.guide.description }}</p>
-        <a href="{{ bp.guide.url }}" target="_blank" class="bp-guide-btn">
-          <i class="fas fa-download"></i> {{ bp.guide.label }}
-        </a>
-        <p class="bp-guide-acknowledgment">
-          We are grateful to the following early-career economists from various institutions for reviewing the draft and providing valuable feedback:
-          Bastian Bruestle (Zurich), Haochi Chen (Dublin), Zhenghao Chen (UCL), Alessandro Ciardo (Barcelona), Britta Hecker (IAB), Guillermo Martínez (CEMFI), Taoyi Sun (Purdue), Robert Wlodarski (Cambridge), and Jessie Ziyue Zhu (Maastricht).
-        </p>
-      </div>
-      <div class="bp-gv-col">
-        <h2 class="bp-section-title"><i class="fas fa-video"></i> {{ bp.videos.title }}</h2>
-        <p class="bp-gv-subtitle">{{ bp.videos.subtitle }}</p>
-        <div class="bp-videos-list">
-          {% for vid in bp.videos.items %}
-          <div class="bp-video-card">
-            <div class="bp-video-embed">
-              <iframe src="https://www.youtube.com/embed/{{ vid.youtube_id }}" frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen></iframe>
-            </div>
-            <p class="bp-video-label">{{ vid.title }}</p>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-
-    {% else %}
-
-    <!-- Full-width Guide + upcoming interviews teaser -->
+    <!-- Full-width Guide card -->
     <div class="bp-guide-fw">
       <h2 class="bp-section-title"><i class="fas fa-book-open"></i> {{ bp.guide.title }}</h2>
       <div class="bp-guide-fw-card">
@@ -128,6 +125,7 @@ extra_css: besteps
           </p>
         </div>
       </div>
+      {% unless bp.videos.enabled %}
       <div class="bp-video-teaser">
         <div class="bp-video-teaser-icon"><i class="fas fa-video"></i></div>
         <div class="bp-video-teaser-text">
@@ -136,9 +134,8 @@ extra_css: besteps
         </div>
         <span class="bp-video-teaser-badge">Coming Soon</span>
       </div>
+      {% endunless %}
     </div>
-
-    {% endif %}
 
   </section>
 
@@ -176,5 +173,24 @@ extra_css: besteps
   </section>
 
 </div>
+
+<!-- LinkedIn embeds: load immediately on desktop; on mobile wait for a tap -->
+<script>
+  (function () {
+    var mq = window.matchMedia('(max-width: 768px)');
+    document.querySelectorAll('.bp-video-embed--linkedin').forEach(function (box) {
+      var frame = box.querySelector('iframe');
+      var btn = box.querySelector('.bp-video-play');
+      function load() {
+        if (!frame.getAttribute('src')) frame.setAttribute('src', frame.getAttribute('data-src'));
+        box.classList.add('is-loaded');
+      }
+      if (!mq.matches) load();
+      btn.addEventListener('click', load);
+      var onChange = function (e) { if (!e.matches) load(); };
+      if (mq.addEventListener) mq.addEventListener('change', onChange);
+    });
+  })();
+</script>
 
 {% include disqus.html %}

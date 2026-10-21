@@ -86,13 +86,14 @@ guide:
 
 # Video interviews (placeholder)
 videos:
-  enabled: false
-  title: "Lecturer Interviews"
-  subtitle: "Coming soon — conversations with our lecturers on research, career, and advice for PhD students."
-  # items:
-  #   - title: "Interview with Antonio Cabrales"
-  #     youtube_id: "dQw4w9WgXcQ"
-  #     speaker: "Antonio Cabrales"
+  enabled: true
+  title: "Lecturer Interview"
+  subtitle: "A conversation with one of our lecturers on research, career, and advice for PhD students."
+  # Each item uses either linkedin_id (the number after urn:li:ugcPost: in the embed code)
+  # or youtube_id. LinkedIn embed is fixed at 504x877 and scaled down by CSS.
+  items:
+    - title: "BESTEPS Lecturer Interview"
+      linkedin_id: "7516122746603433984"
 
 # Contributors
 contributors:
