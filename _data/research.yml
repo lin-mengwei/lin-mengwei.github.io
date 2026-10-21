@@ -3,20 +3,21 @@
 # ===================================
 
 - title: "Museums Around: Cultural Infrastructure and Educational Outcomes"
-  status: "Work in Progress"
+  status: "Working Paper"
   stage: "Draft Upon Request"
   jmp: true
   tags: "Economics of Education, Urban Economics, Cultural Economics"
   abstract: "How do local cultural amenities affect educational attainment and choices? Combining administrative records on <b>8.5 million students</b> in England with <b>geocoded museum openings</b>, I answer this question using a stacked difference-in-differences design. A museum opening within 2 km of students' homes <b>raises their percentile rank in upper-secondary exams</b> by 1.5 points, the effect fading with distance, while progression to upper-secondary study is unaffected. <b>Subject choices also respond to museum themes</b>; history, social-life, and industry museums increase entry into related subjects by more than 1 percentage point, and science museums, if anything, reallocate students from other subjects to academic STEM. Cultural infrastructure in the adolescent environment thus shapes what young people achieve and what they study."
   jel: "I21, J24, Z11, R23"
+  presented: 'ROA L&W Seminar Series (Maastricht), IEB IWIP Seminar (Barcelona), LSE Economic Geography PhD Seminar (London),  2nd IEB Public Policies PhD Workshop (Barcelona)'
   keywords: "Museums, Educational Attainment, Subject Choices, Cultural Amenities, Neighborhood Effects"
   image1: "/assets/images/research/museum_edu/fig1.png"
   image2: "/assets/images/research/museum_edu/fig2.png"
-  section: "wip"
+  section: "wp"
 
 
 - title: "Penalizing Failures at University"
-  status: "Work in Progress"
+  status: "Working Paper"
   stage: "Draft Upon Request"
   tags: "Economics of Education, Policy Evaluation, Education Finance"
   coauthors: '<a href="https://sites.google.com/site/andreuarenasweb/" target="_blank">Andreu Arenas</a> and <a href="https://sites.google.com/site/ruizvalenjenifer" target="_blank">Jenifer Ruiz-Valenzuela</a>'
@@ -26,6 +27,15 @@
   presented: '38th ESPE (Naples), 15th IWAEE (Catanzaro), 4th CESC (Barcelona), 1st IEB Public Policies PhD Workshop (Barcelona), 2024 UB PhD Workshop (Barcelona, <i>Best Paper Award</i>)'
   image1: "/assets/images/research/penalizing/fig2.svg"
   image2: "/assets/images/research/penalizing/fig5.svg"
+  section: "wp"
+
+
+- title: "Cultural Infrastructure in Youth: Higher Education and Labour Market Impacts"
+  tags: "Economics of Education, Labour Economics, Urban Economics, Cultural Economics"
+  status: "Work in Progress"
   section: "wip"
 
-
+- title: "Museums for Residents"
+  tags: "Urban Economics, Cultural Economics"
+  status: "Work in Progress"
+  section: "wip"
