@@ -30,12 +30,20 @@
   section: "wp"
 
 
-- title: "Cultural Infrastructure in Youth: Higher Education and Labour Market Impacts"
-  tags: "Economics of Education, Labour Economics, Urban Economics, Cultural Economics"
+- title: "Cultural Subsidies and Major Choices in Higher Education"
   status: "Work in Progress"
+  coauthors: '<a href="https://nataliacarralero.github.io/" target="_blank">Natalia Carralero</a>'
+  tags: "Economics of Education, Policy Evaluation, Cultural Economics"
   section: "wip"
+
 
 - title: "Museums for Residents"
   tags: "Urban Economics, Cultural Economics"
   status: "Work in Progress"
   section: "wip"
+
+- title: "Cultural Infrastructure in Youth: Higher Education and Labour Market Impacts"
+  tags: "Economics of Education, Labour Economics, Urban Economics, Cultural Economics"
+  status: "Work in Progress"
+  section: "wip"
+
