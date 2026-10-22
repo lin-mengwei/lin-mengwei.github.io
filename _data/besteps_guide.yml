@@ -23,3 +23,52 @@ volumes:
     <p>Building on the foundations laid in Volume 1, this volume addresses the skills required to communicate and produce research outputs: visualization, presentation, and writing. In <strong>Lecture 3</strong>, Guillermo Marin and Dirk Foremny discuss how visualization can be used both to think about data and to communicate economic results effectively, moving from general design principles to applied examples in Economics. In <strong>Lecture 4</strong>, Jenifer Ruiz-Valenzuela examines how to present research effectively, covering slide design, rehearsal, and delivery of a talk, as well as other formats of economics presentation. In <strong>Lecture 5</strong>, Albrecht Glitz focuses on how to write a strong Job Market Paper, explaining the role of a JMP and providing writing guidelines. The <strong>Closing Lecture</strong> by Diego Puga reflects on various formats for delivering our research products, providing insights into project selection, evolution, and communication formats.</p>
 
     <p>The two volumes of <em>The BESTEPS Guide</em> together aim to map out the whole research life-cycle during the PhD journey and provide practical guidance on each critical stage of a research project.</p>'
+reading_order:
+- slug: preface
+  label: Preface
+  title: Preface
+  url: /besteps/guide/preface/
+- slug: acknowledgements
+  label: Acknowledgements
+  title: Acknowledgements
+  url: /besteps/guide/acknowledgements/
+- slug: volume-1
+  label: Volume 1
+  title: Set Up Your Research Project
+  url: /besteps/guide/volume-1/
+- slug: opening-lecture
+  label: Opening Lecture
+  title: Navigating the Research Process in Economics
+  url: /besteps/guide/opening-lecture/
+- slug: lecture-1
+  label: Lecture 1
+  title: Starting a Feasible and Promising Project
+  url: /besteps/guide/lecture-1/
+- slug: lecture-2
+  label: Lecture 2
+  title: Doing Organized and Replicable Research
+  url: /besteps/guide/lecture-2/
+- slug: volume-2
+  label: Volume 2
+  title: Produce and Communicate Your Research
+  url: /besteps/guide/volume-2/
+- slug: lecture-3
+  label: Lecture 3
+  title: Visualizing Economic Research
+  url: /besteps/guide/lecture-3/
+- slug: lecture-4
+  label: Lecture 4
+  title: Academic Talks in Economics
+  url: /besteps/guide/lecture-4/
+- slug: lecture-5
+  label: Lecture 5
+  title: Crafting the Job Market Paper
+  url: /besteps/guide/lecture-5/
+- slug: closing-lecture
+  label: Closing Lecture
+  title: Research Products in Economics
+  url: /besteps/guide/closing-lecture/
+- slug: afterword
+  label: Afterword
+  title: Afterword
+  url: /besteps/guide/afterword/

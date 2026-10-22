@@ -111,6 +111,23 @@ def extract_signature(html: str) -> tuple[str, dict | None]:
     return "".join(str(c) for c in root.contents).strip(), {"name": parts[0], "lines": parts[1:]}
 
 
+def reading_order(chapters, volume_titles: dict[int, str]) -> list[dict]:
+    """Every guide page in reading order, as the sidebar lists them: the acknowledgements follow the preface,
+    and each volume's introduction page comes before its first lecture. Drives the previous/next links."""
+    def entry(slug, label, title):
+        return {"slug": slug, "label": label, "title": title, "url": f"{GUIDE_URL}{slug}/"}
+
+    order, volume = [], None
+    for c in chapters:
+        if c.volume and c.volume != volume:
+            order.append(entry(f"volume-{c.volume}", f"Volume {c.volume}", volume_titles[c.volume]))
+        volume = c.volume or volume
+        order.append(entry(c.slug, c.label, c.title))
+        if c.slug == "preface":
+            order.append(entry("acknowledgements", "Acknowledgements", "Acknowledgements"))
+    return order
+
+
 SIGNED_AT_TOP = {"preface"}   # chapters whose closing signature is shown as a byline under the title
 
 
@@ -226,7 +243,7 @@ def build(source: Path, repo: Path = REPO, cover: Path | None = None) -> int:
 
     used_people = set()
     search = []
-    for i, ch in enumerate(chapters):
+    for ch in chapters:
         r = results[ch.slug]
         try:
             lecturers = lookup_lecturers(people, guide_tex.lecturer_names(ch.tex))
@@ -243,16 +260,11 @@ def build(source: Path, repo: Path = REPO, cover: Path | None = None) -> int:
         failures += check_text(ch.slug, r.html)
         failures += check_images([web_names.get(n, n) for n in r.images], img_dir)
 
-        def nav(c):
-            return {"slug": c.slug, "label": c.label, "title": c.title, "url": f"{GUIDE_URL}{c.slug}/"}
-
         meta = {
             "layout": "guide", "body_id": "guide", "nav_active": "public-goods",
             "title": ch.title, "short_title": ch.label, "slug": ch.slug,
             "permalink": f"{GUIDE_URL}{ch.slug}/", "order": ch.order, "volume": ch.volume,
             "lecturers": lecturers, "description": r.description, "sections": r.sections,
-            "prev": nav(chapters[i - 1]) if i > 0 else None,
-            "next": nav(chapters[i + 1]) if i + 1 < len(chapters) else None,
         }
         html = _add_image_sizes(r.html, img_dir, web_names)
         if ch.slug in SIGNED_AT_TOP:
@@ -278,6 +290,7 @@ def build(source: Path, repo: Path = REPO, cover: Path | None = None) -> int:
         "acknowledgements": _fragment_html(frags["acknowledgements"]),
         "volumes": [{"number": n, "title": frags[f"volume{n}_title"],
                      "intro": _fragment_html(frags[f"volume{n}_intro"])} for n in (1, 2)],
+        "reading_order": reading_order(chapters, {n: frags[f"volume{n}_title"] for n in (1, 2)}),
     }
     for key in ("blurb", "acknowledgements"):
         failures += check_text(f"home {key}", data[key])

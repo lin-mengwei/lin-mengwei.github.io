@@ -1,0 +1,8 @@
+{% comment %} Sets guide_prev / guide_next for the current page from the reading order in _data/besteps_guide.yml. {% endcomment %}
+{% assign guide_order = site.data.besteps_guide.reading_order %}
+{% assign guide_prev = nil %}{% assign guide_next = nil %}
+{% for item in guide_order %}{% if item.slug == page.slug %}
+  {% assign guide_i_prev = forloop.index0 | minus: 1 %}{% assign guide_i_next = forloop.index0 | plus: 1 %}
+  {% if forloop.index0 > 0 %}{% assign guide_prev = guide_order[guide_i_prev] %}{% endif %}
+  {% assign guide_next = guide_order[guide_i_next] %}
+{% endif %}{% endfor %}

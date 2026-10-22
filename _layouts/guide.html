@@ -2,6 +2,7 @@
 layout: base
 ---
 {% comment %} One chapter of The BESTEPS Guide. Content and front matter come from scripts/build_guide.py. {% endcomment %}
+{% include guide-nav.html %}
 {% include guide-bar.html %}
 
 <div class="guide-shell">
@@ -40,30 +41,7 @@ layout: base
         {{ content }}
       </div>
 
-      <nav class="guide-pager" aria-label="Previous and next chapter">
-        {% if page.prev %}
-        <a class="guide-pager-card guide-pager-card--prev" href="{{ page.prev.url | relative_url }}">
-          <span class="guide-pager-dir">&larr; Previous</span>
-          <span class="guide-pager-label">{% if page.prev.label != page.prev.title %}{{ page.prev.label }}: {% endif %}{{ page.prev.title }}</span>
-        </a>
-        {% else %}
-        <a class="guide-pager-card guide-pager-card--prev" href="{{ '/besteps/guide/' | relative_url }}">
-          <span class="guide-pager-dir">&larr; Overview</span>
-          <span class="guide-pager-label">The BESTEPS Guide</span>
-        </a>
-        {% endif %}
-        {% if page.next %}
-        <a class="guide-pager-card guide-pager-card--next" href="{{ page.next.url | relative_url }}">
-          <span class="guide-pager-dir">Next &rarr;</span>
-          <span class="guide-pager-label">{% if page.next.label != page.next.title %}{{ page.next.label }}: {% endif %}{{ page.next.title }}</span>
-        </a>
-        {% else %}
-        <a class="guide-pager-card guide-pager-card--next" href="{{ '/besteps/guide/' | relative_url }}">
-          <span class="guide-pager-dir">Back to &rarr;</span>
-          <span class="guide-pager-label">Overview</span>
-        </a>
-        {% endif %}
-      </nav>
+      {% include guide-pager.html %}
     </article>
   </main>
 

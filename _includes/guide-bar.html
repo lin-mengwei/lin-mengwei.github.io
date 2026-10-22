@@ -10,7 +10,7 @@
       <a class="guide-btn guide-btn--solid guide-bar-pdf" href="{{ '/assets/files/BESTEPS_Guide_Content.pdf' | relative_url }}" target="_blank" rel="noopener">
         <i class="fas fa-download" aria-hidden="true"></i> PDF
       </a>
-      {% if page.next %}<a class="guide-bar-next" href="{{ page.next.url | relative_url }}">Next <span aria-hidden="true">&rarr;</span></a>{% endif %}
+      {% if guide_next %}<a class="guide-bar-next" href="{{ guide_next.url | relative_url }}">Next <span aria-hidden="true">&rarr;</span></a>{% endif %}
     </div>
   </div>
   <div class="guide-progress" aria-hidden="true"><span></span></div>

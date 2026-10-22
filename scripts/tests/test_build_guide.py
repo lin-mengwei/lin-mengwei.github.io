@@ -2,7 +2,7 @@ import pytest
 import yaml
 from bs4 import BeautifulSoup
 
-from build_guide import extract_signature, lookup_lecturers, render_page, resolve_refs
+from build_guide import extract_signature, lookup_lecturers, reading_order, render_page, resolve_refs
 from guide_html import ChapterHTML
 from guide_validate import check_images, check_links, check_text
 
@@ -63,6 +63,20 @@ def test_page_wraps_content_in_raw():
     assert body.startswith("{% raw %}\n<p>{{ not liquid }}") and body.endswith("{% endraw %}\n")
     with pytest.raises(ValueError):
         render_page({}, "<pre>{% endraw %}</pre>")
+
+
+def test_reading_order_includes_acknowledgements_and_volume_pages():
+    from guide_tex import Chapter
+    chs = [Chapter(s, l, t, i + 1, v, "") for i, (s, l, t, v) in enumerate([
+        ("preface", "Preface", "Preface", None), ("opening-lecture", "Opening Lecture", "Navigating", 1),
+        ("lecture-1", "Lecture 1", "Starting", 1), ("lecture-3", "Lecture 3", "Visualizing", 2),
+        ("afterword", "Afterword", "Afterword", None)])]
+    order = reading_order(chs, {1: "Set Up Your Research Project", 2: "Produce and Communicate Your Research"})
+    assert [o["slug"] for o in order] == ["preface", "acknowledgements", "volume-1", "opening-lecture",
+                                          "lecture-1", "volume-2", "lecture-3", "afterword"]
+    assert order[2] == {"slug": "volume-1", "label": "Volume 1", "title": "Set Up Your Research Project",
+                        "url": "/besteps/guide/volume-1/"}
+    assert order[1]["url"] == "/besteps/guide/acknowledgements/"
 
 
 def test_extract_signature():

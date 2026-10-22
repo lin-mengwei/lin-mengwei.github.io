@@ -1,0 +1,24 @@
+<nav class="guide-pager" aria-label="Previous and next page">
+  {% if guide_prev %}
+  <a class="guide-pager-card guide-pager-card--prev" href="{{ guide_prev.url | relative_url }}">
+    <span class="guide-pager-dir">&larr; Previous</span>
+    <span class="guide-pager-label">{% if guide_prev.label != guide_prev.title %}{{ guide_prev.label }}: {% endif %}{{ guide_prev.title }}</span>
+  </a>
+  {% else %}
+  <a class="guide-pager-card guide-pager-card--prev" href="{{ '/besteps/guide/' | relative_url }}">
+    <span class="guide-pager-dir">&larr; Overview</span>
+    <span class="guide-pager-label">The BESTEPS Guide</span>
+  </a>
+  {% endif %}
+  {% if guide_next %}
+  <a class="guide-pager-card guide-pager-card--next" href="{{ guide_next.url | relative_url }}">
+    <span class="guide-pager-dir">Next &rarr;</span>
+    <span class="guide-pager-label">{% if guide_next.label != guide_next.title %}{{ guide_next.label }}: {% endif %}{{ guide_next.title }}</span>
+  </a>
+  {% else %}
+  <a class="guide-pager-card guide-pager-card--next" href="{{ '/besteps/guide/' | relative_url }}">
+    <span class="guide-pager-dir">Back to &rarr;</span>
+    <span class="guide-pager-label">Overview</span>
+  </a>
+  {% endif %}
+</nav>

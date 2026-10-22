@@ -6,6 +6,7 @@ Their text comes from _data/besteps_guide.yml, which scripts/build_guide.py gene
 {% assign g = site.data.besteps_guide %}
 {% assign guide_chapters = site.guide | sort: "order" %}
 {% if page.volume %}{% assign vol = g.volumes | where: "number", page.volume | first %}{% endif %}
+{% include guide-nav.html %}
 {% include guide-bar.html %}
 
 <div class="guide-shell">
@@ -36,6 +37,8 @@ Their text comes from _data/besteps_guide.yml, which scripts/build_guide.py gene
         {% for c in guide_chapters %}{% if c.volume == vol.number %}{% include guide-card.html c=c %}{% endif %}{% endfor %}
       </div>
       {% endif %}
+
+      {% include guide-pager.html %}
     </article>
   </main>
 
