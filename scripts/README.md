@@ -25,7 +25,7 @@ The pages under `/besteps/guide/` are generated from the book's LaTeX source in 
 | `_guide/*.html` | one page per chapter (Jekyll collection `guide`) |
 | `_data/besteps_guide.yml` | home-page text: title-page blurb, acknowledgements, volume introductions |
 | `assets/data/besteps-guide-search.json` | search index, one entry per section |
-| `assets/images/besteps-guide/` | figures (resized for the web), UBSE logo, cover |
+| `assets/images/besteps-guide/` | figures (resized for the web), cover |
 
 `_data/besteps_guide_people.yml` is the one hand-maintained input: lecturer names as spelled on the
 cover and their short affiliations. The script fails if a lecturer in the book is missing there.
