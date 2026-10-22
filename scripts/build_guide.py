@@ -128,6 +128,21 @@ def reading_order(chapters, volume_titles: dict[int, str]) -> list[dict]:
     return order
 
 
+WORDS_PER_MINUTE = 200        # dense academic prose, many readers not native English speakers
+SECONDS_PER_FIGURE = 12
+
+
+def reading_minutes(html: str) -> int:
+    """Estimated reading time of a chapter, rounded to the nearest 5 minutes (at least 5).
+    Footnotes and code blocks are left out; each image adds a few seconds."""
+    s = BeautifulSoup(f"<div>{html}</div>", "lxml")
+    for el in s.select(".guide-notes, pre"):
+        el.decompose()
+    words = len(re.findall(r"\w[\w'’-]*", s.get_text(" ")))
+    minutes = words / WORDS_PER_MINUTE + len(s.find_all("img")) * SECONDS_PER_FIGURE / 60
+    return max(5, int(5 * round(minutes / 5)))
+
+
 SIGNED_AT_TOP = {"preface"}   # chapters whose closing signature is shown as a byline under the title
 
 
@@ -267,6 +282,8 @@ def build(source: Path, repo: Path = REPO, cover: Path | None = None) -> int:
             "lecturers": lecturers, "description": r.description, "sections": r.sections,
         }
         html = _add_image_sizes(r.html, img_dir, web_names)
+        if ch.volume:                                   # lectures only, not the preface or afterword
+            meta["reading_minutes"] = reading_minutes(html)
         if ch.slug in SIGNED_AT_TOP:
             html, byline = extract_signature(html)
             if byline is None:

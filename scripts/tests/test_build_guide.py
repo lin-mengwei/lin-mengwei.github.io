@@ -2,7 +2,7 @@ import pytest
 import yaml
 from bs4 import BeautifulSoup
 
-from build_guide import extract_signature, lookup_lecturers, reading_order, render_page, resolve_refs
+from build_guide import extract_signature, lookup_lecturers, reading_minutes, reading_order, render_page, resolve_refs
 from guide_html import ChapterHTML
 from guide_validate import check_images, check_links, check_text
 
@@ -77,6 +77,18 @@ def test_reading_order_includes_acknowledgements_and_volume_pages():
     assert order[2] == {"slug": "volume-1", "label": "Volume 1", "title": "Set Up Your Research Project",
                         "url": "/besteps/guide/volume-1/"}
     assert order[1]["url"] == "/besteps/guide/acknowledgements/"
+
+
+def test_reading_minutes_rounds_to_five_and_skips_notes_and_code():
+    words = " ".join(["word"] * 2544)
+    assert reading_minutes(f"<p>{words}</p>") == 15                       # 12.7 min
+    assert reading_minutes(f"<p>{' '.join(['w'] * 2279)}</p>") == 10       # 11.4 min
+    notes = '<section class="guide-notes"><p>' + " ".join(["n"] * 5000) + "</p></section>"
+    code = "<pre>" + " ".join(["c"] * 5000) + "</pre>"
+    assert reading_minutes(f"<p>{words}</p>{notes}{code}") == 15
+    imgs = '<img src="a.png"/>' * 21                                        # 12 s per figure
+    assert reading_minutes(f"<p>{' '.join(['w'] * 4585)}</p>{imgs}") == 25
+    assert reading_minutes("<p>short</p>") == 5
 
 
 def test_extract_signature():

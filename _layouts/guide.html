@@ -18,6 +18,7 @@ layout: base
         {% if page.lecturers.size > 0 %}
         <p class="guide-lecturers">
           {% for l in page.lecturers %}<span class="guide-lecturer"><strong>{{ l.name }}</strong> · {{ l.affiliation }}</span>{% endfor %}
+          {% if page.reading_minutes %}<span class="guide-readtime"><i class="far fa-clock" aria-hidden="true"></i> {{ page.reading_minutes }} min read</span>{% endif %}
         </p>
         {% endif %}
         {% if page.byline %}
