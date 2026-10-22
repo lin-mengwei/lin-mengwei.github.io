@@ -1,0 +1,110 @@
+---
+layout: base
+---
+{% assign g = site.data.besteps_guide %}
+{% assign people = site.data.besteps_guide_people %}
+{% assign guide_chapters = site.guide | sort: "order" %}
+{% assign first_chapter = guide_chapters | first %}
+{% assign flow = site.data.besteps_guide_flow %}
+
+<section class="guide-cover" aria-label="The BESTEPS Guide">
+  <div class="guide-cover-inner">
+    <img class="guide-cover-img" src="{{ g.images.cover_thumb | relative_url }}"
+         srcset="{{ g.images.cover_thumb | relative_url }} 1x, {{ g.images.cover | relative_url }} 2x"
+         width="297" height="420" alt="Cover of The BESTEPS Guide">
+    <div class="guide-cover-text">
+      <a class="guide-cover-logo" href="https://www.ub.edu/school-economics/" target="_blank" rel="noopener">
+        <img src="{{ g.images.logo | relative_url }}" alt="Universitat de Barcelona School of Economics" width="243" height="66">
+      </a>
+      <h1 class="guide-cover-title">The BESTEPS Guide</h1>
+      <p class="guide-cover-subtitle">7 Lessons towards Effective Economics PhD Research</p>
+      <hr class="guide-cover-rule">
+      <p class="guide-cover-label">Editors</p>
+      <p class="guide-cover-editors">
+        {% for e in people.editors %}<span>{{ e.name }}</span>{% endfor %}
+      </p>
+      <p class="guide-cover-label">Lectures by</p>
+      <ul class="guide-cover-lecturers">
+        {% for l in people.lecturers %}<li>{{ l.name }}</li>{% endfor %}
+      </ul>
+      <div class="guide-cover-actions">
+        <a class="guide-btn guide-btn--light" href="{{ first_chapter.url | relative_url }}">Start reading <span aria-hidden="true">&rarr;</span></a>
+        <a class="guide-btn guide-btn--outline-light" href="{{ '/assets/files/BESTEPS_Guide_Content.pdf' | relative_url }}" target="_blank" rel="noopener">
+          <i class="fas fa-download" aria-hidden="true"></i> Download PDF
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="guide-home">
+  <section class="guide-home-intro guide-prose">
+    {{ g.blurb | split: "</p>" | first }}</p>
+  </section>
+
+  <section class="guide-flow" aria-labelledby="guide-flow-title">
+    <h2 class="guide-volume-title" id="guide-flow-title">Seven lessons along the life cycle of a research project</h2>
+    <p class="guide-flow-hint">Click a lecture in the diagram to start reading it, or a volume to read its introduction.</p>
+    <div class="guide-flow-map">
+      <img src="{{ g.images.flow | relative_url }}" width="{{ flow.image_width }}" height="{{ flow.image_height }}"
+           alt="The BESTEPS lectures along the stages of a research project, grouped into Volume 1 and Volume 2">
+      {% for a in flow.areas %}
+        {% assign target = guide_chapters | where: "slug", a.target | first %}
+        {% if target %}{% capture href %}{{ target.url | relative_url }}{% endcapture %}{% capture label %}{% if target.short_title != target.title %}{{ target.short_title }}: {% endif %}{{ target.title }}{% endcapture %}
+        {% else %}{% capture href %}{{ '/besteps/guide/' | append: a.target | append: '/' | relative_url }}{% endcapture %}{% capture label %}{{ a.target | replace: "volume-", "Volume " }}: introduction{% endcapture %}{% endif %}
+        <a class="guide-flow-area" href="{{ href }}" aria-label="{{ label | strip | escape }}" title="{{ label | strip | escape }}"
+           style="left: {{ a.x | times: 100.0 | divided_by: flow.image_width }}%; top: {{ a.y | times: 100.0 | divided_by: flow.image_height }}%; width: {{ a.w | times: 100.0 | divided_by: flow.image_width }}%; height: {{ a.h | times: 100.0 | divided_by: flow.image_height }}%;"></a>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% assign preface = guide_chapters | where: "slug", "preface" | first %}
+  {% assign afterword = guide_chapters | where: "slug", "afterword" | first %}
+  <section class="guide-volume guide-matter">
+    <p class="guide-kicker">Front matter</p>
+    <div class="guide-cards">
+      {% include guide-card.html c=preface %}
+      <a class="guide-card" href="{{ '/besteps/guide/acknowledgements/' | relative_url }}">
+        <span class="guide-card-title">Acknowledgements</span>
+        <span class="guide-card-people">The BESTEPS project and the reviewers of the Guide</span>
+      </a>
+    </div>
+  </section>
+
+  {% for vol in g.volumes %}
+  <section class="guide-volume" id="volume-{{ vol.number }}">
+    <div class="guide-volume-head">
+      <div>
+        <p class="guide-kicker">Volume {{ vol.number }}</p>
+        <h2 class="guide-volume-title">{{ vol.title }}</h2>
+      </div>
+      <a class="guide-volume-more" href="{{ '/besteps/guide/volume-' | append: vol.number | append: '/' | relative_url }}">About this volume <span aria-hidden="true">&rarr;</span></a>
+    </div>
+    <div class="guide-cards">
+      {% for c in guide_chapters %}{% if c.volume == vol.number %}{% include guide-card.html c=c %}{% endif %}{% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+
+  <section class="guide-volume guide-matter">
+    <p class="guide-kicker">Back matter</p>
+    <div class="guide-cards">
+      {% include guide-card.html c=afterword %}
+    </div>
+  </section>
+
+  <section class="guide-cite" id="cite">
+    <h2 class="guide-volume-title">How to cite</h2>
+    <p class="guide-cite-text" id="guide-citation">Chesa-Llorens, A., &amp; Lin, M. (Eds.). (2026). <em>The BESTEPS Guide: 7 Lessons towards Effective Economics PhD Research</em>. UB School of Economics.</p>
+    <button type="button" class="guide-btn guide-btn--ghost" data-guide-copy="#guide-citation">
+      <i class="far fa-copy" aria-hidden="true"></i> <span>Copy citation</span>
+    </button>
+    <p class="guide-license">
+      Licensed under <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener license">Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)</a>.
+    </p>
+  </section>
+</div>
+
+{% include guide-footline.html %}
+<script src="{{ '/assets/js/guide.js' | relative_url }}" defer></script>

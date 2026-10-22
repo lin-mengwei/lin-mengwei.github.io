@@ -288,6 +288,18 @@ a.bp-highlight--link {
     transform: translateY(-1px);
   }
 
+  // "Read Online" (primary) above "Download the Book" (secondary)
+  &.bp-guide-btn--secondary {
+    background: #fff;
+    color: $color-primary !important;
+    border: 1px solid $color-primary;
+    margin-top: -0.4rem;
+
+    &:hover {
+      background: $color-accent-bg;
+    }
+  }
+
   &.bp-guide-btn--soon {
     background: #e0e0e0;
     color: #888 !important;

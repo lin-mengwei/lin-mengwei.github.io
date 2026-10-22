@@ -1,0 +1,10 @@
+{% assign c = include.c %}
+<a class="guide-card" href="{{ c.url | relative_url }}">
+  {% if c.short_title != c.title %}<span class="guide-card-label">{{ c.short_title }}</span>{% endif %}
+  <span class="guide-card-title">{{ c.title }}</span>
+  {% if c.lecturers.size > 0 %}
+  <span class="guide-card-people">{% for l in c.lecturers %}{{ l.name }}{% unless forloop.last %} &amp; {% endunless %}{% endfor %}</span>
+  {% elsif c.byline %}
+  <span class="guide-card-people">{{ c.byline.name }}</span>
+  {% endif %}
+</a>

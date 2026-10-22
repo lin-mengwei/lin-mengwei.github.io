@@ -1,0 +1,39 @@
+{% assign guide_chapters = site.guide | sort: "order" %}
+<aside class="guide-sidebar" id="guide-drawer" data-guide-drawer aria-label="Contents of The BESTEPS Guide">
+  <div class="guide-drawer-head">
+    <a class="guide-wordmark" href="{{ '/besteps/guide/' | relative_url }}">The BESTEPS Guide</a>
+    <button type="button" class="guide-drawer-close" data-guide-drawer-close aria-label="Close contents">&times;</button>
+  </div>
+  <div class="guide-drawer-search">{% include guide-search.html %}</div>
+
+  <nav class="guide-toc">
+    <a class="guide-toc-home{% if page.layout == 'guide-home' %} is-current{% endif %}" href="{{ '/besteps/guide/' | relative_url }}">Overview</a>
+
+    <p class="guide-toc-part">Front matter</p>
+    <ul class="guide-toc-matter">
+      {% assign preface = guide_chapters | where: "slug", "preface" | first %}
+      {% include guide-toc-item.html c=preface %}
+      <li class="guide-toc-item{% if page.slug == 'acknowledgements' %} is-current{% endif %}">
+        <a href="{{ '/besteps/guide/acknowledgements/' | relative_url }}"{% if page.slug == 'acknowledgements' %} aria-current="page"{% endif %}><span class="guide-toc-title">Acknowledgements</span></a>
+      </li>
+    </ul>
+
+    {% for vol in site.data.besteps_guide.volumes %}
+    {% capture vol_slug %}volume-{{ vol.number }}{% endcapture %}
+    <a class="guide-toc-part guide-toc-part--link{% if page.slug == vol_slug %} is-current{% endif %}" href="{{ '/besteps/guide/' | append: vol_slug | append: '/' | relative_url }}" title="{{ vol.title | escape }}">Volume {{ vol.number }}</a>
+    <ul>
+      {% for c in guide_chapters %}{% if c.volume == vol.number %}{% include guide-toc-item.html c=c %}{% endif %}{% endfor %}
+    </ul>
+    {% endfor %}
+
+    <p class="guide-toc-part">Back matter</p>
+    <ul class="guide-toc-matter">
+      {% assign afterword = guide_chapters | where: "slug", "afterword" | first %}
+      {% include guide-toc-item.html c=afterword %}
+    </ul>
+  </nav>
+
+  <a class="guide-btn guide-btn--ghost guide-drawer-pdf" href="{{ '/assets/files/BESTEPS_Guide_Content.pdf' | relative_url }}" target="_blank" rel="noopener">
+    <i class="fas fa-download" aria-hidden="true"></i> Download PDF
+  </a>
+</aside>

@@ -1,0 +1,75 @@
+---
+layout: base
+---
+{% comment %} One chapter of The BESTEPS Guide. Content and front matter come from scripts/build_guide.py. {% endcomment %}
+{% include guide-bar.html %}
+
+<div class="guide-shell">
+  {% include guide-sidebar.html %}
+
+  <main class="guide-main">
+    <article class="guide-article">
+      <header class="guide-head">
+        <p class="guide-kicker">
+          {% if page.volume %}Volume {{ page.volume }} · {{ page.short_title }}{% elsif page.slug == 'preface' %}Front matter{% else %}Back matter{% endif %}
+        </p>
+        <h1 class="guide-title">{{ page.title }}</h1>
+        {% if page.lecturers.size > 0 %}
+        <p class="guide-lecturers">
+          {% for l in page.lecturers %}<span class="guide-lecturer"><strong>{{ l.name }}</strong> · {{ l.affiliation }}</span>{% endfor %}
+        </p>
+        {% endif %}
+        {% if page.byline %}
+        <p class="guide-byline">
+          <strong>{{ page.byline.name }}</strong>
+          {% for line in page.byline.lines %}<span>{{ line }}</span>{% endfor %}
+        </p>
+        {% endif %}
+        {% assign photo_set = site.data.besteps_guide_photos[page.slug] %}
+        {% if photo_set %}
+        <figure class="guide-photo guide-photo--{{ photo_set.photos.size }}">
+          <div class="guide-photo-row">
+            {% for ph in photo_set.photos %}<img src="{{ ph.src | relative_url }}" width="{{ ph.width }}" height="{{ ph.height }}" alt="{{ ph.alt | escape }}">{% endfor %}
+          </div>
+          <figcaption>{{ photo_set.caption }}</figcaption>
+        </figure>
+        {% endif %}
+      </header>
+
+      <div class="guide-body">
+        {{ content }}
+      </div>
+
+      <nav class="guide-pager" aria-label="Previous and next chapter">
+        {% if page.prev %}
+        <a class="guide-pager-card guide-pager-card--prev" href="{{ page.prev.url | relative_url }}">
+          <span class="guide-pager-dir">&larr; Previous</span>
+          <span class="guide-pager-label">{% if page.prev.label != page.prev.title %}{{ page.prev.label }}: {% endif %}{{ page.prev.title }}</span>
+        </a>
+        {% else %}
+        <a class="guide-pager-card guide-pager-card--prev" href="{{ '/besteps/guide/' | relative_url }}">
+          <span class="guide-pager-dir">&larr; Overview</span>
+          <span class="guide-pager-label">The BESTEPS Guide</span>
+        </a>
+        {% endif %}
+        {% if page.next %}
+        <a class="guide-pager-card guide-pager-card--next" href="{{ page.next.url | relative_url }}">
+          <span class="guide-pager-dir">Next &rarr;</span>
+          <span class="guide-pager-label">{% if page.next.label != page.next.title %}{{ page.next.label }}: {% endif %}{{ page.next.title }}</span>
+        </a>
+        {% else %}
+        <a class="guide-pager-card guide-pager-card--next" href="{{ '/besteps/guide/' | relative_url }}">
+          <span class="guide-pager-dir">Back to &rarr;</span>
+          <span class="guide-pager-label">Overview</span>
+        </a>
+        {% endif %}
+      </nav>
+    </article>
+  </main>
+
+  {% include guide-onpage.html %}
+</div>
+
+{% include guide-footline.html %}
+<div class="guide-scrim" data-guide-scrim hidden></div>
+<script src="{{ '/assets/js/guide.js' | relative_url }}" defer></script>

@@ -1,0 +1,47 @@
+---
+layout: base
+---
+{% comment %} Guide pages that are not chapters: volume introductions and acknowledgements.
+Their text comes from _data/besteps_guide.yml, which scripts/build_guide.py generates from Print.tex. {% endcomment %}
+{% assign g = site.data.besteps_guide %}
+{% assign guide_chapters = site.guide | sort: "order" %}
+{% if page.volume %}{% assign vol = g.volumes | where: "number", page.volume | first %}{% endif %}
+{% include guide-bar.html %}
+
+<div class="guide-shell">
+  {% include guide-sidebar.html %}
+
+  <main class="guide-main">
+    <article class="guide-article">
+      <header class="guide-head">
+        {% if vol %}
+        <p class="guide-kicker">Volume {{ vol.number }}</p>
+        <h1 class="guide-title">{{ vol.title }}</h1>
+        {% else %}
+        <p class="guide-kicker">Front matter</p>
+        <h1 class="guide-title">{{ page.title }}</h1>
+        {% endif %}
+      </header>
+
+      <div class="guide-body">
+        {% if vol %}
+          {{ vol.intro }}
+        {% elsif page.slug == 'acknowledgements' %}
+          {{ g.acknowledgements }}
+        {% endif %}
+      </div>
+
+      {% if vol %}
+      <div class="guide-cards guide-cards--volume">
+        {% for c in guide_chapters %}{% if c.volume == vol.number %}{% include guide-card.html c=c %}{% endif %}{% endfor %}
+      </div>
+      {% endif %}
+    </article>
+  </main>
+
+  <aside class="guide-onpage" aria-hidden="true"></aside>
+</div>
+
+{% include guide-footline.html %}
+<div class="guide-scrim" data-guide-scrim hidden></div>
+<script src="{{ '/assets/js/guide.js' | relative_url }}" defer></script>

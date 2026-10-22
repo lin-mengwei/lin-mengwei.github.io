@@ -1,0 +1,15 @@
+# Clickable areas on the BESTEPS flow diagram (home page of /besteps/guide/), hand-maintained.
+# x, y, w, h are pixels on BESTEPS_flow.png (1059 × 510); the page turns them into percentages.
+# Each area covers a lecture's label and its arrow. Later entries sit on top where areas overlap.
+image_width: 1059
+image_height: 510
+areas:
+  - { target: opening-lecture, x: 8,   y: 55,  w: 224, h: 168 }
+  - { target: lecture-1,       x: 68,  y: 250, w: 254, h: 135 }
+  - { target: lecture-2,       x: 208, y: 108, w: 268, h: 115 }
+  - { target: lecture-3,       x: 466, y: 264, w: 238, h: 92 }
+  - { target: lecture-5,       x: 704, y: 62,  w: 242, h: 161 }
+  - { target: lecture-4,       x: 578, y: 110, w: 164, h: 113 }
+  - { target: closing-lecture, x: 743, y: 250, w: 275, h: 130 }
+  - { target: volume-1,        x: 60,  y: 396, w: 360, h: 50 }
+  - { target: volume-2,        x: 540, y: 396, w: 512, h: 50 }

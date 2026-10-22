@@ -1,0 +1,31 @@
+# People of The BESTEPS Guide (hand-maintained; the only Guide data not taken from Print.tex).
+# Read by scripts/build_guide.py and by the guide layouts.
+#   name              spelled as on the cover
+#   tex_name          how Print.tex writes the name, when different
+#   short_affiliation shown on chapter headers and home-page cards
+# Lecturers are listed in the cover's order.
+
+lecturers:
+  - name: "Antonio Cabrales"
+    short_affiliation: "UC3M"
+  - name: "Dirk Foremny"
+    short_affiliation: "UB & IEB"
+  - name: "Libertad González"
+    short_affiliation: "UPF & BSE"
+  - name: "Albrecht Glitz"
+    short_affiliation: "UPF & BSE"
+  - name: "Joan Llull"
+    short_affiliation: "CSIC-IAE & BSE"
+  - name: "Guillermo Marín"
+    tex_name: "Guillermo Marin"
+    short_affiliation: "Barcelona Supercomputing Center"
+  - name: "Diego Puga"
+    short_affiliation: "CEMFI"
+  - name: "Jenifer Ruiz-Valenzuela"
+    short_affiliation: "UB & IEB"
+
+editors:
+  - name: "Anna Chesa-Llorens"
+    affiliation: "University of Barcelona & Barcelona Institute of Economics (IEB)"
+  - name: "Mengwei Lin 林孟蔚"
+    affiliation: "University of Barcelona & Barcelona Institute of Economics (IEB)"

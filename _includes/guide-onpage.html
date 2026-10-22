@@ -1,0 +1,15 @@
+<aside class="guide-onpage" aria-label="On this page">
+  {% if page.sections.size > 0 %}
+  <p class="guide-onpage-title">On this page</p>
+  <ul>
+    {% for s in page.sections %}
+    <li>
+      <a href="#{{ s.id }}" data-spy="{{ s.id }}">{{ s.title }}</a>
+      {% if s.children.size > 0 %}
+      <ul>{% for c in s.children %}<li><a href="#{{ c.id }}" data-spy="{{ c.id }}">{{ c.title }}</a></li>{% endfor %}</ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</aside>

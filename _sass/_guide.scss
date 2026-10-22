@@ -1,0 +1,502 @@
+// ======================
+// The BESTEPS Guide web edition (/besteps/guide/)
+// Everything is scoped under body#guide so no other page changes.
+// Colours follow the book cover (UBSE blue), not the site's green.
+// ======================
+
+$ubse: #005A8B;
+$ubse-dark: #003f63;
+$ubse-tint: #eef4f8;
+$ubse-tint-2: #f6f9fb;
+$guide-line: #e1e9ef;
+$guide-ink: #1d2a33;
+$guide-text: #30393f;
+$guide-muted: #5d6a73;
+$guide-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+$guide-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+$navbar-h: 3.25rem;
+$bar-h: 3rem;
+$sticky-top: calc(#{$navbar-h} + #{$bar-h} + 3px);
+
+$bp-desktop: 1100px;
+$bp-phone: 768px;
+
+// `overflow-x: hidden` on html/body (from _base.scss) turns body into a scroll
+// container and breaks position: sticky; `clip` hides overflow without that.
+// Links into a chapter (#section) must land reliably; the site-wide smooth scrolling
+// can leave a freshly loaded page at the top, so guide pages jump instantly.
+html:has(body#guide) { overflow-x: clip; scroll-behavior: auto !important; }
+
+body#guide {
+  overflow-x: clip;
+  background: #fff;
+  color: $guide-text;
+
+  // ---------- shared pieces ----------
+  .guide-wordmark {
+    font-family: $guide-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: $ubse;
+    white-space: nowrap;
+    &:hover { color: $ubse-dark; }
+  }
+
+  .guide-kicker {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $ubse;
+    margin: 0 0 0.4rem;
+  }
+
+  .guide-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.2;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s, border-color 0.15s;
+  }
+  .guide-btn--solid { background: $ubse; color: #fff; &:hover { background: $ubse-dark; color: #fff; } }
+  .guide-btn--ghost { background: #fff; color: $ubse; border-color: rgba($ubse, 0.45); &:hover { border-color: $ubse; background: $ubse-tint; } }
+  .guide-btn--light { background: #fff; color: $ubse; &:hover { background: $ubse-tint; color: $ubse-dark; } }
+  .guide-btn--outline-light { background: transparent; color: #fff; border-color: rgba(#fff, 0.75); &:hover { background: rgba(#fff, 0.12); color: #fff; } }
+
+  // ---------- guide bar ----------
+  .guide-bar {
+    position: sticky;
+    top: $navbar-h;
+    z-index: 25;
+    background: linear-gradient(to bottom, #e4edf3, #f1f6f9);
+    border-bottom: 1px solid $guide-line;
+  }
+  .guide-bar-inner {
+    max-width: 1440px;
+    height: $bar-h;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .guide-bar-actions { margin-left: auto; display: flex; align-items: center; gap: 0.6rem; }
+  .guide-bar-pdf { padding: 0.35rem 0.8rem; font-size: 0.82rem; }
+  .guide-bar-contents {
+    display: none;
+    align-items: center;
+    gap: 0.45rem;
+    background: none;
+    border: 0;
+    padding: 0.3rem 0;
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: $guide-ink;
+    cursor: pointer;
+  }
+  .guide-bar-current { display: none; font-size: 0.92rem; font-weight: 600; color: $ubse;
+    &::before { content: "·"; color: $guide-muted; margin-right: 0.5rem; } }
+  .guide-bar-next { display: none; font-size: 0.9rem; font-weight: 600; color: $ubse; white-space: nowrap; }
+
+  .guide-progress { height: 3px; span { display: block; height: 100%; width: 0; background: $ubse; } }
+
+  // ---------- search ----------
+  .guide-search { position: relative; }
+  .guide-search-icon { position: absolute; left: 0.65rem; top: 50%; transform: translateY(-50%); font-size: 0.8rem; color: $guide-muted; pointer-events: none; }
+  .guide-search-input {
+    width: 15rem;
+    max-width: 100%;
+    height: 2.1rem;
+    padding: 0 0.7rem 0 2rem;
+    border: 1px solid #cddbe5;
+    border-radius: 6px;
+    background: #fff;
+    font: inherit;
+    font-size: 0.85rem;
+    color: $guide-ink;
+    &:focus { outline: 2px solid rgba($ubse, 0.35); border-color: $ubse; }
+  }
+  .guide-search-results {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.4rem);
+    width: 30rem;
+    max-width: 90vw;
+    max-height: 65vh;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid $guide-line;
+    border-radius: 8px;
+    box-shadow: 0 12px 32px rgba(#000, 0.14);
+    z-index: 45;
+    padding: 0.35rem;
+    a { display: block; padding: 0.6rem 0.7rem; border-radius: 6px; color: $guide-text; text-decoration: none;
+      &:hover, &.is-focused { background: $ubse-tint; } }
+    .r-where { display: block; font-size: 0.75rem; font-weight: 600; color: $ubse; margin-bottom: 0.15rem; }
+    .r-section { display: block; font-family: $guide-serif; font-weight: 600; font-size: 0.98rem; color: $guide-ink; }
+    .r-snip { display: block; font-size: 0.8rem; color: $guide-muted; line-height: 1.45; margin-top: 0.15rem; }
+    mark { background: rgba($ubse, 0.14); color: inherit; padding: 0 0.1em; border-radius: 2px; }
+    .r-empty { padding: 0.8rem; font-size: 0.85rem; color: $guide-muted; }
+  }
+
+  // ---------- three-column shell ----------
+  .guide-shell {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 270px minmax(0, 1fr) 230px;
+    align-items: start;
+  }
+
+  .guide-sidebar {
+    position: sticky;
+    top: $sticky-top;
+    height: calc(100vh - #{$sticky-top});
+    overflow-y: auto;
+    padding: 1.6rem 1.1rem 2rem 1.25rem;
+    background: $ubse-tint-2;
+    border-right: 1px solid $guide-line;
+    font-size: 0.86rem;
+    line-height: 1.4;
+  }
+  .guide-drawer-head, .guide-drawer-search, .guide-drawer-pdf { display: none; }
+
+  .guide-toc {
+    ul { list-style: none; margin: 0; padding: 0; }
+    a { color: $guide-text; text-decoration: none; display: block; }
+  }
+  .guide-toc-home {
+    font-weight: 600;
+    padding: 0.35rem 0.6rem;
+    border-left: 3px solid transparent;
+    &.is-current { color: $ubse; border-left-color: $ubse; background: #fff; }
+  }
+  .guide-toc-part {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8696a1;
+    font-weight: 600;
+    margin: 1.3rem 0 0.4rem 0.6rem;
+  }
+  a.guide-toc-part--link { display: block; color: #8696a1; padding: 0.15rem 0.6rem; margin-left: 0; border-left: 3px solid transparent;
+    &:hover { color: $ubse; }
+    &.is-current { color: $ubse; border-left-color: $ubse; background: #fff; } }
+  .guide-toc-item > a {
+    padding: 0.4rem 0.6rem;
+    border-left: 3px solid transparent;
+    border-radius: 0 4px 4px 0;
+    &:hover { background: #fff; }
+  }
+  .guide-toc-label { display: block; font-size: 0.72rem; font-weight: 600; color: $guide-muted; letter-spacing: 0.02em; }
+  .guide-toc-title { display: block; }
+  .guide-toc-item.is-current > a {
+    background: #fff;
+    border-left-color: $ubse;
+    .guide-toc-label, .guide-toc-title { color: $ubse; }
+    .guide-toc-title { font-weight: 600; }
+  }
+  .guide-toc-sections {
+    margin: 0.2rem 0 0.5rem 0.95rem !important;
+    border-left: 1px solid #d3e0e8;
+    a { padding: 0.25rem 0.5rem 0.25rem 0.8rem; font-size: 0.8rem; color: $guide-muted;
+      &:hover { color: $ubse; }
+      &.is-active { color: $ubse; font-weight: 600; } }
+  }
+  .guide-toc-matter .guide-toc-title { color: $guide-muted; }
+
+  .guide-main { min-width: 0; padding: 2.75rem 3rem 4rem; }
+  .guide-article { max-width: 46rem; margin: 0 auto; }
+
+  .guide-onpage {
+    position: sticky;
+    top: $sticky-top;
+    max-height: calc(100vh - #{$sticky-top});
+    overflow-y: auto;
+    padding: 2.75rem 1.25rem 2rem 0.25rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    ul { list-style: none; margin: 0; padding: 0; }
+    ul ul { margin-left: 0.75rem; }
+    a { display: block; padding: 0.28rem 0 0.28rem 0.75rem; border-left: 2px solid $guide-line; color: $guide-muted; text-decoration: none;
+      &:hover { color: $ubse; }
+      &.is-active { color: $ubse; border-left-color: $ubse; font-weight: 600; } }
+  }
+  .guide-onpage-title { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #8696a1; font-weight: 600; margin-bottom: 0.6rem; }
+
+  // ---------- chapter head ----------
+  .guide-head { margin-bottom: 2rem; }
+  .guide-title {
+    font-family: $guide-serif;
+    font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: $guide-ink;
+    margin: 0 0 0.8rem;
+  }
+  .guide-byline { margin: 0; font-size: 0.92rem; line-height: 1.5; color: $guide-muted;
+    strong { display: block; font-size: 1rem; color: $guide-ink; font-weight: 600; }
+    span { display: block; } }
+  .guide-photo { margin: 1.8rem 0 0;
+    figcaption { font-size: 0.82rem; color: $guide-muted; margin-top: 0.55rem; } }
+  .guide-photo-row { display: flex; gap: 0.75rem;
+    img { display: block; flex: 1 1 0; min-width: 0; width: 100%; height: auto; border-radius: 8px; object-fit: cover; } }
+  .guide-photo--1 .guide-photo-row img { aspect-ratio: 3 / 2; object-position: 50% 30%; }
+  .guide-photo--2 .guide-photo-row img { aspect-ratio: 4 / 5; }
+  .guide-lecturers { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; font-size: 0.95rem; color: $guide-muted; margin: 0;
+    strong { color: $guide-ink; font-weight: 600; } }
+
+  // ---------- chapter body ----------
+  .guide-body, .guide-prose {
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: $guide-text;
+    overflow-wrap: break-word;
+
+    p { margin: 0 0 1.1rem; }
+    strong { font-weight: 600; color: $guide-ink; }
+    em { font-style: italic; }
+    a { color: $ubse; text-decoration: underline; text-decoration-color: rgba($ubse, 0.35); text-underline-offset: 2px;
+      &:hover { text-decoration-color: $ubse; } }
+    ul, ol { margin: 0 0 1.1rem 1.4rem; padding-left: 0.3rem; }
+    ul { list-style: disc; }
+    ol { list-style: decimal; }
+    ul ul, ol ul { list-style: circle; }
+    li { margin: 0.3rem 0; }
+    li > p { margin: 0 0 0.4rem; }
+    li > ul, li > ol { margin-top: 0.3rem; margin-bottom: 0.5rem; }
+    sup { font-size: 0.72em; vertical-align: super; line-height: 0; }
+    code { font-family: $guide-mono; font-size: 0.86em; background: #eef3f6; color: #12384f; padding: 0.1em 0.35em; border-radius: 4px; }
+  }
+
+  .guide-body {
+    h2, h3 { font-family: $guide-serif; color: $guide-ink; line-height: 1.25; scroll-margin-top: 7.25rem; }
+    h2 { font-size: 1.65rem; font-weight: 700; margin: 2.8rem 0 1rem; padding-top: 1.4rem; border-top: 1px solid $guide-line; }
+    h3 { font-size: 1.25rem; font-weight: 600; margin: 2.1rem 0 0.7rem; }
+    .run-in { font-weight: 700; color: $guide-ink; }
+    .ubse-blue, .ubse-blue strong { color: $ubse; }
+
+    blockquote { margin: 1.6rem 0; padding: 1rem 1.25rem; border-left: 4px solid $ubse; background: $ubse-tint; border-radius: 0 6px 6px 0;
+      p:last-child { margin-bottom: 0; } }
+
+    .pre-scroll { overflow-x: auto; margin: 1.4rem 0; background: #f6f8fa; border: 1px solid #e1e6ea; border-radius: 6px; }
+    pre { margin: 0; padding: 1rem 1.1rem; background: none; font-family: $guide-mono; font-size: 0.78rem; line-height: 1.45; white-space: pre; color: #24292f;
+      code { background: none; padding: 0; font-size: inherit; color: inherit; } }
+
+    figure { margin: 2rem auto; text-align: center; scroll-margin-top: 7.25rem; }
+    img { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+    .fig-full { width: 100%; }
+    .fig-wide { width: 72%; }
+    .fig-half { width: 52%; }
+    figcaption { font-size: 0.86rem; line-height: 1.5; color: $guide-muted; margin-top: 0.65rem; text-align: center; }
+    .fig-num { font-weight: 600; color: $guide-ink; }
+    .figure-row { display: flex; gap: 1.25rem; align-items: flex-start; justify-content: center; margin: 2rem 0;
+      > figure, > .subfigure { flex: 1 1 0; min-width: 0; margin: 0; } }
+    figure > .figure-row { margin: 0 0 0.5rem; }
+
+    .table-scroll { overflow-x: auto; margin: 1.6rem 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; line-height: 1.5; }
+    caption { caption-side: top; text-align: left; font-size: 0.86rem; color: $guide-muted; padding-bottom: 0.55rem; }
+    th { font-weight: 600; color: $guide-ink; text-align: left; padding: 0.55rem 0.75rem; border-bottom: 2px solid $guide-ink; white-space: nowrap; }
+
+    // thin, light scrollbars inside the scroll boxes (the site-wide ones are thick and dark)
+    .pre-scroll, .table-scroll {
+      scrollbar-width: thin;
+      scrollbar-color: #c3d2dc transparent;
+      &::-webkit-scrollbar { height: 6px !important; width: 6px !important; }
+      &::-webkit-scrollbar-track { background: transparent !important; }
+      &::-webkit-scrollbar-thumb { background: #c3d2dc !important; border-radius: 3px; }
+    }
+    td { padding: 0.55rem 0.75rem; border-bottom: 1px solid $guide-line; vertical-align: top; }
+
+    .flushright { text-align: right; margin-top: 2.5rem; }
+
+    .footnote-ref { text-decoration: none; font-weight: 600; }
+    .guide-notes { margin-top: 3rem; font-size: 0.88rem; line-height: 1.6;
+      h2 { font-size: 1.15rem; margin-top: 0; }
+      ol { margin-left: 1.2rem; }
+      li p { margin: 0; }
+      .footnote-back { text-decoration: none; margin-left: 0.3rem; } }
+    [id^="fn"] { scroll-margin-top: 7.25rem; }
+  }
+
+  // ---------- pager ----------
+  .guide-pager { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid $guide-line; }
+  .guide-pager-card {
+    display: block;
+    padding: 0.9rem 1.1rem;
+    border: 1px solid $guide-line;
+    border-radius: 8px;
+    color: $guide-text;
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    &:hover { border-color: $ubse; box-shadow: 0 4px 14px rgba($ubse, 0.12); }
+  }
+  .guide-pager-card--next { text-align: right; }
+  .guide-pager-dir { display: block; font-size: 0.78rem; color: $guide-muted; margin-bottom: 0.2rem; }
+  .guide-pager-label { display: block; font-family: $guide-serif; font-weight: 600; font-size: 1rem; color: $ubse; line-height: 1.35; }
+
+  // ---------- footer line ----------
+  .guide-footline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1.4rem 1.25rem;
+    border-top: 1px solid $guide-line;
+    background: $ubse-tint-2;
+    font-size: 0.82rem;
+    color: $guide-muted;
+    text-align: center;
+    p { margin: 0; }
+    a { color: $ubse; }
+  }
+
+  // ---------- home page ----------
+  .guide-cover { background: $ubse; color: #fff; }
+  .guide-cover-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3.5rem 1.5rem;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+  }
+  .guide-cover-img { width: 230px; height: auto; flex: none; border-radius: 3px; box-shadow: 0 14px 40px rgba(#000, 0.35); }
+  .guide-cover-text { font-family: $guide-serif; min-width: 0; }
+  .guide-cover-logo { display: inline-block; margin-bottom: 1.4rem;
+    img { display: block; height: 46px; width: auto; filter: brightness(0) invert(1); } }
+  .guide-cover-title { font-family: $guide-serif; font-weight: 700; font-size: clamp(2.3rem, 5vw, 3.6rem); line-height: 1.05; color: #fff; margin: 0; }
+  .guide-cover-subtitle { font-style: italic; font-size: clamp(1.1rem, 2.2vw, 1.45rem); margin: 0.6rem 0 0; }
+  .guide-cover-rule { width: 18rem; max-width: 100%; height: 1px; border: 0; background: rgba(#fff, 0.7); margin: 1.3rem 0 1.1rem; }
+  .guide-cover-label { font-style: italic; font-weight: 600; font-size: 1rem; margin: 0.9rem 0 0.25rem; }
+  // editors and lecturers get the same type size; lecturers are a two-column list, as on the cover
+  .guide-cover-editors { margin: 0; font-size: 1.05rem; line-height: 1.5;
+    span { white-space: nowrap; }
+    span:not(:last-child)::after { content: " · "; opacity: 0.7; white-space: normal; } }
+  .guide-cover-lecturers { list-style: none; margin: 0; padding: 0; font-size: 1.05rem; line-height: 1.5;
+    display: grid; grid-template-columns: repeat(2, max-content); grid-template-rows: repeat(4, auto);
+    grid-auto-flow: column; column-gap: 2.5rem;
+    li { white-space: nowrap; } }
+  .guide-cover-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.6rem; font-family: $font-family-base; }
+
+  .guide-home { max-width: 1000px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+  .guide-home-intro { max-width: 46rem; margin: 0 auto 1rem; }
+  // clickable flow diagram
+  .guide-flow { margin-top: 2.5rem; }
+  .guide-flow-hint { font-size: 0.9rem; color: $guide-muted; margin: -0.4rem 0 1rem; }
+  .guide-flow-map { position: relative; border: 1px solid $guide-line; border-radius: 8px; padding: 0; overflow: hidden;
+    img { display: block; width: 100%; height: auto; } }
+  .guide-flow-area {
+    position: absolute;
+    border-radius: 8px;
+    transition: background 0.15s, box-shadow 0.15s;
+    &:hover, &:focus-visible { background: rgba($ubse, 0.1); box-shadow: inset 0 0 0 2px rgba($ubse, 0.55); outline: none; }
+  }
+
+  .guide-volume-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+    .guide-volume-title { margin-bottom: 0; } }
+  .guide-volume-more { font-weight: 600; font-size: 0.92rem; color: $ubse; white-space: nowrap; &:hover { color: $ubse-dark; } }
+  .guide-cards--volume { margin-top: 2.2rem; }
+  .guide-volume { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid $guide-line; }
+  .guide-volume-title { font-family: $guide-serif; font-size: 1.9rem; font-weight: 700; color: $guide-ink; line-height: 1.2; margin: 0 0 1rem; }
+  .guide-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; margin-top: 1.4rem; }
+  .guide-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1.1rem 1.15rem 1.2rem;
+    border: 1px solid $guide-line;
+    border-top: 3px solid $ubse;
+    border-radius: 8px;
+    color: $guide-text;
+    text-decoration: none;
+    transition: box-shadow 0.15s, transform 0.15s;
+    &:hover { box-shadow: 0 8px 24px rgba($ubse, 0.14); transform: translateY(-2px); }
+  }
+  .guide-card-label { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: $ubse; }
+  .guide-card-title { font-family: $guide-serif; font-size: 1.15rem; font-weight: 600; color: $guide-ink; line-height: 1.3; }
+  .guide-card-people { font-size: 0.84rem; color: $guide-muted; margin-top: auto; }
+  .guide-card-desc { font-size: 0.82rem; color: $guide-muted; line-height: 1.5; }
+  .guide-card--matter { border-top-color: #9fb6c5; }
+
+  .guide-ack, .guide-cite { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid $guide-line; }
+  .guide-cite-text { background: $ubse-tint; border-left: 4px solid $ubse; padding: 1rem 1.2rem; border-radius: 0 6px 6px 0; font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.9rem; }
+  .guide-license { font-size: 0.85rem; color: $guide-muted; margin-top: 1rem; a { color: $ubse; } }
+
+  .guide-scrim { position: fixed; inset: 0; background: rgba(#000, 0.4); z-index: 55; }
+  .guide-scrim[hidden] { display: none; }
+
+  // ---------- tablet: hide "On this page" ----------
+  @media screen and (max-width: $bp-desktop - 1px) {
+    .guide-shell { grid-template-columns: 240px minmax(0, 1fr); }
+    .guide-onpage { display: none; }
+    .guide-main { padding: 2.5rem 2rem 4rem; }
+  }
+
+  // ---------- phone: single column + drawer ----------
+  @media screen and (max-width: $bp-phone - 1px) {
+    .guide-bar-inner { padding: 0 1rem; gap: 0.5rem; }
+    .guide-bar-contents { display: inline-flex; }
+    .guide-bar-current { display: inline; }
+    .guide-bar-next { display: inline; }
+    .guide-wordmark, .guide-bar .guide-search, .guide-bar-pdf { display: none; }
+    .guide-drawer-head .guide-wordmark { display: inline; }
+
+    .guide-shell { display: block; }
+    .guide-sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      height: auto;
+      width: 86vw;
+      max-width: 340px;
+      z-index: 60;
+      transform: translateX(-105%);
+      transition: transform 0.25s ease;
+      box-shadow: 8px 0 28px rgba(#000, 0.2);
+      padding-top: 1rem;
+      visibility: hidden;
+    }
+    &.guide-drawer-open .guide-sidebar { transform: none; visibility: visible; }
+    &.guide-drawer-open { overflow: hidden; }
+    .guide-drawer-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8rem; }
+    .guide-drawer-close { background: none; border: 0; font-size: 1.8rem; line-height: 1; color: $guide-muted; cursor: pointer; padding: 0 0.25rem; }
+    .guide-drawer-search { display: block; margin-bottom: 0.5rem;
+      .guide-search-input { width: 100%; }
+      .guide-search-results { position: static; width: 100%; box-shadow: none; margin-top: 0.4rem; max-height: none; } }
+    .guide-drawer-pdf { display: inline-flex; margin-top: 1.5rem; }
+
+    .guide-main { padding: 1.75rem 1rem 3rem; }
+    .guide-body, .guide-prose { font-size: 1rem; line-height: 1.7; }
+    .guide-body {
+      h2 { font-size: 1.4rem; }
+      h3 { font-size: 1.15rem; }
+      .figure-row { flex-direction: column; align-items: stretch; gap: 1.5rem; }
+      .fig-wide, .fig-half { width: 100%; }
+      ul, ol { margin-left: 1.1rem; }
+    }
+    .guide-pager { grid-template-columns: 1fr; }
+    .guide-pager-card--next { text-align: left; }
+
+    .guide-cover-inner { flex-direction: column; align-items: flex-start; gap: 1.75rem; padding: 2.25rem 1rem 2.5rem; }
+    .guide-cover-img { width: 150px; }
+    .guide-home { padding: 1.75rem 1rem 3rem; }
+    .guide-volume-title { font-size: 1.55rem; }
+    .guide-cover-logo img { height: 38px; }
+    .guide-cover-editors, .guide-cover-lecturers { font-size: 0.95rem; }
+    .guide-cover-lecturers { column-gap: 1.25rem; }
+    .guide-photo--2 .guide-photo-row img { aspect-ratio: 3 / 4; }
+  }
+}

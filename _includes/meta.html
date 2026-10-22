@@ -5,6 +5,35 @@
   <meta content='#000000' name='theme-color'/>
   <meta name="keywords" content="{{site.site-keywords}}">
   <meta name="google-site-verification" content="-IJbGe13iPwG_cUesr85M2RLLs_seOcQoGkcFgn1uBo" />
+  {% if page.body_id == 'guide' %}
+  {% if page.layout == 'guide-home' %}{% capture guide_title %}The BESTEPS Guide: 7 Lessons towards Effective Economics PhD Research | {{ site.title }}{% endcapture %}
+  {% elsif page.layout == 'guide-page' and page.volume %}{% assign guide_vol = site.data.besteps_guide.volumes | where: "number", page.volume | first %}{% capture guide_title %}Volume {{ page.volume }}: {{ guide_vol.title }} · The BESTEPS Guide | {{ site.title }}{% endcapture %}
+  {% elsif page.layout == 'guide-page' or page.short_title == page.title %}{% capture guide_title %}{{ page.title }} · The BESTEPS Guide | {{ site.title }}{% endcapture %}
+  {% else %}{% capture guide_title %}{{ page.short_title }}: {{ page.title }} · The BESTEPS Guide | {{ site.title }}{% endcapture %}{% endif %}
+  {% if guide_vol %}{% assign guide_desc = guide_vol.intro | strip_html | strip_newlines | truncate: 300 | escape %}{% else %}{% assign guide_desc = page.description | strip_html | strip_newlines | truncate: 300 | escape %}{% endif %}
+  {% assign guide_img = "https://lin-mengwei.github.io/assets/images/besteps-guide/cover.jpg" %}
+  {% assign guide_url = "https://lin-mengwei.github.io" | append: page.url %}
+  <title>{{ guide_title | strip | escape }}</title>
+  <link rel="canonical" href="{{ guide_url }}">
+  <meta property="og:title" content="{{ guide_title | strip | escape }}">
+  <meta property="og:description" content="{{ guide_desc }}">
+  <meta property="og:image" content="{{ guide_img }}">
+  <meta property="og:image:alt" content="Cover of The BESTEPS Guide">
+  <meta property="og:url" content="{{ guide_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:type" content="{% if page.layout == 'guide-home' %}book{% else %}article{% endif %}">
+  <meta property="twitter:card" content="summary_large_image"/>
+  <meta property="twitter:title" content="{{ guide_title | strip | escape }}">
+  <meta property="twitter:description" content="{{ guide_desc }}">
+  <meta property="twitter:site" content="@{{site.twitter_username}}">
+  <meta property="twitter:image:src" content="{{ guide_img }}">
+  <meta name="description" content="{{ guide_desc }}">
+  <meta name="image" content="{{ guide_img }}">
+  <meta itemprop="name" content="{{ guide_title | strip | escape }}">
+  <meta name="author" content="Anna Chesa-Llorens, Mengwei Lin (eds.)"/>
+  <meta itemprop="description" content="{{ guide_desc }}">
+  <meta itemprop="image" content="{{ guide_img }}">
+  {% else %}
   <title>{{site.title}}{% if page.title %} | {{page.title}}{% endif %}</title>
   <link rel="stylesheet" type="text/css">
   
@@ -40,6 +69,7 @@
   <meta name="author" content="{{site.author-name}}"/>
   <meta itemprop="description" content="{% unless page.layout == 'post' %}{{site.author-about}}{% endunless %}">
   <meta itemprop="image" content="{% unless page.layout == 'post' %}{{site.site-image}}{% else %}{{page.post-image}}{% endunless %}">
+  {% endif %}
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{site.google-analytics}}"></script>

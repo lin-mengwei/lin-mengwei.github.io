@@ -1,0 +1,12 @@
+{% assign c = include.c %}{% assign here = false %}{% if c.slug == page.slug %}{% assign here = true %}{% endif %}
+<li class="guide-toc-item{% if here %} is-current{% endif %}">
+  <a href="{{ c.url | relative_url }}"{% if here %} aria-current="page"{% endif %}>
+    {% if c.short_title != c.title %}<span class="guide-toc-label">{{ c.short_title }}</span>{% endif %}
+    <span class="guide-toc-title">{{ c.title }}</span>
+  </a>
+  {% if here and c.sections.size > 0 %}
+  <ul class="guide-toc-sections">
+    {% for s in c.sections %}<li><a href="#{{ s.id }}" data-spy="{{ s.id }}">{{ s.title }}</a></li>{% endfor %}
+  </ul>
+  {% endif %}
+</li>

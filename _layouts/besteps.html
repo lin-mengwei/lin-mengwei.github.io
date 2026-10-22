@@ -113,7 +113,12 @@ extra_css: besteps
           <div class="bp-guide-fw-cover">
             <img src="{{ bp.guide.image | relative_url }}" alt="The BESTEPS Guide cover">
           </div>
-          <a href="{{ bp.guide.url }}" target="_blank" class="bp-guide-btn">
+          {% if bp.guide.read_url %}
+          <a href="{{ bp.guide.read_url | relative_url }}" class="bp-guide-btn bp-guide-btn--primary">
+            <i class="fas fa-book-reader"></i> {{ bp.guide.read_label }}
+          </a>
+          {% endif %}
+          <a href="{{ bp.guide.url }}" target="_blank" class="bp-guide-btn{% if bp.guide.read_url %} bp-guide-btn--secondary{% endif %}">
             <i class="fas fa-download"></i> {{ bp.guide.label }}
           </a>
         </div>
