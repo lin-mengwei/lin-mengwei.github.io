@@ -395,7 +395,7 @@ body#guide {
   // clickable flow diagram
   .guide-flow { margin-top: 2.5rem; }
   .guide-flow-hint { font-size: 0.9rem; color: $guide-muted; margin: -0.4rem 0 1rem; }
-  .guide-flow-map { position: relative; border: 1px solid $guide-line; border-radius: 8px; padding: 0; overflow: hidden;
+  .guide-flow-map { position: relative; max-width: 46rem; border: 1px solid $guide-line; border-radius: 8px; padding: 0; overflow: hidden;
     img, .guide-flow-svg { display: block; width: 100%; height: auto; } }
   // links inside the diagram SVG (scripts/guide_flow.py); label and arrow of a lecture light up together
   .guide-flow-link { cursor: pointer; outline: none;
