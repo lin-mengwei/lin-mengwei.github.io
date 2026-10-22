@@ -128,6 +128,8 @@ exclude:
   - scripts/
   - docs/
   - assets/images/besteps-guide-photos/posters/
+  - besteps/guide/BESTEPS.drawio.html
+  - besteps/guide/besteps.drawio.svg
 
 collections:
   courses:

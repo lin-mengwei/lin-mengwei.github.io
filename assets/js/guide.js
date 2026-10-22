@@ -236,6 +236,16 @@
     document.addEventListener('click', function (e) { if (!box.contains(e.target)) out.hidden = true; });
   });
 
+  /* ---------- diagram: light up a lecture's label and arrow together ---------- */
+  document.querySelectorAll('.guide-flow-link').forEach(function (a) {
+    var group = document.querySelectorAll('.guide-flow-link[data-flow="' + a.getAttribute('data-flow') + '"]');
+    function set(on) { group.forEach(function (g) { g.classList.toggle('is-hover', on); }); }
+    a.addEventListener('mouseenter', function () { set(true); });
+    a.addEventListener('mouseleave', function () { set(false); });
+    a.addEventListener('focus', function () { set(true); });
+    a.addEventListener('blur', function () { set(false); });
+  });
+
   /* ---------- copy citation ---------- */
   document.querySelectorAll('[data-guide-copy]').forEach(function (btn) {
     btn.addEventListener('click', function () {

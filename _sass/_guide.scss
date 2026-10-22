@@ -396,17 +396,22 @@ body#guide {
   .guide-flow { margin-top: 2.5rem; }
   .guide-flow-hint { font-size: 0.9rem; color: $guide-muted; margin: -0.4rem 0 1rem; }
   .guide-flow-map { position: relative; border: 1px solid $guide-line; border-radius: 8px; padding: 0; overflow: hidden;
-    img { display: block; width: 100%; height: auto; } }
-  .guide-flow-area {
-    position: absolute;
-    border-radius: 8px;
-    transition: background 0.15s, box-shadow 0.15s;
-    &:hover, &:focus-visible { background: rgba($ubse, 0.1); box-shadow: inset 0 0 0 2px rgba($ubse, 0.55); outline: none; }
-  }
+    img, .guide-flow-svg { display: block; width: 100%; height: auto; } }
+  // links inside the diagram SVG (scripts/guide_flow.py); label and arrow of a lecture light up together
+  .guide-flow-link { cursor: pointer; outline: none;
+    foreignObject div { transition: color 0.15s; }
+    path { transition: fill 0.15s, stroke 0.15s; }
+    &:focus-visible rect { stroke: $ubse; stroke-width: 2; stroke-dasharray: 4 3; } }
+  .guide-flow-link.is-hover, .guide-flow-link:hover, .guide-flow-link:focus-visible {
+    foreignObject div { color: $ubse-dark !important; text-decoration: underline; text-underline-offset: 3px; }
+    path[style*="218, 232, 252"] { fill: #b3cde8 !important; stroke: $ubse !important; }
+    path[style*="var(--ge-adaptive-fg"] { stroke: $ubse !important; stroke-width: 2; } }
 
-  .guide-volume-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 1rem; flex-wrap: wrap;
-    .guide-volume-title { margin-bottom: 0; } }
-  .guide-volume-more { font-weight: 600; font-size: 0.92rem; color: $ubse; white-space: nowrap; &:hover { color: $ubse-dark; } }
+
+  .guide-volume-link { color: inherit; text-decoration: none;
+    .guide-volume-arrow { color: $ubse; font-size: 0.8em; margin-left: 0.2rem; display: inline-block; transition: transform 0.15s; }
+    &:hover, &:focus-visible { color: $ubse; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px;
+      .guide-volume-arrow { transform: translateX(3px); } } }
   .guide-cards--volume { margin-top: 2.2rem; }
   .guide-volume { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid $guide-line; }
   .guide-volume-title { font-family: $guide-serif; font-size: 1.9rem; font-weight: 700; color: $guide-ink; line-height: 1.2; margin: 0 0 1rem; }

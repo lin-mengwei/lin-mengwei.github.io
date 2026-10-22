@@ -44,8 +44,16 @@ Chapter pages show the lecturer's photo from the BESTEPS lecture poster when one
 2. Run `python scripts/guide_photos.py`. It crops the photo area of each poster (the boxes are at the top of
    the script) and writes the photos plus `_data/besteps_guide_photos.yml`.
 
-Other hand-maintained files: `_data/besteps_guide_flow.yml` (clickable areas on the home-page diagram) and
-`besteps/guide/volume-1.md`, `volume-2.md`, `acknowledgements.md` (their text comes from `Print.tex`).
+## Home-page diagram
+
+The diagram is drawn in draw.io. After editing it, export it as SVG to `besteps/guide/besteps.drawio.svg`
+and run `python scripts/guide_flow.py`. It writes `_includes/guide-flow.svg`: the draw.io editor data and
+PNG fallbacks removed, colours fixed to the light version, and each lecture's label and arrow (each volume's
+label and brace) turned into a link. The links are found by draw.io cell number (`LINKS` in the script); if a
+label no longer reads as expected the script stops with an error instead of linking the wrong page.
+
+Other hand-maintained files: `besteps/guide/volume-1.md`, `volume-2.md`, `acknowledgements.md` (their text
+comes from `Print.tex`).
 
 ## Requirements
 

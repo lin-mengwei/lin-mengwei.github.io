@@ -5,7 +5,6 @@ layout: base
 {% assign people = site.data.besteps_guide_people %}
 {% assign guide_chapters = site.guide | sort: "order" %}
 {% assign first_chapter = guide_chapters | first %}
-{% assign flow = site.data.besteps_guide_flow %}
 
 <section class="guide-cover" aria-label="The BESTEPS Guide">
   <div class="guide-cover-inner">
@@ -45,17 +44,9 @@ layout: base
 
   <section class="guide-flow" aria-labelledby="guide-flow-title">
     <h2 class="guide-volume-title" id="guide-flow-title">Seven lessons along the life cycle of a research project</h2>
-    <p class="guide-flow-hint">Click a lecture in the diagram to start reading it, or a volume to read its introduction.</p>
+    <p class="guide-flow-hint">Click a lecture or volume to open it.</p>
     <div class="guide-flow-map">
-      <img src="{{ g.images.flow | relative_url }}" width="{{ flow.image_width }}" height="{{ flow.image_height }}"
-           alt="The BESTEPS lectures along the stages of a research project, grouped into Volume 1 and Volume 2">
-      {% for a in flow.areas %}
-        {% assign target = guide_chapters | where: "slug", a.target | first %}
-        {% if target %}{% capture href %}{{ target.url | relative_url }}{% endcapture %}{% capture label %}{% if target.short_title != target.title %}{{ target.short_title }}: {% endif %}{{ target.title }}{% endcapture %}
-        {% else %}{% capture href %}{{ '/besteps/guide/' | append: a.target | append: '/' | relative_url }}{% endcapture %}{% capture label %}{{ a.target | replace: "volume-", "Volume " }}: introduction{% endcapture %}{% endif %}
-        <a class="guide-flow-area" href="{{ href }}" aria-label="{{ label | strip | escape }}" title="{{ label | strip | escape }}"
-           style="left: {{ a.x | times: 100.0 | divided_by: flow.image_width }}%; top: {{ a.y | times: 100.0 | divided_by: flow.image_height }}%; width: {{ a.w | times: 100.0 | divided_by: flow.image_width }}%; height: {{ a.h | times: 100.0 | divided_by: flow.image_height }}%;"></a>
-      {% endfor %}
+      {% include guide-flow.svg %}
     </div>
   </section>
 
@@ -74,13 +65,10 @@ layout: base
 
   {% for vol in g.volumes %}
   <section class="guide-volume" id="volume-{{ vol.number }}">
-    <div class="guide-volume-head">
-      <div>
-        <p class="guide-kicker">Volume {{ vol.number }}</p>
-        <h2 class="guide-volume-title">{{ vol.title }}</h2>
-      </div>
-      <a class="guide-volume-more" href="{{ '/besteps/guide/volume-' | append: vol.number | append: '/' | relative_url }}">About this volume <span aria-hidden="true">&rarr;</span></a>
-    </div>
+    <p class="guide-kicker">Volume {{ vol.number }}</p>
+    <h2 class="guide-volume-title">
+      <a class="guide-volume-link" href="{{ '/besteps/guide/volume-' | append: vol.number | append: '/' | relative_url }}">{{ vol.title }} <span class="guide-volume-arrow" aria-hidden="true">&rarr;</span></a>
+    </h2>
     <div class="guide-cards">
       {% for c in guide_chapters %}{% if c.volume == vol.number %}{% include guide-card.html c=c %}{% endif %}{% endfor %}
     </div>
