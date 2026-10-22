@@ -369,6 +369,7 @@ body#guide {
     display: flex;
     gap: 3rem;
     align-items: center;
+    justify-content: center;   // cover image and text sit together in the middle of the band
   }
   .guide-cover-img { width: 230px; height: auto; flex: none; border-radius: 3px; box-shadow: 0 14px 40px rgba(#000, 0.35); }
   .guide-cover-text { font-family: $guide-serif; min-width: 0; }
