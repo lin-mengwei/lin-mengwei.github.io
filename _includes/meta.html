@@ -6,10 +6,11 @@
   <meta name="keywords" content="{{site.site-keywords}}">
   <meta name="google-site-verification" content="-IJbGe13iPwG_cUesr85M2RLLs_seOcQoGkcFgn1uBo" />
   {% if page.body_id == 'guide' %}
-  {% if page.layout == 'guide-home' %}{% capture guide_title %}The BESTEPS Guide: 7 Lessons towards Effective Economics PhD Research{% endcapture %}
-  {% elsif page.layout == 'guide-page' and page.volume %}{% assign guide_vol = site.data.besteps_guide.volumes | where: "number", page.volume | first %}{% capture guide_title %}Volume {{ page.volume }}: {{ guide_vol.title }} · The BESTEPS Guide{% endcapture %}
-  {% elsif page.layout == 'guide-page' or page.short_title == page.title %}{% capture guide_title %}{{ page.title }} · The BESTEPS Guide{% endcapture %}
-  {% else %}{% capture guide_title %}{{ page.short_title }}: {{ page.title }} · The BESTEPS Guide{% endcapture %}{% endif %}
+  {% assign guide_book = 'The BESTEPS Guide (E-book)' %}
+  {% if page.layout == 'guide-home' %}{% capture guide_title %}{{ guide_book }}: 7 Lessons towards Effective Economics PhD Research{% endcapture %}
+  {% elsif page.layout == 'guide-page' and page.volume %}{% assign guide_vol = site.data.besteps_guide.volumes | where: "number", page.volume | first %}{% capture guide_title %}Volume {{ page.volume }}: {{ guide_vol.title }} · {{ guide_book }}{% endcapture %}
+  {% elsif page.layout == 'guide-page' or page.short_title == page.title %}{% capture guide_title %}{{ page.title }} · {{ guide_book }}{% endcapture %}
+  {% else %}{% capture guide_title %}{{ page.short_title }}: {{ page.title }} · {{ guide_book }}{% endcapture %}{% endif %}
   {% if guide_vol %}{% assign guide_desc = guide_vol.intro | strip_html | strip_newlines | truncate: 300 | escape %}{% else %}{% assign guide_desc = page.description | strip_html | strip_newlines | truncate: 300 | escape %}{% endif %}
   {% assign guide_img = "https://lin-mengwei.github.io/assets/images/besteps-guide/cover.jpg" %}
   {% assign guide_url = "https://lin-mengwei.github.io" | append: page.url %}
@@ -20,7 +21,7 @@
   <meta property="og:image" content="{{ guide_img }}">
   <meta property="og:image:alt" content="Cover of The BESTEPS Guide">
   <meta property="og:url" content="{{ guide_url }}">
-  <meta property="og:site_name" content="The BESTEPS Guide">
+  <meta property="og:site_name" content="{{ guide_book }}">
   <meta property="og:type" content="{% if page.layout == 'guide-home' %}book{% else %}article{% endif %}">
   <meta property="twitter:card" content="summary_large_image"/>
   <meta property="twitter:title" content="{{ guide_title | strip | escape }}">
