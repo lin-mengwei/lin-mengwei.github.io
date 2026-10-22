@@ -12,8 +12,9 @@ layout: compress
   {% endif %}
 </head>
 
-<body class="has-navbar-fixed-top"{% if page.body_id %} id="{{ page.body_id }}"{% endif %}>
-  {% include navbar.html %}
+{% comment %} The BESTEPS Guide pages (body_id: guide) read as a book of their own: no site navbar. {% endcomment %}
+<body{% unless page.body_id == 'guide' %} class="has-navbar-fixed-top"{% endunless %}{% if page.body_id %} id="{{ page.body_id }}"{% endif %}>
+  {% unless page.body_id == 'guide' %}{% include navbar.html %}{% endunless %}
 
   {{ content }}
 

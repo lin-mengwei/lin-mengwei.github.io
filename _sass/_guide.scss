@@ -15,7 +15,7 @@ $guide-muted: #5d6a73;
 $guide-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
 $guide-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-$navbar-h: 3.25rem;
+$navbar-h: 0rem;                 // guide pages have no site navbar (see _layouts/base.html)
 $bar-h: 3rem;
 $sticky-top: calc(#{$navbar-h} + #{$bar-h} + 3px);
 
@@ -279,7 +279,7 @@ body#guide {
   }
 
   .guide-body {
-    h2, h3 { font-family: $guide-serif; color: $guide-ink; line-height: 1.25; scroll-margin-top: 7.25rem; }
+    h2, h3 { font-family: $guide-serif; color: $guide-ink; line-height: 1.25; scroll-margin-top: 4.5rem; }
     h2 { font-size: 1.65rem; font-weight: 700; margin: 2.8rem 0 1rem; padding-top: 1.4rem; border-top: 1px solid $guide-line; }
     h3 { font-size: 1.25rem; font-weight: 600; margin: 2.1rem 0 0.7rem; }
     .run-in { font-weight: 700; color: $guide-ink; }
@@ -292,7 +292,7 @@ body#guide {
     pre { margin: 0; padding: 1rem 1.1rem; background: none; font-family: $guide-mono; font-size: 0.78rem; line-height: 1.45; white-space: pre; color: #24292f;
       code { background: none; padding: 0; font-size: inherit; color: inherit; } }
 
-    figure { margin: 2rem auto; text-align: center; scroll-margin-top: 7.25rem; }
+    figure { margin: 2rem auto; text-align: center; scroll-margin-top: 4.5rem; }
     img { display: block; margin: 0 auto; max-width: 100%; height: auto; }
     .fig-full { width: 100%; }
     .fig-wide { width: 72%; }
@@ -326,7 +326,7 @@ body#guide {
       ol { margin-left: 1.2rem; }
       li p { margin: 0; }
       .footnote-back { text-decoration: none; margin-left: 0.3rem; } }
-    [id^="fn"] { scroll-margin-top: 7.25rem; }
+    [id^="fn"] { scroll-margin-top: 4.5rem; }
   }
 
   // ---------- pager ----------
