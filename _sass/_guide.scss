@@ -246,12 +246,10 @@ body#guide {
   .guide-byline { margin: 0; font-size: 0.92rem; line-height: 1.5; color: $guide-muted;
     strong { display: block; font-size: 1rem; color: $guide-ink; font-weight: 600; }
     span { display: block; } }
+  // lecture photos keep the poster's framing (cut corners are transparent in the image itself)
   .guide-photo { margin: 1.8rem 0 0;
     figcaption { font-size: 0.82rem; color: $guide-muted; margin-top: 0.55rem; } }
-  .guide-photo-row { display: flex; gap: 0.75rem;
-    img { display: block; flex: 1 1 0; min-width: 0; width: 100%; height: auto; border-radius: 8px; object-fit: cover; } }
-  .guide-photo--1 .guide-photo-row img { aspect-ratio: 3 / 2; object-position: 50% 30%; }
-  .guide-photo--2 .guide-photo-row img { aspect-ratio: 4 / 5; }
+  .guide-photo-row img { display: block; width: 100%; height: auto; }
   .guide-lecturers { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; font-size: 0.95rem; color: $guide-muted; margin: 0;
     strong { color: $guide-ink; font-weight: 600; } }
 
@@ -498,14 +496,18 @@ body#guide {
     // phones: the cover band is centred; the cover image already carries the UBSE logo
     .guide-cover-inner { flex-direction: column; align-items: center; text-align: center; gap: 1.75rem; padding: 2.25rem 1rem 2.5rem; }
     .guide-cover-logo { display: none; }
+    // phones: the cover image carries the title, editors and lecturers, so only it and the buttons are shown
+    .guide-cover-text > :not(.guide-cover-actions) {
+      position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden;
+      clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+    .guide-cover-actions { margin-top: 0; }
     .guide-cover-rule { margin-left: auto; margin-right: auto; }
     .guide-cover-lecturers { justify-content: center; text-align: left; }
     .guide-cover-actions { justify-content: center; }
-    .guide-cover-img { width: 150px; }
+    .guide-cover-img { width: 72%; max-width: 300px; }
     .guide-home { padding: 1.75rem 1rem 3rem; }
     .guide-volume-title { font-size: 1.55rem; }
     .guide-cover-editors, .guide-cover-lecturers { font-size: 0.95rem; }
     .guide-cover-lecturers { column-gap: 1.25rem; }
-    .guide-photo--2 .guide-photo-row img { aspect-ratio: 3 / 4; }
   }
 }

@@ -41,8 +41,10 @@ Chapter pages show the lecturer's photo from the BESTEPS lecture poster when one
    names `pic_BESTEPS_open`, `_idea`, `_org`, `_vis`, `_talk`, `_jmp`, `_close` (`.jpg`, `.png` or `.webp`). The posters number two lectures differently from the book: the
    Ruiz-Valenzuela poster ("Lecture 5" on the poster) is the book's `lecture-4`, and the Glitz poster
    ("Lecture 4") is `lecture-5`.
-2. Run `python scripts/guide_photos.py`. It crops the photo area of each poster (the boxes are at the top of
-   the script) and writes the photos plus `_data/besteps_guide_photos.yml`.
+2. Run `python scripts/guide_photos.py`. It cuts each poster's photo along the poster's own frame (cut
+   corners and poster text become transparent) and writes `<chapter>.webp` plus
+   `_data/besteps_guide_photos.yml`. Per-poster settings (lecturer names, collage, trimming a name printed
+   over the photo) are in `POSTERS` at the top of the script.
 
 ## Home-page diagram
 
