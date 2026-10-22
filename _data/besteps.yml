@@ -10,7 +10,7 @@ about:
     <br><br>
     It covers the life-cycle of economic research, from identifying a promising project to producing research outputs such as a job market paper, through 7 lectures by leading European researchers.
     <br><br>
-    Our book based on the lectures, <b>The BESTEPS Guide</b>, is <b>freely available</b> and can be downloaded below.
+    Our book based on the lectures, <b>The BESTEPS Guide</b>, is <b>freely available</b> below, online or as a PDF.
   highlights:
     - icon: "fa-graduation-cap"
       label: "7 Expert-led Lectures"
@@ -71,7 +71,7 @@ lectures:
 guide:
   title: "The BESTEPS Guide"
   subtitle: "7 Lessons towards Effective Economics PhD Research"
-  image: "/assets/images/activities/besteps_guide.png"
+  image: "/assets/images/besteps-guide/cover.jpg"
   description: >-
     Based on the lectures, Anna Chesa and I edited <b>The BESTEPS Guide: 7 Lessons towards Effective Economics PhD Research</b>, available as a public good. 
     <br><br>
@@ -84,6 +84,8 @@ guide:
   #url: "https://lin-mengwei.github.io/assets/files/BESTEPS_Guide_Content.pdf"
   url: "https://diposit.ub.edu/items/97432c44-013c-45d3-917b-aa87467f216d"
   label: "Download the Book"
+  read_url: "/besteps/guide/"
+  read_label: "Read Online"
 
 # Video interviews (placeholder)
 videos:
