@@ -20,7 +20,7 @@ def test_build_writes_photos_and_data(tmp_path):
     assert set(data) == {"lecture-1", "lecture-3"}
     assert [p["src"].rsplit("/", 1)[1] for p in data["lecture-3"]["photos"]] == ["lecture-3-1.jpg", "lecture-3-2.jpg"]
     assert (out / "lecture-1.jpg").exists()
-    assert data["lecture-3"]["caption"] == "Dirk Foremny and Guillermo Marín at the BESTEPS lecture, 29 September 2025."
+    assert data["lecture-3"]["caption"] == "Dirk Foremny and Guillermo Marín at the BESTEPS lecture."
     assert yaml.safe_load(data_file.read_text(encoding="utf-8"))["lecture-1"]["photos"][0]["alt"]
 
 

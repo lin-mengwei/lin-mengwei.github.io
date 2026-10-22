@@ -495,11 +495,15 @@ body#guide {
     .guide-pager { grid-template-columns: 1fr; }
     .guide-pager-card--next { text-align: left; }
 
-    .guide-cover-inner { flex-direction: column; align-items: flex-start; gap: 1.75rem; padding: 2.25rem 1rem 2.5rem; }
+    // phones: the cover band is centred; the cover image already carries the UBSE logo
+    .guide-cover-inner { flex-direction: column; align-items: center; text-align: center; gap: 1.75rem; padding: 2.25rem 1rem 2.5rem; }
+    .guide-cover-logo { display: none; }
+    .guide-cover-rule { margin-left: auto; margin-right: auto; }
+    .guide-cover-lecturers { justify-content: center; text-align: left; }
+    .guide-cover-actions { justify-content: center; }
     .guide-cover-img { width: 150px; }
     .guide-home { padding: 1.75rem 1rem 3rem; }
     .guide-volume-title { font-size: 1.55rem; }
-    .guide-cover-logo img { height: 38px; }
     .guide-cover-editors, .guide-cover-lecturers { font-size: 0.95rem; }
     .guide-cover-lecturers { column-gap: 1.25rem; }
     .guide-photo--2 .guide-photo-row img { aspect-ratio: 3 / 4; }

@@ -30,20 +30,20 @@ MAX_WIDTH = 1400
 # Photo areas inside each poster, as fractions (left, top, right, bottom) of the poster's size, measured on the
 # posters of 2025 so that each box stays clear of the poster's cut corners and text overlays.
 POSTERS: dict[str, dict] = {
-    "opening-lecture": {"date": "10 February 2025", "photos": [
+    "opening-lecture": {"photos": [
         {"box": (0.22, 0.28, 0.80, 0.735), "who": "Antonio Cabrales"}]},
-    "lecture-1": {"date": "20 March 2025", "photos": [
+    "lecture-1": {"photos": [
         {"box": (0.176, 0.354, 0.87, 0.60), "who": "Libertad González"}]},
-    "lecture-2": {"date": "5 May 2025", "photos": [
+    "lecture-2": {"photos": [
         {"box": (0.213, 0.289, 0.895, 0.572), "who": "Joan Llull"}]},
-    "lecture-3": {"date": "29 September 2025", "photos": [
+    "lecture-3": {"photos": [
         {"box": (0.058, 0.318, 0.43, 0.70), "who": "Dirk Foremny"},
         {"box": (0.545, 0.49, 0.86, 0.80), "who": "Guillermo Marín"}]},
-    "lecture-4": {"date": "3 December 2025", "photos": [
+    "lecture-4": {"photos": [
         {"box": (0.145, 0.362, 0.667, 0.681), "who": "Jenifer Ruiz-Valenzuela"}]},
-    "lecture-5": {"date": "17 November 2025", "photos": [
+    "lecture-5": {"photos": [
         {"box": (0.185, 0.319, 0.741, 0.696), "who": "Albrecht Glitz"}]},
-    "closing-lecture": {"date": "16 December 2025", "photos": [
+    "closing-lecture": {"photos": [
         {"box": (0.176, 0.319, 0.741, 0.70), "who": "Diego Puga"}]},
 }
 
@@ -91,7 +91,7 @@ def build(folder: Path, out_dir: Path = OUT_DIR, data_file: Path = REPO / "_data
             items.append({"src": URL + name, "width": img.width, "height": img.height,
                           "alt": f"{ph['who']} lecturing at BESTEPS"})
         who = " and ".join(p["who"] for p in spec["photos"])
-        data[slug] = {"photos": items, "caption": f"{who} at the BESTEPS lecture, {spec['date']}."}
+        data[slug] = {"photos": items, "caption": f"{who} at the BESTEPS lecture."}
         print(f"{slug}: {len(items)} photo(s) from {poster.name}")
     data_file.write_text(HEADER + yaml.safe_dump(data, allow_unicode=True, sort_keys=False), encoding="utf-8")
     return data

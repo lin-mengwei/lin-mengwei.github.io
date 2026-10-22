@@ -5,21 +5,21 @@ opening-lecture:
     width: 870
     height: 455
     alt: Antonio Cabrales lecturing at BESTEPS
-  caption: Antonio Cabrales at the BESTEPS lecture, 10 February 2025.
+  caption: Antonio Cabrales at the BESTEPS lecture.
 lecture-1:
   photos:
   - src: /assets/images/besteps-guide-photos/lecture-1.jpg
     width: 750
     height: 323
     alt: Libertad González lecturing at BESTEPS
-  caption: Libertad González at the BESTEPS lecture, 20 March 2025.
+  caption: Libertad González at the BESTEPS lecture.
 lecture-2:
   photos:
   - src: /assets/images/besteps-guide-photos/lecture-2.jpg
     width: 737
     height: 372
     alt: Joan Llull lecturing at BESTEPS
-  caption: Joan Llull at the BESTEPS lecture, 5 May 2025.
+  caption: Joan Llull at the BESTEPS lecture.
 lecture-3:
   photos:
   - src: /assets/images/besteps-guide-photos/lecture-3-1.jpg
@@ -30,25 +30,25 @@ lecture-3:
     width: 410
     height: 418
     alt: Guillermo Marín lecturing at BESTEPS
-  caption: Dirk Foremny and Guillermo Marín at the BESTEPS lecture, 29 September 2025.
+  caption: Dirk Foremny and Guillermo Marín at the BESTEPS lecture.
 lecture-4:
   photos:
   - src: /assets/images/besteps-guide-photos/lecture-4.jpg
     width: 563
     height: 420
     alt: Jenifer Ruiz-Valenzuela lecturing at BESTEPS
-  caption: Jenifer Ruiz-Valenzuela at the BESTEPS lecture, 3 December 2025.
+  caption: Jenifer Ruiz-Valenzuela at the BESTEPS lecture.
 lecture-5:
   photos:
   - src: /assets/images/besteps-guide-photos/lecture-5.jpg
     width: 600
     height: 496
     alt: Albrecht Glitz lecturing at BESTEPS
-  caption: Albrecht Glitz at the BESTEPS lecture, 17 November 2025.
+  caption: Albrecht Glitz at the BESTEPS lecture.
 closing-lecture:
   photos:
   - src: /assets/images/besteps-guide-photos/closing-lecture.jpg
     width: 610
     height: 501
     alt: Diego Puga lecturing at BESTEPS
-  caption: Diego Puga at the BESTEPS lecture, 16 December 2025.
+  caption: Diego Puga at the BESTEPS lecture.
