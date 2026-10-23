@@ -437,7 +437,11 @@ body#guide {
 
   .guide-ack, .guide-cite { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid $guide-line; }
   .guide-cite-text { background: $ubse-tint; border-left: 4px solid $ubse; padding: 1rem 1.2rem; border-radius: 0 6px 6px 0; font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.9rem; }
-  .guide-license { font-size: 0.85rem; color: $guide-muted; margin-top: 1rem; a { color: $ubse; } }
+  .guide-cite-text { overflow-wrap: anywhere; }
+  .guide-cite-style { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: $guide-muted; margin: 1.4rem 0 0.5rem; }
+  .guide-cite-bibtex { font-family: $guide-mono; font-size: 0.8rem; line-height: 1.5; color: #24292f; background: #f6f8fa;
+    border: 1px solid #e1e6ea; border-radius: 6px; padding: 0.9rem 1rem; margin: 0 0 0.9rem; overflow-x: auto; white-space: pre; }
+  .guide-license { font-size: 0.85rem; color: $guide-muted; margin-top: 1.6rem; a { color: $ubse; } }
 
   .guide-scrim { position: fixed; inset: 0; background: rgba(#000, 0.4); z-index: 55; }
   .guide-scrim[hidden] { display: none; }
