@@ -84,6 +84,28 @@ html[data-guide-theme="night"] body#guide { @include guide-night; }
 @media (prefers-color-scheme: dark) { html:not([data-guide-theme]) body#guide { @include guide-night; } }
 // the page background behind the body (overscroll, short pages)
 html[data-guide-theme="green"] { background: #e8efe3; }
+// Green: the cover band takes the page's own light green with dark text, so the (blue) book cover
+// is the one strong colour on the page
+html[data-guide-theme="green"] body#guide {
+  .guide-cover { background: var(--g-tint); color: var(--g-ink); border-bottom: 1px solid var(--g-line); }
+  .guide-cover-title { color: var(--g-ink); }
+  .guide-cover-rule { background: var(--g-line-strong); }
+  .guide-cover-img { box-shadow: 0 10px 30px rgba(30, 45, 25, 0.25); }
+  .guide-btn--light { background: var(--g-btn-bg); color: var(--g-btn-text); &:hover { background: var(--g-btn-hover); color: var(--g-btn-text); } }
+  .guide-btn--outline-light { color: var(--g-accent); border-color: var(--g-accent-45); &:hover { background: var(--g-surface); color: var(--g-accent-strong); } }
+}
+// Green: the diagram's blues (draw.io export, scripts/guide_flow.py) become the theme's greens
+html[data-guide-theme="green"] body#guide .guide-flow-svg {
+  [style*="color: #005A8B"], [style*="color: rgb(0, 90, 139)"] { color: #476540 !important; }
+  [style*="stroke: rgb(0, 90, 139)"] { stroke: #476540 !important; }
+  [style*="fill: rgb(0, 90, 139)"] { fill: #476540 !important; }
+  [style*="fill: rgb(218, 232, 252)"] { fill: #dbe6d3 !important; }
+  [style*="stroke: rgb(108, 142, 191)"] { stroke: #8aa37f !important; }
+  .guide-flow-link.is-hover, .guide-flow-link:hover, .guide-flow-link:focus-visible {
+    foreignObject div { color: #34492d !important; }
+    path[style*="218, 232, 252"] { fill: #c3d4b8 !important; stroke: #476540 !important; }
+    path[style*="var(--ge-adaptive-fg"] { stroke: #476540 !important; } }
+}
 html[data-guide-theme="night"] { background: #1b1f27; }
 
 // ---------- text size steps (A- / A+) and focus mode ----------
@@ -672,7 +694,7 @@ body#guide {
     .guide-flow-map .guide-flow-link { pointer-events: none; }
     .guide-flow-zoom { position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: flex-end; padding: 0.5rem;
       border: 0; background: none; cursor: zoom-in;
-      span { padding: 0.3rem 0.7rem; border-radius: 999px; background: rgba(0, 90, 139, 0.92); color: #fff; font-size: 0.78rem; font-weight: 600; } }
+      span { padding: 0.3rem 0.7rem; border-radius: 999px; background: var(--g-btn-bg); color: var(--g-btn-text); font-size: 0.78rem; font-weight: 600; } }
   }
 
   // wide tables and code: a shadow at the edge that still has content to scroll to
