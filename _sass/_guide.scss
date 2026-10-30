@@ -813,11 +813,12 @@ body#guide {
 
 // ---------- the reader's notes (assets/js/guide-notes.js) ----------
 body#guide {
-  .guide-mynotes-btn { display: inline-flex; align-items: center; justify-content: center; width: 2.4rem; height: 2.1rem; padding: 0;
+  .guide-mynotes-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; height: 2.1rem; padding: 0 0.7rem;
     border: 1px solid var(--g-input-border); border-radius: 6px; background: $guide-surface; color: $guide-ink; font-size: 1rem; cursor: pointer;
     &:hover, &[aria-expanded="true"] { border-color: $ubse; color: $ubse; }
     &[hidden] { display: none; } }
   // below the bar (25), so the Aa panel and search results open over it, and below the phone drawer (60)
+  .guide-mynotes-label { font-size: 0.85rem; font-weight: 600; }
   .guide-mynotes { position: fixed; z-index: 20; top: $sticky-top; right: 0; bottom: 0; width: 20rem; overflow-y: auto; display: flex; flex-direction: column;
     padding: 1rem 1.1rem 1.25rem; background: $guide-surface; border-left: 1px solid $guide-line; box-shadow: -8px 0 24px var(--g-shadow);
     font-size: 0.9rem; color: $guide-text;
@@ -878,5 +879,10 @@ body#guide {
   html.guide-mynotes-open body#guide .guide-progress-chip, html.guide-mynotes-open body#guide .guide-back-chip { display: none; }
 }
 @media screen and (max-width: $bp-phone - 1px), screen and (max-height: 500px) and (max-width: $bp-desktop - 1px) {
-  body#guide .guide-mynotes-btn { width: 2.75rem; height: 2.75rem; border: 0; background: none; }
+  body#guide .guide-mynotes-btn { height: 2.75rem; padding: 0 0.4rem; border: 0; background: none; font-size: 0.9rem; font-weight: 600; }
+}
+// the pen alone where the bar is full: the narrowest phones (Contents, the chapter and Next) and tablets
+// (search, Aa, PDF and Next); the button keeps "Notes" as its name for screen readers
+@media screen and (max-width: 359px), screen and (min-width: $bp-phone) and (max-width: $bp-desktop - 1px) and (min-height: 501px) {
+  body#guide .guide-mynotes-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 }
