@@ -627,8 +627,8 @@
     }, { passive: true });
   }
 
-  /* ---------- reading rhythm: section labels, lead paragraphs, pauses between sections ---------- */
-  // Each major section opens with "2 / 6 · 7 min" and a slightly larger first paragraph, and ends with a
+  /* ---------- reading rhythm: section labels and pauses between sections ---------- */
+  // Each major section opens with a label "2 / 6 · 7 min" and ends with a
   // small marker ("End of section 1 · 18 min left · Next: …"), so a long chapter has places to stop.
   // Nothing in the text changes: the labels and markers sit between the book's own blocks.
   if (main && body) {
@@ -663,8 +663,6 @@
         k.setAttribute('aria-hidden', 'true');
         k.textContent = (i + 1) + ' / ' + parts.length + ' · ' + mins[i] + ' min';
         h.parentNode.insertBefore(k, h);
-        var first = h.nextElementSibling;
-        if (first && first.tagName === 'P' && first.textContent.trim().length > 120) first.classList.add('guide-lead');
         var next = parts[i + 1];
         if (!next) return;
         var left = mins.slice(i + 1).reduce(function (a, b) { return a + b; }, 0);
