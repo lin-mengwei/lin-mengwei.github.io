@@ -1,6 +1,13 @@
 <head>
     {% include meta.html %}
     
+    {% if page.body_id == 'guide' %}
+    {% comment %} The BESTEPS Guide: settings first, then styles that block rendering, so the reader's theme applies
+       before first paint and late CSS cannot move a #section the page opened on. {% endcomment %}
+    {% include guide-settings-head.html %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    {% else %}
     <!-- bulma -->
     <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"></noscript>
@@ -8,6 +15,7 @@
     <!-- 自定义样式 -->
     <link rel="preload" as="style" href="{{ '/assets/css/style.css' | relative_url }}" onload="this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}"></noscript>
+    {% endif %}
 
     <!-- CSS custom properties from config (used by SCSS partials) -->
     <style>:root{--hero-image:url('{{ site.heroimage | relative_url }}');}</style>
@@ -17,11 +25,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     {% if page.body_id == 'guide' %}
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&display=swap" rel="stylesheet">
     {% endif %}
 
-    <!-- Font Awesome -->
+    {% unless page.body_id == 'guide' %}
+    <!-- Font Awesome (guide pages use a few inline SVG icons instead, see _includes/guide-icon.html) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" crossorigin="anonymous" defer></script>
+    {% endunless %}
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{% if site.favicon-url %}{{site.favicon-url}}{% else %}{{ 'assets/images/logo.png' | absolute_url }}{% endif %}" type="image/x-icon">

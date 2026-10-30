@@ -2,7 +2,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta content='#000000' name='theme-color'/>
+  <meta content='{% if page.body_id == 'guide' %}#e4edf3{% else %}#000000{% endif %}' name='theme-color'/>
   <meta name="keywords" content="{{site.site-keywords}}">
   <meta name="google-site-verification" content="-IJbGe13iPwG_cUesr85M2RLLs_seOcQoGkcFgn1uBo" />
   {% if page.body_id == 'guide' %}

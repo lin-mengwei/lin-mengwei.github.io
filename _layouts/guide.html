@@ -8,7 +8,7 @@ layout: base
 <div class="guide-shell">
   {% include guide-sidebar.html %}
 
-  <main class="guide-main">
+  <main class="guide-main" id="guide-text" tabindex="-1">
     <article class="guide-article">
       <header class="guide-head">
         <p class="guide-kicker">
@@ -18,7 +18,7 @@ layout: base
         {% if page.lecturers.size > 0 %}
         <p class="guide-lecturers">
           {% for l in page.lecturers %}<span class="guide-lecturer"><strong>{{ l.name }}</strong> · {{ l.affiliation }}</span>{% endfor %}
-          {% if page.reading_minutes %}<span class="guide-readtime"><i class="far fa-clock" aria-hidden="true"></i> {{ page.reading_minutes }} min read</span>{% endif %}
+          {% if page.reading_minutes %}<span class="guide-readtime">{% include guide-icon.html name="clock" %} {{ page.reading_minutes }} min read</span>{% endif %}
         </p>
         {% endif %}
         {% if page.byline %}
@@ -31,7 +31,7 @@ layout: base
         {% if photo_set %}
         <figure class="guide-photo guide-photo--{{ photo_set.photos.size }}">
           <div class="guide-photo-row">
-            {% for ph in photo_set.photos %}<img src="{{ ph.src | relative_url }}" width="{{ ph.width }}" height="{{ ph.height }}" alt="{{ ph.alt | escape }}">{% endfor %}
+            {% for ph in photo_set.photos %}<img src="{{ ph.src | relative_url }}"{% if ph.srcset %} srcset="{{ ph.srcset }}" sizes="(max-width: 767px) 100vw, 38em"{% endif %} width="{{ ph.width }}" height="{{ ph.height }}" alt="{{ ph.alt | escape }}">{% endfor %}
           </div>
           <figcaption>{{ photo_set.caption }}</figcaption>
         </figure>

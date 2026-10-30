@@ -26,7 +26,7 @@ layout: base
       <div class="guide-cover-actions">
         <a class="guide-btn guide-btn--light" href="{{ first_chapter.url | relative_url }}">Start reading <span aria-hidden="true">&rarr;</span></a>
         <a class="guide-btn guide-btn--outline-light" href="{{ '/assets/files/BESTEPS_Guide_Content.pdf' | relative_url }}" target="_blank" rel="noopener">
-          <i class="fas fa-download" aria-hidden="true"></i> Download PDF
+          {% include guide-icon.html name="download" %} Download PDF
         </a>
       </div>
     </div>
@@ -34,7 +34,7 @@ layout: base
 </section>
 
 
-<div class="guide-home">
+<div class="guide-home" id="guide-text" tabindex="-1">
   <section class="guide-home-intro guide-prose">
     {{ g.blurb | split: "</p>" | first }}</p>
   </section>
@@ -84,7 +84,7 @@ layout: base
     <p class="guide-cite-style">American Economic Association (AEA) style</p>
     <p class="guide-cite-text" id="guide-citation">Chesa-Llorens, Anna, and Mengwei Lin, eds. 2026. <em>The BESTEPS Guide: 7 Lessons towards Effective Economics PhD Research</em>. Barcelona: University of Barcelona School of Economics. https://diposit.ub.edu/items/97432c44-013c-45d3-917b-aa87467f216d.</p>
     <button type="button" class="guide-btn guide-btn--ghost" data-guide-copy="#guide-citation">
-      <i class="far fa-copy" aria-hidden="true"></i> <span>Copy citation</span>
+      {% include guide-icon.html name="copy" %} <span>Copy citation</span>
     </button>
 
     <p class="guide-cite-style">BibTeX</p>
@@ -97,7 +97,7 @@ layout: base
   url       = {https://diposit.ub.edu/items/97432c44-013c-45d3-917b-aa87467f216d}
 }</pre>
     <button type="button" class="guide-btn guide-btn--ghost" data-guide-copy="#guide-bibtex">
-      <i class="far fa-copy" aria-hidden="true"></i> <span>Copy BibTeX</span>
+      {% include guide-icon.html name="copy" %} <span>Copy BibTeX</span>
     </button>
     <p class="guide-license">
       Licensed under <a href="https://creativecommons.org/licenses/by-nd/4.0/" target="_blank" rel="noopener license">Creative Commons Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)</a>.

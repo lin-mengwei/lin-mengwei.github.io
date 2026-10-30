@@ -1,17 +1,21 @@
 // ======================
 // The BESTEPS Guide web edition (/besteps/guide/)
 // Everything is scoped under body#guide so no other page changes.
-// Colours follow the book cover (UBSE blue), not the site's green.
+// Colours follow the book cover (UBSE blue). All colours are CSS custom properties so the reader can switch
+// between the Day, Sepia and Night themes (html[data-guide-theme], set before first paint in _includes/head.html).
 // ======================
 
-$ubse: #005A8B;
-$ubse-dark: #003f63;
-$ubse-tint: #eef4f8;
-$ubse-tint-2: #f6f9fb;
-$guide-line: #e1e9ef;
-$guide-ink: #1d2a33;
-$guide-text: #30393f;
-$guide-muted: #5d6a73;
+$ubse-brand: #005A8B;            // the cover band and its buttons keep the brand blue in every theme
+$ubse: var(--g-accent);
+$ubse-dark: var(--g-accent-strong);
+$ubse-tint: var(--g-tint);
+$ubse-tint-2: var(--g-tint-2);
+$guide-line: var(--g-line);
+$guide-ink: var(--g-ink);
+$guide-text: var(--g-text);
+$guide-muted: var(--g-muted);
+$guide-faint: var(--g-faint);
+$guide-surface: var(--g-surface);
 $guide-serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
 $guide-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
@@ -28,9 +32,84 @@ $bp-phone: 768px;
 // can leave a freshly loaded page at the top, so guide pages jump instantly.
 html:has(body#guide) { overflow-x: clip; scroll-behavior: auto !important; }
 
+// ---------- themes (values from the approved mockup) ----------
+// Day is the default and also what readers without JavaScript get, unless their system is dark.
+@mixin guide-day {
+  --g-bg: #ffffff; --g-surface: #ffffff; --g-text: #30393f; --g-ink: #1d2a33; --g-muted: #5d6a73; --g-faint: #616f79;
+  --g-accent: #005A8B; --g-accent-strong: #003f63; --g-accent-35: rgba(0, 90, 139, 0.35); --g-accent-45: rgba(0, 90, 139, 0.45);
+  --g-tint: #eef4f8; --g-tint-2: #f6f9fb; --g-line: #e1e9ef; --g-line-strong: #d3e0e8; --g-input-border: #cddbe5;
+  --g-bar-from: #e4edf3; --g-bar-to: #f1f6f9; --g-code-bg: #f6f8fa; --g-code-border: #e1e6ea; --g-code-text: #24292f;
+  --g-icode-bg: #eef3f6; --g-icode-text: #12384f; --g-thumb: #c3d2dc; --g-matter: #9fb6c5;
+  --g-shadow: rgba(0, 90, 139, 0.13); --g-shadow-strong: rgba(0, 0, 0, 0.14); --g-mark: rgba(0, 90, 139, 0.14);
+  --g-btn-bg: #005A8B; --g-btn-text: #ffffff; --g-btn-hover: #003f63; --g-figure-card: transparent; --g-figure-pad: 0; --g-flow-card: transparent; --g-photo: 1;
+  color-scheme: light;
+}
+@mixin guide-sepia {
+  --g-bg: #f6efdf; --g-surface: #fbf6ea; --g-text: #3f3428; --g-ink: #2e251b; --g-muted: #6e6050; --g-faint: #71614b;
+  --g-accent: #6b4a1f; --g-accent-strong: #4d3412; --g-accent-35: rgba(107, 74, 31, 0.35); --g-accent-45: rgba(107, 74, 31, 0.45);
+  --g-tint: #efe4cb; --g-tint-2: #f1e8d4; --g-line: #e3d6bb; --g-line-strong: #d8c8a6; --g-input-border: #d8c8a6;
+  --g-bar-from: #ece1c6; --g-bar-to: #f1e8d4; --g-code-bg: #efe6d2; --g-code-border: #e0d3b6; --g-code-text: #3f3428;
+  --g-icode-bg: #ece2cb; --g-icode-text: #4d3412; --g-thumb: #cdbd9b; --g-matter: #c9b48c;
+  --g-shadow: rgba(107, 74, 31, 0.14); --g-shadow-strong: rgba(60, 40, 10, 0.16); --g-mark: rgba(107, 74, 31, 0.18);
+  --g-btn-bg: #6b4a1f; --g-btn-text: #ffffff; --g-btn-hover: #4d3412; --g-figure-card: #fffdf7; --g-figure-pad: 0.5rem; --g-flow-card: #fffdf7; --g-photo: 1;
+  color-scheme: light;
+}
+@mixin guide-night {
+  --g-bg: #1b1f27; --g-surface: #232933; --g-text: #d6dbe1; --g-ink: #eef1f4; --g-muted: #9aa4ae; --g-faint: #8a949f;
+  --g-accent: #7cb8dd; --g-accent-strong: #a9d1ea; --g-accent-35: rgba(124, 184, 221, 0.35); --g-accent-45: rgba(124, 184, 221, 0.5);
+  --g-tint: #232a35; --g-tint-2: #1f242d; --g-line: #2e3540; --g-line-strong: #3a4350; --g-input-border: #3a4350;
+  --g-bar-from: #20262f; --g-bar-to: #1f242d; --g-code-bg: #232933; --g-code-border: #323a46; --g-code-text: #d6dbe1;
+  --g-icode-bg: #2a313c; --g-icode-text: #cfe3f1; --g-thumb: #4a5462; --g-matter: #4f6b80;
+  --g-shadow: rgba(0, 0, 0, 0.4); --g-shadow-strong: rgba(0, 0, 0, 0.5); --g-mark: rgba(124, 184, 221, 0.28);
+  --g-btn-bg: #2f6f99; --g-btn-text: #ffffff; --g-btn-hover: #3b84b5; --g-figure-card: #f4f6f8; --g-figure-pad: 0.5rem; --g-flow-card: #f4f6f8; --g-photo: 0.85;
+  color-scheme: dark;
+}
+// The contents sidebar as a slide-in drawer: on phones, and in focus mode on wider screens.
+// Included inside body#guide.
+@mixin guide-drawer {
+  .guide-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    width: 86vw;
+    max-width: 340px;
+    z-index: 60;
+    transform: translateX(-105%);
+    transition: transform 0.25s ease;
+    box-shadow: 8px 0 28px var(--g-shadow-strong);
+    padding-top: 1rem;
+    visibility: hidden;
+  }
+  &.guide-drawer-open .guide-sidebar { transform: none; visibility: visible; }
+  &.guide-drawer-open { overflow: hidden; }
+  .guide-drawer-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8rem; }
+  .guide-drawer-close { background: none; border: 0; font-size: 1.8rem; line-height: 1; color: $guide-muted; cursor: pointer; padding: 0 0.25rem; }
+  .guide-drawer-search { display: block; margin-bottom: 0.5rem;
+    .guide-search-input { width: 100%; }
+    .guide-search-results { position: static; width: 100%; box-shadow: none; margin-top: 0.4rem; max-height: none; } }
+  .guide-drawer-pdf { display: inline-flex; margin-top: 1.5rem; }
+}
+
+body#guide { @include guide-day; }
+html[data-guide-theme="sepia"] body#guide { @include guide-sepia; }
+html[data-guide-theme="night"] body#guide { @include guide-night; }
+// without JavaScript, follow the system
+@media (prefers-color-scheme: dark) { html:not([data-guide-theme]) body#guide { @include guide-night; } }
+// the page background behind the body (overscroll, short pages)
+html[data-guide-theme="sepia"] { background: #f6efdf; }
+html[data-guide-theme="night"] { background: #1b1f27; }
+
+// ---------- text size steps (A- / A+) and focus mode ----------
+body#guide { --g-size: 1; }
+html[data-guide-size="0"] body#guide { --g-size: 0.9; }
+html[data-guide-size="2"] body#guide { --g-size: 1.12; }
+html[data-guide-size="3"] body#guide { --g-size: 1.25; }
+
 body#guide {
   overflow-x: clip;
-  background: #fff;
+  background: var(--g-bg);
   color: $guide-text;
 
   // ---------- shared pieces ----------
@@ -66,9 +145,9 @@ body#guide {
     text-decoration: none;
     transition: background 0.15s, color 0.15s, border-color 0.15s;
   }
-  .guide-btn--solid { background: $ubse; color: #fff; &:hover { background: $ubse-dark; color: #fff; } }
-  .guide-btn--ghost { background: #fff; color: $ubse; border-color: rgba($ubse, 0.45); &:hover { border-color: $ubse; background: $ubse-tint; } }
-  .guide-btn--light { background: #fff; color: $ubse; &:hover { background: $ubse-tint; color: $ubse-dark; } }
+  .guide-btn--solid { background: var(--g-btn-bg); color: var(--g-btn-text); &:hover { background: var(--g-btn-hover); color: var(--g-btn-text); } }
+  .guide-btn--ghost { background: $guide-surface; color: $ubse; border-color: var(--g-accent-45); &:hover { border-color: $ubse; background: $ubse-tint; } }
+  .guide-btn--light { background: #fff; color: $ubse-brand; &:hover { background: #eef4f8; color: #003f63; } }
   .guide-btn--outline-light { background: transparent; color: #fff; border-color: rgba(#fff, 0.75); &:hover { background: rgba(#fff, 0.12); color: #fff; } }
 
   // ---------- guide bar ----------
@@ -76,7 +155,7 @@ body#guide {
     position: sticky;
     top: $navbar-h;
     z-index: 25;
-    background: linear-gradient(to bottom, #e4edf3, #f1f6f9);
+    background: linear-gradient(to bottom, var(--g-bar-from), var(--g-bar-to));
     border-bottom: 1px solid $guide-line;
   }
   .guide-bar-inner {
@@ -111,19 +190,19 @@ body#guide {
 
   // ---------- search ----------
   .guide-search { position: relative; }
-  .guide-search-icon { position: absolute; left: 0.65rem; top: 50%; transform: translateY(-50%); font-size: 0.8rem; color: $guide-muted; pointer-events: none; }
+  .guide-search-icon { position: absolute; left: 0.65rem; top: 50%; transform: translateY(-50%); display: flex; font-size: 0.85rem; color: $guide-muted; pointer-events: none; }
   .guide-search-input {
     width: 15rem;
     max-width: 100%;
     height: 2.1rem;
     padding: 0 0.7rem 0 2rem;
-    border: 1px solid #cddbe5;
+    border: 1px solid var(--g-input-border);
     border-radius: 6px;
-    background: #fff;
+    background: $guide-surface;
     font: inherit;
     font-size: 0.85rem;
     color: $guide-ink;
-    &:focus { outline: 2px solid rgba($ubse, 0.35); border-color: $ubse; }
+    &:focus { outline: 2px solid var(--g-accent-35); border-color: $ubse; }
   }
   .guide-search-results {
     position: absolute;
@@ -133,10 +212,10 @@ body#guide {
     max-width: 90vw;
     max-height: 65vh;
     overflow-y: auto;
-    background: #fff;
+    background: $guide-surface;
     border: 1px solid $guide-line;
     border-radius: 8px;
-    box-shadow: 0 12px 32px rgba(#000, 0.14);
+    box-shadow: 0 12px 32px var(--g-shadow-strong);
     z-index: 45;
     padding: 0.35rem;
     a { display: block; padding: 0.6rem 0.7rem; border-radius: 6px; color: $guide-text; text-decoration: none;
@@ -144,7 +223,7 @@ body#guide {
     .r-where { display: block; font-size: 0.75rem; font-weight: 600; color: $ubse; margin-bottom: 0.15rem; }
     .r-section { display: block; font-family: $guide-serif; font-weight: 600; font-size: 0.98rem; color: $guide-ink; }
     .r-snip { display: block; font-size: 0.8rem; color: $guide-muted; line-height: 1.45; margin-top: 0.15rem; }
-    mark { background: rgba($ubse, 0.14); color: inherit; padding: 0 0.1em; border-radius: 2px; }
+    mark { background: var(--g-mark); color: inherit; padding: 0 0.1em; border-radius: 2px; }
     .r-empty { padding: 0.8rem; font-size: 0.85rem; color: $guide-muted; }
   }
 
@@ -178,36 +257,36 @@ body#guide {
     font-weight: 600;
     padding: 0.35rem 0.6rem;
     border-left: 3px solid transparent;
-    &.is-current { color: $ubse; border-left-color: $ubse; background: #fff; }
+    &.is-current { color: $ubse; border-left-color: $ubse; background: $guide-surface; }
   }
   .guide-toc-part {
     font-size: 0.7rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #8696a1;
+    color: $guide-faint;
     font-weight: 600;
     margin: 1.3rem 0 0.4rem 0.6rem;
   }
-  a.guide-toc-part--link { display: block; color: #8696a1; padding: 0.15rem 0.6rem; margin-left: 0; border-left: 3px solid transparent;
+  a.guide-toc-part--link { display: block; color: $guide-faint; padding: 0.15rem 0.6rem; margin-left: 0; border-left: 3px solid transparent;
     &:hover { color: $ubse; }
-    &.is-current { color: $ubse; border-left-color: $ubse; background: #fff; } }
+    &.is-current { color: $ubse; border-left-color: $ubse; background: $guide-surface; } }
   .guide-toc-item > a {
     padding: 0.4rem 0.6rem;
     border-left: 3px solid transparent;
     border-radius: 0 4px 4px 0;
-    &:hover { background: #fff; }
+    &:hover { background: $guide-surface; }
   }
   .guide-toc-label { display: block; font-size: 0.72rem; font-weight: 600; color: $guide-muted; letter-spacing: 0.02em; }
   .guide-toc-title { display: block; }
   .guide-toc-item.is-current > a {
-    background: #fff;
+    background: $guide-surface;
     border-left-color: $ubse;
     .guide-toc-label, .guide-toc-title { color: $ubse; }
     .guide-toc-title { font-weight: 600; }
   }
   .guide-toc-sections {
     margin: 0.2rem 0 0.5rem 0.95rem !important;
-    border-left: 1px solid #d3e0e8;
+    border-left: 1px solid var(--g-line-strong);
     a { padding: 0.25rem 0.5rem 0.25rem 0.8rem; font-size: 0.8rem; color: $guide-muted;
       &:hover { color: $ubse; }
       &.is-active { color: $ubse; font-weight: 600; } }
@@ -215,7 +294,7 @@ body#guide {
   .guide-toc-matter .guide-toc-title { color: $guide-muted; }
 
   .guide-main { min-width: 0; padding: 2.75rem 3rem 4rem; }
-  .guide-article { max-width: 46rem; margin: 0 auto; }
+  .guide-article { max-width: calc(40rem * var(--g-size)); margin: 0 auto; }
 
   .guide-onpage {
     position: sticky;
@@ -231,7 +310,7 @@ body#guide {
       &:hover { color: $ubse; }
       &.is-active { color: $ubse; border-left-color: $ubse; font-weight: 600; } }
   }
-  .guide-onpage-title { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: #8696a1; font-weight: 600; margin-bottom: 0.6rem; }
+  .guide-onpage-title { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: $guide-faint; font-weight: 600; margin-bottom: 0.6rem; }
 
   // ---------- chapter head ----------
   .guide-head { margin-bottom: 2rem; }
@@ -249,15 +328,16 @@ body#guide {
   // lecture photos keep the poster's framing (cut corners are transparent in the image itself)
   .guide-photo { margin: 1.8rem 0 0;
     figcaption { font-size: 0.82rem; color: $guide-muted; margin-top: 0.55rem; } }
-  .guide-photo-row img { display: block; width: 100%; height: auto; }
+  .guide-photo-row img { display: block; width: 100%; height: auto; filter: brightness(var(--g-photo)); transition: filter 0.2s;
+    &:hover { filter: none; } }
   .guide-readtime { color: $guide-muted; white-space: nowrap;
-    i { margin-right: 0.2rem; } }
+    .guide-icon { margin-right: 0.2rem; } }
   .guide-lecturers { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; font-size: 0.95rem; color: $guide-muted; margin: 0;
     strong { color: $guide-ink; font-weight: 600; } }
 
   // ---------- chapter body ----------
   .guide-body, .guide-prose {
-    font-size: 1.02rem;
+    font-size: calc(1.0625rem * var(--g-size));
     line-height: 1.75;
     color: $guide-text;
     overflow-wrap: break-word;
@@ -265,7 +345,7 @@ body#guide {
     p { margin: 0 0 1.1rem; }
     strong { font-weight: 600; color: $guide-ink; }
     em { font-style: italic; }
-    a { color: $ubse; text-decoration: underline; text-decoration-color: rgba($ubse, 0.35); text-underline-offset: 2px;
+    a { color: $ubse; text-decoration: underline; text-decoration-color: var(--g-accent-35); text-underline-offset: 2px;
       &:hover { text-decoration-color: $ubse; } }
     ul, ol { margin: 0 0 1.1rem 1.4rem; padding-left: 0.3rem; }
     ul { list-style: disc; }
@@ -275,7 +355,7 @@ body#guide {
     li > p { margin: 0 0 0.4rem; }
     li > ul, li > ol { margin-top: 0.3rem; margin-bottom: 0.5rem; }
     sup { font-size: 0.72em; vertical-align: super; line-height: 0; }
-    code { font-family: $guide-mono; font-size: 0.86em; background: #eef3f6; color: #12384f; padding: 0.1em 0.35em; border-radius: 4px; }
+    code { font-family: $guide-mono; font-size: 0.86em; background: var(--g-icode-bg); color: var(--g-icode-text); padding: 0.1em 0.35em; border-radius: 4px; }
   }
 
   .guide-body {
@@ -288,12 +368,13 @@ body#guide {
     blockquote { margin: 1.6rem 0; padding: 1rem 1.25rem; border-left: 4px solid $ubse; background: $ubse-tint; border-radius: 0 6px 6px 0;
       p:last-child { margin-bottom: 0; } }
 
-    .pre-scroll { overflow-x: auto; margin: 1.4rem 0; background: #f6f8fa; border: 1px solid #e1e6ea; border-radius: 6px; }
-    pre { margin: 0; padding: 1rem 1.1rem; background: none; font-family: $guide-mono; font-size: 0.78rem; line-height: 1.45; white-space: pre; color: #24292f;
+    .pre-scroll { overflow-x: auto; margin: 1.4rem 0; background: var(--g-code-bg); border: 1px solid var(--g-code-border); border-radius: 6px; }
+    pre { margin: 0; padding: 1rem 1.1rem; background: none; font-family: $guide-mono; font-size: 0.78rem; line-height: 1.45; white-space: pre; color: var(--g-code-text);
       code { background: none; padding: 0; font-size: inherit; color: inherit; } }
 
     figure { margin: 2rem auto; text-align: center; scroll-margin-top: 4.5rem; }
     img { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+    figure img, .subfigure img { background: var(--g-figure-card); padding: var(--g-figure-pad); border-radius: 4px; }
     .fig-full { width: 100%; }
     .fig-wide { width: 72%; }
     .fig-half { width: 52%; }
@@ -311,10 +392,10 @@ body#guide {
     // thin, light scrollbars inside the scroll boxes (the site-wide ones are thick and dark)
     .pre-scroll, .table-scroll {
       scrollbar-width: thin;
-      scrollbar-color: #c3d2dc transparent;
+      scrollbar-color: var(--g-thumb) transparent;
       &::-webkit-scrollbar { height: 6px !important; width: 6px !important; }
       &::-webkit-scrollbar-track { background: transparent !important; }
-      &::-webkit-scrollbar-thumb { background: #c3d2dc !important; border-radius: 3px; }
+      &::-webkit-scrollbar-thumb { background: var(--g-thumb) !important; border-radius: 3px; }
     }
     td { padding: 0.55rem 0.75rem; border-bottom: 1px solid $guide-line; vertical-align: top; }
 
@@ -339,7 +420,7 @@ body#guide {
     color: $guide-text;
     text-decoration: none;
     transition: border-color 0.15s, box-shadow 0.15s;
-    &:hover { border-color: $ubse; box-shadow: 0 4px 14px rgba($ubse, 0.12); }
+    &:hover { border-color: $ubse; box-shadow: 0 4px 14px var(--g-shadow); }
   }
   .guide-pager-card--next { text-align: right; }
   .guide-pager-dir { display: block; font-size: 0.78rem; color: $guide-muted; margin-bottom: 0.2rem; }
@@ -363,7 +444,7 @@ body#guide {
   }
 
   // ---------- home page ----------
-  .guide-cover { background: $ubse; color: #fff; }
+  .guide-cover { background: $ubse-brand; color: #fff; }
   .guide-cover-inner {
     max-width: 1100px;
     margin: 0 auto;
@@ -395,16 +476,17 @@ body#guide {
   .guide-flow { margin-top: 2.5rem; }
   .guide-flow-hint { font-size: 0.9rem; color: $guide-muted; margin: -0.4rem 0 1rem; }
   .guide-flow-map { position: relative; max-width: 46rem; margin: 0 auto; border: 1px solid $guide-line; border-radius: 8px; padding: 0; overflow: hidden;
+    background: var(--g-flow-card);
     img, .guide-flow-svg { display: block; width: 100%; height: auto; } }
   // links inside the diagram SVG (scripts/guide_flow.py); label and arrow of a lecture light up together
   .guide-flow-link { cursor: pointer; outline: none;
     foreignObject div { transition: color 0.15s; }
     path { transition: fill 0.15s, stroke 0.15s; }
-    &:focus-visible rect { stroke: $ubse; stroke-width: 2; stroke-dasharray: 4 3; } }
+    &:focus-visible rect { stroke: $ubse-brand; stroke-width: 2; stroke-dasharray: 4 3; } }
   .guide-flow-link.is-hover, .guide-flow-link:hover, .guide-flow-link:focus-visible {
-    foreignObject div { color: $ubse-dark !important; text-decoration: underline; text-underline-offset: 3px; }
-    path[style*="218, 232, 252"] { fill: #b3cde8 !important; stroke: $ubse !important; }
-    path[style*="var(--ge-adaptive-fg"] { stroke: $ubse !important; stroke-width: 2; } }
+    foreignObject div { color: #003f63 !important; text-decoration: underline; text-underline-offset: 3px; }
+    path[style*="218, 232, 252"] { fill: #b3cde8 !important; stroke: $ubse-brand !important; }
+    path[style*="var(--ge-adaptive-fg"] { stroke: $ubse-brand !important; stroke-width: 2; } }
 
 
   .guide-volume-link { color: inherit; text-decoration: none;
@@ -426,25 +508,32 @@ body#guide {
     color: $guide-text;
     text-decoration: none;
     transition: box-shadow 0.15s, transform 0.15s;
-    &:hover { box-shadow: 0 8px 24px rgba($ubse, 0.14); transform: translateY(-2px); }
+    &:hover { box-shadow: 0 8px 24px var(--g-shadow); transform: translateY(-2px); }
   }
   .guide-card-label { display: flex; justify-content: space-between; gap: 0.5rem; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: $ubse; }
   .guide-card-time { font-weight: 500; letter-spacing: 0.02em; text-transform: none; color: $guide-muted; white-space: nowrap; }
   .guide-card-title { font-family: $guide-serif; font-size: 1.15rem; font-weight: 600; color: $guide-ink; line-height: 1.3; }
   .guide-card-people { font-size: 0.84rem; color: $guide-muted; margin-top: auto; }
   .guide-card-desc { font-size: 0.82rem; color: $guide-muted; line-height: 1.5; }
-  .guide-card--matter { border-top-color: #9fb6c5; }
+  .guide-card--matter { border-top-color: var(--g-matter); }
 
   .guide-ack, .guide-cite { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid $guide-line; }
   .guide-cite-text { background: $ubse-tint; border-left: 4px solid $ubse; padding: 1rem 1.2rem; border-radius: 0 6px 6px 0; font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.9rem; }
   .guide-cite-text { overflow-wrap: anywhere; }
   .guide-cite-style { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: $guide-muted; margin: 1.4rem 0 0.5rem; }
-  .guide-cite-bibtex { font-family: $guide-mono; font-size: 0.8rem; line-height: 1.5; color: #24292f; background: #f6f8fa;
-    border: 1px solid #e1e6ea; border-radius: 6px; padding: 0.9rem 1rem; margin: 0 0 0.9rem; overflow-x: auto; white-space: pre; }
+  .guide-cite-bibtex { font-family: $guide-mono; font-size: 0.8rem; line-height: 1.5; color: var(--g-code-text); background: var(--g-code-bg);
+    border: 1px solid var(--g-code-border); border-radius: 6px; padding: 0.9rem 1rem; margin: 0 0 0.9rem; overflow-x: auto; white-space: pre; }
   .guide-license { font-size: 0.85rem; color: $guide-muted; margin-top: 1.6rem; a { color: $ubse; } }
 
   .guide-scrim { position: fixed; inset: 0; background: rgba(#000, 0.4); z-index: 55; }
   .guide-scrim[hidden] { display: none; }
+
+  // ---------- skip link, icons ----------
+  .guide-skip { position: absolute; left: 0.75rem; top: -3rem; z-index: 100; padding: 0.5rem 0.9rem; border-radius: 6px;
+    background: var(--g-btn-bg); color: var(--g-btn-text); font-weight: 600; text-decoration: none;
+    &:focus { top: 0.6rem; } }
+  .guide-main:focus { outline: none; }
+  .guide-icon { display: inline-block; flex: none; vertical-align: -0.125em; }
 
   // ---------- tablet: hide "On this page" ----------
   @media screen and (max-width: $bp-desktop - 1px) {
@@ -463,32 +552,10 @@ body#guide {
     .guide-drawer-head .guide-wordmark { display: inline; }
 
     .guide-shell { display: block; }
-    .guide-sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      height: auto;
-      width: 86vw;
-      max-width: 340px;
-      z-index: 60;
-      transform: translateX(-105%);
-      transition: transform 0.25s ease;
-      box-shadow: 8px 0 28px rgba(#000, 0.2);
-      padding-top: 1rem;
-      visibility: hidden;
-    }
-    &.guide-drawer-open .guide-sidebar { transform: none; visibility: visible; }
-    &.guide-drawer-open { overflow: hidden; }
-    .guide-drawer-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8rem; }
-    .guide-drawer-close { background: none; border: 0; font-size: 1.8rem; line-height: 1; color: $guide-muted; cursor: pointer; padding: 0 0.25rem; }
-    .guide-drawer-search { display: block; margin-bottom: 0.5rem;
-      .guide-search-input { width: 100%; }
-      .guide-search-results { position: static; width: 100%; box-shadow: none; margin-top: 0.4rem; max-height: none; } }
-    .guide-drawer-pdf { display: inline-flex; margin-top: 1.5rem; }
+    @include guide-drawer;
 
     .guide-main { padding: 1.75rem 1rem 3rem; }
-    .guide-body, .guide-prose { font-size: 1rem; line-height: 1.7; }
+    .guide-body, .guide-prose { font-size: calc(1rem * var(--g-size)); line-height: 1.7; }
     .guide-body {
       h2 { font-size: 1.4rem; }
       h3 { font-size: 1.15rem; }
@@ -514,5 +581,16 @@ body#guide {
     .guide-volume-title { font-size: 1.55rem; }
     .guide-cover-editors, .guide-cover-lecturers { font-size: 0.95rem; }
     .guide-cover-lecturers { column-gap: 1.25rem; }
+  }
+}
+
+// ---------- focus mode: only the text column (the contents open as a drawer) ----------
+@media screen and (min-width: $bp-phone) {
+  html[data-guide-focus="on"] body#guide {
+    .guide-shell { display: block; }
+    .guide-onpage { display: none; }
+    .guide-bar-contents { display: inline-flex; }
+    .guide-drawer-head .guide-wordmark { display: inline; }
+    @include guide-drawer;
   }
 }

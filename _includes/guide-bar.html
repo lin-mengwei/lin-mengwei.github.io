@@ -1,14 +1,14 @@
 <div class="guide-bar">
   <div class="guide-bar-inner">
     <button type="button" class="guide-bar-contents" data-guide-drawer-open aria-controls="guide-drawer" aria-expanded="false">
-      <i class="fas fa-bars" aria-hidden="true"></i> Contents
+      {% include guide-icon.html name="bars" %} Contents
     </button>
     {% if page.short_title %}<span class="guide-bar-current">{{ page.short_title }}</span>{% endif %}
     <a class="guide-wordmark" href="{{ '/besteps/guide/' | relative_url }}">The BESTEPS Guide</a>
     <div class="guide-bar-actions">
       {% include guide-search.html %}
       <a class="guide-btn guide-btn--solid guide-bar-pdf" href="{{ '/assets/files/BESTEPS_Guide_Content.pdf' | relative_url }}" target="_blank" rel="noopener">
-        <i class="fas fa-download" aria-hidden="true"></i> PDF
+        {% include guide-icon.html name="download" %} PDF
       </a>
       {% if guide_next %}<a class="guide-bar-next" href="{{ guide_next.url | relative_url }}">Next <span aria-hidden="true">&rarr;</span></a>{% endif %}
     </div>

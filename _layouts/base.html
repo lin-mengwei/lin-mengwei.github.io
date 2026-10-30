@@ -14,7 +14,7 @@ layout: compress
 
 {% comment %} The BESTEPS Guide pages (body_id: guide) read as a book of their own: no site navbar or footer. {% endcomment %}
 <body{% unless page.body_id == 'guide' %} class="has-navbar-fixed-top"{% endunless %}{% if page.body_id %} id="{{ page.body_id }}"{% endif %}>
-  {% unless page.body_id == 'guide' %}{% include navbar.html %}{% endunless %}
+  {% if page.body_id == 'guide' %}<a class="guide-skip" href="#guide-text">Skip to text</a>{% else %}{% include navbar.html %}{% endif %}
 
   {{ content }}
 

@@ -1,0 +1,16 @@
+{% comment %} Inline icons for The BESTEPS Guide (no icon font). Usage: {% include guide-icon.html name="search" %}.
+Each is a 24×24 stroke drawing that takes the text colour and is hidden from screen readers. {% endcomment %}
+<svg class="guide-icon guide-icon--{{ include.name }}" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+{%- case include.name -%}
+{%- when "search" -%}<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>
+{%- when "download" -%}<path d="M12 4v11M7 10l5 5 5-5M5 20h14"/>
+{%- when "bars" -%}<path d="M4 6h16M4 12h16M4 18h16"/>
+{%- when "clock" -%}<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>
+{%- when "copy" -%}<rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h8"/>
+{%- when "link" -%}<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>
+{%- when "close" -%}<path d="M6 6l12 12M18 6L6 18"/>
+{%- when "expand" -%}<path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/>
+{%- when "type" -%}<path d="M3 18l4.5-12L12 18M4.6 14h5.8M14 18l3.5-8 3.5 8M15 15.5h5"/>
+{%- when "check" -%}<path d="M5 12.5l4.5 4.5L19 7"/>
+{%- endcase -%}
+</svg>
