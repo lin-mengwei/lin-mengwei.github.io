@@ -438,7 +438,7 @@
       chip.className = 'guide-progress-chip';
       chip.setAttribute('aria-hidden', 'true');
       document.body.appendChild(chip);
-      var chipTimer = null, lastText = '';
+      var chipTimer = null, lastText = '', startDone = null, opened = Date.now();
 
       var progressText = function () {
         var barEl = document.querySelector('.guide-bar');
@@ -450,11 +450,14 @@
         var span = end - r.top - (window.innerHeight - top);
         var done = span > 0 ? Math.min(1, Math.max(0, (top - r.top) / span)) : 1;
         var left = total * (1 - done);
-        if (done >= 0.98) noteRead(main.getAttribute('data-guide-slug'));
-        return Math.round(done * 100) + '%' + (done >= 0.995 ? '' : ' · ' + (left < 1 ? '<1' : Math.ceil(left)) + ' min left');
+        return { done: done, text: Math.round(done * 100) + '%' + (done >= 0.995 ? '' : ' · ' + (left < 1 ? '<1' : Math.ceil(left)) + ' min left') };
       };
       var showProgress = function (fromScroll) {
-        var text = progressText();
+        var pr = progressText(), text = pr.text;
+        if (startDone === null) startDone = pr.done;
+        // "read" means scrolled to the end from the first half, after at least a minute on the page:
+        // landing on #notes, a footnote or the last section does not count
+        if (fromScroll && pr.done >= 0.98 && startDone < 0.5 && Date.now() - opened > 60000) noteRead(main.getAttribute('data-guide-slug'));
         var inColumn = column && getComputedStyle(column).display !== 'none';
         if (text !== lastText) { line.textContent = chip.textContent = text; lastText = text; }
         if (inColumn || !fromScroll) return;
@@ -493,7 +496,11 @@
     var excerpt = function (h) {
       var text = '', el = h.nextElementSibling;
       while (el && text.length < 260 && !/^H[1-3]$/.test(el.tagName)) {
-        if (/^(P|UL|OL|BLOCKQUOTE)$/.test(el.tagName)) text += ' ' + el.textContent;
+        if (/^(P|UL|OL|BLOCKQUOTE)$/.test(el.tagName)) {
+          var cl = el.cloneNode(true);
+          cl.querySelectorAll('.guide-tick, .guide-anchor, a.footnote-ref').forEach(function (n) { n.remove(); });
+          text += ' ' + cl.textContent;
+        }
         el = el.nextElementSibling;
       }
       text = text.replace(/\s+/g, ' ').trim();
@@ -535,7 +542,7 @@
     var closeRef = function () { clearTimeout(refTimer); if (refPop) refPop.remove(); refPop = null; refFrom = null; };
     var placeRef = function () {
       if (!refPop || !refFrom) return;
-      if (phone.matches && !hover.matches) { refPop.style.left = refPop.style.top = ''; return; }
+      if (phone.matches) { refPop.style.left = refPop.style.top = ''; return; }   // phones: a sheet at the bottom
       var r = refFrom.getBoundingClientRect(), w = refPop.offsetWidth, hgt = refPop.offsetHeight;
       var left = Math.min(Math.max(12, r.left + r.width / 2 - w / 2), document.documentElement.clientWidth - w - 12);
       var top = r.bottom + 10 + hgt > window.innerHeight - 12 && r.top - hgt - 10 > 60 ? r.top - hgt - 10 : r.bottom + 10;
@@ -546,7 +553,7 @@
       targetDoc(a).then(function (doc) {
         if (refFrom !== a) return;               // the pointer has moved on
         var card = buildPreview(a, doc);
-        if (!card) { refFrom = null; return; }
+        if (!card) { refFrom = null; if (touch) location.href = a.href; return; }
         refPop = document.createElement('div');
         refPop.className = 'guide-note-pop guide-ref-pop' + (touch ? ' is-touch' : '');
         if (touch) {
@@ -569,7 +576,10 @@
         document.body.appendChild(refPop);
         placeRef();
         refPop.querySelectorAll('img').forEach(function (i) { i.addEventListener('load', placeRef); });
-      }, function () { refFrom = null; });
+      }, function () {
+        refFrom = null; delete pages[a.pathname];
+        if (touch) location.href = a.href;
+      });
     };
     body.querySelectorAll('a[href]').forEach(function (a) {
       if (!isRef(a)) return;
@@ -597,7 +607,8 @@
 
     // the way back
     var back = null, backY = null;
-    var hideBack = function () { if (back) back.classList.remove('is-shown'); backY = null; };
+    var backTimer = null;
+    var hideBack = function () { clearTimeout(backTimer); if (back) back.classList.remove('is-shown'); backY = null; };
     function rememberSpot() {
       backY = window.scrollY;
       if (!back) {
@@ -608,7 +619,8 @@
         back.addEventListener('click', function () { var y = backY; hideBack(); if (y !== null) window.scrollTo(0, y); });
         document.body.appendChild(back);
       }
-      setTimeout(function () { back.classList.add('is-shown'); }, 50);
+      clearTimeout(backTimer);
+      backTimer = setTimeout(function () { if (backY !== null) back.classList.add('is-shown'); }, 50);
     }
     window.addEventListener('scroll', function () {
       if (backY !== null && Math.abs(window.scrollY - backY) < 150) hideBack();   // the reader went back by hand
@@ -648,7 +660,13 @@
       tick.className = 'guide-tick';
       tick.appendChild(makeTick(sectionOf(t) + ':exercise-' + m[1], 'Exercise ' + m[1] + ' done'));
       tick.appendChild(document.createTextNode('Done'));
-      t.parentNode.insertBefore(tick, t.nextSibling);
+      // after the title when it stands on its own line, otherwise at the end of the paragraph
+      var after = t;
+      while (after.nextSibling && after.nextSibling.nodeType === 1 && after.nextSibling.classList.contains('footnote-ref')) after = after.nextSibling;
+      var next = after.nextSibling;
+      while (next && next.nodeType === 3 && !next.textContent.trim()) next = next.nextSibling;
+      if (!next || next.nodeName === 'BR') after.parentNode.insertBefore(tick, after.nextSibling);
+      else t.closest('p').appendChild(tick);
     });
     body.querySelectorAll('ul, ol').forEach(function (list) {
       var items = Array.prototype.filter.call(list.children, function (li) { return li.tagName === 'LI'; });
@@ -709,7 +727,9 @@
     if (e.key === 'Escape') { if (viewer) closeViewer(true); else if (pop) closeNote(true); return; }
     if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || typing(e.target) || viewer || pop) return;
     // leave arrows to wide code blocks and tables (they scroll sideways), and to the panels and drawer
-    if (e.target.closest && e.target.closest('.pre-scroll, .table-scroll, [data-guide-settings], .guide-sidebar')) return;
+    if (e.target.closest && e.target.closest('.pre-scroll, .table-scroll, [data-guide-settings], .guide-sidebar, .guide-mynotes')) return;
+    var draft = document.querySelector('.guide-mynotes-input');
+    if (draft && draft.value.trim() && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) return;
     if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
       var link = document.querySelector(e.key === 'ArrowLeft' ? '.guide-pager-card--prev' : '.guide-pager-card--next');
       if (link) { e.preventDefault(); location.href = link.href; }

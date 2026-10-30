@@ -18,12 +18,13 @@
   var CLOSE = '<svg class="guide-icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18"/></svg>';
   var stored = true;
 
-  function all() {
-    try { var v = JSON.parse(localStorage.getItem(KEY) || '[]'); return Array.isArray(v) ? v : []; } catch (e) { stored = false; return memory; }
-  }
   var memory = [];
+  function all() {
+    if (!stored) return memory.slice();
+    try { var v = JSON.parse(localStorage.getItem(KEY) || '[]'); return Array.isArray(v) ? v : []; } catch (e) { stored = false; return memory.slice(); }
+  }
   function keep(list) {
-    memory = list;
+    memory = list.slice();
     try { localStorage.setItem(KEY, JSON.stringify(list)); } catch (e) { stored = false; }
   }
   function toast(text, action, onAction) { if (window.guideToast) window.guideToast(text, action, onAction); }
@@ -94,6 +95,7 @@
   function formSection() { return pinned || currentSection(); }
   function showAt() { at.textContent = (editing ? 'Editing note at: ' : 'At: ') + sectionName(formSection()); }
   function resetForm() {
+    try { sessionStorage.removeItem(DRAFT); } catch (e) { /* nothing kept */ }
     pinned = null; quote = null; editing = null;
     area.value = ''; quoteBox.hidden = true; quoteBox.textContent = '';
     saveBtn.textContent = 'Save note'; cancelBtn.hidden = true;
@@ -110,7 +112,11 @@
     quoteBox.hidden = false;
   }
 
-  area.addEventListener('input', function () { if (!pinned && area.value) { pinned = currentSection(); showAt(); } });
+  var DRAFT = 'besteps-guide:note-draft:' + slug;
+  area.addEventListener('input', function () {
+    if (!pinned && area.value) { pinned = currentSection(); showAt(); }
+    if (!editing) { try { if (area.value) sessionStorage.setItem(DRAFT, area.value); else sessionStorage.removeItem(DRAFT); } catch (e) { /* the draft lasts until the page is left */ } }
+  });
   area.addEventListener('keydown', function (e) {
     if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) { e.preventDefault(); saveNote(); }
   });
@@ -126,7 +132,7 @@
     } else {
       var s = quote ? quote.section : formSection();
       notes.push({ id: now.toString(36) + Math.random().toString(36).slice(2, 6), slug: slug, label: label, chapter: chapterTitle,
-                   url: location.pathname, section: s.id, sectionTitle: s.title, quote: quote ? quote.text : '', text: text,
+                   url: location.pathname, section: s.id, sectionTitle: s.title, place: placeOf(s.id), quote: quote ? quote.text : '', text: text,
                    created: now, updated: now });
     }
     keep(notes);
@@ -138,10 +144,11 @@
   cancelBtn.addEventListener('click', function () { resetForm(); render(); });
 
   /* ---------- this chapter's notes, in reading order ---------- */
-  function order(n) {
-    for (var i = 0; i < heads.length; i++) if (heads[i].id === n.section) return i + 1;
+  function placeOf(id) {
+    for (var i = 0; i < heads.length; i++) if (heads[i].id === id) return i + 1;
     return 0;
   }
+  function order(n) { return placeOf(n.section); }
   function when(t) { return new Date(t).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }); }
   function render() {
     var mine = all().filter(function (n) { return n.slug === slug; })
@@ -191,6 +198,7 @@
     area.focus({ preventScroll: true });
   }
   function closePanel(back) {
+    if (panel.contains(document.activeElement)) back = true;
     panel.hidden = true;
     root.classList.remove('guide-mynotes-open');
     btn.setAttribute('aria-expanded', 'false');
@@ -203,6 +211,7 @@
     var t = e.target;
     var typing = t && (/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName) || t.isContentEditable);
     if (e.key === 'Escape' && !panel.hidden && panel.contains(t)) { closePanel(true); return; }
+    if (document.querySelector('.guide-viewer') || document.body.classList.contains('guide-drawer-open')) return;
     if ((e.key === 'n' || e.key === 'N') && !typing && !e.altKey && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
       e.preventDefault();
       if (panel.hidden) openPanel(); else closePanel(false);
@@ -215,13 +224,17 @@
   qBtn.hidden = true;
   document.body.appendChild(qBtn);
   function hideQuoteButton() { qBtn.hidden = true; }
-  var selTimer = null;
+  var selTimer = null, picked = null;
   document.addEventListener('selectionchange', function () {
     clearTimeout(selTimer);
     selTimer = setTimeout(function () {
       var sel = window.getSelection();
       var text = sel && !sel.isCollapsed ? clean(sel.toString()) : '';
-      if (panel.hidden || !text || text.length < 3 || !body.contains(sel.anchorNode) || panel.contains(sel.anchorNode)) { hideQuoteButton(); return; }
+      if (panel.hidden || !text || text.length < 3 || !body.contains(sel.anchorNode) || panel.contains(sel.anchorNode)) {
+        if (document.activeElement !== qBtn) { hideQuoteButton(); picked = null; }
+        return;
+      }
+      picked = { text: text, node: sel.anchorNode };
       var r = sel.getRangeAt(0).getBoundingClientRect();
       qBtn.hidden = false;
       var left = Math.min(Math.max(8, r.left + r.width / 2 - qBtn.offsetWidth / 2), document.documentElement.clientWidth - qBtn.offsetWidth - 8);
@@ -233,13 +246,16 @@
   qBtn.addEventListener('mousedown', function (e) { e.preventDefault(); });   // keep the selection
   qBtn.addEventListener('click', function () {
     var sel = window.getSelection();
-    if (!sel || sel.isCollapsed) return;
-    var text = clean(sel.toString());
+    var live = sel && !sel.isCollapsed && body.contains(sel.anchorNode) ? { text: clean(sel.toString()), node: sel.anchorNode } : null;
+    var use = live || picked;
+    if (!use) return;
+    var text = use.text;
     if (text.length > 600) text = text.slice(0, text.lastIndexOf(' ', 590)) + ' …';
-    quote = { text: text, section: sectionOfNode(sel.anchorNode) };
+    quote = { text: text, section: sectionOfNode(use.node) };
+    picked = null;
     if (!editing) pinned = quote.section;
     showQuote(); showAt();
-    sel.removeAllRanges();
+    if (sel) sel.removeAllRanges();
     hideQuoteButton();
     area.focus({ preventScroll: true });
   });
@@ -248,12 +264,15 @@
   exportBtn.addEventListener('click', function () {
     var notes = all();
     if (!notes.length) { toast('No notes to download yet'); return; }
-    var orderOf = {};
-    document.querySelectorAll('.guide-toc-item > a').forEach(function (a, i) {
-      var m = a.pathname.match(/\/besteps\/guide\/([^/]+)\/$/); if (m) orderOf[m[1]] = i;
+    // book order: every page link in the contents (volume pages included), then place in the chapter
+    var orderOf = {}, i = 0;
+    document.querySelectorAll('.guide-toc a[href]').forEach(function (a) {
+      var m = a.pathname.match(/\/besteps\/guide\/([^/]+)\/$/);
+      if (m && !(m[1] in orderOf)) orderOf[m[1]] = i++;
     });
+    var rank = function (n) { return n.slug in orderOf ? orderOf[n.slug] : 999; };
     notes.sort(function (a, b) {
-      return ((orderOf[a.slug] || 0) - (orderOf[b.slug] || 0)) || (a.created - b.created);
+      return (rank(a) - rank(b)) || (a.slug < b.slug ? -1 : a.slug > b.slug ? 1 : 0) || ((a.place || 0) - (b.place || 0)) || (a.created - b.created);
     });
     var base = location.origin;
     var out = ['# My notes on The BESTEPS Guide', '', 'Downloaded ' + new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) +
@@ -266,7 +285,7 @@
       }
       if (n.section !== section) {
         section = n.section;
-        out.push('### [' + (n.sectionTitle || 'Start of the chapter') + '](' + base + n.url + (n.section ? '#' + n.section : '') + ')', '');
+        out.push('### [' + (n.sectionTitle || 'Start of ' + (n.label || n.chapter)) + '](' + base + n.url + (n.section ? '#' + n.section : '') + ')', '');
       }
       if (n.quote) out.push('> ' + n.quote, '');
       if (n.text) out.push(n.text, '');
@@ -284,6 +303,9 @@
   // another tab changed the notes
   window.addEventListener('storage', function (e) { if (e.key === KEY) render(); });
 
+  var draft = null;
+  try { draft = sessionStorage.getItem(DRAFT); } catch (e) { /* no draft */ }
   resetForm();
+  if (draft) { area.value = draft; try { sessionStorage.setItem(DRAFT, draft); } catch (e) { /* kept in the box only */ } }
   render();
 })();

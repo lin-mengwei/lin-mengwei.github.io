@@ -306,7 +306,7 @@ body#guide {
     &:hover { color: $ubse; }
     &.is-current { color: $ubse; border-left-color: $ubse; background: $guide-surface; } }
   .guide-toc-item > a {
-    padding: 0.4rem 0.6rem;
+    padding: 0.4rem 1.8rem 0.4rem 0.6rem;   // room on the right for the read tick
     border-left: 3px solid transparent;
     border-radius: 0 4px 4px 0;
     &:hover { background: $guide-surface; }
@@ -396,7 +396,7 @@ body#guide {
   }
 
   .guide-body {
-    h2, h3 { font-family: $guide-serif; color: $guide-ink; line-height: 1.25; scroll-margin-top: 4.5rem; }
+    h2, h3 { font-family: $guide-serif; font-size-adjust: none; color: $guide-ink; line-height: 1.25; scroll-margin-top: 4.5rem; }
     h2 { font-size: 1.65rem; font-weight: 700; margin: 2.8rem 0 1rem; padding-top: 1.4rem; border-top: 1px solid $guide-line; }
     h3 { font-size: 1.25rem; font-weight: 600; margin: 2.1rem 0 0.7rem; }
     .run-in { font-weight: 700; color: $guide-ink; }
@@ -635,7 +635,7 @@ body#guide {
     &.is-shown { opacity: 1; visibility: visible; transform: none; } }
 
   // tick-offs (exercises, "Rule N" lists) and chapters read
-  .guide-tick { display: inline-flex; align-items: center; gap: 0.35rem; margin-left: 0.6rem; padding: 0.1rem 0.55rem 0.1rem 0.4rem;
+  .guide-tick { user-select: none; display: inline-flex; align-items: center; gap: 0.35rem; margin-left: 0.6rem; padding: 0.1rem 0.55rem 0.1rem 0.4rem;
     border: 1px solid var(--g-input-border); border-radius: 999px; font-family: $font-family-base; font-size: 0.78rem; font-weight: 600;
     font-style: normal; letter-spacing: 0; color: $guide-muted; vertical-align: 0.1em; cursor: pointer; white-space: nowrap;
     input { width: 1rem; height: 1rem; margin: 0; accent-color: var(--g-accent); cursor: pointer; }
@@ -817,7 +817,8 @@ body#guide {
     border: 1px solid var(--g-input-border); border-radius: 6px; background: $guide-surface; color: $guide-ink; font-size: 1rem; cursor: pointer;
     &:hover, &[aria-expanded="true"] { border-color: $ubse; color: $ubse; }
     &[hidden] { display: none; } }
-  .guide-mynotes { position: fixed; z-index: 65; top: $sticky-top; right: 0; bottom: 0; width: 20rem; overflow-y: auto; display: flex; flex-direction: column;
+  // below the bar (25), so the Aa panel and search results open over it, and below the phone drawer (60)
+  .guide-mynotes { position: fixed; z-index: 20; top: $sticky-top; right: 0; bottom: 0; width: 20rem; overflow-y: auto; display: flex; flex-direction: column;
     padding: 1rem 1.1rem 1.25rem; background: $guide-surface; border-left: 1px solid $guide-line; box-shadow: -8px 0 24px var(--g-shadow);
     font-size: 0.9rem; color: $guide-text;
     &[hidden] { display: none; } }
@@ -874,6 +875,7 @@ body#guide {
   body#guide .guide-mynotes { top: auto; left: 0; width: auto; height: 50vh; max-height: 30rem; border-left: 0; border-top: 1px solid $guide-line;
     border-radius: 12px 12px 0 0; box-shadow: 0 -8px 24px var(--g-shadow-strong); }
   html.guide-mynotes-open body#guide .guide-shell { padding-bottom: 50vh; }
+  html.guide-mynotes-open body#guide .guide-progress-chip, html.guide-mynotes-open body#guide .guide-back-chip { display: none; }
 }
 @media screen and (max-width: $bp-phone - 1px), screen and (max-height: 500px) and (max-width: $bp-desktop - 1px) {
   body#guide .guide-mynotes-btn { width: 2.75rem; height: 2.75rem; border: 0; background: none; }
