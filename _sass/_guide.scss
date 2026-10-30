@@ -64,34 +64,6 @@ html:has(body#guide) { overflow-x: clip; scroll-behavior: auto !important; }
   --g-btn-bg: #2f6f99; --g-btn-text: #ffffff; --g-btn-hover: #3b84b5; --g-figure-card: #f4f6f8; --g-figure-pad: 0.5rem; --g-flow-card: #f4f6f8; --g-photo: 0.85;
   color-scheme: dark;
 }
-// The contents sidebar as a slide-in drawer: on phones, and in focus mode on wider screens.
-// Included inside body#guide.
-@mixin guide-drawer {
-  .guide-sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    height: auto;
-    width: 86vw;
-    max-width: 340px;
-    z-index: 60;
-    transform: translateX(-105%);
-    transition: transform 0.25s ease;
-    box-shadow: 8px 0 28px var(--g-shadow-strong);
-    padding-top: 1rem;
-    visibility: hidden;
-  }
-  &.guide-drawer-open .guide-sidebar { transform: none; visibility: visible; }
-  &.guide-drawer-open { overflow: hidden; }
-  .guide-drawer-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8rem; }
-  .guide-drawer-close { background: none; border: 0; font-size: 1.8rem; line-height: 1; color: $guide-muted; cursor: pointer; padding: 0 0.25rem; }
-  .guide-drawer-search { display: block; margin-bottom: 0.5rem;
-    .guide-search-input { width: 100%; }
-    .guide-search-results { position: static; width: 100%; box-shadow: none; margin-top: 0.4rem; max-height: none; } }
-  .guide-drawer-pdf { display: inline-flex; margin-top: 1.5rem; }
-}
-
 body#guide { @include guide-day; }
 html[data-guide-theme="sepia"] body#guide { @include guide-sepia; }
 html[data-guide-theme="night"] body#guide { @include guide-night; }
@@ -188,6 +160,44 @@ body#guide {
 
   .guide-progress { height: 3px; span { display: block; height: 100%; width: 0; background: $ubse; } }
 
+  // ---------- reading settings (Aa) ----------
+  .guide-settings { position: relative; }
+  .guide-settings-btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; min-width: 2.4rem; height: 2.1rem;
+    padding: 0 0.55rem; border: 1px solid var(--g-input-border); border-radius: 6px; background: $guide-surface; color: $guide-ink;
+    font: inherit; font-size: 0.88rem; font-weight: 600; cursor: pointer;
+    &:hover, &[aria-expanded="true"] { border-color: $ubse; color: $ubse; } }
+  .guide-settings-aa { font-family: $guide-serif; font-size: 1.05rem; font-weight: 600; line-height: 1; }
+  .guide-settings-panel { position: absolute; right: 0; top: calc(100% + 0.45rem); z-index: 70; width: 18rem; padding: 1rem;
+    background: $guide-surface; border: 1px solid $guide-line; border-radius: 10px; box-shadow: 0 12px 32px var(--g-shadow-strong);
+    font-size: 0.85rem; color: $guide-text; text-align: left;
+    &[hidden] { display: none; } }
+  .guide-set { display: block; border: 0; margin: 0 0 1.1rem; padding: 0; min-width: 0;
+    &:last-child { margin-bottom: 0; } }
+  .guide-set legend, .guide-set-label { display: block; padding: 0; margin-bottom: 0.45rem; font-size: 0.7rem; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; color: $guide-faint; }
+  .guide-set-options { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; }
+  .guide-set-option { position: relative; cursor: pointer;
+    input { position: absolute; opacity: 0; width: 1px; height: 1px; margin: 0; }
+    span { display: flex; align-items: center; justify-content: center; height: 2.6rem; border: 1px solid var(--g-input-border);
+      border-radius: 6px; font-size: 0.78rem; font-weight: 600; background: $guide-surface; color: $guide-ink; }
+    input:checked + span { box-shadow: 0 0 0 2px $ubse; border-color: transparent; }
+    input:focus-visible + span { outline: 2px solid $ubse; outline-offset: 3px; } }
+  // each theme choice shows its own page colours
+  .guide-set-option--day span { background: #ffffff; color: #1d2a33; border-color: #cddbe5; }
+  .guide-set-option--sepia span { background: #f6efdf; color: #2e251b; border-color: #d8c8a6; }
+  .guide-set-option--night span { background: #1b1f27; color: #eef1f4; border-color: #3a4350; }
+  .guide-set-stepper { display: flex; align-items: center; gap: 0.5rem;
+    button { width: 3rem; height: 2.6rem; border: 1px solid var(--g-input-border); border-radius: 6px; background: $guide-surface;
+      color: $guide-ink; font-family: $guide-serif; font-size: 0.95rem; font-weight: 600; cursor: pointer;
+      &:last-child { font-size: 1.2rem; }
+      &:hover:not(:disabled) { border-color: $ubse; color: $ubse; }
+      &:disabled { opacity: 0.4; cursor: default; } }
+    output { flex: 1; text-align: center; font-weight: 600; color: $guide-ink; } }
+  .guide-set-focus { display: flex; align-items: flex-start; gap: 0.6rem; cursor: pointer; font-weight: 600; color: $guide-ink;
+    input { flex: none; width: 1.05rem; height: 1.05rem; margin: 0.15rem 0 0; accent-color: var(--g-accent); }
+    small { display: block; font-size: 0.78rem; font-weight: 400; color: $guide-muted; } }
+  .guide-bar-search-toggle { display: none; }
+
   // ---------- search ----------
   .guide-search { position: relative; }
   .guide-search-icon { position: absolute; left: 0.65rem; top: 50%; transform: translateY(-50%); display: flex; font-size: 0.85rem; color: $guide-muted; pointer-events: none; }
@@ -247,7 +257,7 @@ body#guide {
     font-size: 0.86rem;
     line-height: 1.4;
   }
-  .guide-drawer-head, .guide-drawer-search, .guide-drawer-pdf { display: none; }
+  .guide-drawer-head, .guide-drawer-search, .guide-drawer-settings, .guide-drawer-pdf { display: none; }
 
   .guide-toc {
     ul { list-style: none; margin: 0; padding: 0; }
@@ -550,9 +560,49 @@ body#guide {
     .guide-bar-next { display: inline; }
     .guide-wordmark, .guide-bar .guide-search, .guide-bar-pdf { display: none; }
     .guide-drawer-head .guide-wordmark { display: inline; }
+    .guide-set-focus { display: none; }
+    .guide-bar:not(.guide-bar--home) .guide-settings--bar { display: none; }
+    .guide-bar--home {
+      .guide-wordmark { display: inline; }
+      .guide-bar-search-toggle { display: inline-flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem;
+        border: 0; background: none; color: $guide-ink; font-size: 1.1rem; cursor: pointer; }
+      .guide-settings-btn { height: 2.75rem; min-width: 2.75rem; }
+      &.is-searching {
+        .guide-wordmark, .guide-bar-search-toggle { display: none; }
+        .guide-bar-actions { flex: 1; margin-left: 0; }
+        .guide-search { display: block; flex: 1; }
+        .guide-search-input { width: 100%; height: 2.5rem; }
+        .guide-search-results { position: fixed; left: 0.75rem; right: 0.75rem; top: 3.6rem; width: auto; max-width: none; }
+      }
+    }
 
     .guide-shell { display: block; }
-    @include guide-drawer;
+    .guide-sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      height: auto;
+      width: 86vw;
+      max-width: 340px;
+      z-index: 60;
+      transform: translateX(-105%);
+      transition: transform 0.25s ease;
+      box-shadow: 8px 0 28px var(--g-shadow-strong);
+      padding-top: 1rem;
+      visibility: hidden;
+    }
+    &.guide-drawer-open .guide-sidebar { transform: none; visibility: visible; }
+    &.guide-drawer-open { overflow: hidden; }
+    .guide-drawer-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8rem; }
+    .guide-drawer-close { background: none; border: 0; font-size: 1.8rem; line-height: 1; color: $guide-muted; cursor: pointer; padding: 0 0.25rem; }
+    .guide-drawer-search { display: block; margin-bottom: 0.5rem;
+      .guide-search-input { width: 100%; }
+      .guide-search-results { position: static; width: 100%; box-shadow: none; margin-top: 0.4rem; max-height: none; } }
+    .guide-drawer-pdf { display: inline-flex; margin-top: 1.5rem; }
+    .guide-drawer-settings { display: block; margin: 0 0 0.75rem;
+      .guide-settings-btn { width: 100%; justify-content: flex-start; height: 2.75rem; padding: 0 0.75rem; }
+      .guide-settings-panel { position: static; width: auto; margin-top: 0.5rem; box-shadow: none; } }
 
     .guide-main { padding: 1.75rem 1rem 3rem; }
     .guide-body, .guide-prose { font-size: calc(1rem * var(--g-size)); line-height: 1.7; }
@@ -584,13 +634,10 @@ body#guide {
   }
 }
 
-// ---------- focus mode: only the text column (the contents open as a drawer) ----------
+// ---------- focus mode: only the text column (turned off from the Aa panel or with F) ----------
 @media screen and (min-width: $bp-phone) {
   html[data-guide-focus="on"] body#guide {
     .guide-shell { display: block; }
-    .guide-onpage { display: none; }
-    .guide-bar-contents { display: inline-flex; }
-    .guide-drawer-head .guide-wordmark { display: inline; }
-    @include guide-drawer;
+    .guide-sidebar, .guide-onpage { display: none; }
   }
 }

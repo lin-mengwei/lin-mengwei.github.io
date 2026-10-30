@@ -1,0 +1,34 @@
+{% comment %} Reading settings ("Aa"): theme, text size, focus mode. Used in the guide bar (include.id = "bar") and
+in the phone drawer (include.id = "drawer"); assets/js/guide-reading.js keeps both in step. {% endcomment %}
+<div class="guide-settings guide-settings--{{ include.id }}" data-guide-settings>
+  <button type="button" class="guide-settings-btn" data-guide-settings-btn aria-expanded="false" aria-controls="guide-settings-{{ include.id }}"{% if include.id == 'drawer' %}>
+    <span class="guide-settings-aa" aria-hidden="true">Aa</span> Reading settings{% else %} aria-label="Reading settings" title="Reading settings">
+    <span class="guide-settings-aa" aria-hidden="true">Aa</span>{% endif %}
+  </button>
+  <div class="guide-settings-panel" id="guide-settings-{{ include.id }}" role="group" aria-label="Reading settings" hidden>
+    <fieldset class="guide-set guide-set-theme">
+      <legend>Theme</legend>
+      <div class="guide-set-options">
+        {% assign guide_themes = "auto,day,sepia,night" | split: "," %}
+        {% for t in guide_themes %}
+        <label class="guide-set-option guide-set-option--{{ t }}">
+          <input type="radio" name="guide-theme-{{ include.id }}" value="{{ t }}" data-guide-theme-choice>
+          <span>{{ t | capitalize }}</span>
+        </label>
+        {% endfor %}
+      </div>
+    </fieldset>
+    <div class="guide-set guide-set-size">
+      <span class="guide-set-label" id="guide-size-label-{{ include.id }}">Text size</span>
+      <div class="guide-set-stepper" role="group" aria-labelledby="guide-size-label-{{ include.id }}">
+        <button type="button" data-guide-size-step="-1" aria-label="Smaller text"><span aria-hidden="true">A&minus;</span></button>
+        <output data-guide-size-value aria-live="polite">100%</output>
+        <button type="button" data-guide-size-step="1" aria-label="Larger text"><span aria-hidden="true">A+</span></button>
+      </div>
+    </div>
+    <label class="guide-set guide-set-focus">
+      <input type="checkbox" data-guide-focus-toggle>
+      <span>Focus mode <small>Hide the side columns (F)</small></span>
+    </label>
+  </div>
+</div>

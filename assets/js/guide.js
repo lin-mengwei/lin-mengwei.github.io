@@ -54,8 +54,8 @@
       else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
     }
   });
-  // the drawer exists on phones and in focus mode: close it if the screen grows past phone width outside focus mode
-  var onWidth = function (e) { if (!e.matches && document.documentElement.getAttribute('data-guide-focus') !== 'on') setDrawer(false); };
+  // the drawer only exists on phones: close it if the screen grows past that width
+  var onWidth = function (e) { if (!e.matches) setDrawer(false); };
   if (phone.addEventListener) phone.addEventListener('change', onWidth); else if (phone.addListener) phone.addListener(onWidth);
 
   /* ---------- scroll-spy and reading progress ---------- */

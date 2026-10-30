@@ -5,6 +5,7 @@
     <button type="button" class="guide-drawer-close" data-guide-drawer-close aria-label="Close contents">&times;</button>
   </div>
   <div class="guide-drawer-search">{% include guide-search.html %}</div>
+  <div class="guide-drawer-settings">{% include guide-settings.html id="drawer" %}</div>
 
   <nav class="guide-toc">
     <a class="guide-toc-home{% if page.layout == 'guide-home' %} is-current{% endif %}" href="{{ '/besteps/guide/' | relative_url }}">Overview</a>

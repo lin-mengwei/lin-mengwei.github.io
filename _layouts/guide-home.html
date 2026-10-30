@@ -5,6 +5,7 @@ layout: base
 {% assign people = site.data.besteps_guide_people %}
 {% assign guide_chapters = site.guide | sort: "order" %}
 {% assign first_chapter = guide_chapters | first %}
+{% include guide-bar.html %}
 
 <section class="guide-cover" aria-label="The BESTEPS Guide">
   <div class="guide-cover-inner">
@@ -107,3 +108,4 @@ layout: base
 
 {% include guide-footline.html %}
 <script src="{{ '/assets/js/guide.js' | relative_url }}" defer></script>
+<script src="{{ '/assets/js/guide-reading.js' | relative_url }}" defer></script>

@@ -1,12 +1,16 @@
-<div class="guide-bar">
+<div class="guide-bar{% if page.layout == 'guide-home' %} guide-bar--home{% endif %}">
   <div class="guide-bar-inner">
+    {% unless page.layout == 'guide-home' %}
     <button type="button" class="guide-bar-contents" data-guide-drawer-open aria-controls="guide-drawer" aria-expanded="false">
       {% include guide-icon.html name="bars" %} Contents
     </button>
+    {% endunless %}
     {% if page.short_title %}<span class="guide-bar-current">{{ page.short_title }}</span>{% endif %}
     <a class="guide-wordmark" href="{{ '/besteps/guide/' | relative_url }}">The BESTEPS Guide</a>
     <div class="guide-bar-actions">
+      {% if page.layout == 'guide-home' %}<button type="button" class="guide-bar-search-toggle" data-guide-search-toggle aria-label="Search the Guide" aria-expanded="false">{% include guide-icon.html name="search" %}</button>{% endif %}
       {% include guide-search.html %}
+      {% include guide-settings.html id="bar" %}
       <a class="guide-btn guide-btn--solid guide-bar-pdf" href="{{ '/assets/files/BESTEPS_Guide_Content.pdf' | relative_url }}" target="_blank" rel="noopener">
         {% include guide-icon.html name="download" %} PDF
       </a>
