@@ -20,7 +20,7 @@ import unicodedata
 from pathlib import Path
 
 import yaml
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -65,6 +65,16 @@ def render_page(meta: dict, html: str) -> str:
     return front_matter(meta) + "{% raw %}\n" + html + "\n{% endraw %}\n"
 
 
+def _absorb_figure_word(a):
+    """'Figure <a>3</a>' -> '<a>Figure 3</a>', so the link is a comfortable target, not one digit."""
+    prev = a.previous_sibling
+    if isinstance(prev, NavigableString):
+        m = re.search(r"(Figures?)([\s ~]+)$", str(prev))
+        if m:
+            prev.replace_with(str(prev)[:m.start()])
+            a.string = m.group(1) + m.group(2).replace("~", " ") + a.get_text()
+
+
 def resolve_refs(chapters: dict[str, ChapterHTML], labels: dict[str, tuple[str, str, str, str]],
                  short_labels: dict[str, str]) -> list[str]:
     """Rewrite '#label' links to their final anchors; return the labels that could not be resolved."""
@@ -89,6 +99,8 @@ def resolve_refs(chapters: dict[str, ChapterHTML], labels: dict[str, tuple[str, 
             a["href"] = f"#{anchor}" if same else f"{GUIDE_URL}{t_slug}/" + (f"#{anchor}" if anchor else "")
             if is_ref:
                 a.string = text if (same or kind == "figure") else f"{short_labels[t_slug]} › {text}"
+                if kind == "figure":
+                    _absorb_figure_word(a)
         ch.html = "".join(str(c) for c in root.contents)
     return unresolved
 
@@ -181,10 +193,29 @@ def _publish_image(src: Path, img_dir: Path) -> str:
             buf = io.BytesIO()
             im.save(buf, "WEBP", quality=85, method=6)
             name, data = src.stem + ".webp", buf.getvalue()
-    dest = img_dir / name
+        _write_bytes(img_dir / name, data)
+        if im.width > SMALL_WIDTH:                      # a phone-sized copy, offered through srcset
+            small = im.resize((SMALL_WIDTH, round(im.height * SMALL_WIDTH / im.width)), Image.LANCZOS)
+            buf = io.BytesIO()
+            fmt = {".png": "PNG", ".webp": "WEBP"}.get(Path(name).suffix.lower(), "JPEG")
+            (small.convert("RGB") if fmt == "JPEG" else small).save(
+                buf, fmt, **({"optimize": True} if fmt == "PNG" else {"quality": 85}))
+            _write_bytes(img_dir / small_name(name), buf.getvalue())
+    return name
+
+
+SMALL_WIDTH = 800
+SIZES = "(max-width: 767px) 100vw, 38em"
+
+
+def small_name(name: str) -> str:
+    p = Path(name)
+    return f"{p.stem}-{SMALL_WIDTH}{p.suffix}"
+
+
+def _write_bytes(dest: Path, data: bytes):
     if not dest.exists() or dest.read_bytes() != data:
         dest.write_bytes(data)
-    return name
 
 
 def _add_image_sizes(html: str, img_dir: Path, web_names: dict[str, str]) -> str:
@@ -196,7 +227,30 @@ def _add_image_sizes(html: str, img_dir: Path, web_names: dict[str, str]) -> str
         if path.exists():
             with Image.open(path) as im:
                 img["width"], img["height"] = str(im.width), str(im.height)
+            small = img_dir / small_name(path.name)
+            if small.exists():
+                img["srcset"] = f"{prefix}/{small.name} {SMALL_WIDTH}w, {img['src']} {img['width']}w"
+                img["sizes"] = SIZES
     return "".join(str(c) for c in s.find("div", id="r").contents)
+
+
+def _blocks_text(html: str) -> list[str]:
+    s = BeautifulSoup(f"<div>{html}</div>", "lxml")
+    out = []
+    for el in s.find_all(["p", "li", "h2", "h3", "figcaption", "caption", "th", "td", "pre"]):
+        if el.find(["p", "li"]):                        # count the innermost block only
+            continue
+        text = re.sub(r"\s+", " ", el.get_text(" ")).strip()
+        if text:
+            out.append(text)
+    return out
+
+
+def wording_changes(old_html: str, new_html: str) -> list[str]:
+    """Paragraph-level wording differences between two versions of a chapter, ignoring markup."""
+    import difflib
+    a, b = _blocks_text(old_html), _blocks_text(new_html)
+    return [line for line in difflib.ndiff(a, b) if line[:2] in ("- ", "+ ")]
 
 
 def _render_cover(pdf: Path, img_dir: Path):
@@ -250,12 +304,13 @@ def build(source: Path, repo: Path = REPO, cover: Path | None = None) -> int:
         web_names[name] = _publish_image(sources[name], img_dir)
     if cover:
         _render_cover(Path(cover), img_dir)
-    keep = set(web_names.values()) | {"cover.jpg", "cover-thumb.jpg"}
+    keep = set(web_names.values()) | {small_name(n) for n in web_names.values()} | {"cover.jpg", "cover-thumb.jpg"}
     if not any(f.startswith("image not found") for f in failures):  # never prune from a half-synced source
         for f in img_dir.iterdir():
             if f.name not in keep:
                 f.unlink()
 
+    wording: list[str] = []
     used_people = set()
     search = []
     for ch in chapters:
@@ -289,8 +344,13 @@ def build(source: Path, repo: Path = REPO, cover: Path | None = None) -> int:
             if byline is None:
                 failures.append(f"{ch.slug}: expected a closing signature to move under the title")
             meta["byline"] = byline
+        target = repo / "_guide" / f"{ch.slug}.html"
+        if target.exists():
+            before = target.read_text(encoding="utf-8").split("---\n", 2)[-1]
+            for line in wording_changes(before, html):
+                wording.append(f"{ch.slug}: {line}")
         try:
-            _write(repo / "_guide" / f"{ch.slug}.html", render_page(meta, html), written)
+            _write(target, render_page(meta, html), written)
         except ValueError as e:
             failures.append(f"{ch.slug}: {e}")
         for e in r.search:
@@ -320,6 +380,10 @@ def build(source: Path, repo: Path = REPO, cover: Path | None = None) -> int:
         if stale not in written and HEADER in stale.read_text(encoding="utf-8"):
             stale.unlink()
 
+    for line in wording:
+        print(f"WORDING: {line}")
+    if wording:
+        print(f"WARNING: {len(wording)} line(s) of chapter wording changed since the last build (see WORDING above).")
     _report(rows, failures, tex_path, repo)
     return 1 if failures else 0
 

@@ -55,7 +55,8 @@ def test_build_writes_photos_and_data(tmp_path):
     data = build(posters, out, data_file)
     assert set(data) == {"lecture-1", "lecture-3"}
     assert data["lecture-3"]["photos"][0]["src"].endswith("/lecture-3.webp")
-    assert sorted(p.name for p in out.iterdir()) == ["lecture-1.webp", "lecture-3.webp"]
+    assert sorted(p.name for p in out.iterdir()) == ["lecture-1-800.webp", "lecture-1.webp",
+                                                      "lecture-3-800.webp", "lecture-3.webp"]
     assert data["lecture-3"]["caption"] == "Dirk Foremny and Guillermo Marín at the BESTEPS lecture."
     assert yaml.safe_load(data_file.read_text(encoding="utf-8"))["lecture-1"]["photos"][0]["alt"]
 
@@ -64,3 +65,14 @@ def test_publicity_file_names_are_recognised(tmp_path):
     Image.new("RGB", (10, 10)).save(tmp_path / "pic_BESTEPS_jmp.jpg")
     assert find_poster(tmp_path, "lecture-5").name == "pic_BESTEPS_jmp.jpg"
     assert find_poster(tmp_path, "lecture-4") is None
+
+
+def test_photos_have_small_copy(tmp_path):
+    posters = tmp_path / "posters"; posters.mkdir()
+    poster(posters / "lecture-1.png", size=(2400, 2900), photo=(200, 900, 2200, 2000), cut=250)
+    out, data_file = tmp_path / "out", tmp_path / "photos.yml"
+    data = build(posters, out, data_file)
+    ph = data["lecture-1"]["photos"][0]
+    assert (out / "lecture-1-800.webp").exists()
+    assert ph["srcset"] == ("/assets/images/besteps-guide-photos/lecture-1-800.webp 800w, "
+                            f"/assets/images/besteps-guide-photos/lecture-1.webp {ph['width']}w")

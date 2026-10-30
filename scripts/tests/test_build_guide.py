@@ -35,7 +35,7 @@ def test_resolve_refs_cross_chapter():
     assert not a[0].has_attr("data-reference")
     assert a[1]["href"] == "#introduction" and a[1].get_text() == "Intro"
     fig = BeautifulSoup(chapters["lecture-2"].html, "lxml").find("a")
-    assert fig["href"] == "#figure-1" and fig.get_text() == "1"
+    assert fig["href"] == "#figure-1" and fig.get_text() == "Figure 1"
 
 
 def test_resolve_refs_unknown_label_reported():
@@ -117,3 +117,42 @@ def test_validate_links():
              "lecture-2": '<h2 id="c">C</h2><a href="#nowhere">bad</a>'}
     assert check_links(pages) == ["lecture-1: broken link /besteps/guide/lecture-2/#b",
                                   "lecture-2: broken link #nowhere"]
+
+
+def test_figure_reference_links_whole_phrase():
+    chapters = {"lecture-5": chapter('<p>An empirical JMP (Figure <a href="#fig:e" data-reference-type="ref" '
+                                     'data-reference="fig:e">1</a>) typically</p><figure id="figure-1"></figure>')}
+    labels = {"fig:e": ("lecture-5", "figure-1", "1", "figure")}
+    assert resolve_refs(chapters, labels, {"lecture-5": "Lecture 5"}) == []
+    p = BeautifulSoup(chapters["lecture-5"].html, "lxml").find("p")
+    assert p.find("a").get_text() == "Figure 1" and p.get_text() == "An empirical JMP (Figure 1) typically"
+    chapters = {"l": chapter('<p>see Figure\u00a0<a href="#fig:e" data-reference-type="ref">1</a>.</p>'
+                             '<figure id="figure-1"></figure>')}
+    resolve_refs(chapters, {"fig:e": ("l", "figure-1", "1", "figure")}, {"l": "L"})
+    assert BeautifulSoup(chapters["l"].html, "lxml").find("a").get_text() == "Figure\u00a01"
+
+
+def test_publish_image_writes_small_copy_and_srcset(tmp_path):
+    from PIL import Image as PILImage
+    from build_guide import _add_image_sizes, _publish_image
+    src = tmp_path / "src"; src.mkdir(); out = tmp_path / "out"; out.mkdir()
+    PILImage.new("RGB", (1200, 600), "white").save(src / "wide.png")
+    PILImage.new("RGB", (500, 300), "white").save(src / "narrow.png")
+    assert _publish_image(src / "wide.png", out) == "wide.png"
+    assert (out / "wide-800.png").exists() and PILImage.open(out / "wide-800.png").size == (800, 400)
+    assert _publish_image(src / "narrow.png", out) == "narrow.png" and not (out / "narrow-800.png").exists()
+    html = _add_image_sizes('<img src="/assets/images/besteps-guide/wide.png"/>'
+                            '<img src="/assets/images/besteps-guide/narrow.png"/>', out, {})
+    imgs = BeautifulSoup(html, "lxml").find_all("img")
+    assert imgs[0]["srcset"] == ("/assets/images/besteps-guide/wide-800.png 800w, "
+                                 "/assets/images/besteps-guide/wide.png 1200w")
+    assert imgs[0]["sizes"] == "(max-width: 767px) 100vw, 38em"
+    assert not imgs[1].has_attr("srcset")
+
+
+def test_wording_changes_ignores_markup():
+    from build_guide import wording_changes
+    old = "<p>Some <em>text</em> here.</p><ul><li>Item one</li></ul>"
+    assert wording_changes(old, '<p>Some <strong>text</strong>  here.</p><ul><li>Item one</li></ul>') == []
+    changed = wording_changes(old, "<p>Some text there.</p><ul><li>Item one</li></ul>")
+    assert changed == ["- Some text here.", "+ Some text there."]

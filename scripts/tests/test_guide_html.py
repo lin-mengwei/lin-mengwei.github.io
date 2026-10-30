@@ -168,3 +168,15 @@ def test_search_keeps_late_text_in_long_sections():
     filler = "Words to pad this section well beyond any snippet length. " * 30
     ch = run("\\subsection{Managing Data}\n" + filler + "\n\nThe FAIR principles come last.\n")
     assert "FAIR principles" in ch.search[-1]["text"]
+
+
+def test_pre_continuation_lines_joined():
+    tex = ("\\begin{verbatim}\n"
+           "├── 1_Data/\n"
+           "│   ├── Raw/        # Downloaded, unaltered data (e.g. CPI indices, shapefiles\n"
+           "                 , surveys)\n"
+           "│   └── Cleaned/    # Final datasets\n"
+           "\\end{verbatim}\n")
+    text = soup(run(tex)).find("pre").get_text()
+    assert "# Downloaded, unaltered data (e.g. CPI indices, shapefiles, surveys)" in text
+    assert "\n│   └── Cleaned/" in text and text.count("\n") == 2

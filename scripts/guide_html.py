@@ -243,8 +243,27 @@ def _tables(s, root, counts):
         t.wrap(s.new_tag("div", attrs={"class": "table-scroll"}))
 
 
+TREE_GLYPHS = set("│├└─┬┼")
+
+
+def join_wrapped_comments(text: str) -> str:
+    """Rejoin comment lines that were hard-wrapped only to fit the PDF page: a line with no tree glyphs that
+    starts with spaces, right after a line holding a '#' comment, continues that comment."""
+    out: list[str] = []
+    for line in text.split("\n"):
+        if out and "#" in out[-1] and line[:1] == " " and line.strip() and not (set(line) & TREE_GLYPHS):
+            cont = line.strip()
+            out[-1] = out[-1].rstrip() + ("" if cont[:1] in ",.;:)" else " ") + cont
+        else:
+            out.append(line)
+    return "\n".join(out)
+
+
 def _blocks(s, root, counts):
     for pre in root.find_all("pre"):
+        code = pre.find("code") or pre
+        if code.string:
+            code.string.replace_with(join_wrapped_comments(str(code.string)))
         counts["pre"] += 1
         pre.wrap(s.new_tag("div", attrs={"class": "pre-scroll"}))
     counts["lists"] = len(root.find_all(["ul", "ol"])) - len(root.select("aside ol"))

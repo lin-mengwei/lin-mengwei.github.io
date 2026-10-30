@@ -156,14 +156,11 @@ reading_minutes: 20
 <div class="pre-scroll"><pre><code>Project_Folder (Future Replication_Package)/
 │
 ├── 1_Data/
-│   ├── Raw/        # Downloaded, unaltered data (e.g. CPI indices, shapefiles
-                 , surveys)
-│   └── Cleaned/    # Final datasets used for analysis (often left empty for 
-                replication uploads)
+│   ├── Raw/        # Downloaded, unaltered data (e.g. CPI indices, shapefiles, surveys)
+│   └── Cleaned/    # Final datasets used for analysis (often left empty for replication uploads)
 │
 ├── 2_Code/
-│   ├── 2025_01/    # Versioned by month; create a new folder when starting a 
-                new round of work
+│   ├── 2025_01/    # Versioned by month; create a new folder when starting a new round of work
 │   │   ├── Do.files/         # Main scripts organized by purpose
 │   │   │   ├── 0_Main.do
 │   │   │   ├── 1_Clean.do
@@ -173,18 +170,14 @@ reading_minutes: 20
 │   │   ├── Log.files/        # Logs for each run
 │   │   ├── Tables/           # Tables generated during analysis
 │   │   ├── Figures/          # Figures generated during analysis
-│   │   └── Stata_packages/   # Custom Stata ado directory for package 
-                        reproducibility
+│   │   └── Stata_packages/   # Custom Stata ado directory for package reproducibility
 │   ├── 2025_02/
 │   └── ...
 │
 ├── 3_Documentation/
 │   └── README.txt   # Instructions and metadata for replicators
 │
-└── 4_Output/        # Optional: If tables and figures are too large, store 
-                    final outputs here
-                    # Otherwise, keep them within the corresponding Code 
-                    subfolders</code></pre></div>
+└── 4_Output/        # Optional: If tables and figures are too large, store final outputs here # Otherwise, keep them within the corresponding Code subfolders</code></pre></div>
 <p>Here, separating raw data from cleaned data prevents confusion and accidental overwriting. Naming code folders by year and month (e.g., <code>2025_01</code>) helps track the evolution of the project. When moving forward, simply copy the code folder from the previous month to make a new one for the following month.</p>
 <p>Remember, all we do here to set up an organized project folder from the very beginning isn’t just about replication; it’s about working efficiently and transparently from the very beginning.</p>
 <h3 class="unnumbered" id="step-2-code-in-an-organized-way">Step 2: Code in an Organized Way</h3>

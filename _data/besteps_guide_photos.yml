@@ -5,6 +5,8 @@ opening-lecture:
     width: 1191
     height: 482
     alt: Antonio Cabrales lecturing at BESTEPS
+    srcset: /assets/images/besteps-guide-photos/opening-lecture-800.webp 800w, /assets/images/besteps-guide-photos/opening-lecture.webp
+      1191w
   caption: Antonio Cabrales at the BESTEPS lecture.
 lecture-1:
   photos:
@@ -12,6 +14,8 @@ lecture-1:
     width: 906
     height: 494
     alt: Libertad González lecturing at BESTEPS
+    srcset: /assets/images/besteps-guide-photos/lecture-1-800.webp 800w, /assets/images/besteps-guide-photos/lecture-1.webp
+      906w
   caption: Libertad González at the BESTEPS lecture.
 lecture-2:
   photos:
@@ -19,6 +23,8 @@ lecture-2:
     width: 889
     height: 545
     alt: Joan Llull lecturing at BESTEPS
+    srcset: /assets/images/besteps-guide-photos/lecture-2-800.webp 800w, /assets/images/besteps-guide-photos/lecture-2.webp
+      889w
   caption: Joan Llull at the BESTEPS lecture.
 lecture-3:
   photos:
@@ -26,6 +32,8 @@ lecture-3:
     width: 1159
     height: 765
     alt: Dirk Foremny and Guillermo Marín lecturing at BESTEPS
+    srcset: /assets/images/besteps-guide-photos/lecture-3-800.webp 800w, /assets/images/besteps-guide-photos/lecture-3.webp
+      1159w
   caption: Dirk Foremny and Guillermo Marín at the BESTEPS lecture.
 lecture-4:
   photos:
@@ -33,6 +41,8 @@ lecture-4:
     width: 868
     height: 533
     alt: Jenifer Ruiz-Valenzuela lecturing at BESTEPS
+    srcset: /assets/images/besteps-guide-photos/lecture-4-800.webp 800w, /assets/images/besteps-guide-photos/lecture-4.webp
+      868w
   caption: Jenifer Ruiz-Valenzuela at the BESTEPS lecture.
 lecture-5:
   photos:
@@ -40,6 +50,8 @@ lecture-5:
     width: 856
     height: 544
     alt: Albrecht Glitz lecturing at BESTEPS
+    srcset: /assets/images/besteps-guide-photos/lecture-5-800.webp 800w, /assets/images/besteps-guide-photos/lecture-5.webp
+      856w
   caption: Albrecht Glitz at the BESTEPS lecture.
 closing-lecture:
   photos:
@@ -47,4 +59,6 @@ closing-lecture:
     width: 896
     height: 556
     alt: Diego Puga lecturing at BESTEPS
+    srcset: /assets/images/besteps-guide-photos/closing-lecture-800.webp 800w, /assets/images/besteps-guide-photos/closing-lecture.webp
+      896w
   caption: Diego Puga at the BESTEPS lecture.
