@@ -1,4 +1,4 @@
-/* The BESTEPS Guide web edition: reading settings (theme, text size, focus mode).
+/* The BESTEPS Guide web edition: reading settings (theme, text size, font, spacing, focus mode) and reading aids.
    The saved choices are first applied before paint by _includes/guide-settings-head.html; this keeps them in step. */
 (function () {
   'use strict';
@@ -7,6 +7,10 @@
   var THEMES = ['auto', 'day', 'green', 'night'];
   var SIZES = ['90%', '100%', '112%', '125%'];
   var BAR_COLOURS = { day: '#e4edf3', green: '#dbe6d3', night: '#20262f' };
+  // radio-group settings: stored value -> <html data-guide-NAME>; the first value is the default
+  var CHOICES = { font: ['poppins', 'sans', 'serif'], leading: ['1', '0', '2'] };
+  // on/off settings
+  var TOGGLES = ['spacing'];
   var dark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
   // the phone layout (keep in step with _sass/_guide.scss)
   var phone = window.matchMedia('(max-width: 767px), (max-height: 500px) and (max-width: 1099px)');
@@ -28,6 +32,9 @@
   }
   function setSize(n) { root.setAttribute('data-guide-size', String(n)); }
   function setFocus(on) { root.setAttribute('data-guide-focus', on ? 'on' : 'off'); }
+  function choice(name) { var v = root.getAttribute('data-guide-' + name); return CHOICES[name].indexOf(v) < 0 ? CHOICES[name][0] : v; }
+  function setChoice(name, v) { root.setAttribute('data-guide-' + name, CHOICES[name].indexOf(v) < 0 ? CHOICES[name][0] : v); }
+  function setToggle(name, on) { root.setAttribute('data-guide-' + name, on ? 'on' : 'off'); }
 
   /* ---------- panels (one in the bar, one in the phone drawer) ---------- */
   var panels = Array.prototype.slice.call(document.querySelectorAll('[data-guide-settings]'));
@@ -41,6 +48,8 @@
       if (steps.length === 2) { steps[0].disabled = size() === 0; steps[1].disabled = size() === 3; }
       var f = box.querySelector('[data-guide-focus-toggle]');
       if (f) f.checked = focusOn();
+      box.querySelectorAll('[data-guide-choice]').forEach(function (r) { r.checked = r.value === choice(r.getAttribute('data-guide-choice')); });
+      box.querySelectorAll('[data-guide-toggle]').forEach(function (c) { c.checked = root.getAttribute('data-guide-' + c.getAttribute('data-guide-toggle')) === 'on'; });
     });
   }
 
@@ -71,6 +80,18 @@
     });
     var f = box.querySelector('[data-guide-focus-toggle]');
     if (f) f.addEventListener('change', function () { toggleFocus(f.checked); });
+    box.querySelectorAll('[data-guide-choice]').forEach(function (r) {
+      r.addEventListener('change', function () {
+        var name = r.getAttribute('data-guide-choice');
+        setChoice(name, r.value); save(name, r.value); sync();
+      });
+    });
+    box.querySelectorAll('[data-guide-toggle]').forEach(function (c) {
+      c.addEventListener('change', function () {
+        var name = c.getAttribute('data-guide-toggle');
+        setToggle(name, c.checked); save(name, c.checked ? 'on' : 'off'); sync();
+      });
+    });
   });
 
   function toggleFocus(on) { setFocus(on); save('focus', on ? 'on' : 'off'); sync(); }
@@ -101,6 +122,8 @@
     if (k === 'theme') setTheme(THEMES.indexOf(e.newValue) < 0 ? 'auto' : e.newValue);
     else if (k === 'size' && /^[0-3]$/.test(e.newValue || '')) setSize(parseInt(e.newValue, 10));
     else if (k === 'focus') setFocus(e.newValue === 'on');
+    else if (CHOICES[k]) setChoice(k, e.newValue);
+    else if (TOGGLES.indexOf(k) >= 0) setToggle(k, e.newValue === 'on');
     else return;
     sync();
   });
@@ -426,6 +449,7 @@
         var span = end - r.top - (window.innerHeight - top);
         var done = span > 0 ? Math.min(1, Math.max(0, (top - r.top) / span)) : 1;
         var left = total * (1 - done);
+        if (done >= 0.98) noteRead(main.getAttribute('data-guide-slug'));
         return Math.round(done * 100) + '%' + (done >= 0.995 ? '' : ' · ' + (left < 1 ? '<1' : Math.ceil(left)) + ' min left');
       };
       var showProgress = function (fromScroll) {
@@ -442,6 +466,218 @@
       window.addEventListener('load', function () { showProgress(false); });
       showProgress(false);
     }
+  }
+
+  /* ---------- previews of figure and section references, and "back to where you were" ---------- */
+  // Mouse: hovering a reference shows the figure or the start of the section; a click still jumps.
+  // Touch: the first tap shows the preview with a "Go to" link. After a jump within the page a small
+  // button returns to the reading position (as Kindle's Page Flip does).
+  if (body) {
+    var hover = window.matchMedia('(hover: hover) and (pointer: fine)');
+    var refPop = null, refFrom = null, refTimer = null, pages = {};
+    var isRef = function (a) {
+      if (a.classList.contains('footnote-ref') || a.classList.contains('footnote-back')) return false;
+      var h = a.getAttribute('href') || '';
+      return h.charAt(0) === '#' ? h.length > 1 : (a.origin === location.origin && /^\/besteps\/guide\/[^/]+\/#./.test(a.pathname + a.hash));
+    };
+    var samePage = function (a) { return a.origin === location.origin && a.pathname === location.pathname; };
+    var targetDoc = function (a) {
+      if (samePage(a)) return Promise.resolve(document);
+      if (!pages[a.pathname]) {
+        pages[a.pathname] = fetch(a.href.split('#')[0]).then(function (r) { return r.text(); })
+          .then(function (t) { return new DOMParser().parseFromString(t, 'text/html'); });
+      }
+      return pages[a.pathname];
+    };
+    var excerpt = function (h) {
+      var text = '', el = h.nextElementSibling;
+      while (el && text.length < 260 && !/^H[1-3]$/.test(el.tagName)) {
+        if (/^(P|UL|OL|BLOCKQUOTE)$/.test(el.tagName)) text += ' ' + el.textContent;
+        el = el.nextElementSibling;
+      }
+      text = text.replace(/\s+/g, ' ').trim();
+      if (text.length > 260) text = text.slice(0, text.lastIndexOf(' ', 250)) + ' …';
+      return text;
+    };
+    var buildPreview = function (a, doc) {
+      var id = decodeURIComponent(a.hash.slice(1));
+      var el = doc.getElementById(id);
+      if (!el) return null;
+      var card = document.createElement('div');
+      var fig = el.tagName === 'FIGURE' ? el : null;
+      if (fig) {
+        var img = fig.querySelector('img');
+        if (img) {
+          var small = new Image();
+          var set = (img.getAttribute('srcset') || '').split(',')[0].trim().split(/\s+/)[0];
+          small.src = set || img.getAttribute('src');
+          small.alt = '';
+          card.appendChild(small);
+        }
+        var cap = fig.querySelector(':scope > figcaption');
+        if (cap) { var c = document.createElement('p'); c.className = 'guide-ref-caption'; c.textContent = cap.textContent.replace(/\s+/g, ' ').trim(); card.appendChild(c); }
+      } else {
+        if (!samePage(a)) {
+          var where = doc.querySelector('.guide-main[data-guide-label]');
+          var k = document.createElement('p'); k.className = 'guide-ref-kicker';
+          k.textContent = where ? where.getAttribute('data-guide-label') : '';
+          card.appendChild(k);
+        }
+        var t = document.createElement('p'); t.className = 'guide-ref-title';
+        t.textContent = el.textContent.replace(/\s+/g, ' ').trim();
+        card.appendChild(t);
+        var x = excerpt(el);
+        if (x) { var p = document.createElement('p'); p.className = 'guide-ref-text'; p.textContent = x; card.appendChild(p); }
+      }
+      return card;
+    };
+    var closeRef = function () { clearTimeout(refTimer); if (refPop) refPop.remove(); refPop = null; refFrom = null; };
+    var placeRef = function () {
+      if (!refPop || !refFrom) return;
+      if (phone.matches && !hover.matches) { refPop.style.left = refPop.style.top = ''; return; }
+      var r = refFrom.getBoundingClientRect(), w = refPop.offsetWidth, hgt = refPop.offsetHeight;
+      var left = Math.min(Math.max(12, r.left + r.width / 2 - w / 2), document.documentElement.clientWidth - w - 12);
+      var top = r.bottom + 10 + hgt > window.innerHeight - 12 && r.top - hgt - 10 > 60 ? r.top - hgt - 10 : r.bottom + 10;
+      refPop.style.left = (left + window.scrollX) + 'px';
+      refPop.style.top = (top + window.scrollY) + 'px';
+    };
+    var showRef = function (a, touch) {
+      targetDoc(a).then(function (doc) {
+        if (refFrom !== a) return;               // the pointer has moved on
+        var card = buildPreview(a, doc);
+        if (!card) { refFrom = null; return; }
+        refPop = document.createElement('div');
+        refPop.className = 'guide-note-pop guide-ref-pop' + (touch ? ' is-touch' : '');
+        if (touch) {
+          refPop.setAttribute('role', 'dialog');
+          refPop.setAttribute('aria-label', 'Preview: ' + a.textContent.trim());
+          var go = document.createElement('a');
+          go.className = 'guide-ref-go';
+          go.href = a.href;
+          go.textContent = 'Go to ' + a.textContent.trim() + ' →';
+          go.addEventListener('click', function () { if (samePage(a)) rememberSpot(); closeRef(); });
+          card.appendChild(go);
+          var x = document.createElement('button');
+          x.type = 'button'; x.className = 'guide-note-close'; x.setAttribute('aria-label', 'Close preview'); x.innerHTML = ICON.close;
+          x.addEventListener('click', closeRef);
+          refPop.appendChild(x);
+        } else {
+          refPop.setAttribute('aria-hidden', 'true');
+        }
+        refPop.insertBefore(card, refPop.firstChild);
+        document.body.appendChild(refPop);
+        placeRef();
+        refPop.querySelectorAll('img').forEach(function (i) { i.addEventListener('load', placeRef); });
+      }, function () { refFrom = null; });
+    };
+    body.querySelectorAll('a[href]').forEach(function (a) {
+      if (!isRef(a)) return;
+      a.addEventListener('mouseenter', function () {
+        if (!hover.matches) return;
+        closeRef(); refFrom = a;
+        refTimer = setTimeout(function () { showRef(a, false); }, 350);
+      });
+      a.addEventListener('mouseleave', function () { if (hover.matches) closeRef(); });
+      a.addEventListener('click', function (e) {
+        if (!hover.matches && refFrom !== a) {        // touch: first tap previews
+          e.preventDefault();
+          closeRef(); refFrom = a; showRef(a, true);
+          return;
+        }
+        closeRef();
+        if (samePage(a)) rememberSpot();
+      });
+    });
+    document.addEventListener('click', function (e) {
+      if (refPop && !refPop.contains(e.target) && !(refFrom && refFrom.contains(e.target))) closeRef();
+    });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeRef(); });
+    window.addEventListener('resize', placeRef);
+
+    // the way back
+    var back = null, backY = null;
+    var hideBack = function () { if (back) back.classList.remove('is-shown'); backY = null; };
+    function rememberSpot() {
+      backY = window.scrollY;
+      if (!back) {
+        back = document.createElement('button');
+        back.type = 'button';
+        back.className = 'guide-back-chip';
+        back.innerHTML = '<span aria-hidden="true">↩</span> Back<span class="guide-back-more"> to where you were</span>';
+        back.addEventListener('click', function () { var y = backY; hideBack(); if (y !== null) window.scrollTo(0, y); });
+        document.body.appendChild(back);
+      }
+      setTimeout(function () { back.classList.add('is-shown'); }, 50);
+    }
+    window.addEventListener('scroll', function () {
+      if (backY !== null && Math.abs(window.scrollY - backY) < 150) hideBack();   // the reader went back by hand
+    }, { passive: true });
+  }
+
+  /* ---------- tick-offs: the book's exercises and the "Rule N" checklist (kept in this browser) ---------- */
+  // Found by the book's own wording, so nothing is added to the text: a bold "Exercise N" gets a "Done" box,
+  // and a list whose items all start "Rule N" becomes a checklist. Saved per section heading, so a tick
+  // stays with its item if the chapter is edited.
+  if (main && body) {
+    var tickKey = 'ticks:' + main.getAttribute('data-guide-slug');
+    var ticks = {};
+    try { ticks = JSON.parse(load(tickKey) || '{}') || {}; } catch (e) { ticks = {}; }
+    var sectionOf = function (el) {
+      var hs = body.querySelectorAll('h2[id], h3[id]'), id = 'top';
+      for (var i = 0; i < hs.length; i++) { if (hs[i].compareDocumentPosition(el) & Node.DOCUMENT_POSITION_FOLLOWING) id = hs[i].id; else break; }
+      return id;
+    };
+    var makeTick = function (id, label) {
+      var box = document.createElement('input');
+      box.type = 'checkbox';
+      box.checked = !!ticks[id];
+      box.setAttribute('aria-label', label);
+      box.addEventListener('change', function () {
+        if (box.checked) ticks[id] = Date.now(); else delete ticks[id];
+        save(tickKey, JSON.stringify(ticks));
+      });
+      return box;
+    };
+    body.querySelectorAll('p strong, p em').forEach(function (t) {
+      // the outermost bold/italic run that reads "Exercise N…"
+      if (/^(STRONG|EM)$/.test(t.parentElement.tagName)) return;
+      var m = t.textContent.trim().match(/^Exercise\s+(\d+)/);
+      if (!m) return;
+      var tick = document.createElement('label');
+      tick.className = 'guide-tick';
+      tick.appendChild(makeTick(sectionOf(t) + ':exercise-' + m[1], 'Exercise ' + m[1] + ' done'));
+      tick.appendChild(document.createTextNode('Done'));
+      t.parentNode.insertBefore(tick, t.nextSibling);
+    });
+    body.querySelectorAll('ul, ol').forEach(function (list) {
+      var items = Array.prototype.filter.call(list.children, function (li) { return li.tagName === 'LI'; });
+      if (items.length < 3 || !items.every(function (li) { return /^Rule\s+\d+/.test(li.textContent.trim()); })) return;
+      list.classList.add('guide-checklist');
+      var sec = sectionOf(list);
+      items.forEach(function (li) {
+        var n = li.textContent.trim().match(/^Rule\s+(\d+)/)[1];
+        li.insertBefore(makeTick(sec + ':rule-' + n, 'Rule ' + n + ' done'), li.firstChild);
+      });
+    });
+  }
+
+  /* ---------- chapters read: a tick in the contents and on the home cards ---------- */
+  function markRead() {
+    document.querySelectorAll('.guide-toc-item > a, .guide-card').forEach(function (a) {
+      var m = a.pathname.match(/\/besteps\/guide\/([^/]+)\/$/);
+      if (!m || !load('read:' + m[1]) || a.querySelector('.guide-read-mark')) return;
+      var mark = document.createElement('span');
+      mark.className = 'guide-read-mark';
+      mark.title = 'Read';
+      mark.innerHTML = '<svg class="guide-icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span class="guide-visually-hidden"> (read)</span>';
+      a.appendChild(mark);
+    });
+  }
+  markRead();
+  function noteRead(slug) {
+    if (load('read:' + slug)) return;
+    save('read:' + slug, String(Date.now()));
+    markRead();
   }
 
   // home: a link back to the most recent chapter

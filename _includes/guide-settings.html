@@ -1,4 +1,4 @@
-{% comment %} Reading settings ("Aa"): theme, text size, focus mode. Used in the guide bar (include.id = "bar") and
+{% comment %} Reading settings ("Aa"): theme, text size, font, line spacing, letter spacing, focus mode. Used in the guide bar (include.id = "bar") and
 in the phone drawer (include.id = "drawer"); assets/js/guide-reading.js keeps both in step. {% endcomment %}
 <div class="guide-settings guide-settings--{{ include.id }}" data-guide-settings>
   <button type="button" class="guide-settings-btn" data-guide-settings-btn aria-expanded="false" aria-controls="guide-settings-{{ include.id }}"{% if include.id == 'drawer' %}>
@@ -26,7 +26,35 @@ in the phone drawer (include.id = "drawer"); assets/js/guide-reading.js keeps bo
         <button type="button" data-guide-size-step="1" aria-label="Larger text"><span aria-hidden="true">A+</span></button>
       </div>
     </div>
-    <label class="guide-set guide-set-focus">
+    <fieldset class="guide-set">
+      <legend>Font</legend>
+      <div class="guide-set-options guide-set-options--3">
+        {% assign guide_fonts = "poppins:Poppins,sans:Source Sans,serif:Source Serif" | split: "," %}
+        {% for pair in guide_fonts %}{% assign kv = pair | split: ":" %}
+        <label class="guide-set-option guide-set-option--font-{{ kv[0] }}">
+          <input type="radio" name="guide-font-{{ include.id }}" value="{{ kv[0] }}" data-guide-choice="font">
+          <span>{{ kv[1] }}</span>
+        </label>
+        {% endfor %}
+      </div>
+    </fieldset>
+    <fieldset class="guide-set">
+      <legend>Line spacing</legend>
+      <div class="guide-set-options guide-set-options--3">
+        {% assign guide_leadings = "0:Tight,1:Normal,2:Loose" | split: "," %}
+        {% for pair in guide_leadings %}{% assign kv = pair | split: ":" %}
+        <label class="guide-set-option guide-set-option--leading-{{ kv[0] }}">
+          <input type="radio" name="guide-leading-{{ include.id }}" value="{{ kv[0] }}" data-guide-choice="leading">
+          <span>{{ kv[1] }}</span>
+        </label>
+        {% endfor %}
+      </div>
+    </fieldset>
+    <label class="guide-set guide-set-check">
+      <input type="checkbox" data-guide-toggle="spacing">
+      <span>Wider letter spacing</span>
+    </label>
+    <label class="guide-set guide-set-check guide-set-focus">
       <input type="checkbox" data-guide-focus-toggle>
       <span>Focus mode <small>Hide the side columns (F)</small></span>
     </label>
