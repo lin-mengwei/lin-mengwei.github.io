@@ -450,7 +450,20 @@ body#guide {
   .guide-body {
     h2, h3 { font-family: $guide-serif; font-size-adjust: none; color: $guide-ink; line-height: 1.25; scroll-margin-top: 4.5rem; }
     h2 { font-size: 1.65rem; font-weight: 700; margin: 2.8rem 0 1rem; padding-top: 1.4rem; border-top: 1px solid $guide-line; }
-    h3 { font-size: 1.25rem; font-weight: 600; margin: 2.1rem 0 0.7rem; }
+    h3 { position: relative; padding-left: 0.85rem; font-size: 1.25rem; font-weight: 600; margin: 2.4rem 0 0.7rem;
+      // a short bar sets subheadings apart from the text
+      &::before { content: ""; position: absolute; left: 0; top: 0.18em; bottom: 0.18em; width: 3px; border-radius: 2px; background: $ubse; } }
+    // reading rhythm (guide-reading.js): the section label carries the rule above a major section
+    .guide-section-kicker { margin: 3.8rem 0 0.45rem; padding-top: 1.9rem; border-top: 1px solid $guide-line;
+      font-family: $font-family-base; font-size-adjust: none; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: $ubse; }
+    .guide-section-kicker + h2 { margin-top: 0; padding-top: 0; border-top: 0; scroll-margin-top: 6.5rem; }
+    .guide-lead { font-size: 1.1em; line-height: 1.7; color: $guide-ink; }
+    .guide-pause { display: flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 0.9rem; margin: 2.6rem 0 0; padding: 0.75rem 1rem;
+      border: 1px dashed var(--g-line-strong); border-radius: 10px; font-family: $font-family-base; font-size-adjust: none;
+      font-size: 0.82rem; line-height: 1.4; letter-spacing: 0; word-spacing: normal; color: $guide-muted; }
+    .guide-pause-done { font-weight: 600; color: $ubse; }
+    a.guide-pause-next { margin-left: auto; font-weight: 600; text-decoration: none; }
     .run-in { font-weight: 700; color: $guide-ink; }
     .ubse-blue, .ubse-blue strong { color: $ubse; }
 
@@ -830,6 +843,9 @@ body#guide {
     .guide-body {
       h2 { font-size: 1.4rem; }
       h3 { font-size: 1.15rem; }
+      .guide-section-kicker { margin-top: 3rem; padding-top: 1.5rem; }
+      .guide-lead { font-size: 1.05em; }
+      a.guide-pause-next { margin-left: 0; }
       .figure-row { flex-direction: column; align-items: stretch; gap: 1.5rem; }
       .fig-wide, .fig-half { width: 100%; }
       ul, ol { margin-left: 1.1rem; }

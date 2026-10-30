@@ -627,6 +627,64 @@
     }, { passive: true });
   }
 
+  /* ---------- reading rhythm: section labels, lead paragraphs, pauses between sections ---------- */
+  // Each major section opens with "2 / 6 · 7 min" and a slightly larger first paragraph, and ends with a
+  // small marker ("End of section 1 · 18 min left · Next: …"), so a long chapter has places to stop.
+  // Nothing in the text changes: the labels and markers sit between the book's own blocks.
+  if (main && body) {
+    var parts = Array.prototype.filter.call(body.children, function (el) { return el.tagName === 'H2' && el.id !== 'notes'; });
+    if (parts.length >= 2) {
+      var notesSec = body.querySelector('.guide-notes');
+      var weigh = function (from, to) {
+        var w = 0, el = from.nextElementSibling;
+        while (el && el !== to && el !== notesSec) {
+          if (el.tagName !== 'PRE' && !el.classList.contains('pre-scroll')) {
+            w += (el.textContent.match(/\w[\w'’-]*/g) || []).length / 200;
+            w += el.querySelectorAll('img').length * 12 / 60 + (el.tagName === 'IMG' ? 0.2 : 0);
+          }
+          el = el.nextElementSibling;
+        }
+        return w;
+      };
+      var sizes = parts.map(function (h, i) { return weigh(h, parts[i + 1]); });
+      var sum = sizes.reduce(function (a, b) { return a + b; }, 0) || 1;
+      var totalMin = +main.getAttribute('data-guide-minutes') || sum;
+      // whole minutes that add up to the chapter's "min read" (largest remainders get the spare minutes)
+      var whole = Math.round(totalMin);
+      var raw = sizes.map(function (x) { return Math.max(1, whole * x / sum); });
+      var mins = raw.map(Math.floor);
+      var spare = whole - mins.reduce(function (a, b) { return a + b; }, 0);
+      raw.map(function (x, i) { return [x - Math.floor(x), i]; }).sort(function (a, b) { return b[0] - a[0]; })
+        .forEach(function (r) { if (spare > 0) { mins[r[1]]++; spare--; } });
+      var chapterLabel = main.getAttribute('data-guide-label') || 'this chapter';
+      parts.forEach(function (h, i) {
+        var k = document.createElement('p');
+        k.className = 'guide-section-kicker';
+        k.setAttribute('aria-hidden', 'true');
+        k.textContent = (i + 1) + ' / ' + parts.length + ' · ' + mins[i] + ' min';
+        h.parentNode.insertBefore(k, h);
+        var first = h.nextElementSibling;
+        if (first && first.tagName === 'P' && first.textContent.trim().length > 120) first.classList.add('guide-lead');
+        var next = parts[i + 1];
+        if (!next) return;
+        var left = mins.slice(i + 1).reduce(function (a, b) { return a + b; }, 0);
+        var pause = document.createElement('div');
+        pause.className = 'guide-pause';
+        var done = document.createElement('span');
+        done.className = 'guide-pause-done';
+        done.textContent = '✓ End of section ' + (i + 1);
+        var rest = document.createElement('span');
+        rest.textContent = left + ' min left in ' + chapterLabel;
+        var go = document.createElement('a');
+        go.className = 'guide-pause-next';
+        go.href = '#' + next.id;
+        go.textContent = 'Next: ' + next.textContent.replace(/\s+/g, ' ').trim() + ' ↓';
+        pause.appendChild(done); pause.appendChild(rest); pause.appendChild(go);
+        body.insertBefore(pause, next.previousElementSibling && next.previousElementSibling.classList.contains('guide-section-kicker') ? next.previousElementSibling : next);
+      });
+    }
+  }
+
   /* ---------- tick-offs: the book's exercises and the "Rule N" checklist (kept in this browser) ---------- */
   // Found by the book's own wording, so nothing is added to the text: a bold "Exercise N" gets a "Done" box,
   // and a list whose items all start "Rule N" becomes a checklist. Saved per section heading, so a tick
