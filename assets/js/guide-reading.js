@@ -4,9 +4,9 @@
   'use strict';
   var root = document.documentElement;
   var KEY = 'besteps-guide:';
-  var THEMES = ['auto', 'day', 'sepia', 'night'];
+  var THEMES = ['auto', 'day', 'green', 'night'];
   var SIZES = ['90%', '100%', '112%', '125%'];
-  var BAR_COLOURS = { day: '#e4edf3', sepia: '#ece1c6', night: '#20262f' };
+  var BAR_COLOURS = { day: '#e4edf3', green: '#dbe6d3', night: '#20262f' };
   var dark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
   // the phone layout (keep in step with _sass/_guide.scss)
   var phone = window.matchMedia('(max-width: 767px), (max-height: 500px) and (max-width: 1099px)');
@@ -391,6 +391,56 @@
           else window.scrollTo(0, saved.p * (document.documentElement.scrollHeight - window.innerHeight));
         });
       }, 600);
+    }
+  }
+
+  /* ---------- how far through the page: "42% · 8 min left" ---------- */
+  // Same rate as the "min read" label (scripts/build_guide.py): 200 words a minute, 12 s per figure,
+  // footnotes and code left out. Shown in the "On this page" column when it is on screen, otherwise as a
+  // small label in the corner while the reader scrolls. Pages under two minutes get none.
+  if (main && body) {
+    var count = body.cloneNode(true);
+    count.querySelectorAll('.guide-notes, pre, button').forEach(function (el) { el.remove(); });
+    var words = (count.textContent.match(/\w[\w'’-]*/g) || []).length;
+    var total = words / 200 + body.querySelectorAll('img').length * 12 / 60;
+    // lectures show a rounded "min read" under the title: start from that figure so the two agree
+    if (+main.getAttribute('data-guide-minutes') > 0) total = +main.getAttribute('data-guide-minutes');
+    var column = document.querySelector('.guide-onpage');
+    if (total >= 2) {
+      var line = document.createElement('p');
+      line.className = 'guide-onpage-progress';
+      if (column) { column.removeAttribute('aria-hidden'); column.appendChild(line); }
+      var chip = document.createElement('div');
+      chip.className = 'guide-progress-chip';
+      chip.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(chip);
+      var chipTimer = null, lastText = '';
+
+      var progressText = function () {
+        var barEl = document.querySelector('.guide-bar');
+        var top = barEl ? barEl.getBoundingClientRect().bottom : 0;
+        var notes = body.querySelector('.guide-notes');
+        var r = body.getBoundingClientRect();
+        var end = notes ? notes.getBoundingClientRect().top : r.bottom;
+        // 0 % while the text starts below the bar, 100 % once its last line is in view
+        var span = end - r.top - (window.innerHeight - top);
+        var done = span > 0 ? Math.min(1, Math.max(0, (top - r.top) / span)) : 1;
+        var left = total * (1 - done);
+        return Math.round(done * 100) + '%' + (done >= 0.995 ? '' : ' · ' + (left < 1 ? '<1' : Math.ceil(left)) + ' min left');
+      };
+      var showProgress = function (fromScroll) {
+        var text = progressText();
+        var inColumn = column && getComputedStyle(column).display !== 'none';
+        if (text !== lastText) { line.textContent = chip.textContent = text; lastText = text; }
+        if (inColumn || !fromScroll) return;
+        chip.classList.add('is-shown');
+        clearTimeout(chipTimer);
+        chipTimer = setTimeout(function () { chip.classList.remove('is-shown'); }, 1500);
+      };
+      window.addEventListener('scroll', function () { showProgress(true); }, { passive: true });
+      window.addEventListener('resize', function () { showProgress(false); });
+      window.addEventListener('load', function () { showProgress(false); });
+      showProgress(false);
     }
   }
 

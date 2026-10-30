@@ -2,7 +2,7 @@
 // The BESTEPS Guide web edition (/besteps/guide/)
 // Everything is scoped under body#guide so no other page changes.
 // Colours follow the book cover (UBSE blue). All colours are CSS custom properties so the reader can switch
-// between the Day, Sepia and Night themes (html[data-guide-theme], set before first paint in _includes/head.html).
+// between the Day, Green and Night themes (html[data-guide-theme], set before first paint in _includes/head.html).
 // ======================
 
 $ubse-brand: #005A8B;            // the cover band and its buttons keep the brand blue in every theme
@@ -44,14 +44,16 @@ html:has(body#guide) { overflow-x: clip; scroll-behavior: auto !important; }
   --g-btn-bg: #005A8B; --g-btn-text: #ffffff; --g-btn-hover: #003f63; --g-figure-card: transparent; --g-figure-pad: 0; --g-flow-card: transparent; --g-photo: 1;
   color-scheme: light;
 }
-@mixin guide-sepia {
-  --g-bg: #f6efdf; --g-surface: #fbf6ea; --g-text: #3f3428; --g-ink: #2e251b; --g-muted: #6e6050; --g-faint: #71614b;
-  --g-accent: #6b4a1f; --g-accent-strong: #4d3412; --g-accent-35: rgba(107, 74, 31, 0.35); --g-accent-45: rgba(107, 74, 31, 0.45);
-  --g-tint: #efe4cb; --g-tint-2: #f1e8d4; --g-line: #e3d6bb; --g-line-strong: #d8c8a6; --g-input-border: #d8c8a6;
-  --g-bar-from: #ece1c6; --g-bar-to: #f1e8d4; --g-code-bg: #efe6d2; --g-code-border: #e0d3b6; --g-code-text: #3f3428;
-  --g-icode-bg: #ece2cb; --g-icode-text: #4d3412; --g-thumb: #cdbd9b; --g-matter: #c9b48c;
-  --g-shadow: rgba(107, 74, 31, 0.14); --g-shadow-strong: rgba(60, 40, 10, 0.16); --g-mark: rgba(107, 74, 31, 0.18); --g-scroll-hint: rgba(46, 37, 27, 0.2);
-  --g-btn-bg: #6b4a1f; --g-btn-text: #ffffff; --g-btn-hover: #4d3412; --g-figure-card: #fffdf7; --g-figure-pad: 0.5rem; --g-flow-card: #fffdf7; --g-photo: 1;
+// Green: the eye-care theme, in the sage green of the personal site ($color-primary #5f8151), darkened where
+// it carries text so links and buttons stay at 4.5:1 or better.
+@mixin guide-green {
+  --g-bg: #e8efe3; --g-surface: #f1f6ed; --g-text: #2c3829; --g-ink: #1d281b; --g-muted: #52614c; --g-faint: #55644f;
+  --g-accent: #476540; --g-accent-strong: #34492d; --g-accent-35: rgba(71, 101, 64, 0.35); --g-accent-45: rgba(71, 101, 64, 0.45);
+  --g-tint: #dbe6d3; --g-tint-2: #e1eada; --g-line: #cfdcc6; --g-line-strong: #bfcdb4; --g-input-border: #bfcdb4;
+  --g-bar-from: #dbe6d3; --g-bar-to: #e4ecde; --g-code-bg: #dfe8d8; --g-code-border: #cbd8c1; --g-code-text: #2c3829;
+  --g-icode-bg: #d8e3cf; --g-icode-text: #34492d; --g-thumb: #b3c4a7; --g-matter: #a9bd9b;
+  --g-shadow: rgba(95, 129, 81, 0.16); --g-shadow-strong: rgba(30, 45, 25, 0.16); --g-mark: rgba(95, 129, 81, 0.26); --g-scroll-hint: rgba(29, 40, 27, 0.2);
+  --g-btn-bg: #4a6942; --g-btn-text: #ffffff; --g-btn-hover: #34492d; --g-figure-card: #fbfdf9; --g-figure-pad: 0.5rem; --g-flow-card: #fbfdf9; --g-photo: 1;
   color-scheme: light;
 }
 @mixin guide-night {
@@ -72,12 +74,12 @@ html.guide-viewer-open { overflow: hidden; }
 html[data-guide-theme="night"] { color-scheme: dark; }
 
 body#guide { @include guide-day; }
-html[data-guide-theme="sepia"] body#guide { @include guide-sepia; }
+html[data-guide-theme="green"] body#guide { @include guide-green; }
 html[data-guide-theme="night"] body#guide { @include guide-night; }
 // without JavaScript, follow the system
 @media (prefers-color-scheme: dark) { html:not([data-guide-theme]) body#guide { @include guide-night; } }
 // the page background behind the body (overscroll, short pages)
-html[data-guide-theme="sepia"] { background: #f6efdf; }
+html[data-guide-theme="green"] { background: #e8efe3; }
 html[data-guide-theme="night"] { background: #1b1f27; }
 
 // ---------- text size steps (A- / A+) and focus mode ----------
@@ -174,6 +176,8 @@ body#guide {
     font: inherit; font-size: 0.88rem; font-weight: 600; cursor: pointer;
     &:hover, &[aria-expanded="true"] { border-color: $ubse; color: $ubse; } }
   .guide-settings-aa { font-family: $guide-serif; font-size: 1.05rem; font-weight: 600; line-height: 1; }
+  // the light/dark sign says the panel holds the themes, not only the text size
+  .guide-settings-btn .guide-icon--contrast { font-size: 0.95rem; margin-right: -0.2rem; }
   .guide-settings-panel { position: absolute; right: 0; top: calc(100% + 0.45rem); z-index: 70; width: 18rem; padding: 1rem;
     background: $guide-surface; border: 1px solid $guide-line; border-radius: 10px; box-shadow: 0 12px 32px var(--g-shadow-strong);
     font-size: 0.85rem; color: $guide-text; text-align: left;
@@ -191,7 +195,7 @@ body#guide {
     input:focus-visible + span { outline: 2px solid $ubse; outline-offset: 3px; } }
   // each theme choice shows its own page colours
   .guide-set-option--day span { background: #ffffff; color: #1d2a33; border-color: #cddbe5; }
-  .guide-set-option--sepia span { background: #f6efdf; color: #2e251b; border-color: #d8c8a6; }
+  .guide-set-option--green span { background: #e8efe3; color: #1d281b; border-color: #bfcdb4; }
   .guide-set-option--night span { background: #1b1f27; color: #eef1f4; border-color: #3a4350; }
   .guide-set-stepper { display: flex; align-items: center; gap: 0.5rem;
     button { width: 3rem; height: 2.6rem; border: 1px solid var(--g-input-border); border-radius: 6px; background: $guide-surface;
@@ -593,6 +597,16 @@ body#guide {
     a { color: $ubse; font-weight: 600; }
     &[hidden] { display: none; } }
   .guide-resume-forget { margin-left: auto; width: 2rem; height: 2rem; }
+
+  // reading progress: "42% · 8 min left"
+  .guide-onpage-progress { position: sticky; bottom: 0; margin: 1rem 0 0; padding: 0.6rem 0 0.5rem 0.75rem; border-top: 1px solid $guide-line;
+    background: var(--g-bg); color: $guide-muted; font-size: 0.78rem; font-variant-numeric: tabular-nums;
+    &:empty { display: none; } }
+  .guide-progress-chip { position: fixed; right: 1rem; bottom: 1rem; z-index: 50; padding: 0.35rem 0.75rem; border: 1px solid $guide-line;
+    border-radius: 999px; background: $guide-surface; color: $guide-muted; box-shadow: 0 4px 14px var(--g-shadow);
+    font-size: 0.78rem; font-weight: 600; font-variant-numeric: tabular-nums; pointer-events: none;
+    opacity: 0; transition: opacity 0.25s;
+    &.is-shown { opacity: 1; } }
 
   mark.guide-hit { background: var(--g-mark); color: inherit; border-radius: 2px; padding: 0 0.1em; }
 

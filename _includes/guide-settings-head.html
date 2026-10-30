@@ -1,17 +1,18 @@
 {% comment %} Reader settings for The BESTEPS Guide, applied before first paint (localStorage, keys "besteps-guide:*").
-Theme: auto | day | sepia | night (auto follows the system). Size: 0-3 (90/100/112/125 %). Focus: on | off. {% endcomment %}
+Theme: auto | day | green | night (auto follows the system). Size: 0-3 (90/100/112/125 %). Focus: on | off. {% endcomment %}
 <script>
 (function () {
   var d = document.documentElement, get = function (k) { try { return localStorage.getItem('besteps-guide:' + k); } catch (e) { return null; } };
   var pref = get('theme') || 'auto';
+  if (pref === 'sepia') pref = 'green';
   var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   var theme = pref === 'auto' ? (dark ? 'night' : 'day') : pref;
-  if (['day', 'sepia', 'night'].indexOf(theme) < 0) { theme = 'day'; pref = 'auto'; }
+  if (['day', 'green', 'night'].indexOf(theme) < 0) { theme = 'day'; pref = 'auto'; }
   d.setAttribute('data-guide-pref', pref);
   d.setAttribute('data-guide-theme', theme);
   var size = get('size'); d.setAttribute('data-guide-size', /^[0-3]$/.test(size || '') ? size : '1');
   d.setAttribute('data-guide-focus', get('focus') === 'on' ? 'on' : 'off');
   var m = document.querySelector('meta[name="theme-color"]');
-  if (m) m.setAttribute('content', { day: '#e4edf3', sepia: '#ece1c6', night: '#20262f' }[theme]);
+  if (m) m.setAttribute('content', { day: '#e4edf3', green: '#dbe6d3', night: '#20262f' }[theme]);
 })();
 </script>

@@ -11,6 +11,7 @@ Each is a 24×24 stroke drawing that takes the text colour and is hidden from sc
 {%- when "close" -%}<path d="M6 6l12 12M18 6L6 18"/>
 {%- when "expand" -%}<path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7"/>
 {%- when "type" -%}<path d="M3 18l4.5-12L12 18M4.6 14h5.8M14 18l3.5-8 3.5 8M15 15.5h5"/>
+{%- when "contrast" -%}<circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor" stroke="none"/>
 {%- when "check" -%}<path d="M5 12.5l4.5 4.5L19 7"/>
 {%- endcase -%}
 </svg>
