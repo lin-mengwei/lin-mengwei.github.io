@@ -82,7 +82,9 @@
       bar.style.width = (done * 100).toFixed(1) + '%';
     }
     if (!headings.length) return;
-    var limit = topOffset();
+    // a heading counts as reached once it is near the top: major sections stop lower (6.5rem, to show
+    // their label above), so the line sits below that
+    var limit = topOffset() + 48;
     var id = headings[0].id;
     for (var i = 0; i < headings.length; i++) {
       if (headings[i].getBoundingClientRect().top <= limit) id = headings[i].id; else break;
