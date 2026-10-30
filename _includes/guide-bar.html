@@ -11,6 +11,7 @@
       {% if page.layout == 'guide-home' %}<button type="button" class="guide-bar-search-toggle" data-guide-search-toggle aria-label="Search the Guide" aria-expanded="false">{% include guide-icon.html name="search" %}</button>{% endif %}
       {% include guide-search.html %}
       {% include guide-settings.html id="bar" %}
+      {% unless page.layout == 'guide-home' %}<button type="button" class="guide-mynotes-btn" data-guide-notes-btn aria-expanded="false" aria-controls="guide-mynotes" aria-label="Notes" title="Notes (N)" hidden>{% include guide-icon.html name="pen" %}</button>{% endunless %}
       <a class="guide-btn guide-btn--solid guide-bar-pdf" href="{{ site.data.besteps.guide.url }}" target="_blank" rel="noopener">
         {% include guide-icon.html name="download" %} <span>PDF{% if site.data.besteps_guide.pdf_size %}<span class="guide-pdf-size"> · {{ site.data.besteps_guide.pdf_size }}</span>{% endif %}</span>
       </a>

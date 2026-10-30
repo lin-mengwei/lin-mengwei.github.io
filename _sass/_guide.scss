@@ -810,3 +810,71 @@ body#guide {
     .guide-sidebar, .guide-onpage { display: none; }
   }
 }
+
+// ---------- the reader's notes (assets/js/guide-notes.js) ----------
+body#guide {
+  .guide-mynotes-btn { display: inline-flex; align-items: center; justify-content: center; width: 2.4rem; height: 2.1rem; padding: 0;
+    border: 1px solid var(--g-input-border); border-radius: 6px; background: $guide-surface; color: $guide-ink; font-size: 1rem; cursor: pointer;
+    &:hover, &[aria-expanded="true"] { border-color: $ubse; color: $ubse; }
+    &[hidden] { display: none; } }
+  .guide-mynotes { position: fixed; z-index: 65; top: $sticky-top; right: 0; bottom: 0; width: 20rem; overflow-y: auto; display: flex; flex-direction: column;
+    padding: 1rem 1.1rem 1.25rem; background: $guide-surface; border-left: 1px solid $guide-line; box-shadow: -8px 0 24px var(--g-shadow);
+    font-size: 0.9rem; color: $guide-text;
+    &[hidden] { display: none; } }
+  .guide-mynotes-head { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.6rem; }
+  .guide-mynotes-title { margin: 0; font-family: $guide-serif; font-size: 1.15rem; font-weight: 700; color: $guide-ink; }
+  .guide-mynotes-chapter { font-size: 0.82rem; color: $guide-muted; }
+  .guide-mynotes-close, .guide-mynotes-quote-x { display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 6px;
+    background: none; color: $guide-muted; cursor: pointer;
+    &:hover { color: $guide-ink; } }
+  .guide-mynotes-close { margin-left: auto; width: 2.5rem; height: 2.5rem; font-size: 1.1rem; }
+  .guide-mynotes-at { margin: 0 0 0.4rem; font-size: 0.78rem; font-weight: 600; color: $ubse; }
+  .guide-mynotes-input { display: block; width: 100%; min-height: 5.5rem; resize: vertical; padding: 0.6rem 0.7rem; border: 1px solid var(--g-input-border);
+    border-radius: 6px; background: var(--g-bg); color: $guide-text; font: inherit; font-size: 0.92rem; line-height: 1.5; }
+  .guide-mynotes-actions { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.5rem; }
+  .guide-mynotes-save { padding: 0.45rem 0.95rem; }
+  .guide-mynotes-cancel, .guide-mynotes-meta button, .guide-mynotes-export { min-height: 1.75rem; padding: 0.25rem 0.2rem; border: 0; background: none;
+    font: inherit; font-weight: 600; color: $ubse; cursor: pointer;
+    &[hidden] { display: none; } }
+  .guide-mynotes-hint { margin-left: auto; font-size: 0.72rem; color: $guide-faint; }
+  .guide-mynotes-quote { position: relative; margin: 0 0 0.5rem; padding: 0.4rem 0.7rem; border-left: 3px solid $ubse; border-radius: 0 6px 6px 0;
+    background: $ubse-tint; font-size: 0.85rem; font-style: italic; line-height: 1.5; color: $guide-text;
+    &[hidden] { display: none; } }
+  .guide-mynotes-form .guide-mynotes-quote { padding-right: 2rem; }
+  .guide-mynotes-quote-x { position: absolute; top: 0.2rem; right: 0.2rem; width: 1.6rem; height: 1.6rem; font-size: 0.85rem; font-style: normal; }
+  .guide-mynotes-count { margin: 1.1rem 0 0.2rem; padding-top: 0.9rem; border-top: 1px solid $guide-line; font-size: 0.72rem; font-weight: 600;
+    letter-spacing: 0.08em; text-transform: uppercase; color: $guide-faint; }
+  .guide-mynotes-list { flex: 1 0 auto; list-style: none; margin: 0; padding: 0; }
+  .guide-mynotes-item { padding: 0.65rem 0; border-bottom: 1px solid $guide-line;
+    &.is-editing { opacity: 0.5; } }
+  .guide-mynotes-section { display: block; margin-bottom: 0.25rem; font-size: 0.8rem; font-weight: 600; color: $ubse; text-decoration: none;
+    &:hover { text-decoration: underline; } }
+  .guide-mynotes-text { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: 0.9rem; line-height: 1.5; color: $guide-text; }
+  .guide-mynotes-meta { display: flex; align-items: center; gap: 0.6rem; margin-top: 0.3rem; font-size: 0.76rem; color: $guide-muted;
+    span { margin-right: auto; } }
+  .guide-mynotes-foot { margin-top: 1rem; font-size: 0.78rem; color: $guide-muted; }
+  .guide-mynotes-where { margin: 0.25rem 0 0; }
+  .guide-quote-btn { position: absolute; z-index: 85; min-height: 2rem; padding: 0.35rem 0.8rem; border: 0; border-radius: 999px;
+    background: var(--g-btn-bg); color: var(--g-btn-text); box-shadow: 0 6px 16px var(--g-shadow-strong);
+    font: inherit; font-size: 0.8rem; font-weight: 600; cursor: pointer;
+    &[hidden] { display: none; } }
+  .guide-onpage a.has-note::after { content: ""; display: inline-block; width: 0.4rem; height: 0.4rem; margin-left: 0.35rem; border-radius: 50%;
+    background: $ubse; vertical-align: middle; }
+}
+// wide screens: the panel takes the place of the "On this page" column, so it never covers the text
+@media screen and (min-width: $bp-desktop) and (min-height: 501px) {
+  html.guide-mynotes-open body#guide {
+    .guide-shell { grid-template-columns: 270px minmax(0, 1fr) 20rem; }
+    .guide-onpage { visibility: hidden; }
+  }
+  html.guide-mynotes-open[data-guide-focus="on"] body#guide .guide-main { padding-right: 21rem; }
+}
+// smaller screens: a sheet over the lower half; the page can scroll its last lines above it
+@media screen and (max-width: $bp-desktop - 1px), screen and (max-height: 500px) {
+  body#guide .guide-mynotes { top: auto; left: 0; width: auto; height: 50vh; max-height: 30rem; border-left: 0; border-top: 1px solid $guide-line;
+    border-radius: 12px 12px 0 0; box-shadow: 0 -8px 24px var(--g-shadow-strong); }
+  html.guide-mynotes-open body#guide .guide-shell { padding-bottom: 50vh; }
+}
+@media screen and (max-width: $bp-phone - 1px), screen and (max-height: 500px) and (max-width: $bp-desktop - 1px) {
+  body#guide .guide-mynotes-btn { width: 2.75rem; height: 2.75rem; border: 0; background: none; }
+}

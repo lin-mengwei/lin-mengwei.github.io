@@ -190,6 +190,7 @@
     toastTimer = setTimeout(hideToast, action ? 8000 : 2500);
   }
   function hideToast() { if (toastBox) toastBox.classList.remove('is-shown'); }
+  window.guideToast = toast;   // used by guide-notes.js
 
   /* ---------- footnote pop-ups (without JavaScript the number still jumps to the note) ---------- */
   var pop = null, popRef = null;
