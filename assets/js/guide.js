@@ -126,8 +126,40 @@
     var el = id && document.getElementById(id);
     if (el) el.scrollIntoView({ block: 'start' });
   }
-  if (window.location.hash) {
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(alignHash); else alignHash();
+  // Arriving from search (?q=…): mark the first match after the section heading and bring it into view.
+  function markSearchHit() {
+    var q = new URLSearchParams(window.location.search).get('q');
+    if (!q || !article) return;
+    if (window.history.replaceState) window.history.replaceState(null, '', window.location.pathname + window.location.hash);
+    var lower = q.toLowerCase().trim();
+    var terms = [lower].concat(lower.split(/\s+/).filter(function (t) { return t.length > 1; }));
+    var from = document.getElementById(decodeURIComponent(window.location.hash.slice(1)));
+    var walker = document.createTreeWalker(article, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        if (from && !(from.compareDocumentPosition(n) & Node.DOCUMENT_POSITION_FOLLOWING) && !from.contains(n)) return NodeFilter.FILTER_REJECT;
+        return n.parentElement.closest('.guide-notes, button') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var nodes = [], n;
+    while ((n = walker.nextNode())) nodes.push(n);
+    for (var t = 0; t < terms.length; t++) {
+      for (var i = 0; i < nodes.length; i++) {
+        var at = nodes[i].nodeValue.toLowerCase().indexOf(terms[t]);
+        if (at < 0) continue;
+        var hit = nodes[i].splitText(at);
+        hit.splitText(terms[t].length);
+        var mark = document.createElement('mark');
+        mark.className = 'guide-hit';
+        hit.parentNode.replaceChild(mark, hit);
+        mark.appendChild(hit);
+        mark.scrollIntoView({ block: 'center' });
+        return;
+      }
+    }
+  }
+  if (window.location.hash || window.location.search) {
+    var settle = function () { alignHash(); markSearchHit(); };
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(settle); else settle();
   }
 
   /* ---------- search ---------- */
@@ -172,9 +204,11 @@
     var lower = text.toLowerCase();
     var at = -1;
     terms.forEach(function (t) { var i = lower.indexOf(t); if (i >= 0 && (at < 0 || i < at)) at = i; });
-    var start = Math.max(0, at - 60);
-    var s = text.slice(start, start + 180);
-    return (start > 0 ? '… ' : '') + highlight(s, terms) + (start + 180 < text.length ? ' …' : '');
+    var start = Math.max(0, at - 60), end = Math.min(text.length, start + 180);
+    // start and end on word boundaries
+    if (start > 0) { var sp = text.indexOf(' ', start); if (sp >= 0 && sp < at) start = sp + 1; }
+    if (end < text.length) { var ep = text.lastIndexOf(' ', end); if (ep > at) end = ep; }
+    return (start > 0 ? '… ' : '') + highlight(text.slice(start, end), terms) + (end < text.length ? ' …' : '');
   }
 
   function search(q) {
@@ -207,7 +241,9 @@
         var hits = search(q);
         focused = -1;
         out.innerHTML = hits.length ? hits.map(function (h) {
-          return '<a href="' + h.e.url + '"><span class="r-where">' + escapeHtml(h.e.chapter) + '</span>' +
+          var parts = h.e.url.split('#');
+          var href = parts[0] + '?q=' + encodeURIComponent(q) + (parts[1] ? '#' + parts[1] : '');
+          return '<a href="' + escapeHtml(href) + '"><span class="r-where">' + escapeHtml(h.e.chapter) + '</span>' +
             '<span class="r-section">' + escapeHtml(h.e.section === 'Introduction' ? h.e.title : h.e.section) + '</span>' +
             '<span class="r-snip">' + snippet(h.e.text, h.terms) + '</span></a>';
         }).join('') : '<div class="r-empty">No results for “' + escapeHtml(q) + '”.</div>';

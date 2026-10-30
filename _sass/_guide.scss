@@ -538,6 +538,65 @@ body#guide {
   .guide-scrim { position: fixed; inset: 0; background: rgba(#000, 0.4); z-index: 55; }
   .guide-scrim[hidden] { display: none; }
 
+  // ---------- reading features (assets/js/guide-reading.js) ----------
+  .guide-toast { position: fixed; left: 50%; bottom: 1.25rem; z-index: 90; display: flex; align-items: center; gap: 0.75rem;
+    max-width: calc(100vw - 2rem); padding: 0.55rem 0.6rem 0.55rem 1rem; border-radius: 8px; background: var(--g-ink); color: var(--g-bg);
+    font-size: 0.88rem; box-shadow: 0 8px 24px var(--g-shadow-strong);
+    transform: translate(-50%, 1rem); opacity: 0; visibility: hidden; transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+    &.is-shown { transform: translate(-50%, 0); opacity: 1; visibility: visible; }
+    button { border: 0; background: none; color: inherit; font: inherit; font-weight: 700; cursor: pointer; padding: 0.35rem 0.5rem; border-radius: 4px;
+      text-decoration: underline; text-underline-offset: 3px; }
+    .guide-toast-close { display: inline-flex; padding: 0.35rem; text-decoration: none; opacity: 0.75; } }
+
+  .guide-body a.footnote-ref { padding: 0 0.15em; text-decoration: none; }
+  .guide-note-pop { position: absolute; z-index: 80; width: 24rem; max-width: calc(100vw - 1.5rem); padding: 0.9rem 2.4rem 0.9rem 1rem;
+    background: $guide-surface; color: $guide-text; border: 1px solid $guide-line; border-radius: 8px; box-shadow: 0 12px 32px var(--g-shadow-strong);
+    font-size: 0.9rem; line-height: 1.55; outline: none;
+    p { display: inline; margin: 0; }
+    a { color: $ubse; overflow-wrap: anywhere; } }
+  .guide-note-num { font-weight: 700; color: $guide-ink; margin-right: 0.2rem; }
+  .guide-note-close, .guide-viewer-close, .guide-resume-forget { display: inline-flex; align-items: center; justify-content: center;
+    border: 0; background: none; color: $guide-muted; cursor: pointer; border-radius: 6px;
+    &:hover { color: $guide-ink; } }
+  .guide-note-close { position: absolute; top: 0.3rem; right: 0.3rem; width: 2rem; height: 2rem; font-size: 1rem; }
+
+  .guide-zoomable { cursor: zoom-in; }
+  .guide-viewer { position: fixed; inset: 0; z-index: 100; display: flex; flex-direction: column; background: rgba(12, 15, 20, 0.96); color: #eef1f4; }
+  .guide-viewer-stage { flex: 1; min-height: 0; overflow: auto; display: flex; padding: 3.25rem 1rem 0.75rem;
+    img { margin: auto; max-width: 100%; max-height: 100%; object-fit: contain; background: #fff; cursor: zoom-in; } }
+  .guide-viewer.is-zoomed .guide-viewer-stage img { max-width: none; max-height: none; cursor: zoom-out; }
+  .guide-viewer-close { position: absolute; top: 0.5rem; right: 0.5rem; z-index: 1; width: 2.75rem; height: 2.75rem; font-size: 1.3rem; color: #eef1f4;
+    &:hover { color: #fff; background: rgba(255, 255, 255, 0.1); } }
+  .guide-viewer-caption { margin: 0; padding: 0.6rem 1.25rem 1rem; text-align: center; font-size: 0.88rem; line-height: 1.5; color: #c9d1d9; }
+  .guide-viewer--flow .guide-viewer-stage { align-items: flex-start; }
+  .guide-viewer-flow { flex: none; display: block; width: 56rem; max-width: none; height: auto; margin: auto; padding: 0.75rem; border-radius: 8px; background: #fff; }
+  html.guide-viewer-open { overflow: hidden; }
+  .guide-flow-zoom { display: none; }
+
+  .guide-anchor { display: inline-flex; vertical-align: middle; margin-left: 0.4rem; padding: 0.3rem; border: 0; border-radius: 4px; background: none;
+    color: $guide-faint; font-size: 0.6em; cursor: pointer; opacity: 0; transition: opacity 0.15s;
+    &:hover { color: $ubse; }
+    &:focus-visible { opacity: 1; } }
+  .guide-body h2:hover .guide-anchor, .guide-body h3:hover .guide-anchor { opacity: 1; }
+  @media (hover: none) { .guide-anchor { opacity: 0.6; } }
+
+  .guide-resume { display: flex; align-items: center; flex-wrap: wrap; gap: 0.35rem 0.5rem; max-width: 46rem; margin: 0 auto 1.75rem;
+    padding: 0.7rem 0.6rem 0.7rem 1rem; border-radius: 8px; background: $ubse-tint; color: $guide-muted; font-size: 0.92rem;
+    a { color: $ubse; font-weight: 600; }
+    &[hidden] { display: none; } }
+  .guide-resume-forget { margin-left: auto; width: 2rem; height: 2rem; }
+
+  mark.guide-hit { background: var(--g-mark); color: inherit; border-radius: 2px; padding: 0 0.1em; }
+
+  // small phones: the home diagram is a preview that opens in the viewer
+  @media screen and (max-width: 599px) {
+    .guide-flow-map { padding-bottom: 2.6rem; }
+    .guide-flow-map .guide-flow-link { pointer-events: none; }
+    .guide-flow-zoom { position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: flex-end; padding: 0.5rem;
+      border: 0; background: none; cursor: zoom-in;
+      span { padding: 0.3rem 0.7rem; border-radius: 999px; background: rgba(0, 90, 139, 0.92); color: #fff; font-size: 0.78rem; font-weight: 600; } }
+  }
+
   // ---------- skip link, icons ----------
   .guide-skip { position: absolute; left: 0.75rem; top: -3rem; z-index: 100; padding: 0.5rem 0.9rem; border-radius: 6px;
     background: var(--g-btn-bg); color: var(--g-btn-text); font-weight: 600; text-decoration: none;
@@ -561,6 +620,8 @@ body#guide {
     .guide-wordmark, .guide-bar .guide-search, .guide-bar-pdf { display: none; }
     .guide-drawer-head .guide-wordmark { display: inline; }
     .guide-set-focus { display: none; }
+    .guide-note-pop { position: fixed; left: 0.75rem; right: 0.75rem; top: auto; bottom: 0.75rem; width: auto; max-width: none;
+      max-height: 55vh; overflow-y: auto; }
     .guide-bar:not(.guide-bar--home) .guide-settings--bar { display: none; }
     .guide-bar--home {
       .guide-wordmark { display: inline; }

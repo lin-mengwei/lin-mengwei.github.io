@@ -8,7 +8,7 @@ layout: base
 <div class="guide-shell">
   {% include guide-sidebar.html %}
 
-  <main class="guide-main" id="guide-text" tabindex="-1">
+  <main class="guide-main" id="guide-text" tabindex="-1" data-guide-slug="{{ page.slug }}" data-guide-label="{% for item in guide_order %}{% if item.slug == page.slug %}{{ item.label | escape }}{% endif %}{% endfor %}">
     <article class="guide-article">
       <header class="guide-head">
         <p class="guide-kicker">
