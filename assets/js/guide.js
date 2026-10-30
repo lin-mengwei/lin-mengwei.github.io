@@ -123,12 +123,16 @@
 
   // Re-align a #section target once web fonts have loaded (they change line heights).
   // (not once the reader has started moving around the page)
-  var moved = false;
+  // (not once the reader has started moving around the page, nor after Back/Forward, where the browser restores it)
+  var nav = window.performance && performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+  var moved = !!(nav && nav.type === 'back_forward');
   ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (ev) {
     window.addEventListener(ev, function () { moved = true; }, { once: true, passive: true });
   });
+  var hitMark = null;
   function alignHash() {
     if (moved) return;
+    if (hitMark) { hitMark.scrollIntoView({ block: 'center' }); return; }
     var id = decodeURIComponent(window.location.hash.slice(1));
     var el = id && document.getElementById(id);
     if (el) el.scrollIntoView({ block: 'start' });
@@ -160,14 +164,21 @@
         hit.parentNode.replaceChild(mark, hit);
         mark.appendChild(hit);
         mark.scrollIntoView({ block: 'center' });
+        hitMark = mark;
+        // the mark lasts until the next click
+        document.addEventListener('click', function () {
+          if (mark.parentNode) { mark.parentNode.replaceChild(hit, mark); hit.parentNode.normalize(); }
+        }, { once: true });
         return;
       }
     }
   }
+  // guide-reading.js reads this: no "Resume" offer on arrival from search
+  window.guideFromSearch = !!new URLSearchParams(window.location.search).get('q');
   if (window.location.hash || window.location.search) {
     var settle = function () { alignHash(); markSearchHit(); };
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(settle); else settle();
-    if (window.location.hash) window.addEventListener('load', alignHash);
+    if (window.location.hash || window.guideFromSearch) window.addEventListener('load', alignHash);
   }
 
   /* ---------- search ---------- */

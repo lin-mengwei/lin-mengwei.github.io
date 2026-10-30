@@ -80,7 +80,10 @@
     if (e.key !== 'Escape') return;
     panels.forEach(function (box) {
       var btn = box.querySelector('[data-guide-settings-btn]');
-      if (btn.getAttribute('aria-expanded') === 'true') { open(box, false); btn.focus(); }
+      if (btn.getAttribute('aria-expanded') !== 'true') return;
+      open(box, false);
+      // in the phone drawer, Esc has also closed the drawer (guide.js); focus is already back on "Contents"
+      if (!(box.closest('.guide-sidebar') && !document.body.classList.contains('guide-drawer-open'))) btn.focus();
     });
   });
   document.addEventListener('click', function (e) {
@@ -200,6 +203,10 @@
       x.addEventListener('click', function () { closeNote(true); });
       pop.appendChild(note);
       pop.appendChild(x);
+      pop.addEventListener('focusout', function (ev) {
+        var to = ev.relatedTarget;
+        if (to && pop && !pop.contains(to) && to !== popRef) closeNote(false);
+      });
       document.body.appendChild(pop);
       placeNote();
       pop.focus({ preventScroll: true });
@@ -374,7 +381,7 @@
     }, { passive: true });
 
     // opened at the top, without a #section or search: offer to go back to where the reader stopped
-    var q = new URLSearchParams(location.search).get('q');
+    var q = window.guideFromSearch || new URLSearchParams(location.search).get('q');
     if (saved && !location.hash && !q && (saved.id || saved.p > 0.05)) {
       setTimeout(function () {
         if (window.scrollY > 80) return;
@@ -414,6 +421,8 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') { if (viewer) closeViewer(true); else if (pop) closeNote(true); return; }
     if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey || typing(e.target) || viewer || pop) return;
+    // leave arrows to wide code blocks and tables (they scroll sideways), and to the panels and drawer
+    if (e.target.closest && e.target.closest('.pre-scroll, .table-scroll, [data-guide-settings], .guide-sidebar')) return;
     if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
       var link = document.querySelector(e.key === 'ArrowLeft' ? '.guide-pager-card--prev' : '.guide-pager-card--next');
       if (link) { e.preventDefault(); location.href = link.href; }

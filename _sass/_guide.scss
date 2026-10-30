@@ -64,6 +64,13 @@ html:has(body#guide) { overflow-x: clip; scroll-behavior: auto !important; }
   --g-btn-bg: #2f6f99; --g-btn-text: #ffffff; --g-btn-hover: #3b84b5; --g-figure-card: #f4f6f8; --g-figure-pad: 0.5rem; --g-flow-card: #f4f6f8; --g-photo: 0.85;
   color-scheme: dark;
 }
+// without JavaScript (the head script never ran) the Aa panel and the phone search icon cannot work
+html:not([data-guide-theme]) body#guide .guide-settings, html:not([data-guide-theme]) body#guide .guide-bar-search-toggle { display: none; }
+// the figure viewer is open: the page behind it does not scroll (only guide pages set this class)
+html.guide-viewer-open { overflow: hidden; }
+// the page scrollbar follows the theme
+html[data-guide-theme="night"] { color-scheme: dark; }
+
 body#guide { @include guide-day; }
 html[data-guide-theme="sepia"] body#guide { @include guide-sepia; }
 html[data-guide-theme="night"] body#guide { @include guide-night; }
@@ -548,7 +555,8 @@ body#guide {
       text-decoration: underline; text-underline-offset: 3px; }
     .guide-toast-close { display: inline-flex; padding: 0.35rem; text-decoration: none; opacity: 0.75; } }
 
-  .guide-body a.footnote-ref { display: inline-block; min-width: 1.5em; text-align: center; text-decoration: none; }
+  // stays inline (no line break before the following comma); the padding widens the tap area without moving text
+  .guide-body a.footnote-ref { padding: 0.35em 0.3em; margin: 0 -0.15em; text-decoration: none; }
   .guide-note-pop { position: absolute; z-index: 80; width: 24rem; max-width: calc(100vw - 1.5rem); padding: 0.9rem 2.4rem 0.9rem 1rem;
     background: $guide-surface; color: $guide-text; border: 1px solid $guide-line; border-radius: 8px; box-shadow: 0 12px 32px var(--g-shadow-strong);
     font-size: 0.9rem; line-height: 1.55; outline: none;
@@ -570,7 +578,6 @@ body#guide {
   .guide-viewer-caption { margin: 0; padding: 0.6rem 1.25rem 1rem; text-align: center; font-size: 0.88rem; line-height: 1.5; color: #c9d1d9; }
   .guide-viewer--flow .guide-viewer-stage { align-items: flex-start; }
   .guide-viewer-flow { flex: none; display: block; width: 56rem; max-width: none; height: auto; margin: auto; padding: 0.75rem; border-radius: 8px; background: #fff; }
-  html.guide-viewer-open { overflow: hidden; }
   .guide-flow-zoom { display: none; }
 
   .guide-anchor { display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; margin-left: 0.4rem;
@@ -615,6 +622,7 @@ body#guide {
   .guide-title, .guide-body h2, .guide-body h3, .guide-volume-title, .guide-card-title, .guide-pager-label { text-wrap: balance; }
   a:focus-visible, button:focus-visible, [tabindex]:focus-visible, input:focus-visible { outline: 2px solid $ubse; outline-offset: 2px; }
   .guide-flow-link:focus-visible { outline: none; }   // the diagram draws its own dashed frame
+  .guide-main:focus-visible, .guide-home:focus-visible, .guide-note-pop:focus-visible { outline: none; }   // containers focused by script
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { transition: none !important; animation: none !important; }
   }
