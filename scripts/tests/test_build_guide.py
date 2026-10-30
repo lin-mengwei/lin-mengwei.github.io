@@ -156,3 +156,11 @@ def test_wording_changes_ignores_markup():
     assert wording_changes(old, '<p>Some <strong>text</strong>  here.</p><ul><li>Item one</li></ul>') == []
     changed = wording_changes(old, "<p>Some text there.</p><ul><li>Item one</li></ul>")
     assert changed == ["- Some text here.", "+ Some text there."]
+
+
+def test_file_size_label(tmp_path):
+    from build_guide import file_size_label
+    f = tmp_path / "book.pdf"
+    f.write_bytes(b"x" * 7558521)
+    assert file_size_label(f) == "7.6 MB"
+    assert file_size_label(tmp_path / "missing.pdf") == ""

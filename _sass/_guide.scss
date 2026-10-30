@@ -40,7 +40,7 @@ html:has(body#guide) { overflow-x: clip; scroll-behavior: auto !important; }
   --g-tint: #eef4f8; --g-tint-2: #f6f9fb; --g-line: #e1e9ef; --g-line-strong: #d3e0e8; --g-input-border: #cddbe5;
   --g-bar-from: #e4edf3; --g-bar-to: #f1f6f9; --g-code-bg: #f6f8fa; --g-code-border: #e1e6ea; --g-code-text: #24292f;
   --g-icode-bg: #eef3f6; --g-icode-text: #12384f; --g-thumb: #c3d2dc; --g-matter: #9fb6c5;
-  --g-shadow: rgba(0, 90, 139, 0.13); --g-shadow-strong: rgba(0, 0, 0, 0.14); --g-mark: rgba(0, 90, 139, 0.14);
+  --g-shadow: rgba(0, 90, 139, 0.13); --g-shadow-strong: rgba(0, 0, 0, 0.14); --g-mark: rgba(0, 90, 139, 0.14); --g-scroll-hint: rgba(29, 42, 51, 0.2);
   --g-btn-bg: #005A8B; --g-btn-text: #ffffff; --g-btn-hover: #003f63; --g-figure-card: transparent; --g-figure-pad: 0; --g-flow-card: transparent; --g-photo: 1;
   color-scheme: light;
 }
@@ -50,7 +50,7 @@ html:has(body#guide) { overflow-x: clip; scroll-behavior: auto !important; }
   --g-tint: #efe4cb; --g-tint-2: #f1e8d4; --g-line: #e3d6bb; --g-line-strong: #d8c8a6; --g-input-border: #d8c8a6;
   --g-bar-from: #ece1c6; --g-bar-to: #f1e8d4; --g-code-bg: #efe6d2; --g-code-border: #e0d3b6; --g-code-text: #3f3428;
   --g-icode-bg: #ece2cb; --g-icode-text: #4d3412; --g-thumb: #cdbd9b; --g-matter: #c9b48c;
-  --g-shadow: rgba(107, 74, 31, 0.14); --g-shadow-strong: rgba(60, 40, 10, 0.16); --g-mark: rgba(107, 74, 31, 0.18);
+  --g-shadow: rgba(107, 74, 31, 0.14); --g-shadow-strong: rgba(60, 40, 10, 0.16); --g-mark: rgba(107, 74, 31, 0.18); --g-scroll-hint: rgba(46, 37, 27, 0.2);
   --g-btn-bg: #6b4a1f; --g-btn-text: #ffffff; --g-btn-hover: #4d3412; --g-figure-card: #fffdf7; --g-figure-pad: 0.5rem; --g-flow-card: #fffdf7; --g-photo: 1;
   color-scheme: light;
 }
@@ -60,7 +60,7 @@ html:has(body#guide) { overflow-x: clip; scroll-behavior: auto !important; }
   --g-tint: #232a35; --g-tint-2: #1f242d; --g-line: #2e3540; --g-line-strong: #3a4350; --g-input-border: #3a4350;
   --g-bar-from: #20262f; --g-bar-to: #1f242d; --g-code-bg: #232933; --g-code-border: #323a46; --g-code-text: #d6dbe1;
   --g-icode-bg: #2a313c; --g-icode-text: #cfe3f1; --g-thumb: #4a5462; --g-matter: #4f6b80;
-  --g-shadow: rgba(0, 0, 0, 0.4); --g-shadow-strong: rgba(0, 0, 0, 0.5); --g-mark: rgba(124, 184, 221, 0.28);
+  --g-shadow: rgba(0, 0, 0, 0.4); --g-shadow-strong: rgba(0, 0, 0, 0.5); --g-mark: rgba(124, 184, 221, 0.28); --g-scroll-hint: rgba(255, 255, 255, 0.18);
   --g-btn-bg: #2f6f99; --g-btn-text: #ffffff; --g-btn-hover: #3b84b5; --g-figure-card: #f4f6f8; --g-figure-pad: 0.5rem; --g-flow-card: #f4f6f8; --g-photo: 0.85;
   color-scheme: dark;
 }
@@ -156,7 +156,7 @@ body#guide {
   }
   .guide-bar-current { display: none; font-size: 0.92rem; font-weight: 600; color: $ubse;
     &::before { content: "·"; color: $guide-muted; margin-right: 0.5rem; } }
-  .guide-bar-next { display: none; font-size: 0.9rem; font-weight: 600; color: $ubse; white-space: nowrap; }
+  .guide-bar-next { display: none; padding: 0.3rem 0.15rem; font-size: 0.9rem; font-weight: 600; color: $ubse; white-space: nowrap; }
 
   .guide-progress { height: 3px; span { display: block; height: 100%; width: 0; background: $ubse; } }
 
@@ -277,7 +277,7 @@ body#guide {
     font-weight: 600;
     margin: 1.3rem 0 0.4rem 0.6rem;
   }
-  a.guide-toc-part--link { display: block; color: $guide-faint; padding: 0.15rem 0.6rem; margin-left: 0; border-left: 3px solid transparent;
+  a.guide-toc-part--link { display: block; color: $guide-faint; padding: 0.3rem 0.6rem; margin-left: 0; border-left: 3px solid transparent;
     &:hover { color: $ubse; }
     &.is-current { color: $ubse; border-left-color: $ubse; background: $guide-surface; } }
   .guide-toc-item > a {
@@ -379,7 +379,7 @@ body#guide {
       p:last-child { margin-bottom: 0; } }
 
     .pre-scroll { overflow-x: auto; margin: 1.4rem 0; background: var(--g-code-bg); border: 1px solid var(--g-code-border); border-radius: 6px; }
-    pre { margin: 0; padding: 1rem 1.1rem; background: none; font-family: $guide-mono; font-size: 0.78rem; line-height: 1.45; white-space: pre; color: var(--g-code-text);
+    pre { margin: 0; padding: 1rem 1.1rem; overflow: visible; background: none; font-family: $guide-mono; font-size: 0.78rem; line-height: 1.45; white-space: pre; color: var(--g-code-text);
       code { background: none; padding: 0; font-size: inherit; color: inherit; } }
 
     figure { margin: 2rem auto; text-align: center; scroll-margin-top: 4.5rem; }
@@ -548,7 +548,7 @@ body#guide {
       text-decoration: underline; text-underline-offset: 3px; }
     .guide-toast-close { display: inline-flex; padding: 0.35rem; text-decoration: none; opacity: 0.75; } }
 
-  .guide-body a.footnote-ref { padding: 0 0.15em; text-decoration: none; }
+  .guide-body a.footnote-ref { display: inline-block; min-width: 1.5em; text-align: center; text-decoration: none; }
   .guide-note-pop { position: absolute; z-index: 80; width: 24rem; max-width: calc(100vw - 1.5rem); padding: 0.9rem 2.4rem 0.9rem 1rem;
     background: $guide-surface; color: $guide-text; border: 1px solid $guide-line; border-radius: 8px; box-shadow: 0 12px 32px var(--g-shadow-strong);
     font-size: 0.9rem; line-height: 1.55; outline: none;
@@ -573,7 +573,8 @@ body#guide {
   html.guide-viewer-open { overflow: hidden; }
   .guide-flow-zoom { display: none; }
 
-  .guide-anchor { display: inline-flex; vertical-align: middle; margin-left: 0.4rem; padding: 0.3rem; border: 0; border-radius: 4px; background: none;
+  .guide-anchor { display: inline-flex; align-items: center; justify-content: center; vertical-align: middle; margin-left: 0.4rem;
+    min-width: 1.75rem; min-height: 1.75rem; padding: 0.3rem; border: 0; border-radius: 4px; background: none;
     color: $guide-faint; font-size: 0.6em; cursor: pointer; opacity: 0; transition: opacity 0.15s;
     &:hover { color: $ubse; }
     &:focus-visible { opacity: 1; } }
@@ -597,6 +598,27 @@ body#guide {
       span { padding: 0.3rem 0.7rem; border-radius: 999px; background: rgba(0, 90, 139, 0.92); color: #fff; font-size: 0.78rem; font-weight: 600; } }
   }
 
+  // wide tables and code: a shadow at the edge that still has content to scroll to
+  .guide-body .table-scroll {
+    background: linear-gradient(to right, var(--g-bg) 30%, rgba(0, 0, 0, 0)) left / 2rem 100% no-repeat local,
+                linear-gradient(to left, var(--g-bg) 30%, rgba(0, 0, 0, 0)) right / 2rem 100% no-repeat local,
+                radial-gradient(farthest-side at 0 50%, var(--g-scroll-hint), rgba(0, 0, 0, 0)) left / 0.8rem 100% no-repeat scroll,
+                radial-gradient(farthest-side at 100% 50%, var(--g-scroll-hint), rgba(0, 0, 0, 0)) right / 0.8rem 100% no-repeat scroll; }
+  .guide-body .pre-scroll {
+    background: linear-gradient(to right, var(--g-code-bg) 30%, rgba(0, 0, 0, 0)) left / 2rem 100% no-repeat local,
+                linear-gradient(to left, var(--g-code-bg) 30%, rgba(0, 0, 0, 0)) right / 2rem 100% no-repeat local,
+                radial-gradient(farthest-side at 0 50%, var(--g-scroll-hint), rgba(0, 0, 0, 0)) left / 0.8rem 100% no-repeat scroll,
+                radial-gradient(farthest-side at 100% 50%, var(--g-scroll-hint), rgba(0, 0, 0, 0)) right / 0.8rem 100% no-repeat scroll,
+                var(--g-code-bg); }
+
+  .guide-body p, .guide-body li, .guide-prose p { text-wrap: pretty; }
+  .guide-title, .guide-body h2, .guide-body h3, .guide-volume-title, .guide-card-title, .guide-pager-label { text-wrap: balance; }
+  a:focus-visible, button:focus-visible, [tabindex]:focus-visible, input:focus-visible { outline: 2px solid $ubse; outline-offset: 2px; }
+  .guide-flow-link:focus-visible { outline: none; }   // the diagram draws its own dashed frame
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+  }
+
   // ---------- skip link, icons ----------
   .guide-skip { position: absolute; left: 0.75rem; top: -3rem; z-index: 100; padding: 0.5rem 0.9rem; border-radius: 6px;
     background: var(--g-btn-bg); color: var(--g-btn-text); font-weight: 600; text-decoration: none;
@@ -609,22 +631,32 @@ body#guide {
     .guide-shell { grid-template-columns: 240px minmax(0, 1fr); }
     .guide-onpage { display: none; }
     .guide-main { padding: 2.5rem 2rem 4rem; }
+    .guide-bar-current { display: inline; order: 1; }
+    .guide-bar-actions { order: 2; }
+    .guide-bar-next { display: inline-block; }
+    .guide-bar .guide-search-input { width: 11rem; }
+    .guide-bar .guide-pdf-size { display: none; }
   }
 
-  // ---------- phone: single column + drawer ----------
-  @media screen and (max-width: $bp-phone - 1px) {
+  // ---------- phone (and phone in landscape): single column + drawer ----------
+  @media screen and (max-width: $bp-phone - 1px), screen and (max-height: 500px) and (max-width: $bp-desktop - 1px) {
     .guide-bar-inner { padding: 0 1rem; gap: 0.5rem; }
     .guide-bar-contents { display: inline-flex; }
     .guide-bar-current { display: inline; }
     .guide-bar-next { display: inline; }
     .guide-wordmark, .guide-bar .guide-search, .guide-bar-pdf { display: none; }
-    .guide-drawer-head .guide-wordmark { display: inline; }
+    .guide-drawer-head .guide-wordmark { display: inline-flex; align-items: center; min-height: 2.75rem; }
     .guide-set-focus { display: none; }
+    .guide-bar-contents, .guide-bar-next { display: inline-flex; align-items: center; min-height: 2.75rem; }
+    .guide-bar-next { padding: 0 0.25rem; }
+    .guide-btn { min-height: 2.75rem; }
+    .guide-volume-link { display: inline-block; padding: 0.55rem 0; }
+    .guide-resume-forget { width: 2.75rem; height: 2.75rem; }
     .guide-note-pop { position: fixed; left: 0.75rem; right: 0.75rem; top: auto; bottom: 0.75rem; width: auto; max-width: none;
       max-height: 55vh; overflow-y: auto; }
     .guide-bar:not(.guide-bar--home) .guide-settings--bar { display: none; }
     .guide-bar--home {
-      .guide-wordmark { display: inline; }
+      .guide-wordmark { display: inline-flex; align-items: center; min-height: 2.75rem; }
       .guide-bar-search-toggle { display: inline-flex; align-items: center; justify-content: center; width: 2.75rem; height: 2.75rem;
         border: 0; background: none; color: $guide-ink; font-size: 1.1rem; cursor: pointer; }
       .guide-settings-btn { height: 2.75rem; min-width: 2.75rem; }
@@ -656,7 +688,9 @@ body#guide {
     &.guide-drawer-open .guide-sidebar { transform: none; visibility: visible; }
     &.guide-drawer-open { overflow: hidden; }
     .guide-drawer-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8rem; }
-    .guide-drawer-close { background: none; border: 0; font-size: 1.8rem; line-height: 1; color: $guide-muted; cursor: pointer; padding: 0 0.25rem; }
+    .guide-drawer-close { background: none; border: 0; font-size: 1.8rem; line-height: 1; color: $guide-muted; cursor: pointer; width: 2.75rem; height: 2.75rem; }
+    .guide-toc a { display: flex; flex-direction: column; justify-content: center; min-height: 2.75rem; }
+    .guide-drawer-search .guide-search-input { height: 2.75rem; }
     .guide-drawer-search { display: block; margin-bottom: 0.5rem;
       .guide-search-input { width: 100%; }
       .guide-search-results { position: static; width: 100%; box-shadow: none; margin-top: 0.4rem; max-height: none; } }
@@ -667,6 +701,7 @@ body#guide {
 
     .guide-main { padding: 1.75rem 1rem 3rem; }
     .guide-body, .guide-prose { font-size: calc(1rem * var(--g-size)); line-height: 1.7; }
+    .guide-body p, .guide-body li { hyphens: auto; }
     .guide-body {
       h2 { font-size: 1.4rem; }
       h3 { font-size: 1.15rem; }
@@ -696,7 +731,7 @@ body#guide {
 }
 
 // ---------- focus mode: only the text column (turned off from the Aa panel or with F) ----------
-@media screen and (min-width: $bp-phone) {
+@media screen and (min-width: $bp-desktop), screen and (min-width: $bp-phone) and (min-height: 501px) {
   html[data-guide-focus="on"] body#guide {
     .guide-shell { display: block; }
     .guide-sidebar, .guide-onpage { display: none; }

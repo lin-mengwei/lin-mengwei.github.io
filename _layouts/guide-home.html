@@ -27,7 +27,7 @@ layout: base
       <div class="guide-cover-actions">
         <a class="guide-btn guide-btn--light" href="{{ first_chapter.url | relative_url }}">Start reading <span aria-hidden="true">&rarr;</span></a>
         <a class="guide-btn guide-btn--outline-light" href="{{ '/assets/files/BESTEPS_Guide_Content.pdf' | relative_url }}" target="_blank" rel="noopener">
-          {% include guide-icon.html name="download" %} Download PDF
+          {% include guide-icon.html name="download" %} <span>Download PDF{% if site.data.besteps_guide.pdf_size %}<span class="guide-pdf-size"> · {{ site.data.besteps_guide.pdf_size }}</span>{% endif %}</span>
         </a>
       </div>
     </div>

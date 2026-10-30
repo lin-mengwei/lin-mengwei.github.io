@@ -12,7 +12,7 @@
       {% include guide-search.html %}
       {% include guide-settings.html id="bar" %}
       <a class="guide-btn guide-btn--solid guide-bar-pdf" href="{{ '/assets/files/BESTEPS_Guide_Content.pdf' | relative_url }}" target="_blank" rel="noopener">
-        {% include guide-icon.html name="download" %} PDF
+        {% include guide-icon.html name="download" %} <span>PDF{% if site.data.besteps_guide.pdf_size %}<span class="guide-pdf-size"> · {{ site.data.besteps_guide.pdf_size }}</span>{% endif %}</span>
       </a>
       {% if guide_next %}<a class="guide-bar-next" href="{{ guide_next.url | relative_url }}">Next <span aria-hidden="true">&rarr;</span></a>{% endif %}
     </div>

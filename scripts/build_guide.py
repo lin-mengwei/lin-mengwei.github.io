@@ -144,6 +144,11 @@ WORDS_PER_MINUTE = 200        # dense academic prose, many readers not native En
 SECONDS_PER_FIGURE = 12
 
 
+def file_size_label(path: Path) -> str:
+    """Size for the PDF button, in decimal megabytes with one decimal ("7.6 MB"); empty if the file is missing."""
+    return f"{path.stat().st_size / 1e6:.1f} MB" if path.exists() else ""
+
+
 def reading_minutes(html: str) -> int:
     """Estimated reading time of a chapter, rounded to the nearest 5 minutes (at least 5).
     Footnotes and code blocks are left out; each image adds a few seconds."""
@@ -368,6 +373,7 @@ def build(source: Path, repo: Path = REPO, cover: Path | None = None) -> int:
         "volumes": [{"number": n, "title": frags[f"volume{n}_title"],
                      "intro": _fragment_html(frags[f"volume{n}_intro"])} for n in (1, 2)],
         "reading_order": reading_order(chapters, {n: frags[f"volume{n}_title"] for n in (1, 2)}),
+        "pdf_size": file_size_label(repo / SITE_PDF),
     }
     for key in ("blurb", "acknowledgements"):
         failures += check_text(f"home {key}", data[key])

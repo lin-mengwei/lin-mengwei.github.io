@@ -8,6 +8,8 @@
   var SIZES = ['90%', '100%', '112%', '125%'];
   var BAR_COLOURS = { day: '#e4edf3', sepia: '#ece1c6', night: '#20262f' };
   var dark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  // the phone layout (keep in step with _sass/_guide.scss)
+  var phone = window.matchMedia('(max-width: 767px), (max-height: 500px) and (max-width: 1099px)');
 
   function load(k) { try { return localStorage.getItem(KEY + k); } catch (e) { return null; } }
   function save(k, v) { try { localStorage.setItem(KEY + k, v); } catch (e) { /* private mode: the choice lasts for this page only */ } }
@@ -205,7 +207,7 @@
   });
   function placeNote() {
     if (!pop || !popRef) return;
-    if (window.innerWidth < 768) { pop.style.left = pop.style.top = ''; return; }   // phones: a sheet at the bottom
+    if (phone.matches) { pop.style.left = pop.style.top = ''; return; }   // phones: a sheet at the bottom
     var r = popRef.getBoundingClientRect();
     var w = pop.offsetWidth;
     var left = Math.min(Math.max(12, r.left + r.width / 2 - w / 2), document.documentElement.clientWidth - w - 12);
@@ -415,7 +417,7 @@
     if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
       var link = document.querySelector(e.key === 'ArrowLeft' ? '.guide-pager-card--prev' : '.guide-pager-card--next');
       if (link) { e.preventDefault(); location.href = link.href; }
-    } else if ((e.key === 'f' || e.key === 'F') && main && window.innerWidth >= 768) {
+    } else if ((e.key === 'f' || e.key === 'F') && main && !phone.matches) {
       e.preventDefault();
       toggleFocus(!focusOn());
       toast(focusOn() ? 'Focus mode on (F to leave)' : 'Focus mode off');

@@ -8,7 +8,8 @@
   var scrim = document.querySelector('[data-guide-scrim]');
   var openers = document.querySelectorAll('[data-guide-drawer-open]');
 
-  var phone = window.matchMedia('(max-width: 767px)');
+  // the phone layout, also used by phones held sideways (keep in step with _sass/_guide.scss)
+  var phone = window.matchMedia('(max-width: 767px), (max-height: 500px) and (max-width: 1099px)');
   var lastOpener = null;
 
   function setDrawer(open) {
@@ -121,7 +122,13 @@
   update();
 
   // Re-align a #section target once web fonts have loaded (they change line heights).
+  // (not once the reader has started moving around the page)
+  var moved = false;
+  ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(function (ev) {
+    window.addEventListener(ev, function () { moved = true; }, { once: true, passive: true });
+  });
   function alignHash() {
+    if (moved) return;
     var id = decodeURIComponent(window.location.hash.slice(1));
     var el = id && document.getElementById(id);
     if (el) el.scrollIntoView({ block: 'start' });
@@ -160,6 +167,7 @@
   if (window.location.hash || window.location.search) {
     var settle = function () { alignHash(); markSearchHit(); };
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(settle); else settle();
+    if (window.location.hash) window.addEventListener('load', alignHash);
   }
 
   /* ---------- search ---------- */
