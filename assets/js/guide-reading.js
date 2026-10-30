@@ -685,6 +685,7 @@
     document.querySelectorAll('.guide-toc-item > a, .guide-card').forEach(function (a) {
       var m = a.pathname.match(/\/besteps\/guide\/([^/]+)\/$/);
       if (!m || !load('read:' + m[1]) || a.querySelector('.guide-read-mark')) return;
+      if (a.parentElement.classList.contains('guide-toc-item')) a.parentElement.classList.add('is-read');
       var mark = document.createElement('span');
       mark.className = 'guide-read-mark';
       mark.title = 'Read';

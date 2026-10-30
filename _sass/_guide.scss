@@ -288,45 +288,51 @@ body#guide {
     ul { list-style: none; margin: 0; padding: 0; }
     a { color: $guide-text; text-decoration: none; display: block; }
   }
-  .guide-toc-home {
-    font-weight: 600;
-    padding: 0.35rem 0.6rem;
-    border-left: 3px solid transparent;
-    &.is-current { color: $ubse; border-left-color: $ubse; background: $guide-surface; }
-  }
-  .guide-toc-part {
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: $guide-faint;
-    font-weight: 600;
-    margin: 1.3rem 0 0.4rem 0.6rem;
-  }
-  a.guide-toc-part--link { display: block; color: $guide-faint; padding: 0.3rem 0.6rem; margin-left: 0; border-left: 3px solid transparent;
-    &:hover { color: $ubse; }
-    &.is-current { color: $ubse; border-left-color: $ubse; background: $guide-surface; } }
+  // Contents as a reading path: each volume is a titled group whose lectures sit on a line with a dot
+  // each (filled = read, ringed = this page); the page being read is a tinted block, and its sections
+  // are listed under it with the one in view marked.
+  .guide-toc-home { padding: 0.45rem 0.7rem; border-radius: 6px; font-weight: 600;
+    &.is-current { color: $ubse; background: $ubse-tint; } }
+  .guide-toc-part, a.guide-toc-part--link { display: block; margin: 1.25rem 0 0.35rem; padding: 1rem 0.7rem 0; border-top: 1px solid $guide-line;
+    font-size: 0.68rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: $guide-faint; }
+  a.guide-toc-part--link {
+    &:hover .guide-toc-part-title { color: $ubse; }
+    &.is-current, &.is-current .guide-toc-part-title { color: $ubse; } }
+  .guide-toc-part-title { display: block; margin-top: 0.2rem; font-family: $guide-serif; font-size: 0.98rem; font-weight: 600; line-height: 1.25;
+    letter-spacing: 0; text-transform: none; color: $guide-ink; }
   .guide-toc-item > a {
-    padding: 0.4rem 1.8rem 0.4rem 0.6rem;   // room on the right for the read tick
-    border-left: 3px solid transparent;
-    border-radius: 0 4px 4px 0;
+    padding: 0.42rem 1.8rem 0.42rem 0.7rem;   // room on the right for the read tick
+    border-radius: 6px;
     &:hover { background: $guide-surface; }
   }
-  .guide-toc-label { display: block; font-size: 0.72rem; font-weight: 600; color: $guide-muted; letter-spacing: 0.02em; }
-  .guide-toc-title { display: block; }
+  .guide-toc-label { display: block; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: $guide-muted; }
+  .guide-toc-title { display: block; font-size: 0.88rem; color: $guide-ink; }
   .guide-toc-item.is-current > a {
-    background: $guide-surface;
-    border-left-color: $ubse;
+    background: $ubse-tint;
     .guide-toc-label, .guide-toc-title { color: $ubse; }
     .guide-toc-title { font-weight: 600; }
   }
-  .guide-toc-sections {
-    margin: 0.2rem 0 0.5rem 0.95rem !important;
-    border-left: 1px solid var(--g-line-strong);
-    a { padding: 0.25rem 0.5rem 0.25rem 0.8rem; font-size: 0.8rem; color: $guide-muted;
-      &:hover { color: $ubse; }
-      &.is-active { color: $ubse; font-weight: 600; } }
+  .guide-toc-matter .guide-toc-item.is-current > a { box-shadow: inset 3px 0 0 $ubse; }
+  // the path: a line through the volume's lectures, a dot for each
+  .guide-toc-path { position: relative; margin-left: 0.35rem !important;
+    &::before { content: ""; position: absolute; left: 0.62rem; top: 1rem; bottom: 1rem; width: 2px; background: var(--g-line-strong); }
+    > .guide-toc-item > a { position: relative; padding-left: 1.75rem;
+      &::before { content: ""; position: absolute; left: 0.32rem; top: 0.95rem; box-sizing: border-box; width: 0.7rem; height: 0.7rem;
+        border: 2px solid var(--g-line-strong); border-radius: 50%; background: $ubse-tint-2; } }
+    > .guide-toc-item.is-read > a::before { border-color: $ubse; background: $ubse; }
+    > .guide-toc-item.is-current > a::before { border-color: $ubse; background: var(--g-bg);
+      box-shadow: 0 0 0 3px $ubse-tint, inset 0 0 0 2px var(--g-bg), inset 0 0 0 5px $ubse; }
+    .guide-read-mark .guide-icon { display: none; }   // the filled dot shows it; "(read)" stays for screen readers
+    .guide-toc-sections { margin-left: 1.75rem !important; }
   }
-  .guide-toc-matter .guide-toc-title { color: $guide-muted; }
+  .guide-toc-sections {
+    margin: 0.3rem 0 0.6rem 0.7rem !important;
+    a { position: relative; padding: 0.28rem 0.5rem 0.28rem 1.1rem; font-size: 0.8rem; color: $guide-muted;
+      &::before { content: ""; position: absolute; left: 0.2rem; top: 0.78em; width: 0.38rem; height: 0.38rem; border-radius: 50%; background: var(--g-line-strong); }
+      &:hover { color: $ubse; }
+      &.is-active { color: $ubse; font-weight: 600;
+        &::before { background: $ubse; box-shadow: 0 0 0 3px $ubse-tint; } } }
+  }
 
   .guide-main { min-width: 0; padding: 2.75rem 3rem 4rem; }
   .guide-article { max-width: calc(40rem * var(--g-size)); margin: 0 auto; }
