@@ -94,6 +94,30 @@ html[data-guide-theme="green"] body#guide {
   .guide-btn--light { background: var(--g-btn-bg); color: var(--g-btn-text); &:hover { background: var(--g-btn-hover); color: var(--g-btn-text); } }
   .guide-btn--outline-light { color: var(--g-accent); border-color: var(--g-accent-45); &:hover { background: var(--g-surface); color: var(--g-accent-strong); } }
 }
+// Night: the same quiet band, in the page's dark tint with light text
+html[data-guide-theme="night"] body#guide {
+  .guide-cover { background: var(--g-tint); color: var(--g-ink); border-bottom: 1px solid var(--g-line); }
+  .guide-cover-title { color: var(--g-ink); }
+  .guide-cover-rule { background: var(--g-line-strong); }
+  .guide-cover-img { box-shadow: 0 12px 34px rgba(0, 0, 0, 0.55); }
+  .guide-flow-map, .guide-viewer-flow { background: var(--g-surface); }   // with the recoloured diagram below
+  .guide-btn--light { background: var(--g-btn-bg); color: var(--g-btn-text); &:hover { background: var(--g-btn-hover); color: var(--g-btn-text); } }
+  .guide-btn--outline-light { color: var(--g-accent); border-color: var(--g-accent-45); &:hover { background: var(--g-surface); color: var(--g-ink); } }
+}
+// Night: the diagram sits on a dark card; its blues brighten to the night accent, black turns light
+html[data-guide-theme="night"] body#guide .guide-flow-svg {
+  --ge-adaptive-fg: #d6dbe1;
+  [style*="color: #005A8B"], [style*="color: rgb(0, 90, 139)"] { color: #7cb8dd !important; }
+  [style*="color: #000000"] { color: #eef1f4 !important; }
+  [style*="stroke: rgb(0, 90, 139)"] { stroke: #7cb8dd !important; }
+  [style*="fill: rgb(0, 90, 139)"] { fill: #7cb8dd !important; }
+  [style*="fill: rgb(218, 232, 252)"] { fill: #2c3e52 !important; }
+  [style*="stroke: rgb(108, 142, 191)"] { stroke: #6f93b8 !important; }
+  .guide-flow-link.is-hover, .guide-flow-link:hover, .guide-flow-link:focus-visible {
+    foreignObject div { color: #b5dbf2 !important; }
+    path[style*="218, 232, 252"] { fill: #3a5571 !important; stroke: #7cb8dd !important; }
+    path[style*="var(--ge-adaptive-fg"] { stroke: #7cb8dd !important; } }
+}
 // Green: the diagram's blues (draw.io export, scripts/guide_flow.py) become the theme's greens
 html[data-guide-theme="green"] body#guide .guide-flow-svg {
   [style*="color: #005A8B"], [style*="color: rgb(0, 90, 139)"] { color: #476540 !important; }
