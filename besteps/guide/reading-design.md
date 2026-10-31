@@ -11,7 +11,7 @@ permalink: /besteps/guide/reading-design/
 description: "The reading aids in the web edition of The BESTEPS Guide, and the research behind them."
 ---
 
-Much of the editing work on this web-based E-book was making the Guide easier to read, especially on a screen. With the help of Claude, I added the reading aids below, drawing on research in psychology and education. The text itself is identical to the final printed and PDF copies. 
+Much of the editing work on this web-based E-book went into making the Guide easier to read, especially on a screen. With the help of Claude, I added the reading aids below, drawing on research in psychology and education. The text itself is identical to the final printed and PDF copies. 
 
 The features help in four ways: (1) seeing the structure, (2) staying focused, (3) digesting the content, and (4) reading comfortably. Comments and suggestions are more than welcome at mengwei.lin@ub.edu.
 
@@ -26,7 +26,7 @@ Research behind it: cues that make the organisation of the material visible help
 ## Staying focused
 
 - Chapters longer than 12 minutes are offered in two or three sittings, which end at section boundaries.
-- "Done for today" saves your place, an optional calendar entry reminds you, and when you come back a short card lists the sections you have already read.
+- "Done for today" saves your place, an optional calendar entry reminds you, and, when you come back, a short card lists the sections you have already read.
 - Progress is counted in sections rather than in minutes left.
 
 Research behind it: in long tasks, the mind wanders more and more often as time goes on [2], and short breaks reduce fatigue [3]. In online surveys, progress that looks slow at the start makes people give up, while progress that looks quick keeps them going [4]; and motivation tends to sag around the middle of a task [5].
@@ -41,7 +41,7 @@ Research behind it: recalling what you have just learned is one of the most effe
 ## Reading comfortably
 
 - In the Aa menu you can choose the font, text size, and line and letter spacing. Lines stay at about 65–70 characters.
-- You can switch between Day, Green and Night themes.
+- You can switch between Day, Green, and Night themes.
 
 Research behind it: no single font is fastest for everyone. In a study of 352 adults, each reader's fastest font was about 35% faster than their slowest, and which font was fastest differed from reader to reader [9]. For most readers in ordinary light, dark text on a light background is the easiest to read [10]; Green and Night are offered for comfort and personal preference.
 
