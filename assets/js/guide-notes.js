@@ -148,7 +148,14 @@
     for (var i = 0; i < heads.length; i++) if (heads[i].id === id) return i + 1;
     return 0;
   }
-  function order(n) { return placeOf(n.section); }
+  function order(n) { return typeof n.place === 'number' ? n.place : placeOf(n.section); }
+  // just after the last heading of a major section (where a recall is written)
+  function endOf(id) {
+    var i = placeOf(id);
+    if (!i) return 0.5;
+    while (heads[i] && heads[i].tagName === 'H3') i++;
+    return i + 0.5;
+  }
   function when(t) { return new Date(t).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }); }
   function render() {
     var mine = all().filter(function (n) { return n.slug === slug; })
@@ -162,6 +169,7 @@
       link.addEventListener('click', function () { if (!wide.matches) closePanel(false); });
       li.appendChild(link);
       if (n.quote) li.appendChild(el('blockquote', 'guide-mynotes-quote', '“' + n.quote + '”'));
+      if (n.kind === 'recall') li.appendChild(el('span', 'guide-mynotes-tag', 'Recall'));
       if (n.text) li.appendChild(el('p', 'guide-mynotes-text', n.text));
       var meta = el('div', 'guide-mynotes-meta');
       meta.appendChild(el('span', '', when(n.updated || n.created)));
@@ -288,7 +296,7 @@
         out.push('### [' + (n.sectionTitle || 'Start of ' + (n.label || n.chapter)) + '](' + base + n.url + (n.section ? '#' + n.section : '') + ')', '');
       }
       if (n.quote) out.push('> ' + n.quote, '');
-      if (n.text) out.push(n.text, '');
+      if (n.text) out.push((n.kind === 'recall' ? '**Recall:** ' : '') + n.text, '');
       out.push('*' + when(n.updated || n.created) + '*', '');
     });
     var blob = new Blob([out.join('\n')], { type: 'text/markdown;charset=utf-8' });
@@ -299,6 +307,27 @@
     a.click();
     setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
   });
+
+  // for the reading script: recall boxes save here, the welcome-back card counts and opens the notes
+  window.guideNotes = {
+    add: function (f) {
+      var now = Date.now(), notes = all();
+      notes.push({ id: now.toString(36) + Math.random().toString(36).slice(2, 6), slug: slug, label: label, chapter: chapterTitle,
+                   url: location.pathname, section: f.section || '', sectionTitle: f.sectionTitle || '',
+                   place: f.kind === 'recall' ? endOf(f.section) : placeOf(f.section),
+                   quote: '', text: f.text, kind: f.kind || '', created: now, updated: now });
+      keep(notes);
+      render();
+      toast(stored ? 'Saved to your notes' : 'Saved for this visit only (this browser blocks storage)');
+    },
+    find: function (section, kind) {
+      var hit = null;
+      all().forEach(function (n) { if (n.slug === slug && n.section === section && (!kind || n.kind === kind)) hit = n; });
+      return hit;
+    },
+    count: function () { return all().filter(function (n) { return n.slug === slug; }).length; },
+    open: function () { openPanel(); }
+  };
 
   // another tab changed the notes
   window.addEventListener('storage', function (e) { if (e.key === KEY) render(); });

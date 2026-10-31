@@ -9,8 +9,8 @@
   var BAR_COLOURS = { day: '#e4edf3', green: '#dbe6d3', night: '#20262f' };
   // radio-group settings: stored value -> <html data-guide-NAME>; the first value is the default
   var CHOICES = { font: ['poppins', 'sans', 'serif'], leading: ['1', '0', '2'] };
-  // on/off settings
-  var TOGGLES = ['spacing'];
+  // on/off settings and their defaults
+  var TOGGLES = { spacing: 'off', recall: 'on', progress: 'on' };
   var dark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
   // the phone layout (keep in step with _sass/_guide.scss)
   var phone = window.matchMedia('(max-width: 767px), (max-height: 500px) and (max-width: 1099px)');
@@ -48,6 +48,7 @@
       if (steps.length === 2) { steps[0].disabled = size() === 0; steps[1].disabled = size() === 3; }
       var f = box.querySelector('[data-guide-focus-toggle]');
       if (f) f.checked = focusOn();
+      setTimeout(placeTicks, 60);   // size, spacing or recall boxes move the sections
       box.querySelectorAll('[data-guide-choice]').forEach(function (r) { r.checked = r.value === choice(r.getAttribute('data-guide-choice')); });
       box.querySelectorAll('[data-guide-toggle]').forEach(function (c) { c.checked = root.getAttribute('data-guide-' + c.getAttribute('data-guide-toggle')) === 'on'; });
     });
@@ -123,7 +124,7 @@
     else if (k === 'size' && /^[0-3]$/.test(e.newValue || '')) setSize(parseInt(e.newValue, 10));
     else if (k === 'focus') setFocus(e.newValue === 'on');
     else if (CHOICES[k]) setChoice(k, e.newValue);
-    else if (TOGGLES.indexOf(k) >= 0) setToggle(k, e.newValue === 'on');
+    else if (k in TOGGLES) setToggle(k, (e.newValue || TOGGLES[k]) === 'on');
     else return;
     sync();
   });
@@ -369,6 +370,75 @@
     });
   }
 
+  /* ---------- the chapter's major sections: reading time per section, and sittings ---------- */
+  // Shared by the progress display, the section labels and pauses, the sittings plan and resume.
+  // Minutes use the "min read" rate (200 words a minute, 12 s per figure, code and notes left out) and
+  // add up to the chapter's rounded "min read". A chapter over 12 minutes is offered in 2 sittings,
+  // over 24 in 3, split at section ends so that the longest sitting is as short as possible.
+  var model = null;
+  function chapterModel() {
+    if (model !== null) return model || null;
+    model = false;
+    if (!main || !body) return null;
+    var parts = Array.prototype.filter.call(body.children, function (el) { return el.tagName === 'H2' && el.id !== 'notes'; });
+    if (parts.length < 2) return null;
+    var notesSec = body.querySelector('.guide-notes');
+    var weigh = function (from, to) {
+      var w = 0, el = from.nextElementSibling;
+      while (el && el !== to && el !== notesSec) {
+        if (el.tagName !== 'PRE' && !el.classList.contains('pre-scroll')) {
+          w += (el.textContent.match(/\w[\w'’-]*/g) || []).length / 200;
+          w += el.querySelectorAll('img').length * 12 / 60 + (el.tagName === 'IMG' ? 0.2 : 0);
+        }
+        el = el.nextElementSibling;
+      }
+      return w;
+    };
+    var sizes = parts.map(function (h, i) { return weigh(h, parts[i + 1]); });
+    var sum = sizes.reduce(function (a, b) { return a + b; }, 0) || 1;
+    var whole = Math.round(+main.getAttribute('data-guide-minutes') || sum);
+    // whole minutes that add up to the chapter's "min read" (largest remainders get the spare minutes)
+    var raw = sizes.map(function (x) { return Math.max(1, whole * x / sum); });
+    var mins = raw.map(Math.floor);
+    var spare = whole - mins.reduce(function (a, b) { return a + b; }, 0);
+    raw.map(function (x, i) { return [x - Math.floor(x), i]; }).sort(function (a, b) { return b[0] - a[0]; })
+      .forEach(function (r) { if (spare > 0) { mins[r[1]]++; spare--; } });
+    var total = mins.reduce(function (a, b) { return a + b; }, 0);
+    var k = Math.min(parts.length, total <= 12 ? 1 : total <= 24 ? 2 : 3);
+    model = { parts: parts, mins: mins, total: total, sittings: splitEven(mins, k) };
+    return model;
+  }
+  function splitEven(m, k) {
+    var n = m.length, best = null;
+    var add = function (a, b) { var t = 0; for (var i = a; i < b; i++) t += m[i]; return t; };
+    (function rec(start, left, acc) {
+      if (left === 1) {
+        var g = acc.concat([[start, n]]);
+        var sums = g.map(function (x) { return add(x[0], x[1]); });
+        var worst = Math.max.apply(null, sums);
+        var spread = sums.reduce(function (a, b) { return a + b * b; }, 0);   // ties: the more even split
+        if (!best || worst < best.worst || (worst === best.worst && spread < best.spread)) best = { worst: worst, spread: spread, groups: g };
+        return;
+      }
+      for (var e = start + 1; e <= n - left + 1; e++) rec(e, left - 1, acc.concat([[start, e]]));
+    })(0, k, []);
+    return best.groups.map(function (g) { return { from: g[0], to: g[1] - 1, min: add(g[0], g[1]) }; });
+  }
+  // the major section an element belongs to (-1: before the first)
+  function partOf(el) {
+    var m = chapterModel();
+    if (!m || !el) return -1;
+    var idx = -1;
+    for (var i = 0; i < m.parts.length; i++) {
+      if (m.parts[i] === el || (m.parts[i].compareDocumentPosition(el) & Node.DOCUMENT_POSITION_FOLLOWING)) idx = i; else break;
+    }
+    return idx;
+  }
+  function kickerOf(h) {
+    return h.previousElementSibling && h.previousElementSibling.classList.contains('guide-section-kicker') ? h.previousElementSibling : h;
+  }
+  var resumeApi = {};
+
   /* ---------- continue reading ---------- */
   function headingText(h) { return h.textContent.replace(/\s+/g, ' ').trim(); }
   function readPos(slug) { try { return JSON.parse(load('pos:' + slug) || 'null'); } catch (e) { return null; } }
@@ -391,8 +461,14 @@
       if (!marks.length && window.scrollY > window.innerHeight * 0.6) return { id: '', title: '', p: p };
       return null;
     }
+    var hold = null;   // after "Done for today": keep the saved place until the reader passes it
     function store() {
       pending = null; lastSave = Date.now();
+      if (hold) {
+        var held = document.getElementById(hold);
+        if (held && held.getBoundingClientRect().top > 140) return;
+        hold = null;
+      }
       var w = where();
       if (!w) return;
       w.label = label; w.url = location.pathname; w.t = Date.now();
@@ -404,18 +480,79 @@
       pending = setTimeout(store, Math.max(0, 1000 - (Date.now() - lastSave)));
     }, { passive: true });
 
-    // opened at the top, without a #section or search: offer to go back to where the reader stopped
+    resumeApi.holdAt = function (id) { hold = id; };
+    resumeApi.stopAt = function (part, note) {
+      hold = part.id;
+      save('pos:' + slug, JSON.stringify({ id: part.id, title: headingText(part), p: 0, label: label, url: location.pathname, t: Date.now(), next: note }));
+      save('last', slug);
+    };
+
     var q = window.guideFromSearch || new URLSearchParams(location.search).get('q');
-    if (saved && !location.hash && !q && (saved.id || saved.p > 0.05)) {
+    var welcomeFlag = null;
+    try { welcomeFlag = sessionStorage.getItem(KEY + 'welcome'); sessionStorage.removeItem(KEY + 'welcome'); } catch (e) { /* no flag */ }
+    if (saved && saved.id && welcomeFlag === slug && location.hash === '#' + saved.id) {
+      // arrived from "Continue reading" on the home page
+      var show = function () { setTimeout(function () { welcomeBack(saved.id); }, 50); };
+      if (document.readyState === 'complete') show(); else window.addEventListener('load', show);
+    } else if (saved && !location.hash && !q && (saved.id || saved.p > 0.05)) {
+      // opened at the top, without a #section or search: offer to go back to where the reader stopped
       setTimeout(function () {
         if (window.scrollY > 80) return;
-        toast(saved.id ? 'Resume at “' + saved.title + '”' : 'Resume where you left off', 'Resume', function () {
-          var el = saved.id && document.getElementById(saved.id);
-          if (el) { el.scrollIntoView({ block: 'start' }); history.replaceState && history.replaceState(null, '', '#' + saved.id); }
-          else window.scrollTo(0, saved.p * (document.documentElement.scrollHeight - window.innerHeight));
+        var el = saved.id && document.getElementById(saved.id);
+        var m = chapterModel(), i = partOf(el);
+        var at = m && i >= 0 ? ' (section ' + (i + 1) + ' of ' + m.parts.length + ')' : '';
+        toast(saved.id ? 'Resume at “' + saved.title + '”' + at : 'Resume where you left off', 'Resume', function () {
+          if (el) {
+            if (history.replaceState) history.replaceState(null, '', '#' + saved.id);
+            if (!welcomeBack(saved.id)) el.scrollIntoView({ block: 'start' });
+          } else window.scrollTo(0, saved.p * (document.documentElement.scrollHeight - window.innerHeight));
         });
       }, 600);
     }
+  }
+
+  // Back after a break: just above the place the reader returns to, the sections already read and a
+  // way to their own notes, so they can pick up the thread before going on.
+  function welcomeBack(id) {
+    var m = chapterModel(), el = document.getElementById(id), i = partOf(el);
+    if (!m || !el || i <= 0 || document.querySelector('.guide-welcome')) return false;
+    var card = document.createElement('div');
+    card.className = 'guide-welcome';
+    card.setAttribute('role', 'note');
+    var t = document.createElement('p');
+    t.className = 'guide-welcome-title';
+    t.textContent = 'Welcome back. Read so far:';
+    card.appendChild(t);
+    var ol = document.createElement('ol');
+    for (var j = 0; j < i; j++) {
+      var li = document.createElement('li');
+      li.textContent = headingText(m.parts[j]);
+      ol.appendChild(li);
+    }
+    card.appendChild(ol);
+    var row = document.createElement('div');
+    row.className = 'guide-welcome-actions';
+    var n = window.guideNotes ? window.guideNotes.count() : 0;
+    if (n) {
+      var nb = document.createElement('button');
+      nb.type = 'button';
+      nb.textContent = 'Your notes (' + n + ')';
+      nb.addEventListener('click', function () { window.guideNotes.open(); });
+      row.appendChild(nb);
+    }
+    var x = document.createElement('button');
+    x.type = 'button';
+    x.className = 'guide-welcome-close';
+    x.textContent = 'Hide';
+    x.addEventListener('click', function () { card.remove(); });
+    row.appendChild(x);
+    card.appendChild(row);
+    var anchor = m.parts[i] === el ? kickerOf(el) : el;
+    anchor.parentNode.insertBefore(card, anchor);
+    // the card sits above the place: keep that place saved until the reader actually reaches it
+    if (resumeApi.holdAt) resumeApi.holdAt(id);
+    window.scrollTo(0, card.getBoundingClientRect().top + window.scrollY - 90);
+    return true;
   }
 
   /* ---------- how far through the page: "42% · 8 min left" ---------- */
@@ -449,6 +586,18 @@
         // 0 % while the text starts below the bar, 100 % once its last line is in view
         var span = end - r.top - (window.innerHeight - top);
         var done = span > 0 ? Math.min(1, Math.max(0, (top - r.top) / span)) : 1;
+        var m = chapterModel();
+        if (m) {
+          // by section: where the reader is in the first half, how many are left after the middle
+          var line = top + 130, n = m.parts.length, idx = -1;
+          for (var i = 0; i < n; i++) { if (m.parts[i].getBoundingClientRect().top <= line) idx = i; else break; }
+          var text;
+          if (done >= 0.995) text = 'End of ' + (main.getAttribute('data-guide-label') || 'the chapter');
+          else if (idx < 0) text = 'Introduction · ' + n + ' sections';
+          else if (idx + 1 <= Math.ceil(n / 2)) text = 'Section ' + (idx + 1) + ' of ' + n + ' · ' + m.mins[idx] + ' min';
+          else text = idx + 1 < n ? 'Section ' + (idx + 1) + ' of ' + n + ' · ' + (n - idx - 1) + ' to go' : 'Last section';
+          return { done: done, text: text };
+        }
         var left = total * (1 - done);
         return { done: done, text: Math.round(done * 100) + '%' + (done >= 0.995 ? '' : ' · ' + (left < 1 ? '<1' : Math.ceil(left)) + ' min left') };
       };
@@ -466,10 +615,32 @@
         chipTimer = setTimeout(function () { chip.classList.remove('is-shown'); }, 1500);
       };
       window.addEventListener('scroll', function () { showProgress(true); }, { passive: true });
-      window.addEventListener('resize', function () { showProgress(false); });
-      window.addEventListener('load', function () { showProgress(false); });
+      window.addEventListener('resize', function () { showProgress(false); placeTicks(); });
+      window.addEventListener('load', function () { showProgress(false); placeTicks(); });
       showProgress(false);
+      setTimeout(placeTicks, 0);
     }
+  }
+
+  // the top bar's progress line is marked where each major section begins (same measure as guide.js)
+  function placeTicks() {
+    var m = chapterModel(), track = document.querySelector('.guide-progress');
+    if (!m || !track) return;
+    track.querySelectorAll('.guide-progress-tick').forEach(function (t) { t.remove(); });
+    var barEl = document.querySelector('.guide-bar');
+    var offset = (barEl ? barEl.getBoundingClientRect().bottom : 0) + 24;
+    var r = body.getBoundingClientRect();
+    var span = r.height - window.innerHeight + offset;
+    if (span <= 0) return;
+    m.parts.forEach(function (h, i) {
+      if (!i) return;
+      var f = (kickerOf(h).getBoundingClientRect().top - r.top) / span;
+      if (f <= 0 || f >= 1) return;
+      var t = document.createElement('i');
+      t.className = 'guide-progress-tick';
+      t.style.left = (f * 100).toFixed(2) + '%';
+      track.appendChild(t);
+    });
   }
 
   /* ---------- previews of figure and section references, and "back to where you were" ---------- */
@@ -627,60 +798,219 @@
     }, { passive: true });
   }
 
-  /* ---------- reading rhythm: section labels and pauses between sections ---------- */
-  // Each major section opens with a label "2 / 6 · 7 min" and ends with a
-  // small marker ("End of section 1 · 18 min left · Next: …"), so a long chapter has places to stop.
-  // Nothing in the text changes: the labels and markers sit between the book's own blocks.
-  if (main && body) {
-    var parts = Array.prototype.filter.call(body.children, function (el) { return el.tagName === 'H2' && el.id !== 'notes'; });
-    if (parts.length >= 2) {
-      var notesSec = body.querySelector('.guide-notes');
-      var weigh = function (from, to) {
-        var w = 0, el = from.nextElementSibling;
-        while (el && el !== to && el !== notesSec) {
-          if (el.tagName !== 'PRE' && !el.classList.contains('pre-scroll')) {
-            w += (el.textContent.match(/\w[\w'’-]*/g) || []).length / 200;
-            w += el.querySelectorAll('img').length * 12 / 60 + (el.tagName === 'IMG' ? 0.2 : 0);
-          }
-          el = el.nextElementSibling;
-        }
-        return w;
-      };
-      var sizes = parts.map(function (h, i) { return weigh(h, parts[i + 1]); });
-      var sum = sizes.reduce(function (a, b) { return a + b; }, 0) || 1;
-      var totalMin = +main.getAttribute('data-guide-minutes') || sum;
-      // whole minutes that add up to the chapter's "min read" (largest remainders get the spare minutes)
-      var whole = Math.round(totalMin);
-      var raw = sizes.map(function (x) { return Math.max(1, whole * x / sum); });
-      var mins = raw.map(Math.floor);
-      var spare = whole - mins.reduce(function (a, b) { return a + b; }, 0);
-      raw.map(function (x, i) { return [x - Math.floor(x), i]; }).sort(function (a, b) { return b[0] - a[0]; })
-        .forEach(function (r) { if (spare > 0) { mins[r[1]]++; spare--; } });
-      var chapterLabel = main.getAttribute('data-guide-label') || 'this chapter';
-      parts.forEach(function (h, i) {
-        var k = document.createElement('p');
-        k.className = 'guide-section-kicker';
-        k.setAttribute('aria-hidden', 'true');
-        k.textContent = (i + 1) + ' / ' + parts.length + ' · ' + mins[i] + ' min';
-        h.parentNode.insertBefore(k, h);
-        var next = parts[i + 1];
-        if (!next) return;
-        var left = mins.slice(i + 1).reduce(function (a, b) { return a + b; }, 0);
-        var pause = document.createElement('div');
-        pause.className = 'guide-pause';
-        var done = document.createElement('span');
-        done.className = 'guide-pause-done';
-        done.textContent = '✓ End of section ' + (i + 1);
-        var rest = document.createElement('span');
-        rest.textContent = left + ' min left in ' + chapterLabel;
+  /* ---------- reading rhythm: section labels, pauses, sittings and recall ---------- */
+  // Each major section opens with a label ("2 / 6 · 7 min") and ends with a pause marker. A long chapter is
+  // offered in two or three sittings; the pause that ends a sitting is a place to stop ("Done for today",
+  // with an optional calendar reminder). Each pause also carries an optional recall box: a few words of
+  // the reader's own, kept with their notes and set against the section's subheadings.
+  // Nothing in the book's text changes: all of this sits between its blocks.
+  var cm = chapterModel();
+  if (cm) {
+    var chapterLabel = main.getAttribute('data-guide-label') || 'this chapter';
+    var slugNow = main.getAttribute('data-guide-slug');
+    var K = cm.sittings.length;
+    var planItems = [];
+
+    // the plan, under the chapter heading
+    if (K > 1) {
+      var sitDone = +load('sittings:' + slugNow) || 0;
+      var plan = document.createElement('div');
+      plan.className = 'guide-plan';
+      var planTitle = document.createElement('p');
+      planTitle.className = 'guide-plan-title';
+      planTitle.textContent = 'Read in ' + K + ' sittings';
+      plan.appendChild(planTitle);
+      var planList = document.createElement('ol');
+      cm.sittings.forEach(function (st, s) {
+        var li = document.createElement('li');
+        if (s < sitDone) li.className = 'is-done';
+        var range = st.from === st.to ? 'Section ' + (st.from + 1) : 'Sections ' + (st.from + 1) + '–' + (st.to + 1);
+        var a = document.createElement(s ? 'a' : 'span');
+        if (s) a.href = '#' + cm.parts[st.from].id;
+        a.textContent = range + ' · ' + st.min + ' min';
+        li.appendChild(a);
+        planList.appendChild(li);
+        planItems.push(li);
+      });
+      plan.appendChild(planList);
+      body.parentNode.insertBefore(plan, body);
+    }
+
+    cm.parts.forEach(function (h, i) {
+      var k = document.createElement('p');
+      k.className = 'guide-section-kicker';
+      k.setAttribute('aria-hidden', 'true');
+      k.textContent = (i + 1) + ' / ' + cm.parts.length + ' · ' + cm.mins[i] + ' min';
+      h.parentNode.insertBefore(k, h);
+
+      var next = cm.parts[i + 1];
+      var pause = document.createElement('div');
+      pause.className = 'guide-pause';
+      var row = document.createElement('div');
+      row.className = 'guide-pause-row';
+      var done = document.createElement('span');
+      done.className = 'guide-pause-done';
+      done.textContent = '✓ End of section ' + (i + 1);
+      row.appendChild(done);
+      if (next) {
         var go = document.createElement('a');
         go.className = 'guide-pause-next';
         go.href = '#' + next.id;
-        go.textContent = 'Next: ' + next.textContent.replace(/\s+/g, ' ').trim() + ' ↓';
-        pause.appendChild(done); pause.appendChild(rest); pause.appendChild(go);
-        body.insertBefore(pause, next.previousElementSibling && next.previousElementSibling.classList.contains('guide-section-kicker') ? next.previousElementSibling : next);
-      });
+        go.textContent = 'Next: ' + headingText(next) + ' · ' + cm.mins[i + 1] + ' min ↓';
+        row.appendChild(go);
+      } else {
+        var fin = document.createElement('span');
+        fin.textContent = 'End of ' + chapterLabel;
+        row.appendChild(fin);
+      }
+      pause.appendChild(row);
+
+      // a sitting ends here
+      var s = -1;
+      cm.sittings.forEach(function (st, j) { if (st.to === i) s = j; });
+      if (next && K > 1 && s >= 0 && s < K - 1) {
+        pause.classList.add('guide-pause--stop');
+        var nextSitting = cm.sittings[s + 1];
+        var note = 'sitting ' + (s + 2) + ' of ' + K + ', ' + nextSitting.min + ' min';
+        var stop = document.createElement('div');
+        stop.className = 'guide-pause-stop';
+        var said = document.createElement('p');
+        said.textContent = 'Sitting ' + (s + 1) + ' of ' + K + ' done: a good place to stop.';
+        stop.appendChild(said);
+        var dayBtn = document.createElement('button');
+        dayBtn.type = 'button';
+        dayBtn.className = 'guide-btn guide-btn--ghost';
+        dayBtn.textContent = 'Done for today';
+        dayBtn.addEventListener('click', function () {
+          if (resumeApi.stopAt) resumeApi.stopAt(next, note);
+          save('sittings:' + slugNow, String(Math.max(+load('sittings:' + slugNow) || 0, s + 1)));
+          planItems.forEach(function (li, j) { if (j <= s) li.classList.add('is-done'); });
+          said.textContent = 'Saved. Next time you open ' + chapterLabel + ', it offers to resume at “' + headingText(next) + '” (' + note + ').';
+          var cal = document.createElement('button');
+          cal.type = 'button';
+          cal.className = 'guide-btn guide-btn--ghost';
+          cal.textContent = 'Add a reminder to my calendar';
+          cal.addEventListener('click', function () {
+            calendarFile('Read The BESTEPS Guide: ' + chapterLabel + ', ' + note,
+                         location.origin + location.pathname + '#' + next.id, nextSitting.min);
+          });
+          dayBtn.replaceWith(cal);
+          cal.focus();
+          toast('Place saved');
+        });
+        stop.appendChild(dayBtn);
+        pause.appendChild(stop);
+      }
+
+      pause.appendChild(recallBox(h, next, i));
+      var notesSec = body.querySelector('.guide-notes');
+      if (next) body.insertBefore(pause, next);
+      else if (notesSec) body.insertBefore(pause, notesSec);
+      else body.appendChild(pause);
+    });
+  }
+
+  // A recall box: a few words of the reader's own about the section just read (writing keywords after
+  // reading helps screen readers process more deeply), saved with their notes and set against the
+  // section's subheadings. Optional: hidden from the Aa panel or with "Hide recall boxes".
+  function recallBox(h, next, i) {
+    var box = document.createElement('div');
+    box.className = 'guide-recall';
+    var subs = [];
+    var el = h.nextElementSibling;
+    while (el && el !== next && !el.classList.contains('guide-notes')) {
+      if (el.tagName === 'H3') subs.push(headingText(el));
+      el = el.nextElementSibling;
     }
+    var showSaved = function (text) {
+      var hadFocus = box.contains(document.activeElement);
+      box.innerHTML = '';
+      box.classList.add('is-saved');
+      var mine = document.createElement('p');
+      mine.tabIndex = -1;
+      mine.textContent = 'Your words: “' + text + '”';
+      box.appendChild(mine);
+      if (hadFocus) mine.focus();
+      if (subs.length) {
+        var cov = document.createElement('p');
+        cov.className = 'guide-recall-covered';
+        cov.textContent = 'The section covered: ' + subs.join(' · ');
+        box.appendChild(cov);
+      }
+    };
+    var id = 'guide-recall-' + i;
+    var lab = document.createElement('label');
+    lab.htmlFor = id;
+    lab.textContent = 'In a few words of your own: what was this section about?';
+    var line = document.createElement('div');
+    line.className = 'guide-recall-row';
+    var input = document.createElement('input');
+    input.type = 'text';
+    input.id = id;
+    input.maxLength = 200;
+    input.placeholder = 'Two or three keywords';
+    input.autocomplete = 'off';
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'guide-btn guide-btn--ghost';
+    btn.textContent = 'Save to notes';
+    var keep = function () {
+      var text = input.value.trim();
+      if (!text) { input.focus(); return; }
+      if (window.guideNotes) window.guideNotes.add({ section: h.id, sectionTitle: headingText(h), text: text, kind: 'recall' });
+      showSaved(text);
+    };
+    btn.addEventListener('click', keep);
+    input.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); keep(); } });
+    line.appendChild(input);
+    line.appendChild(btn);
+    var off = document.createElement('button');
+    off.type = 'button';
+    off.className = 'guide-recall-hide';
+    off.textContent = 'Hide recall boxes';
+    off.addEventListener('click', function () {
+      var landing = box.parentNode && box.parentNode.querySelector('.guide-pause-next, .guide-pause-done');
+      setToggle('recall', false); save('recall', 'off'); sync();
+      if (landing) { landing.tabIndex = landing.tabIndex < 0 ? -1 : landing.tabIndex; landing.focus(); }
+      toast('Recall boxes hidden (they can be turned on again under Aa)');
+    });
+    box.appendChild(lab);
+    box.appendChild(line);
+    box.appendChild(off);
+    // a recall already written for this section (the notes script runs after this one)
+    document.addEventListener('DOMContentLoaded', function () {
+      var old = window.guideNotes && window.guideNotes.find(h.id, 'recall');
+      if (old) showSaved(old.text);
+    });
+    return box;
+  }
+
+  // a one-event calendar file for the next sitting, tomorrow at this time (no account, no reminders sent)
+  function calendarFile(title, url, minutes) {
+    var start = new Date();
+    start.setDate(start.getDate() + 1);   // tomorrow at this time, also across a clock change
+    start.setSeconds(0, 0);
+    var stop = new Date(start.getTime() + minutes * 60000);
+    var stamp = function (d) { return d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, ''); };
+    var esc = function (t) { return t.replace(/\\/g, '\\\\').replace(/([,;])/g, '\\$1'); };
+    var ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//The BESTEPS Guide//EN', 'BEGIN:VEVENT',
+               'UID:' + Date.now() + '@besteps-guide', 'DTSTAMP:' + stamp(new Date()),
+               'DTSTART:' + stamp(start), 'DTEND:' + stamp(stop),
+               'SUMMARY:' + esc(title), 'DESCRIPTION:' + esc(url), 'URL:' + url,
+               'BEGIN:VALARM', 'ACTION:DISPLAY', 'TRIGGER:-PT10M', 'DESCRIPTION:' + esc(title), 'END:VALARM',
+               'END:VEVENT', 'END:VCALENDAR'].map(function (l) {
+                 // fold lines longer than 75 characters (RFC 5545)
+                 var out = [];
+                 while (l.length > 74) { out.push(l.slice(0, 74)); l = ' ' + l.slice(74); }
+                 out.push(l);
+                 return out.join('\r\n');
+               }).join('\r\n') + '\r\n';
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([ics], { type: 'text/calendar;charset=utf-8' }));
+    a.download = 'besteps-guide-next-sitting.ics';
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
   }
 
   /* ---------- tick-offs: the book's exercises and the "Rule N" checklist (kept in this browser) ---------- */
@@ -763,7 +1093,8 @@
   if (lastPos && lastPos.url) {
     var a = document.createElement('a');
     a.href = lastPos.url + (lastPos.id ? '#' + lastPos.id : '');
-    a.textContent = lastPos.label + (lastPos.title ? ' › ' + lastPos.title : '');
+    a.textContent = lastPos.label + (lastPos.title ? ' › ' + lastPos.title : '') + (lastPos.next ? ' (' + lastPos.next + ')' : '');
+    a.addEventListener('click', function () { try { sessionStorage.setItem(KEY + 'welcome', last); } catch (e) { /* no card */ } });
     var forget = document.createElement('button');
     forget.type = 'button';
     forget.className = 'guide-resume-forget';

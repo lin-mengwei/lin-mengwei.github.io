@@ -1,6 +1,7 @@
 {% comment %} Reader settings for The BESTEPS Guide, applied before first paint (localStorage, keys "besteps-guide:*").
 Theme: auto | day | green | night (auto follows the system). Size: 0-3 (90/100/112/125 %). Font: poppins | sans | serif.
-Leading: 0-2 (tight/normal/loose). Spacing: on | off (wider letters and words). Focus: on | off. {% endcomment %}
+Leading: 0-2 (tight/normal/loose). Spacing: on | off (wider letters and words). Focus: on | off.
+Recall boxes and progress indicators: on (default) | off. {% endcomment %}
 <script>
 (function () {
   var d = document.documentElement, get = function (k) { try { return localStorage.getItem('besteps-guide:' + k); } catch (e) { return null; } };
@@ -16,6 +17,8 @@ Leading: 0-2 (tight/normal/loose). Spacing: on | off (wider letters and words). 
   var font = get('font'); d.setAttribute('data-guide-font', font === 'sans' || font === 'serif' ? font : 'poppins');
   var leading = get('leading'); d.setAttribute('data-guide-leading', /^[0-2]$/.test(leading || '') ? leading : '1');
   d.setAttribute('data-guide-spacing', get('spacing') === 'on' ? 'on' : 'off');
+  d.setAttribute('data-guide-recall', get('recall') === 'off' ? 'off' : 'on');
+  d.setAttribute('data-guide-progress', get('progress') === 'off' ? 'off' : 'on');
   var m = document.querySelector('meta[name="theme-color"]');
   if (m) m.setAttribute('content', { day: '#e4edf3', green: '#dbe6d3', night: '#20262f' }[theme]);
 })();
