@@ -164,3 +164,15 @@ def test_file_size_label(tmp_path):
     f.write_bytes(b"x" * 7558521)
     assert file_size_label(f) == "7.6 MB"
     assert file_size_label(tmp_path / "missing.pdf") == ""
+
+
+def test_link_phrases_wraps_first_occurrence_only():
+    from build_guide import link_phrases
+    html = ("<p>to support the <strong>Barcelona Essential Skills Training for Economics PhD Students (BESTEPS)</strong>, "
+            "a brilliant initiative. BESTEPS again.</p>")
+    out = link_phrases(html, [("Barcelona Essential Skills Training for Economics PhD Students (BESTEPS)", "/besteps")])
+    a = BeautifulSoup(out, "lxml").find("a")
+    assert a["href"] == "/besteps" and a.parent.name == "strong"
+    assert a.get_text() == "Barcelona Essential Skills Training for Economics PhD Students (BESTEPS)"
+    assert BeautifulSoup(out, "lxml").get_text() == BeautifulSoup(html, "lxml").get_text()
+    assert link_phrases("<p>Nothing here.</p>", [("BESTEPS", "/besteps")]) == "<p>Nothing here.</p>"
