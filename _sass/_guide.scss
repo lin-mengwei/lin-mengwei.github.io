@@ -434,6 +434,7 @@ body#guide {
     color: $guide-ink;
     margin: 0 0 0.8rem;
   }
+  .guide-subtitle { margin: -0.3rem 0 0.8rem; font-family: $guide-serif; font-style: italic; font-size: clamp(1.1rem, 2vw, 1.35rem); color: $guide-muted; }
   .guide-byline { margin: 0; font-size: 0.92rem; line-height: 1.5; color: $guide-muted;
     strong { display: block; font-size: 1rem; color: $guide-ink; font-weight: 600; }
     span { display: block; } }

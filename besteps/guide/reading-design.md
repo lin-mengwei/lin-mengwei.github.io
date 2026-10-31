@@ -1,5 +1,6 @@
 ---
-title: E-book Features for a Better Reading Experience
+title: E-book Features
+subtitle: For a better reading experience
 layout: guide-page
 body_id: guide
 nav_active: public-goods

@@ -23,6 +23,7 @@ progress, notes and the other reading aids). {% endcomment %}
         {% else %}
         <p class="guide-kicker">{{ page.kicker | default: "Front matter" }}</p>
         <h1 class="guide-title">{{ page.title }}</h1>
+        {% if page.subtitle %}<p class="guide-subtitle">{{ page.subtitle }}</p>{% endif %}
         {% endif %}
       </header>
 
