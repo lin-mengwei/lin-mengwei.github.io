@@ -241,6 +241,12 @@ body#guide {
   .guide-mynotes-tag { display: inline-block; margin: 0.1rem 0 0.2rem; padding: 0.05rem 0.45rem; border-radius: 999px; background: $ubse-tint;
     color: $ubse; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
   .guide-set-aids .guide-set-check + .guide-set-check { margin-top: 0.6rem; }
+  // links to the page about the reading design (reading-design.md)
+  a.guide-set-about { display: inline-block; margin-top: 0.9rem; padding: 0.3rem 0; font-size: 0.8rem; font-weight: 600; color: $ubse; text-decoration: none;
+    &:hover { text-decoration: underline; } }
+  a.guide-cover-about { flex-basis: 100%; padding: 0.3rem 0; color: inherit; opacity: 0.9; font-family: $font-family-base; font-size: 0.85rem;
+    text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px;
+    &:hover { opacity: 1; } }
 
   // ---------- reading settings (Aa) ----------
   .guide-settings { position: relative; }
@@ -252,6 +258,7 @@ body#guide {
   // the light/dark sign says the panel holds the themes, not only the text size
   .guide-settings-btn .guide-icon--contrast { font-size: 0.95rem; margin-right: -0.2rem; }
   .guide-settings-panel { position: absolute; right: 0; top: calc(100% + 0.45rem); z-index: 70; width: 19.5rem; padding: 1rem;
+    max-height: calc(100vh - 5rem); overflow-y: auto;   // short screens: the panel scrolls
     background: $guide-surface; border: 1px solid $guide-line; border-radius: 10px; box-shadow: 0 12px 32px var(--g-shadow-strong);
     font-size: 0.85rem; color: $guide-text; text-align: left;
     &[hidden] { display: none; } }
