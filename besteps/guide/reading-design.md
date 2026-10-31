@@ -13,7 +13,7 @@ description: "The reading aids in the web edition of The BESTEPS Guide, and the 
 
 Much of the editing work on this web-based E-book went into making the Guide easier to read, especially on a screen. With the help of Claude, I added the reading aids below, drawing on research in psychology and education. The text itself is identical to the final printed and PDF copies. 
 
-The features help in four ways: (1) seeing the structure, (2) staying focused, (3) digesting the content, and (4) reading comfortably. Comments and suggestions are more than welcome at mengwei.lin@ub.edu.
+The features help in four ways: (1) seeing the structure, (2) staying focused, (3) digesting the content, and (4) reading comfortably. Comments and suggestions are more than welcome at [mengwei.lin@ub.edu](mailto:mengwei.lin@ub.edu).
 
 ## Seeing the structure
 
