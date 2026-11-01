@@ -1086,6 +1086,116 @@
     markRead();
   }
 
+  /* ---------- the end of the book: a small celebration in the afterword ---------- */
+  // Once every lecture is marked read, reaching the end of the afterword shows a card of congratulations
+  // (and, the first time, a short burst of confetti; none for readers who prefer reduced motion).
+  if (main && main.getAttribute('data-guide-slug') === 'afterword' && body) {
+    var lectures = [];
+    document.querySelectorAll('.guide-toc-path .guide-toc-item > a').forEach(function (a) {
+      var m = a.pathname.match(/\/besteps\/guide\/([^/]+)\/$/);
+      if (m) lectures.push(m[1]);
+    });
+    var allRead = lectures.length > 0 && lectures.every(function (sl) { return !!load('read:' + sl); });
+    if (allRead) {
+      var celebrate = function () {
+        if (document.querySelector('.guide-finale')) return;
+        var card = document.createElement('section');
+        card.className = 'guide-finale';
+        card.setAttribute('aria-labelledby', 'guide-finale-title');
+        var h = document.createElement('h2');
+        h.id = 'guide-finale-title';
+        h.className = 'guide-finale-title';
+        h.textContent = 'You have read the whole Guide';
+        var p1 = document.createElement('p');
+        p1.textContent = 'Congratulations, and thank you for reading all seven lectures. We hope their lessons serve you well through your PhD and beyond. Good luck with your research!';
+        var sign = document.createElement('p');
+        sign.className = 'guide-finale-sign';
+        sign.textContent = 'The BESTEPS team';
+        card.appendChild(h); card.appendChild(p1); card.appendChild(sign);
+        var n = window.guideNotes ? window.guideNotes.total() : 0;
+        if (n) {
+          var dl = document.createElement('button');
+          dl.type = 'button';
+          dl.className = 'guide-btn guide-btn--solid';
+          dl.textContent = 'Download your notes (' + n + ')';
+          dl.addEventListener('click', function () { window.guideNotes.download(); });
+          card.appendChild(dl);
+        }
+        var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!still) {
+          var again = document.createElement('button');
+          again.type = 'button';
+          again.className = 'guide-finale-again';
+          again.textContent = 'Celebrate again';
+          again.addEventListener('click', function () { confetti(card); });
+          card.appendChild(again);
+        }
+        body.parentNode.insertBefore(card, body.nextSibling);
+        if (!load('finale')) {
+          save('finale', String(Date.now()));
+          if (!still) confetti(card);
+        }
+      };
+      // at the end of the afterword (straight away if it already fits on the screen)
+      var end = document.createElement('div');
+      end.className = 'guide-finale-mark';
+      body.parentNode.insertBefore(end, body.nextSibling);
+      if ('IntersectionObserver' in window) {
+        var seen = new IntersectionObserver(function (es) {
+          if (es.some(function (e) { return e.isIntersecting; })) { seen.disconnect(); setTimeout(celebrate, 600); }
+        });
+        seen.observe(end);
+      } else window.addEventListener('scroll', function onEnd() {
+        if (end.getBoundingClientRect().top < window.innerHeight) { window.removeEventListener('scroll', onEnd); celebrate(); }
+      }, { passive: true });
+    }
+  }
+
+  // Confetti in the theme's colours: a burst, then a gentle fall that keeps going while the card is on the
+  // screen (time for a screenshot), fading once the reader scrolls away. Drawn on a canvas that lets
+  // every click through.
+  function confetti(card) {
+    var old = document.querySelector('.guide-confetti');
+    if (old) old.remove();
+    var c = document.createElement('canvas');
+    c.className = 'guide-confetti';
+    c.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(c);
+    var ctx = c.getContext('2d'), dpr = window.devicePixelRatio || 1, W, H;
+    var size = function () { W = window.innerWidth; H = window.innerHeight; c.width = W * dpr; c.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); };
+    size();
+    window.addEventListener('resize', size);
+    var accent = getComputedStyle(body).getPropertyValue('--g-accent').trim() || '#005A8B';
+    var colours = [accent, '#005A8B', '#7cb8dd', '#e6a817', '#d9534f', '#5f8151'];
+    var bits = [];
+    for (var i = 0; i < 160; i++) {
+      bits.push({ x: W / 2 + (Math.random() - 0.5) * W * 0.4, y: H + 10, vx: (Math.random() - 0.5) * 10, vy: -(10 + Math.random() * 10),
+                  r: Math.random() * Math.PI, vr: (Math.random() - 0.5) * 0.2, w: 6 + Math.random() * 6, h: 3 + Math.random() * 4,
+                  sway: Math.random() * Math.PI * 2, c: colours[i % colours.length] });
+    }
+    var alpha = 1, fading = false;
+    var watch = 'IntersectionObserver' in window ? new IntersectionObserver(function (es) {
+      fading = !es[0].isIntersecting;
+      if (!fading) alpha = 1;
+    }) : null;
+    if (watch && card) watch.observe(card);
+    (function frame() {
+      if (fading) alpha -= 0.02;
+      if (alpha <= 0) { c.remove(); window.removeEventListener('resize', size); if (watch) watch.disconnect(); return; }
+      ctx.clearRect(0, 0, W, H);
+      bits.forEach(function (b) {
+        // the burst rises and slows; then each piece drifts down, swaying, and starts again at the top
+        b.vy = Math.min(b.vy + 0.22, 1.6); b.vx *= 0.97; b.sway += 0.03;
+        b.x += b.vx + Math.sin(b.sway) * 0.6; b.y += b.vy; b.r += b.vr;
+        if (b.y > H + 20) { b.y = -10; b.x = Math.random() * W; b.vx = 0; }
+        ctx.save(); ctx.translate(b.x, b.y); ctx.rotate(b.r);
+        ctx.globalAlpha = alpha; ctx.fillStyle = b.c; ctx.fillRect(-b.w / 2, -b.h / 2, b.w, b.h);
+        ctx.restore();
+      });
+      requestAnimationFrame(frame);
+    })();
+  }
+
   // home: a link back to the most recent chapter
   var resume = document.querySelector('[data-guide-resume]');
   var last = resume && load('last');

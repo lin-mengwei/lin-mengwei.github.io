@@ -326,7 +326,9 @@
       return hit;
     },
     count: function () { return all().filter(function (n) { return n.slug === slug; }).length; },
-    open: function () { openPanel(); }
+    open: function () { openPanel(); },
+    total: function () { return all().length; },
+    download: function () { exportBtn.click(); }
   };
 
   // another tab changed the notes
