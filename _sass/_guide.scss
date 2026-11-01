@@ -85,7 +85,9 @@ html[data-guide-theme="night"] body#guide { @include guide-night; }
 // the page background behind the body (overscroll, short pages)
 html[data-guide-theme="green"] { background: #e8efe3; }
 // Aa > Reading aids switched off
-html[data-guide-recall="off"] body#guide .guide-recall { display: none; }
+// switched off: each box shrinks to one line with a way back
+html[data-guide-recall="off"] body#guide .guide-recall { > :not(.guide-recall-back) { display: none; } }
+html:not([data-guide-recall="off"]) body#guide .guide-recall-back { display: none; }
 html[data-guide-progress="off"] body#guide { .guide-progress, .guide-onpage-progress, .guide-progress-chip { display: none; } }
 // Green: the cover band takes the page's own light green with dark text, so the (blue) book cover
 // is the one strong colour on the page
@@ -507,6 +509,9 @@ body#guide {
     .guide-recall-hide { margin-top: 0.4rem; padding: 0.25rem 0; min-height: 1.75rem; border: 0; background: none; color: $guide-muted;
       font: inherit; font-size: 0.75rem; text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
     p.guide-recall-covered { color: $guide-muted; }
+    p.guide-recall-back { margin: 0; color: $guide-muted; font-size: 0.78rem;
+      button { min-height: 1.75rem; padding: 0.2rem 0; border: 0; background: none; color: $ubse; font: inherit; font-weight: 600; cursor: pointer;
+        text-decoration: underline; text-underline-offset: 2px; } }
     // back after a break
     .guide-welcome { margin: 2.6rem 0 0; padding: 0.85rem 1.1rem; border-left: 3px solid $ubse; border-radius: 0 8px 8px 0;
       background: $ubse-tint; font-size: 0.85rem; line-height: 1.45; color: $guide-text;

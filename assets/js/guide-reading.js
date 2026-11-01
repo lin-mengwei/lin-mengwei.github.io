@@ -924,7 +924,9 @@
     }
     var showSaved = function (text) {
       var hadFocus = box.contains(document.activeElement);
+      var keepBack = box.querySelector('.guide-recall-back');
       box.innerHTML = '';
+      if (keepBack) box.appendChild(keepBack);
       box.classList.add('is-saved');
       var mine = document.createElement('p');
       mine.tabIndex = -1;
@@ -969,14 +971,28 @@
     off.className = 'guide-recall-hide';
     off.textContent = 'Hide recall boxes';
     off.addEventListener('click', function () {
-      var landing = box.parentNode && box.parentNode.querySelector('.guide-pause-next, .guide-pause-done');
       setToggle('recall', false); save('recall', 'off'); sync();
-      if (landing) { landing.tabIndex = landing.tabIndex < 0 ? -1 : landing.tabIndex; landing.focus(); }
-      toast('Recall boxes hidden (they can be turned on again under Aa)');
+      var showBtn = box.querySelector('.guide-recall-back button');
+      if (showBtn) showBtn.focus();
+      toast('Recall boxes hidden. “Show recall boxes” brings them back.');
     });
+    // shown instead of the box while recall boxes are switched off, so they can be brought back from here
+    var back = document.createElement('p');
+    back.className = 'guide-recall-back';
+    back.appendChild(document.createTextNode('Recall box hidden · '));
+    var on = document.createElement('button');
+    on.type = 'button';
+    on.textContent = 'Show recall boxes';
+    on.addEventListener('click', function () {
+      setToggle('recall', true); save('recall', 'on'); sync();
+      var field = box.querySelector('input');
+      if (field) field.focus(); else { var mineP = box.querySelector('p[tabindex]'); if (mineP) mineP.focus(); }
+    });
+    back.appendChild(on);
     box.appendChild(lab);
     box.appendChild(line);
     box.appendChild(off);
+    box.appendChild(back);
     // a recall already written for this section (the notes script runs after this one)
     document.addEventListener('DOMContentLoaded', function () {
       var old = window.guideNotes && window.guideNotes.find(h.id, 'recall');
