@@ -451,6 +451,7 @@ body#guide {
     strong { color: $guide-ink; font-weight: 600; } }
 
   // ---------- chapter body ----------
+  .guide-prose > p { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
   .guide-body, .guide-prose {
     font-family: var(--g-body-font);
     font-size-adjust: 0.547;
@@ -481,6 +482,9 @@ body#guide {
     h3 { position: relative; padding-left: 0.85rem; font-size: 1.25rem; font-weight: 600; margin: 2.4rem 0 0.7rem;
       // a short bar sets subheadings apart from the text
       &::before { content: ""; position: absolute; left: 0; top: 0.18em; bottom: 0.18em; width: 3px; border-radius: 2px; background: $ubse; } }
+    // justified body text, like a printed page (hyphenation keeps the word spacing even); captions,
+    // notes, signatures and the reading aids keep their own alignment
+    > p:not(.guide-section-kicker), > ul > li, > ol > li, blockquote p { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
     // reading rhythm (guide-reading.js): the section label carries the rule above a major section
     .guide-section-kicker { margin: 3.8rem 0 0.45rem; padding-top: 1.9rem; border-top: 1px solid $guide-line;
       font-family: $font-family-base; font-size-adjust: none; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em;
@@ -909,11 +913,7 @@ body#guide {
 
     .guide-main { padding: 1.75rem 1rem 3rem; }
     .guide-body, .guide-prose { font-size: calc(1rem * var(--g-size)); line-height: calc(var(--g-leading) - 0.05); }
-    .guide-body p, .guide-body li { -webkit-hyphens: auto; hyphens: auto; }
-    // body text fills the narrow column (hyphenation keeps the word spacing even); captions, notes,
-    // signatures and the reading aids keep their own alignment
-    .guide-body > p:not(.guide-section-kicker), .guide-body > ul > li, .guide-body > ol > li, .guide-body blockquote p,
-    .guide-prose > p { text-align: justify; }
+
     .guide-body {
       h2 { font-size: 1.4rem; }
       h3 { font-size: 1.15rem; }
