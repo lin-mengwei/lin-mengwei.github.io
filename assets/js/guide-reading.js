@@ -1105,9 +1105,9 @@
         var h = document.createElement('h2');
         h.id = 'guide-finale-title';
         h.className = 'guide-finale-title';
-        h.textContent = 'You have read the whole Guide';
+        h.textContent = 'You have finished the BESTEPS Guide';
         var p1 = document.createElement('p');
-        p1.textContent = 'Congratulations, and thank you for reading all seven lectures. We hope their lessons serve you well through your PhD and beyond. Good luck with your research!';
+        p1.textContent = 'Congratulations! We hope this book becomes your companion through your PhD and beyond. Good luck with your research!';
         var sign = document.createElement('p');
         sign.className = 'guide-finale-sign';
         sign.textContent = 'The BESTEPS team';
