@@ -909,7 +909,11 @@ body#guide {
 
     .guide-main { padding: 1.75rem 1rem 3rem; }
     .guide-body, .guide-prose { font-size: calc(1rem * var(--g-size)); line-height: calc(var(--g-leading) - 0.05); }
-    .guide-body p, .guide-body li { hyphens: auto; }
+    .guide-body p, .guide-body li { -webkit-hyphens: auto; hyphens: auto; }
+    // body text fills the narrow column (hyphenation keeps the word spacing even); captions, notes,
+    // signatures and the reading aids keep their own alignment
+    .guide-body > p:not(.guide-section-kicker), .guide-body > ul > li, .guide-body > ol > li, .guide-body blockquote p,
+    .guide-prose > p { text-align: justify; }
     .guide-body {
       h2 { font-size: 1.4rem; }
       h3 { font-size: 1.15rem; }
