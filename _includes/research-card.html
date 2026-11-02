@@ -5,6 +5,8 @@
 {% endcomment %}
 
 {% assign has_abstract = false %}
+{% assign stage_label = include.stage %}
+{% if include.pdf %}{% assign stage_label = nil %}{% endif %}
 {% if include.abstract and include.abstract != "" %}{% assign has_abstract = true %}{% endif %}
 
 {% if has_abstract or include.image1 or include.image %}
@@ -12,7 +14,8 @@
 <div class="research-card research-card--full">
   <div class="research-card-header">
     <h3 class="research-card-title">{{ include.title }}</h3>
-    {% if include.stage %}<span class="research-stage">{{ include.stage }}</span>{% endif %}
+    {% if stage_label %}<span class="research-stage">{{ stage_label }}</span>{% endif %}
+    {% include research-links.html pdf=include.pdf links=include.links updated=include.updated %}
   </div>
 
   {% if include.jmp %}
@@ -77,7 +80,8 @@
 <div class="research-card research-card--compact">
   <div class="research-card-header">
     <h3 class="research-card-title">{{ include.title }}</h3>
-    {% if include.stage %}<span class="research-stage">{{ include.stage }}</span>{% endif %}
+    {% if stage_label %}<span class="research-stage">{{ stage_label }}</span>{% endif %}
+    {% include research-links.html pdf=include.pdf links=include.links updated=include.updated %}
   </div>
 
   {% if include.jmp %}

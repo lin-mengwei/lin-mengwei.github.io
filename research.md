@@ -27,6 +27,9 @@ nav_active: research
   image1=paper.image1
   image2=paper.image2
   image=paper.image
+  pdf=paper.pdf
+  links=paper.links
+  updated=paper.updated
 %}
 {% endfor %}
 
@@ -49,6 +52,9 @@ nav_active: research
   image1=paper.image1
   image2=paper.image2
   image=paper.image
+  pdf=paper.pdf
+  links=paper.links
+  updated=paper.updated
 %}
 {% endfor %}
 {% endif %}
