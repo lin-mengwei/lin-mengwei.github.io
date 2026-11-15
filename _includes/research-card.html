@@ -11,7 +11,7 @@
 
 {% if has_abstract or include.image1 or include.image %}
 <!-- ======== Full card ======== -->
-<div class="research-card research-card--full">
+<div class="research-card research-card--full"{% if include.jmp %} id="jmp"{% endif %}>
   <div class="research-card-header">
     <h3 class="research-card-title">{{ include.title }}</h3>
     {% if stage_label %}<span class="research-stage">{{ stage_label }}</span>{% endif %}
@@ -77,7 +77,7 @@
 
 {% else %}
 <!-- ======== Compact card ======== -->
-<div class="research-card research-card--compact">
+<div class="research-card research-card--compact"{% if include.jmp %} id="jmp"{% endif %}>
   <div class="research-card-header">
     <h3 class="research-card-title">{{ include.title }}</h3>
     {% if stage_label %}<span class="research-stage">{{ stage_label }}</span>{% endif %}

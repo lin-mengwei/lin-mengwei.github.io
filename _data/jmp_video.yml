@@ -1,0 +1,75 @@
+
+video:
+  file: /assets/video/jmp_video.mp4
+  poster: /assets/video/jmp_video_poster.jpg
+  vtt: /assets/video/jmp_video_en.vtt
+  vtt_label: English
+  vtt_lang: en
+  download_text: Download the video (MP4)
+  figcaption: ""
+  youtube_id: ""
+
+making:
+  summary: Note on making an academic video with AI assistance.
+  intro: >-
+    I made this video using AI agents, which built the graphics and the editing pipeline from my script, my recordings and the paper's tables. It was a process of collecting information on AI editing, prompting, making editing choices, and iterating on the final product.
+
+  tools:
+    - label: Script
+      text: >-
+        my own, based on the paper.
+    - label: AI model
+      text: >-
+        Claude. Fable 5.2 discussed with me for setting up the project, and generated the initial prompt for Opus 5.5, which wrote the code for the graphics, the timing and the editing, and checked layouts and audio.
+    - label: Graphics and animation
+      text: >-
+        HyperFrames (HTML and GSAP), generated from a data file with the paper's estimates. Graphic elements were designed to appear when I say the matching words.
+    - label: Timing
+      text: >-
+        my recordings were transcribed locally with faster-whisper 1.2.1, using OpenAI's Whisper small model for the word timestamps and large-v3 to double-check unclear words. The word timestamps drive when each graphic appears.
+    - label: Editing and sound
+      text: >-
+        FFmpeg for cutting between two takes at sentence breaks, frame blending, loudness normalisation, and light EQ. 
+        The audio was also processed with Adobe Enhance Speech v2, which is blended at 30% with the original voice.
+    - label: Background music
+      text: >-
+        <span lang="zh-Hans">下雪的北海道</span> (Snowy Hokkaido), Jazzzcz, purchased from NetEase Cloud Music. 
+
+  skills_heading: Agent skills for making research videos
+  skills_intro: >-
+    The graphics were made with HyperFrames (open source, Apache-2.0, <a href="https://github.com/heygen-com/hyperframes">github.com/heygen-com/hyperframes</a>), which comes with skills that teach a coding agent such as Claude Code how to build and check videos. Some skills that I went through are listed below, in case they are useful for your own research video. The skills are not required to use HyperFrames, but they can help you make a video faster and with fewer mistakes:
+
+  skills:
+    - name: hyperframes
+      text: >-
+        the core skill. A video is written as an HTML page with GSAP animation, so charts, maps and equations can be built from your own data and timed to your voice.
+    - name: hyperframes-cli
+      text: >-
+        checks every frame for text running off the screen or overlapping, takes snapshots, and renders the MP4.
+    - name: media-use
+      text: >-
+        transcripts, captions, music and colour grading. I transcribed locally with faster-whisper and used my own recording instead.
+    - name: hyperframes-registry
+      text: >-
+        about 450 ready-made blocks (titles, captions, charts, map overlays), the a very quick start if you don't want to design from scratch.
+    - name: slideshow
+      text: >-
+        turns a talk or deck into an animated slideshow, handy for conference presentations.
+    - name: style-sampling
+      text: >-
+        ready-made explainer styles, including an animated science explainer.
+    - name: figma
+      text: >-
+        brings figures and designs from Figma into a video.
+
+# paper_link:  页面最下方的论文链接卡片（替代原来的论文卡片）
+#   label       标题上方的小字标签
+#   more_text   第一个按钮的文字，跳到 Research 页面上的 JMP 卡片
+#   more_url    该按钮的链接；#jmp 对应 research-card.html 里 jmp: true 那篇论文的 id
+#   pdf_text    第二个按钮的文字，下载论文 PDF
+#   论文标题和 PDF 路径不在这里，自动取自 _data/research.yml 中 jmp: true 的那篇
+paper_link:
+  label: The paper
+  more_text: Read more on the Research page
+  more_url: /research#jmp
+  pdf_text: PDF

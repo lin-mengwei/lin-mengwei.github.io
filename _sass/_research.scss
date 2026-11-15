@@ -424,3 +424,19 @@
     font-size: 0.78rem;
   }
 }
+
+// ---- JMP card anchor (/research/#jmp, linked from /jmp-video/) ----
+// id="jmp" is set in research-card.html for the paper with jmp: true.
+// Clears the fixed navbar and briefly rings the card when arrived at via the link.
+#jmp.research-card {
+  scroll-margin-top: 80px;
+}
+
+#jmp.research-card:target {
+  animation: jmp-card-target 2.4s ease-out 0.3s backwards;
+}
+
+@keyframes jmp-card-target {
+  from { box-shadow: 0 0 0 3px rgba($color-primary, 0.35), 0 2px 12px rgba(0, 0, 0, 0.06); }
+  to   { box-shadow: 0 0 0 3px rgba($color-primary, 0), 0 2px 12px rgba(0, 0, 0, 0.06); }
+}

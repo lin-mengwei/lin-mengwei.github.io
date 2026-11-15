@@ -1,0 +1,82 @@
+{% comment %}
+  JMP video player + "How this video was made" panel.
+  Words and settings live in _data/jmp_video.yml; styles in _sass/_jmp-video.scss.
+  • Self-hosted MP4 if video.file is set (poster, optional English subtitles, panel below)
+  • YouTube embed if video.file is empty and video.youtube_id is set (no panel)
+  • Nothing if both are empty
+  Then, always: a link card pointing to the paper (Research page anchor + PDF).
+  Parameters:
+    title — paper title (player label and link card heading)
+    pdf   — paper PDF path (link card download button)
+{% endcomment %}
+
+{% assign jv = site.data.jmp_video.video %}
+{% assign jm = site.data.jmp_video.making %}
+{% assign jl = site.data.jmp_video.paper_link %}
+
+{% if jv.file and jv.file != "" %}
+<figure class="jmp-video-figure">
+  <div class="jmp-video">
+    <video controls preload="metadata" playsinline{% if jv.poster and jv.poster != "" %} poster="{{ jv.poster | relative_url }}"{% endif %}
+           aria-label="Video summary: {{ include.title | escape }}">
+      <source src="{{ jv.file | relative_url }}" type="video/mp4">
+      {% if jv.vtt and jv.vtt != "" %}<track kind="subtitles" srclang="{{ jv.vtt_lang | default: 'en' }}" label="{{ jv.vtt_label | default: 'English' }}" src="{{ jv.vtt | relative_url }}">{% endif %}
+      <a class="jmp-video-download" href="{{ jv.file | relative_url }}" download>{{ jv.download_text | default: "Download the video (MP4)" }}</a>
+    </video>
+  </div>
+  {% if jv.figcaption and jv.figcaption != "" %}<figcaption class="jmp-video-caption">{{ jv.figcaption }}</figcaption>{% endif %}
+</figure>
+
+{% if jm %}
+<details class="jmp-making">
+  <summary>{{ jm.summary }}</summary>
+  <div class="jmp-making-body">
+    {% if jm.intro %}<p>{{ jm.intro }}</p>{% endif %}
+    {% if jm.tools %}
+    <ul>
+      {% for item in jm.tools %}
+      <li><strong>{{ item.label }}:</strong> {{ item.text }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {% if jm.skills %}
+    {% if jm.skills_heading %}<h4 class="jmp-making-sub">{{ jm.skills_heading }}</h4>{% endif %}
+    {% if jm.skills_intro %}<p>{{ jm.skills_intro }}</p>{% endif %}
+    <ul>
+      {% for skill in jm.skills %}
+      <li><code>{{ skill.name }}</code>{% if skill.status and skill.status != "" %} <span class="jmp-skill-status">({{ skill.status }})</span>{% endif %}: {{ skill.text }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</details>
+{% endif %}
+
+{% elsif jv.youtube_id and jv.youtube_id != "" %}
+<figure class="jmp-video-figure">
+  <div class="jmp-video">
+    <iframe src="https://www.youtube-nocookie.com/embed/{{ jv.youtube_id }}"
+            title="Video summary: {{ include.title | escape }}"
+            allow="accelerometer; encrypted-media; picture-in-picture; fullscreen"
+            allowfullscreen loading="lazy"></iframe>
+  </div>
+  {% if jv.figcaption and jv.figcaption != "" %}<figcaption class="jmp-video-caption">{{ jv.figcaption }}</figcaption>{% endif %}
+</figure>
+{% endif %}
+
+{% if jl and include.title %}
+<section class="jmp-paper-link" aria-label="{{ jl.label | default: 'The paper' | escape }}">
+  <div class="jmp-paper-link__text">
+    <p class="jmp-paper-link__label">{{ jl.label | default: "The paper" }}</p>
+    <h2 class="jmp-paper-link__title">{{ include.title }}</h2>
+  </div>
+  <div class="jmp-paper-link__actions">
+    {% if jl.more_url and jl.more_url != "" %}
+    <a class="jmp-paper-link__btn jmp-paper-link__btn--primary" href="{{ jl.more_url | relative_url }}">{{ jl.more_text | default: "Read more on the Research page" }} <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    {% endif %}
+    {% if include.pdf and include.pdf != "" %}
+    <a class="jmp-paper-link__btn" href="{{ include.pdf | relative_url }}" download><i class="fas fa-file-pdf" aria-hidden="true"></i> {{ jl.pdf_text | default: "PDF" }}</a>
+    {% endif %}
+  </div>
+</section>
+{% endif %}

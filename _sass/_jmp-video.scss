@@ -1,0 +1,293 @@
+// =============================================
+// JMP video page (/jmp-video/)
+// Player, "How this video was made" panel, and the
+// paper link card at the bottom of the page.
+// (The #jmp anchor on the Research page is styled in _research.scss.)
+// Markup: _includes/jmp-video.html, jmp-video.md
+// Words:  _data/jmp_video.yml
+// =============================================
+
+$jmp-cjk-font-stack: 'Poppins', "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+$jmp-card-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+
+// ---- Player ----
+.jmp-video-figure {
+  margin: 0;
+}
+
+.jmp-video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 0 0 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: $jmp-card-shadow;
+
+  iframe,
+  video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    background: #000;
+    object-fit: contain;
+  }
+}
+
+.jmp-video-download {
+  color: #fff;
+}
+
+.jmp-video-caption {
+  margin: -0.4rem 0 1rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+// ---- "How this video was made" panel ----
+.jmp-making {
+  margin: 0 0 1.5rem;
+  border: 1px solid #eaeaea;
+  border-left: 3px solid #afc0a8;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: $jmp-card-shadow;
+  font-family: $jmp-cjk-font-stack;
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0.85rem 1.25rem;
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: $color-dark-grey;
+    border-radius: 10px;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      flex-shrink: 0;
+      width: 0.5rem;
+      height: 0.5rem;
+      margin-right: 0.2rem;
+      border-right: 2px solid $color-primary;
+      border-bottom: 2px solid $color-primary;
+      transform: rotate(45deg) translateY(-2px);
+      transition: transform 0.2s ease;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &:focus-visible {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
+    }
+  }
+
+  &[open] summary::after {
+    transform: rotate(-135deg) translateY(-2px);
+  }
+}
+
+.jmp-making-body {
+  padding: 0 1.25rem 1.1rem;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #444;
+
+  p {
+    margin: 0 0 0.75rem;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    list-style: disc outside;
+  }
+
+  li {
+    margin: 0 0 0.45rem;
+    overflow-wrap: anywhere;
+
+    &::marker {
+      color: $color-primary;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  strong {
+    color: $color-dark-grey;
+  }
+
+  a {
+    color: $color-primary;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    overflow-wrap: anywhere;
+  }
+
+  code {
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.82em;
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+    background: $color-accent-bg;
+    border: 1px solid #e1ebe3;
+    color: $color-dark-grey;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
+
+.jmp-skill-status {
+  color: #888;
+  font-size: 0.85em;
+  white-space: nowrap;
+}
+
+.jmp-making-sub {
+  margin: 1.1rem 0 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $color-primary;
+}
+
+@media screen and (max-width: 768px) {
+  .jmp-making summary {
+    padding: 0.8rem 1rem;
+  }
+
+  .jmp-making-body {
+    padding: 0 1rem 1rem;
+    font-size: 0.88rem;
+  }
+}
+
+// ---- Paper link card (points to /research#jmp and the PDF) ----
+.jmp-paper-link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  margin: 0 0 1.25rem;
+  padding: 1.15rem 1.4rem;
+  border: 1px solid #dfe9e1;
+  border-left: 3px solid #afc0a8;
+  border-radius: 10px;
+  background: $color-accent-bg;
+  box-shadow: $jmp-card-shadow;
+}
+
+.jmp-paper-link__text {
+  flex: 1 1 22rem;
+  min-width: 0;
+}
+
+.jmp-paper-link__label {
+  margin: 0 0 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $color-primary;
+}
+
+.jmp-paper-link__title {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: $color-dark-grey;
+}
+
+.jmp-paper-link__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  flex: 0 0 auto;
+}
+
+.jmp-paper-link__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.55em 1.05em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+  border-radius: 4px;
+  border: 1px solid mix($color-primary, #fff, 35%);
+  background: #fff;
+  color: darken($color-primary, 8%);
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    background: darken($color-primary, 8%);
+    border-color: darken($color-primary, 8%);
+    color: #fff;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-primary;
+    outline-offset: 2px;
+  }
+
+  svg,
+  i {
+    font-size: 0.85em;
+  }
+}
+
+.jmp-paper-link__btn--primary {
+  background: darken($color-primary, 8%);
+  border-color: darken($color-primary, 8%);
+  color: #fff;
+
+  &:hover {
+    background: darken($color-primary, 15%);
+    border-color: darken($color-primary, 15%);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .jmp-paper-link {
+    padding: 1rem 1.1rem;
+  }
+
+  .jmp-paper-link__text {
+    flex-basis: 100%;
+  }
+
+  .jmp-paper-link__actions {
+    flex: 1 1 100%;
+    flex-direction: column;
+  }
+
+  .jmp-paper-link__btn {
+    width: 100%;
+    padding: 0.7em 1em;
+  }
+}
