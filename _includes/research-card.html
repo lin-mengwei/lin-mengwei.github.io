@@ -15,7 +15,7 @@
   <div class="research-card-header">
     <h3 class="research-card-title">{{ include.title }}</h3>
     {% if stage_label %}<span class="research-stage">{{ stage_label }}</span>{% endif %}
-    {% include research-links.html pdf=include.pdf links=include.links updated=include.updated %}
+    {% include research-links.html pdf=include.pdf links=include.links updated=include.updated jmp=include.jmp %}
   </div>
 
   {% if include.jmp %}
@@ -81,7 +81,7 @@
   <div class="research-card-header">
     <h3 class="research-card-title">{{ include.title }}</h3>
     {% if stage_label %}<span class="research-stage">{{ stage_label }}</span>{% endif %}
-    {% include research-links.html pdf=include.pdf links=include.links updated=include.updated %}
+    {% include research-links.html pdf=include.pdf links=include.links updated=include.updated jmp=include.jmp %}
   </div>
 
   {% if include.jmp %}
