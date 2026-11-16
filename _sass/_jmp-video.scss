@@ -454,3 +454,30 @@ $jmp-duration: 0.4s;
     padding: 0.7em 1em;
   }
 }
+
+// ---- Subtitles button (left of the bar above the video; shown with JS on all widths) ----
+.jmp-cc-toggle {
+  @extend .jmp-notes-toggle;
+  display: inline-flex;
+
+  &[aria-pressed="true"] {
+    color: $color-primary;
+    background: $color-accent-bg;
+    border-color: mix($color-primary, #fff, 35%);
+  }
+}
+
+.jmp-stage.has-cc .jmp-stage__bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.6rem;
+
+  .jmp-notes-toggle {
+    margin-left: auto;
+  }
+
+  .jmp-cc-toggle {
+    margin-left: 0;                                // @extend copies the rule above; keep this one at the left edge
+  }
+}

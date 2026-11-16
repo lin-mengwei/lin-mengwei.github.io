@@ -20,14 +20,23 @@
 {% assign notes_label = jm.toggle_label | default: jm.summary | default: "How this video was made" %}
 
 {% if jv.file and jv.file != "" %}
+{% assign has_cc = false %}{% if jv.vtt and jv.vtt != "" %}{% assign has_cc = true %}{% endif %}
 <div class="jmp-stage"{% if jm %} data-jmp-stage{% endif %}>
-  {% if jm %}
+  {% if jm or has_cc %}
   <div class="jmp-stage__bar">
+    {% if has_cc %}
+    <button type="button" class="jmp-cc-toggle" aria-pressed="{% if jv.subtitles_default %}true{% else %}false{% endif %}" hidden>
+      <i class="fas fa-closed-captioning" aria-hidden="true"></i>
+      <span>{{ jv.cc_label | default: "Subtitles" }}</span>
+    </button>
+    {% endif %}
+    {% if jm %}
     <button type="button" class="jmp-notes-toggle" aria-expanded="false" aria-controls="jmp-notes" hidden>
       <i class="fas fa-pen-nib" aria-hidden="true"></i>
       <span class="jmp-notes-toggle__label">{{ notes_label }}</span>
       <span class="jmp-notes-toggle__chevron" aria-hidden="true"></span>
     </button>
+    {% endif %}
   </div>
   {% endif %}
   <div class="jmp-stage__row">
@@ -35,7 +44,7 @@
       <video controls preload="metadata" playsinline{% if jv.poster and jv.poster != "" %} poster="{{ jv.poster | relative_url }}"{% endif %}
              aria-label="Video summary: {{ include.title | escape }}">
         <source src="{{ jv.file | relative_url }}" type="video/mp4">
-        {% if jv.vtt and jv.vtt != "" %}<track kind="subtitles" srclang="{{ jv.vtt_lang | default: 'en' }}" label="{{ jv.vtt_label | default: 'English' }}" src="{{ jv.vtt | relative_url }}">{% endif %}
+        {% if jv.vtt and jv.vtt != "" %}<track kind="subtitles" srclang="{{ jv.vtt_lang | default: 'en' }}" label="{{ jv.vtt_label | default: 'English' }}" src="{{ jv.vtt | relative_url }}"{% if jv.subtitles_default %} default{% endif %}>{% endif %}
         <a class="jmp-video-download" href="{{ jv.file | relative_url }}" download>{{ jv.download_text | default: "Download the video (MP4)" }}</a>
       </video>
     </div>

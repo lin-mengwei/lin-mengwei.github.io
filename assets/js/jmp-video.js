@@ -72,3 +72,29 @@
   stage.classList.add('is-enhanced');
   onWidthChange();
 })();
+
+// Subtitles button above the video (so viewers don't have to find them in the player's menu).
+// The <track> carries `default` when _data/jmp_video.yml sets subtitles_default: true.
+(function () {
+  var btn = document.querySelector('.jmp-cc-toggle');
+  var video = document.querySelector('.jmp-video video');
+  if (!btn || !video || !video.textTracks) return;
+  function track() { return video.textTracks[0]; }
+  function sync() {
+    var t = track();
+    btn.setAttribute('aria-pressed', t && t.mode === 'showing' ? 'true' : 'false');
+  }
+  btn.addEventListener('click', function () {
+    var t = track();
+    if (!t) return;
+    t.mode = t.mode === 'showing' ? 'hidden' : 'showing';
+    sync();
+  });
+  if (video.textTracks.addEventListener) video.textTracks.addEventListener('change', sync);
+  var el = video.querySelector('track');
+  if (el && el.hasAttribute('default') && track()) track().mode = 'showing';
+  btn.hidden = false;
+  var stage = btn.closest ? btn.closest('.jmp-stage') : null;
+  if (stage) stage.classList.add('has-cc');
+  sync();
+})();

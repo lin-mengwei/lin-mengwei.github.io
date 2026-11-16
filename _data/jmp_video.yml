@@ -5,6 +5,9 @@ video:
   vtt: /assets/video/jmp_video_en.vtt
   vtt_label: English
   vtt_lang: en
+  # subtitles_default: true = 字幕默认开启；cc_label = 视频上方字幕开关按钮的文字
+  subtitles_default: true
+  cc_label: Subtitles
   download_text: Download the video (MP4)
   figcaption: ""
   youtube_id: ""
@@ -36,7 +39,7 @@ making:
         The audio was also processed with Adobe Enhance Speech v2, which is blended at 30% with the original voice.
     - label: Background music
       text: >-
-        <span lang="zh-Hans">下雪的北海道</span> (Snowy Hokkaido), Jazzzcz, purchased from NetEase Cloud Music. 
+        <span lang="zh-Hans">《下雪的北海道》</span>, Jazzzcz, purchased from NetEase Cloud Music. 
 
   skills_heading: Agent skills for making research videos
   skills_intro: >-
