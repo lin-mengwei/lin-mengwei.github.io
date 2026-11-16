@@ -1,285 +1,285 @@
 WEBVTT
 
-00:00:00.630 --> 00:00:05.923
+00:00:01.630 --> 00:00:06.923
 Hi, I'm Mengwei, a PhD candidate at the
 University of Barcelona and the Barcelona
 
-00:00:05.963 --> 00:00:07.517
+00:00:06.963 --> 00:00:08.517
 Institute of Economics.
 
-00:00:07.852 --> 00:00:10.480
+00:00:08.852 --> 00:00:11.480
 My job market paper is
 called Museums Around:
 
-00:00:10.556 --> 00:00:13.498
+00:00:11.556 --> 00:00:14.498
 Cultural Infrastructure
 and Educational Outcomes.
 
-00:00:13.759 --> 00:00:18.664
+00:00:14.759 --> 00:00:19.664
 In this paper, I find that a museum opening
 near home raises students' exam results,
 
-00:00:18.704 --> 00:00:21.165
+00:00:19.704 --> 00:00:22.165
 and shapes what they choose to study.
 
-00:00:21.926 --> 00:00:26.275
+00:00:22.926 --> 00:00:27.275
 Societies build cultural institutions
 to keep what is known and valued,
 
-00:00:26.315 --> 00:00:27.591
+00:00:27.315 --> 00:00:28.591
 and to pass it on.
 
-00:00:27.759 --> 00:00:31.257
+00:00:28.759 --> 00:00:32.257
 There are more than 100,000
 museums around the world nowadays.
 
-00:00:31.704 --> 00:00:35.498
+00:00:32.704 --> 00:00:36.498
 Once built, they become part of
 the environment where people live,
 
-00:00:35.574 --> 00:00:39.313
+00:00:36.574 --> 00:00:40.313
 and for the young they may shape what
 they achieve and what they study.
 
-00:00:40.000 --> 00:00:43.572
+00:00:40.796 --> 00:00:44.460
 But, because of data scarcity
 and identification difficulties,
 
-00:00:43.759 --> 00:00:47.350
-whether museums affect the young
+00:00:44.500 --> 00:00:49.072
+whether museums do affect the young
 people around them is mostly unknown.
 
-00:00:47.741 --> 00:00:50.424
+00:00:49.741 --> 00:00:52.480
 Conceptually, they may, for two reasons.
 
-00:00:50.870 --> 00:00:54.943
+00:00:53.111 --> 00:00:57.145
 First, museums present knowledge
 through original objects,
 
-00:00:55.019 --> 00:00:59.387
+00:00:57.185 --> 00:01:01.757
 which may stimulate curiosity and
 improve academic performance in general.
 
-00:00:59.809 --> 00:01:02.954
+00:01:02.167 --> 00:01:05.312
 And second, they are
 organised around themes,
 
-00:01:02.994 --> 00:01:06.176
+00:01:05.352 --> 00:01:08.534
 so they may also steer students
 towards related subjects,
 
-00:01:06.216 --> 00:01:11.714
+00:01:08.574 --> 00:01:14.072
 a choice students often make with little
 information about what a field involves.
 
-00:01:12.019 --> 00:01:17.719
+00:01:14.377 --> 00:01:20.077
 In this paper, I use admin data on
 8.5 million students in England,
 
-00:01:17.759 --> 00:01:20.906
+00:01:20.117 --> 00:01:23.264
 and link it to a census of UK museums.
 
-00:01:21.370 --> 00:01:23.756
+00:01:23.728 --> 00:01:26.114
 With a stacked difference-in-differences,
 
-00:01:23.796 --> 00:01:27.904
+00:01:26.154 --> 00:01:30.262
 I compare students whose neighbourhood
 gets a new museum with students whose
 
-00:01:27.944 --> 00:01:30.108
+00:01:30.302 --> 00:01:32.466
 neighbourhood gets one
 several years later,
 
-00:01:30.148 --> 00:01:34.998
+00:01:32.506 --> 00:01:37.356
 to examine whether museums around can affect
 students' upper-secondary performance,
 
-00:01:35.148 --> 00:01:37.369
+00:01:37.506 --> 00:01:39.727
 progression, and subject choices.
 
-00:01:37.907 --> 00:01:39.813
+00:01:40.265 --> 00:01:42.171
 Let's look at attainment effects.
 
-00:01:40.296 --> 00:01:43.869
+00:01:42.654 --> 00:01:46.227
 Before the museum opens, the
 two groups move in parallel.
 
-00:01:44.167 --> 00:01:49.941
+00:01:46.525 --> 00:01:52.300
 After it opens, students move up in
 the upper-secondary exam ranking by 1.5
 
-00:01:49.981 --> 00:01:51.239
+00:01:52.340 --> 00:01:53.597
 percentile points.
 
-00:01:51.463 --> 00:01:53.812
+00:01:53.821 --> 00:01:56.170
 That means, in a class of 100 students,
 
-00:01:53.852 --> 00:01:56.054
+00:01:56.210 --> 00:01:58.412
 you move up by one and a half places.
 
-00:01:56.722 --> 00:01:58.516
+00:01:59.080 --> 00:02:00.874
 The effect fades with distance,
 
-00:01:58.556 --> 00:02:02.145
+00:02:00.914 --> 00:02:04.503
 from about 1.5 points within 1 and 2 km,
 
-00:02:02.185 --> 00:02:05.109
+00:02:04.543 --> 00:02:07.467
 to nearly zero by 10 km.
 
-00:02:05.556 --> 00:02:10.850
+00:02:07.914 --> 00:02:13.208
 The gain is about twice as large for
 students from disadvantaged backgrounds.
 
-00:02:11.500 --> 00:02:16.127
+00:02:13.858 --> 00:02:18.485
 On average, progression to upper-secondary
 education is largely unchanged.
 
-00:02:16.167 --> 00:02:20.867
+00:02:18.525 --> 00:02:23.225
 But students in the middle of the
 prior-attainment distribution become about 1
 
-00:02:20.907 --> 00:02:23.387
+00:02:23.265 --> 00:02:25.745
 percentage point more likely to progress.
 
-00:02:24.183 --> 00:02:27.176
+00:02:26.540 --> 00:02:29.533
 Museums also shape what
 students choose to study.
 
-00:02:27.540 --> 00:02:30.340
+00:02:29.898 --> 00:02:32.697
 I pair each museum theme
 with subject areas,
 
-00:02:30.380 --> 00:02:32.605
+00:02:32.737 --> 00:02:34.962
 and estimate the treatment effects.
 
-00:02:33.076 --> 00:02:36.265
+00:02:35.433 --> 00:02:38.623
 On the diagonal of this effect matrix,
 
-00:02:36.344 --> 00:02:39.158
+00:02:38.701 --> 00:02:41.515
 you see that most themes
 raise their own subjects.
 
-00:02:39.505 --> 00:02:45.337
+00:02:41.862 --> 00:02:47.694
 Science and nature museums raise academic
 STEM entry by 2.5 percentage points,
 
-00:02:45.433 --> 00:02:48.890
+00:02:47.790 --> 00:02:51.248
 and industry museums raise
 STEM entry by about 1.
 
-00:02:49.040 --> 00:02:53.590
+00:02:51.398 --> 00:02:55.947
 Social-life museums raise
 the social sciences by 1.2,
 
-00:02:53.630 --> 00:02:57.730
+00:02:55.987 --> 00:03:00.087
 and history museums raise
 humanities entries by 0.9.
 
-00:02:58.076 --> 00:03:01.161
+00:03:00.433 --> 00:03:03.518
 Arts museums do not
 change entry into arts,
 
-00:03:01.201 --> 00:03:05.929
+00:03:03.558 --> 00:03:08.286
 possibly because students already
 encountered the arts in many other ways.
 
-00:03:05.969 --> 00:03:11.408
+00:03:08.326 --> 00:03:13.765
 Off the diagonal, the effects are
 mostly small and not significant.
 
-00:03:11.790 --> 00:03:13.515
+00:03:14.148 --> 00:03:15.873
 The exception is science museums,
 
-00:03:13.648 --> 00:03:18.140
+00:03:16.005 --> 00:03:20.498
 which significantly move students from
 other subjects towards academic STEM.
 
-00:03:18.540 --> 00:03:20.694
+00:03:20.898 --> 00:03:23.051
 With only a few science openings,
 
-00:03:20.915 --> 00:03:23.694
+00:03:23.273 --> 00:03:26.051
 I do not want to go too
 far interpreting this.
 
-00:03:24.451 --> 00:03:27.212
+00:03:26.808 --> 00:03:29.569
 The paper speaks to three
 strands of literature.
 
-00:03:27.273 --> 00:03:31.358
+00:03:29.630 --> 00:03:33.715
 First, on how the adolescent environment
 shapes young people's outcomes.
 
-00:03:31.398 --> 00:03:35.551
+00:03:33.755 --> 00:03:37.908
 We already know that moving to
 a better neighbourhood helps,
 
-00:03:35.790 --> 00:03:38.105
+00:03:38.148 --> 00:03:40.462
 but it changes the whole bundle at once.
 
-00:03:38.308 --> 00:03:41.929
+00:03:40.665 --> 00:03:44.286
 Recent works look at
 specific local inputs,
 
-00:03:41.969 --> 00:03:43.908
+00:03:44.326 --> 00:03:46.265
 such as new schools, broadband,
 
-00:03:44.076 --> 00:03:45.748
+00:03:46.433 --> 00:03:48.105
 youth clubs and libraries.
 
-00:03:46.112 --> 00:03:50.804
+00:03:48.469 --> 00:03:53.161
 I provide population-scale causal evidence
 that a cultural input in the environment
 
-00:03:50.844 --> 00:03:53.194
+00:03:53.201 --> 00:03:55.551
 affects educational outcomes.
 
-00:03:53.433 --> 00:03:57.625
+00:03:55.790 --> 00:03:59.983
 Second, on subject choices.
 College majors are well studied,
 
-00:03:57.665 --> 00:04:02.051
+00:04:00.023 --> 00:04:04.408
 and they are partially rooted
 in secondary education choices.
 
-00:04:02.415 --> 00:04:06.480
+00:04:04.773 --> 00:04:08.837
 Secondary education choices are
 shown to be shaped by schools,
 
-00:04:06.576 --> 00:04:10.212
+00:04:08.933 --> 00:04:12.569
 families and role models,
 and most work is on STEM.
 
-00:04:10.701 --> 00:04:14.483
+00:04:13.058 --> 00:04:16.840
 I link local environment to
 what students choose to study,
 
-00:04:14.523 --> 00:04:16.533
+00:04:16.880 --> 00:04:18.890
 across all subject groups.
 
-00:04:16.987 --> 00:04:19.465
+00:04:19.344 --> 00:04:21.822
 Third, on place-based policies.
 
-00:04:19.505 --> 00:04:24.176
+00:04:21.862 --> 00:04:26.533
 Investments in culture are
 often judged by local economies:
 
-00:04:24.790 --> 00:04:28.018
+00:04:27.148 --> 00:04:30.375
 the housing market, economic
 development and labour market.
 
-00:04:28.058 --> 00:04:33.230
+00:04:30.415 --> 00:04:35.587
 I evaluate cultural infrastructure
 by its effects on young people,
 
-00:04:33.326 --> 00:04:35.408
+00:04:35.683 --> 00:04:37.765
 the next generation of the society.
 
-00:04:36.114 --> 00:04:41.851
+00:04:38.470 --> 00:04:44.208
 So, to conclude, the paper shows that
 museums nearby shape how well students
 
-00:04:41.891 --> 00:04:44.538
+00:04:44.248 --> 00:04:46.894
 perform, and what they choose to study.
 
-00:04:44.780 --> 00:04:45.651
+00:04:47.137 --> 00:04:48.007
 Thank you very much.
