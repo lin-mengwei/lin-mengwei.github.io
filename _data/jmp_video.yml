@@ -57,7 +57,7 @@ making:
         transcripts, captions, music and colour grading. I transcribed locally with faster-whisper and used my own recording instead.
     - name: hyperframes-registry
       text: >-
-        about 450 ready-made blocks (titles, captions, charts, map overlays), the a very quick start if you don't want to design from scratch.
+        about 450 ready-made blocks (titles, captions, charts, map overlays), a very quick start if you don't want to design from scratch.
     - name: slideshow
       text: >-
         turns a talk or deck into an animated slideshow, handy for conference presentations.
