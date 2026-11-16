@@ -1,5 +1,5 @@
 ---
-title: Job Market Paper
+title: Job Market Paper Video
 layout: research
 permalink: /jmp-video/
 # Video, subtitles, the "How this video was made" panel, the paper link
