@@ -40,7 +40,7 @@ making:
 
   skills_heading: Agent skills for making research videos
   skills_intro: >-
-    The graphics were made with HyperFrames (open source, Apache-2.0, <a href="https://github.com/heygen-com/hyperframes">github.com/heygen-com/hyperframes</a>), which comes with skills that teach a coding agent such as Claude Code how to build and check videos. Some skills that I went through are listed below, in case they are useful for your own research video. The skills are not required to use HyperFrames, but they can help you make a video faster and with fewer mistakes:
+    The graphics were made with HyperFrames (open source, Apache-2.0, <a href="https://github.com/heygen-com/hyperframes">github.com/heygen-com/hyperframes</a>), which comes with skills that teach a coding agent such as Claude Code how to build and check videos. Some skills that I went through when learing how to do this are listed below, in case they are useful for your own research video. The skills are not required to use HyperFrames, but they can help you make a video faster and with fewer mistakes:
 
   skills:
     - name: hyperframes
