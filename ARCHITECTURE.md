@@ -100,6 +100,7 @@ graph TB
     subgraph JS["⚡ JavaScript"]
         search_js[assets/js/simple-jekyll-search.js]
         pronunciation_js[assets/js/pronunciation.js]
+        jmp_video_js[assets/js/jmp-video.js]
     end
 
     subgraph OUTPUT["📤 Output"]
@@ -178,9 +179,11 @@ graph TD
     subgraph "JMP video (research.html)"
         jmp_md[jmp-video.md] -->|includes| jmp_inc[jmp-video.html]
         jmp_md -->|"reads JMP paper (title, PDF)"| research_data_j[_data/research.yml]
-        jmp_inc -->|reads| jmp_data[_data/jmp_video.yml<br/>video paths, panel words, skills,<br/>paper_link texts]
+        jmp_inc -->|reads| jmp_data[_data/jmp_video.yml<br/>video paths, notes toggle_label + words,<br/>skills, paper_link texts]
         jmp_inc -->|plays| jmp_assets["assets/video/<br/>mp4, poster, vtt"]
-        jmp_inc -->|"&lt;details&gt;"| jmp_panel["How this video was made"]
+        jmp_inc -->|"&lt;details&gt; notes"| jmp_panel["Notes panel<br/>side panel ≥ 960px, below video on narrow / no JS"]
+        jmp_inc -->|loads| jmp_js[assets/js/jmp-video.js<br/>toggle button, aria-expanded, Esc]
+        jmp_js -->|.is-enhanced / .is-open / .is-ready| jmp_panel
         jmp_inc -->|"paper link card"| jmp_anchor["/research#jmp"]
         research_card_j[research-card.html] -->|"id=jmp if jmp: true"| jmp_anchor
     end
@@ -248,7 +251,7 @@ graph TD
     main -->|@import| post_scss[_post.scss<br/>post content, page]
     main -->|@import| footer_scss[_footer.scss<br/>backtotop, credits]
     main -->|@import| components_scss[_components.scss<br/>search, project, contact]
-    main -->|@import| jmp_video_scss[_jmp-video.scss<br/>video player, making-of panel, paper link card]
+    main -->|@import| jmp_video_scss[_jmp-video.scss<br/>video player, notes side panel, paper link card]
 
     hero_scss -->|uses| css_var["var(--hero-image)<br/>set in head.html"]
     page_banner_scss -->|uses| vars
@@ -309,7 +312,7 @@ graph LR
     activities_yml -->|activity cards| activities_page
     translation_yml -->|articles + books| translation_page
     besteps_yml -->|lectures, guide, contributors| besteps_page
-    jmp_video_yml -->|video paths, panel text, skills| jmp_video_page
+    jmp_video_yml -->|video paths, notes label + text, skills| jmp_video_page
     research_yml -->|JMP title + PDF| jmp_video_page
     jmp_video_page -->|links to /research#jmp| research_page
 ```
@@ -327,7 +330,7 @@ graph LR
 | | `_data/activities.yml` | 活动卡片数据 |
 | | `_data/translation.yml` | 翻译/科普文章+书籍 |
 | | `_data/besteps.yml` | BESTEPS 讲座/Guide/贡献者 |
-| | `_data/jmp_video.yml` | JMP 视频页：视频/封面/字幕路径、"How this video was made" 面板文字、agent skills 列表、YouTube 备用 ID、论文链接卡片文字 (`paper_link`) |
+| | `_data/jmp_video.yml` | JMP 视频页：视频/封面/字幕路径、制作说明面板的按钮文字 (`toggle_label`) 与正文、agent skills 列表、YouTube 备用 ID、论文链接卡片文字 (`paper_link`) |
 | **Layouts** | `compress.html` | HTML压缩 |
 | | `base.html` | 统一HTML骨架 (`has-navbar-fixed-top`, `body_id`, `extra_css/js`) |
 | | `default.html` | 首页 (加载 pronunciation.js) |
@@ -347,7 +350,7 @@ graph LR
 | | `showcase.html` | 首页hero |
 | | `about.html` | 个人简介 (发音卡片 + 按钮居中在两栏下方) |
 | | `research-card.html` | 研究卡片模板 (`jmp: true` 的卡片带 `id="jmp"`，供 `/research#jmp` 跳转) |
-| | `jmp-video.html` | JMP 视频播放器 + 可展开的制作说明面板 + 论文链接卡片 (读 `_data/jmp_video.yml`；参数 `title`, `pdf`) |
+| | `jmp-video.html` | JMP 视频播放器 + 制作说明面板 (宽屏为视频右侧侧栏，窄屏/无 JS 为视频下方 `<details>`) + 论文链接卡片 (读 `_data/jmp_video.yml`，加载 `jmp-video.js`；参数 `title`, `pdf`) |
 | | `teaching-card.html` | 教学卡片模板 |
 | | `teaching-heading.html` | 教学页标题 |
 | | `blog-card.html` | 博客卡片模板 |
@@ -372,9 +375,10 @@ graph LR
 | | `_sass/_post.scss` | 文章页样式 |
 | | `_sass/_footer.scss` | 页脚样式 |
 | | `_sass/_components.scss` | 搜索/项目/联系 |
-| | `_sass/_jmp-video.scss` | JMP 视频页样式 (播放器, 制作说明面板, `<code>` 技能名, 论文链接卡片) |
+| | `_sass/_jmp-video.scss` | JMP 视频页样式 (播放器, 制作说明侧栏 ≥960px 与窄屏回退, 切换按钮, `<code>` 技能名, 论文链接卡片; 尊重 `prefers-reduced-motion`) |
 | **JS** | `assets/js/simple-jekyll-search.js` | 搜索引擎 |
 | | `assets/js/pronunciation.js` | 中文名发音 (Web Speech API) |
+| | `assets/js/jmp-video.js` | JMP 视频页制作说明侧栏的开关 (渐进增强 `<details>`；断点与 `_jmp-video.scss` 的 `$jmp-wide` 同步) |
 | **Pages** | `jmp-video.md` | `/jmp-video/`：front matter + `jmp-video.html` (标题和 PDF 取自 `research.yml` 中 `jmp: true`) |
 | **Media** | `assets/video/jmp_video.mp4` | JMP 视频 (H.264/AAC, faststart) |
 | | `assets/video/jmp_video_poster.jpg` | 视频封面 (1280×720) |
@@ -392,5 +396,5 @@ graph LR
 - **page.title vs banner_title**：Translation 页面用 `banner_title`（含 HTML）做横幅显示，`title`（纯文本）用于 meta 标签，避免 HTML 污染 SEO。
 - **`has-navbar-fixed-top`**：`<body>` 必须加此 class 以配合 Bulma 固定导航栏的 padding-top 偏移。
 - **page-banner 组件**：Activities / Translation / BESTEPS 页面使用统一的 `_page-banner.scss` 组件，BESTEPS 用 `--besteps` modifier 加深色调。
-- **JMP 视频页数据驱动**：文字和设置都在 `_data/jmp_video.yml`，`_includes/jmp-video.html` 只负责结构；`video.file` 留空时改用 `youtube_id` 嵌入。`_jmp-video.scss` 放在 `main.scss` 最后导入，保持与原内联 `<style>` 相同的层叠顺序。页面底部不再重复论文卡片，而是链接到 `/research#jmp`（与导航栏一样不带 `.html`，GitHub Pages 会解析到 `research.html`）。
+- **JMP 视频页数据驱动**：文字和设置都在 `_data/jmp_video.yml`，`_includes/jmp-video.html` 只负责结构；`video.file` 留空时改用 `youtube_id` 嵌入。`_jmp-video.scss` 放在 `main.scss` 最后导入，保持与原内联 `<style>` 相同的层叠顺序。制作说明在无 JS 时是普通 `<details>`；有 JS 且宽度 ≥ 960px 时由 `jmp-video.js` 变成视频右侧的侧栏 (高度与视频一致，内容在栏内滚动)，脚本是外部文件以避开 `compress.html` 对内联脚本的破坏。页面底部不再重复论文卡片，而是链接到 `/research#jmp`（与导航栏一样不带 `.html`，GitHub Pages 会解析到 `research.html`）。
 - **Teaching 数据驱动**：原先用 `_courses/` collection + 独立 markdown 页面，现改为 `_data/teaching.yml` + `<details>` accordion，课程文件归档到 `_deprecated/`。

@@ -1,9 +1,13 @@
 {% comment %}
-  JMP video player + "How this video was made" panel.
-  Words and settings live in _data/jmp_video.yml; styles in _sass/_jmp-video.scss.
-  • Self-hosted MP4 if video.file is set (poster, optional English subtitles, panel below)
+  JMP video player + "How this video was made" notes + paper link card.
+  Words and settings live in _data/jmp_video.yml; styles in _sass/_jmp-video.scss;
+  side-panel behaviour in assets/js/jmp-video.js.
+  • Self-hosted MP4 if video.file is set (poster, optional English subtitles, notes panel)
   • YouTube embed if video.file is empty and video.youtube_id is set (no panel)
   • Nothing if both are empty
+  Notes panel = a <details> under the video (works without JavaScript).
+  With JavaScript on wide screens (≥ 960px) it becomes a side panel next to the video,
+  opened by the button above the video; on narrow screens it stays below the video.
   Then, always: a link card pointing to the paper (Research page anchor + PDF).
   Parameters:
     title — paper title (player label and link card heading)
@@ -13,55 +17,67 @@
 {% assign jv = site.data.jmp_video.video %}
 {% assign jm = site.data.jmp_video.making %}
 {% assign jl = site.data.jmp_video.paper_link %}
+{% assign notes_label = jm.toggle_label | default: jm.summary | default: "How this video was made" %}
 
 {% if jv.file and jv.file != "" %}
-<figure class="jmp-video-figure">
-  <div class="jmp-video">
-    <video controls preload="metadata" playsinline{% if jv.poster and jv.poster != "" %} poster="{{ jv.poster | relative_url }}"{% endif %}
-           aria-label="Video summary: {{ include.title | escape }}">
-      <source src="{{ jv.file | relative_url }}" type="video/mp4">
-      {% if jv.vtt and jv.vtt != "" %}<track kind="subtitles" srclang="{{ jv.vtt_lang | default: 'en' }}" label="{{ jv.vtt_label | default: 'English' }}" src="{{ jv.vtt | relative_url }}">{% endif %}
-      <a class="jmp-video-download" href="{{ jv.file | relative_url }}" download>{{ jv.download_text | default: "Download the video (MP4)" }}</a>
-    </video>
+<div class="jmp-stage"{% if jm %} data-jmp-stage{% endif %}>
+  {% if jm %}
+  <div class="jmp-stage__bar">
+    <button type="button" class="jmp-notes-toggle" aria-expanded="false" aria-controls="jmp-notes" hidden>
+      <i class="fas fa-pen-nib" aria-hidden="true"></i>
+      <span class="jmp-notes-toggle__label">{{ notes_label }}</span>
+      <span class="jmp-notes-toggle__chevron" aria-hidden="true"></span>
+    </button>
   </div>
-  {% if jv.figcaption and jv.figcaption != "" %}<figcaption class="jmp-video-caption">{{ jv.figcaption }}</figcaption>{% endif %}
-</figure>
-
-{% if jm %}
-<details class="jmp-making">
-  <summary>{{ jm.summary }}</summary>
-  <div class="jmp-making-body">
-    {% if jm.intro %}<p>{{ jm.intro }}</p>{% endif %}
-    {% if jm.tools %}
-    <ul>
-      {% for item in jm.tools %}
-      <li><strong>{{ item.label }}:</strong> {{ item.text }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-    {% if jm.skills %}
-    {% if jm.skills_heading %}<h4 class="jmp-making-sub">{{ jm.skills_heading }}</h4>{% endif %}
-    {% if jm.skills_intro %}<p>{{ jm.skills_intro }}</p>{% endif %}
-    <ul>
-      {% for skill in jm.skills %}
-      <li><code>{{ skill.name }}</code>{% if skill.status and skill.status != "" %} <span class="jmp-skill-status">({{ skill.status }})</span>{% endif %}: {{ skill.text }}</li>
-      {% endfor %}
-    </ul>
+  {% endif %}
+  <div class="jmp-stage__row">
+    <div class="jmp-video">
+      <video controls preload="metadata" playsinline{% if jv.poster and jv.poster != "" %} poster="{{ jv.poster | relative_url }}"{% endif %}
+             aria-label="Video summary: {{ include.title | escape }}">
+        <source src="{{ jv.file | relative_url }}" type="video/mp4">
+        {% if jv.vtt and jv.vtt != "" %}<track kind="subtitles" srclang="{{ jv.vtt_lang | default: 'en' }}" label="{{ jv.vtt_label | default: 'English' }}" src="{{ jv.vtt | relative_url }}">{% endif %}
+        <a class="jmp-video-download" href="{{ jv.file | relative_url }}" download>{{ jv.download_text | default: "Download the video (MP4)" }}</a>
+      </video>
+    </div>
+    {% if jm %}
+    <details class="jmp-making" id="jmp-notes">
+      <summary>{{ notes_label }}</summary>
+      <div class="jmp-making-body" tabindex="-1">
+        {% if jm.intro %}<p>{{ jm.intro }}</p>{% endif %}
+        {% if jm.tools %}
+        <ul>
+          {% for item in jm.tools %}
+          <li><strong>{{ item.label }}:</strong> {{ item.text }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        {% if jm.skills %}
+        {% if jm.skills_heading %}<h4 class="jmp-making-sub">{{ jm.skills_heading }}</h4>{% endif %}
+        {% if jm.skills_intro %}<p>{{ jm.skills_intro }}</p>{% endif %}
+        <ul>
+          {% for skill in jm.skills %}
+          <li><code>{{ skill.name }}</code>{% if skill.status and skill.status != "" %} <span class="jmp-skill-status">({{ skill.status }})</span>{% endif %}: {{ skill.text }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </details>
     {% endif %}
   </div>
-</details>
-{% endif %}
+  {% if jv.figcaption and jv.figcaption != "" %}<p class="jmp-video-caption">{{ jv.figcaption }}</p>{% endif %}
+</div>
+{% if jm %}<script src="{{ '/assets/js/jmp-video.js' | relative_url }}" defer></script>{% endif %}
 
 {% elsif jv.youtube_id and jv.youtube_id != "" %}
-<figure class="jmp-video-figure">
+<div class="jmp-stage">
   <div class="jmp-video">
     <iframe src="https://www.youtube-nocookie.com/embed/{{ jv.youtube_id }}"
             title="Video summary: {{ include.title | escape }}"
             allow="accelerometer; encrypted-media; picture-in-picture; fullscreen"
             allowfullscreen loading="lazy"></iframe>
   </div>
-  {% if jv.figcaption and jv.figcaption != "" %}<figcaption class="jmp-video-caption">{{ jv.figcaption }}</figcaption>{% endif %}
-</figure>
+  {% if jv.figcaption and jv.figcaption != "" %}<p class="jmp-video-caption">{{ jv.figcaption }}</p>{% endif %}
+</div>
 {% endif %}
 
 {% if jl and include.title %}

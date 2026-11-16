@@ -10,6 +10,9 @@ video:
   youtube_id: ""
 
 making:
+  # toggle_label: 打开/关闭制作说明面板的按钮文字（电脑上在视频右上方，手机上在视频下方）
+  # summary:      备用标题；toggle_label 留空时才会用它
+  toggle_label: "Notes: How I made an academic video with AI"
   summary: Note on making an academic video with AI assistance.
   intro: >-
     I made this video using AI agents, which built the graphics and the editing pipeline from my script, my recordings and the paper's tables. It was a process of collecting information on AI editing, prompting, making editing choices, and iterating on the final product.
