@@ -6,7 +6,7 @@ video:
   vtt_label: English
   vtt_lang: en
   # subtitles_default: true = 字幕默认开启；cc_label = 视频上方字幕开关按钮的文字
-  subtitles_default: true
+  subtitles_default: false
   cc_label: Subtitles
   download_text: Download the video (MP4)
   figcaption: ""
