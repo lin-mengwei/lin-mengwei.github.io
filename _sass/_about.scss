@@ -11,6 +11,7 @@ $about-bp-mobile:  768px;
 $about-bp-desktop: 1024px;
 $about-para-gap:   1rem;
 $about-text-max:   42rem;
+$about-navbar-h:   3.25rem; // height of the fixed top navbar (Bulma default)
 
 // Links keep the text colour with a thin, soft green underline that firms up on hover
 @mixin about-link {
@@ -28,6 +29,11 @@ $about-text-max:   42rem;
 }
 
 #about {
+  // Anchor jumps (/#about) land just below the fixed navbar, and the section fills the rest of
+  // the viewport, so the first line is not hidden and there is no extra blank space at the bottom.
+  scroll-margin-top: $about-navbar-h;
+  min-height: calc(100vh - #{$about-navbar-h});
+
   // ---- Main container ----
   #mainabout {
     width: 100%;
