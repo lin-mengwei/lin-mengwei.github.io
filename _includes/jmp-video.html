@@ -69,6 +69,10 @@
           {% endfor %}
         </ul>
         {% endif %}
+        {% if jm.human_note %}
+        {% if jm.human_heading %}<h4 class="jmp-making-sub">{{ jm.human_heading }}</h4>{% endif %}
+        <p>{{ jm.human_note }}</p>
+        {% endif %}
       </div>
     </details>
     {% endif %}

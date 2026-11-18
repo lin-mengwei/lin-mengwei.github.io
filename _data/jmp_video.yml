@@ -17,10 +17,11 @@ making:
   # summary:      备用标题；toggle_label 留空时才会用它
   toggle_label: "Notes: How I made an academic video with AI"
   summary: Note on making an academic video with AI assistance.
-  intro: >-
+  intro: >- 
     I made this video using AI agents, which built the graphics and the editing pipeline from my script, my recordings and the paper's tables. It was a process of collecting information on AI editing, prompting, making editing choices, and iterating on the final product.
 
   tools:
+    
     - label: Script
       text: >-
         my own, based on the paper.
@@ -67,6 +68,11 @@ making:
     - name: figma
       text: >-
         brings figures and designs from Figma into a video.
+
+  # human_heading / human_note: 显示在整个说明的最后（制作清单和 Agent skills 之后）
+  human_heading: Humans involved
+  human_note: >-
+    It is worth emphasizing that human taste and judgment were essential in the process. The script benefited from advice on my Job Market Spiel from academics, especially Jaime Millán-Quijano, and the graphics were improved following comments from Jenifer Ruiz-Valenzuela. Hong Zhumi contributed his taste of music, and Lin Nan, a video editor and designer, offered professional feedback.
 
 # paper_link:  页面最下方的论文链接卡片（替代原来的论文卡片）
 #   label       标题上方的小字标签
