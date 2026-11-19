@@ -76,11 +76,24 @@
     }
   }
 
-  function sectionFromHash() {
+  // The hash may point to a section or to an element inside one (e.g. a book card)
+  function hashElement() {
     var id = decodeURIComponent(location.hash.replace('#', ''));
-    if (!id) return null;
-    var el = document.getElementById(id);
-    return el && el.matches('.trans-section[data-collapsible]') ? el : null;
+    return id ? document.getElementById(id) : null;
+  }
+
+  function sectionFromHash() {
+    var el = hashElement();
+    return el ? el.closest('.trans-section[data-collapsible]') : null;
+  }
+
+  function scrollToHashItem(sec) {
+    var el = hashElement();
+    if (el && el !== sec) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      alignTitle(sec);
+    }
   }
 
   var target = sectionFromHash();
@@ -114,13 +127,13 @@
     });
   });
 
-  if (target) target.scrollIntoView();
+  if (target) (hashElement() || target).scrollIntoView();
 
   window.addEventListener('hashchange', function () {
     var sec = sectionFromHash();
     if (sec) {
       setExpanded(sec, true, true);
-      alignTitle(sec);
+      scrollToHashItem(sec);
     }
   });
 })();

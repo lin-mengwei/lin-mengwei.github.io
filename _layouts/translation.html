@@ -76,7 +76,7 @@ body_id: translation
 
       <div class="trans-books">
         {% for book in tr.books %}
-        <div class="trans-book-card">
+        <div class="trans-book-card"{% if book.id %} id="{{ book.id }}"{% endif %}>
           <div class="trans-book-cover">
             <a href="{{ book.url }}" target="_blank">
               <img src="{{ book.image | relative_url }}" alt="{{ book.title }}">  

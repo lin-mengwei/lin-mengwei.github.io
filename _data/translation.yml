@@ -125,7 +125,8 @@ books:
     role: "Co-translator"
     coauthor: "陈浩驰 (Haochi CHEN)"
 
-  - title: "《笔译通识：从读写到翻译》"
+  - id: "translation-literacy"
+    title: "《笔译通识：从读写到翻译》"
     subtitle: "<i>Translation Literacy: From Reading and Writing to Translating</i>"
     publisher: "清华大学出版社，2026年"
     image: "/assets/images/literacy.png"
