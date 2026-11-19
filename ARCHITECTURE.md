@@ -15,7 +15,6 @@ graph TB
         projects[projects.yml]
         research_data[research.yml]
         teaching_data[teaching.yml]
-        teaching_other[teaching_other.yml]
         activities_data[activities.yml]
         translation_data[translation.yml]
         besteps_data[besteps.yml]
@@ -190,7 +189,6 @@ graph TD
 
     subgraph "Teaching (teaching.html)"
         teaching_l[teaching.html] -->|reads| teaching_data[_data/teaching.yml]
-        teaching_l -->|reads| teaching_other[_data/teaching_other.yml]
         teaching_l -->|includes| disqus_t[disqus.html]
         teaching_l -->|accordion| details["&lt;details&gt; per year"]
     end
@@ -276,7 +274,6 @@ graph LR
         projects[_data/projects.yml]
         research_yml[_data/research.yml]
         teaching_yml[_data/teaching.yml]
-        teaching_other_yml[_data/teaching_other.yml]
         activities_yml[_data/activities.yml]
         translation_yml[_data/translation.yml]
         besteps_yml[_data/besteps.yml]
@@ -307,8 +304,7 @@ graph LR
     news -->|recent 5 items| about
     projects -->|project list| project_page
     research_yml -->|paper data| research_page
-    teaching_yml -->|main course + years| teaching_page
-    teaching_other_yml -->|other teaching exp| teaching_page
+    teaching_yml -->|main course + years + other experience| teaching_page
     activities_yml -->|activity cards| activities_page
     translation_yml -->|articles + books| translation_page
     besteps_yml -->|lectures, guide, contributors| besteps_page
@@ -325,8 +321,7 @@ graph LR
 | **Data** | `_data/news.yml` | 首页新闻 |
 | | `_data/projects.yml` | 项目列表 |
 | | `_data/research.yml` | 研究论文数据 |
-| | `_data/teaching.yml` | 主课程数据 (年份/accordion) |
-| | `_data/teaching_other.yml` | 其他教学经历 |
+| | `_data/teaching.yml` | 主课程数据 (年份/accordion) + `other_experience` 其他教学经历 |
 | | `_data/activities.yml` | 活动卡片数据 |
 | | `_data/translation.yml` | 翻译/科普文章+书籍 |
 | | `_data/besteps.yml` | BESTEPS 讲座/Guide/贡献者 |
