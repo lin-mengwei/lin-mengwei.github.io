@@ -60,12 +60,9 @@ PAGES = {
         "Public-facing economics articles and book translations by Mengwei Lin (林孟蔚), bringing "
         "research on education, labour and applied micro to Chinese readers.",
     ),
-    "cv.html": (
-        "/cv",
-        f"CV | {NAME}",
-        "Curriculum vitae of Mengwei Lin, PhD candidate in Economics at the University of Barcelona and IEB.",
-    ),
 }
+# Pages that must stay out of search results (meta robots noindex, no canonical, not in the sitemap).
+NOINDEX = ["cv.html", "404.html", "403.html"]
 
 GUIDE_SLUGS = [
     "", "acknowledgements/", "volume-1/", "volume-2/", "preface/", "opening-lecture/",
@@ -126,6 +123,9 @@ def main(site):
     robots = (site / "robots.txt").read_text(encoding="utf-8")
     check("Disallow: /notes/" in robots, "robots.txt: /notes/ must stay disallowed")
     check(f"Sitemap: {ORIGIN}/sitemap.xml" in robots, "robots.txt: Sitemap line must be the https URL")
+    check("Disallow: /assets/files/cv.pdf" in robots, "robots.txt: the CV PDF must be disallowed")
+    check("Disallow: /cv\n" not in robots + "\n" and "Disallow: /cv\r" not in robots,
+          "robots.txt: /cv must stay crawlable so Google can read its noindex tag")
     check("/research" not in robots, "robots.txt: /research is still disallowed")
     check("/teaching" not in robots, "robots.txt: /teaching is still disallowed")
 
@@ -170,11 +170,15 @@ def main(site):
         if rel != "index.html":
             check(not json_ld(head), f"{rel}: JSON-LD belongs on the home page only")
 
-    # error pages: fall back to the home description, never indexed
+    # pages kept out of search results
+    for rel in NOINDEX:
+        head = head_of((site / rel).read_text(encoding="utf-8"))
+        check(meta(head, "robots") == "noindex", f"{rel}: must be noindex")
+        check('rel="canonical"' not in head, f"{rel}: a noindex page must not carry a canonical")
+        check(bool(meta(head, "description")), f"{rel}: description must not be empty")
     for rel in ("404.html", "403.html"):
         head = head_of((site / rel).read_text(encoding="utf-8"))
         check(meta(head, "description") == HOME_DESC, f"{rel}: description must fall back to the home description")
-        check(meta(head, "robots") == "noindex", f"{rel}: must be noindex")
 
     # structured data on the home page
     try:

@@ -1,4 +1,7 @@
 User-agent: *
 Disallow: /notes/
+# The CV stays out of search results. The /cv page itself is noindex (it must stay crawlable
+# so Google can read that tag); the PDF cannot carry a tag, so it is blocked here.
+Disallow: /assets/files/cv.pdf
 
 Sitemap: https://lin-mengwei.github.io/sitemap.xml
