@@ -152,8 +152,12 @@ def main(site):
         if not f.exists():
             check(False, f"{rel}: not built")
             continue
-        head = head_of(f.read_text(encoding="utf-8"))
+        text = f.read_text(encoding="utf-8")
+        head = head_of(text)
         canonical = ORIGIN + path
+        # Search Console reads its verification tag only from a well-formed <head>.
+        check(text.count("<head>") == 1 and text.count("</head>") == 1, f"{rel}: <head> must open and close exactly once")
+        check('name="google-site-verification"' in head, f"{rel}: Search Console verification tag missing from <head>")
         check(tag_attr(head, r"<title>(.*?)</title>") == title, f"{rel}: <title> is {tag_attr(head, r'<title>(.*?)</title>')!r}")
         got = meta(head, "description")
         check(got == desc, f"{rel}: description is {got!r}")
