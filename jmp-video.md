@@ -1,5 +1,6 @@
 ---
 title: Job Market Paper Video
+description: "A short video on Mengwei Lin's job market paper, \"Museums Around: Cultural Infrastructure and Educational Outcomes\"."
 layout: research
 permalink: /jmp-video/
 # Video, subtitles, the "How this video was made" panel, the paper link

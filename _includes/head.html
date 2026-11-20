@@ -34,6 +34,6 @@
     {% endunless %}
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="{% if site.favicon-url %}{{site.favicon-url}}{% else %}{{ 'assets/images/logo.png' | absolute_url }}{% endif %}" type="image/x-icon">
+    <link rel="icon" type="image/png" href="{{ site.favicon-url | default: '/assets/images/favicon.png' }}">
     
 </head>

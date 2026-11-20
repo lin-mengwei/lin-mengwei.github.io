@@ -1,5 +1,4 @@
 User-agent: *
 Disallow: /notes/
-Disallow: /research
-Disallow: /teaching
-Sitemap: http://lin-mengwei.github.io/sitemap.xml
+
+Sitemap: https://lin-mengwei.github.io/sitemap.xml

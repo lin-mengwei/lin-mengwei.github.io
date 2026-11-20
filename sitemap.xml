@@ -1,89 +1,25 @@
+---
+layout: none
+sitemap: false
+---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://lin-mengwei.github.io/</loc>
-  <lastmod>2025-07-10</lastmod>
-</url>
-<url>
-  <loc>https://lin-mengwei.github.io/#about</loc>
-  <lastmod>2025-07-10</lastmod>
-</url>
-<url>
-  <loc>https://lin-mengwei.github.io/popul-trans</loc>
-  <lastmod>2025-07-10</lastmod>
-</url>
-
-<url>
-  <loc>https://lin-mengwei.github.io/activities.html</loc>
-  <lastmod>2025-07-10</lastmod>
-</url>
-
-<!-- The BESTEPS Guide web edition -->
-<url>
-  <loc>https://lin-mengwei.github.io/besteps/guide/</loc>
-  <lastmod>2026-10-22</lastmod>
-</url>
-<url>
-  <loc>https://lin-mengwei.github.io/besteps/guide/acknowledgements/</loc>
-  <lastmod>2026-10-22</lastmod>
-</url>
-<url>
-  <loc>https://lin-mengwei.github.io/besteps/guide/volume-1/</loc>
-  <lastmod>2026-10-22</lastmod>
-</url>
-<url>
-  <loc>https://lin-mengwei.github.io/besteps/guide/volume-2/</loc>
-  <lastmod>2026-10-22</lastmod>
-</url>
-<url>
-  <loc>https://lin-mengwei.github.io/besteps/guide/preface/</loc>
-  <lastmod>2026-10-22</lastmod>
-</url>
-<url>
-  <loc>https://lin-mengwei.github.io/besteps/guide/opening-lecture/</loc>
-  <lastmod>2026-10-22</lastmod>
-</url>
-<url>
-  <loc>https://lin-mengwei.github.io/besteps/guide/lecture-1/</loc>
-  <lastmod>2026-10-22</lastmod>
-</url>
-<url>
-  <loc>https://lin-mengwei.github.io/besteps/guide/lecture-2/</loc>
-  <lastmod>2026-10-22</lastmod>
-</url>
-<url>
-  <loc>https://lin-mengwei.github.io/besteps/guide/lecture-3/</loc>
-  <lastmod>2026-10-22</lastmod>
-</url>
-<url>
-  <loc>https://lin-mengwei.github.io/besteps/guide/lecture-4/</loc>
-  <lastmod>2026-10-22</lastmod>
-</url>
-<url>
-  <loc>https://lin-mengwei.github.io/besteps/guide/lecture-5/</loc>
-  <lastmod>2026-10-22</lastmod>
-</url>
-<url>
-  <loc>https://lin-mengwei.github.io/besteps/guide/closing-lecture/</loc>
-  <lastmod>2026-10-22</lastmod>
-</url>
-<url>
-  <loc>https://lin-mengwei.github.io/besteps/guide/afterword/</loc>
-  <lastmod>2026-10-22</lastmod>
-</url>
-
-<!--
-<url>
-  <loc>https://lin-mengwei.github.io/teaching</loc>
-  <lastmod>2024-06-07T15:17:47+00:00</lastmod>
-</url>
--->
-
+{%- comment -%}
+  Generated at build time, no plugin needed. Lists every HTML page and every page of the
+  BESTEPS Guide. To keep a page out: `sitemap: false` (or `noindex: true`) in its front matter.
+  URLs are written without ".html", the same form the navbar links and canonical tags use.
+{%- endcomment %}
+{%- assign origin = "https://lin-mengwei.github.io" %}
+{%- assign listed = "" %}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{%- for p in site.html_pages %}
+{%- if p.sitemap == false or p.noindex or p.url contains "/notes/" %}{% continue %}{% endif %}
+{%- assign path = p.url | remove: ".html" %}
+{%- assign listed = listed | append: "|" | append: path | append: "|" %}
+<url><loc>{{ origin }}{{ path }}</loc></url>
+{%- endfor %}
+{%- for d in site.guide %}
+{%- assign key = "|" | append: d.url | append: "|" %}
+{%- if d.sitemap == false or d.noindex or listed contains key %}{% continue %}{% endif %}
+<url><loc>{{ origin }}{{ d.url }}</loc></url>
+{%- endfor %}
 </urlset>

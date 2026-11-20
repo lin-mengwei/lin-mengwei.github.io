@@ -1,5 +1,6 @@
 ---
-title: Popularization & Translation | 学术科普与翻译
+title: Popularization & Translation 学术科普与翻译
+description: "Public-facing economics articles and book translations by Mengwei Lin (林孟蔚), bringing research on education, labour and applied micro to Chinese readers."
 banner_title: Popularization & Translation <br> <span class="zh">学术科普与翻译</span>
 layout: translation
 nav_active: public-goods

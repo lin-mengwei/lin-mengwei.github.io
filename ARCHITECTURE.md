@@ -1,6 +1,6 @@
 # 🗂️ 项目文件关系图 / File Dependency Map
 
-> 最后更新：2026-11-15。展示 Jekyll 站点所有文件之间的依赖关系。
+> 最后更新：2026-11-20。展示 Jekyll 站点所有文件之间的依赖关系。
 
 ## 总体架构 / Overall Architecture
 
@@ -383,6 +383,10 @@ graph LR
 | | `_deprecated/dropdown.html` | 旧版下拉菜单 |
 | | `_deprecated/project_temp.html` | 旧版项目布局 |
 | | `_deprecated/_courses/*.md` | 旧版课程详情页 (已改为数据驱动) |
+| | `_deprecated/blog.md`, `test-page.md`, `project.md`, `search.json`, `_posts/*.md` | 主题自带的博客、示例文章、测试页和空项目页 (2026-11-20 下线，避免被搜索引擎收录；上面图中的 Blog / Post / Project 部分因此不再生成页面，移回根目录即可恢复) |
+| **SEO** | `robots.txt` | 只禁止 `/notes/`；Sitemap 指向 https 网址 |
+| | `sitemap.xml` | Liquid 模板，构建时自动列出所有 HTML 页面和 Guide 各页 (不依赖插件) |
+| | `scripts/check_seo.py` | 对构建结果检查标题、描述、canonical、sitemap、结构化数据 |
 
 ## 设计决策备注 / Design Notes
 
@@ -392,4 +396,5 @@ graph LR
 - **`has-navbar-fixed-top`**：`<body>` 必须加此 class 以配合 Bulma 固定导航栏的 padding-top 偏移。
 - **page-banner 组件**：Activities / Translation / BESTEPS 页面使用统一的 `_page-banner.scss` 组件，BESTEPS 用 `--besteps` modifier 加深色调。
 - **JMP 视频页数据驱动**：文字和设置都在 `_data/jmp_video.yml`，`_includes/jmp-video.html` 只负责结构；`video.file` 留空时改用 `youtube_id` 嵌入。`_jmp-video.scss` 放在 `main.scss` 最后导入，保持与原内联 `<style>` 相同的层叠顺序。制作说明在无 JS 时是普通 `<details>`；有 JS 且宽度 ≥ 960px 时由 `jmp-video.js` 变成视频右侧的侧栏 (高度与视频一致，内容在栏内滚动)，脚本是外部文件以避开 `compress.html` 对内联脚本的破坏。页面底部不再重复论文卡片，而是链接到 `/research#jmp`（与导航栏一样不带 `.html`，GitHub Pages 会解析到 `research.html`）。
+- **SEO 头部标签 (2026-11-20)**：非 Guide 页面的 `<title>`、description、canonical、Open Graph 全部由 `_includes/meta.html` 根据各页 front matter 生成。新页面只需写 `title` 和 `description`；不写 `description` 时退回 `_config.yml` 的 `author-about` (即主页描述)。`noindex: true` 让页面不被收录，`sitemap: false` 让页面不进 sitemap (CV 页如此)。主页标题单独写在 `meta.html` 里。因为 `_config.yml` 的 `url` 为空，网址前缀 `https://lin-mengwei.github.io` 直接写在 `meta.html` 和 `sitemap.xml` 中，换域名时两处都要改。canonical 和 sitemap 统一用不带 `.html` 的网址。结构化数据 (WebSite + Person) 只放在主页：WebSite 决定谷歌结果里显示的站点名，Person 的 `sameAs` 列出同一人的其他主页 (有了 Google Scholar / ORCID / RePEc 后加进去)。改动后运行 `bundle exec jekyll build -d <目录>` 和 `python scripts/check_seo.py <目录>`；改了标题或描述时，脚本里的期望文字也要同步改。
 - **Teaching 数据驱动**：原先用 `_courses/` collection + 独立 markdown 页面，现改为 `_data/teaching.yml` + `<details>` accordion，课程文件归档到 `_deprecated/`。

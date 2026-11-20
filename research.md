@@ -1,5 +1,6 @@
 ---
 title: Research
+description: 'Research by Mengwei Lin, including the job market paper "Museums Around: Cultural Infrastructure and Educational Outcomes" and other work on education and cultural economics.'
 layout: research
 nav_active: research
 ---

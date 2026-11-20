@@ -1,5 +1,6 @@
 ---
 title: Activities
+description: "Training activities for young researchers that Mengwei Lin initiated and organised at the UB School of Economics, including the BESTEPS project."
 layout: activities
 markdown: kramdown
 nav_active: public-goods
