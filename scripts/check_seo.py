@@ -195,6 +195,13 @@ def main(site):
     people = [n for n in nodes if n.get("@type") == "Person"]
     check(len(websites) == 1 and websites[0].get("name") == "Mengwei Lin", 'index.html: need one WebSite named "Mengwei Lin"')
     check(len(people) == 1 and people[0].get("name") == "Mengwei Lin", "index.html: need one Person")
+    # profile photo: named after the person and described by name (helps image search for the name)
+    home = (site / "index.html").read_text(encoding="utf-8")
+    check(meta(head_of(home), "og:image", "property") == ORIGIN + "/assets/images/mengwei-lin.jpg",
+          "index.html: og:image must be /assets/images/mengwei-lin.jpg")
+    check(home.count('src="/assets/images/mengwei-lin.jpg" alt="Mengwei Lin 林孟蔚"') == 2,
+          "index.html: the about and footer photos must use mengwei-lin.jpg with alt \"Mengwei Lin 林孟蔚\"")
+    check((site / "assets/images/image.jpg").exists(), "assets/images/image.jpg: keep the old photo URL working")
     types = set()
     ld_types(blocks, types)
     check(types <= LD_TYPES, f"index.html: unexpected schema.org types {sorted(types - LD_TYPES)}")

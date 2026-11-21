@@ -1,4 +1,9 @@
-name: Bing IndexNow
+name: IndexNow
+
+# After each push to master, tell IndexNow search engines (Bing, Yandex, Seznam, ...; DuckDuckGo
+# and Yahoo use Bing's index) that every page in sitemap.xml may have changed, so they re-crawl
+# sooner. The key file 95bd4b9e311b4bc9854f635b96ca6a6e.txt in the site root proves ownership:
+# keep it.
 
 on:
   push:
@@ -8,7 +13,19 @@ on:
 jobs:
   notify:
     runs-on: ubuntu-latest
+    env:
+      SITE: https://lin-mengwei.github.io
+      KEY: 95bd4b9e311b4bc9854f635b96ca6a6e
     steps:
-      - name: Ping IndexNow
+      - name: Wait for GitHub Pages to publish the push
+        run: sleep 120
+
+      - name: Send every sitemap URL to IndexNow
         run: |
-          curl "https://www.bing.com/indexnow?url=https://lin-mengwei.github.io/&key=95bd4b9e311b4bc9854f635b96ca6a6e"
+          urls=$(curl -fsSL "$SITE/sitemap.xml" | grep -o '<loc>[^<]*</loc>' | sed -e 's#<loc>##' -e 's#</loc>##')
+          echo "$urls"
+          body=$(printf '%s\n' $urls | jq -R . | jq -s --arg key "$KEY" --arg site "$SITE" \
+            '{host: ($site | sub("^https://"; "")), key: $key, keyLocation: ($site + "/" + $key + ".txt"), urlList: .}')
+          curl -fsS -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$body" -o /dev/null -w "IndexNow answered HTTP %{http_code}\n"
