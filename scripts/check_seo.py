@@ -24,7 +24,8 @@ JMP = '"Museums Around: Cultural Infrastructure and Educational Outcomes"'
 
 # file in the build -> (canonical path, <title>, description)
 PAGES = {
-    "index.html": ("/", f"{NAME} | Economist, University of Barcelona & IEB", HOME_DESC),
+    # kept short: phones show only ~40 characters of a result title
+    "index.html": ("/", f"{NAME} | Economist, UB & IEB", HOME_DESC),
     "research.html": (
         "/research",
         f"Research | {NAME}",

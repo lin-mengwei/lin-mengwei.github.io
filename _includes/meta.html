@@ -41,7 +41,7 @@
      scripts/check_seo.py checks the result on a built site. {% endcomment %}
   {% assign seo_origin = "https://lin-mengwei.github.io" %}
   {% assign seo_name = "Mengwei Lin 林孟蔚" %}
-  {% if page.url == "/" %}{% capture seo_title %}{{ seo_name }} | Economist, University of Barcelona & IEB{% endcapture %}
+  {% if page.url == "/" %}{% capture seo_title %}{{ seo_name }} | Economist, UB & IEB{% endcapture %}
   {% elsif page.title %}{% capture seo_title %}{{ page.title }} | {{ seo_name }}{% endcapture %}
   {% else %}{% assign seo_title = seo_name %}{% endif %}
   {% assign seo_title = seo_title | strip | escape %}
